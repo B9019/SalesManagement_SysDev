@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_login_log : Form
+    public partial class F_Stock_update : Form
     {
-        public F_login_log()
+        public F_Stock_update()
         {
             InitializeComponent();
-        }
-
-        private void txt_EmPassword_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
