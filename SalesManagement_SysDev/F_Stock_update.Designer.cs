@@ -94,7 +94,7 @@
             this.lbl_StQuantity = new System.Windows.Forms.Label();
             this.lbl_PrID = new System.Windows.Forms.Label();
             this.lbl_StID = new System.Windows.Forms.Label();
-            this.lbl_form_name_update = new System.Windows.Forms.Label();
+            this.lbl_form_name_Stock_update = new System.Windows.Forms.Label();
             this.chk_StFlag = new System.Windows.Forms.CheckBox();
             this.toolStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -621,17 +621,17 @@
             this.lbl_StID.TabIndex = 132;
             this.lbl_StID.Text = "在庫ID";
             // 
-            // lbl_form_name_update
+            // lbl_form_name_Stock_update
             // 
-            this.lbl_form_name_update.AutoSize = true;
-            this.lbl_form_name_update.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_form_name_update.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_form_name_update.Location = new System.Drawing.Point(411, 42);
-            this.lbl_form_name_update.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_form_name_update.Name = "lbl_form_name_update";
-            this.lbl_form_name_update.Size = new System.Drawing.Size(219, 34);
-            this.lbl_form_name_update.TabIndex = 131;
-            this.lbl_form_name_update.Text = "在庫情報更新";
+            this.lbl_form_name_Stock_update.AutoSize = true;
+            this.lbl_form_name_Stock_update.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_form_name_Stock_update.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_form_name_Stock_update.Location = new System.Drawing.Point(411, 42);
+            this.lbl_form_name_Stock_update.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_form_name_Stock_update.Name = "lbl_form_name_Stock_update";
+            this.lbl_form_name_Stock_update.Size = new System.Drawing.Size(219, 34);
+            this.lbl_form_name_Stock_update.TabIndex = 131;
+            this.lbl_form_name_Stock_update.Text = "在庫情報更新";
             // 
             // chk_StFlag
             // 
@@ -659,7 +659,7 @@
             this.Controls.Add(this.lbl_StQuantity);
             this.Controls.Add(this.lbl_PrID);
             this.Controls.Add(this.lbl_StID);
-            this.Controls.Add(this.lbl_form_name_update);
+            this.Controls.Add(this.lbl_form_name_Stock_update);
             this.Controls.Add(this.lbl_form_name_Product_sertch);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip2);
@@ -743,7 +743,7 @@
         private System.Windows.Forms.Label lbl_StQuantity;
         private System.Windows.Forms.Label lbl_PrID;
         private System.Windows.Forms.Label lbl_StID;
-        private System.Windows.Forms.Label lbl_form_name_update;
+        private System.Windows.Forms.Label lbl_form_name_Stock_update;
         private System.Windows.Forms.CheckBox chk_StFlag;
     }
 }

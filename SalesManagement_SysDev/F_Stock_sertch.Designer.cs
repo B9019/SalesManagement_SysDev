@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_form_name_update = new System.Windows.Forms.Label();
+            this.lbl_form_name_Stock_sertch = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.入力クリアToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
@@ -84,21 +84,35 @@
             this.発注情報検索ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.発注情報削除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.バーコード管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chk_StFlag = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Stock_sertch = new System.Windows.Forms.Button();
+            this.txt_PrID = new System.Windows.Forms.TextBox();
+            this.txt_StID = new System.Windows.Forms.TextBox();
+            this.dataGridView_Stock_sertch = new System.Windows.Forms.DataGridView();
+            this.lbl_StFlag = new System.Windows.Forms.Label();
+            this.lbl_PrID = new System.Windows.Forms.Label();
+            this.lbl_StID = new System.Windows.Forms.Label();
+            this.txt_Stock_Price = new System.Windows.Forms.TextBox();
+            this.lbl_Stock_price = new System.Windows.Forms.Label();
+            this.lbl_StQuantity = new System.Windows.Forms.Label();
+            this.txt_StQuantity = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Stock_sertch)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbl_form_name_update
+            // lbl_form_name_Stock_sertch
             // 
-            this.lbl_form_name_update.AutoSize = true;
-            this.lbl_form_name_update.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_form_name_update.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_form_name_update.Location = new System.Drawing.Point(312, 229);
-            this.lbl_form_name_update.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_form_name_update.Name = "lbl_form_name_update";
-            this.lbl_form_name_update.Size = new System.Drawing.Size(219, 34);
-            this.lbl_form_name_update.TabIndex = 134;
-            this.lbl_form_name_update.Text = "在庫情報更新";
+            this.lbl_form_name_Stock_sertch.AutoSize = true;
+            this.lbl_form_name_Stock_sertch.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_form_name_Stock_sertch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_form_name_Stock_sertch.Location = new System.Drawing.Point(407, 42);
+            this.lbl_form_name_Stock_sertch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_form_name_Stock_sertch.Name = "lbl_form_name_Stock_sertch";
+            this.lbl_form_name_Stock_sertch.Size = new System.Drawing.Size(219, 34);
+            this.lbl_form_name_Stock_sertch.TabIndex = 134;
+            this.lbl_form_name_Stock_sertch.Text = "在庫情報検索";
             // 
             // toolStrip1
             // 
@@ -107,9 +121,9 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.入力クリアToolStripMenuItem});
-            this.toolStrip1.Location = new System.Drawing.Point(697, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(837, 3);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(136, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(97, 25);
             this.toolStrip1.TabIndex = 133;
             // 
             // 入力クリアToolStripMenuItem
@@ -128,7 +142,7 @@
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip2.Size = new System.Drawing.Size(902, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(1067, 28);
             this.menuStrip2.TabIndex = 132;
             // 
             // メニューToolStripMenuItem
@@ -509,20 +523,164 @@
             this.バーコード管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.バーコード管理ToolStripMenuItem.Text = "バーコード管理";
             // 
+            // chk_StFlag
+            // 
+            this.chk_StFlag.AutoSize = true;
+            this.chk_StFlag.Location = new System.Drawing.Point(627, 139);
+            this.chk_StFlag.Name = "chk_StFlag";
+            this.chk_StFlag.Size = new System.Drawing.Size(18, 17);
+            this.chk_StFlag.TabIndex = 170;
+            this.chk_StFlag.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Orange;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(794, 263);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(165, 40);
+            this.button1.TabIndex = 168;
+            this.button1.Text = "一覧表示";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btn_Stock_sertch
+            // 
+            this.btn_Stock_sertch.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_Stock_sertch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Stock_sertch.Location = new System.Drawing.Point(443, 249);
+            this.btn_Stock_sertch.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Stock_sertch.Name = "btn_Stock_sertch";
+            this.btn_Stock_sertch.Size = new System.Drawing.Size(165, 40);
+            this.btn_Stock_sertch.TabIndex = 167;
+            this.btn_Stock_sertch.Text = "検索する";
+            this.btn_Stock_sertch.UseVisualStyleBackColor = false;
+            // 
+            // txt_PrID
+            // 
+            this.txt_PrID.Location = new System.Drawing.Point(175, 136);
+            this.txt_PrID.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_PrID.Name = "txt_PrID";
+            this.txt_PrID.Size = new System.Drawing.Size(243, 22);
+            this.txt_PrID.TabIndex = 165;
+            // 
+            // txt_StID
+            // 
+            this.txt_StID.Location = new System.Drawing.Point(175, 104);
+            this.txt_StID.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_StID.Name = "txt_StID";
+            this.txt_StID.Size = new System.Drawing.Size(243, 22);
+            this.txt_StID.TabIndex = 164;
+            // 
+            // dataGridView_Stock_sertch
+            // 
+            this.dataGridView_Stock_sertch.Location = new System.Drawing.Point(107, 323);
+            this.dataGridView_Stock_sertch.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView_Stock_sertch.Name = "dataGridView_Stock_sertch";
+            this.dataGridView_Stock_sertch.Size = new System.Drawing.Size(852, 214);
+            this.dataGridView_Stock_sertch.TabIndex = 169;
+            // 
+            // lbl_StFlag
+            // 
+            this.lbl_StFlag.AutoSize = true;
+            this.lbl_StFlag.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_StFlag.Location = new System.Drawing.Point(520, 139);
+            this.lbl_StFlag.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_StFlag.Name = "lbl_StFlag";
+            this.lbl_StFlag.Size = new System.Drawing.Size(99, 15);
+            this.lbl_StFlag.TabIndex = 163;
+            this.lbl_StFlag.Text = "在庫管理フラグ";
+            // 
+            // lbl_PrID
+            // 
+            this.lbl_PrID.AutoSize = true;
+            this.lbl_PrID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_PrID.Location = new System.Drawing.Point(104, 139);
+            this.lbl_PrID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_PrID.Name = "lbl_PrID";
+            this.lbl_PrID.Size = new System.Drawing.Size(51, 15);
+            this.lbl_PrID.TabIndex = 161;
+            this.lbl_PrID.Text = "商品ID";
+            // 
+            // lbl_StID
+            // 
+            this.lbl_StID.AutoSize = true;
+            this.lbl_StID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_StID.Location = new System.Drawing.Point(104, 108);
+            this.lbl_StID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_StID.Name = "lbl_StID";
+            this.lbl_StID.Size = new System.Drawing.Size(51, 15);
+            this.lbl_StID.TabIndex = 160;
+            this.lbl_StID.Text = "在庫ID";
+            // 
+            // txt_Stock_Price
+            // 
+            this.txt_Stock_Price.Location = new System.Drawing.Point(175, 166);
+            this.txt_Stock_Price.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Stock_Price.Name = "txt_Stock_Price";
+            this.txt_Stock_Price.Size = new System.Drawing.Size(243, 22);
+            this.txt_Stock_Price.TabIndex = 172;
+            // 
+            // lbl_Stock_price
+            // 
+            this.lbl_Stock_price.AutoSize = true;
+            this.lbl_Stock_price.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_Stock_price.Location = new System.Drawing.Point(104, 169);
+            this.lbl_Stock_price.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Stock_price.Name = "lbl_Stock_price";
+            this.lbl_Stock_price.Size = new System.Drawing.Size(37, 15);
+            this.lbl_Stock_price.TabIndex = 171;
+            this.lbl_Stock_price.Text = "値段";
+            // 
+            // lbl_StQuantity
+            // 
+            this.lbl_StQuantity.AutoSize = true;
+            this.lbl_StQuantity.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_StQuantity.Location = new System.Drawing.Point(556, 104);
+            this.lbl_StQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_StQuantity.Name = "lbl_StQuantity";
+            this.lbl_StQuantity.Size = new System.Drawing.Size(52, 15);
+            this.lbl_StQuantity.TabIndex = 162;
+            this.lbl_StQuantity.Text = "在庫数";
+            // 
+            // txt_StQuantity
+            // 
+            this.txt_StQuantity.Location = new System.Drawing.Point(627, 100);
+            this.txt_StQuantity.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_StQuantity.Name = "txt_StQuantity";
+            this.txt_StQuantity.Size = new System.Drawing.Size(243, 22);
+            this.txt_StQuantity.TabIndex = 166;
+            // 
             // F_Stock_sertch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 450);
-            this.Controls.Add(this.lbl_form_name_update);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(1067, 562);
+            this.Controls.Add(this.txt_Stock_Price);
+            this.Controls.Add(this.lbl_Stock_price);
+            this.Controls.Add(this.chk_StFlag);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Stock_sertch);
+            this.Controls.Add(this.txt_StQuantity);
+            this.Controls.Add(this.txt_PrID);
+            this.Controls.Add(this.txt_StID);
+            this.Controls.Add(this.dataGridView_Stock_sertch);
+            this.Controls.Add(this.lbl_StFlag);
+            this.Controls.Add(this.lbl_StQuantity);
+            this.Controls.Add(this.lbl_PrID);
+            this.Controls.Add(this.lbl_StID);
+            this.Controls.Add(this.lbl_form_name_Stock_sertch);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip2);
             this.Name = "F_Stock_sertch";
-            this.Text = "F_Stock_sertch";
+            this.Text = "販売在庫管理システム　在庫情報検索画面";
+            this.Load += new System.EventHandler(this.F_Stock_sertch_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Stock_sertch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -530,7 +688,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbl_form_name_update;
+        private System.Windows.Forms.Label lbl_form_name_Stock_sertch;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripMenuItem 入力クリアToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip2;
@@ -586,5 +744,18 @@
         private System.Windows.Forms.ToolStripMenuItem 発注情報検索ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 発注情報削除ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem バーコード管理ToolStripMenuItem;
+        private System.Windows.Forms.CheckBox chk_StFlag;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Stock_sertch;
+        private System.Windows.Forms.TextBox txt_PrID;
+        private System.Windows.Forms.TextBox txt_StID;
+        private System.Windows.Forms.DataGridView dataGridView_Stock_sertch;
+        private System.Windows.Forms.Label lbl_StFlag;
+        private System.Windows.Forms.Label lbl_PrID;
+        private System.Windows.Forms.Label lbl_StID;
+        private System.Windows.Forms.TextBox txt_Stock_Price;
+        private System.Windows.Forms.Label lbl_Stock_price;
+        private System.Windows.Forms.Label lbl_StQuantity;
+        private System.Windows.Forms.TextBox txt_StQuantity;
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_Login : Form
+    public partial class F_login : Form
     {
-        public F_Login()
+        public F_login()
         {
             InitializeComponent();
         }
