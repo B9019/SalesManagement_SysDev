@@ -1,16 +1,16 @@
 ﻿namespace SalesManagement_SysDev
 {
-    partial class F_Login
+    partial class F_Client_Registration
     {
         /// <summary>
-        /// 必要なデザイナー変数です。
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// 使用中のリソースをすべてクリーンアップします。
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">マネージド リソースを破棄する場合は true を指定し、その他の場合は false を指定します。</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,15 +20,14 @@
             base.Dispose(disposing);
         }
 
-        #region Windows フォーム デザイナーで生成されたコード
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// デザイナー サポートに必要なメソッドです。このメソッドの内容を
-        /// コード エディターで変更しないでください。
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_CleateDabase = new System.Windows.Forms.Button();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.メニューToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,27 +83,15 @@
             this.バーコード管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.入力クリアToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_login = new System.Windows.Forms.Button();
-            this.lbl_form_name_login = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lbl_EmPassword = new System.Windows.Forms.Label();
-            this.lbl_EmID = new System.Windows.Forms.Label();
-            this.txt_EmPassword = new System.Windows.Forms.TextBox();
-            this.txt_EmID = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btn_CleateDabase
-            // 
-            this.btn_CleateDabase.Location = new System.Drawing.Point(881, 486);
-            this.btn_CleateDabase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_CleateDabase.Name = "btn_CleateDabase";
-            this.btn_CleateDabase.Size = new System.Drawing.Size(141, 61);
-            this.btn_CleateDabase.TabIndex = 0;
-            this.btn_CleateDabase.Text = "データベース生成";
-            this.btn_CleateDabase.UseVisualStyleBackColor = true;
-            this.btn_CleateDabase.Click += new System.EventHandler(this.btn_CleateDabase_Click);
             // 
             // menuStrip2
             // 
@@ -116,8 +103,8 @@
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip2.Size = new System.Drawing.Size(1067, 28);
-            this.menuStrip2.TabIndex = 3;
+            this.menuStrip2.Size = new System.Drawing.Size(888, 28);
+            this.menuStrip2.TabIndex = 4;
             this.menuStrip2.Text = "menuStrip2";
             // 
             // メニューToolStripMenuItem
@@ -505,10 +492,10 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.入力クリアToolStripMenuItem});
-            this.toolStrip1.Location = new System.Drawing.Point(827, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(622, 3);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(136, 25);
-            this.toolStrip1.TabIndex = 4;
+            this.toolStrip1.Size = new System.Drawing.Size(97, 25);
+            this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // 入力クリアToolStripMenuItem
@@ -517,98 +504,80 @@
             this.入力クリアToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
             this.入力クリアToolStripMenuItem.Text = "入力クリア";
             // 
-            // btn_login
+            // label1
             // 
-            this.btn_login.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_login.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_login.Location = new System.Drawing.Point(437, 381);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(165, 40);
-            this.btn_login.TabIndex = 18;
-            this.btn_login.Text = "ログインする";
-            this.btn_login.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(324, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(219, 34);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "顧客情報登録";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // lbl_form_name_login
+            // label2
             // 
-            this.lbl_form_name_login.AutoSize = true;
-            this.lbl_form_name_login.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_form_name_login.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_form_name_login.Location = new System.Drawing.Point(451, 56);
-            this.lbl_form_name_login.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_form_name_login.Name = "lbl_form_name_login";
-            this.lbl_form_name_login.Size = new System.Drawing.Size(116, 34);
-            this.lbl_form_name_login.TabIndex = 17;
-            this.lbl_form_name_login.Text = "ログイン";
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(169, 168);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 15);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "営業所ID";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(403, 151);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(169, 251);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(223, 15);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "社員IDとパスワードを入力してください";
+            this.label3.Size = new System.Drawing.Size(51, 15);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "顧客ID";
             // 
-            // lbl_EmPassword
+            // textBox1
             // 
-            this.lbl_EmPassword.AutoSize = true;
-            this.lbl_EmPassword.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_EmPassword.Location = new System.Drawing.Point(311, 291);
-            this.lbl_EmPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_EmPassword.Name = "lbl_EmPassword";
-            this.lbl_EmPassword.Size = new System.Drawing.Size(64, 15);
-            this.lbl_EmPassword.TabIndex = 15;
-            this.lbl_EmPassword.Text = "パスワード";
+            this.textBox1.Location = new System.Drawing.Point(267, 165);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(356, 22);
+            this.textBox1.TabIndex = 9;
             // 
-            // lbl_EmID
+            // textBox2
             // 
-            this.lbl_EmID.AutoSize = true;
-            this.lbl_EmID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_EmID.Location = new System.Drawing.Point(311, 216);
-            this.lbl_EmID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_EmID.Name = "lbl_EmID";
-            this.lbl_EmID.Size = new System.Drawing.Size(51, 15);
-            this.lbl_EmID.TabIndex = 14;
-            this.lbl_EmID.Text = "社員ID";
+            this.textBox2.Location = new System.Drawing.Point(267, 248);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(356, 22);
+            this.textBox2.TabIndex = 10;
             // 
-            // txt_EmPassword
+            // button1
             // 
-            this.txt_EmPassword.Location = new System.Drawing.Point(397, 288);
-            this.txt_EmPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_EmPassword.Name = "txt_EmPassword";
-            this.txt_EmPassword.Size = new System.Drawing.Size(243, 22);
-            this.txt_EmPassword.TabIndex = 13;
+            this.button1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(352, 344);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(178, 60);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "登録";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // txt_EmID
-            // 
-            this.txt_EmID.Location = new System.Drawing.Point(397, 212);
-            this.txt_EmID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_EmID.Name = "txt_EmID";
-            this.txt_EmID.Size = new System.Drawing.Size(243, 22);
-            this.txt_EmID.TabIndex = 12;
-            // 
-            // F_Login
+            // F_Client_Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1067, 562);
-            this.Controls.Add(this.btn_login);
-            this.Controls.Add(this.lbl_form_name_login);
+            this.ClientSize = new System.Drawing.Size(888, 492);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.lbl_EmPassword);
-            this.Controls.Add(this.lbl_EmID);
-            this.Controls.Add(this.txt_EmPassword);
-            this.Controls.Add(this.txt_EmID);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip2);
-            this.Controls.Add(this.btn_CleateDabase);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "F_Login";
-            this.Text = "販売在庫管理システム　ログイン画面";
+            this.Name = "F_Client_Registration";
+            this.Text = "顧客情報登録";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -620,7 +589,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_CleateDabase;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem メニューToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
@@ -676,13 +644,11 @@
         private System.Windows.Forms.ToolStripMenuItem バーコード管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripMenuItem 入力クリアToolStripMenuItem;
-        private System.Windows.Forms.Button btn_login;
-        private System.Windows.Forms.Label lbl_form_name_login;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lbl_EmPassword;
-        private System.Windows.Forms.Label lbl_EmID;
-        private System.Windows.Forms.TextBox txt_EmPassword;
-        private System.Windows.Forms.TextBox txt_EmID;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
     }
 }
-
