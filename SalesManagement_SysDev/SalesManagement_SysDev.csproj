@@ -152,6 +152,12 @@
     <EmbeddedResource Include="F_Product_update.resx">
       <DependentUpon>F_Product_update.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_Stock_sertch.resx">
+      <DependentUpon>F_Stock_sertch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Stock_update.resx">
+      <DependentUpon>F_Stock_update.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
