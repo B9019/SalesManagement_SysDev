@@ -1,6 +1,6 @@
 ﻿namespace SalesManagement_SysDev
 {
-    partial class F_Client_Registration
+    partial class F_Client_Search
     {
         /// <summary>
         /// Required designer variable.
@@ -88,9 +88,12 @@
             this.lbl_ClID = new System.Windows.Forms.Label();
             this.txt_SoID = new System.Windows.Forms.TextBox();
             this.txt_ClID = new System.Windows.Forms.TextBox();
-            this.btn_regist = new System.Windows.Forms.Button();
+            this.chk_hide_FLG = new System.Windows.Forms.CheckBox();
+            this.btn_list_all = new System.Windows.Forms.Button();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.menuStrip2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip2
@@ -104,7 +107,7 @@
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.menuStrip2.Size = new System.Drawing.Size(1067, 28);
-            this.menuStrip2.TabIndex = 4;
+            this.menuStrip2.TabIndex = 5;
             this.menuStrip2.Text = "menuStrip2";
             // 
             // メニューToolStripMenuItem
@@ -492,10 +495,10 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.入力クリアToolStripMenuItem});
-            this.toolStrip1.Location = new System.Drawing.Point(788, 3);
+            this.toolStrip1.Location = new System.Drawing.Point(784, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(97, 25);
-            this.toolStrip1.TabIndex = 5;
+            this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // 入力クリアToolStripMenuItem
@@ -510,65 +513,86 @@
             this.lbl_form_name_Client.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lbl_form_name_Client.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbl_form_name_Client.ForeColor = System.Drawing.Color.White;
-            this.lbl_form_name_Client.Location = new System.Drawing.Point(404, 75);
+            this.lbl_form_name_Client.Location = new System.Drawing.Point(432, 55);
             this.lbl_form_name_Client.Name = "lbl_form_name_Client";
             this.lbl_form_name_Client.Size = new System.Drawing.Size(219, 34);
-            this.lbl_form_name_Client.TabIndex = 6;
-            this.lbl_form_name_Client.Text = "顧客情報登録";
-            this.lbl_form_name_Client.Click += new System.EventHandler(this.label1_Click);
+            this.lbl_form_name_Client.TabIndex = 7;
+            this.lbl_form_name_Client.Text = "顧客情報検索";
             // 
             // lbl_SoID
             // 
             this.lbl_SoID.AutoSize = true;
             this.lbl_SoID.ForeColor = System.Drawing.Color.White;
-            this.lbl_SoID.Location = new System.Drawing.Point(209, 164);
+            this.lbl_SoID.Location = new System.Drawing.Point(213, 124);
             this.lbl_SoID.Name = "lbl_SoID";
             this.lbl_SoID.Size = new System.Drawing.Size(66, 15);
-            this.lbl_SoID.TabIndex = 7;
+            this.lbl_SoID.TabIndex = 8;
             this.lbl_SoID.Text = "営業所ID";
             // 
             // lbl_ClID
             // 
             this.lbl_ClID.AutoSize = true;
             this.lbl_ClID.ForeColor = System.Drawing.Color.White;
-            this.lbl_ClID.Location = new System.Drawing.Point(209, 265);
+            this.lbl_ClID.Location = new System.Drawing.Point(213, 192);
             this.lbl_ClID.Name = "lbl_ClID";
             this.lbl_ClID.Size = new System.Drawing.Size(51, 15);
-            this.lbl_ClID.TabIndex = 8;
+            this.lbl_ClID.TabIndex = 9;
             this.lbl_ClID.Text = "顧客ID";
             // 
             // txt_SoID
             // 
-            this.txt_SoID.Location = new System.Drawing.Point(336, 164);
+            this.txt_SoID.Location = new System.Drawing.Point(353, 121);
             this.txt_SoID.Name = "txt_SoID";
             this.txt_SoID.Size = new System.Drawing.Size(356, 22);
-            this.txt_SoID.TabIndex = 9;
+            this.txt_SoID.TabIndex = 10;
             // 
             // txt_ClID
             // 
-            this.txt_ClID.Location = new System.Drawing.Point(336, 262);
+            this.txt_ClID.Location = new System.Drawing.Point(353, 189);
             this.txt_ClID.Name = "txt_ClID";
             this.txt_ClID.Size = new System.Drawing.Size(356, 22);
-            this.txt_ClID.TabIndex = 10;
+            this.txt_ClID.TabIndex = 11;
             // 
-            // btn_regist
+            // chk_hide_FLG
             // 
-            this.btn_regist.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_regist.ForeColor = System.Drawing.Color.White;
-            this.btn_regist.Location = new System.Drawing.Point(422, 380);
-            this.btn_regist.Name = "btn_regist";
-            this.btn_regist.Size = new System.Drawing.Size(178, 60);
-            this.btn_regist.TabIndex = 11;
-            this.btn_regist.Text = "登録";
-            this.btn_regist.UseVisualStyleBackColor = false;
+            this.chk_hide_FLG.AutoSize = true;
+            this.chk_hide_FLG.ForeColor = System.Drawing.Color.White;
+            this.chk_hide_FLG.Location = new System.Drawing.Point(353, 252);
+            this.chk_hide_FLG.Name = "chk_hide_FLG";
+            this.chk_hide_FLG.Size = new System.Drawing.Size(106, 19);
+            this.chk_hide_FLG.TabIndex = 13;
+            this.chk_hide_FLG.Text = "非表示フラグ";
+            this.chk_hide_FLG.UseVisualStyleBackColor = true;
             // 
-            // F_Client_Registration
+            // btn_list_all
+            // 
+            this.btn_list_all.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_list_all.ForeColor = System.Drawing.Color.White;
+            this.btn_list_all.Location = new System.Drawing.Point(813, 252);
+            this.btn_list_all.Name = "btn_list_all";
+            this.btn_list_all.Size = new System.Drawing.Size(178, 60);
+            this.btn_list_all.TabIndex = 14;
+            this.btn_list_all.Text = "一覧表示";
+            this.btn_list_all.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView
+            // 
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(118, 336);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowTemplate.Height = 24;
+            this.dataGridView.Size = new System.Drawing.Size(810, 214);
+            this.dataGridView.TabIndex = 15;
+            // 
+            // F_Client_Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1067, 562);
-            this.Controls.Add(this.btn_regist);
+            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.btn_list_all);
+            this.Controls.Add(this.chk_hide_FLG);
             this.Controls.Add(this.txt_ClID);
             this.Controls.Add(this.txt_SoID);
             this.Controls.Add(this.lbl_ClID);
@@ -576,12 +600,13 @@
             this.Controls.Add(this.lbl_form_name_Client);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip2);
-            this.Name = "F_Client_Registration";
-            this.Text = "顧客情報登録";
+            this.Name = "F_Client_Search";
+            this.Text = "F_Client_Search";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -649,6 +674,8 @@
         private System.Windows.Forms.Label lbl_ClID;
         private System.Windows.Forms.TextBox txt_SoID;
         private System.Windows.Forms.TextBox txt_ClID;
-        private System.Windows.Forms.Button btn_regist;
+        private System.Windows.Forms.CheckBox chk_hide_FLG;
+        private System.Windows.Forms.Button btn_list_all;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }
