@@ -28,6 +28,11 @@ namespace SalesManagement_SysDev
             btn_delete.Enabled = false;
             btn_clear.Enabled = true;
 
+            // ****ロックされたボタンの表示変更
+            btn_search.BackColor = Color.DarkGray;
+            btn_update.BackColor = Color.DarkGray;
+            btn_delete.BackColor = Color.DarkGray;
+
         }
 
         private void F_Product_KeyDown(object sender, KeyEventArgs e)

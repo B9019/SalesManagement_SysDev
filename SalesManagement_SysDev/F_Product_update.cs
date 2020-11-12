@@ -28,7 +28,9 @@ namespace SalesManagement_SysDev
             btn_delete.Enabled = true;
             btn_clear.Enabled = true;
 
-            // ****
+            // ****ロックされたボタンの表示変更
+            btn_search.BackColor = Color.DarkGray;
+            btn_regist.BackColor = Color.DarkGray;
 
 
 

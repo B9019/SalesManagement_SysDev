@@ -156,7 +156,7 @@
             this.groupBox1.Size = new System.Drawing.Size(741, 189);
             this.groupBox1.TabIndex = 118;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "検索項目";
+            this.groupBox1.Text = "必須項目※";
             // 
             // txt_PrReleaseDate
             // 

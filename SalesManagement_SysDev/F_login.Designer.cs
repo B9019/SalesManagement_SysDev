@@ -144,7 +144,7 @@
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(179, 22);
             this.toolStripMenuItem4.Text = "管理者用メニュー画面";
             // 
             // toolStripMenuItem1
@@ -154,7 +154,7 @@
             this.新規ログイン情報登録ToolStripMenuItem,
             this.ログイン履歴ToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(179, 22);
             this.toolStripMenuItem1.Text = "ログイン管理";
             // 
             // toolStripMenuItem2
@@ -182,7 +182,7 @@
             this.顧客情報更新ToolStripMenuItem,
             this.顧客情報検索ToolStripMenuItem});
             this.顧客管理ToolStripMenuItem.Name = "顧客管理ToolStripMenuItem";
-            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.顧客管理ToolStripMenuItem.Text = "顧客管理";
             // 
             // 顧客情報登録ToolStripMenuItem
@@ -210,7 +210,7 @@
             this.商品情報更新ToolStripMenuItem,
             this.商品情報検索ToolStripMenuItem});
             this.商品管理ToolStripMenuItem.Name = "商品管理ToolStripMenuItem";
-            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.商品管理ToolStripMenuItem.Text = "商品管理";
             // 
             // 商品情報登録ToolStripMenuItem
@@ -239,7 +239,7 @@
             this.受注情報検索ToolStripMenuItem,
             this.受注情報削除ToolStripMenuItem});
             this.受注管理ToolStripMenuItem.Name = "受注管理ToolStripMenuItem";
-            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.受注管理ToolStripMenuItem.Text = "受注管理";
             // 
             // 受注情報登録ToolStripMenuItem
@@ -273,7 +273,7 @@
             this.注文情報検索ToolStripMenuItem,
             this.注文情報削除ToolStripMenuItem});
             this.注文管理ToolStripMenuItem.Name = "注文管理ToolStripMenuItem";
-            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.注文管理ToolStripMenuItem.Text = "注文管理";
             // 
             // 注文情報更新ToolStripMenuItem
@@ -301,7 +301,7 @@
             this.入荷情報更新ToolStripMenuItem,
             this.入荷情報削除ToolStripMenuItem});
             this.入荷管理ToolStripMenuItem.Name = "入荷管理ToolStripMenuItem";
-            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.入荷管理ToolStripMenuItem.Text = "入荷管理";
             // 
             // 入荷情報登録ToolStripMenuItem
@@ -329,7 +329,7 @@
             this.出荷情報更新ToolStripMenuItem,
             this.出荷情報削除ToolStripMenuItem});
             this.出荷管理ToolStripMenuItem.Name = "出荷管理ToolStripMenuItem";
-            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.出荷管理ToolStripMenuItem.Text = "出荷管理";
             // 
             // 出荷情報登録ToolStripMenuItem
@@ -356,7 +356,7 @@
             this.在庫情報更新ToolStripMenuItem,
             this.在庫情報検索ToolStripMenuItem});
             this.在庫管理ToolStripMenuItem.Name = "在庫管理ToolStripMenuItem";
-            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.在庫管理ToolStripMenuItem.Text = "在庫管理";
             // 
             // 在庫情報更新ToolStripMenuItem
@@ -377,7 +377,7 @@
             this.入庫情報登録ToolStripMenuItem,
             this.入庫情報更新ToolStripMenuItem});
             this.入庫管理ToolStripMenuItem.Name = "入庫管理ToolStripMenuItem";
-            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.入庫管理ToolStripMenuItem.Text = "入庫管理";
             // 
             // 入庫情報登録ToolStripMenuItem
@@ -397,7 +397,7 @@
             this.出庫管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.出庫情報登録ToolStripMenuItem});
             this.出庫管理ToolStripMenuItem.Name = "出庫管理ToolStripMenuItem";
-            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.出庫管理ToolStripMenuItem.Text = "出庫管理";
             // 
             // 出庫情報登録ToolStripMenuItem
@@ -413,7 +413,7 @@
             this.社員情報更新ToolStripMenuItem,
             this.社員情報検索ToolStripMenuItem});
             this.社員管理ToolStripMenuItem.Name = "社員管理ToolStripMenuItem";
-            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.社員管理ToolStripMenuItem.Text = "社員管理";
             // 
             // 社員情報登録ToolStripMenuItem
@@ -440,7 +440,7 @@
             this.toolStripMenuItem3,
             this.売上情報検索ToolStripMenuItem});
             this.売上管理ToolStripMenuItem.Name = "売上管理ToolStripMenuItem";
-            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.売上管理ToolStripMenuItem.Text = "売上管理";
             // 
             // toolStripMenuItem3
@@ -458,7 +458,7 @@
             // 検品ToolStripMenuItem
             // 
             this.検品ToolStripMenuItem.Name = "検品ToolStripMenuItem";
-            this.検品ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.検品ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.検品ToolStripMenuItem.Text = "検品管理";
             // 
             // 発注管理ToolStripMenuItem
@@ -468,7 +468,7 @@
             this.発注情報検索ToolStripMenuItem,
             this.発注情報削除ToolStripMenuItem});
             this.発注管理ToolStripMenuItem.Name = "発注管理ToolStripMenuItem";
-            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.発注管理ToolStripMenuItem.Text = "発注管理";
             // 
             // 発注情報登録ToolStripMenuItem
@@ -492,7 +492,7 @@
             // バーコード管理ToolStripMenuItem
             // 
             this.バーコード管理ToolStripMenuItem.Name = "バーコード管理ToolStripMenuItem";
-            this.バーコード管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.バーコード管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.バーコード管理ToolStripMenuItem.Text = "バーコード管理";
             // 
             // toolStrip1
