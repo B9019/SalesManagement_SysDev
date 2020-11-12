@@ -21,5 +21,10 @@ namespace SalesManagement_SysDev
         {
 
         }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
