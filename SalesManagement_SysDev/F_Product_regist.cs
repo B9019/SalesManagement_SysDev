@@ -19,9 +19,17 @@ namespace SalesManagement_SysDev
 
         private void F_Product_regist_Load(object sender, EventArgs e)
         {
+            // **** ボタンのロック制御
+            btn_search.Enabled = false;
+            btn_regist.Enabled = true;
+            btn_update.Enabled = false;
+            btn_all.Enabled = true;
+            btn_print.Enabled = true;
+            btn_delete.Enabled = false;
+            btn_clear.Enabled = true;
 
         }
-        
+
         private void F_Product_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)

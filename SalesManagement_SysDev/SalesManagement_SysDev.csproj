@@ -88,11 +88,11 @@
     <Compile Include="F_Product_regist.Designer.cs">
       <DependentUpon>F_Product_regist.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Product_sertch.cs">
+    <Compile Include="F_Product_serch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Product_sertch.Designer.cs">
-      <DependentUpon>F_Product_sertch.cs</DependentUpon>
+    <Compile Include="F_Product_serch.Designer.cs">
+      <DependentUpon>F_Product_serch.cs</DependentUpon>
     </Compile>
     <Compile Include="F_Product_update.cs">
       <SubType>Form</SubType>
@@ -146,8 +146,8 @@
     <EmbeddedResource Include="F_Product_regist.resx">
       <DependentUpon>F_Product_regist.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Product_sertch.resx">
-      <DependentUpon>F_Product_sertch.cs</DependentUpon>
+    <EmbeddedResource Include="F_Product_serch.resx">
+      <DependentUpon>F_Product_serch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Product_update.resx">
       <DependentUpon>F_Product_update.cs</DependentUpon>

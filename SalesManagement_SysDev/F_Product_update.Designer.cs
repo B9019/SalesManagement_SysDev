@@ -42,7 +42,6 @@
             this.商品管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.商品情報登録ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.商品情報更新ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.商品情報検索ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.受注管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.受注情報登録ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.受注情報更新ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,39 +80,44 @@
             this.発注情報検索ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.発注情報削除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.バーコード管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.入力クリアToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_Product_update = new System.Windows.Forms.Button();
             this.txt_PrHidden = new System.Windows.Forms.TextBox();
-            this.txt_PrFlag = new System.Windows.Forms.TextBox();
+            this.PrHidden = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbl_memo = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_PrReleaseDate = new System.Windows.Forms.TextBox();
             this.txt_PrColor = new System.Windows.Forms.TextBox();
+            this.txt_PrSafetyStock = new System.Windows.Forms.TextBox();
+            this.PrSafetyStock = new System.Windows.Forms.Label();
             this.txt_PrModelNumber = new System.Windows.Forms.TextBox();
             this.txt_ScID = new System.Windows.Forms.TextBox();
-            this.txt_PrSafetyStock = new System.Windows.Forms.TextBox();
             this.txt_PrJCode = new System.Windows.Forms.TextBox();
-            this.txt_Price = new System.Windows.Forms.TextBox();
             this.txt_PrName = new System.Windows.Forms.TextBox();
+            this.txt_Price = new System.Windows.Forms.TextBox();
             this.txt_MaID = new System.Windows.Forms.TextBox();
             this.txt_PrID = new System.Windows.Forms.TextBox();
-            this.dataGridView_Product_update = new System.Windows.Forms.DataGridView();
-            this.PrHidden = new System.Windows.Forms.Label();
-            this.PrFlag = new System.Windows.Forms.Label();
             this.PrReleaseDate = new System.Windows.Forms.Label();
             this.PrColor = new System.Windows.Forms.Label();
-            this.PrModelNumber = new System.Windows.Forms.Label();
-            this.ScID = new System.Windows.Forms.Label();
-            this.PrSafetyStock = new System.Windows.Forms.Label();
             this.PrJCode = new System.Windows.Forms.Label();
             this.Price = new System.Windows.Forms.Label();
-            this.PrName = new System.Windows.Forms.Label();
             this.MaID = new System.Windows.Forms.Label();
+            this.PrModelNumber = new System.Windows.Forms.Label();
+            this.ScID = new System.Windows.Forms.Label();
+            this.PrName = new System.Windows.Forms.Label();
             this.PrID = new System.Windows.Forms.Label();
-            this.lbl_form_name_Product_update = new System.Windows.Forms.Label();
+            this.btn_clear = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_print = new System.Windows.Forms.Button();
+            this.btn_all = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_regist = new System.Windows.Forms.Button();
+            this.btn_search = new System.Windows.Forms.Button();
+            this.dataGridView_Product_regist = new System.Windows.Forms.DataGridView();
             this.menuStrip2.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_update)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip2
@@ -124,7 +128,7 @@
             this.メニューToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(977, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(780, 24);
             this.menuStrip2.TabIndex = 4;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -218,10 +222,9 @@
             // 
             this.商品管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.商品情報登録ToolStripMenuItem,
-            this.商品情報更新ToolStripMenuItem,
-            this.商品情報検索ToolStripMenuItem});
+            this.商品情報更新ToolStripMenuItem});
             this.商品管理ToolStripMenuItem.Name = "商品管理ToolStripMenuItem";
-            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.商品管理ToolStripMenuItem.Text = "商品管理";
             // 
             // 商品情報登録ToolStripMenuItem
@@ -235,12 +238,6 @@
             this.商品情報更新ToolStripMenuItem.Name = "商品情報更新ToolStripMenuItem";
             this.商品情報更新ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.商品情報更新ToolStripMenuItem.Text = "商品情報更新";
-            // 
-            // 商品情報検索ToolStripMenuItem
-            // 
-            this.商品情報検索ToolStripMenuItem.Name = "商品情報検索ToolStripMenuItem";
-            this.商品情報検索ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.商品情報検索ToolStripMenuItem.Text = "商品情報検索";
             // 
             // 受注管理ToolStripMenuItem
             // 
@@ -506,312 +503,353 @@
             this.バーコード管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.バーコード管理ToolStripMenuItem.Text = "バーコード管理";
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.入力クリアToolStripMenuItem});
-            this.toolStrip1.Location = new System.Drawing.Point(794, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(81, 25);
-            this.toolStrip1.TabIndex = 5;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // 入力クリアToolStripMenuItem
-            // 
-            this.入力クリアToolStripMenuItem.Name = "入力クリアToolStripMenuItem";
-            this.入力クリアToolStripMenuItem.Size = new System.Drawing.Size(69, 25);
-            this.入力クリアToolStripMenuItem.Text = "入力クリア";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Orange;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(767, 321);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 32);
-            this.button1.TabIndex = 101;
-            this.button1.Text = "一覧表示";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btn_Product_update
-            // 
-            this.btn_Product_update.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_Product_update.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Product_update.Location = new System.Drawing.Point(414, 309);
-            this.btn_Product_update.Name = "btn_Product_update";
-            this.btn_Product_update.Size = new System.Drawing.Size(124, 32);
-            this.btn_Product_update.TabIndex = 100;
-            this.btn_Product_update.Text = "更新する";
-            this.btn_Product_update.UseVisualStyleBackColor = false;
-            // 
             // txt_PrHidden
             // 
-            this.txt_PrHidden.Location = new System.Drawing.Point(563, 163);
+            this.txt_PrHidden.Location = new System.Drawing.Point(148, 41);
             this.txt_PrHidden.Multiline = true;
             this.txt_PrHidden.Name = "txt_PrHidden";
-            this.txt_PrHidden.Size = new System.Drawing.Size(264, 118);
+            this.txt_PrHidden.Size = new System.Drawing.Size(285, 15);
             this.txt_PrHidden.TabIndex = 99;
-            // 
-            // txt_PrFlag
-            // 
-            this.txt_PrFlag.Location = new System.Drawing.Point(563, 138);
-            this.txt_PrFlag.Name = "txt_PrFlag";
-            this.txt_PrFlag.Size = new System.Drawing.Size(183, 19);
-            this.txt_PrFlag.TabIndex = 98;
-            // 
-            // txt_PrReleaseDate
-            // 
-            this.txt_PrReleaseDate.Location = new System.Drawing.Point(563, 109);
-            this.txt_PrReleaseDate.Name = "txt_PrReleaseDate";
-            this.txt_PrReleaseDate.Size = new System.Drawing.Size(183, 19);
-            this.txt_PrReleaseDate.TabIndex = 97;
-            // 
-            // txt_PrColor
-            // 
-            this.txt_PrColor.Location = new System.Drawing.Point(563, 84);
-            this.txt_PrColor.Name = "txt_PrColor";
-            this.txt_PrColor.Size = new System.Drawing.Size(183, 19);
-            this.txt_PrColor.TabIndex = 96;
-            // 
-            // txt_PrModelNumber
-            // 
-            this.txt_PrModelNumber.Location = new System.Drawing.Point(197, 263);
-            this.txt_PrModelNumber.Name = "txt_PrModelNumber";
-            this.txt_PrModelNumber.Size = new System.Drawing.Size(183, 19);
-            this.txt_PrModelNumber.TabIndex = 95;
-            // 
-            // txt_ScID
-            // 
-            this.txt_ScID.Location = new System.Drawing.Point(197, 238);
-            this.txt_ScID.Name = "txt_ScID";
-            this.txt_ScID.Size = new System.Drawing.Size(183, 19);
-            this.txt_ScID.TabIndex = 94;
-            // 
-            // txt_PrSafetyStock
-            // 
-            this.txt_PrSafetyStock.Location = new System.Drawing.Point(197, 213);
-            this.txt_PrSafetyStock.Name = "txt_PrSafetyStock";
-            this.txt_PrSafetyStock.Size = new System.Drawing.Size(183, 19);
-            this.txt_PrSafetyStock.TabIndex = 93;
-            // 
-            // txt_PrJCode
-            // 
-            this.txt_PrJCode.Location = new System.Drawing.Point(197, 188);
-            this.txt_PrJCode.Name = "txt_PrJCode";
-            this.txt_PrJCode.Size = new System.Drawing.Size(183, 19);
-            this.txt_PrJCode.TabIndex = 92;
-            // 
-            // txt_Price
-            // 
-            this.txt_Price.Location = new System.Drawing.Point(197, 163);
-            this.txt_Price.Name = "txt_Price";
-            this.txt_Price.Size = new System.Drawing.Size(183, 19);
-            this.txt_Price.TabIndex = 91;
-            // 
-            // txt_PrName
-            // 
-            this.txt_PrName.Location = new System.Drawing.Point(197, 138);
-            this.txt_PrName.Name = "txt_PrName";
-            this.txt_PrName.Size = new System.Drawing.Size(183, 19);
-            this.txt_PrName.TabIndex = 90;
-            // 
-            // txt_MaID
-            // 
-            this.txt_MaID.Location = new System.Drawing.Point(197, 111);
-            this.txt_MaID.Name = "txt_MaID";
-            this.txt_MaID.Size = new System.Drawing.Size(183, 19);
-            this.txt_MaID.TabIndex = 89;
-            // 
-            // txt_PrID
-            // 
-            this.txt_PrID.Location = new System.Drawing.Point(197, 86);
-            this.txt_PrID.Name = "txt_PrID";
-            this.txt_PrID.Size = new System.Drawing.Size(183, 19);
-            this.txt_PrID.TabIndex = 88;
-            // 
-            // dataGridView_Product_update
-            // 
-            this.dataGridView_Product_update.Location = new System.Drawing.Point(90, 369);
-            this.dataGridView_Product_update.Name = "dataGridView_Product_update";
-            this.dataGridView_Product_update.Size = new System.Drawing.Size(801, 212);
-            this.dataGridView_Product_update.TabIndex = 102;
             // 
             // PrHidden
             // 
             this.PrHidden.AutoSize = true;
             this.PrHidden.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrHidden.Location = new System.Drawing.Point(490, 166);
+            this.PrHidden.Location = new System.Drawing.Point(23, 41);
             this.PrHidden.Name = "PrHidden";
-            this.PrHidden.Size = new System.Drawing.Size(65, 12);
+            this.PrHidden.Size = new System.Drawing.Size(113, 12);
             this.PrHidden.TabIndex = 87;
-            this.PrHidden.Text = "非表示理由";
+            this.PrHidden.Text = "非表示理由（30文字）";
             // 
-            // PrFlag
+            // groupBox2
             // 
-            this.PrFlag.AutoSize = true;
-            this.PrFlag.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrFlag.Location = new System.Drawing.Point(477, 141);
-            this.PrFlag.Name = "PrFlag";
-            this.PrFlag.Size = new System.Drawing.Size(78, 12);
-            this.PrFlag.TabIndex = 86;
-            this.PrFlag.Text = "商品管理フラグ";
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.lbl_memo);
+            this.groupBox2.Controls.Add(this.txt_PrHidden);
+            this.groupBox2.Controls.Add(this.PrHidden);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox2.Location = new System.Drawing.Point(22, 212);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(740, 71);
+            this.groupBox2.TabIndex = 109;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "任意項目";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(148, 17);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(285, 18);
+            this.textBox1.TabIndex = 70;
+            // 
+            // lbl_memo
+            // 
+            this.lbl_memo.AutoSize = true;
+            this.lbl_memo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_memo.Location = new System.Drawing.Point(63, 20);
+            this.lbl_memo.Name = "lbl_memo";
+            this.lbl_memo.Size = new System.Drawing.Size(73, 12);
+            this.lbl_memo.TabIndex = 70;
+            this.lbl_memo.Text = "備考(30文字)";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txt_PrReleaseDate);
+            this.groupBox1.Controls.Add(this.txt_PrColor);
+            this.groupBox1.Controls.Add(this.txt_PrSafetyStock);
+            this.groupBox1.Controls.Add(this.PrSafetyStock);
+            this.groupBox1.Controls.Add(this.txt_PrModelNumber);
+            this.groupBox1.Controls.Add(this.txt_ScID);
+            this.groupBox1.Controls.Add(this.txt_PrJCode);
+            this.groupBox1.Controls.Add(this.txt_PrName);
+            this.groupBox1.Controls.Add(this.txt_Price);
+            this.groupBox1.Controls.Add(this.txt_MaID);
+            this.groupBox1.Controls.Add(this.txt_PrID);
+            this.groupBox1.Controls.Add(this.PrReleaseDate);
+            this.groupBox1.Controls.Add(this.PrColor);
+            this.groupBox1.Controls.Add(this.PrJCode);
+            this.groupBox1.Controls.Add(this.Price);
+            this.groupBox1.Controls.Add(this.MaID);
+            this.groupBox1.Controls.Add(this.PrModelNumber);
+            this.groupBox1.Controls.Add(this.ScID);
+            this.groupBox1.Controls.Add(this.PrName);
+            this.groupBox1.Controls.Add(this.PrID);
+            this.groupBox1.ForeColor = System.Drawing.Color.Red;
+            this.groupBox1.Location = new System.Drawing.Point(21, 40);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(741, 160);
+            this.groupBox1.TabIndex = 108;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "必須項目※";
+            // 
+            // txt_PrReleaseDate
+            // 
+            this.txt_PrReleaseDate.Location = new System.Drawing.Point(491, 71);
+            this.txt_PrReleaseDate.Name = "txt_PrReleaseDate";
+            this.txt_PrReleaseDate.Size = new System.Drawing.Size(183, 19);
+            this.txt_PrReleaseDate.TabIndex = 69;
+            // 
+            // txt_PrColor
+            // 
+            this.txt_PrColor.Location = new System.Drawing.Point(491, 43);
+            this.txt_PrColor.Name = "txt_PrColor";
+            this.txt_PrColor.Size = new System.Drawing.Size(183, 19);
+            this.txt_PrColor.TabIndex = 68;
+            // 
+            // txt_PrSafetyStock
+            // 
+            this.txt_PrSafetyStock.Location = new System.Drawing.Point(491, 128);
+            this.txt_PrSafetyStock.Name = "txt_PrSafetyStock";
+            this.txt_PrSafetyStock.Size = new System.Drawing.Size(183, 19);
+            this.txt_PrSafetyStock.TabIndex = 65;
+            // 
+            // PrSafetyStock
+            // 
+            this.PrSafetyStock.AutoSize = true;
+            this.PrSafetyStock.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.PrSafetyStock.Location = new System.Drawing.Point(416, 131);
+            this.PrSafetyStock.Name = "PrSafetyStock";
+            this.PrSafetyStock.Size = new System.Drawing.Size(65, 12);
+            this.PrSafetyStock.TabIndex = 53;
+            this.PrSafetyStock.Text = "安全在庫数";
+            // 
+            // txt_PrModelNumber
+            // 
+            this.txt_PrModelNumber.Location = new System.Drawing.Point(491, 18);
+            this.txt_PrModelNumber.Name = "txt_PrModelNumber";
+            this.txt_PrModelNumber.Size = new System.Drawing.Size(183, 19);
+            this.txt_PrModelNumber.TabIndex = 67;
+            // 
+            // txt_ScID
+            // 
+            this.txt_ScID.Location = new System.Drawing.Point(104, 125);
+            this.txt_ScID.Name = "txt_ScID";
+            this.txt_ScID.Size = new System.Drawing.Size(183, 19);
+            this.txt_ScID.TabIndex = 66;
+            // 
+            // txt_PrJCode
+            // 
+            this.txt_PrJCode.Location = new System.Drawing.Point(104, 97);
+            this.txt_PrJCode.Name = "txt_PrJCode";
+            this.txt_PrJCode.Size = new System.Drawing.Size(183, 19);
+            this.txt_PrJCode.TabIndex = 64;
+            // 
+            // txt_PrName
+            // 
+            this.txt_PrName.Location = new System.Drawing.Point(104, 72);
+            this.txt_PrName.Name = "txt_PrName";
+            this.txt_PrName.Size = new System.Drawing.Size(183, 19);
+            this.txt_PrName.TabIndex = 62;
+            // 
+            // txt_Price
+            // 
+            this.txt_Price.Location = new System.Drawing.Point(491, 97);
+            this.txt_Price.Name = "txt_Price";
+            this.txt_Price.Size = new System.Drawing.Size(183, 19);
+            this.txt_Price.TabIndex = 63;
+            // 
+            // txt_MaID
+            // 
+            this.txt_MaID.Location = new System.Drawing.Point(104, 18);
+            this.txt_MaID.Name = "txt_MaID";
+            this.txt_MaID.Size = new System.Drawing.Size(183, 19);
+            this.txt_MaID.TabIndex = 61;
+            // 
+            // txt_PrID
+            // 
+            this.txt_PrID.Location = new System.Drawing.Point(104, 43);
+            this.txt_PrID.Name = "txt_PrID";
+            this.txt_PrID.Size = new System.Drawing.Size(183, 19);
+            this.txt_PrID.TabIndex = 60;
             // 
             // PrReleaseDate
             // 
             this.PrReleaseDate.AutoSize = true;
             this.PrReleaseDate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrReleaseDate.Location = new System.Drawing.Point(514, 112);
+            this.PrReleaseDate.Location = new System.Drawing.Point(442, 74);
             this.PrReleaseDate.Name = "PrReleaseDate";
             this.PrReleaseDate.Size = new System.Drawing.Size(41, 12);
-            this.PrReleaseDate.TabIndex = 85;
+            this.PrReleaseDate.TabIndex = 57;
             this.PrReleaseDate.Text = "発売日";
             // 
             // PrColor
             // 
             this.PrColor.AutoSize = true;
             this.PrColor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrColor.Location = new System.Drawing.Point(538, 87);
+            this.PrColor.Location = new System.Drawing.Point(461, 46);
             this.PrColor.Name = "PrColor";
             this.PrColor.Size = new System.Drawing.Size(17, 12);
-            this.PrColor.TabIndex = 84;
+            this.PrColor.TabIndex = 56;
             this.PrColor.Text = "色";
-            // 
-            // PrModelNumber
-            // 
-            this.PrModelNumber.AutoSize = true;
-            this.PrModelNumber.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrModelNumber.Location = new System.Drawing.Point(155, 266);
-            this.PrModelNumber.Name = "PrModelNumber";
-            this.PrModelNumber.Size = new System.Drawing.Size(29, 12);
-            this.PrModelNumber.TabIndex = 83;
-            this.PrModelNumber.Text = "型番";
-            // 
-            // ScID
-            // 
-            this.ScID.AutoSize = true;
-            this.ScID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ScID.Location = new System.Drawing.Point(133, 241);
-            this.ScID.Name = "ScID";
-            this.ScID.Size = new System.Drawing.Size(52, 12);
-            this.ScID.TabIndex = 82;
-            this.ScID.Text = "小分類ID";
-            // 
-            // PrSafetyStock
-            // 
-            this.PrSafetyStock.AutoSize = true;
-            this.PrSafetyStock.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrSafetyStock.Location = new System.Drawing.Point(122, 216);
-            this.PrSafetyStock.Name = "PrSafetyStock";
-            this.PrSafetyStock.Size = new System.Drawing.Size(65, 12);
-            this.PrSafetyStock.TabIndex = 81;
-            this.PrSafetyStock.Text = "安全在庫数";
             // 
             // PrJCode
             // 
             this.PrJCode.AutoSize = true;
             this.PrJCode.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrJCode.Location = new System.Drawing.Point(132, 188);
+            this.PrJCode.Location = new System.Drawing.Point(36, 100);
             this.PrJCode.Name = "PrJCode";
             this.PrJCode.Size = new System.Drawing.Size(55, 12);
-            this.PrJCode.TabIndex = 80;
+            this.PrJCode.TabIndex = 52;
             this.PrJCode.Text = "JANコード";
             // 
             // Price
             // 
             this.Price.AutoSize = true;
             this.Price.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Price.Location = new System.Drawing.Point(155, 166);
+            this.Price.Location = new System.Drawing.Point(449, 100);
             this.Price.Name = "Price";
             this.Price.Size = new System.Drawing.Size(29, 12);
-            this.Price.TabIndex = 79;
+            this.Price.TabIndex = 51;
             this.Price.Text = "価格";
-            // 
-            // PrName
-            // 
-            this.PrName.AutoSize = true;
-            this.PrName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrName.Location = new System.Drawing.Point(144, 141);
-            this.PrName.Name = "PrName";
-            this.PrName.Size = new System.Drawing.Size(41, 12);
-            this.PrName.TabIndex = 78;
-            this.PrName.Text = "商品名";
             // 
             // MaID
             // 
             this.MaID.AutoSize = true;
             this.MaID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.MaID.Location = new System.Drawing.Point(144, 114);
+            this.MaID.Location = new System.Drawing.Point(48, 18);
             this.MaID.Name = "MaID";
             this.MaID.Size = new System.Drawing.Size(43, 12);
-            this.MaID.TabIndex = 77;
+            this.MaID.TabIndex = 49;
             this.MaID.Text = "メーカID";
+            // 
+            // PrModelNumber
+            // 
+            this.PrModelNumber.AutoSize = true;
+            this.PrModelNumber.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.PrModelNumber.Location = new System.Drawing.Point(449, 21);
+            this.PrModelNumber.Name = "PrModelNumber";
+            this.PrModelNumber.Size = new System.Drawing.Size(29, 12);
+            this.PrModelNumber.TabIndex = 55;
+            this.PrModelNumber.Text = "型番";
+            // 
+            // ScID
+            // 
+            this.ScID.AutoSize = true;
+            this.ScID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ScID.Location = new System.Drawing.Point(40, 128);
+            this.ScID.Name = "ScID";
+            this.ScID.Size = new System.Drawing.Size(52, 12);
+            this.ScID.TabIndex = 54;
+            this.ScID.Text = "小分類ID";
+            // 
+            // PrName
+            // 
+            this.PrName.AutoSize = true;
+            this.PrName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.PrName.Location = new System.Drawing.Point(48, 74);
+            this.PrName.Name = "PrName";
+            this.PrName.Size = new System.Drawing.Size(41, 12);
+            this.PrName.TabIndex = 50;
+            this.PrName.Text = "商品名";
             // 
             // PrID
             // 
             this.PrID.AutoSize = true;
             this.PrID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrID.Location = new System.Drawing.Point(144, 89);
+            this.PrID.Location = new System.Drawing.Point(51, 46);
             this.PrID.Name = "PrID";
             this.PrID.Size = new System.Drawing.Size(40, 12);
-            this.PrID.TabIndex = 76;
+            this.PrID.TabIndex = 48;
             this.PrID.Text = "商品ID";
             // 
-            // lbl_form_name_Product_update
+            // btn_clear
             // 
-            this.lbl_form_name_Product_update.AutoSize = true;
-            this.lbl_form_name_Product_update.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_form_name_Product_update.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_form_name_Product_update.Location = new System.Drawing.Point(382, 35);
-            this.lbl_form_name_Product_update.Name = "lbl_form_name_Product_update";
-            this.lbl_form_name_Product_update.Size = new System.Drawing.Size(174, 27);
-            this.lbl_form_name_Product_update.TabIndex = 75;
-            this.lbl_form_name_Product_update.Text = "商品情報更新";
+            this.btn_clear.Location = new System.Drawing.Point(585, 564);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(86, 23);
+            this.btn_clear.TabIndex = 107;
+            this.btn_clear.Text = "F7　入力クリア";
+            this.btn_clear.UseVisualStyleBackColor = true;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Location = new System.Drawing.Point(504, 564);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_delete.TabIndex = 106;
+            this.btn_delete.Text = "F6　削除";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            // 
+            // btn_print
+            // 
+            this.btn_print.Location = new System.Drawing.Point(423, 564);
+            this.btn_print.Name = "btn_print";
+            this.btn_print.Size = new System.Drawing.Size(75, 23);
+            this.btn_print.TabIndex = 105;
+            this.btn_print.Text = "F5　印刷";
+            this.btn_print.UseVisualStyleBackColor = true;
+            // 
+            // btn_all
+            // 
+            this.btn_all.Location = new System.Drawing.Point(332, 564);
+            this.btn_all.Name = "btn_all";
+            this.btn_all.Size = new System.Drawing.Size(85, 23);
+            this.btn_all.TabIndex = 104;
+            this.btn_all.Text = "F4　一覧表示";
+            this.btn_all.UseVisualStyleBackColor = true;
+            // 
+            // btn_update
+            // 
+            this.btn_update.Location = new System.Drawing.Point(251, 564);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(75, 23);
+            this.btn_update.TabIndex = 103;
+            this.btn_update.Text = "F3　更新";
+            this.btn_update.UseVisualStyleBackColor = true;
+            // 
+            // btn_regist
+            // 
+            this.btn_regist.Location = new System.Drawing.Point(170, 564);
+            this.btn_regist.Name = "btn_regist";
+            this.btn_regist.Size = new System.Drawing.Size(75, 23);
+            this.btn_regist.TabIndex = 102;
+            this.btn_regist.Text = "F2　登録";
+            this.btn_regist.UseVisualStyleBackColor = true;
+            // 
+            // btn_search
+            // 
+            this.btn_search.Location = new System.Drawing.Point(88, 564);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(75, 23);
+            this.btn_search.TabIndex = 101;
+            this.btn_search.Text = "F1　検索";
+            this.btn_search.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView_Product_regist
+            // 
+            this.dataGridView_Product_regist.Location = new System.Drawing.Point(21, 299);
+            this.dataGridView_Product_regist.Name = "dataGridView_Product_regist";
+            this.dataGridView_Product_regist.Size = new System.Drawing.Size(741, 237);
+            this.dataGridView_Product_regist.TabIndex = 100;
             // 
             // F_Product_update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(977, 604);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btn_Product_update);
-            this.Controls.Add(this.txt_PrHidden);
-            this.Controls.Add(this.txt_PrFlag);
-            this.Controls.Add(this.txt_PrReleaseDate);
-            this.Controls.Add(this.txt_PrColor);
-            this.Controls.Add(this.txt_PrModelNumber);
-            this.Controls.Add(this.txt_ScID);
-            this.Controls.Add(this.txt_PrSafetyStock);
-            this.Controls.Add(this.txt_PrJCode);
-            this.Controls.Add(this.txt_Price);
-            this.Controls.Add(this.txt_PrName);
-            this.Controls.Add(this.txt_MaID);
-            this.Controls.Add(this.txt_PrID);
-            this.Controls.Add(this.dataGridView_Product_update);
-            this.Controls.Add(this.PrHidden);
-            this.Controls.Add(this.PrFlag);
-            this.Controls.Add(this.PrReleaseDate);
-            this.Controls.Add(this.PrColor);
-            this.Controls.Add(this.PrModelNumber);
-            this.Controls.Add(this.ScID);
-            this.Controls.Add(this.PrSafetyStock);
-            this.Controls.Add(this.PrJCode);
-            this.Controls.Add(this.Price);
-            this.Controls.Add(this.PrName);
-            this.Controls.Add(this.MaID);
-            this.Controls.Add(this.PrID);
-            this.Controls.Add(this.lbl_form_name_Product_update);
-            this.Controls.Add(this.toolStrip1);
+            this.ClientSize = new System.Drawing.Size(780, 599);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btn_clear);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_print);
+            this.Controls.Add(this.btn_all);
+            this.Controls.Add(this.btn_update);
+            this.Controls.Add(this.btn_regist);
+            this.Controls.Add(this.btn_search);
+            this.Controls.Add(this.dataGridView_Product_regist);
             this.Controls.Add(this.menuStrip2);
             this.Name = "F_Product_update";
             this.Text = "販売在庫管理システム　商品情報更新画面";
+            this.Load += new System.EventHandler(this.F_Product_update_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_update)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -833,7 +871,6 @@
         private System.Windows.Forms.ToolStripMenuItem 商品管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 商品情報登録ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 商品情報更新ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 商品情報検索ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 受注管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 受注情報登録ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 受注情報更新ToolStripMenuItem;
@@ -872,35 +909,39 @@
         private System.Windows.Forms.ToolStripMenuItem 発注情報検索ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 発注情報削除ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem バーコード管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 入力クリアToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btn_Product_update;
         private System.Windows.Forms.TextBox txt_PrHidden;
-        private System.Windows.Forms.TextBox txt_PrFlag;
+        private System.Windows.Forms.Label PrHidden;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lbl_memo;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txt_PrReleaseDate;
         private System.Windows.Forms.TextBox txt_PrColor;
+        private System.Windows.Forms.TextBox txt_PrSafetyStock;
+        private System.Windows.Forms.Label PrSafetyStock;
         private System.Windows.Forms.TextBox txt_PrModelNumber;
         private System.Windows.Forms.TextBox txt_ScID;
-        private System.Windows.Forms.TextBox txt_PrSafetyStock;
         private System.Windows.Forms.TextBox txt_PrJCode;
-        private System.Windows.Forms.TextBox txt_Price;
         private System.Windows.Forms.TextBox txt_PrName;
+        private System.Windows.Forms.TextBox txt_Price;
         private System.Windows.Forms.TextBox txt_MaID;
         private System.Windows.Forms.TextBox txt_PrID;
-        private System.Windows.Forms.DataGridView dataGridView_Product_update;
-        private System.Windows.Forms.Label PrHidden;
-        private System.Windows.Forms.Label PrFlag;
         private System.Windows.Forms.Label PrReleaseDate;
         private System.Windows.Forms.Label PrColor;
-        private System.Windows.Forms.Label PrModelNumber;
-        private System.Windows.Forms.Label ScID;
-        private System.Windows.Forms.Label PrSafetyStock;
         private System.Windows.Forms.Label PrJCode;
         private System.Windows.Forms.Label Price;
-        private System.Windows.Forms.Label PrName;
         private System.Windows.Forms.Label MaID;
+        private System.Windows.Forms.Label PrModelNumber;
+        private System.Windows.Forms.Label ScID;
+        private System.Windows.Forms.Label PrName;
         private System.Windows.Forms.Label PrID;
-        private System.Windows.Forms.Label lbl_form_name_Product_update;
+        private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_print;
+        private System.Windows.Forms.Button btn_all;
+        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Button btn_regist;
+        private System.Windows.Forms.Button btn_search;
+        private System.Windows.Forms.DataGridView dataGridView_Product_regist;
     }
 }
