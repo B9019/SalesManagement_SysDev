@@ -82,13 +82,13 @@
             this.発注情報削除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.バーコード管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView_Product_regist = new System.Windows.Forms.DataGridView();
-            this.btn_sertch = new System.Windows.Forms.Button();
+            this.btn_search = new System.Windows.Forms.Button();
             this.btn_regist = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_all = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_print = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
             this.PrID = new System.Windows.Forms.Label();
             this.MaID = new System.Windows.Forms.Label();
             this.PrName = new System.Windows.Forms.Label();
@@ -202,19 +202,19 @@
             // 顧客情報登録ToolStripMenuItem
             // 
             this.顧客情報登録ToolStripMenuItem.Name = "顧客情報登録ToolStripMenuItem";
-            this.顧客情報登録ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.顧客情報登録ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.顧客情報登録ToolStripMenuItem.Text = "顧客情報登録";
             // 
             // 顧客情報更新ToolStripMenuItem
             // 
             this.顧客情報更新ToolStripMenuItem.Name = "顧客情報更新ToolStripMenuItem";
-            this.顧客情報更新ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.顧客情報更新ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.顧客情報更新ToolStripMenuItem.Text = "顧客情報更新";
             // 
             // 顧客情報検索ToolStripMenuItem
             // 
             this.顧客情報検索ToolStripMenuItem.Name = "顧客情報検索ToolStripMenuItem";
-            this.顧客情報検索ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.顧客情報検索ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.顧客情報検索ToolStripMenuItem.Text = "顧客情報検索";
             // 
             // 商品管理ToolStripMenuItem
@@ -230,19 +230,19 @@
             // 商品情報登録ToolStripMenuItem
             // 
             this.商品情報登録ToolStripMenuItem.Name = "商品情報登録ToolStripMenuItem";
-            this.商品情報登録ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.商品情報登録ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.商品情報登録ToolStripMenuItem.Text = "商品情報登録";
             // 
             // 商品情報更新ToolStripMenuItem
             // 
             this.商品情報更新ToolStripMenuItem.Name = "商品情報更新ToolStripMenuItem";
-            this.商品情報更新ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.商品情報更新ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.商品情報更新ToolStripMenuItem.Text = "商品情報更新";
             // 
             // 商品情報検索ToolStripMenuItem
             // 
             this.商品情報検索ToolStripMenuItem.Name = "商品情報検索ToolStripMenuItem";
-            this.商品情報検索ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.商品情報検索ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.商品情報検索ToolStripMenuItem.Text = "商品情報検索";
             // 
             // 受注管理ToolStripMenuItem
@@ -516,14 +516,14 @@
             this.dataGridView_Product_regist.Size = new System.Drawing.Size(741, 237);
             this.dataGridView_Product_regist.TabIndex = 73;
             // 
-            // btn_sertch
+            // btn_search
             // 
-            this.btn_sertch.Location = new System.Drawing.Point(88, 564);
-            this.btn_sertch.Name = "btn_sertch";
-            this.btn_sertch.Size = new System.Drawing.Size(75, 23);
-            this.btn_sertch.TabIndex = 74;
-            this.btn_sertch.Text = "F1　検索";
-            this.btn_sertch.UseVisualStyleBackColor = true;
+            this.btn_search.Location = new System.Drawing.Point(88, 564);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(75, 23);
+            this.btn_search.TabIndex = 74;
+            this.btn_search.Text = "F1　検索";
+            this.btn_search.UseVisualStyleBackColor = true;
             // 
             // btn_regist
             // 
@@ -552,32 +552,32 @@
             this.btn_all.Text = "F4　一覧表示";
             this.btn_all.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_print
             // 
-            this.button1.Location = new System.Drawing.Point(422, 564);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 78;
-            this.button1.Text = "F5　印刷";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_print.Location = new System.Drawing.Point(422, 564);
+            this.btn_print.Name = "btn_print";
+            this.btn_print.Size = new System.Drawing.Size(75, 23);
+            this.btn_print.TabIndex = 78;
+            this.btn_print.Text = "F5　印刷";
+            this.btn_print.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_delete
             // 
-            this.button2.Location = new System.Drawing.Point(503, 564);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 79;
-            this.button2.Text = "F6　削除";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_delete.Location = new System.Drawing.Point(503, 564);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_delete.TabIndex = 79;
+            this.btn_delete.Text = "F6　削除";
+            this.btn_delete.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_clear
             // 
-            this.button3.Location = new System.Drawing.Point(584, 564);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 23);
-            this.button3.TabIndex = 80;
-            this.button3.Text = "F7　入力クリア";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_clear.Location = new System.Drawing.Point(584, 564);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(86, 23);
+            this.btn_clear.TabIndex = 80;
+            this.btn_clear.Text = "F7　入力クリア";
+            this.btn_clear.UseVisualStyleBackColor = true;
             // 
             // PrID
             // 
@@ -817,13 +817,13 @@
             this.ClientSize = new System.Drawing.Size(780, 599);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_clear);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_print);
             this.Controls.Add(this.btn_all);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_regist);
-            this.Controls.Add(this.btn_sertch);
+            this.Controls.Add(this.btn_search);
             this.Controls.Add(this.dataGridView_Product_regist);
             this.Controls.Add(this.menuStrip2);
             this.KeyPreview = true;
@@ -898,13 +898,13 @@
         private System.Windows.Forms.ToolStripMenuItem 発注情報削除ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem バーコード管理ToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView_Product_regist;
-        private System.Windows.Forms.Button btn_sertch;
+        private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Button btn_regist;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_all;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_print;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Label PrID;
         private System.Windows.Forms.Label MaID;
         private System.Windows.Forms.Label PrName;
