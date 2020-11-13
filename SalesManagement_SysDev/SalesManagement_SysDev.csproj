@@ -59,6 +59,24 @@
   <ItemGroup>
     <Compile Include="Entity\M_MajorCassification.cs" />
     <Compile Include="Entity\M_Product.cs" />
+    <Compile Include="F_Chumon_delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Chumon_delete.Designer.cs">
+      <DependentUpon>F_Chumon_delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_chumon_search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_chumon_search.Designer.cs">
+      <DependentUpon>F_chumon_search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_chumon_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_chumon_update.Designer.cs">
+      <DependentUpon>F_chumon_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_Client_Registration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +171,9 @@
     <Compile Include="Entity\T_Warehousing.cs" />
     <Compile Include="Entity\T_WarehousingDetail.cs" />
     <Compile Include="SalesManagement_DevContext.cs" />
+    <EmbeddedResource Include="F_chumon_update.resx">
+      <DependentUpon>F_chumon_update.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_Client_Registration.resx">
       <DependentUpon>F_Client_Registration.cs</DependentUpon>
     </EmbeddedResource>
