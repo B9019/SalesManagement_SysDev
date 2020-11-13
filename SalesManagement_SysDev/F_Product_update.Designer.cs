@@ -1,6 +1,6 @@
 ﻿namespace SalesManagement_SysDev
 {
-    partial class F_Stock_update
+    partial class F_Product_update
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_form_name_Product_sertch = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.入力クリアToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.メニューToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,51 +81,40 @@
             this.発注情報検索ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.発注情報削除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.バーコード管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.入力クリアToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
-            this.btn_Stock_update = new System.Windows.Forms.Button();
-            this.txt_StQuantity = new System.Windows.Forms.TextBox();
+            this.btn_Product_update = new System.Windows.Forms.Button();
+            this.txt_PrHidden = new System.Windows.Forms.TextBox();
+            this.txt_PrFlag = new System.Windows.Forms.TextBox();
+            this.txt_PrReleaseDate = new System.Windows.Forms.TextBox();
+            this.txt_PrColor = new System.Windows.Forms.TextBox();
+            this.txt_PrModelNumber = new System.Windows.Forms.TextBox();
+            this.txt_ScID = new System.Windows.Forms.TextBox();
+            this.txt_PrSafetyStock = new System.Windows.Forms.TextBox();
+            this.txt_PrJCode = new System.Windows.Forms.TextBox();
+            this.txt_Price = new System.Windows.Forms.TextBox();
+            this.txt_PrName = new System.Windows.Forms.TextBox();
+            this.txt_MaID = new System.Windows.Forms.TextBox();
             this.txt_PrID = new System.Windows.Forms.TextBox();
-            this.txt_StID = new System.Windows.Forms.TextBox();
-            this.dataGridView_Stock_update = new System.Windows.Forms.DataGridView();
-            this.lbl_StFlag = new System.Windows.Forms.Label();
-            this.lbl_StQuantity = new System.Windows.Forms.Label();
-            this.lbl_PrID = new System.Windows.Forms.Label();
-            this.lbl_StID = new System.Windows.Forms.Label();
-            this.lbl_form_name_Stock_update = new System.Windows.Forms.Label();
-            this.chk_StFlag = new System.Windows.Forms.CheckBox();
-            this.toolStrip1.SuspendLayout();
+            this.dataGridView_Product_update = new System.Windows.Forms.DataGridView();
+            this.PrHidden = new System.Windows.Forms.Label();
+            this.PrFlag = new System.Windows.Forms.Label();
+            this.PrReleaseDate = new System.Windows.Forms.Label();
+            this.PrColor = new System.Windows.Forms.Label();
+            this.PrModelNumber = new System.Windows.Forms.Label();
+            this.ScID = new System.Windows.Forms.Label();
+            this.PrSafetyStock = new System.Windows.Forms.Label();
+            this.PrJCode = new System.Windows.Forms.Label();
+            this.Price = new System.Windows.Forms.Label();
+            this.PrName = new System.Windows.Forms.Label();
+            this.MaID = new System.Windows.Forms.Label();
+            this.PrID = new System.Windows.Forms.Label();
+            this.lbl_form_name_Product_update = new System.Windows.Forms.Label();
             this.menuStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Stock_update)).BeginInit();
+            this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_update)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lbl_form_name_Product_sertch
-            // 
-            this.lbl_form_name_Product_sertch.AutoSize = true;
-            this.lbl_form_name_Product_sertch.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_form_name_Product_sertch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_form_name_Product_sertch.Location = new System.Drawing.Point(13, 52);
-            this.lbl_form_name_Product_sertch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_form_name_Product_sertch.Name = "lbl_form_name_Product_sertch";
-            this.lbl_form_name_Product_sertch.Size = new System.Drawing.Size(0, 34);
-            this.lbl_form_name_Product_sertch.TabIndex = 106;
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.入力クリアToolStripMenuItem});
-            this.toolStrip1.Location = new System.Drawing.Point(902, 3);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(97, 25);
-            this.toolStrip1.TabIndex = 105;
-            // 
-            // 入力クリアToolStripMenuItem
-            // 
-            this.入力クリアToolStripMenuItem.Name = "入力クリアToolStripMenuItem";
-            this.入力クリアToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
-            this.入力クリアToolStripMenuItem.Text = "入力クリア";
             // 
             // menuStrip2
             // 
@@ -140,8 +126,9 @@
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip2.Size = new System.Drawing.Size(1067, 28);
-            this.menuStrip2.TabIndex = 104;
+            this.menuStrip2.Size = new System.Drawing.Size(1303, 28);
+            this.menuStrip2.TabIndex = 4;
+            this.menuStrip2.Text = "menuStrip2";
             // 
             // メニューToolStripMenuItem
             // 
@@ -214,19 +201,19 @@
             // 顧客情報登録ToolStripMenuItem
             // 
             this.顧客情報登録ToolStripMenuItem.Name = "顧客情報登録ToolStripMenuItem";
-            this.顧客情報登録ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.顧客情報登録ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.顧客情報登録ToolStripMenuItem.Text = "顧客情報登録";
             // 
             // 顧客情報更新ToolStripMenuItem
             // 
             this.顧客情報更新ToolStripMenuItem.Name = "顧客情報更新ToolStripMenuItem";
-            this.顧客情報更新ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.顧客情報更新ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.顧客情報更新ToolStripMenuItem.Text = "顧客情報更新";
             // 
             // 顧客情報検索ToolStripMenuItem
             // 
             this.顧客情報検索ToolStripMenuItem.Name = "顧客情報検索ToolStripMenuItem";
-            this.顧客情報検索ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.顧客情報検索ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.顧客情報検索ToolStripMenuItem.Text = "顧客情報検索";
             // 
             // 商品管理ToolStripMenuItem
@@ -521,155 +508,342 @@
             this.バーコード管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.バーコード管理ToolStripMenuItem.Text = "バーコード管理";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.入力クリアToolStripMenuItem});
+            this.toolStrip1.Location = new System.Drawing.Point(1059, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(97, 25);
+            this.toolStrip1.TabIndex = 5;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // 入力クリアToolStripMenuItem
+            // 
+            this.入力クリアToolStripMenuItem.Name = "入力クリアToolStripMenuItem";
+            this.入力クリアToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
+            this.入力クリアToolStripMenuItem.Text = "入力クリア";
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Orange;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(789, 238);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(1023, 401);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 40);
-            this.button1.TabIndex = 157;
+            this.button1.TabIndex = 101;
             this.button1.Text = "一覧表示";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // btn_Stock_update
+            // btn_Product_update
             // 
-            this.btn_Stock_update.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_Stock_update.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Stock_update.Location = new System.Drawing.Point(438, 224);
-            this.btn_Stock_update.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Stock_update.Name = "btn_Stock_update";
-            this.btn_Stock_update.Size = new System.Drawing.Size(165, 40);
-            this.btn_Stock_update.TabIndex = 156;
-            this.btn_Stock_update.Text = "更新する";
-            this.btn_Stock_update.UseVisualStyleBackColor = false;
+            this.btn_Product_update.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_Product_update.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Product_update.Location = new System.Drawing.Point(552, 386);
+            this.btn_Product_update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Product_update.Name = "btn_Product_update";
+            this.btn_Product_update.Size = new System.Drawing.Size(165, 40);
+            this.btn_Product_update.TabIndex = 100;
+            this.btn_Product_update.Text = "更新する";
+            this.btn_Product_update.UseVisualStyleBackColor = false;
             // 
-            // txt_StQuantity
+            // txt_PrHidden
             // 
-            this.txt_StQuantity.Location = new System.Drawing.Point(622, 112);
-            this.txt_StQuantity.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_StQuantity.Name = "txt_StQuantity";
-            this.txt_StQuantity.Size = new System.Drawing.Size(243, 22);
-            this.txt_StQuantity.TabIndex = 146;
+            this.txt_PrHidden.Location = new System.Drawing.Point(751, 204);
+            this.txt_PrHidden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PrHidden.Multiline = true;
+            this.txt_PrHidden.Name = "txt_PrHidden";
+            this.txt_PrHidden.Size = new System.Drawing.Size(351, 146);
+            this.txt_PrHidden.TabIndex = 99;
+            // 
+            // txt_PrFlag
+            // 
+            this.txt_PrFlag.Location = new System.Drawing.Point(751, 172);
+            this.txt_PrFlag.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PrFlag.Name = "txt_PrFlag";
+            this.txt_PrFlag.Size = new System.Drawing.Size(243, 22);
+            this.txt_PrFlag.TabIndex = 98;
+            // 
+            // txt_PrReleaseDate
+            // 
+            this.txt_PrReleaseDate.Location = new System.Drawing.Point(751, 136);
+            this.txt_PrReleaseDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PrReleaseDate.Name = "txt_PrReleaseDate";
+            this.txt_PrReleaseDate.Size = new System.Drawing.Size(243, 22);
+            this.txt_PrReleaseDate.TabIndex = 97;
+            // 
+            // txt_PrColor
+            // 
+            this.txt_PrColor.Location = new System.Drawing.Point(751, 105);
+            this.txt_PrColor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PrColor.Name = "txt_PrColor";
+            this.txt_PrColor.Size = new System.Drawing.Size(243, 22);
+            this.txt_PrColor.TabIndex = 96;
+            // 
+            // txt_PrModelNumber
+            // 
+            this.txt_PrModelNumber.Location = new System.Drawing.Point(263, 329);
+            this.txt_PrModelNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PrModelNumber.Name = "txt_PrModelNumber";
+            this.txt_PrModelNumber.Size = new System.Drawing.Size(243, 22);
+            this.txt_PrModelNumber.TabIndex = 95;
+            // 
+            // txt_ScID
+            // 
+            this.txt_ScID.Location = new System.Drawing.Point(263, 298);
+            this.txt_ScID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ScID.Name = "txt_ScID";
+            this.txt_ScID.Size = new System.Drawing.Size(243, 22);
+            this.txt_ScID.TabIndex = 94;
+            // 
+            // txt_PrSafetyStock
+            // 
+            this.txt_PrSafetyStock.Location = new System.Drawing.Point(263, 266);
+            this.txt_PrSafetyStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PrSafetyStock.Name = "txt_PrSafetyStock";
+            this.txt_PrSafetyStock.Size = new System.Drawing.Size(243, 22);
+            this.txt_PrSafetyStock.TabIndex = 93;
+            // 
+            // txt_PrJCode
+            // 
+            this.txt_PrJCode.Location = new System.Drawing.Point(263, 235);
+            this.txt_PrJCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PrJCode.Name = "txt_PrJCode";
+            this.txt_PrJCode.Size = new System.Drawing.Size(243, 22);
+            this.txt_PrJCode.TabIndex = 92;
+            // 
+            // txt_Price
+            // 
+            this.txt_Price.Location = new System.Drawing.Point(263, 204);
+            this.txt_Price.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Price.Name = "txt_Price";
+            this.txt_Price.Size = new System.Drawing.Size(243, 22);
+            this.txt_Price.TabIndex = 91;
+            // 
+            // txt_PrName
+            // 
+            this.txt_PrName.Location = new System.Drawing.Point(263, 172);
+            this.txt_PrName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PrName.Name = "txt_PrName";
+            this.txt_PrName.Size = new System.Drawing.Size(243, 22);
+            this.txt_PrName.TabIndex = 90;
+            // 
+            // txt_MaID
+            // 
+            this.txt_MaID.Location = new System.Drawing.Point(263, 139);
+            this.txt_MaID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MaID.Name = "txt_MaID";
+            this.txt_MaID.Size = new System.Drawing.Size(243, 22);
+            this.txt_MaID.TabIndex = 89;
             // 
             // txt_PrID
             // 
-            this.txt_PrID.Location = new System.Drawing.Point(170, 148);
-            this.txt_PrID.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_PrID.Location = new System.Drawing.Point(263, 108);
+            this.txt_PrID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_PrID.Name = "txt_PrID";
             this.txt_PrID.Size = new System.Drawing.Size(243, 22);
-            this.txt_PrID.TabIndex = 145;
+            this.txt_PrID.TabIndex = 88;
             // 
-            // txt_StID
+            // dataGridView_Product_update
             // 
-            this.txt_StID.Location = new System.Drawing.Point(170, 116);
-            this.txt_StID.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_StID.Name = "txt_StID";
-            this.txt_StID.Size = new System.Drawing.Size(243, 22);
-            this.txt_StID.TabIndex = 144;
+            this.dataGridView_Product_update.Location = new System.Drawing.Point(120, 461);
+            this.dataGridView_Product_update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView_Product_update.Name = "dataGridView_Product_update";
+            this.dataGridView_Product_update.Size = new System.Drawing.Size(1068, 265);
+            this.dataGridView_Product_update.TabIndex = 102;
             // 
-            // dataGridView_Stock_update
+            // PrHidden
             // 
-            this.dataGridView_Stock_update.Location = new System.Drawing.Point(102, 295);
-            this.dataGridView_Stock_update.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView_Stock_update.Name = "dataGridView_Stock_update";
-            this.dataGridView_Stock_update.Size = new System.Drawing.Size(852, 254);
-            this.dataGridView_Stock_update.TabIndex = 158;
+            this.PrHidden.AutoSize = true;
+            this.PrHidden.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.PrHidden.Location = new System.Drawing.Point(653, 208);
+            this.PrHidden.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PrHidden.Name = "PrHidden";
+            this.PrHidden.Size = new System.Drawing.Size(82, 15);
+            this.PrHidden.TabIndex = 87;
+            this.PrHidden.Text = "非表示理由";
             // 
-            // lbl_StFlag
+            // PrFlag
             // 
-            this.lbl_StFlag.AutoSize = true;
-            this.lbl_StFlag.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_StFlag.Location = new System.Drawing.Point(515, 151);
-            this.lbl_StFlag.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_StFlag.Name = "lbl_StFlag";
-            this.lbl_StFlag.Size = new System.Drawing.Size(99, 15);
-            this.lbl_StFlag.TabIndex = 135;
-            this.lbl_StFlag.Text = "在庫管理フラグ";
+            this.PrFlag.AutoSize = true;
+            this.PrFlag.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.PrFlag.Location = new System.Drawing.Point(636, 176);
+            this.PrFlag.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PrFlag.Name = "PrFlag";
+            this.PrFlag.Size = new System.Drawing.Size(99, 15);
+            this.PrFlag.TabIndex = 86;
+            this.PrFlag.Text = "商品管理フラグ";
             // 
-            // lbl_StQuantity
+            // PrReleaseDate
             // 
-            this.lbl_StQuantity.AutoSize = true;
-            this.lbl_StQuantity.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_StQuantity.Location = new System.Drawing.Point(551, 116);
-            this.lbl_StQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_StQuantity.Name = "lbl_StQuantity";
-            this.lbl_StQuantity.Size = new System.Drawing.Size(52, 15);
-            this.lbl_StQuantity.TabIndex = 134;
-            this.lbl_StQuantity.Text = "在庫数";
+            this.PrReleaseDate.AutoSize = true;
+            this.PrReleaseDate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.PrReleaseDate.Location = new System.Drawing.Point(685, 140);
+            this.PrReleaseDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PrReleaseDate.Name = "PrReleaseDate";
+            this.PrReleaseDate.Size = new System.Drawing.Size(52, 15);
+            this.PrReleaseDate.TabIndex = 85;
+            this.PrReleaseDate.Text = "発売日";
             // 
-            // lbl_PrID
+            // PrColor
             // 
-            this.lbl_PrID.AutoSize = true;
-            this.lbl_PrID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_PrID.Location = new System.Drawing.Point(99, 151);
-            this.lbl_PrID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_PrID.Name = "lbl_PrID";
-            this.lbl_PrID.Size = new System.Drawing.Size(51, 15);
-            this.lbl_PrID.TabIndex = 133;
-            this.lbl_PrID.Text = "商品ID";
+            this.PrColor.AutoSize = true;
+            this.PrColor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.PrColor.Location = new System.Drawing.Point(717, 109);
+            this.PrColor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PrColor.Name = "PrColor";
+            this.PrColor.Size = new System.Drawing.Size(22, 15);
+            this.PrColor.TabIndex = 84;
+            this.PrColor.Text = "色";
             // 
-            // lbl_StID
+            // PrModelNumber
             // 
-            this.lbl_StID.AutoSize = true;
-            this.lbl_StID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_StID.Location = new System.Drawing.Point(99, 120);
-            this.lbl_StID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_StID.Name = "lbl_StID";
-            this.lbl_StID.Size = new System.Drawing.Size(51, 15);
-            this.lbl_StID.TabIndex = 132;
-            this.lbl_StID.Text = "在庫ID";
+            this.PrModelNumber.AutoSize = true;
+            this.PrModelNumber.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.PrModelNumber.Location = new System.Drawing.Point(207, 332);
+            this.PrModelNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PrModelNumber.Name = "PrModelNumber";
+            this.PrModelNumber.Size = new System.Drawing.Size(37, 15);
+            this.PrModelNumber.TabIndex = 83;
+            this.PrModelNumber.Text = "型番";
             // 
-            // lbl_form_name_Stock_update
+            // ScID
             // 
-            this.lbl_form_name_Stock_update.AutoSize = true;
-            this.lbl_form_name_Stock_update.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_form_name_Stock_update.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_form_name_Stock_update.Location = new System.Drawing.Point(411, 42);
-            this.lbl_form_name_Stock_update.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_form_name_Stock_update.Name = "lbl_form_name_Stock_update";
-            this.lbl_form_name_Stock_update.Size = new System.Drawing.Size(219, 34);
-            this.lbl_form_name_Stock_update.TabIndex = 131;
-            this.lbl_form_name_Stock_update.Text = "在庫情報更新";
+            this.ScID.AutoSize = true;
+            this.ScID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ScID.Location = new System.Drawing.Point(177, 301);
+            this.ScID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ScID.Name = "ScID";
+            this.ScID.Size = new System.Drawing.Size(66, 15);
+            this.ScID.TabIndex = 82;
+            this.ScID.Text = "小分類ID";
             // 
-            // chk_StFlag
+            // PrSafetyStock
             // 
-            this.chk_StFlag.AutoSize = true;
-            this.chk_StFlag.Location = new System.Drawing.Point(622, 151);
-            this.chk_StFlag.Name = "chk_StFlag";
-            this.chk_StFlag.Size = new System.Drawing.Size(18, 17);
-            this.chk_StFlag.TabIndex = 159;
-            this.chk_StFlag.UseVisualStyleBackColor = true;
+            this.PrSafetyStock.AutoSize = true;
+            this.PrSafetyStock.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.PrSafetyStock.Location = new System.Drawing.Point(163, 270);
+            this.PrSafetyStock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PrSafetyStock.Name = "PrSafetyStock";
+            this.PrSafetyStock.Size = new System.Drawing.Size(82, 15);
+            this.PrSafetyStock.TabIndex = 81;
+            this.PrSafetyStock.Text = "安全在庫数";
             // 
-            // F_Stock_update
+            // PrJCode
+            // 
+            this.PrJCode.AutoSize = true;
+            this.PrJCode.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.PrJCode.Location = new System.Drawing.Point(177, 238);
+            this.PrJCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PrJCode.Name = "PrJCode";
+            this.PrJCode.Size = new System.Drawing.Size(67, 15);
+            this.PrJCode.TabIndex = 80;
+            this.PrJCode.Text = "JANコード";
+            // 
+            // Price
+            // 
+            this.Price.AutoSize = true;
+            this.Price.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Price.Location = new System.Drawing.Point(207, 208);
+            this.Price.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Price.Name = "Price";
+            this.Price.Size = new System.Drawing.Size(37, 15);
+            this.Price.TabIndex = 79;
+            this.Price.Text = "価格";
+            // 
+            // PrName
+            // 
+            this.PrName.AutoSize = true;
+            this.PrName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.PrName.Location = new System.Drawing.Point(192, 176);
+            this.PrName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PrName.Name = "PrName";
+            this.PrName.Size = new System.Drawing.Size(52, 15);
+            this.PrName.TabIndex = 78;
+            this.PrName.Text = "商品名";
+            // 
+            // MaID
+            // 
+            this.MaID.AutoSize = true;
+            this.MaID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MaID.Location = new System.Drawing.Point(192, 142);
+            this.MaID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.MaID.Name = "MaID";
+            this.MaID.Size = new System.Drawing.Size(54, 15);
+            this.MaID.TabIndex = 77;
+            this.MaID.Text = "メーカID";
+            // 
+            // PrID
+            // 
+            this.PrID.AutoSize = true;
+            this.PrID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.PrID.Location = new System.Drawing.Point(192, 111);
+            this.PrID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PrID.Name = "PrID";
+            this.PrID.Size = new System.Drawing.Size(51, 15);
+            this.PrID.TabIndex = 76;
+            this.PrID.Text = "商品ID";
+            // 
+            // lbl_form_name_Product_update
+            // 
+            this.lbl_form_name_Product_update.AutoSize = true;
+            this.lbl_form_name_Product_update.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_form_name_Product_update.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_form_name_Product_update.Location = new System.Drawing.Point(509, 44);
+            this.lbl_form_name_Product_update.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_form_name_Product_update.Name = "lbl_form_name_Product_update";
+            this.lbl_form_name_Product_update.Size = new System.Drawing.Size(219, 34);
+            this.lbl_form_name_Product_update.TabIndex = 75;
+            this.lbl_form_name_Product_update.Text = "商品情報更新";
+            // 
+            // F_Product_update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1067, 562);
-            this.Controls.Add(this.chk_StFlag);
+            this.ClientSize = new System.Drawing.Size(1303, 755);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btn_Stock_update);
-            this.Controls.Add(this.txt_StQuantity);
+            this.Controls.Add(this.btn_Product_update);
+            this.Controls.Add(this.txt_PrHidden);
+            this.Controls.Add(this.txt_PrFlag);
+            this.Controls.Add(this.txt_PrReleaseDate);
+            this.Controls.Add(this.txt_PrColor);
+            this.Controls.Add(this.txt_PrModelNumber);
+            this.Controls.Add(this.txt_ScID);
+            this.Controls.Add(this.txt_PrSafetyStock);
+            this.Controls.Add(this.txt_PrJCode);
+            this.Controls.Add(this.txt_Price);
+            this.Controls.Add(this.txt_PrName);
+            this.Controls.Add(this.txt_MaID);
             this.Controls.Add(this.txt_PrID);
-            this.Controls.Add(this.txt_StID);
-            this.Controls.Add(this.dataGridView_Stock_update);
-            this.Controls.Add(this.lbl_StFlag);
-            this.Controls.Add(this.lbl_StQuantity);
-            this.Controls.Add(this.lbl_PrID);
-            this.Controls.Add(this.lbl_StID);
-            this.Controls.Add(this.lbl_form_name_Stock_update);
-            this.Controls.Add(this.lbl_form_name_Product_sertch);
+            this.Controls.Add(this.dataGridView_Product_update);
+            this.Controls.Add(this.PrHidden);
+            this.Controls.Add(this.PrFlag);
+            this.Controls.Add(this.PrReleaseDate);
+            this.Controls.Add(this.PrColor);
+            this.Controls.Add(this.PrModelNumber);
+            this.Controls.Add(this.ScID);
+            this.Controls.Add(this.PrSafetyStock);
+            this.Controls.Add(this.PrJCode);
+            this.Controls.Add(this.Price);
+            this.Controls.Add(this.PrName);
+            this.Controls.Add(this.MaID);
+            this.Controls.Add(this.PrID);
+            this.Controls.Add(this.lbl_form_name_Product_update);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip2);
-            this.Name = "F_Stock_update";
-            this.Text = "販売在庫管理システム　在庫情報更新画面";
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "F_Product_update";
+            this.Text = "販売在庫管理システム　商品情報更新画面";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Stock_update)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_update)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -677,9 +851,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbl_form_name_Product_sertch;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 入力クリアToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem メニューToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
@@ -733,17 +904,35 @@
         private System.Windows.Forms.ToolStripMenuItem 発注情報検索ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 発注情報削除ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem バーコード管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 入力クリアToolStripMenuItem;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btn_Stock_update;
-        private System.Windows.Forms.TextBox txt_StQuantity;
+        private System.Windows.Forms.Button btn_Product_update;
+        private System.Windows.Forms.TextBox txt_PrHidden;
+        private System.Windows.Forms.TextBox txt_PrFlag;
+        private System.Windows.Forms.TextBox txt_PrReleaseDate;
+        private System.Windows.Forms.TextBox txt_PrColor;
+        private System.Windows.Forms.TextBox txt_PrModelNumber;
+        private System.Windows.Forms.TextBox txt_ScID;
+        private System.Windows.Forms.TextBox txt_PrSafetyStock;
+        private System.Windows.Forms.TextBox txt_PrJCode;
+        private System.Windows.Forms.TextBox txt_Price;
+        private System.Windows.Forms.TextBox txt_PrName;
+        private System.Windows.Forms.TextBox txt_MaID;
         private System.Windows.Forms.TextBox txt_PrID;
-        private System.Windows.Forms.TextBox txt_StID;
-        private System.Windows.Forms.DataGridView dataGridView_Stock_update;
-        private System.Windows.Forms.Label lbl_StFlag;
-        private System.Windows.Forms.Label lbl_StQuantity;
-        private System.Windows.Forms.Label lbl_PrID;
-        private System.Windows.Forms.Label lbl_StID;
-        private System.Windows.Forms.Label lbl_form_name_Stock_update;
-        private System.Windows.Forms.CheckBox chk_StFlag;
+        private System.Windows.Forms.DataGridView dataGridView_Product_update;
+        private System.Windows.Forms.Label PrHidden;
+        private System.Windows.Forms.Label PrFlag;
+        private System.Windows.Forms.Label PrReleaseDate;
+        private System.Windows.Forms.Label PrColor;
+        private System.Windows.Forms.Label PrModelNumber;
+        private System.Windows.Forms.Label ScID;
+        private System.Windows.Forms.Label PrSafetyStock;
+        private System.Windows.Forms.Label PrJCode;
+        private System.Windows.Forms.Label Price;
+        private System.Windows.Forms.Label PrName;
+        private System.Windows.Forms.Label MaID;
+        private System.Windows.Forms.Label PrID;
+        private System.Windows.Forms.Label lbl_form_name_Product_update;
     }
 }

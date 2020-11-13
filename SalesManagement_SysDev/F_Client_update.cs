@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_Stock_sertch : Form
+    public partial class F_Client_update : Form
     {
-        public F_Stock_sertch()
+        public F_Client_update()
         {
             InitializeComponent();
         }
 
-        private void F_Stock_sertch_Load(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
