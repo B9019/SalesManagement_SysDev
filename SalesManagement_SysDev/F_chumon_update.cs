@@ -16,5 +16,10 @@ namespace SalesManagement_SysDev
         {
             InitializeComponent();
         }
+
+        private void txt_ClID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

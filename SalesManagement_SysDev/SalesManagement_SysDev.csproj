@@ -171,6 +171,12 @@
     <Compile Include="Entity\T_Warehousing.cs" />
     <Compile Include="Entity\T_WarehousingDetail.cs" />
     <Compile Include="SalesManagement_DevContext.cs" />
+    <EmbeddedResource Include="F_Chumon_delete.resx">
+      <DependentUpon>F_Chumon_delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_chumon_search.resx">
+      <DependentUpon>F_chumon_search.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_chumon_update.resx">
       <DependentUpon>F_chumon_update.cs</DependentUpon>
     </EmbeddedResource>
