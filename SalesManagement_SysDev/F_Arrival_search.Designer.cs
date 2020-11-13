@@ -644,7 +644,7 @@
             this.groupBox1.Controls.Add(this.lbl_SoID);
             this.groupBox1.Controls.Add(this.lbl_OrID);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(40, 62);
+            this.groupBox1.Location = new System.Drawing.Point(40, 55);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -739,10 +739,10 @@
             // 
             // dataGridView_Product_regist
             // 
-            this.dataGridView_Product_regist.Location = new System.Drawing.Point(40, 284);
+            this.dataGridView_Product_regist.Location = new System.Drawing.Point(40, 277);
             this.dataGridView_Product_regist.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dataGridView_Product_regist.Name = "dataGridView_Product_regist";
-            this.dataGridView_Product_regist.Size = new System.Drawing.Size(1210, 559);
+            this.dataGridView_Product_regist.Size = new System.Drawing.Size(1210, 566);
             this.dataGridView_Product_regist.TabIndex = 110;
             // 
             // btn_regist

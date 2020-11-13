@@ -633,7 +633,7 @@
             this.groupBox3.Size = new System.Drawing.Size(1210, 111);
             this.groupBox3.TabIndex = 120;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "出庫失敗項目";
+            this.groupBox3.Text = "入荷失敗項目";
             // 
             // txt_ArHidden
             // 
@@ -652,7 +652,7 @@
             this.lbl_ArHidden.Name = "lbl_ArHidden";
             this.lbl_ArHidden.Size = new System.Drawing.Size(116, 18);
             this.lbl_ArHidden.TabIndex = 63;
-            this.lbl_ArHidden.Text = "出庫失敗理由";
+            this.lbl_ArHidden.Text = "入荷失敗理由";
             // 
             // chk_hide_FLG
             // 
@@ -662,7 +662,7 @@
             this.chk_hide_FLG.Name = "chk_hide_FLG";
             this.chk_hide_FLG.Size = new System.Drawing.Size(144, 22);
             this.chk_hide_FLG.TabIndex = 0;
-            this.chk_hide_FLG.Text = "出庫失敗フラグ";
+            this.chk_hide_FLG.Text = "入荷失敗フラグ";
             this.chk_hide_FLG.UseVisualStyleBackColor = true;
             // 
             // groupBox1
