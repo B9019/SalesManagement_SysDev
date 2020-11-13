@@ -213,6 +213,24 @@
     <Compile Include="Entity\T_Warehousing.cs" />
     <Compile Include="Entity\T_WarehousingDetail.cs" />
     <Compile Include="SalesManagement_DevContext.cs" />
+    <Compile Include="T_Shipment_Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="T_Shipment_Registration.Designer.cs">
+      <DependentUpon>T_Shipment_Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="T_Shipment_search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="T_Shipment_search.Designer.cs">
+      <DependentUpon>T_Shipment_search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="T_Shipment_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="T_Shipment_update.Designer.cs">
+      <DependentUpon>T_Shipment_update.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="F_Arrival_Registration.resx">
       <DependentUpon>F_Arrival_Registration.cs</DependentUpon>
     </EmbeddedResource>
@@ -286,6 +304,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="T_Shipment_Registration.resx">
+      <DependentUpon>T_Shipment_Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="T_Shipment_search.resx">
+      <DependentUpon>T_Shipment_search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="T_Shipment_update.resx">
+      <DependentUpon>T_Shipment_update.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
