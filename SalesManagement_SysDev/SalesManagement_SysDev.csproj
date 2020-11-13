@@ -82,24 +82,6 @@
     <Compile Include="F_login_regist.Designer.cs">
       <DependentUpon>F_login_regist.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Product_regist.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="F_Product_regist.Designer.cs">
-      <DependentUpon>F_Product_regist.cs</DependentUpon>
-    </Compile>
-    <Compile Include="F_Product_sertch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="F_Product_sertch.Designer.cs">
-      <DependentUpon>F_Product_sertch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="F_Product_update.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="F_Product_update.Designer.cs">
-      <DependentUpon>F_Product_update.cs</DependentUpon>
-    </Compile>
     <Compile Include="F_Stock_sertch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,15 +124,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_login_regist.resx">
       <DependentUpon>F_login_regist.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="F_Product_regist.resx">
-      <DependentUpon>F_Product_regist.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="F_Product_sertch.resx">
-      <DependentUpon>F_Product_sertch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="F_Product_update.resx">
-      <DependentUpon>F_Product_update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
