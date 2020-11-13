@@ -101,6 +101,24 @@
     <Compile Include="F_login_regist.Designer.cs">
       <DependentUpon>F_login_regist.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_Product_regist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Product_regist.Designer.cs">
+      <DependentUpon>F_Product_regist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Product_search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Product_search.Designer.cs">
+      <DependentUpon>F_Product_search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Product_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Product_update.Designer.cs">
+      <DependentUpon>F_Product_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_Stock_sertch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +170,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_login_regist.resx">
       <DependentUpon>F_login_regist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Product_regist.resx">
+      <DependentUpon>F_Product_regist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Product_search.resx">
+      <DependentUpon>F_Product_search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Product_update.resx">
+      <DependentUpon>F_Product_update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Stock_sertch.resx">
       <DependentUpon>F_Stock_sertch.cs</DependentUpon>
