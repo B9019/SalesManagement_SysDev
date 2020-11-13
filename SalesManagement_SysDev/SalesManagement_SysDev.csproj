@@ -15,6 +15,7 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -58,6 +59,24 @@
   <ItemGroup>
     <Compile Include="Entity\M_MajorCassification.cs" />
     <Compile Include="Entity\M_Product.cs" />
+    <Compile Include="F_Client_Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Client_Registration.Designer.cs">
+      <DependentUpon>F_Client_Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Client_Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Client_Search.Designer.cs">
+      <DependentUpon>F_Client_Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Client_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Client_update.Designer.cs">
+      <DependentUpon>F_Client_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +153,15 @@
     <Compile Include="Entity\T_Warehousing.cs" />
     <Compile Include="Entity\T_WarehousingDetail.cs" />
     <Compile Include="SalesManagement_DevContext.cs" />
+    <EmbeddedResource Include="F_Client_Registration.resx">
+      <DependentUpon>F_Client_Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Client_Search.resx">
+      <DependentUpon>F_Client_Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Client_update.resx">
+      <DependentUpon>F_Client_update.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_login.resx">
       <DependentUpon>F_login.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +194,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
