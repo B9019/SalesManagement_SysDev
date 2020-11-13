@@ -793,6 +793,7 @@
             this.btn_regist.TabIndex = 95;
             this.btn_regist.Text = "F2　登録";
             this.btn_regist.UseVisualStyleBackColor = true;
+            this.btn_regist.Click += new System.EventHandler(this.btn_regist_Click);
             // 
             // btn_search
             // 

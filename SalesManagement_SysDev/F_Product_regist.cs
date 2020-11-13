@@ -70,5 +70,17 @@ namespace SalesManagement_SysDev
             }
         }
 
+        private void btn_regist_Click(object sender, EventArgs e)
+        {
+            // 
+            //
+            //
+            //
+            //
+            if (!Get_Product_Data_AtRegistration())
+            {
+                return;
+            }
+        }
     }
 }
