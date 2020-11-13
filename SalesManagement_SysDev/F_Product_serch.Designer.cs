@@ -30,6 +30,7 @@
         {
             this.lbl_PrHidden = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chk_PrHidden = new System.Windows.Forms.CheckBox();
             this.txt_PrReleaseDate = new System.Windows.Forms.TextBox();
             this.txt_PrColor = new System.Windows.Forms.TextBox();
             this.txt_PrSafetyStock = new System.Windows.Forms.TextBox();
@@ -110,7 +111,6 @@
             this.発注情報検索ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.発注情報削除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.バーコード管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chk_PrHidden = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).BeginInit();
             this.menuStrip2.SuspendLayout();
@@ -157,6 +157,15 @@
             this.groupBox1.TabIndex = 118;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "必須項目※";
+            // 
+            // chk_PrHidden
+            // 
+            this.chk_PrHidden.AutoSize = true;
+            this.chk_PrHidden.Location = new System.Drawing.Point(104, 159);
+            this.chk_PrHidden.Name = "chk_PrHidden";
+            this.chk_PrHidden.Size = new System.Drawing.Size(15, 14);
+            this.chk_PrHidden.TabIndex = 88;
+            this.chk_PrHidden.UseVisualStyleBackColor = true;
             // 
             // txt_PrReleaseDate
             // 
@@ -780,15 +789,6 @@
             this.バーコード管理ToolStripMenuItem.Name = "バーコード管理ToolStripMenuItem";
             this.バーコード管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.バーコード管理ToolStripMenuItem.Text = "バーコード管理";
-            // 
-            // chk_PrHidden
-            // 
-            this.chk_PrHidden.AutoSize = true;
-            this.chk_PrHidden.Location = new System.Drawing.Point(104, 159);
-            this.chk_PrHidden.Name = "chk_PrHidden";
-            this.chk_PrHidden.Size = new System.Drawing.Size(15, 14);
-            this.chk_PrHidden.TabIndex = 88;
-            this.chk_PrHidden.UseVisualStyleBackColor = true;
             // 
             // F_Product_serch
             // 
