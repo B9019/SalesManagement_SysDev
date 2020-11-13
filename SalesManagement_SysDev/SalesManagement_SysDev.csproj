@@ -101,6 +101,30 @@
     <Compile Include="F_login_regist.Designer.cs">
       <DependentUpon>F_login_regist.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_Order_Delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Order_Delete.Designer.cs">
+      <DependentUpon>F_Order_Delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Order_Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Order_Registration.Designer.cs">
+      <DependentUpon>F_Order_Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Order_Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Order_Search.Designer.cs">
+      <DependentUpon>F_Order_Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Order_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Order_update.Designer.cs">
+      <DependentUpon>F_Order_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_Product_regist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +194,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_login_regist.resx">
       <DependentUpon>F_login_regist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Order_Delete.resx">
+      <DependentUpon>F_Order_Delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Order_Registration.resx">
+      <DependentUpon>F_Order_Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Order_Search.resx">
+      <DependentUpon>F_Order_Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Order_update.resx">
+      <DependentUpon>F_Order_update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Product_regist.resx">
       <DependentUpon>F_Product_regist.cs</DependentUpon>
