@@ -1,6 +1,6 @@
 ﻿namespace SalesManagement_SysDev
 {
-    partial class F_Login
+    partial class F_login
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -507,7 +507,11 @@
             this.入力クリアToolStripMenuItem});
             this.toolStrip1.Location = new System.Drawing.Point(827, 0);
             this.toolStrip1.Name = "toolStrip1";
+
+            
+
             this.toolStrip1.Size = new System.Drawing.Size(136, 25);
+
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -590,7 +594,7 @@
             this.txt_EmID.Size = new System.Drawing.Size(243, 22);
             this.txt_EmID.TabIndex = 12;
             // 
-            // F_Login
+            // F_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -607,7 +611,11 @@
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.btn_CleateDabase);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+          
+
             this.Name = "F_Login";
+
             this.Text = "販売在庫管理システム　ログイン画面";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();

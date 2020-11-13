@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_Stock : Form
+    public partial class F_Stock_sertch : Form
     {
-        public F_Stock()
+        public F_Stock_sertch()
         {
             InitializeComponent();
+        }
+
+        private void F_Stock_sertch_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

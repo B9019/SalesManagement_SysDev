@@ -119,11 +119,17 @@
     <Compile Include="F_Product_update.Designer.cs">
       <DependentUpon>F_Product_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Stock.cs">
+    <Compile Include="F_Stock_sertch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Stock.Designer.cs">
-      <DependentUpon>F_Stock.cs</DependentUpon>
+    <Compile Include="F_Stock_sertch.Designer.cs">
+      <DependentUpon>F_Stock_sertch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Stock_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Stock_update.Designer.cs">
+      <DependentUpon>F_Stock_update.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -173,6 +179,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_Product_update.resx">
       <DependentUpon>F_Product_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Stock_sertch.resx">
+      <DependentUpon>F_Stock_sertch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Stock_update.resx">
+      <DependentUpon>F_Stock_update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
