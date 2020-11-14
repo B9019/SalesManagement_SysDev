@@ -12,6 +12,55 @@ namespace SalesManagement_SysDev
 {
     public partial class F_Product_regist : Form
     {
+        // ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
+
+        // 共通データベース処理モジュール
+        private CommonFunction _cm = new CommonFunction();
+
+        // データベース処理モジュール（項目処理）
+        private ColumnsManagementCommon _cmc = new ColumnsManagementCommon();
+
+        // データベース処理モジュール（コードカウンター）
+        private CodeCounterCommon _cc = new CodeCounterCommon();
+
+        // 入力チェックモジュール
+        private InputCheck _ic = new InputCheck();
+
+        // メッセージ処理モジュール
+        private Messages _ms = new Messages();
+
+        // データベース処理モジュール（M_Division）
+        private M_ProductContents _Pr = new M_ProductContents();
+
+        // ***** プロパティ定義
+
+        // トップフォーム
+        public TopForm _topForm;
+
+        // 選択行番号
+        private int _lineNo;
+
+        // バージョン管理
+        // データベースからデータを読み込んだ時の時間を管理します。
+        // 後にデータベースに書き込む時、異なるバージョンのデータ（読み込んだデータが既に他者によって書き換えられている）
+        // だった場合、書き込みは失敗します。（楽観的同時実行制御）
+        private byte[] _timeStamp;
+
+        // ページング関係プロパティ
+        private int _pageCountPaging;                                       // 全表示ページ数
+        private int _recordCount;                                           // 全表示データ数
+        private int _pageSizePaging;                                        // １ページ表示データ行数
+        private int _currentPage;                                           // 現在のページ
+        private int _recordNo;                                              // ページ先頭位置のデータ（スタートデータ）
+        private IEnumerable<M_DispProduct> _dispDivisionPaging;            // 表示用データ
+
+        // 印刷
+        private int _pageCountPrinting;                                     // 全印刷ページ数
+        private int _pageNumber = 0;                                        // 印刷ページ番号
+        private int _pageSizePrinting;                                      // １ページ印刷データ行数
+        private List<M_DispProduct> _dispDivisionPrinting;                 // 印刷用データ
+
+
         public F_Product_regist()
         {
             InitializeComponent();
@@ -327,7 +376,54 @@ namespace SalesManagement_SysDev
         //
         private M_Product Generate_Data_AtRegistration()
         {
+            return new M_Product
+            {
+                PrID = int.Parse(txt_PrID.Text),
+                MaID = int.Parse(txt_MaID.Text),
+                PrName = txt_PrName.Text,
+                Price = int.Parse(txt_Price.Text),
+                PrJCode = txt_PrJCode.Text,
+                PrSafetyStock = int.Parse(txt_PrSafetyStock.Text),
+                ScID = int.Parse(txt_ScID.Text),
+                PrModelNumber = int.Parse(txt_PrModelNumber.Text),
+                PrColor = txt_PrColor.Text,
+                PrReleaseDate = DateTime.Parse(txt_PrReleaseDate.Text),
+                PrFlag = 0,
+                PrMemo = txt_memo.Text
+
+            };
 
         }
+        //
+        //
+        // 4.1.3　商品情報登録
+        //
+        //
+        private bool ProductRegistration(M_Product regProduct)
+        {
+            // 登録可否
+            if (DialogResult.OK != MessageBox.Show(this, "登録してよろしいですか", "登録可否", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+            {
+                return false;
+            }
+
+            // 商品情報の登録
+            var errorMessage = _Pr.PostM_Division(regProduct);
+
+            if (errorMessage != string.Empty)
+            {
+                MessageBox.Show(errorMessage);
+                return false;
+            }
+
+            // 画面更新
+            RefreshDataGridView();
+            textBoxDivisionName.Focus();
+
+            return true;
+
+        }
+
+
     }
 }
