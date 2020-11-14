@@ -82,7 +82,7 @@
             this.発注情報削除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.バーコード管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_memo = new System.Windows.Forms.TextBox();
             this.lbl_memo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_PrReleaseDate = new System.Windows.Forms.TextBox();
@@ -512,7 +512,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txt_memo);
             this.groupBox2.Controls.Add(this.lbl_memo);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Location = new System.Drawing.Point(11, 218);
@@ -522,13 +522,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "任意項目";
             // 
-            // textBox1
+            // txt_memo
             // 
-            this.textBox1.Location = new System.Drawing.Point(105, 18);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(285, 18);
-            this.textBox1.TabIndex = 70;
+            this.txt_memo.Location = new System.Drawing.Point(105, 18);
+            this.txt_memo.Multiline = true;
+            this.txt_memo.Name = "txt_memo";
+            this.txt_memo.Size = new System.Drawing.Size(285, 18);
+            this.txt_memo.TabIndex = 70;
             // 
             // lbl_memo
             // 
@@ -899,7 +899,7 @@
         private System.Windows.Forms.ToolStripMenuItem 発注情報削除ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem バーコード管理ToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_memo;
         private System.Windows.Forms.Label lbl_memo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txt_PrReleaseDate;
