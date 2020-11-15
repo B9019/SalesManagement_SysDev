@@ -399,14 +399,13 @@ namespace SalesManagement_SysDev
         // 4.1.3　商品情報登録
         //
         //
-        private bool ProductRegistration(M_Product regProduct)
+        private bool Generate_Registration(M_Product regProduct)
         {
             // 登録可否
             if (DialogResult.OK != MessageBox.Show(this, "登録してよろしいですか", "登録可否", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
             {
                 return false;
             }
-
             // 商品情報の登録
             var errorMessage = _Pr.PostM_Division(regProduct);
 
@@ -415,10 +414,9 @@ namespace SalesManagement_SysDev
                 MessageBox.Show(errorMessage);
                 return false;
             }
-
             // 画面更新
             RefreshDataGridView();
-            textBoxDivisionName.Focus();
+            txt_MaID.Focus();
 
             return true;
 
