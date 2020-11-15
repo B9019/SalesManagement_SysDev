@@ -191,6 +191,7 @@
     <Compile Include="F_Stock_update.Designer.cs">
       <DependentUpon>F_Stock_update.cs</DependentUpon>
     </Compile>
+    <Compile Include="InputCheck.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entity\T_Arrival.cs" />
@@ -213,6 +214,7 @@
     <Compile Include="Entity\T_Warehousing.cs" />
     <Compile Include="Entity\T_WarehousingDetail.cs" />
     <Compile Include="SalesManagement_DevContext.cs" />
+    <Compile Include="StaffContents.cs" />
     <Compile Include="T_Shipment_Registration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,6 +328,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Form\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
