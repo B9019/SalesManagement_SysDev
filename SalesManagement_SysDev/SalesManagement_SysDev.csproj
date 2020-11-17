@@ -202,6 +202,7 @@
       <DependentUpon>T_Shipment_update.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\CommonFunction.cs" />
+    <Compile Include="Model\Constants.cs" />
     <Compile Include="Model\ContentsManagement\StaffContents.cs" />
     <Compile Include="Model\Entity\Db\M_Client.cs" />
     <Compile Include="Model\Entity\Db\M_Employee.cs" />
@@ -331,7 +332,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Migrations\" />
     <Folder Include="Model\ContentsManagement\Common\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
