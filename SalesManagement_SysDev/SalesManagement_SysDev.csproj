@@ -204,6 +204,7 @@
     <Compile Include="Model\CommonFunction.cs" />
     <Compile Include="Model\Constants.cs" />
     <Compile Include="Model\ContentsManagement\StaffContents.cs" />
+    <Compile Include="Model\Cryptography.cs" />
     <Compile Include="Model\Entity\Db\M_Client.cs" />
     <Compile Include="Model\Entity\Db\M_Employee.cs" />
     <Compile Include="Model\Entity\Db\M_MajorCassification.cs" />
@@ -231,7 +232,15 @@
     <Compile Include="Model\Entity\Db\T_SyukkoDetail.cs" />
     <Compile Include="Model\Entity\Db\T_Warehousing.cs" />
     <Compile Include="Model\Entity\Db\T_WarehousingDetail.cs" />
+    <Compile Include="Model\Entity\Disp\ControlPanel.cs" />
+    <Compile Include="Model\Entity\Disp\CryptographicKey.cs" />
+    <Compile Include="Model\Entity\Disp\Messages.cs" />
+    <Compile Include="Model\Entity\Disp\OperationLog.cs" />
+    <Compile Include="Model\Entity\Disp\Salt.cs" />
+    <Compile Include="Model\HashManagement.cs" />
     <Compile Include="Model\InputCheck.cs" />
+    <Compile Include="Model\SalesDbContext.cs" />
+    <Compile Include="Model\SortableBindingList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalesManagement_DevContext.cs" />
