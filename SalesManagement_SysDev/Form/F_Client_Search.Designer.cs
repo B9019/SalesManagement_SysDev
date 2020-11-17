@@ -82,30 +82,20 @@
             this.発注情報削除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.バーコード管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbl_ClFAX = new System.Windows.Forms.Label();
-            this.lbl_ClPostal = new System.Windows.Forms.Label();
-            this.lbl_ClPhone = new System.Windows.Forms.Label();
-            this.lbl_ClAddress = new System.Windows.Forms.Label();
             this.lbl_ClName = new System.Windows.Forms.Label();
-            this.txt_ClFAX = new System.Windows.Forms.TextBox();
-            this.txt_ClPostal = new System.Windows.Forms.TextBox();
-            this.txt_ClPhone = new System.Windows.Forms.TextBox();
-            this.txt_ClAddress = new System.Windows.Forms.TextBox();
             this.txt_ClName = new System.Windows.Forms.TextBox();
             this.txt_SoID = new System.Windows.Forms.TextBox();
             this.txt_ClID = new System.Windows.Forms.TextBox();
             this.lbl_ClID = new System.Windows.Forms.Label();
             this.lbl_SoID = new System.Windows.Forms.Label();
-            this.lbl_memo = new System.Windows.Forms.Label();
-            this.txt_memo = new System.Windows.Forms.TextBox();
             this.dataGridView_Product_regist = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_print = new System.Windows.Forms.Button();
             this.btn_all = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_regist = new System.Windows.Forms.Button();
-            this.btn_sertch = new System.Windows.Forms.Button();
+            this.btn_search = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).BeginInit();
@@ -120,7 +110,8 @@
             this.メニューToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(780, 24);
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip2.Size = new System.Drawing.Size(1040, 28);
             this.menuStrip2.TabIndex = 5;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -145,13 +136,13 @@
             this.発注管理ToolStripMenuItem,
             this.バーコード管理ToolStripMenuItem});
             this.メニューToolStripMenuItem.Name = "メニューToolStripMenuItem";
-            this.メニューToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.メニューToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
             this.メニューToolStripMenuItem.Text = "管理メニュー";
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(179, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(216, 26);
             this.toolStripMenuItem4.Text = "管理者用メニュー画面";
             // 
             // toolStripMenuItem1
@@ -161,25 +152,25 @@
             this.新規ログイン情報登録ToolStripMenuItem,
             this.ログイン履歴ToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(179, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
             this.toolStripMenuItem1.Text = "ログイン管理";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(182, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(219, 26);
             this.toolStripMenuItem2.Text = "ログイン";
             // 
             // 新規ログイン情報登録ToolStripMenuItem
             // 
             this.新規ログイン情報登録ToolStripMenuItem.Name = "新規ログイン情報登録ToolStripMenuItem";
-            this.新規ログイン情報登録ToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.新規ログイン情報登録ToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.新規ログイン情報登録ToolStripMenuItem.Text = "新規ログイン情報登録";
             // 
             // ログイン履歴ToolStripMenuItem
             // 
             this.ログイン履歴ToolStripMenuItem.Name = "ログイン履歴ToolStripMenuItem";
-            this.ログイン履歴ToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.ログイン履歴ToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.ログイン履歴ToolStripMenuItem.Text = "ログイン履歴";
             // 
             // 顧客管理ToolStripMenuItem
@@ -189,25 +180,25 @@
             this.顧客情報更新ToolStripMenuItem,
             this.顧客情報検索ToolStripMenuItem});
             this.顧客管理ToolStripMenuItem.Name = "顧客管理ToolStripMenuItem";
-            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.顧客管理ToolStripMenuItem.Text = "顧客管理";
             // 
             // 顧客情報登録ToolStripMenuItem
             // 
             this.顧客情報登録ToolStripMenuItem.Name = "顧客情報登録ToolStripMenuItem";
-            this.顧客情報登録ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.顧客情報登録ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.顧客情報登録ToolStripMenuItem.Text = "顧客情報登録";
             // 
             // 顧客情報更新ToolStripMenuItem
             // 
             this.顧客情報更新ToolStripMenuItem.Name = "顧客情報更新ToolStripMenuItem";
-            this.顧客情報更新ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.顧客情報更新ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.顧客情報更新ToolStripMenuItem.Text = "顧客情報更新";
             // 
             // 顧客情報検索ToolStripMenuItem
             // 
             this.顧客情報検索ToolStripMenuItem.Name = "顧客情報検索ToolStripMenuItem";
-            this.顧客情報検索ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.顧客情報検索ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.顧客情報検索ToolStripMenuItem.Text = "顧客情報検索";
             // 
             // 商品管理ToolStripMenuItem
@@ -217,25 +208,25 @@
             this.商品情報更新ToolStripMenuItem,
             this.商品情報検索ToolStripMenuItem});
             this.商品管理ToolStripMenuItem.Name = "商品管理ToolStripMenuItem";
-            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.商品管理ToolStripMenuItem.Text = "商品管理";
             // 
             // 商品情報登録ToolStripMenuItem
             // 
             this.商品情報登録ToolStripMenuItem.Name = "商品情報登録ToolStripMenuItem";
-            this.商品情報登録ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.商品情報登録ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.商品情報登録ToolStripMenuItem.Text = "商品情報登録";
             // 
             // 商品情報更新ToolStripMenuItem
             // 
             this.商品情報更新ToolStripMenuItem.Name = "商品情報更新ToolStripMenuItem";
-            this.商品情報更新ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.商品情報更新ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.商品情報更新ToolStripMenuItem.Text = "商品情報更新";
             // 
             // 商品情報検索ToolStripMenuItem
             // 
             this.商品情報検索ToolStripMenuItem.Name = "商品情報検索ToolStripMenuItem";
-            this.商品情報検索ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.商品情報検索ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.商品情報検索ToolStripMenuItem.Text = "商品情報検索";
             // 
             // 受注管理ToolStripMenuItem
@@ -246,31 +237,31 @@
             this.受注情報検索ToolStripMenuItem,
             this.受注情報削除ToolStripMenuItem});
             this.受注管理ToolStripMenuItem.Name = "受注管理ToolStripMenuItem";
-            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.受注管理ToolStripMenuItem.Text = "受注管理";
             // 
             // 受注情報登録ToolStripMenuItem
             // 
             this.受注情報登録ToolStripMenuItem.Name = "受注情報登録ToolStripMenuItem";
-            this.受注情報登録ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.受注情報登録ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.受注情報登録ToolStripMenuItem.Text = "受注情報登録";
             // 
             // 受注情報更新ToolStripMenuItem
             // 
             this.受注情報更新ToolStripMenuItem.Name = "受注情報更新ToolStripMenuItem";
-            this.受注情報更新ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.受注情報更新ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.受注情報更新ToolStripMenuItem.Text = "受注情報更新";
             // 
             // 受注情報検索ToolStripMenuItem
             // 
             this.受注情報検索ToolStripMenuItem.Name = "受注情報検索ToolStripMenuItem";
-            this.受注情報検索ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.受注情報検索ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.受注情報検索ToolStripMenuItem.Text = "受注情報検索";
             // 
             // 受注情報削除ToolStripMenuItem
             // 
             this.受注情報削除ToolStripMenuItem.Name = "受注情報削除ToolStripMenuItem";
-            this.受注情報削除ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.受注情報削除ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.受注情報削除ToolStripMenuItem.Text = "受注情報削除";
             // 
             // 注文管理ToolStripMenuItem
@@ -280,25 +271,25 @@
             this.注文情報検索ToolStripMenuItem,
             this.注文情報削除ToolStripMenuItem});
             this.注文管理ToolStripMenuItem.Name = "注文管理ToolStripMenuItem";
-            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.注文管理ToolStripMenuItem.Text = "注文管理";
             // 
             // 注文情報更新ToolStripMenuItem
             // 
             this.注文情報更新ToolStripMenuItem.Name = "注文情報更新ToolStripMenuItem";
-            this.注文情報更新ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.注文情報更新ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.注文情報更新ToolStripMenuItem.Text = "注文情報更新";
             // 
             // 注文情報検索ToolStripMenuItem
             // 
             this.注文情報検索ToolStripMenuItem.Name = "注文情報検索ToolStripMenuItem";
-            this.注文情報検索ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.注文情報検索ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.注文情報検索ToolStripMenuItem.Text = "注文情報検索";
             // 
             // 注文情報削除ToolStripMenuItem
             // 
             this.注文情報削除ToolStripMenuItem.Name = "注文情報削除ToolStripMenuItem";
-            this.注文情報削除ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.注文情報削除ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.注文情報削除ToolStripMenuItem.Text = "注文情報削除";
             // 
             // 入荷管理ToolStripMenuItem
@@ -308,25 +299,25 @@
             this.入荷情報更新ToolStripMenuItem,
             this.入荷情報削除ToolStripMenuItem});
             this.入荷管理ToolStripMenuItem.Name = "入荷管理ToolStripMenuItem";
-            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.入荷管理ToolStripMenuItem.Text = "入荷管理";
             // 
             // 入荷情報登録ToolStripMenuItem
             // 
             this.入荷情報登録ToolStripMenuItem.Name = "入荷情報登録ToolStripMenuItem";
-            this.入荷情報登録ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.入荷情報登録ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.入荷情報登録ToolStripMenuItem.Text = "入荷情報登録";
             // 
             // 入荷情報更新ToolStripMenuItem
             // 
             this.入荷情報更新ToolStripMenuItem.Name = "入荷情報更新ToolStripMenuItem";
-            this.入荷情報更新ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.入荷情報更新ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.入荷情報更新ToolStripMenuItem.Text = "入荷情報更新";
             // 
             // 入荷情報削除ToolStripMenuItem
             // 
             this.入荷情報削除ToolStripMenuItem.Name = "入荷情報削除ToolStripMenuItem";
-            this.入荷情報削除ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.入荷情報削除ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.入荷情報削除ToolStripMenuItem.Text = "入荷情報削除";
             // 
             // 出荷管理ToolStripMenuItem
@@ -336,25 +327,25 @@
             this.出荷情報更新ToolStripMenuItem,
             this.出荷情報削除ToolStripMenuItem});
             this.出荷管理ToolStripMenuItem.Name = "出荷管理ToolStripMenuItem";
-            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.出荷管理ToolStripMenuItem.Text = "出荷管理";
             // 
             // 出荷情報登録ToolStripMenuItem
             // 
             this.出荷情報登録ToolStripMenuItem.Name = "出荷情報登録ToolStripMenuItem";
-            this.出荷情報登録ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.出荷情報登録ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.出荷情報登録ToolStripMenuItem.Text = "出荷情報登録";
             // 
             // 出荷情報更新ToolStripMenuItem
             // 
             this.出荷情報更新ToolStripMenuItem.Name = "出荷情報更新ToolStripMenuItem";
-            this.出荷情報更新ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.出荷情報更新ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.出荷情報更新ToolStripMenuItem.Text = "出荷情報更新";
             // 
             // 出荷情報削除ToolStripMenuItem
             // 
             this.出荷情報削除ToolStripMenuItem.Name = "出荷情報削除ToolStripMenuItem";
-            this.出荷情報削除ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.出荷情報削除ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.出荷情報削除ToolStripMenuItem.Text = "出荷情報削除";
             // 
             // 在庫管理ToolStripMenuItem
@@ -363,19 +354,19 @@
             this.在庫情報更新ToolStripMenuItem,
             this.在庫情報検索ToolStripMenuItem});
             this.在庫管理ToolStripMenuItem.Name = "在庫管理ToolStripMenuItem";
-            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.在庫管理ToolStripMenuItem.Text = "在庫管理";
             // 
             // 在庫情報更新ToolStripMenuItem
             // 
             this.在庫情報更新ToolStripMenuItem.Name = "在庫情報更新ToolStripMenuItem";
-            this.在庫情報更新ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.在庫情報更新ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.在庫情報更新ToolStripMenuItem.Text = "在庫情報更新";
             // 
             // 在庫情報検索ToolStripMenuItem
             // 
             this.在庫情報検索ToolStripMenuItem.Name = "在庫情報検索ToolStripMenuItem";
-            this.在庫情報検索ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.在庫情報検索ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.在庫情報検索ToolStripMenuItem.Text = "在庫情報検索";
             // 
             // 入庫管理ToolStripMenuItem
@@ -384,19 +375,19 @@
             this.入庫情報登録ToolStripMenuItem,
             this.入庫情報更新ToolStripMenuItem});
             this.入庫管理ToolStripMenuItem.Name = "入庫管理ToolStripMenuItem";
-            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.入庫管理ToolStripMenuItem.Text = "入庫管理";
             // 
             // 入庫情報登録ToolStripMenuItem
             // 
             this.入庫情報登録ToolStripMenuItem.Name = "入庫情報登録ToolStripMenuItem";
-            this.入庫情報登録ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.入庫情報登録ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.入庫情報登録ToolStripMenuItem.Text = "入庫情報登録";
             // 
             // 入庫情報更新ToolStripMenuItem
             // 
             this.入庫情報更新ToolStripMenuItem.Name = "入庫情報更新ToolStripMenuItem";
-            this.入庫情報更新ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.入庫情報更新ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.入庫情報更新ToolStripMenuItem.Text = "入庫情報更新";
             // 
             // 出庫管理ToolStripMenuItem
@@ -404,13 +395,13 @@
             this.出庫管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.出庫情報登録ToolStripMenuItem});
             this.出庫管理ToolStripMenuItem.Name = "出庫管理ToolStripMenuItem";
-            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.出庫管理ToolStripMenuItem.Text = "出庫管理";
             // 
             // 出庫情報登録ToolStripMenuItem
             // 
             this.出庫情報登録ToolStripMenuItem.Name = "出庫情報登録ToolStripMenuItem";
-            this.出庫情報登録ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.出庫情報登録ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.出庫情報登録ToolStripMenuItem.Text = "出庫情報登録";
             // 
             // 社員管理ToolStripMenuItem
@@ -420,25 +411,25 @@
             this.社員情報更新ToolStripMenuItem,
             this.社員情報検索ToolStripMenuItem});
             this.社員管理ToolStripMenuItem.Name = "社員管理ToolStripMenuItem";
-            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.社員管理ToolStripMenuItem.Text = "社員管理";
             // 
             // 社員情報登録ToolStripMenuItem
             // 
             this.社員情報登録ToolStripMenuItem.Name = "社員情報登録ToolStripMenuItem";
-            this.社員情報登録ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.社員情報登録ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.社員情報登録ToolStripMenuItem.Text = "社員情報登録";
             // 
             // 社員情報更新ToolStripMenuItem
             // 
             this.社員情報更新ToolStripMenuItem.Name = "社員情報更新ToolStripMenuItem";
-            this.社員情報更新ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.社員情報更新ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.社員情報更新ToolStripMenuItem.Text = "社員情報更新";
             // 
             // 社員情報検索ToolStripMenuItem
             // 
             this.社員情報検索ToolStripMenuItem.Name = "社員情報検索ToolStripMenuItem";
-            this.社員情報検索ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.社員情報検索ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.社員情報検索ToolStripMenuItem.Text = "社員情報検索";
             // 
             // 売上管理ToolStripMenuItem
@@ -447,25 +438,25 @@
             this.toolStripMenuItem3,
             this.売上情報検索ToolStripMenuItem});
             this.売上管理ToolStripMenuItem.Name = "売上管理ToolStripMenuItem";
-            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.売上管理ToolStripMenuItem.Text = "売上管理";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(146, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(174, 26);
             this.toolStripMenuItem3.Text = "売上情報更新";
             // 
             // 売上情報検索ToolStripMenuItem
             // 
             this.売上情報検索ToolStripMenuItem.Name = "売上情報検索ToolStripMenuItem";
-            this.売上情報検索ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.売上情報検索ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.売上情報検索ToolStripMenuItem.Text = "売上情報検索";
             // 
             // 検品ToolStripMenuItem
             // 
             this.検品ToolStripMenuItem.Name = "検品ToolStripMenuItem";
-            this.検品ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.検品ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.検品ToolStripMenuItem.Text = "検品管理";
             // 
             // 発注管理ToolStripMenuItem
@@ -475,171 +466,92 @@
             this.発注情報検索ToolStripMenuItem,
             this.発注情報削除ToolStripMenuItem});
             this.発注管理ToolStripMenuItem.Name = "発注管理ToolStripMenuItem";
-            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.発注管理ToolStripMenuItem.Text = "発注管理";
             // 
             // 発注情報登録ToolStripMenuItem
             // 
             this.発注情報登録ToolStripMenuItem.Name = "発注情報登録ToolStripMenuItem";
-            this.発注情報登録ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.発注情報登録ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.発注情報登録ToolStripMenuItem.Text = "発注情報登録";
             // 
             // 発注情報検索ToolStripMenuItem
             // 
             this.発注情報検索ToolStripMenuItem.Name = "発注情報検索ToolStripMenuItem";
-            this.発注情報検索ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.発注情報検索ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.発注情報検索ToolStripMenuItem.Text = "発注情報検索";
             // 
             // 発注情報削除ToolStripMenuItem
             // 
             this.発注情報削除ToolStripMenuItem.Name = "発注情報削除ToolStripMenuItem";
-            this.発注情報削除ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.発注情報削除ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.発注情報削除ToolStripMenuItem.Text = "発注情報削除";
             // 
             // バーコード管理ToolStripMenuItem
             // 
             this.バーコード管理ToolStripMenuItem.Name = "バーコード管理ToolStripMenuItem";
-            this.バーコード管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.バーコード管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.バーコード管理ToolStripMenuItem.Text = "バーコード管理";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txt_memo);
-            this.groupBox1.Controls.Add(this.lbl_memo);
-            this.groupBox1.Controls.Add(this.lbl_ClFAX);
-            this.groupBox1.Controls.Add(this.lbl_ClPostal);
-            this.groupBox1.Controls.Add(this.lbl_ClPhone);
-            this.groupBox1.Controls.Add(this.lbl_ClAddress);
             this.groupBox1.Controls.Add(this.lbl_ClName);
-            this.groupBox1.Controls.Add(this.txt_ClFAX);
-            this.groupBox1.Controls.Add(this.txt_ClPostal);
-            this.groupBox1.Controls.Add(this.txt_ClPhone);
-            this.groupBox1.Controls.Add(this.txt_ClAddress);
             this.groupBox1.Controls.Add(this.txt_ClName);
             this.groupBox1.Controls.Add(this.txt_SoID);
             this.groupBox1.Controls.Add(this.txt_ClID);
             this.groupBox1.Controls.Add(this.lbl_ClID);
             this.groupBox1.Controls.Add(this.lbl_SoID);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(24, 47);
+            this.groupBox1.Location = new System.Drawing.Point(32, 59);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(726, 176);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(968, 118);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "検索項目";
-            // 
-            // lbl_ClFAX
-            // 
-            this.lbl_ClFAX.AutoSize = true;
-            this.lbl_ClFAX.ForeColor = System.Drawing.Color.White;
-            this.lbl_ClFAX.Location = new System.Drawing.Point(42, 105);
-            this.lbl_ClFAX.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_ClFAX.Name = "lbl_ClFAX";
-            this.lbl_ClFAX.Size = new System.Drawing.Size(27, 12);
-            this.lbl_ClFAX.TabIndex = 74;
-            this.lbl_ClFAX.Text = "FAX";
-            // 
-            // lbl_ClPostal
-            // 
-            this.lbl_ClPostal.AutoSize = true;
-            this.lbl_ClPostal.ForeColor = System.Drawing.Color.White;
-            this.lbl_ClPostal.Location = new System.Drawing.Point(409, 84);
-            this.lbl_ClPostal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_ClPostal.Name = "lbl_ClPostal";
-            this.lbl_ClPostal.Size = new System.Drawing.Size(53, 12);
-            this.lbl_ClPostal.TabIndex = 72;
-            this.lbl_ClPostal.Text = "郵便番号";
-            // 
-            // lbl_ClPhone
-            // 
-            this.lbl_ClPhone.AutoSize = true;
-            this.lbl_ClPhone.ForeColor = System.Drawing.Color.White;
-            this.lbl_ClPhone.Location = new System.Drawing.Point(16, 80);
-            this.lbl_ClPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_ClPhone.Name = "lbl_ClPhone";
-            this.lbl_ClPhone.Size = new System.Drawing.Size(53, 12);
-            this.lbl_ClPhone.TabIndex = 12;
-            this.lbl_ClPhone.Text = "電話番号";
-            // 
-            // lbl_ClAddress
-            // 
-            this.lbl_ClAddress.AutoSize = true;
-            this.lbl_ClAddress.ForeColor = System.Drawing.Color.White;
-            this.lbl_ClAddress.Location = new System.Drawing.Point(432, 55);
-            this.lbl_ClAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_ClAddress.Name = "lbl_ClAddress";
-            this.lbl_ClAddress.Size = new System.Drawing.Size(29, 12);
-            this.lbl_ClAddress.TabIndex = 71;
-            this.lbl_ClAddress.Text = "住所";
             // 
             // lbl_ClName
             // 
             this.lbl_ClName.AutoSize = true;
             this.lbl_ClName.ForeColor = System.Drawing.Color.White;
-            this.lbl_ClName.Location = new System.Drawing.Point(27, 55);
-            this.lbl_ClName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ClName.Location = new System.Drawing.Point(36, 69);
             this.lbl_ClName.Name = "lbl_ClName";
-            this.lbl_ClName.Size = new System.Drawing.Size(41, 12);
+            this.lbl_ClName.Size = new System.Drawing.Size(52, 15);
             this.lbl_ClName.TabIndex = 70;
             this.lbl_ClName.Text = "顧客名";
             // 
-            // txt_ClFAX
-            // 
-            this.txt_ClFAX.Location = new System.Drawing.Point(82, 102);
-            this.txt_ClFAX.Name = "txt_ClFAX";
-            this.txt_ClFAX.Size = new System.Drawing.Size(183, 19);
-            this.txt_ClFAX.TabIndex = 68;
-            // 
-            // txt_ClPostal
-            // 
-            this.txt_ClPostal.Location = new System.Drawing.Point(476, 77);
-            this.txt_ClPostal.Name = "txt_ClPostal";
-            this.txt_ClPostal.Size = new System.Drawing.Size(183, 19);
-            this.txt_ClPostal.TabIndex = 67;
-            // 
-            // txt_ClPhone
-            // 
-            this.txt_ClPhone.Location = new System.Drawing.Point(82, 77);
-            this.txt_ClPhone.Name = "txt_ClPhone";
-            this.txt_ClPhone.Size = new System.Drawing.Size(183, 19);
-            this.txt_ClPhone.TabIndex = 66;
-            // 
-            // txt_ClAddress
-            // 
-            this.txt_ClAddress.Location = new System.Drawing.Point(476, 52);
-            this.txt_ClAddress.Name = "txt_ClAddress";
-            this.txt_ClAddress.Size = new System.Drawing.Size(183, 19);
-            this.txt_ClAddress.TabIndex = 65;
-            // 
             // txt_ClName
             // 
-            this.txt_ClName.Location = new System.Drawing.Point(82, 52);
+            this.txt_ClName.Location = new System.Drawing.Point(109, 65);
+            this.txt_ClName.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ClName.Name = "txt_ClName";
-            this.txt_ClName.Size = new System.Drawing.Size(183, 19);
+            this.txt_ClName.Size = new System.Drawing.Size(243, 22);
             this.txt_ClName.TabIndex = 64;
             // 
             // txt_SoID
             // 
-            this.txt_SoID.Location = new System.Drawing.Point(476, 27);
+            this.txt_SoID.Location = new System.Drawing.Point(635, 34);
+            this.txt_SoID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SoID.Name = "txt_SoID";
-            this.txt_SoID.Size = new System.Drawing.Size(183, 19);
+            this.txt_SoID.Size = new System.Drawing.Size(243, 22);
             this.txt_SoID.TabIndex = 63;
             // 
             // txt_ClID
             // 
-            this.txt_ClID.Location = new System.Drawing.Point(82, 27);
+            this.txt_ClID.Location = new System.Drawing.Point(109, 34);
+            this.txt_ClID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ClID.Name = "txt_ClID";
-            this.txt_ClID.Size = new System.Drawing.Size(183, 19);
+            this.txt_ClID.Size = new System.Drawing.Size(243, 22);
             this.txt_ClID.TabIndex = 62;
             // 
             // lbl_ClID
             // 
             this.lbl_ClID.AutoSize = true;
             this.lbl_ClID.ForeColor = System.Drawing.Color.White;
-            this.lbl_ClID.Location = new System.Drawing.Point(27, 30);
-            this.lbl_ClID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ClID.Location = new System.Drawing.Point(36, 38);
             this.lbl_ClID.Name = "lbl_ClID";
-            this.lbl_ClID.Size = new System.Drawing.Size(40, 12);
+            this.lbl_ClID.Size = new System.Drawing.Size(51, 15);
             this.lbl_ClID.TabIndex = 8;
             this.lbl_ClID.Text = "顧客ID";
             // 
@@ -647,118 +559,108 @@
             // 
             this.lbl_SoID.AutoSize = true;
             this.lbl_SoID.ForeColor = System.Drawing.Color.White;
-            this.lbl_SoID.Location = new System.Drawing.Point(409, 30);
-            this.lbl_SoID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_SoID.Location = new System.Drawing.Point(545, 38);
             this.lbl_SoID.Name = "lbl_SoID";
-            this.lbl_SoID.Size = new System.Drawing.Size(52, 12);
+            this.lbl_SoID.Size = new System.Drawing.Size(66, 15);
             this.lbl_SoID.TabIndex = 7;
             this.lbl_SoID.Text = "営業所ID";
             // 
-            // lbl_memo
-            // 
-            this.lbl_memo.AutoSize = true;
-            this.lbl_memo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_memo.Location = new System.Drawing.Point(16, 142);
-            this.lbl_memo.Name = "lbl_memo";
-            this.lbl_memo.Size = new System.Drawing.Size(73, 12);
-            this.lbl_memo.TabIndex = 75;
-            this.lbl_memo.Text = "備考(30文字)";
-            // 
-            // txt_memo
-            // 
-            this.txt_memo.Location = new System.Drawing.Point(108, 139);
-            this.txt_memo.Multiline = true;
-            this.txt_memo.Name = "txt_memo";
-            this.txt_memo.Size = new System.Drawing.Size(285, 18);
-            this.txt_memo.TabIndex = 76;
-            // 
             // dataGridView_Product_regist
             // 
-            this.dataGridView_Product_regist.Location = new System.Drawing.Point(24, 244);
+            this.dataGridView_Product_regist.Location = new System.Drawing.Point(32, 212);
+            this.dataGridView_Product_regist.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_Product_regist.Name = "dataGridView_Product_regist";
-            this.dataGridView_Product_regist.Size = new System.Drawing.Size(726, 273);
+            this.dataGridView_Product_regist.Size = new System.Drawing.Size(968, 434);
             this.dataGridView_Product_regist.TabIndex = 75;
             // 
-            // button3
+            // btn_clear
             // 
-            this.button3.Location = new System.Drawing.Point(585, 541);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 23);
-            this.button3.TabIndex = 97;
-            this.button3.Text = "F7　入力クリア";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_clear.Location = new System.Drawing.Point(780, 676);
+            this.btn_clear.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(115, 29);
+            this.btn_clear.TabIndex = 97;
+            this.btn_clear.Text = "F7　入力クリア";
+            this.btn_clear.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_delete
             // 
-            this.button2.Location = new System.Drawing.Point(504, 541);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 96;
-            this.button2.Text = "F6　削除";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_delete.Location = new System.Drawing.Point(672, 676);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(100, 29);
+            this.btn_delete.TabIndex = 96;
+            this.btn_delete.Text = "F6　削除";
+            this.btn_delete.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_print
             // 
-            this.button1.Location = new System.Drawing.Point(423, 541);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 95;
-            this.button1.Text = "F5　印刷";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_print.Location = new System.Drawing.Point(564, 676);
+            this.btn_print.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_print.Name = "btn_print";
+            this.btn_print.Size = new System.Drawing.Size(100, 29);
+            this.btn_print.TabIndex = 95;
+            this.btn_print.Text = "F5　印刷";
+            this.btn_print.UseVisualStyleBackColor = true;
             // 
             // btn_all
             // 
-            this.btn_all.Location = new System.Drawing.Point(332, 541);
+            this.btn_all.Location = new System.Drawing.Point(443, 676);
+            this.btn_all.Margin = new System.Windows.Forms.Padding(4);
             this.btn_all.Name = "btn_all";
-            this.btn_all.Size = new System.Drawing.Size(85, 23);
+            this.btn_all.Size = new System.Drawing.Size(113, 29);
             this.btn_all.TabIndex = 94;
             this.btn_all.Text = "F4　一覧表示";
             this.btn_all.UseVisualStyleBackColor = true;
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(251, 541);
+            this.btn_update.Location = new System.Drawing.Point(335, 676);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(4);
             this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(75, 23);
+            this.btn_update.Size = new System.Drawing.Size(100, 29);
             this.btn_update.TabIndex = 93;
             this.btn_update.Text = "F3　更新";
             this.btn_update.UseVisualStyleBackColor = true;
             // 
             // btn_regist
             // 
-            this.btn_regist.Location = new System.Drawing.Point(170, 541);
+            this.btn_regist.Location = new System.Drawing.Point(227, 676);
+            this.btn_regist.Margin = new System.Windows.Forms.Padding(4);
             this.btn_regist.Name = "btn_regist";
-            this.btn_regist.Size = new System.Drawing.Size(75, 23);
+            this.btn_regist.Size = new System.Drawing.Size(100, 29);
             this.btn_regist.TabIndex = 92;
             this.btn_regist.Text = "F2　登録";
             this.btn_regist.UseVisualStyleBackColor = true;
             // 
-            // btn_sertch
+            // btn_search
             // 
-            this.btn_sertch.Location = new System.Drawing.Point(89, 541);
-            this.btn_sertch.Name = "btn_sertch";
-            this.btn_sertch.Size = new System.Drawing.Size(75, 23);
-            this.btn_sertch.TabIndex = 91;
-            this.btn_sertch.Text = "F1　検索";
-            this.btn_sertch.UseVisualStyleBackColor = true;
+            this.btn_search.Location = new System.Drawing.Point(119, 676);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(100, 29);
+            this.btn_search.TabIndex = 91;
+            this.btn_search.Text = "F1　検索";
+            this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_sertch_Click);
             // 
             // F_Client_Search
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(780, 599);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1040, 749);
+            this.Controls.Add(this.btn_clear);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_print);
             this.Controls.Add(this.btn_all);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_regist);
-            this.Controls.Add(this.btn_sertch);
+            this.Controls.Add(this.btn_search);
             this.Controls.Add(this.dataGridView_Product_regist);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "F_Client_Search";
             this.Text = "顧客情報検索";
             this.menuStrip2.ResumeLayout(false);
@@ -827,29 +729,19 @@
         private System.Windows.Forms.ToolStripMenuItem 発注情報削除ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem バーコード管理ToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lbl_ClFAX;
-        private System.Windows.Forms.Label lbl_ClPostal;
-        private System.Windows.Forms.Label lbl_ClPhone;
-        private System.Windows.Forms.Label lbl_ClAddress;
         private System.Windows.Forms.Label lbl_ClName;
-        private System.Windows.Forms.TextBox txt_ClFAX;
-        private System.Windows.Forms.TextBox txt_ClPostal;
-        private System.Windows.Forms.TextBox txt_ClPhone;
-        private System.Windows.Forms.TextBox txt_ClAddress;
         private System.Windows.Forms.TextBox txt_ClName;
         private System.Windows.Forms.TextBox txt_SoID;
         private System.Windows.Forms.TextBox txt_ClID;
         private System.Windows.Forms.Label lbl_ClID;
         private System.Windows.Forms.Label lbl_SoID;
-        private System.Windows.Forms.Label lbl_memo;
-        private System.Windows.Forms.TextBox txt_memo;
         private System.Windows.Forms.DataGridView dataGridView_Product_regist;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_print;
         private System.Windows.Forms.Button btn_all;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_regist;
-        private System.Windows.Forms.Button btn_sertch;
+        private System.Windows.Forms.Button btn_search;
     }
 }
