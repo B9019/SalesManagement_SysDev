@@ -341,6 +341,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DataSet\" />
     <Folder Include="Migrations\" />
     <Folder Include="Model\ContentsManagement\Common\" />
     <Folder Include="Resources\" />
