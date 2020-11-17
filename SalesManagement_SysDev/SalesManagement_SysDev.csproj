@@ -57,242 +57,254 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\M_MajorCassification.cs" />
-    <Compile Include="Entity\M_Product.cs" />
-    <Compile Include="F_Arrival_Registration.cs">
+    <Compile Include="Form\F_Arrival_Registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Arrival_Registration.Designer.cs">
+    <Compile Include="Form\F_Arrival_Registration.Designer.cs">
       <DependentUpon>F_Arrival_Registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Arrival_search.cs">
+    <Compile Include="Form\F_Arrival_search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Arrival_search.Designer.cs">
+    <Compile Include="Form\F_Arrival_search.Designer.cs">
       <DependentUpon>F_Arrival_search.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Arrival_update.cs">
+    <Compile Include="Form\F_Arrival_update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Arrival_update.Designer.cs">
+    <Compile Include="Form\F_Arrival_update.Designer.cs">
       <DependentUpon>F_Arrival_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Chumon_delete.cs">
+    <Compile Include="Form\F_Chumon_delete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Chumon_delete.Designer.cs">
+    <Compile Include="Form\F_Chumon_delete.Designer.cs">
       <DependentUpon>F_Chumon_delete.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_chumon_search.cs">
+    <Compile Include="Form\F_chumon_search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_chumon_search.Designer.cs">
+    <Compile Include="Form\F_chumon_search.Designer.cs">
       <DependentUpon>F_chumon_search.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_chumon_update.cs">
+    <Compile Include="Form\F_chumon_update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_chumon_update.Designer.cs">
+    <Compile Include="Form\F_chumon_update.Designer.cs">
       <DependentUpon>F_chumon_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Client_Registration.cs">
+    <Compile Include="Form\F_Client_Registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Client_Registration.Designer.cs">
+    <Compile Include="Form\F_Client_Registration.Designer.cs">
       <DependentUpon>F_Client_Registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Client_Search.cs">
+    <Compile Include="Form\F_Client_Search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Client_Search.Designer.cs">
+    <Compile Include="Form\F_Client_Search.Designer.cs">
       <DependentUpon>F_Client_Search.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Client_update.cs">
+    <Compile Include="Form\F_Client_update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Client_update.Designer.cs">
+    <Compile Include="Form\F_Client_update.Designer.cs">
       <DependentUpon>F_Client_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_login.cs">
+    <Compile Include="Form\F_login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_login.Designer.cs">
+    <Compile Include="Form\F_login.Designer.cs">
       <DependentUpon>F_login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Entity\M_Client.cs" />
-    <Compile Include="Entity\M_Employee.cs" />
-    <Compile Include="Entity\M_Maker.cs" />
-    <Compile Include="Entity\M_Position.cs" />
-    <Compile Include="Entity\M_SalesOffice.cs" />
-    <Compile Include="Entity\M_SmallClassification.cs" />
-    <Compile Include="F_login_log.cs">
+    <Compile Include="Form\F_login_log.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_login_log.Designer.cs">
+    <Compile Include="Form\F_login_log.Designer.cs">
       <DependentUpon>F_login_log.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_login_regist.cs">
+    <Compile Include="Form\F_login_regist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_login_regist.Designer.cs">
+    <Compile Include="Form\F_login_regist.Designer.cs">
       <DependentUpon>F_login_regist.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Order_Delete.cs">
+    <Compile Include="Form\F_Order_Delete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Order_Delete.Designer.cs">
+    <Compile Include="Form\F_Order_Delete.Designer.cs">
       <DependentUpon>F_Order_Delete.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Order_Registration.cs">
+    <Compile Include="Form\F_Order_Registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Order_Registration.Designer.cs">
+    <Compile Include="Form\F_Order_Registration.Designer.cs">
       <DependentUpon>F_Order_Registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Order_Search.cs">
+    <Compile Include="Form\F_Order_Search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Order_Search.Designer.cs">
+    <Compile Include="Form\F_Order_Search.Designer.cs">
       <DependentUpon>F_Order_Search.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Order_update.cs">
+    <Compile Include="Form\F_Order_update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Order_update.Designer.cs">
+    <Compile Include="Form\F_Order_update.Designer.cs">
       <DependentUpon>F_Order_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Product_regist.cs">
+    <Compile Include="Form\F_Product_regist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Product_regist.Designer.cs">
+    <Compile Include="Form\F_Product_regist.Designer.cs">
       <DependentUpon>F_Product_regist.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Product_search.cs">
+    <Compile Include="Form\F_Product_search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Product_search.Designer.cs">
+    <Compile Include="Form\F_Product_search.Designer.cs">
       <DependentUpon>F_Product_search.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Product_update.cs">
+    <Compile Include="Form\F_Product_update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Product_update.Designer.cs">
+    <Compile Include="Form\F_Product_update.Designer.cs">
       <DependentUpon>F_Product_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Stock_sertch.cs">
+    <Compile Include="Form\F_Stock_sertch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Stock_sertch.Designer.cs">
+    <Compile Include="Form\F_Stock_sertch.Designer.cs">
       <DependentUpon>F_Stock_sertch.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Stock_update.cs">
+    <Compile Include="Form\F_Stock_update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Stock_update.Designer.cs">
+    <Compile Include="Form\F_Stock_update.Designer.cs">
       <DependentUpon>F_Stock_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Entity\T_Arrival.cs" />
-    <Compile Include="Entity\T_ArrivalDetail.cs" />
-    <Compile Include="Entity\T_Chumon.cs" />
-    <Compile Include="Entity\T_ChumonDetail.cs" />
-    <Compile Include="Entity\T_Hattyu.cs" />
-    <Compile Include="Entity\T_HattyuDetail.cs" />
-    <Compile Include="Entity\T_LoginHistory.cs" />
-    <Compile Include="Entity\T_OperationHistory.cs" />
-    <Compile Include="Entity\T_Order.cs" />
-    <Compile Include="Entity\T_OrderDetail.cs" />
-    <Compile Include="Entity\T_Sale.cs" />
-    <Compile Include="Entity\T_SaleDetail.cs" />
-    <Compile Include="Entity\T_Shipment.cs" />
-    <Compile Include="Entity\T_ShipmentDetail.cs" />
-    <Compile Include="Entity\T_Stock.cs" />
-    <Compile Include="Entity\T_Syukko.cs" />
-    <Compile Include="Entity\T_SyukkoDetail.cs" />
-    <Compile Include="Entity\T_Warehousing.cs" />
-    <Compile Include="Entity\T_WarehousingDetail.cs" />
-    <Compile Include="SalesManagement_DevContext.cs" />
-    <Compile Include="T_Shipment_Registration.cs">
+    <Compile Include="Form\T_Shipment_Registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="T_Shipment_Registration.Designer.cs">
+    <Compile Include="Form\T_Shipment_Registration.Designer.cs">
       <DependentUpon>T_Shipment_Registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="T_Shipment_search.cs">
+    <Compile Include="Form\T_Shipment_search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="T_Shipment_search.Designer.cs">
+    <Compile Include="Form\T_Shipment_search.Designer.cs">
       <DependentUpon>T_Shipment_search.cs</DependentUpon>
     </Compile>
-    <Compile Include="T_Shipment_update.cs">
+    <Compile Include="Form\T_Shipment_update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="T_Shipment_update.Designer.cs">
+    <Compile Include="Form\T_Shipment_update.Designer.cs">
       <DependentUpon>T_Shipment_update.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="F_Arrival_Registration.resx">
+    <Compile Include="Model\CommonFunction.cs" />
+    <Compile Include="Model\ContentsManagement\StaffContents.cs" />
+    <Compile Include="Model\Entity\Db\M_Client.cs" />
+    <Compile Include="Model\Entity\Db\M_Employee.cs" />
+    <Compile Include="Model\Entity\Db\M_MajorCassification.cs" />
+    <Compile Include="Model\Entity\Db\M_Maker.cs" />
+    <Compile Include="Model\Entity\Db\M_Position.cs" />
+    <Compile Include="Model\Entity\Db\M_Product.cs" />
+    <Compile Include="Model\Entity\Db\M_SalesOffice.cs" />
+    <Compile Include="Model\Entity\Db\M_SmallClassification.cs" />
+    <Compile Include="Model\Entity\Db\T_Arrival.cs" />
+    <Compile Include="Model\Entity\Db\T_ArrivalDetail.cs" />
+    <Compile Include="Model\Entity\Db\T_Chumon.cs" />
+    <Compile Include="Model\Entity\Db\T_ChumonDetail.cs" />
+    <Compile Include="Model\Entity\Db\T_Hattyu.cs" />
+    <Compile Include="Model\Entity\Db\T_HattyuDetail.cs" />
+    <Compile Include="Model\Entity\Db\T_LoginHistory.cs" />
+    <Compile Include="Model\Entity\Db\T_OperationHistory.cs" />
+    <Compile Include="Model\Entity\Db\T_Order.cs" />
+    <Compile Include="Model\Entity\Db\T_OrderDetail.cs" />
+    <Compile Include="Model\Entity\Db\T_Sale.cs" />
+    <Compile Include="Model\Entity\Db\T_SaleDetail.cs" />
+    <Compile Include="Model\Entity\Db\T_Shipment.cs" />
+    <Compile Include="Model\Entity\Db\T_ShipmentDetail.cs" />
+    <Compile Include="Model\Entity\Db\T_Stock.cs" />
+    <Compile Include="Model\Entity\Db\T_Syukko.cs" />
+    <Compile Include="Model\Entity\Db\T_SyukkoDetail.cs" />
+    <Compile Include="Model\Entity\Db\T_Warehousing.cs" />
+    <Compile Include="Model\Entity\Db\T_WarehousingDetail.cs" />
+    <Compile Include="Model\InputCheck.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalesManagement_DevContext.cs" />
+    <EmbeddedResource Include="Form\F_Arrival_Registration.resx">
       <DependentUpon>F_Arrival_Registration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Arrival_search.resx">
+    <EmbeddedResource Include="Form\F_Arrival_search.resx">
       <DependentUpon>F_Arrival_search.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Arrival_update.resx">
+    <EmbeddedResource Include="Form\F_Arrival_update.resx">
       <DependentUpon>F_Arrival_update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Chumon_delete.resx">
+    <EmbeddedResource Include="Form\F_Chumon_delete.resx">
       <DependentUpon>F_Chumon_delete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_chumon_search.resx">
+    <EmbeddedResource Include="Form\F_chumon_search.resx">
       <DependentUpon>F_chumon_search.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_chumon_update.resx">
+    <EmbeddedResource Include="Form\F_chumon_update.resx">
       <DependentUpon>F_chumon_update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Client_Registration.resx">
+    <EmbeddedResource Include="Form\F_Client_Registration.resx">
       <DependentUpon>F_Client_Registration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Client_Search.resx">
+    <EmbeddedResource Include="Form\F_Client_Search.resx">
       <DependentUpon>F_Client_Search.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Client_update.resx">
+    <EmbeddedResource Include="Form\F_Client_update.resx">
       <DependentUpon>F_Client_update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_login.resx">
+    <EmbeddedResource Include="Form\F_login.resx">
       <DependentUpon>F_login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_login_log.resx">
+    <EmbeddedResource Include="Form\F_login_log.resx">
       <DependentUpon>F_login_log.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_login_regist.resx">
+    <EmbeddedResource Include="Form\F_login_regist.resx">
       <DependentUpon>F_login_regist.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Order_Delete.resx">
+    <EmbeddedResource Include="Form\F_Order_Delete.resx">
       <DependentUpon>F_Order_Delete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Order_Registration.resx">
+    <EmbeddedResource Include="Form\F_Order_Registration.resx">
       <DependentUpon>F_Order_Registration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Order_Search.resx">
+    <EmbeddedResource Include="Form\F_Order_Search.resx">
       <DependentUpon>F_Order_Search.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Order_update.resx">
+    <EmbeddedResource Include="Form\F_Order_update.resx">
       <DependentUpon>F_Order_update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Product_regist.resx">
+    <EmbeddedResource Include="Form\F_Product_regist.resx">
       <DependentUpon>F_Product_regist.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Product_search.resx">
+    <EmbeddedResource Include="Form\F_Product_search.resx">
       <DependentUpon>F_Product_search.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Product_update.resx">
+    <EmbeddedResource Include="Form\F_Product_update.resx">
       <DependentUpon>F_Product_update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Stock_sertch.resx">
+    <EmbeddedResource Include="Form\F_Stock_sertch.resx">
       <DependentUpon>F_Stock_sertch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Stock_update.resx">
+    <EmbeddedResource Include="Form\F_Stock_update.resx">
       <DependentUpon>F_Stock_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\T_Shipment_Registration.resx">
+      <DependentUpon>T_Shipment_Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\T_Shipment_search.resx">
+      <DependentUpon>T_Shipment_search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\T_Shipment_update.resx">
+      <DependentUpon>T_Shipment_update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -304,15 +316,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="T_Shipment_Registration.resx">
-      <DependentUpon>T_Shipment_Registration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="T_Shipment_search.resx">
-      <DependentUpon>T_Shipment_search.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="T_Shipment_update.resx">
-      <DependentUpon>T_Shipment_update.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -326,6 +329,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\ContentsManagement\Common\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
