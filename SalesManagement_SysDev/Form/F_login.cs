@@ -34,10 +34,5 @@ namespace SalesManagement_SysDev
 
             MessageBox.Show("テーブル作成完了");
         }
-
-        private void F_login_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
