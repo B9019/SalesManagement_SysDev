@@ -65,7 +65,7 @@
     <Compile Include="Form\F_home.Designer.cs">
       <DependentUpon>F_home.cs</DependentUpon>
     </Compile>
- 　 <Compile Include="Form\F_Arrival_regist.cs">
+ 
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\F_Arrival_regist.Designer.cs">
@@ -254,6 +254,7 @@
       <DependentUpon>F_home.cs</DependentUpon>
     </EmbeddedResource>
     
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Arrival_delete.resx">
       <DependentUpon>F_Arrival_delete.cs</DependentUpon>
     </EmbeddedResource>
