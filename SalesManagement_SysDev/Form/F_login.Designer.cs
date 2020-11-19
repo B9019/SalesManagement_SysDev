@@ -98,7 +98,7 @@
             // btn_CleateDabase
             // 
             this.btn_CleateDabase.Location = new System.Drawing.Point(881, 486);
-            this.btn_CleateDabase.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_CleateDabase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_CleateDabase.Name = "btn_CleateDabase";
             this.btn_CleateDabase.Size = new System.Drawing.Size(141, 61);
             this.btn_CleateDabase.TabIndex = 0;
@@ -507,7 +507,11 @@
             this.入力クリアToolStripMenuItem});
             this.toolStrip1.Location = new System.Drawing.Point(827, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(97, 25);
+
+            
+
+            this.toolStrip1.Size = new System.Drawing.Size(136, 25);
+
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -522,7 +526,7 @@
             this.btn_login.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btn_login.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_login.Location = new System.Drawing.Point(437, 381);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(165, 40);
             this.btn_login.TabIndex = 18;
@@ -577,7 +581,7 @@
             // txt_EmPassword
             // 
             this.txt_EmPassword.Location = new System.Drawing.Point(397, 288);
-            this.txt_EmPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_EmPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_EmPassword.Name = "txt_EmPassword";
             this.txt_EmPassword.Size = new System.Drawing.Size(243, 22);
             this.txt_EmPassword.TabIndex = 13;
@@ -585,7 +589,7 @@
             // txt_EmID
             // 
             this.txt_EmID.Location = new System.Drawing.Point(397, 212);
-            this.txt_EmID.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_EmID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_EmID.Name = "txt_EmID";
             this.txt_EmID.Size = new System.Drawing.Size(243, 22);
             this.txt_EmID.TabIndex = 12;
@@ -606,10 +610,13 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.btn_CleateDabase);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "F_login";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+          
+
+            this.Name = "F_Login";
+
             this.Text = "販売在庫管理システム　ログイン画面";
-            this.Load += new System.EventHandler(this.F_login_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
