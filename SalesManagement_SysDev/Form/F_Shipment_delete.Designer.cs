@@ -1,6 +1,6 @@
 ﻿namespace SalesManagement_SysDev
 {
-    partial class F_Shipment_search
+    partial class F_Shipment_delete
     {
         /// <summary>
         /// Required designer variable.
@@ -761,7 +761,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "T_Shipment_search";
             this.Text = "販売在庫管理システム　出荷情報検索画面";
-            this.Load += new System.EventHandler(this.F_Shipment_search_Load);
+            this.Load += new System.EventHandler(this.F_Shipment_delete_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.groupBox1.ResumeLayout(false);

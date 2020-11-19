@@ -193,21 +193,21 @@
             // 顧客情報登録
             // 
             this.顧客情報登録.Name = "顧客情報登録";
-            this.顧客情報登録.Size = new System.Drawing.Size(180, 22);
+            this.顧客情報登録.Size = new System.Drawing.Size(146, 22);
             this.顧客情報登録.Text = "顧客情報登録";
             this.顧客情報登録.Click += new System.EventHandler(this.顧客情報登録_Click);
             // 
             // 顧客情報更新
             // 
             this.顧客情報更新.Name = "顧客情報更新";
-            this.顧客情報更新.Size = new System.Drawing.Size(180, 22);
+            this.顧客情報更新.Size = new System.Drawing.Size(146, 22);
             this.顧客情報更新.Text = "顧客情報更新";
             this.顧客情報更新.Click += new System.EventHandler(this.顧客情報更新_Click);
             // 
             // 顧客情報検索
             // 
             this.顧客情報検索.Name = "顧客情報検索";
-            this.顧客情報検索.Size = new System.Drawing.Size(180, 22);
+            this.顧客情報検索.Size = new System.Drawing.Size(146, 22);
             this.顧客情報検索.Text = "顧客情報検索";
             this.顧客情報検索.Click += new System.EventHandler(this.顧客情報検索_Click);
             // 
@@ -226,18 +226,21 @@
             this.商品情報登録ToolStripMenuItem.Name = "商品情報登録ToolStripMenuItem";
             this.商品情報登録ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.商品情報登録ToolStripMenuItem.Text = "商品情報登録";
+            this.商品情報登録ToolStripMenuItem.Click += new System.EventHandler(this.商品情報登録ToolStripMenuItem_Click);
             // 
             // 商品情報更新
             // 
             this.商品情報更新.Name = "商品情報更新";
             this.商品情報更新.Size = new System.Drawing.Size(146, 22);
             this.商品情報更新.Text = "商品情報更新";
+            this.商品情報更新.Click += new System.EventHandler(this.商品情報更新_Click);
             // 
             // 商品情報検索
             // 
             this.商品情報検索.Name = "商品情報検索";
             this.商品情報検索.Size = new System.Drawing.Size(146, 22);
             this.商品情報検索.Text = "商品情報検索";
+            this.商品情報検索.Click += new System.EventHandler(this.商品情報検索_Click);
             // 
             // 受注管理ToolStripMenuItem
             // 
@@ -255,24 +258,28 @@
             this.受注情報登録.Name = "受注情報登録";
             this.受注情報登録.Size = new System.Drawing.Size(146, 22);
             this.受注情報登録.Text = "受注情報登録";
+            this.受注情報登録.Click += new System.EventHandler(this.受注情報登録_Click);
             // 
             // 受注情報更新
             // 
             this.受注情報更新.Name = "受注情報更新";
             this.受注情報更新.Size = new System.Drawing.Size(146, 22);
             this.受注情報更新.Text = "受注情報更新";
+            this.受注情報更新.Click += new System.EventHandler(this.受注情報更新_Click);
             // 
             // 受注情報検索
             // 
             this.受注情報検索.Name = "受注情報検索";
             this.受注情報検索.Size = new System.Drawing.Size(146, 22);
             this.受注情報検索.Text = "受注情報検索";
+            this.受注情報検索.Click += new System.EventHandler(this.受注情報検索_Click);
             // 
             // 受注情報削除
             // 
             this.受注情報削除.Name = "受注情報削除";
             this.受注情報削除.Size = new System.Drawing.Size(146, 22);
             this.受注情報削除.Text = "受注情報削除";
+            this.受注情報削除.Click += new System.EventHandler(this.受注情報削除_Click);
             // 
             // 注文管理ToolStripMenuItem
             // 
@@ -289,18 +296,21 @@
             this.注文情報更新.Name = "注文情報更新";
             this.注文情報更新.Size = new System.Drawing.Size(146, 22);
             this.注文情報更新.Text = "注文情報更新";
+            this.注文情報更新.Click += new System.EventHandler(this.注文情報更新_Click);
             // 
             // 注文情報検索
             // 
             this.注文情報検索.Name = "注文情報検索";
             this.注文情報検索.Size = new System.Drawing.Size(146, 22);
             this.注文情報検索.Text = "注文情報検索";
+            this.注文情報検索.Click += new System.EventHandler(this.注文情報検索_Click);
             // 
             // 注文情報削除
             // 
             this.注文情報削除.Name = "注文情報削除";
             this.注文情報削除.Size = new System.Drawing.Size(146, 22);
             this.注文情報削除.Text = "注文情報削除";
+            this.注文情報削除.Click += new System.EventHandler(this.注文情報削除_Click);
             // 
             // 入荷管理ToolStripMenuItem
             // 
@@ -317,18 +327,21 @@
             this.入荷情報登録.Name = "入荷情報登録";
             this.入荷情報登録.Size = new System.Drawing.Size(146, 22);
             this.入荷情報登録.Text = "入荷情報登録";
+            this.入荷情報登録.Click += new System.EventHandler(this.入荷情報登録_Click);
             // 
             // 入荷情報更新
             // 
             this.入荷情報更新.Name = "入荷情報更新";
             this.入荷情報更新.Size = new System.Drawing.Size(146, 22);
             this.入荷情報更新.Text = "入荷情報更新";
+            this.入荷情報更新.Click += new System.EventHandler(this.入荷情報更新_Click);
             // 
             // 入荷情報削除
             // 
             this.入荷情報削除.Name = "入荷情報削除";
             this.入荷情報削除.Size = new System.Drawing.Size(146, 22);
             this.入荷情報削除.Text = "入荷情報削除";
+            this.入荷情報削除.Click += new System.EventHandler(this.入荷情報削除_Click);
             // 
             // 出荷管理ToolStripMenuItem
             // 
@@ -343,20 +356,23 @@
             // 出荷情報登録
             // 
             this.出荷情報登録.Name = "出荷情報登録";
-            this.出荷情報登録.Size = new System.Drawing.Size(146, 22);
+            this.出荷情報登録.Size = new System.Drawing.Size(180, 22);
             this.出荷情報登録.Text = "出荷情報登録";
+            this.出荷情報登録.Click += new System.EventHandler(this.出荷情報登録_Click);
             // 
             // 出荷情報更新
             // 
             this.出荷情報更新.Name = "出荷情報更新";
-            this.出荷情報更新.Size = new System.Drawing.Size(146, 22);
+            this.出荷情報更新.Size = new System.Drawing.Size(180, 22);
             this.出荷情報更新.Text = "出荷情報更新";
+            this.出荷情報更新.Click += new System.EventHandler(this.出荷情報更新_Click);
             // 
             // 出荷情報削除
             // 
             this.出荷情報削除.Name = "出荷情報削除";
-            this.出荷情報削除.Size = new System.Drawing.Size(146, 22);
+            this.出荷情報削除.Size = new System.Drawing.Size(180, 22);
             this.出荷情報削除.Text = "出荷情報削除";
+            this.出荷情報削除.Click += new System.EventHandler(this.出荷情報削除_Click);
             // 
             // 在庫管理ToolStripMenuItem
             // 
@@ -370,14 +386,16 @@
             // 在庫情報更新
             // 
             this.在庫情報更新.Name = "在庫情報更新";
-            this.在庫情報更新.Size = new System.Drawing.Size(146, 22);
+            this.在庫情報更新.Size = new System.Drawing.Size(180, 22);
             this.在庫情報更新.Text = "在庫情報更新";
+            this.在庫情報更新.Click += new System.EventHandler(this.在庫情報更新_Click);
             // 
             // 在庫情報検索
             // 
             this.在庫情報検索.Name = "在庫情報検索";
-            this.在庫情報検索.Size = new System.Drawing.Size(146, 22);
+            this.在庫情報検索.Size = new System.Drawing.Size(180, 22);
             this.在庫情報検索.Text = "在庫情報検索";
+            this.在庫情報検索.Click += new System.EventHandler(this.在庫情報検索_Click);
             // 
             // 入庫管理ToolStripMenuItem
             // 

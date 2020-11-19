@@ -1,6 +1,6 @@
 ﻿namespace SalesManagement_SysDev
 {
-    partial class F_Arrival_search
+    partial class F_Arrival_delete
     {
         /// <summary>
         /// Required designer variable.
@@ -762,7 +762,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "F_Arrival_search";
             this.Text = "販売在庫管理システム　入荷情報検索画面";
-            this.Load += new System.EventHandler(this.F_Arrival_search_Load);
+            this.Load += new System.EventHandler(this.F_Arrival_delete_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
