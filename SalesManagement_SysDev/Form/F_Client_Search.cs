@@ -62,14 +62,14 @@ namespace SalesManagement_SysDev
                     return;
 
             // 4.1.2妥当な顧客情報作成
-            var regProduct = Generate_Data_AtSearch();
+            var regClient = Generate_Data_AtSearch();
 
                 // 4.1.3顧客情報登録
-                if (!Generate_Search(regProduct))
+                if (!Generate_Search(regClient))
                     return;
 
 
-            }
+        }
 
             // 
             //
@@ -162,55 +162,60 @@ namespace SalesManagement_SysDev
                 
                 return true;
             }
-            //
-            //
-            // 4.1.2 商品情報作成
-            //
-            //
-            private M_Product Generate_Data_AtSearch()
+        //
+        //
+        // 4.1.2 商品情報作成
+        //
+        //
+        private M_Client Generate_Data_AtSearch()
+        {
+
+            using (var db = new SalesManagement_DevContext())
             {
-                return new M_Client
-                {
-                    ClID = int.Parse(txt_ClID.Text),
-                    SoID = int.Parse(txt_SoID.Text),
-                    ClName = txt_ClName.Text,
-                    ClAddress = txt_ClAddress.Text,
-                    ClPhone = txt_PrJCode.Text,
-                    ClPostal = int.Parse(txt_PrSafetyStock.Text),
-                    ClFAX = int.Parse(txt_ScID.Text),
-                    ClFlag = int.Parse(txt_PrModelNumber.Text),
-                    ClHidden = txt_PrColor.Text
+                // 情報の取得
+                var list = db.M_Clients
+                    .Where(item => (item.ClID == 0 || item.ClID == item.ClID) &&
+                      (string.IsNullOrEmpty(this.txt_ClID.Text) || item.Equals(this.txt_ClID.Text)))
+                    .Select(item => new
+                    {
+                        ClID = int.Parse(txt_ClID.Text)
 
-                };
+                    })
 
+                    .ToList();
+                // DataGridViewに紐づける
+                this.dataGridView_Product_regist.DataSource = list;
             }
-            //
-            //
-            // 4.1.3　商品情報登録
-            //
-            //
-            private bool Generate_Search(M_Product regProduct)
-            {
-                // 登録可否
-                if (DialogResult.OK != MessageBox.Show(this, "登録してよろしいですか", "登録可否", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
-                {
-                    return false;
-                }
-                // 商品情報の登録
-                var errorMessage = _Pr.PostM_Division(regProduct);
+            return null;
+        }
+        //ClID = int.Parse(txt_ClID.Text),
+        //SoID = int.Parse(txt_SoID.Text),
+        //ClName = txt_ClName.Text,
+        //ClAddress = txt_ClAddress.Text,
+        //ClPhone = txt_PrJCode.Text,
+        //ClPostal = int.Parse(txt_PrSafetyStock.Text),
+        //ClFAX = int.Parse(txt_ScID.Text),
+        //ClFlag = int.Parse(txt_PrModelNumber.Text),
+        //ClHidden = txt_PrColor.Text
 
-                if (errorMessage != string.Empty)
+
+
+        //
+        //
+        // 4.1.3　顧客情報検索
+            //
+            //
+            private bool Generate_Search(M_Client regClient)
+            {
+                // 検索可否
+                if (DialogResult.OK != MessageBox.Show(this, "検索してよろしいですか", "検索可否", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
                 {
-                    MessageBox.Show(errorMessage);
                     return false;
                 }
-                // 画面更新
-                RefreshDataGridView();
-                txt_MaID.Focus();
 
                 return true;
 
             }
         }
     }
-}
+
