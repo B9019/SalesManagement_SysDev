@@ -57,15 +57,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form\F_Arrival_regist.cs">
-
     <Compile Include="Form\F_home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\F_home.Designer.cs">
       <DependentUpon>F_home.cs</DependentUpon>
     </Compile>
- 
+     <Compile Include="Form\F_Arrival_regist.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\F_Arrival_regist.Designer.cs">
