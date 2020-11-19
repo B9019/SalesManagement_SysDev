@@ -128,7 +128,7 @@ namespace SalesManagement_SysDev.Model
                 switch (accessAuth)
                 {
                     case Constants.numSales:
-                        return Constants.strSales:
+                        return Constants.strSales;
                     case Constants.numlogiManager:
                         return Constants.strlogiManager;
                     case Constants.numOffice:
@@ -136,7 +136,7 @@ namespace SalesManagement_SysDev.Model
                     case Constants.numClient:
                         return Constants.strClient;
                     case Constants.numManager:
-                        return Constants.strManager:
+                        return Constants.strManager;
                     case Constants.numMaster:
                         return Constants.strMaster;
                     default:
