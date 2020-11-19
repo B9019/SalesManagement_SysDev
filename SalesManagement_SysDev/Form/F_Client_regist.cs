@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_Client_Registration : Form
+    public partial class F_Client_regist : Form
     {
-        public F_Client_Registration()
+        public F_Client_regist()
         {
             InitializeComponent();
         }
@@ -23,6 +23,11 @@ namespace SalesManagement_SysDev
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void F_Client_regist_Load(object sender, EventArgs e)
         {
 
         }

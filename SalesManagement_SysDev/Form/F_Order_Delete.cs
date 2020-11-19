@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_Order_Delete : Form
+    public partial class F_Order_delete : Form
     {
-        public F_Order_Delete()
+        public F_Order_delete()
         {
             InitializeComponent();
+        }
+
+        private void F_Order_delete_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
