@@ -1,7 +1,9 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 
 namespace SalesManagement_SysDev.Model.ContentsManagement
 {
+
     using SalesManagement_SysDev.Model.ContentsManagement.Common;
     using SalesManagement_SysDev.Model;
 

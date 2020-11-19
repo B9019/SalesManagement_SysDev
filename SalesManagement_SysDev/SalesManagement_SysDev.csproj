@@ -201,7 +201,7 @@
     <Compile Include="Form\T_Shipment_update.Designer.cs">
       <DependentUpon>T_Shipment_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\ContentsManagement\Common\MassageCommon.cs" />
+    <Compile Include="Model\ContentsManagement\Common\MessageCommon.cs" />
     <Compile Include="Model\ContentsManagement\M_ProductContexts.cs" />
     <Compile Include="Model\ContentsManagement\StaffContents.cs" />
     <Compile Include="Model\Entity\CommonFunction.cs" />

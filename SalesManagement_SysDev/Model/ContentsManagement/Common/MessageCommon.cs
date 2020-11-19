@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SalesManagement_SysDev.Model.ContentsManagement.Common
 {
-    class MassageCommon
+    class MessageCommon
     {
     }
 }

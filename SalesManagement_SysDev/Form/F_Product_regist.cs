@@ -400,15 +400,15 @@ namespace SalesManagement_SysDev
                 return false;
             }
             // 商品情報の登録
-            var errorMessage = _Pr.PostM_Division(regProduct);
+            //var errorMessage = _Pr.PostM_Division(regProduct);
 
-            if (errorMessage != string.Empty)
-            {
-                MessageBox.Show(errorMessage);
-                return false;
-            }
+            //if (errorMessage != string.Empty)
+            //{
+            //    MessageBox.Show(errorMessage);
+            //    return false;
+            //}
             // 画面更新
-            RefreshDataGridView();
+            //RefreshDataGridView();
             txt_MaID.Focus();
 
             return true;

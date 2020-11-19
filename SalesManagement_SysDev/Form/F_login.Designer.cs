@@ -172,12 +172,14 @@
             this.新規ログイン情報登録ToolStripMenuItem.Name = "新規ログイン情報登録ToolStripMenuItem";
             this.新規ログイン情報登録ToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.新規ログイン情報登録ToolStripMenuItem.Text = "新規ログイン情報登録";
+            this.新規ログイン情報登録ToolStripMenuItem.Click += new System.EventHandler(this.新規ログイン情報登録ToolStripMenuItem_Click);
             // 
             // ログイン履歴ToolStripMenuItem
             // 
             this.ログイン履歴ToolStripMenuItem.Name = "ログイン履歴ToolStripMenuItem";
             this.ログイン履歴ToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.ログイン履歴ToolStripMenuItem.Text = "ログイン履歴";
+            this.ログイン履歴ToolStripMenuItem.Click += new System.EventHandler(this.ログイン履歴ToolStripMenuItem_Click);
             // 
             // 顧客管理ToolStripMenuItem
             // 

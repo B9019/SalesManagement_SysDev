@@ -47,7 +47,25 @@ namespace SalesManagement_SysDev
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
             F_login form_login = new F_login();
-            form_login.Show();
+            this.Close();
+            F_login form_login2 = new F_login();
+            form_login2.ShowDialog();
+        }
+
+        private void 新規ログイン情報登録ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_login_regist form_login_regist = new F_login_regist();
+            form_login_regist.ShowDialog();
+            this.Close();
+
+        }
+
+        private void ログイン履歴ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_login_log form_login_log = new F_login_log();
+            form_login_log.ShowDialog();
+            this.Close();
+
         }
     }
 }
