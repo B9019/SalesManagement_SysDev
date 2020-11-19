@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_Arrival_Registration : Form
+    public partial class F_Arrival_regist : Form
     {
-        public F_Arrival_Registration()
+        public F_Arrival_regist()
         {
             InitializeComponent();
+        }
+
+        private void F_Arrival_regist_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

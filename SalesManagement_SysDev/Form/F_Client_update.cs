@@ -21,5 +21,10 @@ namespace SalesManagement_SysDev
         {
 
         }
+
+        private void F_Client_update_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,8 +1,8 @@
-﻿using SalesManagement.Model.ContentsManagement;
-using SalesManagement.Model.ContentsManagement.Common;
-using System;
+﻿using System;
 using System.Text;
 using System.Text.RegularExpressions;
+using SalesManagement_SysDev.Model.Entity;
+
 
 
 
@@ -12,10 +12,10 @@ namespace SalesManagement.Model
     {
 
         // データベース処理モジュール
-        private readonly CommonFunction _cm = new CommonFunction();
+        //private readonly CommonFunction _cm = new CommonFunction();
 
-        // データベース処理モジュール（Staff）
-        private readonly StaffContents _st = new StaffContents();
+        //// データベース処理モジュール（Staff）
+        //private readonly StaffContents _st = new StaffContents();
 
         // *** 複合機能チェック *****
 
