@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_Client_Search : Form
+    public partial class F_Client_search : Form
     {
-        public F_Client_Search()
+        public F_Client_search()
         {
             InitializeComponent();
+        }
+
+        private void F_Client_search_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_chumon_update : Form
+    public partial class F_Chumon_update : Form
     {
-        public F_chumon_update()
+        public F_Chumon_update()
         {
             InitializeComponent();
         }
 
         private void txt_ClID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void F_Chumon_update_Load(object sender, EventArgs e)
         {
 
         }

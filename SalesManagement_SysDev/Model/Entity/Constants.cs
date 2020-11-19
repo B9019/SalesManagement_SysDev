@@ -20,5 +20,27 @@
         public const string strManager = "管理者";
         public const string strMaster = "特権管理者";
 
+        // 入力範囲
+        public const int quantityMax = 1000;
+
+        // 値段範囲
+        public const int priceMax = 100000000;
+
+        // 個数範囲
+        public const int unitsMax = 100;
+
+        // 税範囲
+        public const int taxMax = 100;
+
+        // 項目長
+        public const int columnMaxLength = 500;
+
+        // 最大文字長
+        public const int charMaxLength = 30;
+
+        // ログページサイズ
+        public const int logPageSizeMin = 10;
+        public const int logPageSizeMax = 10000;
+
     }
 }

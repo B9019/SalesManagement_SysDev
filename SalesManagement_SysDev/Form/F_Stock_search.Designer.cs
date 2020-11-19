@@ -1,6 +1,6 @@
 ﻿namespace SalesManagement_SysDev
 {
-    partial class F_Stock_sertch
+    partial class F_Stock_search
     {
         /// <summary>
         /// Required designer variable.
@@ -675,7 +675,7 @@
             this.Controls.Add(this.menuStrip2);
             this.Name = "F_Stock_sertch";
             this.Text = "販売在庫管理システム　在庫情報検索画面";
-            this.Load += new System.EventHandler(this.F_Stock_sertch_Load);
+            this.Load += new System.EventHandler(this.F_Stock_search_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
