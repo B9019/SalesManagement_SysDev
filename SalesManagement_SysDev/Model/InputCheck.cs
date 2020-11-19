@@ -10,6 +10,7 @@ namespace SalesManagement.Model
 {
     class InputCheck
     {
+
         // データベース処理モジュール
         private readonly CommonFunction _cm = new CommonFunction();
 
