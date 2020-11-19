@@ -58,6 +58,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form\F_Arrival_regist.cs">
+
+    <Compile Include="Form\F_home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\F_home.Designer.cs">
+      <DependentUpon>F_home.cs</DependentUpon>
+    </Compile>
+ 
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\F_Arrival_regist.Designer.cs">
@@ -238,8 +246,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalesManagement_DevContext.cs" />
+
     <EmbeddedResource Include="Form\F_Arrival_regist.resx">
       <DependentUpon>F_Arrival_regist.cs</DependentUpon>
+
+    <EmbeddedResource Include="Form\F_home.resx">
+      <DependentUpon>F_home.cs</DependentUpon>
+    </EmbeddedResource>
+    
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Arrival_delete.resx">
       <DependentUpon>F_Arrival_delete.cs</DependentUpon>
