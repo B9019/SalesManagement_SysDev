@@ -1,41 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using SalesManagement.Model;
 
 namespace SalesManagement_SysDev
 {
     public partial class F_Product_regist : Form
     {
-        // ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
+        //// ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
 
-        // 共通データベース処理モジュール
-        private CommonFunction _cm = new CommonFunction();
+        //// 共通データベース処理モジュール
+        //private CommonFunction _cm = new CommonFunction();
 
-        // データベース処理モジュール（項目処理）
-        private ColumnsManagementCommon _cmc = new ColumnsManagementCommon();
+        //// データベース処理モジュール（項目処理）
+        //private ColumnsManagementCommon _cmc = new ColumnsManagementCommon();
 
-        // データベース処理モジュール（コードカウンター）
-        private CodeCounterCommon _cc = new CodeCounterCommon();
+        //// データベース処理モジュール（コードカウンター）
+        //private CodeCounterCommon _cc = new CodeCounterCommon();
 
         // 入力チェックモジュール
         private InputCheck _ic = new InputCheck();
 
-        // メッセージ処理モジュール
-        private Messages _ms = new Messages();
+        //// メッセージ処理モジュール
+        //private Messages _ms = new Messages();
 
         // データベース処理モジュール（M_Division）
-        private M_ProductContents _Pr = new M_ProductContents();
+        //private M_ProductContents _Pr = new M_ProductContents();
 
         // ***** プロパティ定義
 
-        // トップフォーム
-        public TopForm _topForm;
 
         // 選択行番号
         private int _lineNo;
@@ -52,13 +45,13 @@ namespace SalesManagement_SysDev
         private int _pageSizePaging;                                        // １ページ表示データ行数
         private int _currentPage;                                           // 現在のページ
         private int _recordNo;                                              // ページ先頭位置のデータ（スタートデータ）
-        private IEnumerable<M_DispProduct> _dispDivisionPaging;            // 表示用データ
+        //private IEnumerable<M_DispProduct> _dispDivisionPaging;            // 表示用データ
 
         // 印刷
         private int _pageCountPrinting;                                     // 全印刷ページ数
         private int _pageNumber = 0;                                        // 印刷ページ番号
         private int _pageSizePrinting;                                      // １ページ印刷データ行数
-        private List<M_DispProduct> _dispDivisionPrinting;                 // 印刷用データ
+        //private List<M_DispProduct> _dispDivisionPrinting;                 // 印刷用データ
 
 
         public F_Product_regist()
@@ -407,15 +400,15 @@ namespace SalesManagement_SysDev
                 return false;
             }
             // 商品情報の登録
-            var errorMessage = _Pr.PostM_Division(regProduct);
+            //var errorMessage = _Pr.PostM_Division(regProduct);
 
-            if (errorMessage != string.Empty)
-            {
-                MessageBox.Show(errorMessage);
-                return false;
-            }
+            //if (errorMessage != string.Empty)
+            //{
+            //    MessageBox.Show(errorMessage);
+            //    return false;
+            //}
             // 画面更新
-            RefreshDataGridView();
+            //RefreshDataGridView();
             txt_MaID.Focus();
 
             return true;

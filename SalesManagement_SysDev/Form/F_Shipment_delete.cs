@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_Stock_sertch : Form
+    public partial class F_Shipment_delete : Form
     {
-        public F_Stock_sertch()
+        public F_Shipment_delete()
         {
             InitializeComponent();
         }
 
-        private void F_Stock_sertch_Load(object sender, EventArgs e)
+        private void F_Shipment_delete_Load(object sender, EventArgs e)
         {
 
         }
