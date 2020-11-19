@@ -17,6 +17,7 @@ using SalesManagement.Model.ContentsManagement.Common;
 
 namespace SalesManagement_SysDev.Model
 {
+
     class CommonFunction
     {
             // ***** メソッド定義
