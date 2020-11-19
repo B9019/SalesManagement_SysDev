@@ -57,25 +57,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form\F_Arrival_regist.cs">
-
     <Compile Include="Form\F_home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\F_home.Designer.cs">
       <DependentUpon>F_home.cs</DependentUpon>
     </Compile>
- 
+    <Compile Include="Form\F_Arrival_Registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\F_Arrival_regist.Designer.cs">
-      <DependentUpon>F_Arrival_regist.cs</DependentUpon>
+    <Compile Include="Form\F_Arrival_Registration.Designer.cs">
+      <DependentUpon>F_Arrival_Registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\F_Arrival_delete.cs">
+    <Compile Include="Form\F_Arrival_search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\F_Arrival_delete.Designer.cs">
-      <DependentUpon>F_Arrival_delete.cs</DependentUpon>
+    <Compile Include="Form\F_Arrival_search.Designer.cs">
+      <DependentUpon>F_Arrival_search.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\F_Arrival_update.cs">
       <SubType>Form</SubType>
@@ -89,29 +87,29 @@
     <Compile Include="Form\F_Chumon_delete.Designer.cs">
       <DependentUpon>F_Chumon_delete.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\F_Chumon_search.cs">
+    <Compile Include="Form\F_chumon_search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\F_Chumon_search.Designer.cs">
-      <DependentUpon>F_Chumon_search.cs</DependentUpon>
+    <Compile Include="Form\F_chumon_search.Designer.cs">
+      <DependentUpon>F_chumon_search.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\F_Chumon_update.cs">
+    <Compile Include="Form\F_chumon_update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\F_Chumon_update.Designer.cs">
-      <DependentUpon>F_Chumon_update.cs</DependentUpon>
+    <Compile Include="Form\F_chumon_update.Designer.cs">
+      <DependentUpon>F_chumon_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\F_Client_regist.cs">
+    <Compile Include="Form\F_Client_Registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\F_Client_regist.Designer.cs">
-      <DependentUpon>F_Client_regist.cs</DependentUpon>
+    <Compile Include="Form\F_Client_Registration.Designer.cs">
+      <DependentUpon>F_Client_Registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\F_Client_search.cs">
+    <Compile Include="Form\F_Client_Search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\F_Client_search.Designer.cs">
-      <DependentUpon>F_Client_search.cs</DependentUpon>
+    <Compile Include="Form\F_Client_Search.Designer.cs">
+      <DependentUpon>F_Client_Search.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\F_Client_update.cs">
       <SubType>Form</SubType>
@@ -137,23 +135,23 @@
     <Compile Include="Form\F_login_regist.Designer.cs">
       <DependentUpon>F_login_regist.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\F_Order_delete.cs">
+    <Compile Include="Form\F_Order_Delete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\F_Order_delete.Designer.cs">
-      <DependentUpon>F_Order_delete.cs</DependentUpon>
+    <Compile Include="Form\F_Order_Delete.Designer.cs">
+      <DependentUpon>F_Order_Delete.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\F_Order_regist.cs">
+    <Compile Include="Form\F_Order_Registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\F_Order_regist.Designer.cs">
-      <DependentUpon>F_Order_regist.cs</DependentUpon>
+    <Compile Include="Form\F_Order_Registration.Designer.cs">
+      <DependentUpon>F_Order_Registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\F_Order_search.cs">
+    <Compile Include="Form\F_Order_Search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\F_Order_search.Designer.cs">
-      <DependentUpon>F_Order_search.cs</DependentUpon>
+    <Compile Include="Form\F_Order_Search.Designer.cs">
+      <DependentUpon>F_Order_Search.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\F_Order_update.cs">
       <SubType>Form</SubType>
@@ -179,11 +177,11 @@
     <Compile Include="Form\F_Product_update.Designer.cs">
       <DependentUpon>F_Product_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\F_Stock_search.cs">
+    <Compile Include="Form\F_Stock_sertch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\F_Stock_search.Designer.cs">
-      <DependentUpon>F_Stock_search.cs</DependentUpon>
+    <Compile Include="Form\F_Stock_sertch.Designer.cs">
+      <DependentUpon>F_Stock_sertch.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\F_Stock_update.cs">
       <SubType>Form</SubType>
@@ -191,26 +189,24 @@
     <Compile Include="Form\F_Stock_update.Designer.cs">
       <DependentUpon>F_Stock_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\F_Shipment_regist.cs">
+    <Compile Include="Form\T_Shipment_Registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\F_Shipment_regist.Designer.cs">
-      <DependentUpon>F_Shipment_regist.cs</DependentUpon>
+    <Compile Include="Form\T_Shipment_Registration.Designer.cs">
+      <DependentUpon>T_Shipment_Registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\F_Shipment_delete.cs">
+    <Compile Include="Form\T_Shipment_search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\F_Shipment_delete.Designer.cs">
-      <DependentUpon>F_Shipment_delete.cs</DependentUpon>
+    <Compile Include="Form\T_Shipment_search.Designer.cs">
+      <DependentUpon>T_Shipment_search.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\F_Shipment_update.cs">
+    <Compile Include="Form\T_Shipment_update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\F_Shipment_update.Designer.cs">
-      <DependentUpon>F_Shipment_update.cs</DependentUpon>
+    <Compile Include="Form\T_Shipment_update.Designer.cs">
+      <DependentUpon>T_Shipment_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\ContentsManagement\Common\MessageCommon.cs" />
-    <Compile Include="Model\ContentsManagement\M_ProductContexts.cs" />
     <Compile Include="Model\ContentsManagement\StaffContents.cs" />
     <Compile Include="Model\Entity\CommonFunction.cs" />
     <Compile Include="Model\Entity\Constants.cs" />
@@ -241,22 +237,18 @@
     <Compile Include="Model\Entity\Db\T_SyukkoDetail.cs" />
     <Compile Include="Model\Entity\Db\T_Warehousing.cs" />
     <Compile Include="Model\Entity\Db\T_WarehousingDetail.cs" />
-    <Compile Include="Model\Entity\Formmovement.cs" />
     <Compile Include="Model\Entity\InputCheck.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalesManagement_DevContext.cs" />
-
-    <EmbeddedResource Include="Form\F_Arrival_regist.resx">
-      <DependentUpon>F_Arrival_regist.cs</DependentUpon>
-
     <EmbeddedResource Include="Form\F_home.resx">
       <DependentUpon>F_home.cs</DependentUpon>
     </EmbeddedResource>
-    
+    <EmbeddedResource Include="Form\F_Arrival_Registration.resx">
+      <DependentUpon>F_Arrival_Registration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Arrival_delete.resx">
-      <DependentUpon>F_Arrival_delete.cs</DependentUpon>
+    <EmbeddedResource Include="Form\F_Arrival_search.resx">
+      <DependentUpon>F_Arrival_search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Arrival_update.resx">
       <DependentUpon>F_Arrival_update.cs</DependentUpon>
@@ -264,17 +256,17 @@
     <EmbeddedResource Include="Form\F_Chumon_delete.resx">
       <DependentUpon>F_Chumon_delete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Chumon_search.resx">
-      <DependentUpon>F_Chumon_search.cs</DependentUpon>
+    <EmbeddedResource Include="Form\F_chumon_search.resx">
+      <DependentUpon>F_chumon_search.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Chumon_update.resx">
-      <DependentUpon>F_Chumon_update.cs</DependentUpon>
+    <EmbeddedResource Include="Form\F_chumon_update.resx">
+      <DependentUpon>F_chumon_update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Client_regist.resx">
-      <DependentUpon>F_Client_regist.cs</DependentUpon>
+    <EmbeddedResource Include="Form\F_Client_Registration.resx">
+      <DependentUpon>F_Client_Registration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Client_search.resx">
-      <DependentUpon>F_Client_search.cs</DependentUpon>
+    <EmbeddedResource Include="Form\F_Client_Search.resx">
+      <DependentUpon>F_Client_Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Client_update.resx">
       <DependentUpon>F_Client_update.cs</DependentUpon>
@@ -288,14 +280,14 @@
     <EmbeddedResource Include="Form\F_login_regist.resx">
       <DependentUpon>F_login_regist.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Order_delete.resx">
-      <DependentUpon>F_Order_delete.cs</DependentUpon>
+    <EmbeddedResource Include="Form\F_Order_Delete.resx">
+      <DependentUpon>F_Order_Delete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Order_regist.resx">
-      <DependentUpon>F_Order_regist.cs</DependentUpon>
+    <EmbeddedResource Include="Form\F_Order_Registration.resx">
+      <DependentUpon>F_Order_Registration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Order_search.resx">
-      <DependentUpon>F_Order_search.cs</DependentUpon>
+    <EmbeddedResource Include="Form\F_Order_Search.resx">
+      <DependentUpon>F_Order_Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Order_update.resx">
       <DependentUpon>F_Order_update.cs</DependentUpon>
@@ -309,20 +301,20 @@
     <EmbeddedResource Include="Form\F_Product_update.resx">
       <DependentUpon>F_Product_update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Stock_search.resx">
-      <DependentUpon>F_Stock_search.cs</DependentUpon>
+    <EmbeddedResource Include="Form\F_Stock_sertch.resx">
+      <DependentUpon>F_Stock_sertch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Stock_update.resx">
       <DependentUpon>F_Stock_update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Shipment_regist.resx">
-      <DependentUpon>F_Shipment_regist.cs</DependentUpon>
+    <EmbeddedResource Include="Form\T_Shipment_Registration.resx">
+      <DependentUpon>T_Shipment_Registration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Shipment_delete.resx">
-      <DependentUpon>F_Shipment_delete.cs</DependentUpon>
+    <EmbeddedResource Include="Form\T_Shipment_search.resx">
+      <DependentUpon>T_Shipment_search.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Shipment_update.resx">
-      <DependentUpon>F_Shipment_update.cs</DependentUpon>
+    <EmbeddedResource Include="Form\T_Shipment_update.resx">
+      <DependentUpon>T_Shipment_update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -348,7 +340,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Model\ContentsManagement\Common\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -1,6 +1,6 @@
 ﻿namespace SalesManagement_SysDev
 {
-    partial class F_Order_delete
+    partial class F_Order_Delete
     {
         /// <summary>
         /// Required designer variable.
@@ -82,10 +82,10 @@
             this.発注情報削除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.バーコード管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt_ClHidden = new System.Windows.Forms.TextBox();
-            this.lbl_ClHidden = new System.Windows.Forms.Label();
             this.txt_OrID = new System.Windows.Forms.TextBox();
             this.lbl_OrID = new System.Windows.Forms.Label();
+            this.txt_ClHidden = new System.Windows.Forms.TextBox();
+            this.lbl_ClHidden = new System.Windows.Forms.Label();
             this.dataGridView_Product_regist = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -504,6 +504,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "※必須項目";
             // 
+            // txt_OrID
+            // 
+            this.txt_OrID.Location = new System.Drawing.Point(67, 18);
+            this.txt_OrID.Name = "txt_OrID";
+            this.txt_OrID.Size = new System.Drawing.Size(183, 19);
+            this.txt_OrID.TabIndex = 62;
+            // 
+            // lbl_OrID
+            // 
+            this.lbl_OrID.AutoSize = true;
+            this.lbl_OrID.ForeColor = System.Drawing.Color.White;
+            this.lbl_OrID.Location = new System.Drawing.Point(12, 21);
+            this.lbl_OrID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_OrID.Name = "lbl_OrID";
+            this.lbl_OrID.Size = new System.Drawing.Size(40, 12);
+            this.lbl_OrID.TabIndex = 8;
+            this.lbl_OrID.Text = "受注ID";
+            // 
             // txt_ClHidden
             // 
             this.txt_ClHidden.Location = new System.Drawing.Point(399, 18);
@@ -522,24 +540,6 @@
             this.lbl_ClHidden.Size = new System.Drawing.Size(65, 12);
             this.lbl_ClHidden.TabIndex = 78;
             this.lbl_ClHidden.Text = "非表示理由";
-            // 
-            // txt_OrID
-            // 
-            this.txt_OrID.Location = new System.Drawing.Point(67, 18);
-            this.txt_OrID.Name = "txt_OrID";
-            this.txt_OrID.Size = new System.Drawing.Size(183, 19);
-            this.txt_OrID.TabIndex = 62;
-            // 
-            // lbl_OrID
-            // 
-            this.lbl_OrID.AutoSize = true;
-            this.lbl_OrID.ForeColor = System.Drawing.Color.White;
-            this.lbl_OrID.Location = new System.Drawing.Point(12, 21);
-            this.lbl_OrID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_OrID.Name = "lbl_OrID";
-            this.lbl_OrID.Size = new System.Drawing.Size(40, 12);
-            this.lbl_OrID.TabIndex = 8;
-            this.lbl_OrID.Text = "受注ID";
             // 
             // dataGridView_Product_regist
             // 
@@ -628,8 +628,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.menuStrip2);
             this.Name = "F_Order_Delete";
-            this.Text = "販売在庫管理システム　受注情報削除";
-            this.Load += new System.EventHandler(this.F_Order_delete_Load);
+            this.Text = "受注情報削除";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
