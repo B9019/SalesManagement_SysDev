@@ -201,8 +201,9 @@
     <Compile Include="Form\T_Shipment_update.Designer.cs">
       <DependentUpon>T_Shipment_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\CommonFunction.cs" />
     <Compile Include="Model\ContentsManagement\StaffContents.cs" />
+    <Compile Include="Model\Entity\CommonFunction.cs" />
+    <Compile Include="Model\Entity\Constants.cs" />
     <Compile Include="Model\Entity\Db\M_Client.cs" />
     <Compile Include="Model\Entity\Db\M_Employee.cs" />
     <Compile Include="Model\Entity\Db\M_MajorCassification.cs" />
@@ -230,7 +231,7 @@
     <Compile Include="Model\Entity\Db\T_SyukkoDetail.cs" />
     <Compile Include="Model\Entity\Db\T_Warehousing.cs" />
     <Compile Include="Model\Entity\Db\T_WarehousingDetail.cs" />
-    <Compile Include="Model\InputCheck.cs" />
+    <Compile Include="Model\Entity\InputCheck.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalesManagement_DevContext.cs" />

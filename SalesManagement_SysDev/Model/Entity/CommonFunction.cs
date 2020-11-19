@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SalesManagement_SysDev.Model.Entity;
 
 namespace SalesManagement_SysDev.Model
 {
@@ -88,28 +89,28 @@ namespace SalesManagement_SysDev.Model
             // 文字数で文字列を分割
             // in       strsrc : 入力文字列
             //          count  : 分割文字数
-            public List<string> SplitString(string strsrc, int count)
-            {
-                // 結果格納リスト
-                var strList = new List<string>();
+            //public List<string> SplitString(string strsrc, int count)
+            //{
+            //    // 結果格納リスト
+            //    var strList = new List<string>();
 
-                // 分割数計算
-                int length = strsrc.Length / count;
-                if (strsrc.Length % count > 0) length++;
+            //    // 分割数計算
+            //    int length = strsrc.Length / count;
+            //    if (strsrc.Length % count > 0) length++;
 
-                for (int i = 0; i < length; i++)
-                {
-                    // 分割終了
-                    if (strsrc.Length <= count * i) break;
+            //    for (int i = 0; i < length; i++)
+            //    {
+            //        // 分割終了
+            //        if (strsrc.Length <= count * i) break;
 
-                    // 残りの格納
-                    if (strsrc.Length < count * (i + 1)) strList.Add(strsrc.Substring(count * i));
+            //        // 残りの格納
+            //        if (strsrc.Length < count * (i + 1)) strList.Add(strsrc.Substring(count * i));
 
-                    // 分割
-                    else strList.Add(strsrc.Substring(count * i, count));
-                }
-                return strList;
-            }
+            //        // 分割
+            //        else strList.Add(strsrc.Substring(count * i, count));
+            //    }
+            //    return strList;
+            //}
 
             // アクセス権ラベル取得
             // in       accessAuth : アクセス権レベル
