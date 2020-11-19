@@ -1,25 +1,15 @@
-﻿using SalesManagement.DataSet;
-using SalesManagement.Model.Entity;
-using SalesManagement.Model.Entity.Db;
-using SalesManagement.Model.Entity.Disp;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data.Entity.Infrastructure;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Windows.Forms;
-using static SalesManagement.DataSet.DsColumnsManagement;
-using SalesManagement.Model.ContentsManagement.Common;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace SalesManagement_SysDev.Model
 {
 
     class CommonFunction
     {
+
 
             // ***** メソッド定義
 
@@ -147,5 +137,6 @@ namespace SalesManagement_SysDev.Model
             }
 
         
+
     }
 }
