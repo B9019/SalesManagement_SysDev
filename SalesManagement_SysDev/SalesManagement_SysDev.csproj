@@ -201,6 +201,8 @@
     <Compile Include="Form\T_Shipment_update.Designer.cs">
       <DependentUpon>T_Shipment_update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\ContentsManagement\Common\MassageCommon.cs" />
+    <Compile Include="Model\ContentsManagement\M_ProductContexts.cs" />
     <Compile Include="Model\ContentsManagement\StaffContents.cs" />
     <Compile Include="Model\Entity\CommonFunction.cs" />
     <Compile Include="Model\Entity\Constants.cs" />
@@ -331,9 +333,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\ContentsManagement\Common\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

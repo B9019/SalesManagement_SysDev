@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SalesManagement_SysDev;
+using SalesManagement_SysDev.Model;
+using SalesManagement_SysDev.Model.Entity;
+
 
 namespace SalesManagement_SysDev
 {
@@ -33,6 +37,17 @@ namespace SalesManagement_SysDev
             context.Dispose();
 
             MessageBox.Show("テーブル作成完了");
+        }
+
+        private void F_login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            F_login form_login = new F_login();
+            form_login.Show();
         }
     }
 }
