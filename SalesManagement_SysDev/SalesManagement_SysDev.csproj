@@ -342,13 +342,13 @@
       <DependentUpon>T_Shipment_update.cs</DependentUpon>
     </EmbeddedResource>
 
-    <EmbeddedResource Include="F_Syukko_delete.resx">
+    <EmbeddedResource Include="Form\F_Syukko_delete.resx">
       <DependentUpon>F_Syukko_delete.cs</DependentUpon>
 
-    <EmbeddedResource Include="F_Warehousing_Registration.resx">
+    <EmbeddedResource Include="Form\F_Warehousing_Registration.resx">
       <DependentUpon>F_Warehousing_Registration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Warehousing_update.resx">
+    <EmbeddedResource Include="Form\F_Warehousing_update.resx">
       <DependentUpon>F_Warehousing_update.cs</DependentUpon>
 
     </EmbeddedResource>
