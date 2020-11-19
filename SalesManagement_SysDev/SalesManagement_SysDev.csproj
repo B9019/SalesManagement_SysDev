@@ -203,7 +203,6 @@
     </Compile>
     <Compile Include="Model\CommonFunction.cs" />
     <Compile Include="Model\Constants.cs" />
-    <Compile Include="Model\ContentsManagement\StaffContents.cs" />
     <Compile Include="Model\Cryptography.cs" />
     <Compile Include="Model\Entity\Db\M_Client.cs" />
     <Compile Include="Model\Entity\Db\M_Employee.cs" />
