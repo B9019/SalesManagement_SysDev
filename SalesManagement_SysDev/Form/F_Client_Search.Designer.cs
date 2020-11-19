@@ -1,6 +1,6 @@
 ﻿namespace SalesManagement_SysDev
 {
-    partial class F_Client_search
+    partial class F_Client_Search
     {
         /// <summary>
         /// Required designer variable.
@@ -82,8 +82,6 @@
             this.発注情報削除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.バーコード管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt_memo = new System.Windows.Forms.TextBox();
-            this.lbl_memo = new System.Windows.Forms.Label();
             this.lbl_ClFAX = new System.Windows.Forms.Label();
             this.lbl_ClPostal = new System.Windows.Forms.Label();
             this.lbl_ClPhone = new System.Windows.Forms.Label();
@@ -98,6 +96,8 @@
             this.txt_ClID = new System.Windows.Forms.TextBox();
             this.lbl_ClID = new System.Windows.Forms.Label();
             this.lbl_SoID = new System.Windows.Forms.Label();
+            this.lbl_memo = new System.Windows.Forms.Label();
+            this.txt_memo = new System.Windows.Forms.TextBox();
             this.dataGridView_Product_regist = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -528,24 +528,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "検索項目";
             // 
-            // txt_memo
-            // 
-            this.txt_memo.Location = new System.Drawing.Point(108, 139);
-            this.txt_memo.Multiline = true;
-            this.txt_memo.Name = "txt_memo";
-            this.txt_memo.Size = new System.Drawing.Size(285, 18);
-            this.txt_memo.TabIndex = 76;
-            // 
-            // lbl_memo
-            // 
-            this.lbl_memo.AutoSize = true;
-            this.lbl_memo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_memo.Location = new System.Drawing.Point(16, 142);
-            this.lbl_memo.Name = "lbl_memo";
-            this.lbl_memo.Size = new System.Drawing.Size(73, 12);
-            this.lbl_memo.TabIndex = 75;
-            this.lbl_memo.Text = "備考(30文字)";
-            // 
             // lbl_ClFAX
             // 
             this.lbl_ClFAX.AutoSize = true;
@@ -672,6 +654,24 @@
             this.lbl_SoID.TabIndex = 7;
             this.lbl_SoID.Text = "営業所ID";
             // 
+            // lbl_memo
+            // 
+            this.lbl_memo.AutoSize = true;
+            this.lbl_memo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_memo.Location = new System.Drawing.Point(16, 142);
+            this.lbl_memo.Name = "lbl_memo";
+            this.lbl_memo.Size = new System.Drawing.Size(73, 12);
+            this.lbl_memo.TabIndex = 75;
+            this.lbl_memo.Text = "備考(30文字)";
+            // 
+            // txt_memo
+            // 
+            this.txt_memo.Location = new System.Drawing.Point(108, 139);
+            this.txt_memo.Multiline = true;
+            this.txt_memo.Name = "txt_memo";
+            this.txt_memo.Size = new System.Drawing.Size(285, 18);
+            this.txt_memo.TabIndex = 76;
+            // 
             // dataGridView_Product_regist
             // 
             this.dataGridView_Product_regist.Location = new System.Drawing.Point(24, 244);
@@ -758,10 +758,9 @@
             this.Controls.Add(this.dataGridView_Product_regist);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip2);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "F_Client_Search";
-            this.Text = "販売在庫管理システム　顧客情報検索";
-            this.Load += new System.EventHandler(this.F_Client_search_Load);
+            this.Text = "顧客情報検索";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.groupBox1.ResumeLayout(false);

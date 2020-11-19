@@ -85,8 +85,6 @@
             this.txt_OrID = new System.Windows.Forms.TextBox();
             this.lbl_OrID = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt_memo = new System.Windows.Forms.TextBox();
-            this.lbl_memo = new System.Windows.Forms.Label();
             this.lbl_OrDate = new System.Windows.Forms.Label();
             this.lbl_ClID = new System.Windows.Forms.Label();
             this.lbl_ClCharge = new System.Windows.Forms.Label();
@@ -97,6 +95,8 @@
             this.txt_EmID = new System.Windows.Forms.TextBox();
             this.txt_SoID = new System.Windows.Forms.TextBox();
             this.lbl_SoID = new System.Windows.Forms.Label();
+            this.txt_memo = new System.Windows.Forms.TextBox();
+            this.lbl_memo = new System.Windows.Forms.Label();
             this.dataGridView_Product_regist = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -554,24 +554,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "任意項目";
             // 
-            // txt_memo
-            // 
-            this.txt_memo.Location = new System.Drawing.Point(85, 103);
-            this.txt_memo.Multiline = true;
-            this.txt_memo.Name = "txt_memo";
-            this.txt_memo.Size = new System.Drawing.Size(285, 18);
-            this.txt_memo.TabIndex = 78;
-            // 
-            // lbl_memo
-            // 
-            this.lbl_memo.AutoSize = true;
-            this.lbl_memo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_memo.Location = new System.Drawing.Point(6, 106);
-            this.lbl_memo.Name = "lbl_memo";
-            this.lbl_memo.Size = new System.Drawing.Size(73, 12);
-            this.lbl_memo.TabIndex = 79;
-            this.lbl_memo.Text = "備考(30文字)";
-            // 
             // lbl_OrDate
             // 
             this.lbl_OrDate.AutoSize = true;
@@ -662,6 +644,24 @@
             this.lbl_SoID.TabIndex = 63;
             this.lbl_SoID.Text = "営業所ID";
             // 
+            // txt_memo
+            // 
+            this.txt_memo.Location = new System.Drawing.Point(85, 103);
+            this.txt_memo.Multiline = true;
+            this.txt_memo.Name = "txt_memo";
+            this.txt_memo.Size = new System.Drawing.Size(285, 18);
+            this.txt_memo.TabIndex = 78;
+            // 
+            // lbl_memo
+            // 
+            this.lbl_memo.AutoSize = true;
+            this.lbl_memo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_memo.Location = new System.Drawing.Point(6, 106);
+            this.lbl_memo.Name = "lbl_memo";
+            this.lbl_memo.Size = new System.Drawing.Size(73, 12);
+            this.lbl_memo.TabIndex = 79;
+            this.lbl_memo.Text = "備考(30文字)";
+            // 
             // dataGridView_Product_regist
             // 
             this.dataGridView_Product_regist.Location = new System.Drawing.Point(26, 301);
@@ -750,7 +750,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.menuStrip2);
             this.Name = "F_Order_update";
-            this.Text = "販売在庫管理システム　受注情報更新画面";
+            this.Text = "受注情報更新";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.groupBox2.ResumeLayout(false);

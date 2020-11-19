@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_Chumon_search : Form
+    public partial class F_chumon_search : Form
     {
-        public F_Chumon_search()
+        public F_chumon_search()
         {
             InitializeComponent();
-        }
-
-        private void F_Chumon_search_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
