@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_Stock_search : Form
+    public partial class T_Shipment_Registration : Form
     {
-        public F_Stock_search()
+        public T_Shipment_Registration()
         {
             InitializeComponent();
-        }
-
-        private void F_Stock_search_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
