@@ -16,10 +16,5 @@ namespace SalesManagement_SysDev
         {
             InitializeComponent();
         }
-
-        private void F_Arrival_update_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
