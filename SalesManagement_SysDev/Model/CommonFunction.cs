@@ -20,6 +20,7 @@ namespace SalesManagement_SysDev.Model
 
     class CommonFunction
     {
+
             // ***** メソッド定義
 
             // 色取得
