@@ -1,6 +1,6 @@
 ﻿namespace SalesManagement_SysDev
 {
-    partial class F_Order_Search
+    partial class F_Order_search
     {
         /// <summary>
         /// Required designer variable.
@@ -738,6 +738,7 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "F_Order_Search";
             this.Text = "販売在庫管理システム　受注情報検索画面";
+            this.Load += new System.EventHandler(this.F_Order_search_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).EndInit();

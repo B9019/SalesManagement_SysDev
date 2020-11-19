@@ -1,6 +1,6 @@
 ﻿namespace SalesManagement_SysDev
 {
-    partial class F_Order_Registration
+    partial class F_Order_regist
     {
         /// <summary>
         /// Required designer variable.
@@ -752,6 +752,7 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "F_Order_Registration";
             this.Text = "販売在庫管理システム　受注管理登録画面";
+            this.Load += new System.EventHandler(this.F_Order_regist_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).EndInit();

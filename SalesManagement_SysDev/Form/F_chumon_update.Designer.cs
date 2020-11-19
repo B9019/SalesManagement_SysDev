@@ -1,6 +1,6 @@
 ﻿namespace SalesManagement_SysDev
 {
-    partial class F_chumon_update
+    partial class F_Chumon_update
     {
         /// <summary>
         /// Required designer variable.
@@ -752,6 +752,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "F_chumon_update";
             this.Text = "販売在庫管理システム　注文情報更新画面";
+            this.Load += new System.EventHandler(this.F_Chumon_update_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -80,8 +80,8 @@ namespace SalesManagement_SysDev
         private void 顧客情報登録_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            F_
-            form_Client_regist.ShowDialog();
+            F_Client_regist form_client_regist = new F_Client_regist();
+            form_client_regist.ShowDialog();
             this.Close();
 
         }
@@ -98,7 +98,7 @@ namespace SalesManagement_SysDev
         private void 顧客情報検索_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            F_Client_Search form_Client_regist = new F_Client_Search();
+            F_Client_search form_Client_regist = new F_Client_search();
             form_Client_regist.ShowDialog();
             this.Close();
 

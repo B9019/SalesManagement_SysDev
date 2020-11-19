@@ -1,6 +1,6 @@
 ﻿namespace SalesManagement_SysDev
 {
-    partial class T_Shipment_Registration
+    partial class F_Shipment_regist
     {
         /// <summary>
         /// Required designer variable.
@@ -749,9 +749,10 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView_Product_regist);
             this.Controls.Add(this.menuStrip2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "T_Shipment_Registration";
             this.Text = "販売在庫管理システム　出荷情報登録画面";
+            this.Load += new System.EventHandler(this.F_Shipment_regist_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

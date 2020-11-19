@@ -1,6 +1,6 @@
 ﻿namespace SalesManagement_SysDev
 {
-    partial class T_Shipment_update
+    partial class F_Shipment_update
     {
         /// <summary>
         /// Required designer variable.
@@ -797,9 +797,10 @@
             this.Controls.Add(this.btn_sertch);
             this.Controls.Add(this.dataGridView_Product_regist);
             this.Controls.Add(this.btn_update);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "T_Shipment_update";
             this.Text = "販売在庫管理システム　出荷情報更新画面";
+            this.Load += new System.EventHandler(this.F_Shipment_update_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);

@@ -1,6 +1,6 @@
 ﻿namespace SalesManagement_SysDev
 {
-    partial class F_Client_Registration
+    partial class F_Client_regist
     {
         /// <summary>
         /// Required designer variable.
@@ -775,6 +775,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F_Client_Registration";
             this.Text = "販売在庫管理システム　顧客情報登録";
+            this.Load += new System.EventHandler(this.F_Client_regist_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.groupBox1.ResumeLayout(false);

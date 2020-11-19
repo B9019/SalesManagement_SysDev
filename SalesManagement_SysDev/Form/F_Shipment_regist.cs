@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class T_Shipment_Registration : Form
+    public partial class F_Shipment_regist : Form
     {
-        public T_Shipment_Registration()
+        public F_Shipment_regist()
         {
             InitializeComponent();
+        }
+
+        private void F_Shipment_regist_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace SalesManagement_SysDev
 {
-    partial class F_chumon_search
+    partial class F_Chumon_search
     {
         /// <summary>
         /// Required designer variable.
@@ -761,6 +761,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "F_chumon_search";
             this.Text = "販売在庫管理システム　注文情報検索";
+            this.Load += new System.EventHandler(this.F_Chumon_search_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).EndInit();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();

@@ -1,6 +1,6 @@
 ﻿namespace SalesManagement_SysDev
 {
-    partial class F_Order_Delete
+    partial class F_Order_delete
     {
         /// <summary>
         /// Required designer variable.
@@ -629,6 +629,7 @@
             this.Controls.Add(this.menuStrip2);
             this.Name = "F_Order_Delete";
             this.Text = "販売在庫管理システム　受注情報削除";
+            this.Load += new System.EventHandler(this.F_Order_delete_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.groupBox2.ResumeLayout(false);

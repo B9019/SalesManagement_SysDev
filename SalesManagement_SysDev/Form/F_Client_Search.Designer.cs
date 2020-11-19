@@ -1,6 +1,6 @@
 ﻿namespace SalesManagement_SysDev
 {
-    partial class F_Client_Search
+    partial class F_Client_search
     {
         /// <summary>
         /// Required designer variable.
@@ -761,6 +761,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F_Client_Search";
             this.Text = "販売在庫管理システム　顧客情報検索";
+            this.Load += new System.EventHandler(this.F_Client_search_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.groupBox1.ResumeLayout(false);

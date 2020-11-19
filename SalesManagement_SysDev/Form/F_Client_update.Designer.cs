@@ -821,6 +821,7 @@
             this.Controls.Add(this.menuStrip2);
             this.Name = "F_Client_update";
             this.Text = "販売在庫管理システム　顧客情報更新";
+            this.Load += new System.EventHandler(this.F_Client_update_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
