@@ -568,10 +568,10 @@
             // 
             // dataGridView_Product_regist
             // 
-            this.dataGridView_Product_regist.Location = new System.Drawing.Point(32, 222);
+            this.dataGridView_Product_regist.Location = new System.Drawing.Point(32, 355);
             this.dataGridView_Product_regist.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView_Product_regist.Name = "dataGridView_Product_regist";
-            this.dataGridView_Product_regist.Size = new System.Drawing.Size(968, 481);
+            this.dataGridView_Product_regist.Size = new System.Drawing.Size(968, 348);
             this.dataGridView_Product_regist.TabIndex = 110;
             // 
             // groupBox3
@@ -691,7 +691,7 @@
             this.Controls.Add(this.btn_sertch);
             this.Controls.Add(this.btn_regist);
             this.Controls.Add(this.dataGridView_Product_regist);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F_Chumon_delete";
             this.Text = "F_Chumon_delete";
             this.Load += new System.EventHandler(this.F_Chumon_delete_Load);
