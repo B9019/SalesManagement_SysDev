@@ -201,6 +201,24 @@
     <Compile Include="Form\T_Shipment_update.Designer.cs">
       <DependentUpon>T_Shipment_update.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_Barchord_search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Barchord_search.Designer.cs">
+      <DependentUpon>F_Barchord_search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Barchord_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Barchord_update.Designer.cs">
+      <DependentUpon>F_Barchord_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Barcode_Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Barcode_Registration.Designer.cs">
+      <DependentUpon>F_Barcode_Registration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\ContentsManagement\StaffContents.cs" />
     <Compile Include="Model\Entity\CommonFunction.cs" />
     <Compile Include="Model\Entity\Constants.cs" />
@@ -306,6 +324,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\T_Shipment_update.resx">
       <DependentUpon>T_Shipment_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Barchord_search.resx">
+      <DependentUpon>F_Barchord_search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Barchord_update.resx">
+      <DependentUpon>F_Barchord_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Barcode_Registration.resx">
+      <DependentUpon>F_Barcode_Registration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
