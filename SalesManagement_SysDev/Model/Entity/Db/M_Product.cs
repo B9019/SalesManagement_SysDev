@@ -29,5 +29,6 @@ namespace SalesManagement_SysDev
         public DateTime PrReleaseDate { get; set; } //発売日		
         public int PrFlag { get; set; }             //商品管理フラグ
         public String PrHidden { get; set; }	    //非表示理由		
+        public String PrMemo { get; set; }　//備考
     }
 }

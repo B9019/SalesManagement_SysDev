@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SalesManagement_SysDev.Model.Entity;
+﻿using SalesManagement_SysDev.Model.Entity;
 
-namespace SalesManagement_SysDev.Model
+namespace SalesManagement_SysDev.Model.Entity
 {
 
     class CommonFunction

@@ -1,12 +1,11 @@
-﻿using SalesManagement.Model.ContentsManagement;
-using SalesManagement.Model.ContentsManagement.Common;
-using System;
+﻿using System;
 using System.Text;
 using System.Text.RegularExpressions;
+using SalesManagement_SysDev;
+using SalesManagement_SysDev.Model;
+using SalesManagement_SysDev.Model.Entity;
 
-
-
-namespace SalesManagement.Model
+namespace SalesManagement_SysDev.Model.Entity
 {
     class InputCheck
     {
