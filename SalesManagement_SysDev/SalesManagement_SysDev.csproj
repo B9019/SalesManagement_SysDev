@@ -316,6 +316,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalesManagement_DevContext.cs" />
+    <EmbeddedResource Include="Form\F_Client.resx">
+      <DependentUpon>F_Client.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\F_home.resx">
       <DependentUpon>F_home.cs</DependentUpon>
     </EmbeddedResource>

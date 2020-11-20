@@ -125,98 +125,98 @@
             // ログイン管理toolStripMenuItem1
             // 
             this.ログイン管理toolStripMenuItem1.Name = "ログイン管理toolStripMenuItem1";
-            this.ログイン管理toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ログイン管理toolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
             this.ログイン管理toolStripMenuItem1.Text = "ログイン管理";
             this.ログイン管理toolStripMenuItem1.Click += new System.EventHandler(this.ログイン管理toolStripMenuItem1_Click);
             // 
             // 顧客管理ToolStripMenuItem
             // 
             this.顧客管理ToolStripMenuItem.Name = "顧客管理ToolStripMenuItem";
-            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.顧客管理ToolStripMenuItem.Text = "顧客管理";
             this.顧客管理ToolStripMenuItem.Click += new System.EventHandler(this.顧客管理ToolStripMenuItem_Click);
             // 
             // 商品管理ToolStripMenuItem
             // 
             this.商品管理ToolStripMenuItem.Name = "商品管理ToolStripMenuItem";
-            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.商品管理ToolStripMenuItem.Text = "商品管理";
             this.商品管理ToolStripMenuItem.Click += new System.EventHandler(this.商品管理ToolStripMenuItem_Click);
             // 
             // 受注管理ToolStripMenuItem
             // 
             this.受注管理ToolStripMenuItem.Name = "受注管理ToolStripMenuItem";
-            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.受注管理ToolStripMenuItem.Text = "受注管理";
             this.受注管理ToolStripMenuItem.Click += new System.EventHandler(this.受注管理ToolStripMenuItem_Click);
             // 
             // 注文管理ToolStripMenuItem
             // 
             this.注文管理ToolStripMenuItem.Name = "注文管理ToolStripMenuItem";
-            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.注文管理ToolStripMenuItem.Text = "注文管理";
             this.注文管理ToolStripMenuItem.Click += new System.EventHandler(this.注文管理ToolStripMenuItem_Click);
             // 
             // 入荷管理ToolStripMenuItem
             // 
             this.入荷管理ToolStripMenuItem.Name = "入荷管理ToolStripMenuItem";
-            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.入荷管理ToolStripMenuItem.Text = "入荷管理";
             this.入荷管理ToolStripMenuItem.Click += new System.EventHandler(this.入荷管理ToolStripMenuItem_Click);
             // 
             // 出荷管理ToolStripMenuItem
             // 
             this.出荷管理ToolStripMenuItem.Name = "出荷管理ToolStripMenuItem";
-            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.出荷管理ToolStripMenuItem.Text = "出荷管理";
             this.出荷管理ToolStripMenuItem.Click += new System.EventHandler(this.出荷管理ToolStripMenuItem_Click);
             // 
             // 在庫管理ToolStripMenuItem
             // 
             this.在庫管理ToolStripMenuItem.Name = "在庫管理ToolStripMenuItem";
-            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.在庫管理ToolStripMenuItem.Text = "在庫管理";
             this.在庫管理ToolStripMenuItem.Click += new System.EventHandler(this.在庫管理ToolStripMenuItem_Click);
             // 
             // 入庫管理ToolStripMenuItem
             // 
             this.入庫管理ToolStripMenuItem.Name = "入庫管理ToolStripMenuItem";
-            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.入庫管理ToolStripMenuItem.Text = "入庫管理";
             this.入庫管理ToolStripMenuItem.Click += new System.EventHandler(this.入庫管理ToolStripMenuItem_Click);
             // 
             // 出庫管理ToolStripMenuItem
             // 
             this.出庫管理ToolStripMenuItem.Name = "出庫管理ToolStripMenuItem";
-            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.出庫管理ToolStripMenuItem.Text = "出庫管理";
             this.出庫管理ToolStripMenuItem.Click += new System.EventHandler(this.出庫管理ToolStripMenuItem_Click);
             // 
             // 社員管理ToolStripMenuItem
             // 
             this.社員管理ToolStripMenuItem.Name = "社員管理ToolStripMenuItem";
-            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.社員管理ToolStripMenuItem.Text = "社員管理";
             this.社員管理ToolStripMenuItem.Click += new System.EventHandler(this.社員管理ToolStripMenuItem_Click);
             // 
             // 売上管理ToolStripMenuItem
             // 
             this.売上管理ToolStripMenuItem.Name = "売上管理ToolStripMenuItem";
-            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.売上管理ToolStripMenuItem.Text = "売上管理";
             this.売上管理ToolStripMenuItem.Click += new System.EventHandler(this.売上管理ToolStripMenuItem_Click);
             // 
             // 発注管理ToolStripMenuItem
             // 
             this.発注管理ToolStripMenuItem.Name = "発注管理ToolStripMenuItem";
-            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.発注管理ToolStripMenuItem.Text = "発注管理";
             this.発注管理ToolStripMenuItem.Click += new System.EventHandler(this.発注管理ToolStripMenuItem_Click);
             // 
             // バーコード管理
             // 
             this.バーコード管理.Name = "バーコード管理";
-            this.バーコード管理.Size = new System.Drawing.Size(180, 22);
+            this.バーコード管理.Size = new System.Drawing.Size(140, 22);
             this.バーコード管理.Text = "バーコード管理";
             // 
             // groupBox1
@@ -265,7 +265,7 @@
             // 
             this.MaID.AutoSize = true;
             this.MaID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.MaID.Location = new System.Drawing.Point(48, 18);
+            this.MaID.Location = new System.Drawing.Point(48, 22);
             this.MaID.Name = "MaID";
             this.MaID.Size = new System.Drawing.Size(43, 12);
             this.MaID.TabIndex = 49;
@@ -273,7 +273,7 @@
             // 
             // txt_PrColor
             // 
-            this.txt_PrColor.Location = new System.Drawing.Point(505, 15);
+            this.txt_PrColor.Location = new System.Drawing.Point(505, 19);
             this.txt_PrColor.Name = "txt_PrColor";
             this.txt_PrColor.Size = new System.Drawing.Size(183, 19);
             this.txt_PrColor.TabIndex = 114;
@@ -282,7 +282,7 @@
             // 
             this.PrColor.AutoSize = true;
             this.PrColor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrColor.Location = new System.Drawing.Point(475, 18);
+            this.PrColor.Location = new System.Drawing.Point(475, 22);
             this.PrColor.Name = "PrColor";
             this.PrColor.Size = new System.Drawing.Size(17, 12);
             this.PrColor.TabIndex = 109;
@@ -331,7 +331,7 @@
             // 
             // txt_PrSafetyStock
             // 
-            this.txt_PrSafetyStock.Location = new System.Drawing.Point(505, 100);
+            this.txt_PrSafetyStock.Location = new System.Drawing.Point(505, 96);
             this.txt_PrSafetyStock.Name = "txt_PrSafetyStock";
             this.txt_PrSafetyStock.Size = new System.Drawing.Size(183, 19);
             this.txt_PrSafetyStock.TabIndex = 112;
@@ -350,7 +350,7 @@
             // 
             this.PrSafetyStock.AutoSize = true;
             this.PrSafetyStock.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrSafetyStock.Location = new System.Drawing.Point(430, 103);
+            this.PrSafetyStock.Location = new System.Drawing.Point(432, 99);
             this.PrSafetyStock.Name = "PrSafetyStock";
             this.PrSafetyStock.Size = new System.Drawing.Size(65, 12);
             this.PrSafetyStock.TabIndex = 107;
@@ -394,7 +394,7 @@
             // 
             this.ScID.AutoSize = true;
             this.ScID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ScID.Location = new System.Drawing.Point(40, 93);
+            this.ScID.Location = new System.Drawing.Point(39, 96);
             this.ScID.Name = "ScID";
             this.ScID.Size = new System.Drawing.Size(52, 12);
             this.ScID.TabIndex = 102;
