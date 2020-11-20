@@ -63,11 +63,11 @@
     <Compile Include="Form\F_home.Designer.cs">
       <DependentUpon>F_home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\F_Arrival_Registration.cs">
+    <Compile Include="Form\F_Arrival_regist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\F_Arrival_Registration.Designer.cs">
-      <DependentUpon>F_Arrival_Registration.cs</DependentUpon>
+    <Compile Include="Form\F_Arrival_regist.Designer.cs">
+      <DependentUpon>F_Arrival_regist.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\F_Arrival_search.cs">
       <SubType>Form</SubType>
@@ -87,23 +87,23 @@
     <Compile Include="Form\F_Chumon_delete.Designer.cs">
       <DependentUpon>F_Chumon_delete.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\F_chumon_search.cs">
+    <Compile Include="Form\F_Chumon_search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\F_chumon_search.Designer.cs">
-      <DependentUpon>F_chumon_search.cs</DependentUpon>
+    <Compile Include="Form\F_Chumon_search.Designer.cs">
+      <DependentUpon>F_Chumon_search.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\F_chumon_update.cs">
+    <Compile Include="Form\F_Chumon_update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\F_chumon_update.Designer.cs">
-      <DependentUpon>F_chumon_update.cs</DependentUpon>
+    <Compile Include="Form\F_Chumon_update.Designer.cs">
+      <DependentUpon>F_Chumon_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\F_Client_Registration.cs">
+    <Compile Include="Form\F_Client_regist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\F_Client_Registration.Designer.cs">
-      <DependentUpon>F_Client_Registration.cs</DependentUpon>
+    <Compile Include="Form\F_Client_regist.Designer.cs">
+      <DependentUpon>F_Client_regist.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\F_Client_Search.cs">
       <SubType>Form</SubType>
@@ -141,11 +141,11 @@
     <Compile Include="Form\F_Order_Delete.Designer.cs">
       <DependentUpon>F_Order_Delete.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\F_Order_Registration.cs">
+    <Compile Include="Form\F_Order_regist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\F_Order_Registration.Designer.cs">
-      <DependentUpon>F_Order_Registration.cs</DependentUpon>
+    <Compile Include="Form\F_Order_regist.Designer.cs">
+      <DependentUpon>F_Order_regist.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\F_Order_Search.cs">
       <SubType>Form</SubType>
@@ -177,11 +177,11 @@
     <Compile Include="Form\F_Product_update.Designer.cs">
       <DependentUpon>F_Product_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\F_Stock_sertch.cs">
+    <Compile Include="Form\F_Stock_search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\F_Stock_sertch.Designer.cs">
-      <DependentUpon>F_Stock_sertch.cs</DependentUpon>
+    <Compile Include="Form\F_Stock_search.Designer.cs">
+      <DependentUpon>F_Stock_search.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\F_Stock_update.cs">
       <SubType>Form</SubType>
@@ -189,23 +189,23 @@
     <Compile Include="Form\F_Stock_update.Designer.cs">
       <DependentUpon>F_Stock_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\T_Shipment_Registration.cs">
+    <Compile Include="Form\F_Shipment_regist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\T_Shipment_Registration.Designer.cs">
-      <DependentUpon>T_Shipment_Registration.cs</DependentUpon>
+    <Compile Include="Form\F_Shipment_regist.Designer.cs">
+      <DependentUpon>F_Shipment_regist.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\T_Shipment_search.cs">
+    <Compile Include="Form\F_Shipment_search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\T_Shipment_search.Designer.cs">
-      <DependentUpon>T_Shipment_search.cs</DependentUpon>
+    <Compile Include="Form\F_Shipment_search.Designer.cs">
+      <DependentUpon>F_Shipment_search.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\T_Shipment_update.cs">
+    <Compile Include="Form\F_Shipment_update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\T_Shipment_update.Designer.cs">
-      <DependentUpon>T_Shipment_update.cs</DependentUpon>
+    <Compile Include="Form\F_Shipment_update.Designer.cs">
+      <DependentUpon>F_Shipment_update.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ContentsManagement\StaffContents.cs" />
     <Compile Include="Model\Entity\CommonFunction.cs" />
@@ -244,8 +244,8 @@
     <EmbeddedResource Include="Form\F_home.resx">
       <DependentUpon>F_home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Arrival_Registration.resx">
-      <DependentUpon>F_Arrival_Registration.cs</DependentUpon>
+    <EmbeddedResource Include="Form\F_Arrival_regist.resx">
+      <DependentUpon>F_Arrival_regist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Arrival_search.resx">
       <DependentUpon>F_Arrival_search.cs</DependentUpon>
@@ -256,14 +256,14 @@
     <EmbeddedResource Include="Form\F_Chumon_delete.resx">
       <DependentUpon>F_Chumon_delete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_chumon_search.resx">
-      <DependentUpon>F_chumon_search.cs</DependentUpon>
+    <EmbeddedResource Include="Form\F_Chumon_search.resx">
+      <DependentUpon>F_Chumon_search.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_chumon_update.resx">
-      <DependentUpon>F_chumon_update.cs</DependentUpon>
+    <EmbeddedResource Include="Form\F_Chumon_update.resx">
+      <DependentUpon>F_Chumon_update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Client_Registration.resx">
-      <DependentUpon>F_Client_Registration.cs</DependentUpon>
+    <EmbeddedResource Include="Form\F_Client_regist.resx">
+      <DependentUpon>F_Client_regist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Client_Search.resx">
       <DependentUpon>F_Client_Search.cs</DependentUpon>
@@ -283,8 +283,8 @@
     <EmbeddedResource Include="Form\F_Order_Delete.resx">
       <DependentUpon>F_Order_Delete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Order_Registration.resx">
-      <DependentUpon>F_Order_Registration.cs</DependentUpon>
+    <EmbeddedResource Include="Form\F_Order_regist.resx">
+      <DependentUpon>F_Order_regist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Order_Search.resx">
       <DependentUpon>F_Order_Search.cs</DependentUpon>
@@ -301,20 +301,20 @@
     <EmbeddedResource Include="Form\F_Product_update.resx">
       <DependentUpon>F_Product_update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Stock_sertch.resx">
-      <DependentUpon>F_Stock_sertch.cs</DependentUpon>
+    <EmbeddedResource Include="Form\F_Stock_search.resx">
+      <DependentUpon>F_Stock_search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Stock_update.resx">
       <DependentUpon>F_Stock_update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\T_Shipment_Registration.resx">
-      <DependentUpon>T_Shipment_Registration.cs</DependentUpon>
+    <EmbeddedResource Include="Form\F_Shipment_regist.resx">
+      <DependentUpon>F_Shipment_regist.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\T_Shipment_search.resx">
-      <DependentUpon>T_Shipment_search.cs</DependentUpon>
+    <EmbeddedResource Include="Form\F_Shipment_search.resx">
+      <DependentUpon>F_Shipment_search.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\T_Shipment_update.resx">
-      <DependentUpon>T_Shipment_update.cs</DependentUpon>
+    <EmbeddedResource Include="Form\F_Shipment_update.resx">
+      <DependentUpon>F_Shipment_update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

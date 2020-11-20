@@ -16,5 +16,10 @@ namespace SalesManagement_SysDev
         {
             InitializeComponent();
         }
+
+        private void F_Arrival_search_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

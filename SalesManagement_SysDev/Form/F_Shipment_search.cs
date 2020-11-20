@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class T_Shipment_search : Form
+    public partial class F_Shipment_search : Form
     {
-        public T_Shipment_search()
+        public F_Shipment_search()
         {
             InitializeComponent();
         }

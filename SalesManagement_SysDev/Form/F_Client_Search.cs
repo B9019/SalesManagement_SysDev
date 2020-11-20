@@ -16,5 +16,15 @@ namespace SalesManagement_SysDev
         {
             InitializeComponent();
         }
+
+        private void F_Client_search_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

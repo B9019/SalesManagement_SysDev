@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_Order_Registration : Form
+    public partial class F_Shipment_regist : Form
     {
-        public F_Order_Registration()
+        public F_Shipment_regist()
         {
             InitializeComponent();
-        }
-
-        private void lbl_ClID_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

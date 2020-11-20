@@ -820,7 +820,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip2);
             this.Name = "F_Client_update";
-            this.Text = "顧客情報更新";
+            this.Text = "販売在庫管理システム　顧客情報更新画面";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
