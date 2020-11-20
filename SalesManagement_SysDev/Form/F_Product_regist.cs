@@ -418,6 +418,9 @@ namespace SalesManagement_SysDev
 
         }
 
+        private void btn_regist_Click_1(object sender, EventArgs e)
+        {
 
+        }
     }
 }

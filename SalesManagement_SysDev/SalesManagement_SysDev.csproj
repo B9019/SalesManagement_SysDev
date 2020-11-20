@@ -60,6 +60,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\F_Arrival.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\F_Arrival.Designer.cs">
+      <DependentUpon>F_Arrival.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\F_Chumon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\F_Chumon.Designer.cs">
+      <DependentUpon>F_Chumon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\F_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\F_Client.Designer.cs">
+      <DependentUpon>F_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\F_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\F_Employee.Designer.cs">
+      <DependentUpon>F_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\F_Hattyu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\F_Hattyu.Designer.cs">
+      <DependentUpon>F_Hattyu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\F_home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +168,12 @@
     <Compile Include="Form\F_login_regist.Designer.cs">
       <DependentUpon>F_login_regist.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\F_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\F_Order.Designer.cs">
+      <DependentUpon>F_Order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\F_Order_Delete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +222,24 @@
     <Compile Include="Form\F_Product_update.Designer.cs">
       <DependentUpon>F_Product_update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\F_Sale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\F_Sale.Designer.cs">
+      <DependentUpon>F_Sale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\F_Shipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\F_Shipment.Designer.cs">
+      <DependentUpon>F_Shipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\F_Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\F_Stock.Designer.cs">
+      <DependentUpon>F_Stock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\F_Stock_search.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +269,18 @@
     </Compile>
     <Compile Include="Form\F_Shipment_update.Designer.cs">
       <DependentUpon>F_Shipment_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\F_Syukko.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\F_Syukko.Designer.cs">
+      <DependentUpon>F_Syukko.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\F_Warehousing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\F_Warehousing.Designer.cs">
+      <DependentUpon>F_Warehousing.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ContentsManagement\StaffContents.cs" />
     <Compile Include="Model\Entity\CommonFunction.cs" />
