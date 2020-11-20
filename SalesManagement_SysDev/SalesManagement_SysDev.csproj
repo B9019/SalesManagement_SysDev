@@ -162,6 +162,12 @@
     <Compile Include="Form\F_Order_update.Designer.cs">
       <DependentUpon>F_Order_update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\F_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\F_Product.Designer.cs">
+      <DependentUpon>F_Product.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\F_Product_regist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Order_update.resx">
       <DependentUpon>F_Order_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\F_Product.resx">
+      <DependentUpon>F_Product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Product_regist.resx">
       <DependentUpon>F_Product_regist.cs</DependentUpon>
