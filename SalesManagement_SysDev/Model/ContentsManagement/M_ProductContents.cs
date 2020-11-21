@@ -100,7 +100,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                         //Timestamp = item.Timestamp,
                         //LogData = item.LogData,
                     });
-                    count++;
                 }
                 // ソータブルリスト作成
                 SortableBindingList<M_DispProduct> sortableDispProduct = new SortableBindingList<M_DispProduct>(dispProducts);

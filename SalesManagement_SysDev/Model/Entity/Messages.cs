@@ -20,5 +20,9 @@ namespace SalesManagement_SysDev.Model.Entity
         public const string necessaryInput = "必須項目です。";
         public const string nullNotAllowed = "空白は無効です。";
 
+        public int MessagesId { get; set; }
+        public int MessagesNo { get; set; }
+        public string Message { get; set; }
+
     }
 }

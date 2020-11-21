@@ -240,7 +240,7 @@ namespace SalesManagement_SysDev.Model.Entity
             int textLength = text.Replace("\r\n", string.Empty).Length;
             int textByte = Encoding.GetEncoding("Shift_JIS").GetByteCount(text.Replace("\r\n", string.Empty));
             if (textByte != textLength * 2)
-                errorMessage = "全角で入力してください。";
+                errorMessage = "全角で入力してください。"; 
             else
                 result = true;
             return result;

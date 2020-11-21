@@ -222,7 +222,7 @@ namespace SalesManagement_SysDev
             ////　文字チェック ////
 
             //　商品名
-            if (!_ic.FullWidthCharCheck(txt_PrID.Text, out errorMessage))
+            if (!_ic.FullWidthCharCheck(txt_PrName.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
                 txt_PrID.Focus();
@@ -232,7 +232,7 @@ namespace SalesManagement_SysDev
             if (!_ic.FullWidthCharCheck(txt_PrJCode.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
-                txt_PrID.Focus();
+                txt_PrJCode.Focus();
                 return false;
             }
             //　色の文字チェック
@@ -375,126 +375,175 @@ namespace SalesManagement_SysDev
             return true;
 
         }
-        // 表示データ更新
-        private void RefreshDataGridView()
+        // 入力クリア
+        internal void ClearInput()
         {
-            // スクロール位置取得
-            int ScrollPosition = dataGridView_Product_regist.FirstDisplayedScrollingRowIndex;
+            // 表示モード設定
+            dataGridView_Product_regist.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-            // データ取得&表示（データバインド）
-            _dispProductPaging = _Pr.GetDispProducts();
-            dataGridView_Product_regist.DataSource = _dispProductPaging;
+            // データグリッド選択解除
+            dataGridView_Product_regist.ClearSelection();
 
-            // 全データ数取得
-            _recordCount = _dispProductPaging.Count();
+            // テキストボックス＆コンボボックスクリア
+            txt_MaID.Clear();
+            txt_PrID.Clear();
+            txt_PrName.Clear();
+            txt_ScID.Clear();
+            txt_PrModelNumber.Clear();
+            txt_PrColor.Clear();
+            txt_PrReleaseDate.Clear();
+            txt_Price.Clear();
+            txt_PrSafetyStock.Clear();
+            txt_PrJCode.Clear();
+            txt_memo.Clear();
+            txt_PrHidden.Clear();
+            chk_PrHidden.Checked = false;
 
-            // スクロール位置セット
-            if (0 < ScrollPosition) dataGridView_Product_regist.FirstDisplayedScrollingRowIndex = ScrollPosition;
+            //// ボタンリセット
+            //btn_regist.Enabled = true;
+            //buttonUpdate.Enabled = false;
+            //buttonDelete.Enabled = false;
 
-            // 入力クリア
-            ClearInput();
+            // コード改変無効処置リセット
+            txt_MaID.Enabled = false;
 
-            // ページング初期化
-            ClearPaging();
-
+            // 入力フォーカスリセット
+            txt_MaID.Focus();
         }
-        // 親カテゴリー情報を更新
-        private void RenewParentCategory()
+
+         // 表示データ更新
+         private void RefreshDataGridView()
         {
-            comboBoxParentCategorys.DataSource = _ct.GetCategorys();
-            comboBoxParentCategorys.DisplayMember = "CategoryCD";
-            comboBoxParentCategorys.ValueMember = "CategoryName";
+                // スクロール位置取得
+                int ScrollPosition = dataGridView_Product_regist.FirstDisplayedScrollingRowIndex;
+
+                // データ取得&表示（データバインド）
+                _dispProductPaging = _Pr.GetDispProducts();
+                dataGridView_Product_regist.DataSource = _dispProductPaging;
+
+                // 全データ数取得
+                _recordCount = _dispProductPaging.Count();
+
+                // スクロール位置セット
+                if (0 < ScrollPosition) dataGridView_Product_regist.FirstDisplayedScrollingRowIndex = ScrollPosition;
+
+                // 入力クリア
+                ClearInput();
+
+                // ページング初期化
+                ClearPaging();
+
+         }
+        // ページング初期化
+        private void ClearPaging()
+        {
+            //// ページサイズ初期化（全行表示）
+            //textBoxPageSize.Text = "0";
+            //_pageSizePaging = Convert.ToInt32(textBoxPageSize.Text);
+            //_recordCount = _dispItemPaging.Count();
+            _pageCountPaging = 1;
+
+            // 表示ページ＆ページトップデータ初期化
+            _currentPage = 1;
+            _recordNo = 0;
         }
+
+
 
 
 
         private void ログイン管理toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            F_login form_login = new F_login();
-            form_login.ShowDialog();
+            {
+                F_login form_login = new F_login();
+                form_login.ShowDialog();
+            }
+
+            private void 顧客管理ToolStripMenuItem_Click(object sender, EventArgs e)
+            {
+                F_Client form_client = new F_Client();
+                form_client.ShowDialog();
+            }
+
+            private void 商品管理ToolStripMenuItem_Click(object sender, EventArgs e)
+            {
+                F_Product form_product = new F_Product();
+                form_product.ShowDialog();
+
+            }
+
+            private void 受注管理ToolStripMenuItem_Click(object sender, EventArgs e)
+            {
+                F_Order form_order = new F_Order();
+                form_order.ShowDialog();
+
+            }
+
+            private void 注文管理ToolStripMenuItem_Click(object sender, EventArgs e)
+            {
+                F_Chumon form_chumon = new F_Chumon();
+                form_chumon.ShowDialog();
+
+            }
+
+            private void 入荷管理ToolStripMenuItem_Click(object sender, EventArgs e)
+            {
+                F_Arrival form_arrival = new F_Arrival();
+                form_arrival.ShowDialog();
+
+            }
+
+            private void 出荷管理ToolStripMenuItem_Click(object sender, EventArgs e)
+            {
+                F_Shipment form_shipment = new F_Shipment();
+                form_shipment.ShowDialog();
+
+            }
+
+            private void 在庫管理ToolStripMenuItem_Click(object sender, EventArgs e)
+            {
+                F_Stock form_stock = new F_Stock();
+                form_stock.ShowDialog();
+
+            }
+
+            private void 入庫管理ToolStripMenuItem_Click(object sender, EventArgs e)
+            {
+                F_Warehousing form_warehousing = new F_Warehousing();
+                form_warehousing.ShowDialog();
+            }
+
+            private void 出庫管理ToolStripMenuItem_Click(object sender, EventArgs e)
+            {
+                F_Syukko form_syukko = new F_Syukko();
+                form_syukko.ShowDialog();
+
+            }
+
+            private void 社員管理ToolStripMenuItem_Click(object sender, EventArgs e)
+            {
+                F_Employee form_employee = new F_Employee();
+                form_employee.ShowDialog();
+
+            }
+
+            private void 売上管理ToolStripMenuItem_Click(object sender, EventArgs e)
+            {
+                F_Sale form_sale = new F_Sale();
+                form_sale.ShowDialog();
+
+            }
+
+            private void 発注管理ToolStripMenuItem_Click(object sender, EventArgs e)
+            {
+                F_Hattyu form_hattyu = new F_Hattyu();
+                form_hattyu.ShowDialog();
+
+            }
+
         }
-
-        private void 顧客管理ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            F_Client form_client = new F_Client();
-            form_client.ShowDialog();
-        }
-
-        private void 商品管理ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            F_Product form_product = new F_Product();
-            form_product.ShowDialog();
-
-        }
-
-        private void 受注管理ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            F_Order form_order = new F_Order();
-            form_order.ShowDialog();
-
-        }
-
-        private void 注文管理ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            F_Chumon form_chumon = new F_Chumon();
-            form_chumon.ShowDialog();
-
-        }
-
-        private void 入荷管理ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            F_Arrival form_arrival = new F_Arrival();
-            form_arrival.ShowDialog();
-
-        }
-
-        private void 出荷管理ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            F_Shipment form_shipment = new F_Shipment();
-            form_shipment.ShowDialog();
-
-        }
-
-        private void 在庫管理ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            F_Stock form_stock = new F_Stock();
-            form_stock.ShowDialog();
-
-        }
-
-        private void 入庫管理ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            F_Warehousing form_warehousing = new F_Warehousing();
-            form_warehousing.ShowDialog();
-        }
-
-        private void 出庫管理ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            F_Syukko form_syukko = new F_Syukko();
-            form_syukko.ShowDialog();
-
-        }
-
-        private void 社員管理ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            F_Employee form_employee = new F_Employee();
-            form_employee.ShowDialog();
-
-        }
-
-        private void 売上管理ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            F_Sale form_sale = new F_Sale();
-            form_sale.ShowDialog();
-
-        }
-
-        private void 発注管理ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            F_Hattyu form_hattyu = new F_Hattyu();
-            form_hattyu.ShowDialog();
-
-        }
-
     }
-}
+
+
+
+
+    
