@@ -60,6 +60,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\M_Client.cs" />
+    <Compile Include="Entity\M_Employee.cs" />
+    <Compile Include="Entity\M_MajorCassification.cs" />
+    <Compile Include="Entity\M_Maker.cs" />
+    <Compile Include="Entity\M_Position.cs" />
+    <Compile Include="Entity\M_Product.cs" />
+    <Compile Include="Entity\M_SalesOffice.cs" />
+    <Compile Include="Entity\M_SmallClassification.cs" />
+    <Compile Include="Entity\T_Arrival.cs" />
+    <Compile Include="Entity\T_ArrivalDetail.cs" />
+    <Compile Include="Entity\T_Chumon.cs" />
+    <Compile Include="Entity\T_ChumonDetail.cs" />
+    <Compile Include="Entity\T_Hattyu.cs" />
+    <Compile Include="Entity\T_HattyuDetail.cs" />
+    <Compile Include="Entity\T_LoginHistory.cs" />
+    <Compile Include="Entity\T_OperationHistory.cs" />
+    <Compile Include="Entity\T_Order.cs" />
+    <Compile Include="Entity\T_OrderDetail.cs" />
+    <Compile Include="Entity\T_Sale.cs" />
+    <Compile Include="Entity\T_SaleDetail.cs" />
+    <Compile Include="Entity\T_Shipment.cs" />
+    <Compile Include="Entity\T_ShipmentDetail.cs" />
+    <Compile Include="Entity\T_Stock.cs" />
+    <Compile Include="Entity\T_Syukko.cs" />
+    <Compile Include="Entity\T_SyukkoDetail.cs" />
+    <Compile Include="Entity\T_Warehousing.cs" />
+    <Compile Include="Entity\T_WarehousingDetail.cs" />
     <Compile Include="Form\F_Arrival.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +182,12 @@
     </Compile>
     <Compile Include="Form\F_login.Designer.cs">
       <DependentUpon>F_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\F_Loginform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\F_Loginform.Designer.cs">
+      <DependentUpon>F_Loginform.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\F_login_log.cs">
       <SubType>Form</SubType>
@@ -282,37 +315,14 @@
     <Compile Include="Form\F_Warehousing.Designer.cs">
       <DependentUpon>F_Warehousing.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\CommonFunction.cs" />
+    <Compile Include="Model\Constants.cs" />
+    <Compile Include="Model\ContentsManagement\Common\MessageCommon.cs" />
+    <Compile Include="Model\ContentsManagement\M_ProductContents.cs" />
     <Compile Include="Model\ContentsManagement\StaffContents.cs" />
-    <Compile Include="Model\Entity\CommonFunction.cs" />
-    <Compile Include="Model\Entity\Constants.cs" />
-    <Compile Include="Model\Entity\Db\M_Client.cs" />
-    <Compile Include="Model\Entity\Db\M_Employee.cs" />
-    <Compile Include="Model\Entity\Db\M_MajorCassification.cs" />
-    <Compile Include="Model\Entity\Db\M_Maker.cs" />
-    <Compile Include="Model\Entity\Db\M_Position.cs" />
-    <Compile Include="Model\Entity\Db\M_Product.cs" />
-    <Compile Include="Model\Entity\Db\M_SalesOffice.cs" />
-    <Compile Include="Model\Entity\Db\M_SmallClassification.cs" />
-    <Compile Include="Model\Entity\Db\T_Arrival.cs" />
-    <Compile Include="Model\Entity\Db\T_ArrivalDetail.cs" />
-    <Compile Include="Model\Entity\Db\T_Chumon.cs" />
-    <Compile Include="Model\Entity\Db\T_ChumonDetail.cs" />
-    <Compile Include="Model\Entity\Db\T_Hattyu.cs" />
-    <Compile Include="Model\Entity\Db\T_HattyuDetail.cs" />
-    <Compile Include="Model\Entity\Db\T_LoginHistory.cs" />
-    <Compile Include="Model\Entity\Db\T_OperationHistory.cs" />
-    <Compile Include="Model\Entity\Db\T_Order.cs" />
-    <Compile Include="Model\Entity\Db\T_OrderDetail.cs" />
-    <Compile Include="Model\Entity\Db\T_Sale.cs" />
-    <Compile Include="Model\Entity\Db\T_SaleDetail.cs" />
-    <Compile Include="Model\Entity\Db\T_Shipment.cs" />
-    <Compile Include="Model\Entity\Db\T_ShipmentDetail.cs" />
-    <Compile Include="Model\Entity\Db\T_Stock.cs" />
-    <Compile Include="Model\Entity\Db\T_Syukko.cs" />
-    <Compile Include="Model\Entity\Db\T_SyukkoDetail.cs" />
-    <Compile Include="Model\Entity\Db\T_Warehousing.cs" />
-    <Compile Include="Model\Entity\Db\T_WarehousingDetail.cs" />
-    <Compile Include="Model\Entity\InputCheck.cs" />
+    <Compile Include="Model\Entity\Disp\M_DispProduct.cs" />
+    <Compile Include="Model\Entity\Messages.cs" />
+    <Compile Include="Model\InputCheck.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalesManagement_DevContext.cs" />
@@ -418,9 +428,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\ContentsManagement\Common\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>

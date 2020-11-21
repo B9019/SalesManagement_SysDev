@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 // EntityFrameworkを利用する
 using System.Data.Entity;
 
-
 namespace SalesManagement_SysDev
 {
     class SalesManagement_DevContext : DbContext
