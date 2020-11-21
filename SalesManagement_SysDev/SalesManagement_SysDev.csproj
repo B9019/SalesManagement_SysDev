@@ -114,24 +114,6 @@
     <Compile Include="Form\F_Arrival_update.Designer.cs">
       <DependentUpon>F_Arrival_update.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\F_Barchord_search.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\F_Barchord_search.Designer.cs">
-      <DependentUpon>F_Barchord_search.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\F_Barchord_update.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\F_Barchord_update.Designer.cs">
-      <DependentUpon>F_Barchord_update.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\F_Barcode_Registration.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\F_Barcode_Registration.Designer.cs">
-      <DependentUpon>F_Barcode_Registration.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\F_Chumon_delete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -345,15 +327,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Arrival_update.resx">
       <DependentUpon>F_Arrival_update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Barchord_search.resx">
-      <DependentUpon>F_Barchord_search.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Barchord_update.resx">
-      <DependentUpon>F_Barchord_update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Barcode_Registration.resx">
-      <DependentUpon>F_Barcode_Registration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Chumon_delete.resx">
       <DependentUpon>F_Chumon_delete.cs</DependentUpon>
