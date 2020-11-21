@@ -315,6 +315,15 @@
     <Compile Include="Form\F_Warehousing.Designer.cs">
       <DependentUpon>F_Warehousing.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011060522507_InitialCreate.cs" />
+    <Compile Include="Migrations\202011060522507_InitialCreate.Designer.cs">
+      <DependentUpon>202011060522507_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011211819133_Add_Migration.cs" />
+    <Compile Include="Migrations\202011211819133_Add_Migration.designer.cs">
+      <DependentUpon>202011211819133_Add_Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\CommonFunction.cs" />
     <Compile Include="Model\Constants.cs" />
     <Compile Include="Model\ContentsManagement\Common\MessageCommon.cs" />
@@ -406,6 +415,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Shipment_update.resx">
       <DependentUpon>F_Shipment_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011060522507_InitialCreate.resx">
+      <DependentUpon>202011060522507_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011211819133_Add_Migration.resx">
+      <DependentUpon>202011211819133_Add_Migration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
