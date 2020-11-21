@@ -1,6 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
+using System.Linq;
+using System.Reflection;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using SalesManagement_SysDev.Model.Entity;
 using SalesManagement_SysDev.Model.ContentsManagement;
