@@ -5,6 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SalesManagement_SysDev;
+using SalesManagement_SysDev.Model.Entity;
+
 
 namespace SalesManagement_SysDev.Model.ContentsManagement.Common
 {
@@ -17,7 +20,7 @@ namespace SalesManagement_SysDev.Model.ContentsManagement.Common
         //          false : メッセージ有
         public bool CheckMessage()
         {
-            using (var db = new SalesDbContext())
+            using (var db = new SalesManagement_DevContext())
             {
                 if (db.Messagess.Count() == 0) return true;
                 else return false;
@@ -27,7 +30,7 @@ namespace SalesManagement_SysDev.Model.ContentsManagement.Common
         // メッセージ取得
         public string GetMessage(int no)
         {
-            using (var db = new SalesDbContext())
+            using (var db = new SalesManagement_DevContext())
             {
                 return db.Messagess.Single(m => m.MessagesNo == no).Message;
             }
@@ -36,7 +39,7 @@ namespace SalesManagement_SysDev.Model.ContentsManagement.Common
         // メッセージ追加
         public void PostMessage(List<Messages> messagess)
         {
-            using (var db = new SalesDbContext())
+            using (var db = new SalesManagement_DevContext())
             {
                 foreach (Messages message in messagess)
                 {

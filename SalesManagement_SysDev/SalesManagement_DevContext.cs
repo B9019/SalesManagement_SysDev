@@ -5,11 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 // EntityFrameworkを利用する
 using System.Data.Entity;
+using SalesManagement_SysDev.Model.Entity;
 
 namespace SalesManagement_SysDev
 {
     class SalesManagement_DevContext : DbContext
     {
+        public DbSet<Messages> Messagess { get; set; }
+
         public DbSet<M_Client> M_Clients { get; set; }
         public DbSet<M_Employee> M_Employees { get; set; }
         public DbSet<M_MajorCassification> M_MajorCassifications { get; set; }

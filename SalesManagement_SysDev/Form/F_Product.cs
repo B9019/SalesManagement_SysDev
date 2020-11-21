@@ -50,13 +50,13 @@ namespace SalesManagement_SysDev
         private int _pageSizePaging;                                        // １ページ表示データ行数
         private int _currentPage;                                           // 現在のページ
         private int _recordNo;                                              // ページ先頭位置のデータ（スタートデータ）
-        private IEnumerable<M_DispProduct> _dispDivisionPaging;            // 表示用データ
+        private IEnumerable<M_DispProduct> _dispProductPaging;            // 表示用データ
 
         // 印刷
         private int _pageCountPrinting;                                     // 全印刷ページ数
         private int _pageNumber = 0;                                        // 印刷ページ番号
         private int _pageSizePrinting;                                      // １ページ印刷データ行数
-        private List<M_DispProduct> _dispDivisionPrinting;                 // 印刷用データ
+        private List<M_DispProduct> _dispProductPrinting;                 // 印刷用データ
 
         public F_Product()
         {
@@ -372,18 +372,15 @@ namespace SalesManagement_SysDev
         // 表示データ更新
         private void RefreshDataGridView()
         {
-            // 親カテゴリー情報更新
-            RenewParentCategory();
-
             // スクロール位置取得
             int ScrollPosition = dataGridView_Product_regist.FirstDisplayedScrollingRowIndex;
 
             // データ取得&表示（データバインド）
-            _dispCategoryPaging = _ct.GetDispCategorys();
-            dataGridView.DataSource = _dispCategoryPaging;
+            _dispProductPaging = _Pr.GetDispProducts();
+            dataGridView_Product_regist.DataSource = _dispProductPaging;
 
             // 全データ数取得
-            _recordCount = _dispCategoryPaging.Count();
+            _recordCount = _dispProductPaging.Count();
 
             // スクロール位置セット
             if (0 < ScrollPosition) dataGridView_Product_regist.FirstDisplayedScrollingRowIndex = ScrollPosition;
@@ -402,6 +399,7 @@ namespace SalesManagement_SysDev
             comboBoxParentCategorys.DisplayMember = "CategoryCD";
             comboBoxParentCategorys.ValueMember = "CategoryName";
         }
+
 
 
         private void ログイン管理toolStripMenuItem1_Click(object sender, EventArgs e)
