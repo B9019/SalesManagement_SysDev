@@ -120,33 +120,33 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
             }
         }
 
-                //// データ追加
-                //// in   : M_Productデータ
-                //public string PostM_Product(M_Product regM_Product)
-                //{
-                //    using (var db1 = new SalesManagement_DevContext())
-                //    {
-                //        db1.M_Products.Add(regM_Product);
-                //        db1.Entry(regM_Product).State = EntityState.Added;
+        //// データ追加
+        //// in   : M_Productデータ
+        //public string PostM_Product(M_Product regM_Product)
+        //{
+        //    using (var db1 = new SalesManagement_DevContext())
+        //    {
+        //        db1.M_Products.Add(regM_Product);
+        //        db1.Entry(regM_Product).State = EntityState.Added;
 
-                //        try
-                //        {
-                //            db1.SaveChanges();
-                //        }
-                //        catch
-                //        {
-                //            // throw new Exception(Messages.errorConflict, ex);
-                //            // throw new Exception(_cm.GetMessage(100), ex);
-                //            // MessageBox.Show(_msc.GetMessage(100));
-                //            return _msc.GetMessage(100);
-                //        }
-                //    }
-                //}
+        //        try
+        //        {
+        //            db1.SaveChanges();
+        //        }
+        //        catch
+        //        {
+        //            // throw new Exception(Messages.errorConflict, ex);
+        //            // throw new Exception(_cm.GetMessage(100), ex);
+        //            // MessageBox.Show(_msc.GetMessage(100));
+        //            return _msc.GetMessage(100);
+        //        }
+        //    }
+        //}
 
-                // データ追加
-                // in   : M_Itemデータ
-     public string PostM_Product(M_Product regProduct)
-     {
+        // データ追加
+        // in   : M_Itemデータ
+        public string PostM_Product(M_Product regProduct)
+        {
             using (var db1 = new SalesManagement_DevContext())
             {
                 db1.M_Products.Add(regProduct);
@@ -167,7 +167,67 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
             //StaticCommon.PostOperationLog(operationLog);
 
             return string.Empty;
-     }
+        }
+        // データ更新
+        // in   : M_Productデータ
+        // out  : エラーメッセージ 
+        public string PutProduct(M_Product regProduct)
+        {
+            using (var db = new SalesManagement_DevContext())
+            {
+                M_Product product;
+                try
+                {
+                    product = db.M_Products.Single(x => x.PrID == regProduct.PrID);
+                }
+                catch
+                {
+                    // throw new Exception(Messages.errorNotFoundItem, ex);
+                    // throw new Exception(_cm.GetMessage(110), ex);
+                    return _msc.GetMessage(110);
+                }
+                product.PrID = regProduct.PrID;
+                product.MaID = regProduct.MaID;
+                product.PrName = regProduct.PrName;
+                product.Price = regProduct.Price;
+                product.PrJCode = regProduct.PrJCode;
+                product.PrSafetyStock = regProduct.PrSafetyStock;
+                product.ScID = regProduct.ScID;
+                product.PrModelNumber = regProduct.PrModelNumber;
+                product.PrColor = regProduct.PrColor;
+                product.PrReleaseDate = regProduct.PrReleaseDate;
+                product.PrFlag = regProduct.PrFlag;
+                product.PrMemo = regProduct.PrMemo;
+                //Timestamp = item.Timestamp,
+                //LogData = item.LogData,
+                db.Entry(product).State = EntityState.Modified;
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    // throw new Exception(Messages.errorConflict, ex);
+                    // throw new Exception(_cm.GetMessage(100), ex);
+                    return _msc.GetMessage(100);
+                }
+
+                // ログ出力
+                var operationLog = new OperationLog()
+                {
+                    EventRaisingTime = DateTime.Now,
+                    Operator = _logonUser,
+                    Table = "Product",
+                    Command = "Put",
+                    //Data = ProductLogData(regProduct),
+                    Comments = string.Empty
+                };
+                //StaticCommon.PostOperationLog(operationLog);
+
+                return string.Empty;
+            }
+        }
+
 
 
         // ログデータ作成
