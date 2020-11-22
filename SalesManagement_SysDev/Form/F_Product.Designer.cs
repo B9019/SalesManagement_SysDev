@@ -417,6 +417,7 @@
             this.btn_delete.TabIndex = 143;
             this.btn_delete.Text = "F6　削除";
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_print
             // 
