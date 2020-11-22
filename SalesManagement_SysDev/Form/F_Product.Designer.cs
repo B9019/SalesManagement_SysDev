@@ -477,7 +477,7 @@
             this.dataGridView_Product_regist.Name = "dataGridView_Product_regist";
             this.dataGridView_Product_regist.Size = new System.Drawing.Size(741, 237);
             this.dataGridView_Product_regist.TabIndex = 137;
-            this.dataGridView_Product_regist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Product_regist_CellContentClick);
+            this.dataGridView_Product_regist.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Product_regist_CellDoubleClick);
             // 
             // groupBox2
             // 

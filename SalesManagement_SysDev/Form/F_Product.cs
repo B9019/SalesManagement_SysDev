@@ -850,7 +850,7 @@ namespace SalesManagement_SysDev
         }
 
         //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
-        private void dataGridView_Product_regist_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView_Product_regist_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int id = (int)dataGridView_Product_regist.CurrentRow.Cells[0].Value;
             int id2 = (int)dataGridView_Product_regist.CurrentRow.Cells[1].Value;
@@ -881,6 +881,7 @@ namespace SalesManagement_SysDev
             txt_memo.Text = Convert.ToString(id13);
 
         }
+
     }
 }
 
