@@ -227,6 +227,47 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                 return string.Empty;
             }
         }
+        // データ削除
+        // in       Product : 削除する商品ID
+        public void DeleteProduct(int M_PrID)
+        {
+            M_Product product;
+            using (var db = new SalesManagement_DevContext())
+            {
+                try
+                {
+                    product = db.M_Products.Single(x => x.PrID == M_PrID);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(Messages.errorNotFoundProduct, ex);
+                    // throw new Exception(_cm.GetMessage(110), ex);
+                }
+                db.M_Products.Remove(product);
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (DbUpdateConcurrencyException ex)
+                {
+                    throw new Exception(Messages.errorConflict, ex);
+                    // throw new Exception(_cm.GetMessage(100), ex);
+                }
+
+                // ログ出力
+                var operationLog = new OperationLog()
+                {
+                    EventRaisingTime = DateTime.Now,
+                    Operator = _logonUser,
+                    Table = "Product",
+                    Command = "Delete",
+                    Data = product.PrID.ToString(),
+                    Comments = string.Empty
+                };
+                //StaticCommon.PostOperationLog(operationLog);
+            }
+        }
+
 
 
 

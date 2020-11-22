@@ -677,6 +677,34 @@ namespace SalesManagement_SysDev
             return true;
         }
 
+        // 削除ボタン
+        // 4.3 商品情報削除
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            // データ行番号を取得
+            int PrID = int.Parse(txt_PrID.Text);
+            using (var dcm = new DeleteConfirmForm())
+            {
+                // 確認後、削除実行
+                if (dcm.ShowDialog(this) == DialogResult.OK) Delete(PrID);
+            }
+
+            // 表示データ更新 & 入力クリア
+            RefreshDataGridView();
+        }
+
+        // 削除処理
+        // in       PrID : 削除するPrID
+        private void Delete(int PrID)
+        {
+            // _it.DeletePrID(int.Parse(PrID));
+            _Pr.DeleteProduct(PrID);
+
+            // データ取得&表示
+            dataGridView_Product_regist.DataSource = _Pr.GetDispProducts();
+        }
+
+
 
 
         // 入力クリア

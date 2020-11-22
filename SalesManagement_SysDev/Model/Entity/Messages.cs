@@ -20,6 +20,14 @@ namespace SalesManagement_SysDev.Model.Entity
         public const string necessaryInput = "必須項目です。";
         public const string nullNotAllowed = "空白は無効です。";
 
+        //Product
+        public const string errorNotFoundProduct = "商品情報が見つかりませんでした。";
+
+        // ***** ContentsManagement
+        public const string errorConflict = "更新の競合が報告されました。";
+
+
+
         public int MessagesId { get; set; }
         public int MessagesNo { get; set; }
         public string Message { get; set; }
