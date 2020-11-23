@@ -455,5 +455,9 @@ namespace SalesManagement_SysDev
 
         }
 
+        private void txt_PrReleaseDate_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
