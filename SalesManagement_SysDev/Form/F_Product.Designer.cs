@@ -124,79 +124,79 @@
             // ログイン管理toolStripMenuItem1
             // 
             this.ログイン管理toolStripMenuItem1.Name = "ログイン管理toolStripMenuItem1";
-            this.ログイン管理toolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.ログイン管理toolStripMenuItem1.Size = new System.Drawing.Size(159, 26);
             this.ログイン管理toolStripMenuItem1.Text = "ログイン管理";
             // 
             // 顧客管理ToolStripMenuItem
             // 
             this.顧客管理ToolStripMenuItem.Name = "顧客管理ToolStripMenuItem";
-            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.顧客管理ToolStripMenuItem.Text = "顧客管理";
             // 
             // 商品管理ToolStripMenuItem
             // 
             this.商品管理ToolStripMenuItem.Name = "商品管理ToolStripMenuItem";
-            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.商品管理ToolStripMenuItem.Text = "商品管理";
             // 
             // 受注管理ToolStripMenuItem
             // 
             this.受注管理ToolStripMenuItem.Name = "受注管理ToolStripMenuItem";
-            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.受注管理ToolStripMenuItem.Text = "受注管理";
             // 
             // 注文管理ToolStripMenuItem
             // 
             this.注文管理ToolStripMenuItem.Name = "注文管理ToolStripMenuItem";
-            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.注文管理ToolStripMenuItem.Text = "注文管理";
             // 
             // 入荷管理ToolStripMenuItem
             // 
             this.入荷管理ToolStripMenuItem.Name = "入荷管理ToolStripMenuItem";
-            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.入荷管理ToolStripMenuItem.Text = "入荷管理";
             // 
             // 出荷管理ToolStripMenuItem
             // 
             this.出荷管理ToolStripMenuItem.Name = "出荷管理ToolStripMenuItem";
-            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.出荷管理ToolStripMenuItem.Text = "出荷管理";
             // 
             // 在庫管理ToolStripMenuItem
             // 
             this.在庫管理ToolStripMenuItem.Name = "在庫管理ToolStripMenuItem";
-            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.在庫管理ToolStripMenuItem.Text = "在庫管理";
             // 
             // 入庫管理ToolStripMenuItem
             // 
             this.入庫管理ToolStripMenuItem.Name = "入庫管理ToolStripMenuItem";
-            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.入庫管理ToolStripMenuItem.Text = "入庫管理";
             // 
             // 出庫管理ToolStripMenuItem
             // 
             this.出庫管理ToolStripMenuItem.Name = "出庫管理ToolStripMenuItem";
-            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.出庫管理ToolStripMenuItem.Text = "出庫管理";
             // 
             // 社員管理ToolStripMenuItem
             // 
             this.社員管理ToolStripMenuItem.Name = "社員管理ToolStripMenuItem";
-            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.社員管理ToolStripMenuItem.Text = "社員管理";
             // 
             // 売上管理ToolStripMenuItem
             // 
             this.売上管理ToolStripMenuItem.Name = "売上管理ToolStripMenuItem";
-            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.売上管理ToolStripMenuItem.Text = "売上管理";
             // 
             // 発注管理ToolStripMenuItem
             // 
             this.発注管理ToolStripMenuItem.Name = "発注管理ToolStripMenuItem";
-            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.発注管理ToolStripMenuItem.Text = "発注管理";
             // 
             // groupBox1
@@ -221,9 +221,9 @@
             this.groupBox1.Controls.Add(this.ScID);
             this.groupBox1.ForeColor = System.Drawing.Color.Red;
             this.groupBox1.Location = new System.Drawing.Point(69, 48);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(988, 198);
             this.groupBox1.TabIndex = 145;
             this.groupBox1.TabStop = false;
@@ -232,7 +232,7 @@
             // txt_MaID
             // 
             this.txt_MaID.Location = new System.Drawing.Point(139, 22);
-            this.txt_MaID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MaID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MaID.Name = "txt_MaID";
             this.txt_MaID.Size = new System.Drawing.Size(243, 22);
             this.txt_MaID.TabIndex = 61;
@@ -240,7 +240,7 @@
             // txt_PrID
             // 
             this.txt_PrID.Location = new System.Drawing.Point(139, 54);
-            this.txt_PrID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PrID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_PrID.Name = "txt_PrID";
             this.txt_PrID.Size = new System.Drawing.Size(243, 22);
             this.txt_PrID.TabIndex = 60;
@@ -259,10 +259,11 @@
             // txt_PrColor
             // 
             this.txt_PrColor.Location = new System.Drawing.Point(673, 19);
-            this.txt_PrColor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PrColor.Margin = new System.Windows.Forms.Padding(4);
             this.txt_PrColor.Name = "txt_PrColor";
             this.txt_PrColor.Size = new System.Drawing.Size(243, 22);
             this.txt_PrColor.TabIndex = 114;
+            this.txt_PrColor.TextChanged += new System.EventHandler(this.txt_PrColor_TextChanged);
             // 
             // PrColor
             // 
@@ -278,7 +279,7 @@
             // txt_PrReleaseDate
             // 
             this.txt_PrReleaseDate.Location = new System.Drawing.Point(673, 54);
-            this.txt_PrReleaseDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PrReleaseDate.Margin = new System.Windows.Forms.Padding(4);
             this.txt_PrReleaseDate.Name = "txt_PrReleaseDate";
             this.txt_PrReleaseDate.Size = new System.Drawing.Size(243, 22);
             this.txt_PrReleaseDate.TabIndex = 115;
@@ -286,7 +287,7 @@
             // txt_PrModelNumber
             // 
             this.txt_PrModelNumber.Location = new System.Drawing.Point(139, 151);
-            this.txt_PrModelNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PrModelNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txt_PrModelNumber.Name = "txt_PrModelNumber";
             this.txt_PrModelNumber.Size = new System.Drawing.Size(243, 22);
             this.txt_PrModelNumber.TabIndex = 113;
@@ -305,7 +306,7 @@
             // txt_PrName
             // 
             this.txt_PrName.Location = new System.Drawing.Point(139, 85);
-            this.txt_PrName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PrName.Margin = new System.Windows.Forms.Padding(4);
             this.txt_PrName.Name = "txt_PrName";
             this.txt_PrName.Size = new System.Drawing.Size(243, 22);
             this.txt_PrName.TabIndex = 103;
@@ -324,7 +325,7 @@
             // txt_PrSafetyStock
             // 
             this.txt_PrSafetyStock.Location = new System.Drawing.Point(673, 125);
-            this.txt_PrSafetyStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PrSafetyStock.Margin = new System.Windows.Forms.Padding(4);
             this.txt_PrSafetyStock.Name = "txt_PrSafetyStock";
             this.txt_PrSafetyStock.Size = new System.Drawing.Size(243, 22);
             this.txt_PrSafetyStock.TabIndex = 112;
@@ -354,7 +355,7 @@
             // txt_ScID
             // 
             this.txt_ScID.Location = new System.Drawing.Point(139, 116);
-            this.txt_ScID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ScID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ScID.Name = "txt_ScID";
             this.txt_ScID.Size = new System.Drawing.Size(243, 22);
             this.txt_ScID.TabIndex = 105;
@@ -362,7 +363,7 @@
             // txt_Price
             // 
             this.txt_Price.Location = new System.Drawing.Point(673, 86);
-            this.txt_Price.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Price.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.Size = new System.Drawing.Size(243, 22);
             this.txt_Price.TabIndex = 111;
@@ -404,7 +405,7 @@
             // 
             this.chk_PrHidden.AutoSize = true;
             this.chk_PrHidden.Location = new System.Drawing.Point(137, 111);
-            this.chk_PrHidden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chk_PrHidden.Margin = new System.Windows.Forms.Padding(4);
             this.chk_PrHidden.Name = "chk_PrHidden";
             this.chk_PrHidden.Size = new System.Drawing.Size(18, 17);
             this.chk_PrHidden.TabIndex = 88;
@@ -425,7 +426,7 @@
             // 
             this.btn_clear.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_clear.Location = new System.Drawing.Point(823, 781);
-            this.btn_clear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_clear.Margin = new System.Windows.Forms.Padding(4);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(115, 29);
             this.btn_clear.TabIndex = 144;
@@ -436,7 +437,7 @@
             // 
             this.btn_delete.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_delete.Location = new System.Drawing.Point(715, 781);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(100, 29);
             this.btn_delete.TabIndex = 143;
@@ -448,7 +449,7 @@
             // 
             this.btn_print.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_print.Location = new System.Drawing.Point(607, 781);
-            this.btn_print.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_print.Margin = new System.Windows.Forms.Padding(4);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(100, 29);
             this.btn_print.TabIndex = 142;
@@ -459,7 +460,7 @@
             // 
             this.btn_all.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_all.Location = new System.Drawing.Point(485, 781);
-            this.btn_all.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_all.Margin = new System.Windows.Forms.Padding(4);
             this.btn_all.Name = "btn_all";
             this.btn_all.Size = new System.Drawing.Size(113, 29);
             this.btn_all.TabIndex = 141;
@@ -471,7 +472,7 @@
             // 
             this.btn_update.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_update.Location = new System.Drawing.Point(377, 781);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(4);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(100, 29);
             this.btn_update.TabIndex = 140;
@@ -483,7 +484,7 @@
             // 
             this.btn_regist.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_regist.Location = new System.Drawing.Point(269, 781);
-            this.btn_regist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_regist.Margin = new System.Windows.Forms.Padding(4);
             this.btn_regist.Name = "btn_regist";
             this.btn_regist.Size = new System.Drawing.Size(100, 29);
             this.btn_regist.TabIndex = 139;
@@ -495,7 +496,7 @@
             // 
             this.btn_search.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_search.Location = new System.Drawing.Point(160, 781);
-            this.btn_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(4);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(100, 29);
             this.btn_search.TabIndex = 138;
@@ -505,7 +506,7 @@
             // dataGridView_Product_regist
             // 
             this.dataGridView_Product_regist.Location = new System.Drawing.Point(71, 450);
-            this.dataGridView_Product_regist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView_Product_regist.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_Product_regist.Name = "dataGridView_Product_regist";
             this.dataGridView_Product_regist.Size = new System.Drawing.Size(988, 296);
             this.dataGridView_Product_regist.TabIndex = 137;
@@ -524,9 +525,9 @@
             this.groupBox2.Controls.Add(this.PrJCode);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Location = new System.Drawing.Point(71, 252);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(987, 179);
             this.groupBox2.TabIndex = 146;
             this.groupBox2.TabStop = false;
@@ -547,7 +548,7 @@
             // txt_memo
             // 
             this.txt_memo.Location = new System.Drawing.Point(672, 21);
-            this.txt_memo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_memo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_memo.Multiline = true;
             this.txt_memo.Name = "txt_memo";
             this.txt_memo.Size = new System.Drawing.Size(243, 56);
@@ -568,7 +569,7 @@
             // txt_PrHidden
             // 
             this.txt_PrHidden.Location = new System.Drawing.Point(672, 114);
-            this.txt_PrHidden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PrHidden.Margin = new System.Windows.Forms.Padding(4);
             this.txt_PrHidden.Multiline = true;
             this.txt_PrHidden.Name = "txt_PrHidden";
             this.txt_PrHidden.Size = new System.Drawing.Size(243, 48);
@@ -577,7 +578,7 @@
             // txt_PrJCode
             // 
             this.txt_PrJCode.Location = new System.Drawing.Point(137, 22);
-            this.txt_PrJCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PrJCode.Margin = new System.Windows.Forms.Padding(4);
             this.txt_PrJCode.Name = "txt_PrJCode";
             this.txt_PrJCode.Size = new System.Drawing.Size(243, 22);
             this.txt_PrJCode.TabIndex = 104;
@@ -621,7 +622,7 @@
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.dataGridView_Product_regist);
             this.Controls.Add(this.menuStrip2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "F_Product";
             this.Text = "販売在庫管理システム　商品情報管理画面";
             this.Load += new System.EventHandler(this.F_Product_Load);

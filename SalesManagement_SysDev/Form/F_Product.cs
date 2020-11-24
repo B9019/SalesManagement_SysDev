@@ -910,6 +910,10 @@ namespace SalesManagement_SysDev
 
         }
 
+        private void txt_PrColor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
