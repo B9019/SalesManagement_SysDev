@@ -71,7 +71,7 @@
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_regist = new System.Windows.Forms.Button();
             this.btn_search = new System.Windows.Forms.Button();
-            this.dataGridView_Product_regist = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Product = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_memo = new System.Windows.Forms.TextBox();
@@ -82,7 +82,7 @@
             this.PrJCode = new System.Windows.Forms.Label();
             this.menuStrip2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -473,13 +473,13 @@
             this.btn_search.UseVisualStyleBackColor = false;
             this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
-            // dataGridView_Product_regist
+            // dataGridView_Product
             // 
-            this.dataGridView_Product_regist.Location = new System.Drawing.Point(53, 360);
-            this.dataGridView_Product_regist.Name = "dataGridView_Product_regist";
-            this.dataGridView_Product_regist.Size = new System.Drawing.Size(741, 237);
-            this.dataGridView_Product_regist.TabIndex = 137;
-            this.dataGridView_Product_regist.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Product_regist_CellDoubleClick);
+            this.dataGridView_Product.Location = new System.Drawing.Point(53, 360);
+            this.dataGridView_Product.Name = "dataGridView_Product";
+            this.dataGridView_Product.Size = new System.Drawing.Size(741, 237);
+            this.dataGridView_Product.TabIndex = 137;
+            this.dataGridView_Product.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Product_regist_CellDoubleClick);
             // 
             // groupBox2
             // 
@@ -580,7 +580,7 @@
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_regist);
             this.Controls.Add(this.btn_search);
-            this.Controls.Add(this.dataGridView_Product_regist);
+            this.Controls.Add(this.dataGridView_Product);
             this.Controls.Add(this.menuStrip2);
             this.Name = "F_Product";
             this.Text = "販売在庫管理システム　商品情報管理画面";
@@ -589,7 +589,7 @@
             this.menuStrip2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -628,7 +628,7 @@
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_regist;
         private System.Windows.Forms.Button btn_search;
-        private System.Windows.Forms.DataGridView dataGridView_Product_regist;
+        private System.Windows.Forms.DataGridView dataGridView_Product;
         private System.Windows.Forms.TextBox txt_PrColor;
         private System.Windows.Forms.Label PrColor;
         private System.Windows.Forms.TextBox txt_PrReleaseDate;

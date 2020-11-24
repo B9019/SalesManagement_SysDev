@@ -12,7 +12,6 @@ using SalesManagement_SysDev.Model.Entity;
 using SalesManagement_SysDev.Model.ContentsManagement;
 using SalesManagement_SysDev.Model.Entity.Disp;
 using System.Data.SqlClient;
-using System.Data.Entity.Core.Common.CommandTrees;
 
 namespace SalesManagement_SysDev
 {
@@ -703,7 +702,7 @@ namespace SalesManagement_SysDev
             _Pr.DeleteProduct(PrID);
 
             // データ取得&表示
-            dataGridView_Product_regist.DataSource = _Pr.GetDispProducts();
+            dataGridView_Product.DataSource = _Pr.GetDispProducts();
         }
 
 
@@ -713,10 +712,10 @@ namespace SalesManagement_SysDev
         internal void ClearInput()
         {
             // 表示モード設定
-            dataGridView_Product_regist.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView_Product.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             // データグリッド選択解除
-            dataGridView_Product_regist.ClearSelection();
+            dataGridView_Product.ClearSelection();
 
             // テキストボックス＆コンボボックスクリア
             txt_MaID.Clear();
@@ -749,17 +748,17 @@ namespace SalesManagement_SysDev
         private void RefreshDataGridView()
         {
             // スクロール位置取得
-            int ScrollPosition = dataGridView_Product_regist.FirstDisplayedScrollingRowIndex;
+            int ScrollPosition = dataGridView_Product.FirstDisplayedScrollingRowIndex;
 
             // データ取得&表示（データバインド）
             _dispProductPaging = _Pr.GetDispProducts();
-            dataGridView_Product_regist.DataSource = _dispProductPaging;
+            dataGridView_Product.DataSource = _dispProductPaging;
 
             // 全データ数取得
             _recordCount = _dispProductPaging.Count();
 
             // スクロール位置セット
-            if (0 < ScrollPosition) dataGridView_Product_regist.FirstDisplayedScrollingRowIndex = ScrollPosition;
+            if (0 < ScrollPosition) dataGridView_Product.FirstDisplayedScrollingRowIndex = ScrollPosition;
 
             // 入力クリア
             ClearInput();
@@ -876,25 +875,48 @@ namespace SalesManagement_SysDev
 
         private void btn_all_Click(object sender, EventArgs e)
         {
-            RefreshDataGridView();
+            fncAllSelect();
         }
+        private void fncAllSelect()
+        {
+            // データ取得&表示（データバインド）
+            _dispProductPaging = _Pr.GetDispProducts();
+            dataGridView_Product.DataSource = _dispProductPaging;
+
+            ////全データの表示
+            //dataGridView_Product.Rows.Clear();
+            //try
+            //{
+            //    var context = new SalesManagement_DevContext();
+            //    foreach (var p in context.M_Products)
+            //    {
+            //        dataGridView_Product.Rows.Add(p.PrID, p.MaID, p.PrName, p.Price,p.PrJCode,p.);
+            //    }
+            //    context.Dispose();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+        }
+
 
         //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
         private void dataGridView_Product_regist_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int id = (int)dataGridView_Product_regist.CurrentRow.Cells[0].Value;
-            int id2 = (int)dataGridView_Product_regist.CurrentRow.Cells[1].Value;
-            string id3 = (string)dataGridView_Product_regist.CurrentRow.Cells[2].Value;
-            int id4 = (int)dataGridView_Product_regist.CurrentRow.Cells[3].Value;
-            string id5 = (string)dataGridView_Product_regist.CurrentRow.Cells[4].Value;
-            int id6 = (int)dataGridView_Product_regist.CurrentRow.Cells[5].Value;
-            int id7 = (int)dataGridView_Product_regist.CurrentRow.Cells[6].Value;
-            int id8 = (int)dataGridView_Product_regist.CurrentRow.Cells[7].Value;
-            string id9 = (string)dataGridView_Product_regist.CurrentRow.Cells[8].Value;
-            DateTime id10 = (DateTime)dataGridView_Product_regist.CurrentRow.Cells[9].Value;
-            int id11 = (int)dataGridView_Product_regist.CurrentRow.Cells[10].Value;
-            string id12 = (string)dataGridView_Product_regist.CurrentRow.Cells[11].Value;
-            string id13 = (string)dataGridView_Product_regist.CurrentRow.Cells[12].Value;
+            int id = (int)dataGridView_Product.CurrentRow.Cells[0].Value;
+            int id2 = (int)dataGridView_Product.CurrentRow.Cells[1].Value;
+            string id3 = (string)dataGridView_Product.CurrentRow.Cells[2].Value;
+            int id4 = (int)dataGridView_Product.CurrentRow.Cells[3].Value;
+            string id5 = (string)dataGridView_Product.CurrentRow.Cells[4].Value;
+            int id6 = (int)dataGridView_Product.CurrentRow.Cells[5].Value;
+            int id7 = (int)dataGridView_Product.CurrentRow.Cells[6].Value;
+            int id8 = (int)dataGridView_Product.CurrentRow.Cells[7].Value;
+            string id9 = (string)dataGridView_Product.CurrentRow.Cells[8].Value;
+            DateTime id10 = (DateTime)dataGridView_Product.CurrentRow.Cells[9].Value;
+            int id11 = (int)dataGridView_Product.CurrentRow.Cells[10].Value;
+            string id12 = (string)dataGridView_Product.CurrentRow.Cells[11].Value;
+            string id13 = (string)dataGridView_Product.CurrentRow.Cells[12].Value;
 
             txt_PrID.Text = Convert.ToString(id);
             txt_MaID.Text = Convert.ToString(id2);
@@ -917,7 +939,7 @@ namespace SalesManagement_SysDev
             //接続先DBの情報をセット
             SqlConnection conn = new SqlConnection();
             SqlCommand command = new SqlCommand();
-            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=M__Product;";
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=M__Product;User Id=sa;Password=N'Fwy|Yfmmirzl|u,tesyv{rj2msFT7_&#$!~<#R+gnwcoayia';";
 
             //実行するSQL文の指定
             command.CommandText = "@SELECT * FROM M_Product WHERE ";
@@ -926,6 +948,8 @@ namespace SalesManagement_SysDev
             //sql文のwhere句の接続に使う
             string AND = "";
             //検索条件をテキストボックスから抽出し、SQL文をセット
+            //　日本語可　：SqlDbType.NVarChar
+            //　日本語不可：SqlDbType.VarChar
             for (int count = 0; count < 11; ++count)
             {
                 if (PrID.Text != "" && count == 0)
@@ -950,7 +974,7 @@ namespace SalesManagement_SysDev
                 }
                 else if (PrName.Text != "" && count == 2)
                 {
-                    command.Parameters.Add("@PrName", SqlDbType.VarChar);
+                    command.Parameters.Add("@PrName", SqlDbType.NVarChar);
                     command.Parameters["@PrName"].Value = "%" + PrName.Text + "%";
                     //if ("@PrID" != null || "@MaID" != null)
                     //{
@@ -1014,7 +1038,7 @@ namespace SalesManagement_SysDev
                 }
                 else if (PrColor.Text != "" && count == 8)
                 {
-                    command.Parameters.Add("@PrColor", SqlDbType.VarChar);
+                    command.Parameters.Add("@PrColor", SqlDbType.NVarChar);
                     command.Parameters["@PrColor"].Value = "%" + PrColor.Text + "%";
                     //実行するSQL文の条件追加
                     command.CommandText = command + AND + "PrColor LIKE @PrColor ";
@@ -1030,7 +1054,7 @@ namespace SalesManagement_SysDev
                 }
                 else if (PrHidden.Text != "" && count == 10)
                 {
-                    command.Parameters.Add("@PrHidden", SqlDbType.VarChar);
+                    command.Parameters.Add("@PrHidden", SqlDbType.NVarChar);
                     command.Parameters["@PrHidden"].Value = "%" + PrHidden.Text + "%";
                     //実行するSQL文の条件追加
                     command.CommandText = command + AND + "PrHidden LIKE @PrHidden ";
@@ -1052,8 +1076,17 @@ namespace SalesManagement_SysDev
                 //SQL文の実行、データが  readerに格納される
                 SqlDataReader reader = command.ExecuteReader();
 
-                if()
+                if(reader.HasRows)
                 {
+                    while(reader.Read())
+                    {
+                        ReadSingleRow((IDataRecord)reader);
+                        //foreach (var r in reader)
+                        //{
+                        //    dataGridView_Product.Rows.Add(r.PrID, r.MaID, r.PrName, p.Price, p.PrJCode, p.);
+                        //}
+
+                    }
 
                 }
 
@@ -1065,6 +1098,13 @@ namespace SalesManagement_SysDev
             }
 
         }
+        public void ReadSingleRow(IDataRecord record)
+        {
+            dataGridView_Product.Rows.Add(String.Format("{0}, {1},{2},{3},{4}.{5},{6},{7},{8},{9},{10},{11}",
+                record[0], record[1], record[2], record[3], record[4], record[5], record[6],
+                record[7], record[8], record[9], record[10], record[11]));
+        }
+
     }
 }
 
