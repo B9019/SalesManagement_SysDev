@@ -33,7 +33,7 @@ namespace SalesManagement_SysDev
         //// メッセージ処理モジュール
         private Messages _ms = new Messages();
 
-        //// データベース処理モジュール（M_Client）
+        //// データベース処理モジュール（M_Division）
         private M_ClientContents _Cl = new M_ClientContents();
 
         // ***** プロパティ定義
@@ -70,10 +70,11 @@ namespace SalesManagement_SysDev
             InitializeComponent();
         }
 
-        private void F_Client_Load(object sender, EventArgs e)
+        private void F_Client_Load_1(object sender, EventArgs e)
         {
 
         }
+
 
         // 登録ボタン
         // 3.1顧客情報登録
@@ -281,7 +282,7 @@ namespace SalesManagement_SysDev
                 txt_ClHidden.Focus();
                 return false;
             }
-        
+
             return true;
         }
         //
@@ -833,7 +834,6 @@ namespace SalesManagement_SysDev
             form_hattyu.ShowDialog();
 
         }
-
 
     }
 }
