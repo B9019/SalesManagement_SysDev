@@ -44,9 +44,12 @@
             this.売上管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.発注管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_ClHidden = new System.Windows.Forms.TextBox();
+            this.lbl_ClHidden = new System.Windows.Forms.Label();
             this.txt_memo = new System.Windows.Forms.TextBox();
+            this.chk_hide_FLG = new System.Windows.Forms.CheckBox();
             this.lbl_memo = new System.Windows.Forms.Label();
-            this.dataGridView_Product_regist = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Client = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbl_ClFAX = new System.Windows.Forms.Label();
             this.lbl_ClPostal = new System.Windows.Forms.Label();
@@ -69,12 +72,9 @@
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_regist = new System.Windows.Forms.Button();
             this.btn_search = new System.Windows.Forms.Button();
-            this.txt_ClHidden = new System.Windows.Forms.TextBox();
-            this.lbl_ClHidden = new System.Windows.Forms.Label();
-            this.chk_hide_FLG = new System.Windows.Forms.CheckBox();
             this.menuStrip2.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Client)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,79 +116,79 @@
             // ログイン管理toolStripMenuItem1
             // 
             this.ログイン管理toolStripMenuItem1.Name = "ログイン管理toolStripMenuItem1";
-            this.ログイン管理toolStripMenuItem1.Size = new System.Drawing.Size(159, 26);
+            this.ログイン管理toolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
             this.ログイン管理toolStripMenuItem1.Text = "ログイン管理";
             // 
             // 顧客管理ToolStripMenuItem
             // 
             this.顧客管理ToolStripMenuItem.Name = "顧客管理ToolStripMenuItem";
-            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.顧客管理ToolStripMenuItem.Text = "顧客管理";
             // 
             // 商品管理ToolStripMenuItem
             // 
             this.商品管理ToolStripMenuItem.Name = "商品管理ToolStripMenuItem";
-            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.商品管理ToolStripMenuItem.Text = "商品管理";
             // 
             // 受注管理ToolStripMenuItem
             // 
             this.受注管理ToolStripMenuItem.Name = "受注管理ToolStripMenuItem";
-            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.受注管理ToolStripMenuItem.Text = "受注管理";
             // 
             // 注文管理ToolStripMenuItem
             // 
             this.注文管理ToolStripMenuItem.Name = "注文管理ToolStripMenuItem";
-            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.注文管理ToolStripMenuItem.Text = "注文管理";
             // 
             // 入荷管理ToolStripMenuItem
             // 
             this.入荷管理ToolStripMenuItem.Name = "入荷管理ToolStripMenuItem";
-            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.入荷管理ToolStripMenuItem.Text = "入荷管理";
             // 
             // 出荷管理ToolStripMenuItem
             // 
             this.出荷管理ToolStripMenuItem.Name = "出荷管理ToolStripMenuItem";
-            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.出荷管理ToolStripMenuItem.Text = "出荷管理";
             // 
             // 在庫管理ToolStripMenuItem
             // 
             this.在庫管理ToolStripMenuItem.Name = "在庫管理ToolStripMenuItem";
-            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.在庫管理ToolStripMenuItem.Text = "在庫管理";
             // 
             // 入庫管理ToolStripMenuItem
             // 
             this.入庫管理ToolStripMenuItem.Name = "入庫管理ToolStripMenuItem";
-            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.入庫管理ToolStripMenuItem.Text = "入庫管理";
             // 
             // 出庫管理ToolStripMenuItem
             // 
             this.出庫管理ToolStripMenuItem.Name = "出庫管理ToolStripMenuItem";
-            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.出庫管理ToolStripMenuItem.Text = "出庫管理";
             // 
             // 社員管理ToolStripMenuItem
             // 
             this.社員管理ToolStripMenuItem.Name = "社員管理ToolStripMenuItem";
-            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.社員管理ToolStripMenuItem.Text = "社員管理";
             // 
             // 売上管理ToolStripMenuItem
             // 
             this.売上管理ToolStripMenuItem.Name = "売上管理ToolStripMenuItem";
-            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.売上管理ToolStripMenuItem.Text = "売上管理";
             // 
             // 発注管理ToolStripMenuItem
             // 
             this.発注管理ToolStripMenuItem.Name = "発注管理ToolStripMenuItem";
-            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.発注管理ToolStripMenuItem.Text = "発注管理";
             // 
             // groupBox2
@@ -208,6 +208,25 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "任意項目";
             // 
+            // txt_ClHidden
+            // 
+            this.txt_ClHidden.Location = new System.Drawing.Point(109, 83);
+            this.txt_ClHidden.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_ClHidden.Multiline = true;
+            this.txt_ClHidden.Name = "txt_ClHidden";
+            this.txt_ClHidden.Size = new System.Drawing.Size(379, 22);
+            this.txt_ClHidden.TabIndex = 77;
+            // 
+            // lbl_ClHidden
+            // 
+            this.lbl_ClHidden.AutoSize = true;
+            this.lbl_ClHidden.ForeColor = System.Drawing.Color.White;
+            this.lbl_ClHidden.Location = new System.Drawing.Point(15, 86);
+            this.lbl_ClHidden.Name = "lbl_ClHidden";
+            this.lbl_ClHidden.Size = new System.Drawing.Size(82, 15);
+            this.lbl_ClHidden.TabIndex = 63;
+            this.lbl_ClHidden.Text = "非表示理由";
+            // 
             // txt_memo
             // 
             this.txt_memo.Location = new System.Drawing.Point(109, 34);
@@ -216,6 +235,17 @@
             this.txt_memo.Name = "txt_memo";
             this.txt_memo.Size = new System.Drawing.Size(379, 22);
             this.txt_memo.TabIndex = 70;
+            // 
+            // chk_hide_FLG
+            // 
+            this.chk_hide_FLG.AutoSize = true;
+            this.chk_hide_FLG.Location = new System.Drawing.Point(635, 33);
+            this.chk_hide_FLG.Margin = new System.Windows.Forms.Padding(4);
+            this.chk_hide_FLG.Name = "chk_hide_FLG";
+            this.chk_hide_FLG.Size = new System.Drawing.Size(106, 19);
+            this.chk_hide_FLG.TabIndex = 0;
+            this.chk_hide_FLG.Text = "非表示フラグ";
+            this.chk_hide_FLG.UseVisualStyleBackColor = true;
             // 
             // lbl_memo
             // 
@@ -228,13 +258,13 @@
             this.lbl_memo.TabIndex = 70;
             this.lbl_memo.Text = "備考(30文字)";
             // 
-            // dataGridView_Product_regist
+            // dataGridView_Client
             // 
-            this.dataGridView_Product_regist.Location = new System.Drawing.Point(34, 404);
-            this.dataGridView_Product_regist.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView_Product_regist.Name = "dataGridView_Product_regist";
-            this.dataGridView_Product_regist.Size = new System.Drawing.Size(968, 234);
-            this.dataGridView_Product_regist.TabIndex = 85;
+            this.dataGridView_Client.Location = new System.Drawing.Point(34, 404);
+            this.dataGridView_Client.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView_Client.Name = "dataGridView_Client";
+            this.dataGridView_Client.Size = new System.Drawing.Size(968, 234);
+            this.dataGridView_Client.TabIndex = 85;
             // 
             // groupBox1
             // 
@@ -453,6 +483,7 @@
             this.btn_regist.TabIndex = 146;
             this.btn_regist.Text = "F2　登録";
             this.btn_regist.UseVisualStyleBackColor = false;
+            this.btn_regist.Click += new System.EventHandler(this.btn_regist_Click);
             // 
             // btn_search
             // 
@@ -464,36 +495,6 @@
             this.btn_search.TabIndex = 145;
             this.btn_search.Text = "F1　検索";
             this.btn_search.UseVisualStyleBackColor = false;
-            // 
-            // txt_ClHidden
-            // 
-            this.txt_ClHidden.Location = new System.Drawing.Point(109, 83);
-            this.txt_ClHidden.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_ClHidden.Multiline = true;
-            this.txt_ClHidden.Name = "txt_ClHidden";
-            this.txt_ClHidden.Size = new System.Drawing.Size(379, 22);
-            this.txt_ClHidden.TabIndex = 77;
-            // 
-            // lbl_ClHidden
-            // 
-            this.lbl_ClHidden.AutoSize = true;
-            this.lbl_ClHidden.ForeColor = System.Drawing.Color.White;
-            this.lbl_ClHidden.Location = new System.Drawing.Point(15, 86);
-            this.lbl_ClHidden.Name = "lbl_ClHidden";
-            this.lbl_ClHidden.Size = new System.Drawing.Size(82, 15);
-            this.lbl_ClHidden.TabIndex = 63;
-            this.lbl_ClHidden.Text = "非表示理由";
-            // 
-            // chk_hide_FLG
-            // 
-            this.chk_hide_FLG.AutoSize = true;
-            this.chk_hide_FLG.Location = new System.Drawing.Point(635, 33);
-            this.chk_hide_FLG.Margin = new System.Windows.Forms.Padding(4);
-            this.chk_hide_FLG.Name = "chk_hide_FLG";
-            this.chk_hide_FLG.Size = new System.Drawing.Size(106, 19);
-            this.chk_hide_FLG.TabIndex = 0;
-            this.chk_hide_FLG.Text = "非表示フラグ";
-            this.chk_hide_FLG.UseVisualStyleBackColor = true;
             // 
             // F_Client
             // 
@@ -509,16 +510,17 @@
             this.Controls.Add(this.btn_regist);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.dataGridView_Product_regist);
+            this.Controls.Add(this.dataGridView_Client);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip2);
             this.Name = "F_Client";
             this.Text = "販売在庫管理システム　顧客情報管理画面";
+            this.Load += new System.EventHandler(this.F_Client_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Client)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -546,7 +548,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txt_memo;
         private System.Windows.Forms.Label lbl_memo;
-        private System.Windows.Forms.DataGridView dataGridView_Product_regist;
+        private System.Windows.Forms.DataGridView dataGridView_Client;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lbl_ClFAX;
         private System.Windows.Forms.Label lbl_ClPostal;

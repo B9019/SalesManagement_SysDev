@@ -334,8 +334,10 @@
     <Compile Include="Model\Constants.cs" />
     <Compile Include="Model\ContentsManagement\Common\MessageCommon.cs" />
     <Compile Include="Model\ContentsManagement\Common\StaticCommon.cs" />
+    <Compile Include="Model\ContentsManagement\M_ClientContents.cs" />
     <Compile Include="Model\ContentsManagement\M_ProductContents.cs" />
     <Compile Include="Model\ContentsManagement\StaffContents.cs" />
+    <Compile Include="Model\Entity\Disp\M_DispClient.cs" />
     <Compile Include="Model\Entity\Disp\M_DispProduct.cs" />
     <Compile Include="Model\Entity\Messages.cs" />
     <Compile Include="Model\Entity\OperationLog.cs" />

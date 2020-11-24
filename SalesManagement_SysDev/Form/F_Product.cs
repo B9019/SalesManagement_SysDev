@@ -252,7 +252,7 @@ namespace SalesManagement_SysDev
 
             /////文字数チェック/////
             // メーカID
-            if (txt_MaID.TextLength > 50)
+            if (txt_MaID.TextLength > 4)
             {
                 MessageBox.Show("メーカIDは4文字以下です");
                 MaID.Focus();
@@ -910,6 +910,15 @@ namespace SalesManagement_SysDev
 
         }
 
+        private void ログイン管理toolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 顧客管理ToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
