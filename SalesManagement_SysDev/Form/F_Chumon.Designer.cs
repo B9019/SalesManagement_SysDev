@@ -464,7 +464,6 @@
             this.Controls.Add(this.menuStrip2);
             this.Name = "F_Chumon";
             this.Text = "販売在庫管理システム　注文情報管理システム";
-            this.Load += new System.EventHandler(this.F_Chumon_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
