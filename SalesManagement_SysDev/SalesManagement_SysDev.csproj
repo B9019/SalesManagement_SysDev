@@ -392,6 +392,9 @@
     <EmbeddedResource Include="Form\F_login_regist.resx">
       <DependentUpon>F_login_regist.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\F_Order.resx">
+      <DependentUpon>F_Order.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Order_Delete.resx">
       <DependentUpon>F_Order_Delete.cs</DependentUpon>
     </EmbeddedResource>
