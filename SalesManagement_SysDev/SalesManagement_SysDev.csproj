@@ -421,6 +421,9 @@
     <EmbeddedResource Include="Form\F_Product_update.resx">
       <DependentUpon>F_Product_update.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\F_Stock.resx">
+      <DependentUpon>F_Stock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Stock_search.resx">
       <DependentUpon>F_Stock_search.cs</DependentUpon>
     </EmbeddedResource>
