@@ -56,13 +56,13 @@ namespace SalesManagement_SysDev
         private int _pageSizePaging;                                        // １ページ表示データ行数
         private int _currentPage;                                           // 現在のページ
         private int _recordNo;                                              // ページ先頭位置のデータ（スタートデータ）
-        private IEnumerable<M_DispProduct> _dispProductPaging;            // 表示用データ
+        private IEnumerable<M_DispClient> _dispClientPaging;            // 表示用データ
 
         // 印刷
         private int _pageCountPrinting;                                     // 全印刷ページ数
         private int _pageNumber = 0;                                        // 印刷ページ番号
         private int _pageSizePrinting;                                      // １ページ印刷データ行数
-        private List<M_DispProduct> _dispProductPrinting;                 // 印刷用データ
+        private List<M_DispClient> _dispClientPrinting;                 // 印刷用データ
 
 
         public F_Client()
@@ -333,19 +333,20 @@ namespace SalesManagement_SysDev
 
         }
         // 更新ボタン
-        // 4.2 商品情報更新
+        // 3.2 顧客情報更新
         private void btn_update_Click(object sender, EventArgs e)
         {
-            // 4.2.1 妥当な商品データ取得
+            // 3.2.1 妥当な顧客データ取得
             if (!GetValidDataAtUpdate()) return;
 
-            // 4.2.2 商品情報作成
-            var regProduct = GenerateDataAtUpdate();
+            // 3.2.2 顧客情報作成
+            var regClient = GenerateDataAtUpdate();
 
-            // 4.2.3 商品情報更新
-            ProductUpdate(regProduct);
+            // 3.2.3 顧客情報更新
+            ClientUpdate(regClient);
 
         }
+
         //
         //
         // 5.3.2.1 妥当な商品データ取得（更新）
@@ -589,22 +590,6 @@ namespace SalesManagement_SysDev
             return true;
         }
 
-        // 削除ボタン
-        // 3.3 顧客情報削除
-        private void btn_delete_Click(object sender, EventArgs e)
-        {
-            // データ行番号を取得
-            int ClID = int.Parse(txt_ClID.Text);
-            using (var dcm = new DeleteConfirmForm())
-            {
-                // 確認後、削除実行
-                if (dcm.ShowDialog(this) == DialogResult.OK) Delete(ClID);
-            }
-
-            // 表示データ更新 & 入力クリア
-            RefreshDataGridView();
-        }
-
         // 削除処理
         // in       ClID : 削除するClID
         private void Delete(int ClID)
@@ -614,6 +599,18 @@ namespace SalesManagement_SysDev
 
             // データ取得&表示
             dataGridView_Client.DataSource = _Cl.GetDispClients();
+        }
+
+        //一覧表示
+        private void btn_all_Click(object sender, EventArgs e)
+        {
+            AllDataGridView();
+        }
+
+        //入力クリア処理
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            ClearInput();
         }
 
 
@@ -659,10 +656,10 @@ namespace SalesManagement_SysDev
 
             // データ取得&表示（データバインド）
             _dispClientPaging = _Cl.GetDispClients();
-            dataGridView_Client.DataSource = _dispProductPaging;
+            dataGridView_Client.DataSource = _dispClientPaging;
 
             // 全データ数取得
-            _recordCount = _dispProductPaging.Count();
+            _recordCount = _dispClientPaging.Count();
 
             // スクロール位置セット
             if (0 < ScrollPosition) dataGridView_Client.FirstDisplayedScrollingRowIndex = ScrollPosition;
@@ -674,6 +671,27 @@ namespace SalesManagement_SysDev
             ClearPaging();
 
         }
+        // 一覧表示（テキストクリアなし）
+        private void AllDataGridView()
+        {
+            // スクロール位置取得
+            int ScrollPosition = dataGridView_Client.FirstDisplayedScrollingRowIndex;
+
+            // データ取得&表示（データバインド）
+            _dispClientPaging = _Cl.GetDispClients();
+            dataGridView_Client.DataSource = _dispClientPaging;
+
+            // 全データ数取得
+            _recordCount = _dispClientPaging.Count();
+
+            // スクロール位置セット
+            if (0 < ScrollPosition) dataGridView_Client.FirstDisplayedScrollingRowIndex = ScrollPosition;
+
+            // ページング初期化
+            ClearPaging();
+
+        }
+
         // ページング初期化
         private void ClearPaging()
         {
@@ -686,6 +704,134 @@ namespace SalesManagement_SysDev
             // 表示ページ＆ページトップデータ初期化
             _currentPage = 1;
             _recordNo = 0;
+        }
+
+        // 削除ボタン
+        // 3.3 顧客情報削除
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            // データ行番号を取得
+            int ClID = int.Parse(txt_ClID.Text);
+            using (var dcm = new DeleteConfirmForm())
+            {
+                // 確認後、削除実行
+                if (dcm.ShowDialog(this) == DialogResult.OK) Delete(ClID);
+            }
+
+            // 表示データ更新 & 入力クリア
+            RefreshDataGridView();
+        }
+
+        //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
+        private void dataGridView_Client_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = (int)dataGridView_Client.CurrentRow.Cells[0].Value;
+            int id2 = (int)dataGridView_Client.CurrentRow.Cells[1].Value;
+            string id3 = (string)dataGridView_Client.CurrentRow.Cells[2].Value;
+            string id4 = (string)dataGridView_Client.CurrentRow.Cells[3].Value;
+            string id5 = (string)dataGridView_Client.CurrentRow.Cells[4].Value;
+            int id6 = (int)dataGridView_Client.CurrentRow.Cells[5].Value;
+            string id7 = (string)dataGridView_Client.CurrentRow.Cells[6].Value;
+            int id8 = (int)dataGridView_Client.CurrentRow.Cells[7].Value;
+            string id9 = (string)dataGridView_Client.CurrentRow.Cells[8].Value;
+
+            txt_ClID.Text = Convert.ToString(id);
+            txt_SoID.Text = Convert.ToString(id2);
+            txt_ClName.Text = Convert.ToString(id3);
+            txt_ClAddress.Text = Convert.ToString(id4);
+            txt_ClPhone.Text = Convert.ToString(id5);
+            txt_ClPostal.Text = Convert.ToString(id6);
+            txt_ClFAX.Text = Convert.ToString(id7);
+            chk_ClFlag.Checked = Convert.ToBoolean(id8);
+            txt_ClHidden.Text = Convert.ToString(id9);
+
+        }
+        private void ログイン管理toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            F_login form_login = new F_login();
+            form_login.ShowDialog();
+        }
+
+        private void 顧客管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Client form_client = new F_Client();
+            form_client.ShowDialog();
+        }
+
+        private void 商品管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Product form_product = new F_Product();
+            form_product.ShowDialog();
+
+        }
+
+        private void 受注管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Order form_order = new F_Order();
+            form_order.ShowDialog();
+
+        }
+
+        private void 注文管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Chumon form_chumon = new F_Chumon();
+            form_chumon.ShowDialog();
+
+        }
+
+        private void 入荷管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Arrival form_arrival = new F_Arrival();
+            form_arrival.ShowDialog();
+
+        }
+
+        private void 出荷管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Shipment form_shipment = new F_Shipment();
+            form_shipment.ShowDialog();
+
+        }
+
+        private void 在庫管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Stock form_stock = new F_Stock();
+            form_stock.ShowDialog();
+
+        }
+
+        private void 入庫管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Warehousing form_warehousing = new F_Warehousing();
+            form_warehousing.ShowDialog();
+        }
+
+        private void 出庫管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Syukko form_syukko = new F_Syukko();
+            form_syukko.ShowDialog();
+
+        }
+
+        private void 社員管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Employee form_employee = new F_Employee();
+            form_employee.ShowDialog();
+
+        }
+
+        private void 売上管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Sale form_sale = new F_Sale();
+            form_sale.ShowDialog();
+
+        }
+
+        private void 発注管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Hattyu form_hattyu = new F_Hattyu();
+            form_hattyu.ShowDialog();
+
         }
 
 

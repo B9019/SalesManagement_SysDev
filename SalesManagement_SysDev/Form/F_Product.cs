@@ -701,7 +701,7 @@ namespace SalesManagement_SysDev
             _Pr.DeleteProduct(PrID);
 
             // データ取得&表示
-            dataGridView_Product_regist.DataSource = _Pr.GetDispProducts();
+            dataGridView_Product.DataSource = _Pr.GetDispProducts();
         }
 
 
@@ -711,10 +711,10 @@ namespace SalesManagement_SysDev
         internal void ClearInput()
         {
             // 表示モード設定
-            dataGridView_Product_regist.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView_Product.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             // データグリッド選択解除
-            dataGridView_Product_regist.ClearSelection();
+            dataGridView_Product.ClearSelection();
 
             // テキストボックス＆コンボボックスクリア
             txt_MaID.Clear();
@@ -747,17 +747,17 @@ namespace SalesManagement_SysDev
         private void RefreshDataGridView()
         {
             // スクロール位置取得
-            int ScrollPosition = dataGridView_Product_regist.FirstDisplayedScrollingRowIndex;
+            int ScrollPosition = dataGridView_Product.FirstDisplayedScrollingRowIndex;
 
             // データ取得&表示（データバインド）
             _dispProductPaging = _Pr.GetDispProducts();
-            dataGridView_Product_regist.DataSource = _dispProductPaging;
+            dataGridView_Product.DataSource = _dispProductPaging;
 
             // 全データ数取得
             _recordCount = _dispProductPaging.Count();
 
             // スクロール位置セット
-            if (0 < ScrollPosition) dataGridView_Product_regist.FirstDisplayedScrollingRowIndex = ScrollPosition;
+            if (0 < ScrollPosition) dataGridView_Product.FirstDisplayedScrollingRowIndex = ScrollPosition;
 
             // 入力クリア
             ClearInput();
@@ -766,6 +766,27 @@ namespace SalesManagement_SysDev
             ClearPaging();
 
         }
+        // 一覧表示（テキストクリアなし）
+        private void AllDataGridView()
+        {
+            // スクロール位置取得
+            int ScrollPosition = dataGridView_Product.FirstDisplayedScrollingRowIndex;
+
+            // データ取得&表示（データバインド）
+            _dispProductPaging = _Pr.GetDispProducts();
+            dataGridView_Product.DataSource = _dispProductPaging;
+
+            // 全データ数取得
+            _recordCount = _dispProductPaging.Count();
+
+            // スクロール位置セット
+            if (0 < ScrollPosition) dataGridView_Product.FirstDisplayedScrollingRowIndex = ScrollPosition;
+
+            // ページング初期化
+            ClearPaging();
+
+        }
+
         // ページング初期化
         private void ClearPaging()
         {
@@ -871,28 +892,28 @@ namespace SalesManagement_SysDev
             form_hattyu.ShowDialog();
 
         }
-
+        //一覧表示
         private void btn_all_Click(object sender, EventArgs e)
         {
-            RefreshDataGridView();
+            AllDataGridView();
         }
 
         //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
         private void dataGridView_Product_regist_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int id = (int)dataGridView_Product_regist.CurrentRow.Cells[0].Value;
-            int id2 = (int)dataGridView_Product_regist.CurrentRow.Cells[1].Value;
-            string id3 = (string)dataGridView_Product_regist.CurrentRow.Cells[2].Value;
-            int id4 = (int)dataGridView_Product_regist.CurrentRow.Cells[3].Value;
-            string id5 = (string)dataGridView_Product_regist.CurrentRow.Cells[4].Value;
-            int id6 = (int)dataGridView_Product_regist.CurrentRow.Cells[5].Value;
-            int id7 = (int)dataGridView_Product_regist.CurrentRow.Cells[6].Value;
-            int id8 = (int)dataGridView_Product_regist.CurrentRow.Cells[7].Value;
-            string id9 = (string)dataGridView_Product_regist.CurrentRow.Cells[8].Value;
-            DateTime id10 = (DateTime)dataGridView_Product_regist.CurrentRow.Cells[9].Value;
-            int id11 = (int)dataGridView_Product_regist.CurrentRow.Cells[10].Value;
-            string id12 = (string)dataGridView_Product_regist.CurrentRow.Cells[11].Value;
-            string id13 = (string)dataGridView_Product_regist.CurrentRow.Cells[12].Value;
+            int id = (int)dataGridView_Product.CurrentRow.Cells[0].Value;
+            int id2 = (int)dataGridView_Product.CurrentRow.Cells[1].Value;
+            string id3 = (string)dataGridView_Product.CurrentRow.Cells[2].Value;
+            int id4 = (int)dataGridView_Product.CurrentRow.Cells[3].Value;
+            string id5 = (string)dataGridView_Product.CurrentRow.Cells[4].Value;
+            int id6 = (int)dataGridView_Product.CurrentRow.Cells[5].Value;
+            int id7 = (int)dataGridView_Product.CurrentRow.Cells[6].Value;
+            int id8 = (int)dataGridView_Product.CurrentRow.Cells[7].Value;
+            string id9 = (string)dataGridView_Product.CurrentRow.Cells[8].Value;
+            DateTime id10 = (DateTime)dataGridView_Product.CurrentRow.Cells[9].Value;
+            int id11 = (int)dataGridView_Product.CurrentRow.Cells[10].Value;
+            string id12 = (string)dataGridView_Product.CurrentRow.Cells[11].Value;
+            string id13 = (string)dataGridView_Product.CurrentRow.Cells[12].Value;
 
             txt_PrID.Text = Convert.ToString(id);
             txt_MaID.Text = Convert.ToString(id2);
