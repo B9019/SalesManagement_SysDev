@@ -19,8 +19,8 @@ namespace SalesManagement_SysDev
         public int OrID { get; set; }               //受注ID
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
-        public DateTime? ChDate { get; set; }       //注文年月日
-        public int? ChStateFlag { get; set; }    //注文状態フラグ
+        public DateTime ChDate { get; set; }       //注文年月日
+        public int ChStateFlag { get; set; }    //注文状態フラグ
         public int ChFlag { get; set; }	//注文管理フラグ
         public String ChHidden { get; set; }	    //非表示理由	
 
