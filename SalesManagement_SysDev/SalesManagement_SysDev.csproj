@@ -347,6 +347,9 @@
     <EmbeddedResource Include="Form\DeleteConfirmForm.resx">
       <DependentUpon>DeleteConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\F_Chumon.resx">
+      <DependentUpon>F_Chumon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Client.resx">
       <DependentUpon>F_Client.cs</DependentUpon>
     </EmbeddedResource>
