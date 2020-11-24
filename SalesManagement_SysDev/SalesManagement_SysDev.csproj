@@ -334,11 +334,14 @@
     <Compile Include="Model\Constants.cs" />
     <Compile Include="Model\ContentsManagement\Common\MessageCommon.cs" />
     <Compile Include="Model\ContentsManagement\Common\StaticCommon.cs" />
-    <Compile Include="Model\ContentsManagement\M_ClientContents.cs" />
+
+    <Compile Include="Model\ContentsManagement\T_ChumonContents.cs" />
+
     <Compile Include="Model\ContentsManagement\M_ProductContents.cs" />
     <Compile Include="Model\ContentsManagement\StaffContents.cs" />
     <Compile Include="Model\Entity\Disp\M_DispClient.cs" />
     <Compile Include="Model\Entity\Disp\M_DispProduct.cs" />
+    <Compile Include="Model\Entity\Disp\T_DispChumon.cs" />
     <Compile Include="Model\Entity\Messages.cs" />
     <Compile Include="Model\Entity\OperationLog.cs" />
     <Compile Include="Model\Entity\SortableBindingList.cs" />
@@ -348,6 +351,9 @@
     <Compile Include="SalesManagement_DevContext.cs" />
     <EmbeddedResource Include="Form\DeleteConfirmForm.resx">
       <DependentUpon>DeleteConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\F_Arrival.resx">
+      <DependentUpon>F_Arrival.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Chumon.resx">
       <DependentUpon>F_Chumon.cs</DependentUpon>
@@ -420,6 +426,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Product_update.resx">
       <DependentUpon>F_Product_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\F_Stock.resx">
+      <DependentUpon>F_Stock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Stock_search.resx">
       <DependentUpon>F_Stock_search.cs</DependentUpon>

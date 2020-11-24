@@ -36,13 +36,13 @@ namespace SalesManagement_SysDev
         private void 顧客管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             F_Client form_client = new F_Client();
-            form_client.ShowDialog();
+            form_client.Show();
         }
 
         private void 商品管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             F_Product form_product = new F_Product();
-            form_product.ShowDialog();
+            form_product.Show();
 
         }
 

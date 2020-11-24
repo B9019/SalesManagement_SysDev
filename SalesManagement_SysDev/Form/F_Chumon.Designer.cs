@@ -44,23 +44,23 @@
             this.売上管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.発注管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_ChDate_end = new System.Windows.Forms.TextBox();
+            this.txt_ChHidden = new System.Windows.Forms.TextBox();
+            this.lbl_ChHidden = new System.Windows.Forms.Label();
             this.txt_memo = new System.Windows.Forms.TextBox();
             this.lbl_ChDate = new System.Windows.Forms.Label();
             this.lbl_memo = new System.Windows.Forms.Label();
             this.lbl_ChID = new System.Windows.Forms.Label();
             this.lbl_ClID = new System.Windows.Forms.Label();
             this.lbl_EmID = new System.Windows.Forms.Label();
-            this.txt_ChDate_start = new System.Windows.Forms.TextBox();
-            this.txt_ShID = new System.Windows.Forms.TextBox();
+            this.txt_ChDate = new System.Windows.Forms.TextBox();
+            this.txt_ChID = new System.Windows.Forms.TextBox();
             this.txt_ClID = new System.Windows.Forms.TextBox();
             this.txt_EmID = new System.Windows.Forms.TextBox();
             this.txt_OrID = new System.Windows.Forms.TextBox();
             this.txt_SoID = new System.Windows.Forms.TextBox();
             this.lbl_SoID = new System.Windows.Forms.Label();
             this.lbl_OrID = new System.Windows.Forms.Label();
-            this.dataGridView_Product_regist = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Chumon_regist = new System.Windows.Forms.DataGridView();
             this.btn_clear = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_print = new System.Windows.Forms.Button();
@@ -70,7 +70,7 @@
             this.btn_search = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon_regist)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip2
@@ -188,16 +188,16 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txt_ChDate_end);
+            this.groupBox1.Controls.Add(this.txt_ChHidden);
+            this.groupBox1.Controls.Add(this.lbl_ChHidden);
             this.groupBox1.Controls.Add(this.txt_memo);
             this.groupBox1.Controls.Add(this.lbl_ChDate);
             this.groupBox1.Controls.Add(this.lbl_memo);
             this.groupBox1.Controls.Add(this.lbl_ChID);
             this.groupBox1.Controls.Add(this.lbl_ClID);
             this.groupBox1.Controls.Add(this.lbl_EmID);
-            this.groupBox1.Controls.Add(this.txt_ChDate_start);
-            this.groupBox1.Controls.Add(this.txt_ShID);
+            this.groupBox1.Controls.Add(this.txt_ChDate);
+            this.groupBox1.Controls.Add(this.txt_ChID);
             this.groupBox1.Controls.Add(this.txt_ClID);
             this.groupBox1.Controls.Add(this.txt_EmID);
             this.groupBox1.Controls.Add(this.txt_OrID);
@@ -214,31 +214,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "任意項目";
             // 
-            // label1
+            // txt_ChHidden
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(745, 99);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 15);
-            this.label1.TabIndex = 112;
-            this.label1.Text = "～";
+            this.txt_ChHidden.Location = new System.Drawing.Point(109, 126);
+            this.txt_ChHidden.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_ChHidden.Name = "txt_ChHidden";
+            this.txt_ChHidden.Size = new System.Drawing.Size(243, 22);
+            this.txt_ChHidden.TabIndex = 112;
             // 
-            // txt_ChDate_end
+            // lbl_ChHidden
             // 
-            this.txt_ChDate_end.Location = new System.Drawing.Point(776, 96);
-            this.txt_ChDate_end.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_ChDate_end.Name = "txt_ChDate_end";
-            this.txt_ChDate_end.Size = new System.Drawing.Size(101, 22);
-            this.txt_ChDate_end.TabIndex = 111;
+            this.lbl_ChHidden.AutoSize = true;
+            this.lbl_ChHidden.ForeColor = System.Drawing.Color.White;
+            this.lbl_ChHidden.Location = new System.Drawing.Point(20, 129);
+            this.lbl_ChHidden.Name = "lbl_ChHidden";
+            this.lbl_ChHidden.Size = new System.Drawing.Size(82, 15);
+            this.lbl_ChHidden.TabIndex = 111;
+            this.lbl_ChHidden.Text = "非表示理由";
             // 
             // txt_memo
             // 
-            this.txt_memo.Location = new System.Drawing.Point(109, 132);
+            this.txt_memo.Location = new System.Drawing.Point(635, 129);
             this.txt_memo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_memo.Multiline = true;
             this.txt_memo.Name = "txt_memo";
-            this.txt_memo.Size = new System.Drawing.Size(379, 22);
+            this.txt_memo.Size = new System.Drawing.Size(243, 22);
             this.txt_memo.TabIndex = 109;
             // 
             // lbl_ChDate
@@ -255,7 +255,7 @@
             // 
             this.lbl_memo.AutoSize = true;
             this.lbl_memo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_memo.Location = new System.Drawing.Point(8, 135);
+            this.lbl_memo.Location = new System.Drawing.Point(534, 132);
             this.lbl_memo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_memo.Name = "lbl_memo";
             this.lbl_memo.Size = new System.Drawing.Size(93, 15);
@@ -266,7 +266,7 @@
             // 
             this.lbl_ChID.AutoSize = true;
             this.lbl_ChID.ForeColor = System.Drawing.Color.White;
-            this.lbl_ChID.Location = new System.Drawing.Point(36, 99);
+            this.lbl_ChID.Location = new System.Drawing.Point(36, 38);
             this.lbl_ChID.Name = "lbl_ChID";
             this.lbl_ChID.Size = new System.Drawing.Size(51, 15);
             this.lbl_ChID.TabIndex = 12;
@@ -292,21 +292,21 @@
             this.lbl_EmID.TabIndex = 70;
             this.lbl_EmID.Text = "社員ID";
             // 
-            // txt_ChDate_start
+            // txt_ChDate
             // 
-            this.txt_ChDate_start.Location = new System.Drawing.Point(635, 96);
-            this.txt_ChDate_start.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_ChDate_start.Name = "txt_ChDate_start";
-            this.txt_ChDate_start.Size = new System.Drawing.Size(101, 22);
-            this.txt_ChDate_start.TabIndex = 67;
+            this.txt_ChDate.Location = new System.Drawing.Point(635, 96);
+            this.txt_ChDate.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_ChDate.Name = "txt_ChDate";
+            this.txt_ChDate.Size = new System.Drawing.Size(243, 22);
+            this.txt_ChDate.TabIndex = 67;
             // 
-            // txt_ShID
+            // txt_ChID
             // 
-            this.txt_ShID.Location = new System.Drawing.Point(109, 96);
-            this.txt_ShID.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_ShID.Name = "txt_ShID";
-            this.txt_ShID.Size = new System.Drawing.Size(243, 22);
-            this.txt_ShID.TabIndex = 66;
+            this.txt_ChID.Location = new System.Drawing.Point(109, 34);
+            this.txt_ChID.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_ChID.Name = "txt_ChID";
+            this.txt_ChID.Size = new System.Drawing.Size(243, 22);
+            this.txt_ChID.TabIndex = 66;
             // 
             // txt_ClID
             // 
@@ -334,7 +334,7 @@
             // 
             // txt_SoID
             // 
-            this.txt_SoID.Location = new System.Drawing.Point(109, 34);
+            this.txt_SoID.Location = new System.Drawing.Point(109, 96);
             this.txt_SoID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SoID.Name = "txt_SoID";
             this.txt_SoID.Size = new System.Drawing.Size(243, 22);
@@ -344,7 +344,7 @@
             // 
             this.lbl_SoID.AutoSize = true;
             this.lbl_SoID.ForeColor = System.Drawing.Color.White;
-            this.lbl_SoID.Location = new System.Drawing.Point(36, 36);
+            this.lbl_SoID.Location = new System.Drawing.Point(21, 99);
             this.lbl_SoID.Name = "lbl_SoID";
             this.lbl_SoID.Size = new System.Drawing.Size(66, 15);
             this.lbl_SoID.TabIndex = 8;
@@ -360,13 +360,13 @@
             this.lbl_OrID.TabIndex = 7;
             this.lbl_OrID.Text = "受注ID ";
             // 
-            // dataGridView_Product_regist
+            // dataGridView_Chumon_regist
             // 
-            this.dataGridView_Product_regist.Location = new System.Drawing.Point(71, 258);
-            this.dataGridView_Product_regist.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView_Product_regist.Name = "dataGridView_Product_regist";
-            this.dataGridView_Product_regist.Size = new System.Drawing.Size(968, 360);
-            this.dataGridView_Product_regist.TabIndex = 110;
+            this.dataGridView_Chumon_regist.Location = new System.Drawing.Point(71, 258);
+            this.dataGridView_Chumon_regist.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView_Chumon_regist.Name = "dataGridView_Chumon_regist";
+            this.dataGridView_Chumon_regist.Size = new System.Drawing.Size(968, 360);
+            this.dataGridView_Chumon_regist.TabIndex = 110;
             // 
             // btn_clear
             // 
@@ -433,6 +433,7 @@
             this.btn_regist.TabIndex = 146;
             this.btn_regist.Text = "F2　登録";
             this.btn_regist.UseVisualStyleBackColor = false;
+            this.btn_regist.Click += new System.EventHandler(this.btn_regist_Click);
             // 
             // btn_search
             // 
@@ -458,7 +459,7 @@
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_regist);
             this.Controls.Add(this.btn_search);
-            this.Controls.Add(this.dataGridView_Product_regist);
+            this.Controls.Add(this.dataGridView_Chumon_regist);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip2);
             this.Name = "F_Chumon";
@@ -468,7 +469,7 @@
             this.menuStrip2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon_regist)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -492,23 +493,21 @@
         private System.Windows.Forms.ToolStripMenuItem 売上管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 発注管理ToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_ChDate_end;
         private System.Windows.Forms.TextBox txt_memo;
         private System.Windows.Forms.Label lbl_ChDate;
         private System.Windows.Forms.Label lbl_memo;
         private System.Windows.Forms.Label lbl_ChID;
         private System.Windows.Forms.Label lbl_ClID;
         private System.Windows.Forms.Label lbl_EmID;
-        private System.Windows.Forms.TextBox txt_ChDate_start;
-        private System.Windows.Forms.TextBox txt_ShID;
+        private System.Windows.Forms.TextBox txt_ChDate;
+        private System.Windows.Forms.TextBox txt_ChID;
         private System.Windows.Forms.TextBox txt_ClID;
         private System.Windows.Forms.TextBox txt_EmID;
         private System.Windows.Forms.TextBox txt_OrID;
         private System.Windows.Forms.TextBox txt_SoID;
         private System.Windows.Forms.Label lbl_SoID;
         private System.Windows.Forms.Label lbl_OrID;
-        private System.Windows.Forms.DataGridView dataGridView_Product_regist;
+        private System.Windows.Forms.DataGridView dataGridView_Chumon_regist;
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_print;
@@ -516,5 +515,7 @@
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_regist;
         private System.Windows.Forms.Button btn_search;
+        private System.Windows.Forms.TextBox txt_ChHidden;
+        private System.Windows.Forms.Label lbl_ChHidden;
     }
 }
