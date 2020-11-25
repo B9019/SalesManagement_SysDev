@@ -1067,6 +1067,11 @@ namespace SalesManagement_SysDev
                 {
                     command.CommandText = command + "AND ";
                 }
+                //最後にセミコロンを接続する
+                if(count == 10)
+                {
+                    command.CommandText = command + ";";
+                }
 
             }
             try
