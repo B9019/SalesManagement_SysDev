@@ -26,6 +26,8 @@ namespace SalesManagement_SysDev.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_D" +
+            "evContext;Integrated Security=True")]
         public string 設定 {
             get {
                 return ((string)(this["設定"]));

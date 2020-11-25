@@ -72,6 +72,20 @@ namespace SalesManagement_SysDev
         private void F_Product_Load(object sender, EventArgs e)
         {
             商品管理ToolStripMenuItem.Enabled = false;
+            dataGridView_Product.ColumnCount = 11;
+
+            dataGridView_Product.Columns[0].HeaderText = "商品ID ";
+            dataGridView_Product.Columns[1].HeaderText = "メーカID ";
+            dataGridView_Product.Columns[2].HeaderText = "商品名 ";
+            dataGridView_Product.Columns[3].HeaderText = "価格";
+            dataGridView_Product.Columns[4].HeaderText = "JANコード";
+            dataGridView_Product.Columns[5].HeaderText = "安全在庫数 ";
+            dataGridView_Product.Columns[6].HeaderText = "小分類ID";
+            dataGridView_Product.Columns[7].HeaderText = "型番";
+            dataGridView_Product.Columns[8].HeaderText = "色";
+            dataGridView_Product.Columns[9].HeaderText = "発売日";
+            dataGridView_Product.Columns[10].HeaderText = "非表示理由";
+
         }
 
 
@@ -939,138 +953,139 @@ namespace SalesManagement_SysDev
             //接続先DBの情報をセット
             SqlConnection conn = new SqlConnection();
             SqlCommand command = new SqlCommand();
-            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=M__Product;User Id=sa;Password=N'Fwy|Yfmmirzl|u,tesyv{rj2msFT7_&#$!~<#R+gnwcoayia';";
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True";
 
             //実行するSQL文の指定
-            command.CommandText = "@SELECT * FROM M_Product WHERE ";
+            command.CommandText = @"SELECT * FROM M_Product WHERE ";
             command.Connection = conn;
 
             //sql文のwhere句の接続に使う
             string AND = "";
+            int andnum = 0;
             //検索条件をテキストボックスから抽出し、SQL文をセット
             //　日本語可　：SqlDbType.NVarChar
             //　日本語不可：SqlDbType.VarChar
-            for (int count = 0; count < 11; ++count)
+            for (int count = 0; count < 11; count++)
             {
-                if (PrID.Text != "" && count == 0)
+                if (txt_PrID.Text != "" && count == 0)
                 {
                     command.Parameters.Add("@PrID", SqlDbType.VarChar);
-                    command.Parameters["@PrID"].Value = PrID.Text;
+                    command.Parameters["@PrID"].Value = txt_PrID.Text;
                     //実行するSQL文の条件追加
-                    command.CommandText = command + "PrID LIKE @PrID ";
+                    command.CommandText = command.CommandText + "PrID LIKE @PrID ";
+                    ++andnum;
 
                 }
-                else if (MaID.Text != "" && count == 1)
+                else if (txt_MaID.Text != "" && count == 1)
                 {
                     command.Parameters.Add("@MaID", SqlDbType.VarChar);
-                    command.Parameters["@MaID"].Value = MaID.Text;
+                    command.Parameters["@MaID"].Value = txt_MaID.Text;
                     //if ("@PrID" != null)
                     //{
                     //    command.CommandText = command + "AND ";
                     //}
                     //実行するSQL文の条件追加
-                    command.CommandText = command + AND + "MaID LIKE @MaID ";
-
+                    command.CommandText = command.CommandText + AND + "MaID LIKE @MaID ";
+                    ++andnum;
                 }
-                else if (PrName.Text != "" && count == 2)
+                else if (txt_PrName.Text != "" && count == 2)
                 {
                     command.Parameters.Add("@PrName", SqlDbType.NVarChar);
-                    command.Parameters["@PrName"].Value = "%" + PrName.Text + "%";
+                    command.Parameters["@PrName"].Value = "%" + txt_PrName.Text + "%";
                     //if ("@PrID" != null || "@MaID" != null)
                     //{
                     //    command.CommandText = command + "AND ";
                     //}
                     //実行するSQL文の条件追加
-                    command.CommandText = command + AND + "PrName LIKE @PrName ";
-
+                    command.CommandText = command.CommandText + AND + "PrName LIKE @PrName ";
+                    ++andnum;
                 }
-                else if (Price.Text != "" && count == 3)
+                else if (txt_Price.Text != "" && count == 3)
                 {
                     command.Parameters.Add("@Price", SqlDbType.VarChar);
-                    command.Parameters["@Price"].Value = Price.Text;
+                    command.Parameters["@Price"].Value = txt_Price.Text;
                     //if ("@PrID" != null || "@MaID" != null || "@Price" != null)
                     //{
                     //    command.CommandText = command + "AND ";
                     //}
                     //実行するSQL文の条件追加
-                    command.CommandText = command + AND + "Price LIKE @Price ";
-
+                    command.CommandText = command.CommandText + AND + "Price LIKE @Price ";
+                    ++andnum;
                 }
-                else if (PrJCode.Text != "" && count == 4)
+                else if (txt_PrJCode.Text != "" && count == 4)
                 {
                     command.Parameters.Add("@PrJCode", SqlDbType.VarChar);
-                    command.Parameters["@PrJCode"].Value = "%" + PrJCode.Text + "%";
+                    command.Parameters["@PrJCode"].Value = "%" + txt_PrJCode.Text + "%";
                     //if ("@PrID" != null || "@MaID" != null || "@Price" != null || "@PrJCode" != null)
                     //{
                     //    command.CommandText = command + "AND ";
                     //}
                     //実行するSQL文の条件追加
-                    command.CommandText = command + AND + "PrJCode LIKE @PrJCode ";
-
+                    command.CommandText = command.CommandText + AND + "PrJCode LIKE @PrJCode ";
+                    ++andnum;
                 }
-                else if (PrSafetyStock.Text != "" && count == 5)
+                else if (txt_PrSafetyStock.Text != "" && count == 5)
                 {
                     command.Parameters.Add("@PrSafetyStock", SqlDbType.VarChar);
-                    command.Parameters["@PrSafetyStock"].Value = PrSafetyStock.Text;
+                    command.Parameters["@PrSafetyStock"].Value = txt_PrSafetyStock.Text;
                     //if ("@PrID" != null || "@MaID" != null || "@Price" != null || "@PrJCode" != null || )
                     //{
                     //    command.CommandText = command + "AND ";
                     //}
                     //実行するSQL文の条件追加
-                    command.CommandText = command + AND + "PrSafetyStock LIKE @PrSafetyStock ";
-
+                    command.CommandText = command.CommandText + AND + "PrSafetyStock LIKE @PrSafetyStock ";
+                    ++andnum;
                 }
-                else if (ScID.Text != "" && count == 6)
+                else if (txt_ScID.Text != "" && count == 6)
                 {
                     command.Parameters.Add("@ScID", SqlDbType.VarChar);
-                    command.Parameters["@ScID"].Value = ScID.Text;
+                    command.Parameters["@ScID"].Value = txt_ScID.Text;
                     //実行するSQL文の条件追加
-                    command.CommandText = command + AND + "ScID LIKE @ScID ";
-
+                    command.CommandText = command.CommandText + AND + "ScID LIKE @ScID ";
+                    ++andnum;
                 }
-                else if (PrModelNumber.Text != "" && count == 7)
+                else if (txt_PrModelNumber.Text != "" && count == 7)
                 {
                     command.Parameters.Add("@PrModelNumber", SqlDbType.VarChar);
-                    command.Parameters["@PrModelNumber"].Value = PrModelNumber.Text;
+                    command.Parameters["@PrModelNumber"].Value = txt_PrModelNumber.Text;
                     //実行するSQL文の条件追加
-                    command.CommandText = command + "PrModelNumber LIKE @PrModelNumber ";
-
+                    command.CommandText = command.CommandText + AND + "PrModelNumber LIKE @PrModelNumber ";
+                    ++andnum;
                 }
-                else if (PrColor.Text != "" && count == 8)
+                else if (txt_PrColor.Text != "" && count == 8)
                 {
                     command.Parameters.Add("@PrColor", SqlDbType.NVarChar);
-                    command.Parameters["@PrColor"].Value = "%" + PrColor.Text + "%";
+                    command.Parameters["@PrColor"].Value = "%" + txt_PrColor.Text + "%";
                     //実行するSQL文の条件追加
-                    command.CommandText = command + AND + "PrColor LIKE @PrColor ";
-
+                    command.CommandText = command.CommandText + AND + "PrColor LIKE @PrColor ";
+                    ++andnum;
                 }
-                else if (PrReleaseDate.Text != "" && count == 9)
+                else if (txt_PrReleaseDate.Text != "" && count == 9)
                 {
                     command.Parameters.Add("@PrReleaseDate", SqlDbType.VarChar);
-                    command.Parameters["@PrReleaseDate"].Value = "%" + PrReleaseDate.Text + "%";
+                    command.Parameters["@PrReleaseDate"].Value = "%" + txt_PrReleaseDate.Text + "%";
                     //実行するSQL文の条件追加
-                    command.CommandText = command + AND + "PrReleaseDate LIKE @PrReleaseDate ";
-
+                    command.CommandText = command.CommandText + AND + "PrReleaseDate LIKE @PrReleaseDate ";
+                    ++andnum;
                 }
-                else if (PrHidden.Text != "" && count == 10)
+                else if (txt_PrHidden.Text != "" && count == 10)
                 {
                     command.Parameters.Add("@PrHidden", SqlDbType.NVarChar);
-                    command.Parameters["@PrHidden"].Value = "%" + PrHidden.Text + "%";
+                    command.Parameters["@PrHidden"].Value = "%" + txt_PrHidden.Text + "%";
                     //実行するSQL文の条件追加
-                    command.CommandText = command + AND + "PrHidden LIKE @PrHidden ";
-
+                    command.CommandText = command.CommandText + AND + "PrHidden LIKE @PrHidden ";
+                    ++andnum;
                 }
                 //2つ目以降の条件の前部にANDを接続
-                if (AND == "" && "@PrID" != null || "@MaID" != null || "@Price" != null ||
-                    "@PrJCode" != null || "@PrSafetyStock" != null || "@ScID" != null ||
-                    "@PrModelNumber" != null || "@PrColor" != null || "@PrReleaseDate" != null || "@PrHidden" != null)
+                if (andnum != 0)
                 {
-                    command.CommandText = command + "AND ";
+                    AND = "AND ";
                 }
                 //最後にセミコロンを接続する
-                if(count == 10)
+                while (count == 10)
                 {
-                    command.CommandText = command + ";";
+                    command.CommandText = command.CommandText + ";";
+                    break;
                 }
 
             }
@@ -1085,29 +1100,29 @@ namespace SalesManagement_SysDev
                 {
                     while(reader.Read())
                     {
-                        ReadSingleRow((IDataRecord)reader);
-                        //foreach (var r in reader)
-                        //{
-                        //    dataGridView_Product.Rows.Add(r.PrID, r.MaID, r.PrName, p.Price, p.PrJCode, p.);
-                        //}
-
+                        //ReadSingleRow((IDataRecord)reader);
+                        foreach (var r in reader)
+                        {
+                            dataGridView_Product.Rows.Add(r.PrID, r.MaID, r.PrName, p.Price, p.PrJCode, p.);
+                        }
                     }
-
                 }
-
             }
             finally
             {
                 //データベースを切断
                 conn.Close();
             }
-
         }
         public void ReadSingleRow(IDataRecord record)
         {
-            dataGridView_Product.Rows.Add(String.Format("{0}, {1},{2},{3},{4}.{5},{6},{7},{8},{9},{10},{11}",
-                record[0], record[1], record[2], record[3], record[4], record[5], record[6],
-                record[7], record[8], record[9], record[10], record[11]));
+            dataGridView_Product.Rows.Add();
+            {
+                record[0]; ,record[1],record[2]record[3],record[4],record[5],record[6],record[7],record[8],record[9],record[10],record[11];
+
+            }
+
+
         }
 
     }
