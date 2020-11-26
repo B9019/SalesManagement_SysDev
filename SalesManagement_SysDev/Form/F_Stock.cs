@@ -121,13 +121,13 @@ namespace SalesManagement_SysDev
                 txt_PrID.Focus();
                 return false;
             }
-            // 在庫数
-            if (String.IsNullOrEmpty(txt_StQuantity.Text))
-            {
-                MessageBox.Show("在庫数は必須項目です");
-                txt_StQuantity.Focus();
-                return false;
-            }
+            //// 在庫数
+            //if (String.IsNullOrEmpty(txt_StQuantity.Text))
+            //{
+            //    MessageBox.Show("在庫数は必須項目です");
+            //    txt_StQuantity.Focus();
+            //    return false;
+            //}
 
 
 
@@ -149,13 +149,13 @@ namespace SalesManagement_SysDev
                 txt_PrID.Focus();
                 return false;
             }
-            // 在庫数
-            if (!_ic.NumericCheck(txt_StQuantity.Text, out errorMessage))
-            {
-                MessageBox.Show(errorMessage);
-                txt_StQuantity.Focus();
-                return false;
-            }
+            //// 在庫数
+            //if (!_ic.NumericCheck(txt_StQuantity.Text, out errorMessage))
+            //{
+            //    MessageBox.Show(errorMessage);
+            //    txt_StQuantity.Focus();
+            //    return false;
+            //}
            
             return true;
         }
@@ -170,7 +170,7 @@ namespace SalesManagement_SysDev
             {
                 StID = int.Parse(txt_StID.Text),
                 PrID = int.Parse(txt_PrID.Text),
-                StQuantity = int.Parse(txt_StQuantity.Text)
+                //StQuantity = int.Parse(txt_StQuantity.Text)
 
             };
 
@@ -243,13 +243,13 @@ namespace SalesManagement_SysDev
                 txt_PrID.Focus();
                 return false;
             }
-            // 在庫数
-            if (String.IsNullOrEmpty(txt_StQuantity.Text))
-            {
-                MessageBox.Show("在庫数は必須項目です");
-                txt_StQuantity.Focus();
-                return false;
-            }
+            //// 在庫数
+            //if (String.IsNullOrEmpty(txt_StQuantity.Text))
+            //{
+            //    MessageBox.Show("在庫数は必須項目です");
+            //    txt_StQuantity.Focus();
+            //    return false;
+            //}
             ///// 入力内容の形式チェック /////
 
             //// 数値チェック ////
@@ -268,13 +268,13 @@ namespace SalesManagement_SysDev
                 txt_PrID.Focus();
                 return false;
             }
-            // 在庫数
-            if (!_ic.NumericCheck(txt_StQuantity.Text, out errorMessage))
-            {
-                MessageBox.Show(errorMessage);
-                txt_StQuantity.Focus();
-                return false;
-            }
+            //// 在庫数
+            //if (!_ic.NumericCheck(txt_StQuantity.Text, out errorMessage))
+            //{
+            //    MessageBox.Show(errorMessage);
+            //    txt_StQuantity.Focus();
+            //    return false;
+            //}
             return true;
             }
             //
@@ -289,7 +289,7 @@ namespace SalesManagement_SysDev
                 {
                     StID = int.Parse(txt_StID.Text),
                     PrID = int.Parse(txt_PrID.Text),
-                    StQuantity = int.Parse(txt_StQuantity.Text)
+                    //StQuantity = int.Parse(txt_StQuantity.Text)
 
                 };
             }
@@ -363,7 +363,7 @@ namespace SalesManagement_SysDev
             // テキストボックス＆コンボボックスクリア
             txt_StID.Clear();
             txt_PrID.Clear();
-            txt_StQuantity.Clear();
+            //txt_StQuantity.Clear();
 
 
             //// ボタンリセット
@@ -526,7 +526,7 @@ namespace SalesManagement_SysDev
 
             txt_StID.Text = Convert.ToString(id);
             txt_PrID.Text = Convert.ToString(id2);
-            txt_StQuantity.Text = Convert.ToString(id3);
+            //txt_StQuantity.Text = Convert.ToString(id3);
             txt_memo.Text = Convert.ToString(id4);
                
             }
