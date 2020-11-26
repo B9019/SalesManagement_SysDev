@@ -525,7 +525,7 @@
             // 
             this.chk_StFlag.AutoSize = true;
             this.chk_StFlag.Location = new System.Drawing.Point(470, 111);
-            this.chk_StFlag.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chk_StFlag.Margin = new System.Windows.Forms.Padding(2);
             this.chk_StFlag.Name = "chk_StFlag";
             this.chk_StFlag.Size = new System.Drawing.Size(15, 14);
             this.chk_StFlag.TabIndex = 170;
@@ -660,9 +660,8 @@
             this.Controls.Add(this.lbl_form_name_Stock_sertch);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F_Stock_search";
-            this.Text = "販売在庫管理システム　在庫情報検索画面";
             this.Load += new System.EventHandler(this.F_Stock_sertch_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
