@@ -94,7 +94,7 @@
             this.btn_all = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView_Product_regist = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Stock = new System.Windows.Forms.DataGridView();
             this.txt_memo = new System.Windows.Forms.TextBox();
             this.btn_sertch = new System.Windows.Forms.Button();
             this.lbl_memo = new System.Windows.Forms.Label();
@@ -105,7 +105,7 @@
             this.lbl_Stock_price = new System.Windows.Forms.Label();
             this.menuStrip2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Stock)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -575,6 +575,7 @@
             this.btn_regist.TabIndex = 140;
             this.btn_regist.Text = "F2　登録";
             this.btn_regist.UseVisualStyleBackColor = true;
+            this.btn_regist.Click += new System.EventHandler(this.btn_regist_Click);
             // 
             // button3
             // 
@@ -621,12 +622,12 @@
             this.button2.Text = "F6　削除";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView_Product_regist
+            // dataGridView_Stock
             // 
-            this.dataGridView_Product_regist.Location = new System.Drawing.Point(24, 258);
-            this.dataGridView_Product_regist.Name = "dataGridView_Product_regist";
-            this.dataGridView_Product_regist.Size = new System.Drawing.Size(726, 294);
-            this.dataGridView_Product_regist.TabIndex = 137;
+            this.dataGridView_Stock.Location = new System.Drawing.Point(24, 258);
+            this.dataGridView_Stock.Name = "dataGridView_Stock";
+            this.dataGridView_Stock.Size = new System.Drawing.Size(726, 294);
+            this.dataGridView_Stock.TabIndex = 137;
             // 
             // txt_memo
             // 
@@ -723,10 +724,10 @@
             this.Controls.Add(this.btn_all);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView_Product_regist);
+            this.Controls.Add(this.dataGridView_Stock);
             this.Controls.Add(this.btn_sertch);
             this.Controls.Add(this.groupBox2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F_Stock";
             this.Text = "販売在庫管理システム　在庫管理画面";
             this.Load += new System.EventHandler(this.F_Stock_Load);
@@ -734,7 +735,7 @@
             this.menuStrip2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Stock)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -804,7 +805,7 @@
         private System.Windows.Forms.Button btn_all;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView_Product_regist;
+        private System.Windows.Forms.DataGridView dataGridView_Stock;
         private System.Windows.Forms.TextBox txt_memo;
         private System.Windows.Forms.Button btn_sertch;
         private System.Windows.Forms.Label lbl_memo;
