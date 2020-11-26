@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             this.txt_memo = new System.Windows.Forms.TextBox();
             this.lbl_memo = new System.Windows.Forms.Label();
             this.lbl_ArDate = new System.Windows.Forms.Label();
@@ -563,5 +564,11 @@
         private System.Windows.Forms.ToolStripMenuItem 発注管理ToolStripMenuItem;
         private System.Windows.Forms.Label lbl_EmID;
         private System.Windows.Forms.TextBox txt_EmID;
+
+            
+        }
+
+        #endregion
+
     }
 }

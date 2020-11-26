@@ -329,14 +329,20 @@
     <Compile Include="Migrations\202011211819133_Add_Migration.designer.cs">
       <DependentUpon>202011211819133_Add_Migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011251417569_Add-Migration2.cs" />
+    <Compile Include="Migrations\202011251417569_Add-Migration2.designer.cs">
+      <DependentUpon>202011251417569_Add-Migration2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\CommonFunction.cs" />
     <Compile Include="Model\Constants.cs" />
     <Compile Include="Model\ContentsManagement\Common\MessageCommon.cs" />
     <Compile Include="Model\ContentsManagement\Common\StaticCommon.cs" />
+    <Compile Include="Model\ContentsManagement\M_ClientContents.cs" />
     <Compile Include="Model\ContentsManagement\T_ChumonContents.cs" />
     <Compile Include="Model\ContentsManagement\M_ProductContents.cs" />
     <Compile Include="Model\ContentsManagement\StaffContents.cs" />
+    <Compile Include="Model\Entity\Disp\M_DispClient.cs" />
     <Compile Include="Model\Entity\Disp\M_DispProduct.cs" />
     <Compile Include="Model\Entity\Disp\T_DispChumon.cs" />
     <Compile Include="Model\Entity\Messages.cs" />
@@ -348,9 +354,6 @@
     <Compile Include="SalesManagement_DevContext.cs" />
     <EmbeddedResource Include="Form\DeleteConfirmForm.resx">
       <DependentUpon>DeleteConfirmForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\F_Arrival.resx">
-      <DependentUpon>F_Arrival.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Chumon.resx">
       <DependentUpon>F_Chumon.cs</DependentUpon>
@@ -456,6 +459,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011211819133_Add_Migration.resx">
       <DependentUpon>202011211819133_Add_Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011251417569_Add-Migration2.resx">
+      <DependentUpon>202011251417569_Add-Migration2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

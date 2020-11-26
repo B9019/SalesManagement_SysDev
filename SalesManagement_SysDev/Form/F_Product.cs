@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using SalesManagement_SysDev.Model.Entity;
 using SalesManagement_SysDev.Model.ContentsManagement;
 using SalesManagement_SysDev.Model.Entity.Disp;
+using System.Data.SqlClient;
 
 namespace SalesManagement_SysDev
 {
@@ -71,6 +72,20 @@ namespace SalesManagement_SysDev
         private void F_Product_Load(object sender, EventArgs e)
         {
             商品管理ToolStripMenuItem.Enabled = false;
+            dataGridView_Product.ColumnCount = 11;
+
+            dataGridView_Product.Columns[0].HeaderText = "商品ID ";
+            dataGridView_Product.Columns[1].HeaderText = "メーカID ";
+            dataGridView_Product.Columns[2].HeaderText = "商品名 ";
+            dataGridView_Product.Columns[3].HeaderText = "価格";
+            dataGridView_Product.Columns[4].HeaderText = "JANコード";
+            dataGridView_Product.Columns[5].HeaderText = "安全在庫数 ";
+            dataGridView_Product.Columns[6].HeaderText = "小分類ID";
+            dataGridView_Product.Columns[7].HeaderText = "型番";
+            dataGridView_Product.Columns[8].HeaderText = "色";
+            dataGridView_Product.Columns[9].HeaderText = "発売日";
+            dataGridView_Product.Columns[10].HeaderText = "非表示理由";
+
         }
 
 
@@ -701,7 +716,7 @@ namespace SalesManagement_SysDev
             _Pr.DeleteProduct(PrID);
 
             // データ取得&表示
-            dataGridView_Product_regist.DataSource = _Pr.GetDispProducts();
+            dataGridView_Product.DataSource = _Pr.GetDispProducts();
         }
 
 
@@ -711,10 +726,10 @@ namespace SalesManagement_SysDev
         internal void ClearInput()
         {
             // 表示モード設定
-            dataGridView_Product_regist.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView_Product.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             // データグリッド選択解除
-            dataGridView_Product_regist.ClearSelection();
+            dataGridView_Product.ClearSelection();
 
             // テキストボックス＆コンボボックスクリア
             txt_MaID.Clear();
@@ -747,17 +762,17 @@ namespace SalesManagement_SysDev
         private void RefreshDataGridView()
         {
             // スクロール位置取得
-            int ScrollPosition = dataGridView_Product_regist.FirstDisplayedScrollingRowIndex;
+            int ScrollPosition = dataGridView_Product.FirstDisplayedScrollingRowIndex;
 
             // データ取得&表示（データバインド）
             _dispProductPaging = _Pr.GetDispProducts();
-            dataGridView_Product_regist.DataSource = _dispProductPaging;
+            dataGridView_Product.DataSource = _dispProductPaging;
 
             // 全データ数取得
             _recordCount = _dispProductPaging.Count();
 
             // スクロール位置セット
-            if (0 < ScrollPosition) dataGridView_Product_regist.FirstDisplayedScrollingRowIndex = ScrollPosition;
+            if (0 < ScrollPosition) dataGridView_Product.FirstDisplayedScrollingRowIndex = ScrollPosition;
 
             // 入力クリア
             ClearInput();
@@ -874,25 +889,48 @@ namespace SalesManagement_SysDev
 
         private void btn_all_Click(object sender, EventArgs e)
         {
-            RefreshDataGridView();
+            fncAllSelect();
         }
+        private void fncAllSelect()
+        {
+            // データ取得&表示（データバインド）
+            _dispProductPaging = _Pr.GetDispProducts();
+            dataGridView_Product.DataSource = _dispProductPaging;
+
+            ////全データの表示
+            //dataGridView_Product.Rows.Clear();
+            //try
+            //{
+            //    var context = new SalesManagement_DevContext();
+            //    foreach (var p in context.M_Products)
+            //    {
+            //        dataGridView_Product.Rows.Add(p.PrID, p.MaID, p.PrName, p.Price,p.PrJCode,p.);
+            //    }
+            //    context.Dispose();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+        }
+
 
         //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
         private void dataGridView_Product_regist_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int id = (int)dataGridView_Product_regist.CurrentRow.Cells[0].Value;
-            int id2 = (int)dataGridView_Product_regist.CurrentRow.Cells[1].Value;
-            string id3 = (string)dataGridView_Product_regist.CurrentRow.Cells[2].Value;
-            int id4 = (int)dataGridView_Product_regist.CurrentRow.Cells[3].Value;
-            string id5 = (string)dataGridView_Product_regist.CurrentRow.Cells[4].Value;
-            int id6 = (int)dataGridView_Product_regist.CurrentRow.Cells[5].Value;
-            int id7 = (int)dataGridView_Product_regist.CurrentRow.Cells[6].Value;
-            int id8 = (int)dataGridView_Product_regist.CurrentRow.Cells[7].Value;
-            string id9 = (string)dataGridView_Product_regist.CurrentRow.Cells[8].Value;
-            DateTime id10 = (DateTime)dataGridView_Product_regist.CurrentRow.Cells[9].Value;
-            int id11 = (int)dataGridView_Product_regist.CurrentRow.Cells[10].Value;
-            string id12 = (string)dataGridView_Product_regist.CurrentRow.Cells[11].Value;
-            string id13 = (string)dataGridView_Product_regist.CurrentRow.Cells[12].Value;
+            int id = (int)dataGridView_Product.CurrentRow.Cells[0].Value;
+            int id2 = (int)dataGridView_Product.CurrentRow.Cells[1].Value;
+            string id3 = (string)dataGridView_Product.CurrentRow.Cells[2].Value;
+            int id4 = (int)dataGridView_Product.CurrentRow.Cells[3].Value;
+            string id5 = (string)dataGridView_Product.CurrentRow.Cells[4].Value;
+            int id6 = (int)dataGridView_Product.CurrentRow.Cells[5].Value;
+            int id7 = (int)dataGridView_Product.CurrentRow.Cells[6].Value;
+            int id8 = (int)dataGridView_Product.CurrentRow.Cells[7].Value;
+            string id9 = (string)dataGridView_Product.CurrentRow.Cells[8].Value;
+            DateTime id10 = (DateTime)dataGridView_Product.CurrentRow.Cells[9].Value;
+            int id11 = (int)dataGridView_Product.CurrentRow.Cells[10].Value;
+            string id12 = (string)dataGridView_Product.CurrentRow.Cells[11].Value;
+            string id13 = (string)dataGridView_Product.CurrentRow.Cells[12].Value;
 
             txt_PrID.Text = Convert.ToString(id);
             txt_MaID.Text = Convert.ToString(id2);
@@ -909,6 +947,183 @@ namespace SalesManagement_SysDev
             txt_memo.Text = Convert.ToString(id13);
 
         }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            //接続先DBの情報をセット
+            SqlConnection conn = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True";
+
+            //実行するSQL文の指定
+            command.CommandText = @"SELECT * FROM M_Product WHERE ";
+            command.Connection = conn;
+
+            //sql文のwhere句の接続に使う
+            string AND = "";
+            int andnum = 0;
+            //検索条件をテキストボックスから抽出し、SQL文をセット
+            //　日本語可　：SqlDbType.NVarChar
+            //　日本語不可：SqlDbType.VarChar
+            for (int count = 0; count < 11; count++)
+            {
+                if (txt_PrID.Text != "" && count == 0)
+                {
+                    command.Parameters.Add("@PrID", SqlDbType.VarChar);
+                    command.Parameters["@PrID"].Value = txt_PrID.Text;
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + "PrID LIKE @PrID ";
+                    ++andnum;
+
+                }
+                else if (txt_MaID.Text != "" && count == 1)
+                {
+                    command.Parameters.Add("@MaID", SqlDbType.VarChar);
+                    command.Parameters["@MaID"].Value = txt_MaID.Text;
+                    //if ("@PrID" != null)
+                    //{
+                    //    command.CommandText = command + "AND ";
+                    //}
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "MaID LIKE @MaID ";
+                    ++andnum;
+                }
+                else if (txt_PrName.Text != "" && count == 2)
+                {
+                    command.Parameters.Add("@PrName", SqlDbType.NVarChar);
+                    command.Parameters["@PrName"].Value = "%" + txt_PrName.Text + "%";
+                    //if ("@PrID" != null || "@MaID" != null)
+                    //{
+                    //    command.CommandText = command + "AND ";
+                    //}
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "PrName LIKE @PrName ";
+                    ++andnum;
+                }
+                else if (txt_Price.Text != "" && count == 3)
+                {
+                    command.Parameters.Add("@Price", SqlDbType.VarChar);
+                    command.Parameters["@Price"].Value = txt_Price.Text;
+                    //if ("@PrID" != null || "@MaID" != null || "@Price" != null)
+                    //{
+                    //    command.CommandText = command + "AND ";
+                    //}
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "Price LIKE @Price ";
+                    ++andnum;
+                }
+                else if (txt_PrJCode.Text != "" && count == 4)
+                {
+                    command.Parameters.Add("@PrJCode", SqlDbType.VarChar);
+                    command.Parameters["@PrJCode"].Value = "%" + txt_PrJCode.Text + "%";
+                    //if ("@PrID" != null || "@MaID" != null || "@Price" != null || "@PrJCode" != null)
+                    //{
+                    //    command.CommandText = command + "AND ";
+                    //}
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "PrJCode LIKE @PrJCode ";
+                    ++andnum;
+                }
+                else if (txt_PrSafetyStock.Text != "" && count == 5)
+                {
+                    command.Parameters.Add("@PrSafetyStock", SqlDbType.VarChar);
+                    command.Parameters["@PrSafetyStock"].Value = txt_PrSafetyStock.Text;
+                    //if ("@PrID" != null || "@MaID" != null || "@Price" != null || "@PrJCode" != null || )
+                    //{
+                    //    command.CommandText = command + "AND ";
+                    //}
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "PrSafetyStock LIKE @PrSafetyStock ";
+                    ++andnum;
+                }
+                else if (txt_ScID.Text != "" && count == 6)
+                {
+                    command.Parameters.Add("@ScID", SqlDbType.VarChar);
+                    command.Parameters["@ScID"].Value = txt_ScID.Text;
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "ScID LIKE @ScID ";
+                    ++andnum;
+                }
+                else if (txt_PrModelNumber.Text != "" && count == 7)
+                {
+                    command.Parameters.Add("@PrModelNumber", SqlDbType.VarChar);
+                    command.Parameters["@PrModelNumber"].Value = txt_PrModelNumber.Text;
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "PrModelNumber LIKE @PrModelNumber ";
+                    ++andnum;
+                }
+                else if (txt_PrColor.Text != "" && count == 8)
+                {
+                    command.Parameters.Add("@PrColor", SqlDbType.NVarChar);
+                    command.Parameters["@PrColor"].Value = "%" + txt_PrColor.Text + "%";
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "PrColor LIKE @PrColor ";
+                    ++andnum;
+                }
+                else if (txt_PrReleaseDate.Text != "" && count == 9)
+                {
+                    command.Parameters.Add("@PrReleaseDate", SqlDbType.VarChar);
+                    command.Parameters["@PrReleaseDate"].Value = "%" + txt_PrReleaseDate.Text + "%";
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "PrReleaseDate LIKE @PrReleaseDate ";
+                    ++andnum;
+                }
+                else if (txt_PrHidden.Text != "" && count == 10)
+                {
+                    command.Parameters.Add("@PrHidden", SqlDbType.NVarChar);
+                    command.Parameters["@PrHidden"].Value = "%" + txt_PrHidden.Text + "%";
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "PrHidden LIKE @PrHidden ";
+                    ++andnum;
+                }
+                //2つ目以降の条件の前部にANDを接続
+                if (andnum != 0)
+                {
+                    AND = "AND ";
+                }
+                //最後にセミコロンを接続する
+                while (count == 10)
+                {
+                    command.CommandText = command.CommandText + ";";
+                    break;
+                }
+
+            }
+            try
+            {
+                //データベースに接続
+                conn.Open();
+                //SQL文の実行、データが  readerに格納される
+                SqlDataReader rd = command.ExecuteReader();
+                dataGridView_Product.Rows.Clear();
+
+
+                if (rd.HasRows)
+                {
+                    while(rd.Read())
+                    {
+                            dataGridView_Product.Rows.Add(rd["PrID"], rd["MaID"], rd["PrName"], rd["Price"],
+                                rd["PrJCode"], rd["PrSafetyStock"], rd["ScID"], rd["PrModelNumber"],
+                                rd["PrColor"], rd["PrReleaseDate"], rd["PrHidden"]);
+                    }
+                }
+            }
+            finally
+            {
+                //データベースを切断
+                conn.Close();
+            }
+        }
+        //public void ReadSingleRow(IDataRecord record)
+        //{
+        //    dataGridView_Product.Rows.Add();
+        //    {
+        //        record[0]; ,record[1],record[2]record[3],record[4],record[5],record[6],record[7],record[8],record[9],record[10],record[11];
+
+        //    }
+
+
+        //}
 
     }
 }
