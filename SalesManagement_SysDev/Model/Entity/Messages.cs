@@ -26,6 +26,9 @@ namespace SalesManagement_SysDev.Model.Entity
         //Client
         public const string errorNotFoundClient = "顧客情報が見つかりませんでした。";
 
+        //Stock
+        public const string errorNotFoundStock = "商品情報が見つかりませんでした。";
+
         // ***** ContentsManagement
         public const string errorConflict = "更新の競合が報告されました。";
 

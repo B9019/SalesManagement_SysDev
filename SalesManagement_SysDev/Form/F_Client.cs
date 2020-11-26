@@ -86,14 +86,14 @@ namespace SalesManagement_SysDev
         // 3.1顧客情報登録
         private void btn_regist_Click(object sender, EventArgs e)
         {
-            // 3.1.1妥当な商品情報取得
+            // 3.1.1妥当な顧客情報取得
             if (!Get_Client_Data_AtRegistration())
                 return;
 
-            // 3.1.2妥当な商品情報作成
+            // 3.1.2妥当な顧客情報作成
             var regClient = Generate_Data_AtRegistration();
 
-            // 3.1.3商品情報登録
+            // 3.1.3顧客情報登録
             if (!Generate_Registration(regClient))
                 return;
 
@@ -235,56 +235,56 @@ namespace SalesManagement_SysDev
             // 顧客ID
             if (txt_ClID.TextLength > 50)
             {
-                MessageBox.Show("メーカIDは4文字以下です");
+                MessageBox.Show("顧客IDは50文字以下で入力してください");
                 txt_ClID.Focus();
                 return false;
             }
             // 営業所ID
             if (txt_SoID.TextLength > 4)
             {
-                MessageBox.Show("商品IDは4文字以下です");
+                MessageBox.Show("営業所IDは4文字以下で入力してください");
                 txt_SoID.Focus();
                 return false;
             }
             // 顧客名
             if (txt_ClName.TextLength > 50)
             {
-                MessageBox.Show("商品名は50文字以下です");
+                MessageBox.Show("顧客名は50文字以下で入力してください");
                 txt_ClName.Focus();
                 return false;
             }
             //　住所
             if (txt_ClAddress.TextLength > 13)
             {
-                MessageBox.Show("JANコードは13文字以下です");
+                MessageBox.Show("住所は13文字以下で入力してください");
                 txt_ClAddress.Focus();
                 return false;
             }
             // 電話番号
             if (txt_ClPhone.TextLength > 2)
             {
-                MessageBox.Show("小分類IDは2文字以下です");
+                MessageBox.Show("電話番号は2文字以下で入力してください");
                 txt_ClPhone.Focus();
                 return false;
             }
             // 郵便番号
             if (txt_ClPostal.TextLength > 20)
             {
-                MessageBox.Show("型番は20文字以下です");
+                MessageBox.Show("郵便番号は20文字以下で入力してください");
                 txt_ClPostal.Focus();
                 return false;
             }
             //　FAX
             if (txt_ClFAX.TextLength > 20)
             {
-                MessageBox.Show("色は20文字以下です");
+                MessageBox.Show("FAXは20文字以下で入力してください");
                 txt_ClFAX.Focus();
                 return false;
             }
             //　非表示理由
             if (txt_ClHidden.TextLength > 9)
             {
-                MessageBox.Show("価格は9文字以下です");
+                MessageBox.Show("非表示は9文字以下で入力してください");
                 txt_ClHidden.Focus();
                 return false;
             }
@@ -841,6 +841,9 @@ namespace SalesManagement_SysDev
 
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
