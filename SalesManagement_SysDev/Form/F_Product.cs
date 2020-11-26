@@ -1094,17 +1094,17 @@ namespace SalesManagement_SysDev
                 //データベースに接続
                 conn.Open();
                 //SQL文の実行、データが  readerに格納される
-                SqlDataReader reader = command.ExecuteReader();
+                SqlDataReader rd = command.ExecuteReader();
+                dataGridView_Product.Rows.Clear();
 
-                if(reader.HasRows)
+
+                if (rd.HasRows)
                 {
-                    while(reader.Read())
+                    while(rd.Read())
                     {
-                        //ReadSingleRow((IDataRecord)reader);
-                        foreach (var r in reader)
-                        {
-                            dataGridView_Product.Rows.Add(r.PrID, r.MaID, r.PrName, p.Price, p.PrJCode, p.);
-                        }
+                            dataGridView_Product.Rows.Add(rd["PrID"], rd["MaID"], rd["PrName"], rd["Price"],
+                                rd["PrJCode"], rd["PrSafetyStock"], rd["ScID"], rd["PrModelNumber"],
+                                rd["PrColor"], rd["PrReleaseDate"], rd["PrHidden"]);
                     }
                 }
             }
@@ -1114,16 +1114,16 @@ namespace SalesManagement_SysDev
                 conn.Close();
             }
         }
-        public void ReadSingleRow(IDataRecord record)
-        {
-            dataGridView_Product.Rows.Add();
-            {
-                record[0]; ,record[1],record[2]record[3],record[4],record[5],record[6],record[7],record[8],record[9],record[10],record[11];
+        //public void ReadSingleRow(IDataRecord record)
+        //{
+        //    dataGridView_Product.Rows.Add();
+        //    {
+        //        record[0]; ,record[1],record[2]record[3],record[4],record[5],record[6],record[7],record[8],record[9],record[10],record[11];
 
-            }
+        //    }
 
 
-        }
+        //}
 
     }
 }
