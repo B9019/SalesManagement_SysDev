@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -34,7 +36,7 @@ namespace SalesManagement_SysDev
         private Messages _ms = new Messages();
 
         //// データベース処理モジュール（M_Division）
-        private M_OrderContents _Pr = new M_OrderContents();
+        private T_OrderContents _Pr = new T_OrderContents();
 
         // ***** プロパティ定義
 
@@ -159,92 +161,71 @@ namespace SalesManagement_SysDev
                 txt_OrDate.Focus();
                 return false;
             }
-            // 非表示理由
-            if (String.IsNullOrEmpty(txt_OrHidden.Text))
-            {
-                MessageBox.Show("非表示理由は必須項目です");
-                txt_OrHidden.Focus();
-                return false;
-            }
             ///// 入力内容の形式チェック /////
 
             //// 数値チェック ////
 
-            // メーカID
-            if (!_ic.NumericCheck(txt_MaID.Text, out errorMessage))
+            // 受注ID
+            if (!_ic.NumericCheck(txt_OrID.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
-                txt_MaID.Focus();
+                txt_OrID.Focus();
                 return false;
             }
-            //　商品ID
-            if (!_ic.NumericCheck(txt_PrID.Text, out errorMessage))
+            //　営業所ID
+            if (!_ic.NumericCheck(txt_SoID.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
-                txt_PrID.Focus();
+                txt_SoID.Focus();
                 return false;
             }
-            // 安全在庫数
-            if (!_ic.NumericCheck(txt_PrSafetyStock.Text, out errorMessage))
+            // 社員ID
+            if (!_ic.NumericCheck(txt_EmID.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
-                txt_PrSafetyStock.Focus();
+                txt_EmID.Focus();
                 return false;
             }
-            //  小分類ID
-            if (!_ic.NumericCheck(txt_ScID.Text, out errorMessage))
+            //  顧客ID
+            if (!_ic.NumericCheck(txt_ClID.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
-                txt_MaID.Focus();
+                txt_ClID.Focus();
                 return false;
             }
-            // 型番
-            if (!_ic.NumericCheck(txt_PrModelNumber.Text, out errorMessage))
+            // 顧客担当者名
+            if (!_ic.NumericCheck(txt_ClCharge.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
-                txt_PrModelNumber.Focus();
+                txt_ClCharge.Focus();
                 return false;
             }
-            // 価格
-            if (!_ic.NumericCheck(txt_Price.Text, out errorMessage))
+            // 受注年月日
+            if (!_ic.NumericCheck(txt_OrDate.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
-                txt_Price.Focus();
+                txt_OrDate.Focus();
                 return false;
             }
-
+           
             ////　文字チェック ////
 
-            //　商品名
-            if (!_ic.FullWidthCharCheck(txt_PrName.Text, out errorMessage))
+            // 顧客担当者名
+            if (!_ic.FullWidthCharCheck(txt_ClCharge.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
-                txt_PrID.Focus();
+                txt_ClCharge.Focus();
                 return false;
             }
-            // 　JANコードの文字チェック
-            if (!_ic.FullWidthCharCheck(txt_PrJCode.Text, out errorMessage))
+            // 　受注年月日の文字チェック
+            if (!_ic.FullWidthCharCheck(txt_OrDate.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
-                txt_PrJCode.Focus();
+                txt_OrDate.Focus();
                 return false;
             }
-            //　色の文字チェック
-            if (!_ic.FullWidthCharCheck(txt_PrColor.Text, out errorMessage))
-            {
-                MessageBox.Show(errorMessage);
-                txt_PrColor.Focus();
-                return false;
-            }
-            // 　備考の文字チェック
-            if (!_ic.FullWidthCharCheck(txt_memo.Text, out errorMessage))
-            {
-                MessageBox.Show(errorMessage);
-                txt_memo.Focus();
-                return false;
-            }
-
             /////文字数チェック/////
+            ///
             // メーカID
             if (txt_MaID.TextLength > 50)
             {
@@ -370,5 +351,6 @@ namespace SalesManagement_SysDev
 
         }
 
-        }
     }
+}
+}
