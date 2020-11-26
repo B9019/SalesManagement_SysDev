@@ -438,6 +438,12 @@
     <EmbeddedResource Include="Form\F_Product_update.resx">
       <DependentUpon>F_Product_update.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\F_Sale.resx">
+      <DependentUpon>F_Sale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\F_Shipment.resx">
+      <DependentUpon>F_Shipment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Stock.resx">
       <DependentUpon>F_Stock.cs</DependentUpon>
     </EmbeddedResource>
@@ -455,6 +461,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Shipment_update.resx">
       <DependentUpon>F_Shipment_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\F_Syukko.resx">
+      <DependentUpon>F_Syukko.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011060522507_InitialCreate.resx">
       <DependentUpon>202011060522507_InitialCreate.cs</DependentUpon>
