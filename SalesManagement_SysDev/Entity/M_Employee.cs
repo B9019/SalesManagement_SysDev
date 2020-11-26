@@ -29,6 +29,7 @@ namespace SalesManagement_SysDev
         //[Required]
         // public String EmBarcode { get; set; }    //社員バーコード		
         public int EmFlag { get; set; }             //社員管理フラグ
-        public String EmHidden { get; set; }	    //非表示理由		
+        public String EmHidden { get; set; }	    //非表示理由	
+        public String Emmemo { get; set; }          //備考
     }
 }
