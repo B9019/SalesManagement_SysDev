@@ -732,7 +732,8 @@ namespace SalesManagement_SysDev
 
             }
 
-        private void F_Chumon_Load_1(object sender, EventArgs e)
+
+        private void F_Chumon_Load_2(object sender, EventArgs e)
         {
 
         }

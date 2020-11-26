@@ -21,5 +21,10 @@ namespace SalesManagement_SysDev
         {
 
         }
+
+        private void F_Stock_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
