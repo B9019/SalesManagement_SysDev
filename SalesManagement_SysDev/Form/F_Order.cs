@@ -370,5 +370,9 @@ namespace SalesManagement_SysDev
 
         }
 
+        private void F_Order_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
