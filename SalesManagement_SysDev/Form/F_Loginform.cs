@@ -16,5 +16,45 @@ namespace SalesManagement_SysDev
         {
             InitializeComponent();
         }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_form_name_login_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_EmPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_EmID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EmPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EmID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_CleateDabase_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

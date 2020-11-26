@@ -70,6 +70,12 @@ namespace SalesManagement_SysDev
             InitializeComponent();
         }
 
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void F_Client_Load_1(object sender, EventArgs e)
         {
 
@@ -834,6 +840,7 @@ namespace SalesManagement_SysDev
             form_hattyu.ShowDialog();
 
         }
+
 
     }
 }

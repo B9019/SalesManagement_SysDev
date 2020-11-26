@@ -361,6 +361,12 @@
     <EmbeddedResource Include="Form\F_Client.resx">
       <DependentUpon>F_Client.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\F_Employee.resx">
+      <DependentUpon>F_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\F_Hattyu.resx">
+      <DependentUpon>F_Hattyu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\F_home.resx">
       <DependentUpon>F_home.cs</DependentUpon>
     </EmbeddedResource>
@@ -393,6 +399,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_login.resx">
       <DependentUpon>F_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\F_Loginform.resx">
+      <DependentUpon>F_Loginform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_login_log.resx">
       <DependentUpon>F_login_log.cs</DependentUpon>
