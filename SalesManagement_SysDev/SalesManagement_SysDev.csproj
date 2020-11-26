@@ -439,6 +439,9 @@
     <EmbeddedResource Include="Form\F_Sale.resx">
       <DependentUpon>F_Sale.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\F_Shipment.resx">
+      <DependentUpon>F_Shipment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Stock.resx">
       <DependentUpon>F_Stock.cs</DependentUpon>
     </EmbeddedResource>
