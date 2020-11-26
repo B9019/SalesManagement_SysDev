@@ -407,6 +407,7 @@
             this.btn_clear.TabIndex = 144;
             this.btn_clear.Text = "F7　入力クリア";
             this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_delete
             // 

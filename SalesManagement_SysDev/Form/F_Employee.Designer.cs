@@ -41,7 +41,7 @@
             this.発注管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_EmHidden = new System.Windows.Forms.TextBox();
-            this.txt_memo = new System.Windows.Forms.TextBox();
+            this.txt_Emmemo = new System.Windows.Forms.TextBox();
             this.lbl_EmHidden = new System.Windows.Forms.Label();
             this.lbl_memo = new System.Windows.Forms.Label();
             this.chk_hide_FLG = new System.Windows.Forms.CheckBox();
@@ -83,74 +83,85 @@
             // 商品管理ToolStripMenuItem
             // 
             this.商品管理ToolStripMenuItem.Name = "商品管理ToolStripMenuItem";
-            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.商品管理ToolStripMenuItem.Text = "商品管理";
+            this.商品管理ToolStripMenuItem.Click += new System.EventHandler(this.商品管理ToolStripMenuItem_Click);
             // 
             // 注文管理ToolStripMenuItem
             // 
             this.注文管理ToolStripMenuItem.Name = "注文管理ToolStripMenuItem";
-            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.注文管理ToolStripMenuItem.Text = "注文管理";
+            this.注文管理ToolStripMenuItem.Click += new System.EventHandler(this.注文管理ToolStripMenuItem_Click);
             // 
             // 入荷管理ToolStripMenuItem
             // 
             this.入荷管理ToolStripMenuItem.Name = "入荷管理ToolStripMenuItem";
-            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.入荷管理ToolStripMenuItem.Text = "入荷管理";
+            this.入荷管理ToolStripMenuItem.Click += new System.EventHandler(this.入荷管理ToolStripMenuItem_Click);
             // 
             // 出荷管理ToolStripMenuItem
             // 
             this.出荷管理ToolStripMenuItem.Name = "出荷管理ToolStripMenuItem";
-            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.出荷管理ToolStripMenuItem.Text = "出荷管理";
+            this.出荷管理ToolStripMenuItem.Click += new System.EventHandler(this.出荷管理ToolStripMenuItem_Click);
             // 
             // 在庫管理ToolStripMenuItem
             // 
             this.在庫管理ToolStripMenuItem.Name = "在庫管理ToolStripMenuItem";
-            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.在庫管理ToolStripMenuItem.Text = "在庫管理";
+            this.在庫管理ToolStripMenuItem.Click += new System.EventHandler(this.在庫管理ToolStripMenuItem_Click);
             // 
             // 入庫管理ToolStripMenuItem
             // 
             this.入庫管理ToolStripMenuItem.Name = "入庫管理ToolStripMenuItem";
-            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.入庫管理ToolStripMenuItem.Text = "入庫管理";
+            this.入庫管理ToolStripMenuItem.Click += new System.EventHandler(this.入庫管理ToolStripMenuItem_Click);
             // 
             // 出庫管理ToolStripMenuItem
             // 
             this.出庫管理ToolStripMenuItem.Name = "出庫管理ToolStripMenuItem";
-            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.出庫管理ToolStripMenuItem.Text = "出庫管理";
+            this.出庫管理ToolStripMenuItem.Click += new System.EventHandler(this.出庫管理ToolStripMenuItem_Click);
             // 
             // 社員管理ToolStripMenuItem
             // 
             this.社員管理ToolStripMenuItem.Name = "社員管理ToolStripMenuItem";
-            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.社員管理ToolStripMenuItem.Text = "社員管理";
+            this.社員管理ToolStripMenuItem.Click += new System.EventHandler(this.社員管理ToolStripMenuItem_Click);
             // 
             // 売上管理ToolStripMenuItem
             // 
             this.売上管理ToolStripMenuItem.Name = "売上管理ToolStripMenuItem";
-            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.売上管理ToolStripMenuItem.Text = "売上管理";
+            this.売上管理ToolStripMenuItem.Click += new System.EventHandler(this.売上管理ToolStripMenuItem_Click);
             // 
             // 受注管理ToolStripMenuItem
             // 
             this.受注管理ToolStripMenuItem.Name = "受注管理ToolStripMenuItem";
-            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.受注管理ToolStripMenuItem.Text = "受注管理";
+            this.受注管理ToolStripMenuItem.Click += new System.EventHandler(this.受注管理ToolStripMenuItem_Click);
             // 
             // 発注管理ToolStripMenuItem
             // 
             this.発注管理ToolStripMenuItem.Name = "発注管理ToolStripMenuItem";
-            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.発注管理ToolStripMenuItem.Text = "発注管理";
+            this.発注管理ToolStripMenuItem.Click += new System.EventHandler(this.発注管理ToolStripMenuItem_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.groupBox2.Controls.Add(this.txt_EmHidden);
-            this.groupBox2.Controls.Add(this.txt_memo);
+            this.groupBox2.Controls.Add(this.txt_Emmemo);
             this.groupBox2.Controls.Add(this.lbl_EmHidden);
             this.groupBox2.Controls.Add(this.lbl_memo);
             this.groupBox2.Controls.Add(this.chk_hide_FLG);
@@ -172,13 +183,13 @@
             this.txt_EmHidden.Size = new System.Drawing.Size(238, 19);
             this.txt_EmHidden.TabIndex = 77;
             // 
-            // txt_memo
+            // txt_Emmemo
             // 
-            this.txt_memo.Location = new System.Drawing.Point(8, 35);
-            this.txt_memo.Multiline = true;
-            this.txt_memo.Name = "txt_memo";
-            this.txt_memo.Size = new System.Drawing.Size(237, 19);
-            this.txt_memo.TabIndex = 70;
+            this.txt_Emmemo.Location = new System.Drawing.Point(8, 35);
+            this.txt_Emmemo.Multiline = true;
+            this.txt_Emmemo.Name = "txt_Emmemo";
+            this.txt_Emmemo.Size = new System.Drawing.Size(237, 19);
+            this.txt_Emmemo.TabIndex = 70;
             // 
             // lbl_EmHidden
             // 
@@ -251,8 +262,9 @@
             // 顧客管理ToolStripMenuItem
             // 
             this.顧客管理ToolStripMenuItem.Name = "顧客管理ToolStripMenuItem";
-            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.顧客管理ToolStripMenuItem.Text = "顧客管理";
+            this.顧客管理ToolStripMenuItem.Click += new System.EventHandler(this.顧客管理ToolStripMenuItem_Click);
             // 
             // groupBox3
             // 
@@ -407,6 +419,7 @@
             this.btn_delete.TabIndex = 177;
             this.btn_delete.Text = "F6 削除";
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_print
             // 
@@ -427,6 +440,7 @@
             this.btn_al.TabIndex = 175;
             this.btn_al.Text = "F4 一覧表示";
             this.btn_al.UseVisualStyleBackColor = false;
+            this.btn_al.Click += new System.EventHandler(this.btn_al_Click);
             // 
             // btn_update
             // 
@@ -437,6 +451,7 @@
             this.btn_update.TabIndex = 174;
             this.btn_update.Text = "F3 更新";
             this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_search
             // 
@@ -448,6 +463,7 @@
             this.btn_search.TabIndex = 172;
             this.btn_search.Text = "F1　検索";
             this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // btn_regist
             // 
@@ -497,8 +513,9 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem1.Text = "ログイン管理";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // btn_clear
             // 
@@ -509,6 +526,7 @@
             this.btn_clear.TabIndex = 178;
             this.btn_clear.Text = "F7 入力クリア";
             this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // F_Employee
             // 
@@ -558,7 +576,7 @@
         private System.Windows.Forms.ToolStripMenuItem 発注管理ToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txt_EmHidden;
-        private System.Windows.Forms.TextBox txt_memo;
+        private System.Windows.Forms.TextBox txt_Emmemo;
         private System.Windows.Forms.Label lbl_EmHidden;
         private System.Windows.Forms.Label lbl_memo;
         private System.Windows.Forms.CheckBox chk_hide_FLG;

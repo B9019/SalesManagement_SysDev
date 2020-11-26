@@ -1114,6 +1114,11 @@ namespace SalesManagement_SysDev
                 conn.Close();
             }
         }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+
+        }
         //public void ReadSingleRow(IDataRecord record)
         //{
         //    dataGridView_Product.Rows.Add();

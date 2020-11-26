@@ -60,10 +60,10 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     string maker;
                     try
                     {
-                        maker = (product.MaID != -1) ? db.M_Makers.Single(m => m.MaID == product.MaID).MaName : string.Empty;
+                        maker = (product.PrID != -1) ? db.M_Products.Single(m => m.MaID == product.PrID).PrName: string.Empty;
 
                         // 無効表示
-                        if (db.M_Makers.Single(m => m.MaID == product.MaID).MaFlag != 0) maker = "[" + maker + "]";
+                        if (db.M_Products.Single(m => m.PrID == product.PrID).PrFlag != 0) maker = "[" + maker + "]";
                     }
                     catch
                     {
