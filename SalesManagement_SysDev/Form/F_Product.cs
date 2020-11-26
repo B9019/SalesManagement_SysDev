@@ -744,7 +744,7 @@ namespace SalesManagement_SysDev
             txt_PrJCode.Clear();
             txt_memo.Clear();
             txt_PrHidden.Clear();
-            chk_PrHidden.Checked = false;
+            chk_hide_FLG.Checked = false;
 
             //// ボタンリセット
             //btn_regist.Enabled = true;
@@ -942,7 +942,7 @@ namespace SalesManagement_SysDev
             txt_PrModelNumber.Text = Convert.ToString(id8);
             txt_PrColor.Text = Convert.ToString(id9);
             txt_PrReleaseDate.Text = Convert.ToString(id10);
-            chk_PrHidden.Checked = Convert.ToBoolean(id11);
+            chk_hide_FLG.Checked = Convert.ToBoolean(id11);
             txt_PrHidden.Text = Convert.ToString(id12);
             txt_memo.Text = Convert.ToString(id13);
 

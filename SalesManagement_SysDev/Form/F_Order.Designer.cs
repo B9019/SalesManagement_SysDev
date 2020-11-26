@@ -485,7 +485,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "F_Order";
             this.Text = "販売在庫管理システム　受注情報管理画面";
-            this.Load += new System.EventHandler(this.F_Order_Load_1);
+            //this.Load += new System.EventHandler(this.F_Order_Load_1);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);

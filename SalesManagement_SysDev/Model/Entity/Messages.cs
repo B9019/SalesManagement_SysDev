@@ -28,6 +28,9 @@ namespace SalesManagement_SysDev.Model.Entity
 
         //Stock
         public const string errorNotFoundStock = "商品情報が見つかりませんでした。";
+        //Employee
+        public const string errorNotFoundEmployee = "社員情報が見つかりませんでした。";
+
 
         // ***** ContentsManagement
         public const string errorConflict = "更新の競合が報告されました。";

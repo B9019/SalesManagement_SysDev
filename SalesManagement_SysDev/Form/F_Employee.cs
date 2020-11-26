@@ -143,13 +143,6 @@ namespace SalesManagement_SysDev
                 txt_EmHiredate.Focus();
                 return false;
             }
-            //　非表示理由
-            if (String.IsNullOrEmpty(txt_EmHidden.Text))
-            {
-                MessageBox.Show("非表示理由は必須項目です");
-                txt_EmHidden.Focus();
-                return false;
-            }
             ///// 入力内容の形式チェック /////
 
             //// 数値チェック ////
@@ -175,6 +168,16 @@ namespace SalesManagement_SysDev
                 txt_PoID.Focus();
                 return false;
             }
+
+            //// 電話番号チェック////
+            // 　電話番号の文字チェック
+            if (!_ic.PhoneNoCheck(txt_EmPhone.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_EmPhone.Focus();
+                return false;
+            }
+
             ////　文字チェック ////
 
             //　社員名
@@ -185,19 +188,19 @@ namespace SalesManagement_SysDev
                 return false;
             }
             // 　入社年月日の文字チェック
-            if (!_ic.FullWidthCharCheck(txt_EmHiredate.Text, out errorMessage))
+            if (!_ic.DateFormCheck(txt_EmHiredate.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
                 txt_EmHiredate.Focus();
                 return false;
             }
-            // 　電話番号の文字チェック
-            if (!_ic.FullWidthCharCheck(txt_EmPhone.Text, out errorMessage))
-            {
-                MessageBox.Show(errorMessage);
-                txt_EmPhone.Focus();
-                return false;
-            }
+            //// 　電話番号の文字チェック
+            //if (!_ic.FullWidthCharCheck(txt_EmPhone.Text, out errorMessage))
+            //{
+            //    MessageBox.Show(errorMessage);
+            //    txt_EmPhone.Focus();
+            //    return false;
+            //}
             // 　備考の文字チェック
             if (!_ic.FullWidthCharCheck(txt_Emmemo.Text, out errorMessage))
             {
