@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_Stock : Form
+    public partial class DeleteConfirmForm : Form
     {
-        public F_Stock()
+        public DeleteConfirmForm()
         {
             InitializeComponent();
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void F_Stock_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

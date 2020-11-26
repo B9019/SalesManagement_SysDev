@@ -60,6 +60,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\M_Client.cs" />
+    <Compile Include="Entity\M_Employee.cs" />
+    <Compile Include="Entity\M_MajorCassification.cs" />
+    <Compile Include="Entity\M_Maker.cs" />
+    <Compile Include="Entity\M_Position.cs" />
+    <Compile Include="Entity\M_Product.cs" />
+    <Compile Include="Entity\M_SalesOffice.cs" />
+    <Compile Include="Entity\M_SmallClassification.cs" />
+    <Compile Include="Entity\T_Arrival.cs" />
+    <Compile Include="Entity\T_ArrivalDetail.cs" />
+    <Compile Include="Entity\T_Chumon.cs" />
+    <Compile Include="Entity\T_ChumonDetail.cs" />
+    <Compile Include="Entity\T_Hattyu.cs" />
+    <Compile Include="Entity\T_HattyuDetail.cs" />
+    <Compile Include="Entity\T_LoginHistory.cs" />
+    <Compile Include="Entity\T_OperationHistory.cs" />
+    <Compile Include="Entity\T_Order.cs" />
+    <Compile Include="Entity\T_OrderDetail.cs" />
+    <Compile Include="Entity\T_Sale.cs" />
+    <Compile Include="Entity\T_SaleDetail.cs" />
+    <Compile Include="Entity\T_Shipment.cs" />
+    <Compile Include="Entity\T_ShipmentDetail.cs" />
+    <Compile Include="Entity\T_Stock.cs" />
+    <Compile Include="Entity\T_Syukko.cs" />
+    <Compile Include="Entity\T_SyukkoDetail.cs" />
+    <Compile Include="Entity\T_Warehousing.cs" />
+    <Compile Include="Entity\T_WarehousingDetail.cs" />
+    <Compile Include="Form\DeleteConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DeleteConfirmForm.Designer.cs">
+      <DependentUpon>DeleteConfirmForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\F_Arrival.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +188,12 @@
     </Compile>
     <Compile Include="Form\F_login.Designer.cs">
       <DependentUpon>F_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\F_Loginform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\F_Loginform.Designer.cs">
+      <DependentUpon>F_Loginform.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\F_login_log.cs">
       <SubType>Form</SubType>
@@ -282,42 +321,51 @@
     <Compile Include="Form\F_Warehousing.Designer.cs">
       <DependentUpon>F_Warehousing.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011060522507_InitialCreate.cs" />
+    <Compile Include="Migrations\202011060522507_InitialCreate.Designer.cs">
+      <DependentUpon>202011060522507_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011211819133_Add_Migration.cs" />
+    <Compile Include="Migrations\202011211819133_Add_Migration.designer.cs">
+      <DependentUpon>202011211819133_Add_Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011251417569_Add-Migration2.cs" />
+    <Compile Include="Migrations\202011251417569_Add-Migration2.designer.cs">
+      <DependentUpon>202011251417569_Add-Migration2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\CommonFunction.cs" />
+    <Compile Include="Model\Constants.cs" />
+    <Compile Include="Model\ContentsManagement\Common\MessageCommon.cs" />
+    <Compile Include="Model\ContentsManagement\Common\StaticCommon.cs" />
+    <Compile Include="Model\ContentsManagement\M_ClientContents.cs" />
+    <Compile Include="Model\ContentsManagement\T_ChumonContents.cs" />
+    <Compile Include="Model\ContentsManagement\M_ProductContents.cs" />
     <Compile Include="Model\ContentsManagement\StaffContents.cs" />
-    <Compile Include="Model\Entity\CommonFunction.cs" />
-    <Compile Include="Model\Entity\Constants.cs" />
-    <Compile Include="Model\Entity\Db\M_Client.cs" />
-    <Compile Include="Model\Entity\Db\M_Employee.cs" />
-    <Compile Include="Model\Entity\Db\M_MajorCassification.cs" />
-    <Compile Include="Model\Entity\Db\M_Maker.cs" />
-    <Compile Include="Model\Entity\Db\M_Position.cs" />
-    <Compile Include="Model\Entity\Db\M_Product.cs" />
-    <Compile Include="Model\Entity\Db\M_SalesOffice.cs" />
-    <Compile Include="Model\Entity\Db\M_SmallClassification.cs" />
-    <Compile Include="Model\Entity\Db\T_Arrival.cs" />
-    <Compile Include="Model\Entity\Db\T_ArrivalDetail.cs" />
-    <Compile Include="Model\Entity\Db\T_Chumon.cs" />
-    <Compile Include="Model\Entity\Db\T_ChumonDetail.cs" />
-    <Compile Include="Model\Entity\Db\T_Hattyu.cs" />
-    <Compile Include="Model\Entity\Db\T_HattyuDetail.cs" />
-    <Compile Include="Model\Entity\Db\T_LoginHistory.cs" />
-    <Compile Include="Model\Entity\Db\T_OperationHistory.cs" />
-    <Compile Include="Model\Entity\Db\T_Order.cs" />
-    <Compile Include="Model\Entity\Db\T_OrderDetail.cs" />
-    <Compile Include="Model\Entity\Db\T_Sale.cs" />
-    <Compile Include="Model\Entity\Db\T_SaleDetail.cs" />
-    <Compile Include="Model\Entity\Db\T_Shipment.cs" />
-    <Compile Include="Model\Entity\Db\T_ShipmentDetail.cs" />
-    <Compile Include="Model\Entity\Db\T_Stock.cs" />
-    <Compile Include="Model\Entity\Db\T_Syukko.cs" />
-    <Compile Include="Model\Entity\Db\T_SyukkoDetail.cs" />
-    <Compile Include="Model\Entity\Db\T_Warehousing.cs" />
-    <Compile Include="Model\Entity\Db\T_WarehousingDetail.cs" />
-    <Compile Include="Model\Entity\InputCheck.cs" />
+    <Compile Include="Model\Entity\Disp\M_DispClient.cs" />
+    <Compile Include="Model\Entity\Disp\M_DispProduct.cs" />
+    <Compile Include="Model\Entity\Disp\T_DispChumon.cs" />
+    <Compile Include="Model\Entity\Messages.cs" />
+    <Compile Include="Model\Entity\OperationLog.cs" />
+    <Compile Include="Model\Entity\SortableBindingList.cs" />
+    <Compile Include="Model\InputCheck.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalesManagement_DevContext.cs" />
+    <EmbeddedResource Include="Form\DeleteConfirmForm.resx">
+      <DependentUpon>DeleteConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\F_Chumon.resx">
+      <DependentUpon>F_Chumon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Client.resx">
       <DependentUpon>F_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\F_Employee.resx">
+      <DependentUpon>F_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\F_Hattyu.resx">
+      <DependentUpon>F_Hattyu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_home.resx">
       <DependentUpon>F_home.cs</DependentUpon>
@@ -352,11 +400,17 @@
     <EmbeddedResource Include="Form\F_login.resx">
       <DependentUpon>F_login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\F_Loginform.resx">
+      <DependentUpon>F_Loginform.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\F_login_log.resx">
       <DependentUpon>F_login_log.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_login_regist.resx">
       <DependentUpon>F_login_regist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\F_Order.resx">
+      <DependentUpon>F_Order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Order_Delete.resx">
       <DependentUpon>F_Order_Delete.cs</DependentUpon>
@@ -382,6 +436,9 @@
     <EmbeddedResource Include="Form\F_Product_update.resx">
       <DependentUpon>F_Product_update.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\F_Stock.resx">
+      <DependentUpon>F_Stock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Stock_search.resx">
       <DependentUpon>F_Stock_search.cs</DependentUpon>
     </EmbeddedResource>
@@ -396,6 +453,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\F_Shipment_update.resx">
       <DependentUpon>F_Shipment_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011060522507_InitialCreate.resx">
+      <DependentUpon>202011060522507_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011211819133_Add_Migration.resx">
+      <DependentUpon>202011211819133_Add_Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011251417569_Add-Migration2.resx">
+      <DependentUpon>202011251417569_Add-Migration2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -421,9 +487,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\ContentsManagement\Common\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>

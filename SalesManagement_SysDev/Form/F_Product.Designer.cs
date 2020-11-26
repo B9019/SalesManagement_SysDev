@@ -43,7 +43,6 @@
             this.社員管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.売上管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.発注管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.バーコード管理 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_MaID = new System.Windows.Forms.TextBox();
             this.txt_PrID = new System.Windows.Forms.TextBox();
@@ -72,7 +71,7 @@
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_regist = new System.Windows.Forms.Button();
             this.btn_search = new System.Windows.Forms.Button();
-            this.dataGridView_Product_regist = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Product = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_memo = new System.Windows.Forms.TextBox();
@@ -83,7 +82,7 @@
             this.PrJCode = new System.Windows.Forms.Label();
             this.menuStrip2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,8 +115,7 @@
             this.出庫管理ToolStripMenuItem,
             this.社員管理ToolStripMenuItem,
             this.売上管理ToolStripMenuItem,
-            this.発注管理ToolStripMenuItem,
-            this.バーコード管理});
+            this.発注管理ToolStripMenuItem});
             this.メニューToolStripMenuItem.Name = "メニューToolStripMenuItem";
             this.メニューToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.メニューToolStripMenuItem.Text = "管理メニュー";
@@ -125,99 +123,80 @@
             // ログイン管理toolStripMenuItem1
             // 
             this.ログイン管理toolStripMenuItem1.Name = "ログイン管理toolStripMenuItem1";
-            this.ログイン管理toolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.ログイン管理toolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
             this.ログイン管理toolStripMenuItem1.Text = "ログイン管理";
-            this.ログイン管理toolStripMenuItem1.Click += new System.EventHandler(this.ログイン管理toolStripMenuItem1_Click);
             // 
             // 顧客管理ToolStripMenuItem
             // 
             this.顧客管理ToolStripMenuItem.Name = "顧客管理ToolStripMenuItem";
-            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.顧客管理ToolStripMenuItem.Text = "顧客管理";
-            this.顧客管理ToolStripMenuItem.Click += new System.EventHandler(this.顧客管理ToolStripMenuItem_Click);
             // 
             // 商品管理ToolStripMenuItem
             // 
             this.商品管理ToolStripMenuItem.Name = "商品管理ToolStripMenuItem";
-            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.商品管理ToolStripMenuItem.Text = "商品管理";
-            this.商品管理ToolStripMenuItem.Click += new System.EventHandler(this.商品管理ToolStripMenuItem_Click);
             // 
             // 受注管理ToolStripMenuItem
             // 
             this.受注管理ToolStripMenuItem.Name = "受注管理ToolStripMenuItem";
-            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.受注管理ToolStripMenuItem.Text = "受注管理";
-            this.受注管理ToolStripMenuItem.Click += new System.EventHandler(this.受注管理ToolStripMenuItem_Click);
             // 
             // 注文管理ToolStripMenuItem
             // 
             this.注文管理ToolStripMenuItem.Name = "注文管理ToolStripMenuItem";
-            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.注文管理ToolStripMenuItem.Text = "注文管理";
-            this.注文管理ToolStripMenuItem.Click += new System.EventHandler(this.注文管理ToolStripMenuItem_Click);
             // 
             // 入荷管理ToolStripMenuItem
             // 
             this.入荷管理ToolStripMenuItem.Name = "入荷管理ToolStripMenuItem";
-            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.入荷管理ToolStripMenuItem.Text = "入荷管理";
-            this.入荷管理ToolStripMenuItem.Click += new System.EventHandler(this.入荷管理ToolStripMenuItem_Click);
             // 
             // 出荷管理ToolStripMenuItem
             // 
             this.出荷管理ToolStripMenuItem.Name = "出荷管理ToolStripMenuItem";
-            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.出荷管理ToolStripMenuItem.Text = "出荷管理";
-            this.出荷管理ToolStripMenuItem.Click += new System.EventHandler(this.出荷管理ToolStripMenuItem_Click);
             // 
             // 在庫管理ToolStripMenuItem
             // 
             this.在庫管理ToolStripMenuItem.Name = "在庫管理ToolStripMenuItem";
-            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.在庫管理ToolStripMenuItem.Text = "在庫管理";
-            this.在庫管理ToolStripMenuItem.Click += new System.EventHandler(this.在庫管理ToolStripMenuItem_Click);
             // 
             // 入庫管理ToolStripMenuItem
             // 
             this.入庫管理ToolStripMenuItem.Name = "入庫管理ToolStripMenuItem";
-            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.入庫管理ToolStripMenuItem.Text = "入庫管理";
-            this.入庫管理ToolStripMenuItem.Click += new System.EventHandler(this.入庫管理ToolStripMenuItem_Click);
             // 
             // 出庫管理ToolStripMenuItem
             // 
             this.出庫管理ToolStripMenuItem.Name = "出庫管理ToolStripMenuItem";
-            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.出庫管理ToolStripMenuItem.Text = "出庫管理";
-            this.出庫管理ToolStripMenuItem.Click += new System.EventHandler(this.出庫管理ToolStripMenuItem_Click);
             // 
             // 社員管理ToolStripMenuItem
             // 
             this.社員管理ToolStripMenuItem.Name = "社員管理ToolStripMenuItem";
-            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.社員管理ToolStripMenuItem.Text = "社員管理";
-            this.社員管理ToolStripMenuItem.Click += new System.EventHandler(this.社員管理ToolStripMenuItem_Click);
             // 
             // 売上管理ToolStripMenuItem
             // 
             this.売上管理ToolStripMenuItem.Name = "売上管理ToolStripMenuItem";
-            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.売上管理ToolStripMenuItem.Text = "売上管理";
-            this.売上管理ToolStripMenuItem.Click += new System.EventHandler(this.売上管理ToolStripMenuItem_Click);
             // 
             // 発注管理ToolStripMenuItem
             // 
             this.発注管理ToolStripMenuItem.Name = "発注管理ToolStripMenuItem";
-            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.発注管理ToolStripMenuItem.Text = "発注管理";
-            this.発注管理ToolStripMenuItem.Click += new System.EventHandler(this.発注管理ToolStripMenuItem_Click);
-            // 
-            // バーコード管理
-            // 
-            this.バーコード管理.Name = "バーコード管理";
-            this.バーコード管理.Size = new System.Drawing.Size(140, 22);
-            this.バーコード管理.Text = "バーコード管理";
             // 
             // groupBox1
             // 
@@ -265,7 +244,7 @@
             // 
             this.MaID.AutoSize = true;
             this.MaID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.MaID.Location = new System.Drawing.Point(48, 22);
+            this.MaID.Location = new System.Drawing.Point(48, 18);
             this.MaID.Name = "MaID";
             this.MaID.Size = new System.Drawing.Size(43, 12);
             this.MaID.TabIndex = 49;
@@ -273,7 +252,7 @@
             // 
             // txt_PrColor
             // 
-            this.txt_PrColor.Location = new System.Drawing.Point(505, 19);
+            this.txt_PrColor.Location = new System.Drawing.Point(505, 15);
             this.txt_PrColor.Name = "txt_PrColor";
             this.txt_PrColor.Size = new System.Drawing.Size(183, 19);
             this.txt_PrColor.TabIndex = 114;
@@ -282,7 +261,7 @@
             // 
             this.PrColor.AutoSize = true;
             this.PrColor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrColor.Location = new System.Drawing.Point(475, 22);
+            this.PrColor.Location = new System.Drawing.Point(475, 18);
             this.PrColor.Name = "PrColor";
             this.PrColor.Size = new System.Drawing.Size(17, 12);
             this.PrColor.TabIndex = 109;
@@ -331,7 +310,7 @@
             // 
             // txt_PrSafetyStock
             // 
-            this.txt_PrSafetyStock.Location = new System.Drawing.Point(505, 96);
+            this.txt_PrSafetyStock.Location = new System.Drawing.Point(505, 100);
             this.txt_PrSafetyStock.Name = "txt_PrSafetyStock";
             this.txt_PrSafetyStock.Size = new System.Drawing.Size(183, 19);
             this.txt_PrSafetyStock.TabIndex = 112;
@@ -350,7 +329,7 @@
             // 
             this.PrSafetyStock.AutoSize = true;
             this.PrSafetyStock.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrSafetyStock.Location = new System.Drawing.Point(432, 99);
+            this.PrSafetyStock.Location = new System.Drawing.Point(430, 103);
             this.PrSafetyStock.Name = "PrSafetyStock";
             this.PrSafetyStock.Size = new System.Drawing.Size(65, 12);
             this.PrSafetyStock.TabIndex = 107;
@@ -394,7 +373,7 @@
             // 
             this.ScID.AutoSize = true;
             this.ScID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ScID.Location = new System.Drawing.Point(39, 96);
+            this.ScID.Location = new System.Drawing.Point(40, 93);
             this.ScID.Name = "ScID";
             this.ScID.Size = new System.Drawing.Size(52, 12);
             this.ScID.TabIndex = 102;
@@ -421,74 +400,86 @@
             // 
             // btn_clear
             // 
+            this.btn_clear.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_clear.Location = new System.Drawing.Point(617, 625);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(86, 23);
             this.btn_clear.TabIndex = 144;
             this.btn_clear.Text = "F7　入力クリア";
-            this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.UseVisualStyleBackColor = false;
             // 
             // btn_delete
             // 
+            this.btn_delete.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_delete.Location = new System.Drawing.Point(536, 625);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(75, 23);
             this.btn_delete.TabIndex = 143;
             this.btn_delete.Text = "F6　削除";
-            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_print
             // 
+            this.btn_print.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_print.Location = new System.Drawing.Point(455, 625);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(75, 23);
             this.btn_print.TabIndex = 142;
             this.btn_print.Text = "F5　印刷";
-            this.btn_print.UseVisualStyleBackColor = true;
+            this.btn_print.UseVisualStyleBackColor = false;
             // 
             // btn_all
             // 
+            this.btn_all.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_all.Location = new System.Drawing.Point(364, 625);
             this.btn_all.Name = "btn_all";
             this.btn_all.Size = new System.Drawing.Size(85, 23);
             this.btn_all.TabIndex = 141;
             this.btn_all.Text = "F4　一覧表示";
-            this.btn_all.UseVisualStyleBackColor = true;
+            this.btn_all.UseVisualStyleBackColor = false;
+            this.btn_all.Click += new System.EventHandler(this.btn_all_Click);
             // 
             // btn_update
             // 
+            this.btn_update.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_update.Location = new System.Drawing.Point(283, 625);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(75, 23);
             this.btn_update.TabIndex = 140;
             this.btn_update.Text = "F3　更新";
-            this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_regist
             // 
+            this.btn_regist.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_regist.Location = new System.Drawing.Point(202, 625);
             this.btn_regist.Name = "btn_regist";
             this.btn_regist.Size = new System.Drawing.Size(75, 23);
             this.btn_regist.TabIndex = 139;
             this.btn_regist.Text = "F2　登録";
-            this.btn_regist.UseVisualStyleBackColor = true;
+            this.btn_regist.UseVisualStyleBackColor = false;
             this.btn_regist.Click += new System.EventHandler(this.btn_regist_Click);
             // 
             // btn_search
             // 
+            this.btn_search.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_search.Location = new System.Drawing.Point(120, 625);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(75, 23);
             this.btn_search.TabIndex = 138;
             this.btn_search.Text = "F1　検索";
-            this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
-            // dataGridView_Product_regist
+            // dataGridView_Product
             // 
-            this.dataGridView_Product_regist.Location = new System.Drawing.Point(53, 360);
-            this.dataGridView_Product_regist.Name = "dataGridView_Product_regist";
-            this.dataGridView_Product_regist.Size = new System.Drawing.Size(741, 237);
-            this.dataGridView_Product_regist.TabIndex = 137;
+            this.dataGridView_Product.Location = new System.Drawing.Point(53, 360);
+            this.dataGridView_Product.Name = "dataGridView_Product";
+            this.dataGridView_Product.Size = new System.Drawing.Size(741, 237);
+            this.dataGridView_Product.TabIndex = 137;
+            this.dataGridView_Product.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Product_regist_CellDoubleClick);
             // 
             // groupBox2
             // 
@@ -589,7 +580,7 @@
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_regist);
             this.Controls.Add(this.btn_search);
-            this.Controls.Add(this.dataGridView_Product_regist);
+            this.Controls.Add(this.dataGridView_Product);
             this.Controls.Add(this.menuStrip2);
             this.Name = "F_Product";
             this.Text = "販売在庫管理システム　商品情報管理画面";
@@ -598,7 +589,7 @@
             this.menuStrip2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -623,7 +614,6 @@
         private System.Windows.Forms.ToolStripMenuItem 社員管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 売上管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 発注管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem バーコード管理;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox chk_PrHidden;
         private System.Windows.Forms.Label lbl_PrHidden;
@@ -638,7 +628,7 @@
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_regist;
         private System.Windows.Forms.Button btn_search;
-        private System.Windows.Forms.DataGridView dataGridView_Product_regist;
+        private System.Windows.Forms.DataGridView dataGridView_Product;
         private System.Windows.Forms.TextBox txt_PrColor;
         private System.Windows.Forms.Label PrColor;
         private System.Windows.Forms.TextBox txt_PrReleaseDate;
