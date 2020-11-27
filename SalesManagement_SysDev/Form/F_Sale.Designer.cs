@@ -51,7 +51,7 @@
             this.txt_ClID = new System.Windows.Forms.TextBox();
             this.txt_EmID = new System.Windows.Forms.TextBox();
             this.txt_OrID = new System.Windows.Forms.TextBox();
-            this.dataGridView_Chumon_regist = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Sale = new System.Windows.Forms.DataGridView();
             this.btn_sertch = new System.Windows.Forms.Button();
             this.txt_SoID = new System.Windows.Forms.TextBox();
             this.btn_update = new System.Windows.Forms.Button();
@@ -63,14 +63,14 @@
             this.btn_all = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_regist = new System.Windows.Forms.Button();
-            this.txt_ChHidden = new System.Windows.Forms.TextBox();
-            this.txt_memo = new System.Windows.Forms.TextBox();
+            this.txt_SaHidden = new System.Windows.Forms.TextBox();
+            this.txt_Samemo = new System.Windows.Forms.TextBox();
             this.lbl_ArHidden = new System.Windows.Forms.Label();
             this.lbl_memo = new System.Windows.Forms.Label();
             this.chk_hide_FLG = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon_regist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Sale)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -256,12 +256,12 @@
             this.txt_OrID.Size = new System.Drawing.Size(173, 19);
             this.txt_OrID.TabIndex = 63;
             // 
-            // dataGridView_Chumon_regist
+            // dataGridView_Sale
             // 
-            this.dataGridView_Chumon_regist.Location = new System.Drawing.Point(8, 158);
-            this.dataGridView_Chumon_regist.Name = "dataGridView_Chumon_regist";
-            this.dataGridView_Chumon_regist.Size = new System.Drawing.Size(763, 442);
-            this.dataGridView_Chumon_regist.TabIndex = 174;
+            this.dataGridView_Sale.Location = new System.Drawing.Point(8, 158);
+            this.dataGridView_Sale.Name = "dataGridView_Sale";
+            this.dataGridView_Sale.Size = new System.Drawing.Size(763, 442);
+            this.dataGridView_Sale.TabIndex = 174;
             // 
             // btn_sertch
             // 
@@ -385,22 +385,23 @@
             this.btn_regist.TabIndex = 177;
             this.btn_regist.Text = "F2 登録";
             this.btn_regist.UseVisualStyleBackColor = false;
+            this.btn_regist.Click += new System.EventHandler(this.btn_regist_Click);
             // 
-            // txt_ChHidden
+            // txt_SaHidden
             // 
-            this.txt_ChHidden.Location = new System.Drawing.Point(8, 101);
-            this.txt_ChHidden.Multiline = true;
-            this.txt_ChHidden.Name = "txt_ChHidden";
-            this.txt_ChHidden.Size = new System.Drawing.Size(238, 19);
-            this.txt_ChHidden.TabIndex = 77;
+            this.txt_SaHidden.Location = new System.Drawing.Point(8, 101);
+            this.txt_SaHidden.Multiline = true;
+            this.txt_SaHidden.Name = "txt_SaHidden";
+            this.txt_SaHidden.Size = new System.Drawing.Size(238, 19);
+            this.txt_SaHidden.TabIndex = 77;
             // 
-            // txt_memo
+            // txt_Samemo
             // 
-            this.txt_memo.Location = new System.Drawing.Point(8, 35);
-            this.txt_memo.Multiline = true;
-            this.txt_memo.Name = "txt_memo";
-            this.txt_memo.Size = new System.Drawing.Size(237, 19);
-            this.txt_memo.TabIndex = 70;
+            this.txt_Samemo.Location = new System.Drawing.Point(8, 35);
+            this.txt_Samemo.Multiline = true;
+            this.txt_Samemo.Name = "txt_Samemo";
+            this.txt_Samemo.Size = new System.Drawing.Size(237, 19);
+            this.txt_Samemo.TabIndex = 70;
             // 
             // lbl_ArHidden
             // 
@@ -437,8 +438,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox2.Controls.Add(this.txt_ChHidden);
-            this.groupBox2.Controls.Add(this.txt_memo);
+            this.groupBox2.Controls.Add(this.txt_SaHidden);
+            this.groupBox2.Controls.Add(this.txt_Samemo);
             this.groupBox2.Controls.Add(this.lbl_ArHidden);
             this.groupBox2.Controls.Add(this.lbl_memo);
             this.groupBox2.Controls.Add(this.chk_hide_FLG);
@@ -471,7 +472,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(780, 609);
-            this.Controls.Add(this.dataGridView_Chumon_regist);
+            this.Controls.Add(this.dataGridView_Sale);
             this.Controls.Add(this.btn_sertch);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_clear);
@@ -486,7 +487,7 @@
             this.Name = "F_Sale";
             this.Text = "販売在庫管理システム　売上情報管理画面";
             this.Load += new System.EventHandler(this.F_Sale_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon_regist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Sale)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -523,7 +524,7 @@
         private System.Windows.Forms.TextBox txt_ClID;
         private System.Windows.Forms.TextBox txt_EmID;
         private System.Windows.Forms.TextBox txt_OrID;
-        private System.Windows.Forms.DataGridView dataGridView_Chumon_regist;
+        private System.Windows.Forms.DataGridView dataGridView_Sale;
         private System.Windows.Forms.Button btn_sertch;
         private System.Windows.Forms.TextBox txt_SoID;
         private System.Windows.Forms.Button btn_update;
@@ -535,8 +536,8 @@
         private System.Windows.Forms.Button btn_all;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_regist;
-        private System.Windows.Forms.TextBox txt_ChHidden;
-        private System.Windows.Forms.TextBox txt_memo;
+        private System.Windows.Forms.TextBox txt_SaHidden;
+        private System.Windows.Forms.TextBox txt_Samemo;
         private System.Windows.Forms.Label lbl_ArHidden;
         private System.Windows.Forms.Label lbl_memo;
         private System.Windows.Forms.CheckBox chk_hide_FLG;
