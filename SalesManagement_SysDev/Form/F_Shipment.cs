@@ -69,6 +69,7 @@ namespace SalesManagement_SysDev
 
         private void F_Shipment_Load(object sender, EventArgs e)
         {
+
             出荷管理ToolStripMenuItem.Enabled = false;
         }
 
@@ -665,6 +666,7 @@ namespace SalesManagement_SysDev
             txt_ShFinishDate.Text = Convert.ToString(id6);
             txt_ShHidden.Text = Convert.ToString(id7);
             txt_memo.Text = Convert.ToString(id8);
+
 
         }
     }

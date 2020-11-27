@@ -105,12 +105,12 @@ namespace SalesManagement_SysDev
                 return;
 
         }
-        // 
-        //
-        //4.1.1　妥当な商品データ取得（新規登録）
-        //
-        //
-        private bool Get_Product_Data_AtRegistration()
+
+    //
+    //4.1.1　妥当な商品データ取得（新規登録）
+    //
+    //
+    private bool Get_Product_Data_AtRegistration()
         {
             // 商品データの形式チェック
             string errorMessage = string.Empty;
@@ -405,6 +405,7 @@ namespace SalesManagement_SysDev
             ProductUpdate(regProduct);
 
         }
+
         //
         //
         // 5.3.2.1 妥当な商品データ取得（更新）
@@ -886,11 +887,12 @@ namespace SalesManagement_SysDev
             form_hattyu.ShowDialog();
 
         }
-
-        private void btn_all_Click(object sender, EventArgs e)
+        private void btn_all_Click_1(object sender, EventArgs e)
         {
             fncAllSelect();
+
         }
+
         private void fncAllSelect()
         {
             // データ取得&表示（データバインド）
@@ -1114,6 +1116,24 @@ namespace SalesManagement_SysDev
                 conn.Close();
             }
         }
+
+        private void btn_delete_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void btn_sertch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
         //public void ReadSingleRow(IDataRecord record)
         //{
         //    dataGridView_Product.Rows.Add();
