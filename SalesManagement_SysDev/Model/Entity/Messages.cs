@@ -27,9 +27,11 @@ namespace SalesManagement_SysDev.Model.Entity
         public const string errorNotFoundClient = "顧客情報が見つかりませんでした。";
 
         //Stock
-        public const string errorNotFoundStock = "商品情報が見つかりませんでした。";
+        public const string errorNotFoundStock = "在庫情報が見つかりませんでした。";
         //Employee
         public const string errorNotFoundEmployee = "社員情報が見つかりませんでした。";
+        //Shipment
+        public const string errorNotFoundShipment = "出荷情報が見つかりませんでした。";
 
 
         // ***** ContentsManagement
