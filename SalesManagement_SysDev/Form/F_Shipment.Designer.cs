@@ -78,12 +78,10 @@
             // 
             // dataGridView_Shipment
             // 
-
             this.dataGridView_Shipment.Location = new System.Drawing.Point(8, 158);
             this.dataGridView_Shipment.Name = "dataGridView_Shipment";
             this.dataGridView_Shipment.Size = new System.Drawing.Size(763, 442);
             this.dataGridView_Shipment.TabIndex = 185;
-
             // 
             // lbl_SaDate
             // 
@@ -131,13 +129,11 @@
             // 
             // txt_ShFinishDate
             // 
-
             this.txt_ShFinishDate.BackColor = System.Drawing.SystemColors.Window;
             this.txt_ShFinishDate.Location = new System.Drawing.Point(339, 61);
             this.txt_ShFinishDate.Name = "txt_ShFinishDate";
             this.txt_ShFinishDate.Size = new System.Drawing.Size(165, 19);
             this.txt_ShFinishDate.TabIndex = 67;
-
             // 
             // btn_sertch
             // 
@@ -284,14 +280,12 @@
             // 
             // txt_ShHidden
             // 
-
             this.txt_ShHidden.Location = new System.Drawing.Point(8, 101);
             this.txt_ShHidden.Multiline = true;
             this.txt_ShHidden.Name = "txt_ShHidden";
             this.txt_ShHidden.Size = new System.Drawing.Size(238, 19);
             this.txt_ShHidden.TabIndex = 77;
-
-
+            // 
             // txt_memo
             // 
             this.txt_memo.Location = new System.Drawing.Point(8, 35);
@@ -477,10 +471,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-
             this.ClientSize = new System.Drawing.Size(780, 499);
             this.Controls.Add(this.dataGridView_Shipment);
-
             this.Controls.Add(this.btn_sertch);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_clear);
@@ -494,9 +486,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "F_Shipment";
             this.Text = "販売在庫管理システム　出荷情報管理画面";
-
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Shipment)).EndInit();
-
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);

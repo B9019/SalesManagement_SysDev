@@ -31,7 +31,7 @@ namespace SalesManagement_SysDev
         public DbSet<T_OperationHistory> T_OperationHistorys { get; set; }
         public DbSet<T_Order> T_Orders { get; set; }
         public DbSet<T_OrderDetail> T_OrderDetails { get; set; }
-        public DbSet<T_Sale> T_Sales { get; set; }
+        public DbSet<T_Sale> T_Sale { get; set; }
         public DbSet<T_SaleDetail> T_SaleDetails { get; set; }
         public DbSet<T_Shipment> T_Shipments { get; set; }
         public DbSet<T_ShipmentDetail> T_ShipmentDetails { get; set; }
