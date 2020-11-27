@@ -21,5 +21,10 @@ namespace SalesManagement_SysDev
         {
 
         }
+
+        private void txt_OrID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

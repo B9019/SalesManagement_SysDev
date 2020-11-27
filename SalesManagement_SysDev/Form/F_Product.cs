@@ -914,6 +914,11 @@ namespace SalesManagement_SysDev
         {
 
         }
+
+        private void txt_MaID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

@@ -529,6 +529,7 @@
             this.txt_OrID.Name = "txt_OrID";
             this.txt_OrID.Size = new System.Drawing.Size(183, 19);
             this.txt_OrID.TabIndex = 62;
+            this.txt_OrID.TextChanged += new System.EventHandler(this.txt_OrID_TextChanged);
             // 
             // lbl_OrID
             // 

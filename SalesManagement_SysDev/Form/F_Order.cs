@@ -102,7 +102,7 @@ namespace SalesManagement_SysDev
         }
         // 
         //
-        //4.1.1　妥当な受注データ取得（新規登録）
+        //8.1.1　妥当な受注データ取得（新規登録）
         //
         //
         private bool Get_Order_Data_AtRegistration()
@@ -133,10 +133,10 @@ namespace SalesManagement_SysDev
                 txt_EmID.Focus();
                 return false;
             }
-            ////　JANコード
-            //if (String.IsNullOrEmpty(txt_PrJCode.Text))
+            //// 営業所ID
+            //if (String.IsNullOrEmpty(txt_SoID.Text))
             //{
-            //    MessageBox.Show("JANコードは必須項目です");         //画面デザインでJANコードが必須項目になっているが、JANコードはNULL可なので必要ない。画面の訂正必要。
+            //    MessageBox.Show("営業所IDは必須項目です");         //画面デザインでJANコードが必須項目になっているが、JANコードはNULL可なので必要ない。画面の訂正必要。
             //    txt_PrJCode.Focus();
             //    return false;
             //}
@@ -207,136 +207,101 @@ namespace SalesManagement_SysDev
                 txt_OrDate.Focus();
                 return false;
             }
-           
+
             ////　文字チェック ////
 
-            // 顧客担当者名
+            //　顧客担当者名
             if (!_ic.FullWidthCharCheck(txt_ClCharge.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
                 txt_ClCharge.Focus();
                 return false;
             }
-            // 　受注年月日の文字チェック
+            // 　受注年月日
             if (!_ic.FullWidthCharCheck(txt_OrDate.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
                 txt_OrDate.Focus();
                 return false;
             }
+
             /////文字数チェック/////
-            ///
-            // メーカID
-            if (txt_MaID.TextLength > 50)
+            // 受注ID
+            if (txt_OrID.TextLength > 50)
             {
-                MessageBox.Show("メーカIDは4文字以下です");
-                MaID.Focus();
+                MessageBox.Show("受注IDは4文字以下です");
+                txt_OrID.Focus();
                 return false;
             }
-            // 商品ID
-            if (txt_PrID.TextLength > 4)
+            // 営業所ID
+            if (txt_SoID.TextLength > 4)
             {
-                MessageBox.Show("商品IDは4文字以下です");
-                txt_PrID.Focus();
+                MessageBox.Show("SoIDは4文字以下です");
+                txt_SoID.Focus();
                 return false;
             }
-            // 商品名
-            if (txt_PrName.TextLength > 50)
+            // 社員ID
+            if (txt_EmID.TextLength > 50)
             {
-                MessageBox.Show("商品名は50文字以下です");
-                txt_PrName.Focus();
+                MessageBox.Show("社員IDは50文字以下です");
+                txt_EmID.Focus();
                 return false;
             }
-            //　JANコード
-            if (txt_PrJCode.TextLength > 13)
+            //　顧客ID
+            if (txt_ClID.TextLength > 13)
             {
-                MessageBox.Show("JANコードは13文字以下です");
-                txt_PrJCode.Focus();
+                MessageBox.Show("ClIDは13文字以下です");
+                txt_ClID.Focus();
                 return false;
             }
-            // 小分類ID
-            if (txt_ScID.TextLength > 2)
+            // 顧客担当者名
+            if (txt_ClCharge.TextLength > 2)
             {
-                MessageBox.Show("小分類IDは2文字以下です");
-                txt_ScID.Focus();
+                MessageBox.Show("顧客担当者名は2文字以下です");
+                txt_ClCharge.Focus();
                 return false;
             }
-            // 型番
-            if (txt_PrModelNumber.TextLength > 20)
+            // 受注年月日
+            if (txt_OrDate.TextLength > 20)
             {
-                MessageBox.Show("型番は20文字以下です");
-                txt_PrModelNumber.Focus();
-                return false;
-            }
-            //　色
-            if (txt_PrColor.TextLength > 20)
-            {
-                MessageBox.Show("色は20文字以下です");
-                txt_PrColor.Focus();
-                return false;
-            }
-            //　価格
-            if (txt_Price.TextLength > 9)
-            {
-                MessageBox.Show("価格は9文字以下です");
-                txt_Price.Focus();
-                return false;
-            }
-            //　安全在庫数
-            if (txt_PrSafetyStock.TextLength > 4)
-            {
-                MessageBox.Show("安全在庫数は4文字以下です");
-                txt_PrSafetyStock.Focus();
-                return false;
-            }
-            // 備考の適否
-            if (txt_memo.TextLength > 30)
-            {
-                MessageBox.Show("備考は30文字以下です");
-                txt_memo.Focus();
+                MessageBox.Show("受注年月日は20文字以下です");
+                txt_OrDate.Focus();
                 return false;
             }
             return true;
         }
         //
         //
-        // 4.1.2 商品情報作成
+        // 8.1.2 受注情報作成
         //
         //
-        private M_Product Generate_Data_AtRegistration()
+        private T_Order Generate_Data_AtRegistration()
         {
-            return new M_Product
+            return new T_Order
             {
-                PrID = int.Parse(txt_PrID.Text),
-                MaID = int.Parse(txt_MaID.Text),
-                PrName = txt_PrName.Text,
-                Price = int.Parse(txt_Price.Text),
-                PrJCode = txt_PrJCode.Text,
-                PrSafetyStock = int.Parse(txt_PrSafetyStock.Text),
-                ScID = int.Parse(txt_ScID.Text),
-                PrModelNumber = int.Parse(txt_PrModelNumber.Text),
-                PrColor = txt_PrColor.Text,
-                PrReleaseDate = DateTime.Parse(txt_PrReleaseDate.Text),
-                PrFlag = 0,
-                PrMemo = txt_memo.Text
-
+                OrID = int.Parse(txt_OrID.Text),
+                SoID = int.Parse(txt_SoID.Text),
+                EmID = int.Parse(txt_EmID.Text),
+                ClID = int.Parse(txt_ClID.Text),
+                ClCharge = txt_ClCharge.Text,
+                OrFlag = 0,
             };
 
         }
         //
         //
-        // 4.1.3　商品情報登録
+        // 8.1.3　受注情報登録
         //
         //
-        private bool Generate_Registration(M_Product regProduct)
+        private bool Generate_Registration(T_Order regOrder)
         {
             // 登録可否
             if (DialogResult.OK != MessageBox.Show(this, "登録してよろしいですか", "登録可否", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
             {
                 return false;
             }
-            // 商品情報の登録
-            var errorMessage = _Pr.PostM_Product(regProduct);
+            // 受注情報の登録
+            var errorMessage = _Pr.PostT_Order(regOrder);
 
             if (errorMessage != string.Empty)
             {
@@ -344,13 +309,12 @@ namespace SalesManagement_SysDev
                 return false;
             }
             // 画面更新
-            RefreshDataGridView();
-            txt_MaID.Focus();
+            txt_OrID.Focus();
 
             return true;
 
         }
 
-    }
-}
+        }
+
 }
