@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_SyHidden = new System.Windows.Forms.TextBox();
+            this.lbl_ArHidden = new System.Windows.Forms.Label();
+            this.chk_SyFlag = new System.Windows.Forms.CheckBox();
             this.txt_memo = new System.Windows.Forms.TextBox();
             this.lbl_memo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -67,9 +70,6 @@
             this.社員管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.売上管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.発注管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txt_SyHidden = new System.Windows.Forms.TextBox();
-            this.lbl_ArHidden = new System.Windows.Forms.Label();
-            this.chk_SyFlag = new System.Windows.Forms.CheckBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).BeginInit();
@@ -93,6 +93,36 @@
             this.groupBox2.TabIndex = 147;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "追加項目";
+            // 
+            // txt_SyHidden
+            // 
+            this.txt_SyHidden.Location = new System.Drawing.Point(7, 97);
+            this.txt_SyHidden.Multiline = true;
+            this.txt_SyHidden.Name = "txt_SyHidden";
+            this.txt_SyHidden.Size = new System.Drawing.Size(238, 19);
+            this.txt_SyHidden.TabIndex = 80;
+            // 
+            // lbl_ArHidden
+            // 
+            this.lbl_ArHidden.AutoSize = true;
+            this.lbl_ArHidden.ForeColor = System.Drawing.Color.White;
+            this.lbl_ArHidden.Location = new System.Drawing.Point(5, 82);
+            this.lbl_ArHidden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ArHidden.Name = "lbl_ArHidden";
+            this.lbl_ArHidden.Size = new System.Drawing.Size(65, 12);
+            this.lbl_ArHidden.TabIndex = 79;
+            this.lbl_ArHidden.Text = "非表示理由";
+            // 
+            // chk_SyFlag
+            // 
+            this.chk_SyFlag.AutoSize = true;
+            this.chk_SyFlag.ForeColor = System.Drawing.Color.White;
+            this.chk_SyFlag.Location = new System.Drawing.Point(7, 58);
+            this.chk_SyFlag.Name = "chk_SyFlag";
+            this.chk_SyFlag.Size = new System.Drawing.Size(85, 16);
+            this.chk_SyFlag.TabIndex = 78;
+            this.chk_SyFlag.Text = "非表示フラグ";
+            this.chk_SyFlag.UseVisualStyleBackColor = true;
             // 
             // txt_memo
             // 
@@ -442,36 +472,6 @@
             this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.発注管理ToolStripMenuItem.Text = "発注管理";
             // 
-            // txt_SyHidden
-            // 
-            this.txt_SyHidden.Location = new System.Drawing.Point(7, 97);
-            this.txt_SyHidden.Multiline = true;
-            this.txt_SyHidden.Name = "txt_SyHidden";
-            this.txt_SyHidden.Size = new System.Drawing.Size(238, 19);
-            this.txt_SyHidden.TabIndex = 80;
-            // 
-            // lbl_ArHidden
-            // 
-            this.lbl_ArHidden.AutoSize = true;
-            this.lbl_ArHidden.ForeColor = System.Drawing.Color.White;
-            this.lbl_ArHidden.Location = new System.Drawing.Point(5, 82);
-            this.lbl_ArHidden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_ArHidden.Name = "lbl_ArHidden";
-            this.lbl_ArHidden.Size = new System.Drawing.Size(65, 12);
-            this.lbl_ArHidden.TabIndex = 79;
-            this.lbl_ArHidden.Text = "非表示理由";
-            // 
-            // chk_SyFlag
-            // 
-            this.chk_SyFlag.AutoSize = true;
-            this.chk_SyFlag.ForeColor = System.Drawing.Color.White;
-            this.chk_SyFlag.Location = new System.Drawing.Point(7, 58);
-            this.chk_SyFlag.Name = "chk_SyFlag";
-            this.chk_SyFlag.Size = new System.Drawing.Size(85, 16);
-            this.chk_SyFlag.TabIndex = 78;
-            this.chk_SyFlag.Text = "非表示フラグ";
-            this.chk_SyFlag.UseVisualStyleBackColor = true;
-            // 
             // F_Syukko
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -492,6 +492,7 @@
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.Name = "F_Syukko";
             this.Text = "販売在庫管理画面　出庫管理画面";
+            this.Load += new System.EventHandler(this.F_Syukko_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
