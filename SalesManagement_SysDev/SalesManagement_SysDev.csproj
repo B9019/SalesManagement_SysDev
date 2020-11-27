@@ -343,10 +343,12 @@
     <Compile Include="Model\ContentsManagement\T_ChumonContents.cs" />
     <Compile Include="Model\ContentsManagement\M_ProductContents.cs" />
     <Compile Include="Model\ContentsManagement\StaffContents.cs" />
+    <Compile Include="Model\ContentsManagement\T_SaleContents.cs" />
     <Compile Include="Model\ContentsManagement\T_StockContents.cs" />
     <Compile Include="Model\Entity\Disp\M_DispClient.cs" />
     <Compile Include="Model\Entity\Disp\M_DispEmployee.cs" />
     <Compile Include="Model\Entity\Disp\M_DispProduct.cs" />
+    <Compile Include="Model\Entity\Disp\T_DispSale.cs" />
     <Compile Include="Model\Entity\Disp\T_DispStock.cs" />
     <Compile Include="Model\Entity\Disp\T_DispChumon.cs" />
     <Compile Include="Model\Entity\Messages.cs" />

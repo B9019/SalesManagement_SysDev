@@ -43,7 +43,7 @@
             this.売上管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.発注管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView_Product = new System.Windows.Forms.DataGridView();
-            this.btn_sertch = new System.Windows.Forms.Button();
+            this.btn_search = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
@@ -190,16 +190,17 @@
             this.dataGridView_Product.Size = new System.Drawing.Size(763, 427);
             this.dataGridView_Product.TabIndex = 174;
             // 
-            // btn_sertch
+            // btn_search
             // 
-            this.btn_sertch.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_sertch.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_sertch.Location = new System.Drawing.Point(184, 1);
-            this.btn_sertch.Name = "btn_sertch";
-            this.btn_sertch.Size = new System.Drawing.Size(79, 21);
-            this.btn_sertch.TabIndex = 176;
-            this.btn_sertch.Text = "F1　検索";
-            this.btn_sertch.UseVisualStyleBackColor = false;
+            this.btn_search.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_search.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_search.Location = new System.Drawing.Point(184, 1);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(79, 21);
+            this.btn_search.TabIndex = 176;
+            this.btn_search.Text = "F1　検索";
+            this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_sertch_Click);
             // 
             // btn_update
             // 
@@ -210,6 +211,7 @@
             this.btn_update.TabIndex = 178;
             this.btn_update.Text = "F3 更新";
             this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_clear
             // 
@@ -220,6 +222,7 @@
             this.btn_clear.TabIndex = 182;
             this.btn_clear.Text = "F7 入力クリア";
             this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_delete
             // 
@@ -230,6 +233,7 @@
             this.btn_delete.TabIndex = 181;
             this.btn_delete.Text = "F6 削除";
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click_1);
             // 
             // btn_print
             // 
@@ -250,6 +254,7 @@
             this.btn_all.TabIndex = 179;
             this.btn_all.Text = "F4 一覧表示";
             this.btn_all.UseVisualStyleBackColor = false;
+            this.btn_all.Click += new System.EventHandler(this.btn_all_Click_1);
             // 
             // groupBox1
             // 
@@ -460,6 +465,7 @@
             this.btn_regist.TabIndex = 177;
             this.btn_regist.Text = "F2 登録";
             this.btn_regist.UseVisualStyleBackColor = false;
+            this.btn_regist.Click += new System.EventHandler(this.btn_regist_Click);
             // 
             // txt_PrHidden
             // 
@@ -547,7 +553,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(780, 609);
             this.Controls.Add(this.dataGridView_Product);
-            this.Controls.Add(this.btn_sertch);
+            this.Controls.Add(this.btn_search);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.btn_delete);
@@ -589,7 +595,7 @@
         private System.Windows.Forms.ToolStripMenuItem 売上管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 発注管理ToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView_Product;
-        private System.Windows.Forms.Button btn_sertch;
+        private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Button btn_delete;

@@ -52,7 +52,7 @@
             this.txt_EmID = new System.Windows.Forms.TextBox();
             this.txt_OrID = new System.Windows.Forms.TextBox();
             this.dataGridView_Sale = new System.Windows.Forms.DataGridView();
-            this.btn_sertch = new System.Windows.Forms.Button();
+            this.btn_search = new System.Windows.Forms.Button();
             this.txt_SoID = new System.Windows.Forms.TextBox();
             this.btn_update = new System.Windows.Forms.Button();
             this.lbl_SoID = new System.Windows.Forms.Label();
@@ -262,17 +262,19 @@
             this.dataGridView_Sale.Name = "dataGridView_Sale";
             this.dataGridView_Sale.Size = new System.Drawing.Size(763, 442);
             this.dataGridView_Sale.TabIndex = 174;
+            this.dataGridView_Sale.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Sale_CelldoubleClick);
             // 
-            // btn_sertch
+            // btn_search
             // 
-            this.btn_sertch.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_sertch.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_sertch.Location = new System.Drawing.Point(184, 1);
-            this.btn_sertch.Name = "btn_sertch";
-            this.btn_sertch.Size = new System.Drawing.Size(79, 21);
-            this.btn_sertch.TabIndex = 176;
-            this.btn_sertch.Text = "F1　検索";
-            this.btn_sertch.UseVisualStyleBackColor = false;
+            this.btn_search.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_search.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_search.Location = new System.Drawing.Point(184, 1);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(79, 21);
+            this.btn_search.TabIndex = 176;
+            this.btn_search.Text = "F1　検索";
+            this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // txt_SoID
             // 
@@ -291,6 +293,7 @@
             this.btn_update.TabIndex = 178;
             this.btn_update.Text = "F3 更新";
             this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // lbl_SoID
             // 
@@ -323,6 +326,7 @@
             this.btn_clear.TabIndex = 182;
             this.btn_clear.Text = "F7 入力クリア";
             this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_delete
             // 
@@ -333,6 +337,7 @@
             this.btn_delete.TabIndex = 181;
             this.btn_delete.Text = "F6 削除";
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_print
             // 
@@ -353,6 +358,7 @@
             this.btn_all.TabIndex = 179;
             this.btn_all.Text = "F4 一覧表示";
             this.btn_all.UseVisualStyleBackColor = false;
+            this.btn_all.Click += new System.EventHandler(this.btn_all_Click);
             // 
             // groupBox1
             // 
@@ -473,7 +479,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(780, 609);
             this.Controls.Add(this.dataGridView_Sale);
-            this.Controls.Add(this.btn_sertch);
+            this.Controls.Add(this.btn_search);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.btn_delete);
@@ -483,7 +489,7 @@
             this.Controls.Add(this.btn_regist);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.menuStrip2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F_Sale";
             this.Text = "販売在庫管理システム　売上情報管理画面";
             this.Load += new System.EventHandler(this.F_Sale_Load);
@@ -525,7 +531,7 @@
         private System.Windows.Forms.TextBox txt_EmID;
         private System.Windows.Forms.TextBox txt_OrID;
         private System.Windows.Forms.DataGridView dataGridView_Sale;
-        private System.Windows.Forms.Button btn_sertch;
+        private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.TextBox txt_SoID;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Label lbl_SoID;
