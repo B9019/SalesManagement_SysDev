@@ -28,27 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            //this.groupBox2 = new System.Windows.Forms.GroupBox();
-            //this.txt_memo = new System.Windows.Forms.TextBox();
-            //this.lbl_memo = new System.Windows.Forms.Label();
-            //this.groupBox1 = new System.Windows.Forms.GroupBox();
-            //this.lbl_Stock_price = new System.Windows.Forms.Label();
-            //this.lbl_StQuantity = new System.Windows.Forms.Label();
-            //this.txt_Stock_price = new System.Windows.Forms.TextBox();
-            //this.txt_Stquantity = new System.Windows.Forms.TextBox();
-            //this.txt_PrID = new System.Windows.Forms.TextBox();
-            //this.txt_StID = new System.Windows.Forms.TextBox();
-            //this.lbl_StID = new System.Windows.Forms.Label();
-            //this.lbl_PrID = new System.Windows.Forms.Label();
-            //this.button3 = new System.Windows.Forms.Button();
-            //this.button2 = new System.Windows.Forms.Button();
-            //this.button1 = new System.Windows.Forms.Button();
-            //this.btn_all = new System.Windows.Forms.Button();
-            //this.btn_update = new System.Windows.Forms.Button();
-            //this.btn_sertch = new System.Windows.Forms.Button();
-            //this.btn_regist = new System.Windows.Forms.Button();
-            //this.dataGridView_Product_regist = new System.Windows.Forms.DataGridView();
-            //this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.dataGridView_Chumon_regist = new System.Windows.Forms.DataGridView();
+            this.btn_sertch = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_all = new System.Windows.Forms.Button();
+            this.btn_regist = new System.Windows.Forms.Button();
+            this.txt_ChHidden = new System.Windows.Forms.TextBox();
+            this.txt_memo = new System.Windows.Forms.TextBox();
+            this.lbl_ArHidden = new System.Windows.Forms.Label();
+            this.lbl_memo = new System.Windows.Forms.Label();
+            this.chk_hide_FLG = new System.Windows.Forms.CheckBox();
+            this.btn_print = new System.Windows.Forms.Button();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.メニューToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.顧客管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,256 +56,170 @@
             this.社員管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.売上管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.発注管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-
-            this.発注情報登録ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.発注情報検索ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.発注情報削除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.バーコード管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            //this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            //this.groupBox1 = new System.Windows.Forms.GroupBox();
-            //this.lbl_StID = new System.Windows.Forms.Label();
-            //this.lbl_PrID = new System.Windows.Forms.Label();
-            //this.lbl_StQuantity = new System.Windows.Forms.Label();
-            //this.txt_StQuantity = new System.Windows.Forms.TextBox();
-            //this.txt_PrID = new System.Windows.Forms.TextBox();
-            //this.txt_StID = new System.Windows.Forms.TextBox();
-            //this.btn_regist = new System.Windows.Forms.Button();
-            //this.button3 = new System.Windows.Forms.Button();
-            //this.button1 = new System.Windows.Forms.Button();
-            //this.btn_all = new System.Windows.Forms.Button();
-            //this.btn_update = new System.Windows.Forms.Button();
-            //this.button2 = new System.Windows.Forms.Button();
-            //this.dataGridView_Stock = new System.Windows.Forms.DataGridView();
-            //this.txt_memo = new System.Windows.Forms.TextBox();
-            //this.btn_sertch = new System.Windows.Forms.Button();
-            //this.lbl_memo = new System.Windows.Forms.Label();
-            //this.groupBox2 = new System.Windows.Forms.GroupBox();
-            //this.label2 = new System.Windows.Forms.Label();
-            //this.label1 = new System.Windows.Forms.Label();
-            //this.txt_Stock_Price = new System.Windows.Forms.TextBox();
-            //this.lbl_Stock_price = new System.Windows.Forms.Label();
-            //this.menuStrip2.SuspendLayout();
-            //this.groupBox1.SuspendLayout();
-            //((System.ComponentModel.ISupportInitialize)(this.dataGridView_Stock)).BeginInit();
-            //this.groupBox2.SuspendLayout();
-
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbl_PrID = new System.Windows.Forms.Label();
+            this.lbl_StQuantity = new System.Windows.Forms.Label();
+            this.txt_PrID = new System.Windows.Forms.TextBox();
+            this.txt_StQuantity = new System.Windows.Forms.TextBox();
+            this.txt_StID = new System.Windows.Forms.TextBox();
+            this.lbl_StID = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon_regist)).BeginInit();
+            this.menuStrip2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox2
+            // dataGridView_Chumon_regist
             // 
-            //this.groupBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            //this.groupBox2.Controls.Add(this.txt_memo);
-            //this.groupBox2.Controls.Add(this.lbl_memo);
-            //this.groupBox2.ForeColor = System.Drawing.Color.White;
-            //this.groupBox2.Location = new System.Drawing.Point(521, 28);
-            //this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            //this.groupBox2.Name = "groupBox2";
-            //this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            //this.groupBox2.Size = new System.Drawing.Size(250, 66);
-            //this.groupBox2.TabIndex = 136;
-            //this.groupBox2.TabStop = false;
-            //this.groupBox2.Text = "追加項目";
-            // 
-            // txt_memo
-            // 
-            //this.txt_memo.Location = new System.Drawing.Point(8, 35);
-            //this.txt_memo.Multiline = true;
-            //this.txt_memo.Name = "txt_memo";
-            //this.txt_memo.Size = new System.Drawing.Size(237, 19);
-            //this.txt_memo.TabIndex = 70;
-            // 
-            // lbl_memo
-            // 
-            //this.lbl_memo.AutoSize = true;
-            //this.lbl_memo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            //this.lbl_memo.Location = new System.Drawing.Point(5, 15);
-            //this.lbl_memo.Name = "lbl_memo";
-            //this.lbl_memo.Size = new System.Drawing.Size(73, 12);
-            //this.lbl_memo.TabIndex = 70;
-            //this.lbl_memo.Text = "備考(30文字)";
-            // 
-            // groupBox1
-            // 
-            //this.groupBox1.Controls.Add(this.lbl_Stock_price);
-            //this.groupBox1.Controls.Add(this.lbl_StQuantity);
-            //this.groupBox1.Controls.Add(this.txt_Stock_price);
-            //this.groupBox1.Controls.Add(this.txt_Stquantity);
-            //this.groupBox1.Controls.Add(this.txt_PrID);
-            //this.groupBox1.Controls.Add(this.txt_StID);
-            //this.groupBox1.Controls.Add(this.lbl_StID);
-            //this.groupBox1.Controls.Add(this.lbl_PrID);
-            //this.groupBox1.ForeColor = System.Drawing.Color.White;
-            //this.groupBox1.Location = new System.Drawing.Point(10, 28);
-            //this.groupBox1.Name = "groupBox1";
-            //this.groupBox1.Size = new System.Drawing.Size(514, 66);
-            //this.groupBox1.TabIndex = 135;
-            //this.groupBox1.TabStop = false;
-            //this.groupBox1.Text = "基礎項目";
-            // 
-            // lbl_Stock_price
-            // 
-            //this.lbl_Stock_price.AutoSize = true;
-            //this.lbl_Stock_price.ForeColor = System.Drawing.Color.White;
-            //this.lbl_Stock_price.Location = new System.Drawing.Point(274, 39);
-            //this.lbl_Stock_price.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            //this.lbl_Stock_price.Name = "lbl_Stock_price";
-            //this.lbl_Stock_price.Size = new System.Drawing.Size(29, 12);
-            //this.lbl_Stock_price.TabIndex = 71;
-            //this.lbl_Stock_price.Text = "値段";
-            //// 
-            // lbl_StQuantity
-            // 
-            //this.lbl_StQuantity.AutoSize = true;
-            //this.lbl_StQuantity.ForeColor = System.Drawing.Color.White;
-            //this.lbl_StQuantity.Location = new System.Drawing.Point(14, 39);
-            //this.lbl_StQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            //this.lbl_StQuantity.Name = "lbl_StQuantity";
-            //this.lbl_StQuantity.Size = new System.Drawing.Size(41, 12);
-            //this.lbl_StQuantity.TabIndex = 70;
-            //this.lbl_StQuantity.Text = "在庫数";
-            // 
-            // txt_Stock_price
-            // 
-            //this.txt_Stock_price.Location = new System.Drawing.Point(321, 37);
-            //this.txt_Stock_price.Name = "txt_Stock_price";
-            //this.txt_Stock_price.Size = new System.Drawing.Size(183, 19);
-            //this.txt_Stock_price.TabIndex = 65;
-            // 
-            // txt_Stquantity
-            // 
-            //this.txt_Stquantity.BackColor = System.Drawing.SystemColors.Window;
-            //this.txt_Stquantity.Location = new System.Drawing.Point(73, 36);
-            //this.txt_Stquantity.Name = "txt_Stquantity";
-            //this.txt_Stquantity.Size = new System.Drawing.Size(183, 19);
-            //this.txt_Stquantity.TabIndex = 64;
-            // 
-            // txt_PrID
-            // 
-            //this.txt_PrID.Location = new System.Drawing.Point(321, 13);
-            //this.txt_PrID.Name = "txt_PrID";
-            //this.txt_PrID.Size = new System.Drawing.Size(183, 19);
-            //this.txt_PrID.TabIndex = 63;
-            // 
-            // txt_StID
-            // 
-            //this.txt_StID.BackColor = System.Drawing.SystemColors.Window;
-            //this.txt_StID.Location = new System.Drawing.Point(73, 13);
-            //this.txt_StID.Name = "txt_StID";
-            //this.txt_StID.Size = new System.Drawing.Size(183, 19);
-            //this.txt_StID.TabIndex = 62;
-            // 
-            // lbl_StID
-            // 
-            //this.lbl_StID.AutoSize = true;
-            //this.lbl_StID.ForeColor = System.Drawing.Color.White;
-            //this.lbl_StID.Location = new System.Drawing.Point(14, 16);
-            //this.lbl_StID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            //this.lbl_StID.Name = "lbl_StID";
-            //this.lbl_StID.Size = new System.Drawing.Size(40, 12);
-            //this.lbl_StID.TabIndex = 8;
-            //this.lbl_StID.Text = "在庫ID";
-            // 
-            // lbl_PrID
-            // 
-            //this.lbl_PrID.AutoSize = true;
-            //this.lbl_PrID.ForeColor = System.Drawing.Color.White;
-            //this.lbl_PrID.Location = new System.Drawing.Point(274, 15);
-            //this.lbl_PrID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            //this.lbl_PrID.Name = "lbl_PrID";
-            //this.lbl_PrID.Size = new System.Drawing.Size(40, 12);
-            //this.lbl_PrID.TabIndex = 7;
-            //this.lbl_PrID.Text = "商品ID";
-            // 
-            // button3
-            // 
-            //this.button3.BackColor = System.Drawing.Color.PaleTurquoise;
-            //this.button3.Location = new System.Drawing.Point(692, 0);
-            //this.button3.Name = "button3";
-            //this.button3.Size = new System.Drawing.Size(79, 21);
-            //this.button3.TabIndex = 143;
-            //this.button3.Text = "F7 入力クリア";
-            //this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            //this.button2.BackColor = System.Drawing.Color.PaleTurquoise;
-            //this.button2.Location = new System.Drawing.Point(607, 0);
-            //this.button2.Name = "button2";
-            //this.button2.Size = new System.Drawing.Size(79, 21);
-            //this.button2.TabIndex = 142;
-            //this.button2.Text = "F6 削除";
-            //this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            //this.button1.BackColor = System.Drawing.Color.PaleTurquoise;
-            //this.button1.Location = new System.Drawing.Point(523, 0);
-            //this.button1.Name = "button1";
-            //this.button1.Size = new System.Drawing.Size(79, 21);
-            //this.button1.TabIndex = 141;
-            //this.button1.Text = "F5 印刷";
-            //this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btn_all
-            // 
-            //this.btn_all.BackColor = System.Drawing.Color.PaleTurquoise;
-            //this.btn_all.Location = new System.Drawing.Point(438, 0);
-            //this.btn_all.Name = "btn_all";
-            //this.btn_all.Size = new System.Drawing.Size(79, 21);
-            //this.btn_all.TabIndex = 140;
-            //this.btn_all.Text = "F4 一覧表示";
-            //this.btn_all.UseVisualStyleBackColor = false;
-            // 
-            // btn_update
-            // 
-            //this.btn_update.BackColor = System.Drawing.Color.PaleTurquoise;
-            //this.btn_update.Location = new System.Drawing.Point(353, 0);
-            //this.btn_update.Name = "btn_update";
-            //this.btn_update.Size = new System.Drawing.Size(79, 21);
-            //this.btn_update.TabIndex = 139;
-            //this.btn_update.Text = "F3 更新";
-            //this.btn_update.UseVisualStyleBackColor = false;
+            this.dataGridView_Chumon_regist.Location = new System.Drawing.Point(13, 237);
+            this.dataGridView_Chumon_regist.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.dataGridView_Chumon_regist.Name = "dataGridView_Chumon_regist";
+            this.dataGridView_Chumon_regist.Size = new System.Drawing.Size(1272, 663);
+            this.dataGridView_Chumon_regist.TabIndex = 185;
             // 
             // btn_sertch
             // 
-            //this.btn_sertch.BackColor = System.Drawing.Color.PaleTurquoise;
-            //this.btn_sertch.ForeColor = System.Drawing.SystemColors.ControlText;
-            //this.btn_sertch.Location = new System.Drawing.Point(185, 0);
-            //this.btn_sertch.Name = "btn_sertch";
-            //this.btn_sertch.Size = new System.Drawing.Size(79, 21);
-            //this.btn_sertch.TabIndex = 137;
-            //this.btn_sertch.Text = "F1　検索";
-            //this.btn_sertch.UseVisualStyleBackColor = false;
+            this.btn_sertch.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_sertch.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_sertch.Location = new System.Drawing.Point(306, 2);
+            this.btn_sertch.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btn_sertch.Name = "btn_sertch";
+            this.btn_sertch.Size = new System.Drawing.Size(132, 32);
+            this.btn_sertch.TabIndex = 187;
+            this.btn_sertch.Text = "F1　検索";
+            this.btn_sertch.UseVisualStyleBackColor = false;
+            // 
+            // btn_update
+            // 
+            this.btn_update.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_update.Location = new System.Drawing.Point(586, 2);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(132, 32);
+            this.btn_update.TabIndex = 189;
+            this.btn_update.Text = "F3 更新";
+            this.btn_update.UseVisualStyleBackColor = false;
+            // 
+            // btn_clear
+            // 
+            this.btn_clear.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_clear.Location = new System.Drawing.Point(1153, 2);
+            this.btn_clear.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(132, 32);
+            this.btn_clear.TabIndex = 193;
+            this.btn_clear.Text = "F7 入力クリア";
+            this.btn_clear.UseVisualStyleBackColor = false;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_delete.Location = new System.Drawing.Point(1011, 2);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(132, 32);
+            this.btn_delete.TabIndex = 192;
+            this.btn_delete.Text = "F6 削除";
+            this.btn_delete.UseVisualStyleBackColor = false;
+            // 
+            // btn_all
+            // 
+            this.btn_all.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_all.Location = new System.Drawing.Point(727, 2);
+            this.btn_all.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btn_all.Name = "btn_all";
+            this.btn_all.Size = new System.Drawing.Size(132, 32);
+            this.btn_all.TabIndex = 190;
+            this.btn_all.Text = "F4 一覧表示";
+            this.btn_all.UseVisualStyleBackColor = false;
             // 
             // btn_regist
             // 
-            //this.btn_regist.BackColor = System.Drawing.Color.PaleTurquoise;
-            //this.btn_regist.Location = new System.Drawing.Point(269, 0);
-            //this.btn_regist.Name = "btn_regist";
-            //this.btn_regist.Size = new System.Drawing.Size(79, 21);
-            //this.btn_regist.TabIndex = 138;
-            //this.btn_regist.Text = "F2 登録";
-            //this.btn_regist.UseVisualStyleBackColor = false;
-            //// 
-            // dataGridView_Product_regist
+            this.btn_regist.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_regist.Location = new System.Drawing.Point(446, 2);
+            this.btn_regist.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btn_regist.Name = "btn_regist";
+            this.btn_regist.Size = new System.Drawing.Size(132, 32);
+            this.btn_regist.TabIndex = 188;
+            this.btn_regist.Text = "F2 登録";
+            this.btn_regist.UseVisualStyleBackColor = false;
             // 
-            //this.dataGridView_Product_regist.Location = new System.Drawing.Point(8, 100);
-            //this.dataGridView_Product_regist.Name = "dataGridView_Product_regist";
-            //this.dataGridView_Product_regist.Size = new System.Drawing.Size(763, 499);
-            //this.dataGridView_Product_regist.TabIndex = 134;
+            // txt_ChHidden
+            // 
+            this.txt_ChHidden.Location = new System.Drawing.Point(13, 152);
+            this.txt_ChHidden.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.txt_ChHidden.Multiline = true;
+            this.txt_ChHidden.Name = "txt_ChHidden";
+            this.txt_ChHidden.Size = new System.Drawing.Size(394, 26);
+            this.txt_ChHidden.TabIndex = 77;
+            // 
+            // txt_memo
+            // 
+            this.txt_memo.Location = new System.Drawing.Point(13, 52);
+            this.txt_memo.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.txt_memo.Multiline = true;
+            this.txt_memo.Name = "txt_memo";
+            this.txt_memo.Size = new System.Drawing.Size(392, 26);
+            this.txt_memo.TabIndex = 70;
+            // 
+            // lbl_ArHidden
+            // 
+            this.lbl_ArHidden.AutoSize = true;
+            this.lbl_ArHidden.ForeColor = System.Drawing.Color.White;
+            this.lbl_ArHidden.Location = new System.Drawing.Point(10, 129);
+            this.lbl_ArHidden.Name = "lbl_ArHidden";
+            this.lbl_ArHidden.Size = new System.Drawing.Size(116, 18);
+            this.lbl_ArHidden.TabIndex = 63;
+            this.lbl_ArHidden.Text = "入荷失敗理由";
+            // 
+            // lbl_memo
+            // 
+            this.lbl_memo.AutoSize = true;
+            this.lbl_memo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_memo.Location = new System.Drawing.Point(8, 22);
+            this.lbl_memo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbl_memo.Name = "lbl_memo";
+            this.lbl_memo.Size = new System.Drawing.Size(108, 18);
+            this.lbl_memo.TabIndex = 70;
+            this.lbl_memo.Text = "備考(30文字)";
+            // 
+            // chk_hide_FLG
+            // 
+            this.chk_hide_FLG.AutoSize = true;
+            this.chk_hide_FLG.ForeColor = System.Drawing.Color.White;
+            this.chk_hide_FLG.Location = new System.Drawing.Point(13, 93);
+            this.chk_hide_FLG.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.chk_hide_FLG.Name = "chk_hide_FLG";
+            this.chk_hide_FLG.Size = new System.Drawing.Size(144, 22);
+            this.chk_hide_FLG.TabIndex = 0;
+            this.chk_hide_FLG.Text = "入荷失敗フラグ";
+            this.chk_hide_FLG.UseVisualStyleBackColor = true;
+            // 
+            // btn_print
+            // 
+            this.btn_print.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_print.Location = new System.Drawing.Point(871, 2);
+            this.btn_print.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btn_print.Name = "btn_print";
+            this.btn_print.Size = new System.Drawing.Size(132, 32);
+            this.btn_print.TabIndex = 191;
+            this.btn_print.Text = "F5 印刷";
+            this.btn_print.UseVisualStyleBackColor = false;
             // 
             // menuStrip2
             // 
-            //this.menuStrip2.BackColor = System.Drawing.Color.DarkTurquoise;
-            //this.menuStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
-            //this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            //this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            //this.メニューToolStripMenuItem});
-            //this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            //this.menuStrip2.Name = "menuStrip2";
-            //this.menuStrip2.Size = new System.Drawing.Size(780, 24);
-            //this.menuStrip2.TabIndex = 144;
-            //this.menuStrip2.Text = "menuStrip2";
+            this.menuStrip2.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.menuStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.メニューToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(5, 3, 0, 3);
+            this.menuStrip2.Size = new System.Drawing.Size(1300, 35);
+            this.menuStrip2.TabIndex = 186;
+            this.menuStrip2.Text = "menuStrip2";
             // 
             // メニューToolStripMenuItem
             // 
@@ -332,368 +239,205 @@
             this.売上管理ToolStripMenuItem,
             this.発注管理ToolStripMenuItem});
             this.メニューToolStripMenuItem.Name = "メニューToolStripMenuItem";
-            this.メニューToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.メニューToolStripMenuItem.Size = new System.Drawing.Size(110, 29);
             this.メニューToolStripMenuItem.Text = "管理メニュー";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(185, 30);
             this.toolStripMenuItem1.Text = "ログイン管理";
             // 
             // 顧客管理ToolStripMenuItem
             // 
             this.顧客管理ToolStripMenuItem.Name = "顧客管理ToolStripMenuItem";
-            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
             this.顧客管理ToolStripMenuItem.Text = "顧客管理";
             // 
             // 商品管理ToolStripMenuItem
             // 
             this.商品管理ToolStripMenuItem.Name = "商品管理ToolStripMenuItem";
-            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
             this.商品管理ToolStripMenuItem.Text = "商品管理";
             // 
             // 受注管理ToolStripMenuItem
             // 
             this.受注管理ToolStripMenuItem.Name = "受注管理ToolStripMenuItem";
-            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
             this.受注管理ToolStripMenuItem.Text = "受注管理";
             // 
             // 注文管理ToolStripMenuItem
             // 
             this.注文管理ToolStripMenuItem.Name = "注文管理ToolStripMenuItem";
-            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
             this.注文管理ToolStripMenuItem.Text = "注文管理";
             // 
             // 入荷管理ToolStripMenuItem
             // 
             this.入荷管理ToolStripMenuItem.Name = "入荷管理ToolStripMenuItem";
-            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
             this.入荷管理ToolStripMenuItem.Text = "入荷管理";
             // 
             // 出荷管理ToolStripMenuItem
             // 
             this.出荷管理ToolStripMenuItem.Name = "出荷管理ToolStripMenuItem";
-            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
             this.出荷管理ToolStripMenuItem.Text = "出荷管理";
             // 
             // 在庫管理ToolStripMenuItem
             // 
             this.在庫管理ToolStripMenuItem.Name = "在庫管理ToolStripMenuItem";
-            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
             this.在庫管理ToolStripMenuItem.Text = "在庫管理";
             // 
             // 入庫管理ToolStripMenuItem
             // 
             this.入庫管理ToolStripMenuItem.Name = "入庫管理ToolStripMenuItem";
-            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
             this.入庫管理ToolStripMenuItem.Text = "入庫管理";
             // 
             // 出庫管理ToolStripMenuItem
             // 
             this.出庫管理ToolStripMenuItem.Name = "出庫管理ToolStripMenuItem";
-            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
             this.出庫管理ToolStripMenuItem.Text = "出庫管理";
             // 
             // 社員管理ToolStripMenuItem
             // 
             this.社員管理ToolStripMenuItem.Name = "社員管理ToolStripMenuItem";
-            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
             this.社員管理ToolStripMenuItem.Text = "社員管理";
             // 
             // 売上管理ToolStripMenuItem
             // 
             this.売上管理ToolStripMenuItem.Name = "売上管理ToolStripMenuItem";
-            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
             this.売上管理ToolStripMenuItem.Text = "売上管理";
             // 
             // 発注管理ToolStripMenuItem
             // 
             this.発注管理ToolStripMenuItem.Name = "発注管理ToolStripMenuItem";
-            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
             this.発注管理ToolStripMenuItem.Text = "発注管理";
             // 
-
-            // 発注情報登録ToolStripMenuItem
+            // groupBox2
             // 
-            this.発注情報登録ToolStripMenuItem.Name = "発注情報登録ToolStripMenuItem";
-            this.発注情報登録ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.発注情報登録ToolStripMenuItem.Text = "発注情報登録";
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.groupBox2.Controls.Add(this.txt_ChHidden);
+            this.groupBox2.Controls.Add(this.txt_memo);
+            this.groupBox2.Controls.Add(this.lbl_ArHidden);
+            this.groupBox2.Controls.Add(this.lbl_memo);
+            this.groupBox2.Controls.Add(this.chk_hide_FLG);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(868, 44);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(417, 184);
+            this.groupBox2.TabIndex = 194;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "追加項目";
             // 
-            // 発注情報検索ToolStripMenuItem
+            // groupBox1
             // 
-            this.発注情報検索ToolStripMenuItem.Name = "発注情報検索ToolStripMenuItem";
-            this.発注情報検索ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.発注情報検索ToolStripMenuItem.Text = "発注情報検索";
+            this.groupBox1.Controls.Add(this.lbl_PrID);
+            this.groupBox1.Controls.Add(this.lbl_StQuantity);
+            this.groupBox1.Controls.Add(this.txt_PrID);
+            this.groupBox1.Controls.Add(this.txt_StQuantity);
+            this.groupBox1.Controls.Add(this.txt_StID);
+            this.groupBox1.Controls.Add(this.lbl_StID);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(17, 44);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
+            this.groupBox1.Size = new System.Drawing.Size(856, 184);
+            this.groupBox1.TabIndex = 195;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "基礎項目";
             // 
-            // 発注情報削除ToolStripMenuItem
+            // lbl_PrID
             // 
-            this.発注情報削除ToolStripMenuItem.Name = "発注情報削除ToolStripMenuItem";
-            this.発注情報削除ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.発注情報削除ToolStripMenuItem.Text = "発注情報削除";
+            this.lbl_PrID.AutoSize = true;
+            this.lbl_PrID.ForeColor = System.Drawing.Color.White;
+            this.lbl_PrID.Location = new System.Drawing.Point(437, 22);
+            this.lbl_PrID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_PrID.Name = "lbl_PrID";
+            this.lbl_PrID.Size = new System.Drawing.Size(60, 18);
+            this.lbl_PrID.TabIndex = 71;
+            this.lbl_PrID.Text = "商品ID";
             // 
-            // バーコード管理ToolStripMenuItem
+            // lbl_StQuantity
             // 
-            this.バーコード管理ToolStripMenuItem.Name = "バーコード管理ToolStripMenuItem";
-            this.バーコード管理ToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
-            this.バーコード管理ToolStripMenuItem.Text = "バーコード管理";
-            // 
-            // menuStrip2
-            // 
-            //this.menuStrip2.BackColor = System.Drawing.Color.DarkTurquoise;
-            //this.menuStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
-            //this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            //this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            //this.メニューToolStripMenuItem});
-            //this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            //this.menuStrip2.Name = "menuStrip2";
-            //this.menuStrip2.Size = new System.Drawing.Size(780, 24);
-            //this.menuStrip2.TabIndex = 135;
-            //this.menuStrip2.Text = "menuStrip2";
-            //// 
-            //// groupBox1
-            //// 
-            //this.groupBox1.Controls.Add(this.lbl_StID);
-            //this.groupBox1.Controls.Add(this.lbl_PrID);
-            //this.groupBox1.Controls.Add(this.lbl_StQuantity);
-            //this.groupBox1.Controls.Add(this.txt_StQuantity);
-            //this.groupBox1.Controls.Add(this.txt_PrID);
-            //this.groupBox1.Controls.Add(this.txt_StID);
-            //this.groupBox1.ForeColor = System.Drawing.Color.White;
-            //this.groupBox1.Location = new System.Drawing.Point(24, 38);
-            //this.groupBox1.Name = "groupBox1";
-            //this.groupBox1.Size = new System.Drawing.Size(726, 87);
-            //this.groupBox1.TabIndex = 136;
-            //this.groupBox1.TabStop = false;
-            //this.groupBox1.Text = "※共通必須項目";
-            //// 
-            //// lbl_StID
-            //// 
-            //this.lbl_StID.AutoSize = true;
-            //this.lbl_StID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            //this.lbl_StID.Location = new System.Drawing.Point(63, 27);
-            //this.lbl_StID.Name = "lbl_StID";
-            //this.lbl_StID.Size = new System.Drawing.Size(40, 12);
-            //this.lbl_StID.TabIndex = 173;
-            //this.lbl_StID.Text = "在庫ID";
-            //// 
-            //// lbl_PrID
-            //// 
-            //this.lbl_PrID.AutoSize = true;
-            //this.lbl_PrID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            //this.lbl_PrID.Location = new System.Drawing.Point(63, 52);
-            //this.lbl_PrID.Name = "lbl_PrID";
-            //this.lbl_PrID.Size = new System.Drawing.Size(40, 12);
-            //this.lbl_PrID.TabIndex = 174;
-            //this.lbl_PrID.Text = "商品ID";
-            //// 
-            //// lbl_StQuantity
-            //// 
-            //this.lbl_StQuantity.AutoSize = true;
-            //this.lbl_StQuantity.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            //this.lbl_StQuantity.Location = new System.Drawing.Point(402, 24);
-            //this.lbl_StQuantity.Name = "lbl_StQuantity";
-            //this.lbl_StQuantity.Size = new System.Drawing.Size(41, 12);
-            //this.lbl_StQuantity.TabIndex = 175;
-            //this.lbl_StQuantity.Text = "在庫数";
-            // 
-            // txt_StQuantity
-            // 
-            //this.txt_StQuantity.Location = new System.Drawing.Point(455, 21);
-            //this.txt_StQuantity.Name = "txt_StQuantity";
-            //this.txt_StQuantity.Size = new System.Drawing.Size(183, 19);
-            //this.txt_StQuantity.TabIndex = 179;
+            this.lbl_StQuantity.AutoSize = true;
+            this.lbl_StQuantity.ForeColor = System.Drawing.Color.White;
+            this.lbl_StQuantity.Location = new System.Drawing.Point(9, 58);
+            this.lbl_StQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_StQuantity.Name = "lbl_StQuantity";
+            this.lbl_StQuantity.Size = new System.Drawing.Size(62, 18);
+            this.lbl_StQuantity.TabIndex = 70;
+            this.lbl_StQuantity.Text = "在庫数";
             // 
             // txt_PrID
             // 
-            //this.txt_PrID.Location = new System.Drawing.Point(116, 50);
-            //this.txt_PrID.Name = "txt_PrID";
-            //this.txt_PrID.Size = new System.Drawing.Size(183, 19);
-            //this.txt_PrID.TabIndex = 178;
-            //// 
-            //// txt_StID
-            //// 
-            //this.txt_StID.Location = new System.Drawing.Point(116, 24);
-            //this.txt_StID.Name = "txt_StID";
-            //this.txt_StID.Size = new System.Drawing.Size(183, 19);
-            //this.txt_StID.TabIndex = 177;
-            //// 
-            //// btn_regist
-            //// 
-            //this.btn_regist.Location = new System.Drawing.Point(170, 567);
-            //this.btn_regist.Name = "btn_regist";
-            //this.btn_regist.Size = new System.Drawing.Size(75, 23);
-            //this.btn_regist.TabIndex = 140;
-            //this.btn_regist.Text = "F2　登録";
-            //this.btn_regist.UseVisualStyleBackColor = true;
-            //this.btn_regist.Click += new System.EventHandler(this.btn_regist_Click);
-            //// 
-            //// button3
-            //// 
-            //this.button3.Location = new System.Drawing.Point(584, 567);
-            //this.button3.Name = "button3";
-            //this.button3.Size = new System.Drawing.Size(86, 23);
-            //this.button3.TabIndex = 145;
-            //this.button3.Text = "F7　入力クリア";
-            //this.button3.UseVisualStyleBackColor = true;
-            //// 
-            //// button1
-            //// 
-            //this.button1.Location = new System.Drawing.Point(422, 567);
-            //this.button1.Name = "button1";
-            //this.button1.Size = new System.Drawing.Size(75, 23);
-            //this.button1.TabIndex = 143;
-            //this.button1.Text = "F5　印刷";
-            //this.button1.UseVisualStyleBackColor = true;
-            //// 
-            //// btn_all
-            //// 
-            //this.btn_all.Location = new System.Drawing.Point(332, 567);
-            //this.btn_all.Name = "btn_all";
-            //this.btn_all.Size = new System.Drawing.Size(85, 23);
-            //this.btn_all.TabIndex = 142;
-            //this.btn_all.Text = "F4　一覧表示";
-            //this.btn_all.UseVisualStyleBackColor = true;
-            //// 
-            //// btn_update
-            //// 
-            //this.btn_update.Location = new System.Drawing.Point(250, 567);
-            //this.btn_update.Name = "btn_update";
-            //this.btn_update.Size = new System.Drawing.Size(75, 23);
-            //this.btn_update.TabIndex = 141;
-            //this.btn_update.Text = "F3　更新";
-            //this.btn_update.UseVisualStyleBackColor = true;
-            //// 
-            //// button2
-            //// 
-            //this.button2.Location = new System.Drawing.Point(503, 567);
-            //this.button2.Name = "button2";
-            //this.button2.Size = new System.Drawing.Size(75, 23);
-            //this.button2.TabIndex = 144;
-            //this.button2.Text = "F6　削除";
-            //this.button2.UseVisualStyleBackColor = true;
+            this.txt_PrID.Location = new System.Drawing.Point(535, 19);
+            this.txt_PrID.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_PrID.Name = "txt_PrID";
+            this.txt_PrID.Size = new System.Drawing.Size(303, 25);
+            this.txt_PrID.TabIndex = 65;
             // 
-            // dataGridView_Stock
+            // txt_StQuantity
             // 
-            //this.dataGridView_Stock.Location = new System.Drawing.Point(24, 258);
-            //this.dataGridView_Stock.Name = "dataGridView_Stock";
-            //this.dataGridView_Stock.Size = new System.Drawing.Size(726, 294);
-            //this.dataGridView_Stock.TabIndex = 137;
+            this.txt_StQuantity.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_StQuantity.Location = new System.Drawing.Point(121, 54);
+            this.txt_StQuantity.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_StQuantity.Name = "txt_StQuantity";
+            this.txt_StQuantity.Size = new System.Drawing.Size(303, 25);
+            this.txt_StQuantity.TabIndex = 64;
             // 
-            // txt_memo
+            // txt_StID
             // 
-            //this.txt_memo.Location = new System.Drawing.Point(455, 26);
-            //this.txt_memo.Multiline = true;
-            //this.txt_memo.Name = "txt_memo";
-            //this.txt_memo.Size = new System.Drawing.Size(210, 70);
-            //this.txt_memo.TabIndex = 70;
-            //// 
-            //// btn_sertch
-            //// 
-            //this.btn_sertch.Location = new System.Drawing.Point(89, 567);
-            //this.btn_sertch.Name = "btn_sertch";
-            //this.btn_sertch.Size = new System.Drawing.Size(75, 23);
-            //this.btn_sertch.TabIndex = 139;
-            //this.btn_sertch.Text = "F1　検索";
-            //this.btn_sertch.UseVisualStyleBackColor = true;
-            //// 
-            //// lbl_memo
-            //// 
-            //this.lbl_memo.AutoSize = true;
-            //this.lbl_memo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            //this.lbl_memo.Location = new System.Drawing.Point(371, 26);
-            //this.lbl_memo.Name = "lbl_memo";
-            //this.lbl_memo.Size = new System.Drawing.Size(73, 12);
-            //this.lbl_memo.TabIndex = 70;
-            //this.lbl_memo.Text = "備考(30文字)";
-            //// 
-            //// groupBox2
-            //// 
-            //this.groupBox2.Controls.Add(this.label2);
-            //this.groupBox2.Controls.Add(this.label1);
-            //this.groupBox2.Controls.Add(this.txt_Stock_Price);
-            //this.groupBox2.Controls.Add(this.txt_memo);
-            //this.groupBox2.Controls.Add(this.lbl_memo);
-            //this.groupBox2.Controls.Add(this.lbl_Stock_price);
-            //this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            //this.groupBox2.Location = new System.Drawing.Point(24, 131);
-            //this.groupBox2.Name = "groupBox2";
-            //this.groupBox2.Size = new System.Drawing.Size(726, 106);
-            //this.groupBox2.TabIndex = 138;
-            //this.groupBox2.TabStop = false;
-            //this.groupBox2.Text = "追加項目";
-            //this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            this.txt_StID.Location = new System.Drawing.Point(121, 18);
+            this.txt_StID.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_StID.Name = "txt_StID";
+            this.txt_StID.Size = new System.Drawing.Size(303, 25);
+            this.txt_StID.TabIndex = 63;
             // 
-            // label2
+            // lbl_StID
             // 
-            //this.label2.AutoSize = true;
-            //this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            //this.label2.Location = new System.Drawing.Point(46, 26);
-            //this.label2.Name = "label2";
-            //this.label2.Size = new System.Drawing.Size(17, 12);
-            //this.label2.TabIndex = 183;
-            //this.label2.Text = "*1";
+            this.lbl_StID.AutoSize = true;
+            this.lbl_StID.ForeColor = System.Drawing.Color.White;
+            this.lbl_StID.Location = new System.Drawing.Point(9, 21);
+            this.lbl_StID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_StID.Name = "lbl_StID";
+            this.lbl_StID.Size = new System.Drawing.Size(65, 18);
+            this.lbl_StID.TabIndex = 7;
+            this.lbl_StID.Text = "在庫ID ";
             // 
-            // label1
-            // 
-            //this.label1.AutoSize = true;
-            //this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            //this.label1.Location = new System.Drawing.Point(46, 83);
-            //this.label1.Name = "label1";
-            //this.label1.Size = new System.Drawing.Size(87, 12);
-            //this.label1.TabIndex = 183;
-            //this.label1.Text = "*1検索時の項目";
-            // 
-            // txt_Stock_Price
-            // 
-            //this.txt_Stock_Price.Location = new System.Drawing.Point(116, 23);
-            //this.txt_Stock_Price.Name = "txt_Stock_Price";
-            //this.txt_Stock_Price.Size = new System.Drawing.Size(183, 19);
-            //this.txt_Stock_Price.TabIndex = 182;
-            // 
-            // lbl_Stock_price
-            // 
-            //this.lbl_Stock_price.AutoSize = true;
-            //this.lbl_Stock_price.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            //this.lbl_Stock_price.Location = new System.Drawing.Point(63, 26);
-            //this.lbl_Stock_price.Name = "lbl_Stock_price";
-            //this.lbl_Stock_price.Size = new System.Drawing.Size(29, 12);
-            //this.lbl_Stock_price.TabIndex = 181;
-            //this.lbl_Stock_price.Text = "値段";
-            // 
-
             // F_Stock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(780, 599);
-            //this.Controls.Add(this.groupBox2);
-            //this.Controls.Add(this.groupBox1);
-            //this.Controls.Add(this.button3);
-            //this.Controls.Add(this.button2);
-            //this.Controls.Add(this.button1);
-            //this.Controls.Add(this.btn_all);
-            //this.Controls.Add(this.btn_update);
-
-            //this.Controls.Add(this.button2);
-            //this.Controls.Add(this.dataGridView_Stock);
-            //this.Controls.Add(this.btn_sertch);
-            //this.Controls.Add(this.groupBox2);
-
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.ClientSize = new System.Drawing.Size(1300, 914);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.dataGridView_Chumon_regist);
+            this.Controls.Add(this.btn_sertch);
+            this.Controls.Add(this.btn_update);
+            this.Controls.Add(this.btn_clear);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_all);
+            this.Controls.Add(this.btn_regist);
+            this.Controls.Add(this.btn_print);
+            this.Controls.Add(this.menuStrip2);
+            this.Controls.Add(this.groupBox2);
             this.Name = "F_Stock";
-            this.Text = "販売在庫管理システム　在庫管理画面";
-            this.Load += new System.EventHandler(this.F_Stock_Load);
-            //this.groupBox2.ResumeLayout(false);
-            //this.groupBox2.PerformLayout();
-            //this.groupBox1.ResumeLayout(false);
-            //this.groupBox1.PerformLayout();
-
-            //((System.ComponentModel.ISupportInitialize)(this.dataGridView_Stock)).EndInit();
-            //this.groupBox2.ResumeLayout(false);
-            //this.groupBox2.PerformLayout();
-
+            this.Text = "販売在庫管理システム　在庫情報管理画面";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon_regist)).EndInit();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -701,26 +445,19 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txt_memo;
-        private System.Windows.Forms.Label lbl_memo;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lbl_Stock_price;
-        private System.Windows.Forms.Label lbl_StQuantity;
-        private System.Windows.Forms.TextBox txt_Stock_price;
-        private System.Windows.Forms.TextBox txt_Stquantity;
-        private System.Windows.Forms.TextBox txt_PrID;
-        private System.Windows.Forms.TextBox txt_StID;
-        private System.Windows.Forms.Label lbl_StID;
-        private System.Windows.Forms.Label lbl_PrID;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btn_all;
-        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.DataGridView dataGridView_Chumon_regist;
         private System.Windows.Forms.Button btn_sertch;
+        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_all;
         private System.Windows.Forms.Button btn_regist;
-        private System.Windows.Forms.DataGridView dataGridView_Product_regist;
+        private System.Windows.Forms.TextBox txt_ChHidden;
+        private System.Windows.Forms.TextBox txt_memo;
+        private System.Windows.Forms.Label lbl_ArHidden;
+        private System.Windows.Forms.Label lbl_memo;
+        private System.Windows.Forms.CheckBox chk_hide_FLG;
+        private System.Windows.Forms.Button btn_print;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem メニューToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
@@ -736,34 +473,13 @@
         private System.Windows.Forms.ToolStripMenuItem 社員管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 売上管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 発注管理ToolStripMenuItem;
-
-        private System.Windows.Forms.ToolStripMenuItem 発注情報登録ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 発注情報検索ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 発注情報削除ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem バーコード管理ToolStripMenuItem;
-        //private System.Windows.Forms.MenuStrip menuStrip2;
-        //private System.Windows.Forms.GroupBox groupBox1;
-        //private System.Windows.Forms.Button btn_regist;
-        //private System.Windows.Forms.Button button3;
-        //private System.Windows.Forms.Button button1;
-        //private System.Windows.Forms.Button btn_all;
-        //private System.Windows.Forms.Button btn_update;
-        //private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView_Stock;
-        //private System.Windows.Forms.TextBox txt_memo;
-        //private System.Windows.Forms.Button btn_sertch;
-        //private System.Windows.Forms.Label lbl_memo;
-        //private System.Windows.Forms.GroupBox groupBox2;
-        //private System.Windows.Forms.TextBox txt_Stock_Price;
-        //private System.Windows.Forms.Label lbl_StID;
-        //private System.Windows.Forms.Label lbl_Stock_price;
-        //private System.Windows.Forms.Label lbl_PrID;
-        //private System.Windows.Forms.Label lbl_StQuantity;
-        //private System.Windows.Forms.TextBox txt_StQuantity;
-        //private System.Windows.Forms.TextBox txt_PrID;
-        //private System.Windows.Forms.TextBox txt_StID;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lbl_PrID;
+        private System.Windows.Forms.Label lbl_StQuantity;
+        private System.Windows.Forms.TextBox txt_PrID;
+        private System.Windows.Forms.TextBox txt_StQuantity;
+        private System.Windows.Forms.TextBox txt_StID;
+        private System.Windows.Forms.Label lbl_StID;
     }
 }

@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView_Chumon_regist = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Shipment = new System.Windows.Forms.DataGridView();
             this.lbl_SaDate = new System.Windows.Forms.Label();
             this.lbl_ShID = new System.Windows.Forms.Label();
             this.lbl_ClID = new System.Windows.Forms.Label();
             this.lbl_EmID = new System.Windows.Forms.Label();
-            this.txt_SaDate = new System.Windows.Forms.TextBox();
+            this.txt_ShFinishDate = new System.Windows.Forms.TextBox();
             this.btn_sertch = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
@@ -48,7 +48,7 @@
             this.lbl_SoID = new System.Windows.Forms.Label();
             this.lbl_OrID = new System.Windows.Forms.Label();
             this.btn_regist = new System.Windows.Forms.Button();
-            this.txt_ChHidden = new System.Windows.Forms.TextBox();
+            this.txt_ShHidden = new System.Windows.Forms.TextBox();
             this.txt_memo = new System.Windows.Forms.TextBox();
             this.lbl_ArHidden = new System.Windows.Forms.Label();
             this.lbl_memo = new System.Windows.Forms.Label();
@@ -70,18 +70,20 @@
             this.売上管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.発注管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon_regist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Shipment)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView_Chumon_regist
+            // dataGridView_Shipment
             // 
-            this.dataGridView_Chumon_regist.Location = new System.Drawing.Point(8, 158);
-            this.dataGridView_Chumon_regist.Name = "dataGridView_Chumon_regist";
-            this.dataGridView_Chumon_regist.Size = new System.Drawing.Size(763, 442);
-            this.dataGridView_Chumon_regist.TabIndex = 185;
+
+            this.dataGridView_Shipment.Location = new System.Drawing.Point(8, 158);
+            this.dataGridView_Shipment.Name = "dataGridView_Shipment";
+            this.dataGridView_Shipment.Size = new System.Drawing.Size(763, 442);
+            this.dataGridView_Shipment.TabIndex = 185;
+
             // 
             // lbl_SaDate
             // 
@@ -127,13 +129,15 @@
             this.lbl_EmID.TabIndex = 70;
             this.lbl_EmID.Text = "社員ID";
             // 
-            // txt_SaDate
+            // txt_ShFinishDate
             // 
-            this.txt_SaDate.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_SaDate.Location = new System.Drawing.Point(339, 61);
-            this.txt_SaDate.Name = "txt_SaDate";
-            this.txt_SaDate.Size = new System.Drawing.Size(165, 19);
-            this.txt_SaDate.TabIndex = 67;
+
+            this.txt_ShFinishDate.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_ShFinishDate.Location = new System.Drawing.Point(339, 61);
+            this.txt_ShFinishDate.Name = "txt_ShFinishDate";
+            this.txt_ShFinishDate.Size = new System.Drawing.Size(165, 19);
+            this.txt_ShFinishDate.TabIndex = 67;
+
             // 
             // btn_sertch
             // 
@@ -199,7 +203,7 @@
             this.groupBox1.Controls.Add(this.lbl_ShID);
             this.groupBox1.Controls.Add(this.lbl_ClID);
             this.groupBox1.Controls.Add(this.lbl_EmID);
-            this.groupBox1.Controls.Add(this.txt_SaDate);
+            this.groupBox1.Controls.Add(this.txt_ShFinishDate);
             this.groupBox1.Controls.Add(this.txt_ShID);
             this.groupBox1.Controls.Add(this.txt_ClID);
             this.groupBox1.Controls.Add(this.txt_EmID);
@@ -276,15 +280,18 @@
             this.btn_regist.TabIndex = 188;
             this.btn_regist.Text = "F2 登録";
             this.btn_regist.UseVisualStyleBackColor = false;
+            this.btn_regist.Click += new System.EventHandler(this.btn_regist_Click);
             // 
-            // txt_ChHidden
+            // txt_ShHidden
             // 
-            this.txt_ChHidden.Location = new System.Drawing.Point(8, 101);
-            this.txt_ChHidden.Multiline = true;
-            this.txt_ChHidden.Name = "txt_ChHidden";
-            this.txt_ChHidden.Size = new System.Drawing.Size(238, 19);
-            this.txt_ChHidden.TabIndex = 77;
-            // 
+
+            this.txt_ShHidden.Location = new System.Drawing.Point(8, 101);
+            this.txt_ShHidden.Multiline = true;
+            this.txt_ShHidden.Name = "txt_ShHidden";
+            this.txt_ShHidden.Size = new System.Drawing.Size(238, 19);
+            this.txt_ShHidden.TabIndex = 77;
+
+
             // txt_memo
             // 
             this.txt_memo.Location = new System.Drawing.Point(8, 35);
@@ -450,7 +457,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox2.Controls.Add(this.txt_ChHidden);
+            this.groupBox2.Controls.Add(this.txt_ShHidden);
             this.groupBox2.Controls.Add(this.txt_memo);
             this.groupBox2.Controls.Add(this.lbl_ArHidden);
             this.groupBox2.Controls.Add(this.lbl_memo);
@@ -470,8 +477,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(780, 609);
-            this.Controls.Add(this.dataGridView_Chumon_regist);
+
+            this.ClientSize = new System.Drawing.Size(780, 499);
+            this.Controls.Add(this.dataGridView_Shipment);
+
             this.Controls.Add(this.btn_sertch);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_clear);
@@ -485,8 +494,9 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "F_Shipment";
             this.Text = "販売在庫管理システム　出荷情報管理画面";
-            this.Load += new System.EventHandler(this.F_Shipment_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon_regist)).EndInit();
+
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Shipment)).EndInit();
+
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
@@ -500,12 +510,12 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView_Chumon_regist;
+        private System.Windows.Forms.DataGridView dataGridView_Shipment;
         private System.Windows.Forms.Label lbl_SaDate;
         private System.Windows.Forms.Label lbl_ShID;
         private System.Windows.Forms.Label lbl_ClID;
         private System.Windows.Forms.Label lbl_EmID;
-        private System.Windows.Forms.TextBox txt_SaDate;
+        private System.Windows.Forms.TextBox txt_ShFinishDate;
         private System.Windows.Forms.Button btn_sertch;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_clear;
@@ -520,7 +530,7 @@
         private System.Windows.Forms.Label lbl_SoID;
         private System.Windows.Forms.Label lbl_OrID;
         private System.Windows.Forms.Button btn_regist;
-        private System.Windows.Forms.TextBox txt_ChHidden;
+        private System.Windows.Forms.TextBox txt_ShHidden;
         private System.Windows.Forms.TextBox txt_memo;
         private System.Windows.Forms.Label lbl_ArHidden;
         private System.Windows.Forms.Label lbl_memo;
