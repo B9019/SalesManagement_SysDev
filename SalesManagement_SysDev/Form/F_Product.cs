@@ -1119,6 +1119,11 @@ namespace SalesManagement_SysDev
         {
 
         }
+
+        private void btn_update_Click_1(object sender, EventArgs e)
+        {
+
+        }
         //public void ReadSingleRow(IDataRecord record)
         //{
         //    dataGridView_Product.Rows.Add();

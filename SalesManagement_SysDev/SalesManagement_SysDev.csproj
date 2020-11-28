@@ -340,6 +340,7 @@
     <Compile Include="Model\ContentsManagement\Common\StaticCommon.cs" />
     <Compile Include="Model\ContentsManagement\M_ClientContents.cs" />
     <Compile Include="Model\ContentsManagement\M_EmployeeContents.cs" />
+    <Compile Include="Model\ContentsManagement\T_ArrivalContents.cs" />
     <Compile Include="Model\ContentsManagement\T_ChumonContents.cs" />
     <Compile Include="Model\ContentsManagement\M_ProductContents.cs" />
     <Compile Include="Model\ContentsManagement\StaffContents.cs" />
@@ -349,6 +350,7 @@
     <Compile Include="Model\Entity\Disp\M_DispClient.cs" />
     <Compile Include="Model\Entity\Disp\M_DispEmployee.cs" />
     <Compile Include="Model\Entity\Disp\M_DispProduct.cs" />
+    <Compile Include="Model\Entity\Disp\T_DispArrival.cs" />
     <Compile Include="Model\Entity\Disp\T_DispSale.cs" />
     <Compile Include="Model\Entity\Disp\T_DispShipment.cs" />
     <Compile Include="Model\Entity\Disp\T_DispStock.cs" />

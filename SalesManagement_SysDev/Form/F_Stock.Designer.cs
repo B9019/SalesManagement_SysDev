@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView_Chumon_regist = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Stock = new System.Windows.Forms.DataGridView();
             this.btn_sertch = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
@@ -64,19 +64,19 @@
             this.txt_StQuantity = new System.Windows.Forms.TextBox();
             this.txt_StID = new System.Windows.Forms.TextBox();
             this.lbl_StID = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon_regist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Stock)).BeginInit();
             this.menuStrip2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView_Chumon_regist
+            // dataGridView_Stock
             // 
-            this.dataGridView_Chumon_regist.Location = new System.Drawing.Point(13, 237);
-            this.dataGridView_Chumon_regist.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.dataGridView_Chumon_regist.Name = "dataGridView_Chumon_regist";
-            this.dataGridView_Chumon_regist.Size = new System.Drawing.Size(1272, 663);
-            this.dataGridView_Chumon_regist.TabIndex = 185;
+            this.dataGridView_Stock.Location = new System.Drawing.Point(13, 237);
+            this.dataGridView_Stock.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.dataGridView_Stock.Name = "dataGridView_Stock";
+            this.dataGridView_Stock.Size = new System.Drawing.Size(1272, 663);
+            this.dataGridView_Stock.TabIndex = 185;
             // 
             // btn_sertch
             // 
@@ -169,7 +169,7 @@
             this.lbl_ArHidden.ForeColor = System.Drawing.Color.White;
             this.lbl_ArHidden.Location = new System.Drawing.Point(10, 129);
             this.lbl_ArHidden.Name = "lbl_ArHidden";
-            this.lbl_ArHidden.Size = new System.Drawing.Size(116, 18);
+            this.lbl_ArHidden.Size = new System.Drawing.Size(77, 12);
             this.lbl_ArHidden.TabIndex = 63;
             this.lbl_ArHidden.Text = "入荷失敗理由";
             // 
@@ -180,7 +180,7 @@
             this.lbl_memo.Location = new System.Drawing.Point(8, 22);
             this.lbl_memo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_memo.Name = "lbl_memo";
-            this.lbl_memo.Size = new System.Drawing.Size(108, 18);
+            this.lbl_memo.Size = new System.Drawing.Size(73, 12);
             this.lbl_memo.TabIndex = 70;
             this.lbl_memo.Text = "備考(30文字)";
             // 
@@ -191,7 +191,7 @@
             this.chk_hide_FLG.Location = new System.Drawing.Point(13, 93);
             this.chk_hide_FLG.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.chk_hide_FLG.Name = "chk_hide_FLG";
-            this.chk_hide_FLG.Size = new System.Drawing.Size(144, 22);
+            this.chk_hide_FLG.Size = new System.Drawing.Size(97, 16);
             this.chk_hide_FLG.TabIndex = 0;
             this.chk_hide_FLG.Text = "入荷失敗フラグ";
             this.chk_hide_FLG.UseVisualStyleBackColor = true;
@@ -217,7 +217,7 @@
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(5, 3, 0, 3);
-            this.menuStrip2.Size = new System.Drawing.Size(1300, 35);
+            this.menuStrip2.Size = new System.Drawing.Size(1300, 25);
             this.menuStrip2.TabIndex = 186;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -239,85 +239,85 @@
             this.売上管理ToolStripMenuItem,
             this.発注管理ToolStripMenuItem});
             this.メニューToolStripMenuItem.Name = "メニューToolStripMenuItem";
-            this.メニューToolStripMenuItem.Size = new System.Drawing.Size(110, 29);
+            this.メニューToolStripMenuItem.Size = new System.Drawing.Size(76, 19);
             this.メニューToolStripMenuItem.Text = "管理メニュー";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(185, 30);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
             this.toolStripMenuItem1.Text = "ログイン管理";
             // 
             // 顧客管理ToolStripMenuItem
             // 
             this.顧客管理ToolStripMenuItem.Name = "顧客管理ToolStripMenuItem";
-            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
+            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.顧客管理ToolStripMenuItem.Text = "顧客管理";
             // 
             // 商品管理ToolStripMenuItem
             // 
             this.商品管理ToolStripMenuItem.Name = "商品管理ToolStripMenuItem";
-            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
+            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.商品管理ToolStripMenuItem.Text = "商品管理";
             // 
             // 受注管理ToolStripMenuItem
             // 
             this.受注管理ToolStripMenuItem.Name = "受注管理ToolStripMenuItem";
-            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
+            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.受注管理ToolStripMenuItem.Text = "受注管理";
             // 
             // 注文管理ToolStripMenuItem
             // 
             this.注文管理ToolStripMenuItem.Name = "注文管理ToolStripMenuItem";
-            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
+            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.注文管理ToolStripMenuItem.Text = "注文管理";
             // 
             // 入荷管理ToolStripMenuItem
             // 
             this.入荷管理ToolStripMenuItem.Name = "入荷管理ToolStripMenuItem";
-            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
+            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.入荷管理ToolStripMenuItem.Text = "入荷管理";
             // 
             // 出荷管理ToolStripMenuItem
             // 
             this.出荷管理ToolStripMenuItem.Name = "出荷管理ToolStripMenuItem";
-            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
+            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.出荷管理ToolStripMenuItem.Text = "出荷管理";
             // 
             // 在庫管理ToolStripMenuItem
             // 
             this.在庫管理ToolStripMenuItem.Name = "在庫管理ToolStripMenuItem";
-            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
+            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.在庫管理ToolStripMenuItem.Text = "在庫管理";
             // 
             // 入庫管理ToolStripMenuItem
             // 
             this.入庫管理ToolStripMenuItem.Name = "入庫管理ToolStripMenuItem";
-            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
+            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.入庫管理ToolStripMenuItem.Text = "入庫管理";
             // 
             // 出庫管理ToolStripMenuItem
             // 
             this.出庫管理ToolStripMenuItem.Name = "出庫管理ToolStripMenuItem";
-            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
+            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.出庫管理ToolStripMenuItem.Text = "出庫管理";
             // 
             // 社員管理ToolStripMenuItem
             // 
             this.社員管理ToolStripMenuItem.Name = "社員管理ToolStripMenuItem";
-            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
+            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.社員管理ToolStripMenuItem.Text = "社員管理";
             // 
             // 売上管理ToolStripMenuItem
             // 
             this.売上管理ToolStripMenuItem.Name = "売上管理ToolStripMenuItem";
-            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
+            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.売上管理ToolStripMenuItem.Text = "売上管理";
             // 
             // 発注管理ToolStripMenuItem
             // 
             this.発注管理ToolStripMenuItem.Name = "発注管理ToolStripMenuItem";
-            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(185, 30);
+            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.発注管理ToolStripMenuItem.Text = "発注管理";
             // 
             // groupBox2
@@ -363,7 +363,7 @@
             this.lbl_PrID.Location = new System.Drawing.Point(437, 22);
             this.lbl_PrID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_PrID.Name = "lbl_PrID";
-            this.lbl_PrID.Size = new System.Drawing.Size(60, 18);
+            this.lbl_PrID.Size = new System.Drawing.Size(40, 12);
             this.lbl_PrID.TabIndex = 71;
             this.lbl_PrID.Text = "商品ID";
             // 
@@ -374,7 +374,7 @@
             this.lbl_StQuantity.Location = new System.Drawing.Point(9, 58);
             this.lbl_StQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_StQuantity.Name = "lbl_StQuantity";
-            this.lbl_StQuantity.Size = new System.Drawing.Size(62, 18);
+            this.lbl_StQuantity.Size = new System.Drawing.Size(41, 12);
             this.lbl_StQuantity.TabIndex = 70;
             this.lbl_StQuantity.Text = "在庫数";
             // 
@@ -383,7 +383,7 @@
             this.txt_PrID.Location = new System.Drawing.Point(535, 19);
             this.txt_PrID.Margin = new System.Windows.Forms.Padding(5);
             this.txt_PrID.Name = "txt_PrID";
-            this.txt_PrID.Size = new System.Drawing.Size(303, 25);
+            this.txt_PrID.Size = new System.Drawing.Size(303, 19);
             this.txt_PrID.TabIndex = 65;
             // 
             // txt_StQuantity
@@ -392,7 +392,7 @@
             this.txt_StQuantity.Location = new System.Drawing.Point(121, 54);
             this.txt_StQuantity.Margin = new System.Windows.Forms.Padding(5);
             this.txt_StQuantity.Name = "txt_StQuantity";
-            this.txt_StQuantity.Size = new System.Drawing.Size(303, 25);
+            this.txt_StQuantity.Size = new System.Drawing.Size(303, 19);
             this.txt_StQuantity.TabIndex = 64;
             // 
             // txt_StID
@@ -400,7 +400,7 @@
             this.txt_StID.Location = new System.Drawing.Point(121, 18);
             this.txt_StID.Margin = new System.Windows.Forms.Padding(5);
             this.txt_StID.Name = "txt_StID";
-            this.txt_StID.Size = new System.Drawing.Size(303, 25);
+            this.txt_StID.Size = new System.Drawing.Size(303, 19);
             this.txt_StID.TabIndex = 63;
             // 
             // lbl_StID
@@ -410,7 +410,7 @@
             this.lbl_StID.Location = new System.Drawing.Point(9, 21);
             this.lbl_StID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_StID.Name = "lbl_StID";
-            this.lbl_StID.Size = new System.Drawing.Size(65, 18);
+            this.lbl_StID.Size = new System.Drawing.Size(44, 12);
             this.lbl_StID.TabIndex = 7;
             this.lbl_StID.Text = "在庫ID ";
             // 
@@ -419,7 +419,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1300, 914);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView_Chumon_regist);
+            this.Controls.Add(this.dataGridView_Stock);
             this.Controls.Add(this.btn_sertch);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_clear);
@@ -431,7 +431,7 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "F_Stock";
             this.Text = "販売在庫管理システム　在庫情報管理画面";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon_regist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Stock)).EndInit();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -445,7 +445,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView_Chumon_regist;
+        private System.Windows.Forms.DataGridView dataGridView_Stock;
         private System.Windows.Forms.Button btn_sertch;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_clear;

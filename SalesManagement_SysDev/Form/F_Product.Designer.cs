@@ -210,6 +210,7 @@
             this.btn_update.TabIndex = 178;
             this.btn_update.Text = "F3 更新";
             this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click_1);
             // 
             // btn_clear
             // 
