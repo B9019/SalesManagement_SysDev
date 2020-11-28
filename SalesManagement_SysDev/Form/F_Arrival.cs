@@ -35,7 +35,7 @@ namespace SalesManagement_SysDev
         private Messages _ms = new Messages();
 
         //// データベース処理モジュール（M_Division）
-        private T_ArrivalContents _Pr = new T_ArrivalContents();
+        private T_ArrivalContents _Ar = new T_ArrivalContents();
 
         // ***** プロパティ定義
 
@@ -119,7 +119,7 @@ namespace SalesManagement_SysDev
             if (String.IsNullOrEmpty(txt_ArID.Text))
             {
                 MessageBox.Show("入荷IDは必須項目です");
-                ArID.Focus();
+                txt_ArID.Focus();
                 return false;
             }
             // 営業所ID
@@ -314,7 +314,7 @@ namespace SalesManagement_SysDev
             int ScrollPosition = dataGridView_Arrival.FirstDisplayedScrollingRowIndex;
 
             // データ取得&表示（データバインド）
-            _dispArrivalPaging = _Pr.GetDispArrivals();
+            _dispArrivalPaging = _Ar.GetDispArrivals();
             dataGridView_Arrival.DataSource = _dispArrivalPaging;
 
             // 全データ数取得
@@ -374,7 +374,487 @@ namespace SalesManagement_SysDev
             // 入力フォーカスリセット
             txt_ArID.Focus();
         }
+        // 更新ボタン
+        // 11.2 入荷情報更新
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            // 11.2.1 妥当な入荷データ取得
+            if (!GetValidDataAtUpdate()) return;
 
+            //11.2.2 入荷情報作成
+            var regArrival = GenerateDataAtUpdate();
+
+            // 11.2.3 入荷情報更新
+            ArrivalUpdate(regArrival);
+
+        }
+        //
+        //
+        //　11.3.2.1 妥当な入荷データ取得（更新）
+        //
+        //
+        private bool GetValidDataAtUpdate()
+        {
+            // 入荷データの形式チェック
+            string errorMessage = string.Empty;
+
+            ///// 入力内容の適否 /////
+
+            // 入荷ID
+            if (String.IsNullOrEmpty(txt_ArID.Text))
+            {
+                MessageBox.Show("入荷IDは必須項目です");
+                txt_ArID.Focus();
+                return false;
+            }
+            // 営業所ID
+            if (String.IsNullOrEmpty(txt_SoID.Text))
+            {
+                MessageBox.Show("営業所IDは必須項目です");
+                txt_SoID.Focus();
+                return false;
+            }
+            // 顧客ID
+            if (String.IsNullOrEmpty(txt_ClID.Text))
+            {
+                MessageBox.Show("顧客IDは必須項目です");
+                txt_ClID.Focus();
+                return false;
+            }
+            //　入荷年月日
+            if (String.IsNullOrEmpty(txt_ArDate.Text))
+            {
+                MessageBox.Show("入荷年月日は必須項目です");
+                txt_ArDate.Focus();
+                return false;
+            }
+            ///// 入力内容の形式チェック /////
+
+            //// 数値チェック ////
+
+            // 入荷ID
+            if (!_ic.NumericCheck(txt_ArID.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_ArID.Focus();
+                return false;
+            }
+            //　営業所ID
+            if (!_ic.NumericCheck(txt_SoID.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_SoID.Focus();
+                return false;
+            }
+            // 社員ID
+            if (!_ic.NumericCheck(txt_EmID.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_EmID.Focus();
+                return false;
+            }
+            //  顧客ID
+            if (!_ic.NumericCheck(txt_ClID.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_ClID.Focus();
+                return false;
+            }
+            // 受注ID
+            if (!_ic.NumericCheck(txt_OrID.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_OrID.Focus();
+                return false;
+            }
+
+            ////　文字チェック ////
+
+            //　備考
+            if (!_ic.FullWidthCharCheck(txt_Armemo.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_Armemo.Focus();
+                return false;
+            }
+            // 　非表示理由の文字チェック
+            if (!_ic.FullWidthCharCheck(txt_ArHidden.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_ArHidden.Focus();
+                return false;
+            }
+
+            /////文字数チェック/////
+            // 入荷ID
+            if (txt_ArID.TextLength > 6)
+            {
+                MessageBox.Show("メーカIDは6文字以下です");
+                txt_ArID.Focus();
+                return false;
+            }
+            // 営業所ID
+            if (txt_SoID.TextLength > 2)
+            {
+                MessageBox.Show("商品IDは2文字以下です");
+                txt_SoID.Focus();
+                return false;
+            }
+            // 社員ID
+            if (txt_EmID.TextLength > 6)
+            {
+                MessageBox.Show("商品名は6文字以下です");
+                txt_EmID.Focus();
+                return false;
+            }
+            //　顧客ID
+            if (txt_ClID.TextLength > 4)
+            {
+                MessageBox.Show("JANコードは4文字以下です");
+                txt_ClID.Focus();
+                return false;
+            }
+            // 受注ID
+            if (txt_OrID.TextLength > 6)
+            {
+                MessageBox.Show("小分類IDは6文字以下です");
+                txt_OrID.Focus();
+                return false;
+            }
+            // 入荷年月日
+            if (txt_ArDate.TextLength > 9)
+            {
+                MessageBox.Show("型番は9文字以下です");
+                txt_ArDate.Focus();
+                return false;
+            }
+            //　備考
+            if (txt_Armemo.TextLength > 30)
+            {
+                MessageBox.Show("色は30文字以下です");
+                txt_Armemo.Focus();
+                return false;
+            }
+            //　非表示理由
+            if (txt_ArHidden.TextLength > 30)
+            {
+                MessageBox.Show("価格は30文字以下です");
+                txt_ArHidden.Focus();
+                return false;
+            }
+            return true;
+
+        }
+        //
+        //
+        // 11.2.2 カテゴリー情報作成
+        //
+        //
+        // out      Arrival : Arrivalデータ
+        private T_Arrival GenerateDataAtUpdate()
+        {
+            return new T_Arrival
+            {
+                ArID = int.Parse(txt_ArID.Text),
+                SoID = int.Parse(txt_SoID.Text),
+                EmID = int.Parse(txt_EmID.Text),
+                ClID = int.Parse(txt_ClID.Text),
+                OrID = int.Parse(txt_OrID.Text),
+                ArDate = DateTime.Parse(txt_ArDate.Text),
+                Armemo = txt_Armemo.Text,
+                ArHidden = txt_ArHidden.Text,
+
+            };
+        }
+        //
+        //
+        // 11.2.3 入荷情報更新
+        //
+        //
+        private bool ArrivalUpdate(T_Arrival regArrival)
+        {
+            // 更新可否
+            if (DialogResult.OK != MessageBox.Show(this, "更新してよろしいですか", "更新可否", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+            {
+                return false;
+            }
+
+            var errorMessage = _Ar.PutArrival(regArrival);
+
+            if (errorMessage != string.Empty)
+            {
+                MessageBox.Show(errorMessage);
+                return false;
+            }
+
+            // 表示データ更新 & 入力クリア
+            RefreshDataGridView();
+            txt_ArID.Focus();
+
+            return true;
+        }
+
+        private void btn_all_Click(object sender, EventArgs e)
+        {
+            fncAllSelect();
+        }
+        private void fncAllSelect()
+        {
+            // データ取得&表示（データバインド）
+            _dispArrivalPaging = _Ar.GetDispArrivals();
+            dataGridView_Arrival.DataSource = _dispArrivalPaging;
+
+            ////全データの表示
+            //dataGridView_Product.Rows.Clear();
+            //try
+            //{
+            //    var context = new SalesManagement_DevContext();
+            //    foreach (var p in context.M_Products)
+            //    {
+            //        dataGridView_Product.Rows.Add(p.PrID, p.MaID, p.PrName, p.Price,p.PrJCode,p.);
+            //    }
+            //    context.Dispose();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            //接続先DBの情報をセット
+            SqlConnection conn = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True";
+
+            //実行するSQL文の指定
+            command.CommandText = @"SELECT * FROM T_Arrival WHERE ";
+            command.Connection = conn;
+
+            //sql文のwhere句の接続に使う
+            string AND = "";
+            int andnum = 0;
+            //検索条件をテキストボックスから抽出し、SQL文をセット
+            //　日本語可　：SqlDbType.NVarChar
+            //　日本語不可：SqlDbType.VarChar
+            for (int count = 0; count < 8; count++)
+            {
+                if (txt_ArID.Text != "" && count == 0)
+                {
+                    command.Parameters.Add("@ArID", SqlDbType.VarChar);
+                    command.Parameters["@ArID"].Value = txt_ArID.Text;
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + "ArID LIKE @ArID ";
+                    ++andnum;
+
+                }
+                else if (txt_SoID.Text != "" && count == 1)
+                {
+                    command.Parameters.Add("@SoID", SqlDbType.VarChar);
+                    command.Parameters["@SoID"].Value = txt_SoID.Text;
+                    //if ("@PrID" != null)
+                    //{
+                    //    command.CommandText = command + "AND ";
+                    //}
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "SoID LIKE @SoID ";
+                    ++andnum;
+                }
+                else if (txt_EmID.Text != "" && count == 2)
+                {
+                    command.Parameters.Add("@EmID", SqlDbType.NVarChar);
+                    command.Parameters["@EmID"].Value = "%" + txt_EmID.Text + "%";
+                    //if ("@PrID" != null || "@MaID" != null)
+                    //{
+                    //    command.CommandText = command + "AND ";
+                    //}
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "EmID LIKE @EmID ";
+                    ++andnum;
+                }
+                else if (txt_ClID.Text != "" && count == 3)
+                {
+                    command.Parameters.Add("@ClID", SqlDbType.VarChar);
+                    command.Parameters["@ClID"].Value = txt_ClID.Text;
+                    //if ("@PrID" != null || "@MaID" != null || "@Price" != null)
+                    //{
+                    //    command.CommandText = command + "AND ";
+                    //}
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "ClID LIKE @ClID ";
+                    ++andnum;
+                }
+                else if (txt_OrID.Text != "" && count == 4)
+                {
+                    command.Parameters.Add("@OrID", SqlDbType.VarChar);
+                    command.Parameters["@OrID"].Value = "%" + txt_OrID.Text + "%";
+                    //if ("@PrID" != null || "@MaID" != null || "@Price" != null || "@PrJCode" != null)
+                    //{
+                    //    command.CommandText = command + "AND ";
+                    //}
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "OrID LIKE @OrID ";
+                    ++andnum;
+                }
+                else if (txt_ArDate.Text != "" && count == 5)
+                {
+                    command.Parameters.Add("@ArDate", SqlDbType.VarChar);
+                    command.Parameters["@ArDate"].Value = txt_ArDate.Text;
+                    //if ("@PrID" != null || "@MaID" != null || "@Price" != null || "@PrJCode" != null || )
+                    //{
+                    //    command.CommandText = command + "AND ";
+                    //}
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "ArDate LIKE @ArDate ";
+                    ++andnum;
+                }
+                else if (txt_Armemo.Text != "" && count == 6)
+                {
+                    command.Parameters.Add("@Armemo", SqlDbType.VarChar);
+                    command.Parameters["@Armemo"].Value = txt_Armemo.Text;
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "Armemo LIKE @Armemo ";
+                    ++andnum;
+                }
+                else if (txt_ArHidden.Text != "" && count == 7)
+                {
+                    command.Parameters.Add("@ArHiddenr", SqlDbType.VarChar);
+                    command.Parameters["@ArHidden"].Value = txt_ArHidden.Text;
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "ArHidden LIKE @ArHidden ";
+                    ++andnum;
+                }
+                //2つ目以降の条件の前部にANDを接続
+                if (andnum != 0)
+                {
+                    AND = "AND ";
+                }
+                //最後にセミコロンを接続する
+                while (count == 7)
+                {
+                    command.CommandText = command.CommandText + ";";
+                    break;
+                }
+
+            }
+            try
+            {
+                //データベースに接続
+                conn.Open();
+                //SQL文の実行、データが  readerに格納される
+                SqlDataReader rd = command.ExecuteReader();
+                dataGridView_Arrival.Rows.Clear();
+
+
+                if (rd.HasRows)
+                {
+                    while (rd.Read())
+                    {
+                        dataGridView_Arrival.Rows.Add(rd["ArID"], rd["SoID"], rd["EmID"], rd["ClID"],
+                            rd["OrID"], rd["ArDate"], rd["Armemo"], rd["ArHidden"]);
+                    }
+                }
+            }
+            finally
+            {
+                //データベースを切断
+                conn.Close();
+            }
+
+        }
+
+        private void btn_txt_clear_Click(object sender, EventArgs e)
+        {
+            ClearInput();
+        }
+        private void ログイン管理toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            F_login form_login = new F_login();
+            form_login.ShowDialog();
+        }
+
+        private void 顧客管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Client form_client = new F_Client();
+            form_client.ShowDialog();
+        }
+
+        private void 商品管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Product form_product = new F_Product();
+            form_product.ShowDialog();
+
+        }
+
+        private void 受注管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Order form_order = new F_Order();
+            form_order.ShowDialog();
+
+        }
+
+        private void 注文管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Chumon form_chumon = new F_Chumon();
+            form_chumon.ShowDialog();
+
+        }
+
+        private void 入荷管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Arrival form_arrival = new F_Arrival();
+            form_arrival.ShowDialog();
+
+        }
+
+        private void 出荷管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Shipment form_shipment = new F_Shipment();
+            form_shipment.ShowDialog();
+
+        }
+
+        private void 在庫管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Stock form_stock = new F_Stock();
+            form_stock.ShowDialog();
+
+        }
+
+        private void 入庫管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Warehousing form_warehousing = new F_Warehousing();
+            form_warehousing.ShowDialog();
+        }
+
+        private void 出庫管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Syukko form_syukko = new F_Syukko();
+            form_syukko.ShowDialog();
+
+        }
+
+        private void 社員管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Employee form_employee = new F_Employee();
+            form_employee.ShowDialog();
+
+        }
+
+        private void 売上管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Sale form_sale = new F_Sale();
+            form_sale.ShowDialog();
+
+        }
+
+        private void 発注管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Hattyu form_hattyu = new F_Hattyu();
+            form_hattyu.ShowDialog();
+
+        }
 
 
     }

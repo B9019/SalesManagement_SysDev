@@ -48,12 +48,12 @@
             this.lbl_ArHidden = new System.Windows.Forms.Label();
             this.chk_hide_FLG = new System.Windows.Forms.CheckBox();
             this.dataGridView_Arrival = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_txt_clear = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_all = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
-            this.btn_sertch = new System.Windows.Forms.Button();
+            this.btn_search = new System.Windows.Forms.Button();
             this.btn_regist = new System.Windows.Forms.Button();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.メニューToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -282,15 +282,16 @@
             this.dataGridView_Arrival.Size = new System.Drawing.Size(763, 442);
             this.dataGridView_Arrival.TabIndex = 122;
             // 
-            // button3
+            // btn_txt_clear
             // 
-            this.button3.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button3.Location = new System.Drawing.Point(692, 1);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(79, 21);
-            this.button3.TabIndex = 132;
-            this.button3.Text = "F7 入力クリア";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_txt_clear.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_txt_clear.Location = new System.Drawing.Point(692, 1);
+            this.btn_txt_clear.Name = "btn_txt_clear";
+            this.btn_txt_clear.Size = new System.Drawing.Size(79, 21);
+            this.btn_txt_clear.TabIndex = 132;
+            this.btn_txt_clear.Text = "F7 入力クリア";
+            this.btn_txt_clear.UseVisualStyleBackColor = false;
+            this.btn_txt_clear.Click += new System.EventHandler(this.btn_txt_clear_Click);
             // 
             // button2
             // 
@@ -321,6 +322,7 @@
             this.btn_all.TabIndex = 129;
             this.btn_all.Text = "F4 一覧表示";
             this.btn_all.UseVisualStyleBackColor = false;
+            this.btn_all.Click += new System.EventHandler(this.btn_all_Click);
             // 
             // btn_update
             // 
@@ -331,17 +333,19 @@
             this.btn_update.TabIndex = 128;
             this.btn_update.Text = "F3 更新";
             this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
-            // btn_sertch
+            // btn_search
             // 
-            this.btn_sertch.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_sertch.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_sertch.Location = new System.Drawing.Point(185, 1);
-            this.btn_sertch.Name = "btn_sertch";
-            this.btn_sertch.Size = new System.Drawing.Size(79, 21);
-            this.btn_sertch.TabIndex = 126;
-            this.btn_sertch.Text = "F1　検索";
-            this.btn_sertch.UseVisualStyleBackColor = false;
+            this.btn_search.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_search.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_search.Location = new System.Drawing.Point(185, 1);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(79, 21);
+            this.btn_search.TabIndex = 126;
+            this.btn_search.Text = "F1　検索";
+            this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // btn_regist
             // 
@@ -393,78 +397,91 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem1.Text = "ログイン管理";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.ログイン管理toolStripMenuItem1_Click);
             // 
             // 顧客管理ToolStripMenuItem
             // 
             this.顧客管理ToolStripMenuItem.Name = "顧客管理ToolStripMenuItem";
             this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.顧客管理ToolStripMenuItem.Text = "顧客管理";
+            this.顧客管理ToolStripMenuItem.Click += new System.EventHandler(this.顧客管理ToolStripMenuItem_Click);
             // 
             // 商品管理ToolStripMenuItem
             // 
             this.商品管理ToolStripMenuItem.Name = "商品管理ToolStripMenuItem";
             this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.商品管理ToolStripMenuItem.Text = "商品管理";
+            this.商品管理ToolStripMenuItem.Click += new System.EventHandler(this.商品管理ToolStripMenuItem_Click);
             // 
             // 受注管理ToolStripMenuItem
             // 
             this.受注管理ToolStripMenuItem.Name = "受注管理ToolStripMenuItem";
             this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.受注管理ToolStripMenuItem.Text = "受注管理";
+            this.受注管理ToolStripMenuItem.Click += new System.EventHandler(this.受注管理ToolStripMenuItem_Click);
             // 
             // 注文管理ToolStripMenuItem
             // 
             this.注文管理ToolStripMenuItem.Name = "注文管理ToolStripMenuItem";
             this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.注文管理ToolStripMenuItem.Text = "注文管理";
+            this.注文管理ToolStripMenuItem.Click += new System.EventHandler(this.注文管理ToolStripMenuItem_Click);
             // 
             // 入荷管理ToolStripMenuItem
             // 
             this.入荷管理ToolStripMenuItem.Name = "入荷管理ToolStripMenuItem";
             this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.入荷管理ToolStripMenuItem.Text = "入荷管理";
+            this.入荷管理ToolStripMenuItem.Click += new System.EventHandler(this.入荷管理ToolStripMenuItem_Click);
             // 
             // 出荷管理ToolStripMenuItem
             // 
             this.出荷管理ToolStripMenuItem.Name = "出荷管理ToolStripMenuItem";
             this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.出荷管理ToolStripMenuItem.Text = "出荷管理";
+            this.出荷管理ToolStripMenuItem.Click += new System.EventHandler(this.出荷管理ToolStripMenuItem_Click);
             // 
             // 在庫管理ToolStripMenuItem
             // 
             this.在庫管理ToolStripMenuItem.Name = "在庫管理ToolStripMenuItem";
             this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.在庫管理ToolStripMenuItem.Text = "在庫管理";
+            this.在庫管理ToolStripMenuItem.Click += new System.EventHandler(this.在庫管理ToolStripMenuItem_Click);
             // 
             // 入庫管理ToolStripMenuItem
             // 
             this.入庫管理ToolStripMenuItem.Name = "入庫管理ToolStripMenuItem";
             this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.入庫管理ToolStripMenuItem.Text = "入庫管理";
+            this.入庫管理ToolStripMenuItem.Click += new System.EventHandler(this.入庫管理ToolStripMenuItem_Click);
             // 
             // 出庫管理ToolStripMenuItem
             // 
             this.出庫管理ToolStripMenuItem.Name = "出庫管理ToolStripMenuItem";
             this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.出庫管理ToolStripMenuItem.Text = "出庫管理";
+            this.出庫管理ToolStripMenuItem.Click += new System.EventHandler(this.出庫管理ToolStripMenuItem_Click);
             // 
             // 社員管理ToolStripMenuItem
             // 
             this.社員管理ToolStripMenuItem.Name = "社員管理ToolStripMenuItem";
             this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.社員管理ToolStripMenuItem.Text = "社員管理";
+            this.社員管理ToolStripMenuItem.Click += new System.EventHandler(this.社員管理ToolStripMenuItem_Click);
             // 
             // 売上管理ToolStripMenuItem
             // 
             this.売上管理ToolStripMenuItem.Name = "売上管理ToolStripMenuItem";
             this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.売上管理ToolStripMenuItem.Text = "売上管理";
+            this.売上管理ToolStripMenuItem.Click += new System.EventHandler(this.売上管理ToolStripMenuItem_Click);
             // 
             // 発注管理ToolStripMenuItem
             // 
             this.発注管理ToolStripMenuItem.Name = "発注管理ToolStripMenuItem";
             this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.発注管理ToolStripMenuItem.Text = "発注管理";
+            this.発注管理ToolStripMenuItem.Click += new System.EventHandler(this.発注管理ToolStripMenuItem_Click);
             // 
             // F_Arrival
             // 
@@ -474,12 +491,12 @@
             this.ClientSize = new System.Drawing.Size(780, 609);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btn_txt_clear);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_all);
             this.Controls.Add(this.btn_update);
-            this.Controls.Add(this.btn_sertch);
+            this.Controls.Add(this.btn_search);
             this.Controls.Add(this.btn_regist);
             this.Controls.Add(this.dataGridView_Arrival);
             this.Controls.Add(this.menuStrip2);
@@ -519,12 +536,12 @@
         private System.Windows.Forms.CheckBox chk_hide_FLG;
         private System.Windows.Forms.DataGridView dataGridView_Arrival;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_txt_clear;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_all;
         private System.Windows.Forms.Button btn_update;
-        private System.Windows.Forms.Button btn_sertch;
+        private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Button btn_regist;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem メニューToolStripMenuItem;
