@@ -21,7 +21,8 @@ namespace SalesManagement_SysDev
         public DateTime? ArDate { get; set; }       //入荷年月日	
         public int? ArStateFlag { get; set; }   //入荷状態フラグ
         public int ArFlag { get; set; }	//入荷管理フラグ
-        public String ArHidden { get; set; }	    //非表示理由	
+        public String Armemo { get; set; }          //備考
+        public String ArHidden { get; set; }	    //非表示理由
 
     }
 }
