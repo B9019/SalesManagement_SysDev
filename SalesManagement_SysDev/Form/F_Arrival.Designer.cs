@@ -281,6 +281,7 @@
             this.dataGridView_Arrival.Name = "dataGridView_Arrival";
             this.dataGridView_Arrival.Size = new System.Drawing.Size(763, 442);
             this.dataGridView_Arrival.TabIndex = 122;
+            this.dataGridView_Arrival.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Arrival_CellDoubleClick);
             // 
             // btn_txt_clear
             // 
@@ -395,91 +396,91 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
             this.toolStripMenuItem1.Text = "ログイン管理";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.ログイン管理toolStripMenuItem1_Click);
             // 
             // 顧客管理ToolStripMenuItem
             // 
             this.顧客管理ToolStripMenuItem.Name = "顧客管理ToolStripMenuItem";
-            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.顧客管理ToolStripMenuItem.Text = "顧客管理";
             this.顧客管理ToolStripMenuItem.Click += new System.EventHandler(this.顧客管理ToolStripMenuItem_Click);
             // 
             // 商品管理ToolStripMenuItem
             // 
             this.商品管理ToolStripMenuItem.Name = "商品管理ToolStripMenuItem";
-            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.商品管理ToolStripMenuItem.Text = "商品管理";
             this.商品管理ToolStripMenuItem.Click += new System.EventHandler(this.商品管理ToolStripMenuItem_Click);
             // 
             // 受注管理ToolStripMenuItem
             // 
             this.受注管理ToolStripMenuItem.Name = "受注管理ToolStripMenuItem";
-            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.受注管理ToolStripMenuItem.Text = "受注管理";
             this.受注管理ToolStripMenuItem.Click += new System.EventHandler(this.受注管理ToolStripMenuItem_Click);
             // 
             // 注文管理ToolStripMenuItem
             // 
             this.注文管理ToolStripMenuItem.Name = "注文管理ToolStripMenuItem";
-            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.注文管理ToolStripMenuItem.Text = "注文管理";
             this.注文管理ToolStripMenuItem.Click += new System.EventHandler(this.注文管理ToolStripMenuItem_Click);
             // 
             // 入荷管理ToolStripMenuItem
             // 
             this.入荷管理ToolStripMenuItem.Name = "入荷管理ToolStripMenuItem";
-            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.入荷管理ToolStripMenuItem.Text = "入荷管理";
             this.入荷管理ToolStripMenuItem.Click += new System.EventHandler(this.入荷管理ToolStripMenuItem_Click);
             // 
             // 出荷管理ToolStripMenuItem
             // 
             this.出荷管理ToolStripMenuItem.Name = "出荷管理ToolStripMenuItem";
-            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.出荷管理ToolStripMenuItem.Text = "出荷管理";
             this.出荷管理ToolStripMenuItem.Click += new System.EventHandler(this.出荷管理ToolStripMenuItem_Click);
             // 
             // 在庫管理ToolStripMenuItem
             // 
             this.在庫管理ToolStripMenuItem.Name = "在庫管理ToolStripMenuItem";
-            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.在庫管理ToolStripMenuItem.Text = "在庫管理";
             this.在庫管理ToolStripMenuItem.Click += new System.EventHandler(this.在庫管理ToolStripMenuItem_Click);
             // 
             // 入庫管理ToolStripMenuItem
             // 
             this.入庫管理ToolStripMenuItem.Name = "入庫管理ToolStripMenuItem";
-            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.入庫管理ToolStripMenuItem.Text = "入庫管理";
             this.入庫管理ToolStripMenuItem.Click += new System.EventHandler(this.入庫管理ToolStripMenuItem_Click);
             // 
             // 出庫管理ToolStripMenuItem
             // 
             this.出庫管理ToolStripMenuItem.Name = "出庫管理ToolStripMenuItem";
-            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.出庫管理ToolStripMenuItem.Text = "出庫管理";
             this.出庫管理ToolStripMenuItem.Click += new System.EventHandler(this.出庫管理ToolStripMenuItem_Click);
             // 
             // 社員管理ToolStripMenuItem
             // 
             this.社員管理ToolStripMenuItem.Name = "社員管理ToolStripMenuItem";
-            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.社員管理ToolStripMenuItem.Text = "社員管理";
             this.社員管理ToolStripMenuItem.Click += new System.EventHandler(this.社員管理ToolStripMenuItem_Click);
             // 
             // 売上管理ToolStripMenuItem
             // 
             this.売上管理ToolStripMenuItem.Name = "売上管理ToolStripMenuItem";
-            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.売上管理ToolStripMenuItem.Text = "売上管理";
             this.売上管理ToolStripMenuItem.Click += new System.EventHandler(this.売上管理ToolStripMenuItem_Click);
             // 
             // 発注管理ToolStripMenuItem
             // 
             this.発注管理ToolStripMenuItem.Name = "発注管理ToolStripMenuItem";
-            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.発注管理ToolStripMenuItem.Text = "発注管理";
             this.発注管理ToolStripMenuItem.Click += new System.EventHandler(this.発注管理ToolStripMenuItem_Click);
             // 

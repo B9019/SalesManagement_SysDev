@@ -856,6 +856,27 @@ namespace SalesManagement_SysDev
 
         }
 
+        //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
+        private void dataGridView_Arrival_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = (int)dataGridView_Arrival.CurrentRow.Cells[0].Value;
+            int id2 = (int)dataGridView_Arrival.CurrentRow.Cells[1].Value;
+            int id3 = (int)dataGridView_Arrival.CurrentRow.Cells[2].Value;
+            int id4 = (int)dataGridView_Arrival.CurrentRow.Cells[3].Value;
+            int id5 = (int)dataGridView_Arrival.CurrentRow.Cells[4].Value;
+            DateTime id6 = (DateTime)dataGridView_Arrival.CurrentRow.Cells[5].Value;
+            string id7 = (string)dataGridView_Arrival.CurrentRow.Cells[6].Value;
+            string id8 = (string)dataGridView_Arrival.CurrentRow.Cells[7].Value;
+
+            txt_ArID.Text = Convert.ToString(id);
+            txt_SoID.Text = Convert.ToString(id2);
+            txt_EmID.Text = Convert.ToString(id3);
+            txt_ClID.Text = Convert.ToString(id4);
+            txt_OrID.Text = Convert.ToString(id5);
+            txt_ArDate.Text = Convert.ToString(id6);
+            txt_Armemo.Text = Convert.ToString(id7);
+            txt_ArHidden.Text = Convert.ToString(id8);
+        }
 
     }
 }

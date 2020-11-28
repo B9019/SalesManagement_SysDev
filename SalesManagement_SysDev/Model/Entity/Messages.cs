@@ -34,6 +34,9 @@ namespace SalesManagement_SysDev.Model.Entity
         public const string errorNotFoundShipment = "出荷情報が見つかりませんでした。";
         //Sale
         public const string errorNotFoundSale = "売上情報が見つかりませんでした。";
+        //Arrival
+        public const string errorNotFoundArrival= "入荷情報が見つかりませんでした。";
+
 
 
 
