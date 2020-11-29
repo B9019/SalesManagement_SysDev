@@ -431,6 +431,7 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "F_Stock";
             this.Text = "販売在庫管理システム　在庫情報管理画面";
+            this.Load += new System.EventHandler(this.F_Stock_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Stock)).EndInit();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
