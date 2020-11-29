@@ -530,6 +530,11 @@ namespace SalesManagement_SysDev
             txt_memo.Text = Convert.ToString(id4);
                
             }
+
+        private void F_Stock_Load_1(object sender, EventArgs e)
+        {
+
         }
+    }
     }
 
