@@ -54,7 +54,7 @@
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_sertch = new System.Windows.Forms.Button();
             this.btn_regist = new System.Windows.Forms.Button();
-            this.dataGridView_Product_regist = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Syukko = new System.Windows.Forms.DataGridView();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.メニューToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,7 +72,7 @@
             this.発注管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Syukko)).BeginInit();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -297,6 +297,7 @@
             this.button2.TabIndex = 153;
             this.button2.Text = "F6 削除";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // button1
             // 
@@ -330,6 +331,7 @@
             this.btn_update.TabIndex = 150;
             this.btn_update.Text = "F3 更新";
             this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_sertch
             // 
@@ -352,13 +354,14 @@
             this.btn_regist.TabIndex = 149;
             this.btn_regist.Text = "F2 登録";
             this.btn_regist.UseVisualStyleBackColor = false;
+            this.btn_regist.Click += new System.EventHandler(this.btn_regist_Click);
             // 
-            // dataGridView_Product_regist
+            // dataGridView_Syukko
             // 
-            this.dataGridView_Product_regist.Location = new System.Drawing.Point(8, 155);
-            this.dataGridView_Product_regist.Name = "dataGridView_Product_regist";
-            this.dataGridView_Product_regist.Size = new System.Drawing.Size(763, 444);
-            this.dataGridView_Product_regist.TabIndex = 145;
+            this.dataGridView_Syukko.Location = new System.Drawing.Point(8, 155);
+            this.dataGridView_Syukko.Name = "dataGridView_Syukko";
+            this.dataGridView_Syukko.Size = new System.Drawing.Size(763, 444);
+            this.dataGridView_Syukko.TabIndex = 145;
             // 
             // menuStrip2
             // 
@@ -487,7 +490,7 @@
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_sertch);
             this.Controls.Add(this.btn_regist);
-            this.Controls.Add(this.dataGridView_Product_regist);
+            this.Controls.Add(this.dataGridView_Syukko);
             this.Controls.Add(this.menuStrip2);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.Name = "F_Syukko";
@@ -497,7 +500,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Syukko)).EndInit();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
@@ -530,7 +533,7 @@
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_sertch;
         private System.Windows.Forms.Button btn_regist;
-        private System.Windows.Forms.DataGridView dataGridView_Product_regist;
+        private System.Windows.Forms.DataGridView dataGridView_Syukko;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem メニューToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
