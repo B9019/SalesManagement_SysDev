@@ -38,6 +38,9 @@ namespace SalesManagement_SysDev.Model.Entity
         public const string errorNotFoundArrival= "入荷情報が見つかりませんでした。";
         //Syukko
         public const string errorNotFoundSyukko = "出庫情報が見つかりませんでした。";
+        //Hattyu
+        public const string errorNotFoundHattyu = "発注情報が見つかりませんでした。";
+
 
 
 

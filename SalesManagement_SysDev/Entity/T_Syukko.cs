@@ -18,8 +18,8 @@ namespace SalesManagement_SysDev
         public int OrID { get; set; }               //受注ID
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
-        public DateTime? SyDate { get; set; }       //出庫年月日	
-        public int? SyStateFlag { get; set; }    //出庫状態フラグ
+        public DateTime SyDate { get; set; }       //出庫年月日	
+        public int SyStateFlag { get; set; }    //出庫状態フラグ
         public int SyFlag { get; set; }	//出庫管理フラグ
         public String SyHidden { get; set; }	    //非表示理由	
 
