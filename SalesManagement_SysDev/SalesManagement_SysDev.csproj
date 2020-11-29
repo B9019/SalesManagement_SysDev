@@ -349,6 +349,7 @@
     <Compile Include="Model\ContentsManagement\T_SipmentContens.cs" />
     <Compile Include="Model\ContentsManagement\T_StockContents.cs" />
     <Compile Include="Model\ContentsManagement\T_SyukkoContents.cs" />
+    <Compile Include="Model\ContentsManagement\T_WarehousingContents.cs" />
     <Compile Include="Model\Entity\Disp\M_DispClient.cs" />
     <Compile Include="Model\Entity\Disp\M_DispEmployee.cs" />
     <Compile Include="Model\Entity\Disp\M_DispProduct.cs" />
@@ -359,6 +360,7 @@
     <Compile Include="Model\Entity\Disp\T_DispStock.cs" />
     <Compile Include="Model\Entity\Disp\T_DispChumon.cs" />
     <Compile Include="Model\Entity\Disp\T_DispSyukko.cs" />
+    <Compile Include="Model\Entity\Disp\T_DispWarehousing.cs" />
     <Compile Include="Model\Entity\Messages.cs" />
     <Compile Include="Model\Entity\OperationLog.cs" />
     <Compile Include="Model\Entity\SortableBindingList.cs" />
