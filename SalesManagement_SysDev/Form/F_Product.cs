@@ -893,9 +893,26 @@ namespace SalesManagement_SysDev
         }
         private void fncAllSelect()
         {
-            // データ取得&表示（データバインド）
-            _dispProductPaging = _Pr.GetDispProducts();
-            dataGridView_Product.DataSource = _dispProductPaging;
+            SqlConnection conn = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True";
+            //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
+            //command.Parameters["@PrFlag"].Value = "0";
+            command.CommandText = "SELECT * FROM M_Product WHERE PrFlag = 0";
+            command.Connection = conn;
+            conn.Open();
+            SqlDataReader rd = command.ExecuteReader();
+            dataGridView_Product.Rows.Clear();
+            while (rd.Read())
+            {
+                dataGridView_Product.Rows.Add(rd["PrID"], rd["MaID"], rd["PrName"], rd["Price"],
+                    rd["PrJCode"], rd["PrSafetyStock"], rd["ScID"], rd["PrModelNumber"],
+                    rd["PrColor"], rd["PrReleaseDate"], rd["PrHidden"]);
+            }
+
+            //// データ取得&表示（データバインド）
+            //_dispProductPaging = _Pr.GetDispProducts();
+            //dataGridView_Product.DataSource = _dispProductPaging;
 
             ////全データの表示
             //dataGridView_Product.Rows.Clear();
