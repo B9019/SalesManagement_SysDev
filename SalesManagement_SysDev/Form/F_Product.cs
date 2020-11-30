@@ -1117,13 +1117,19 @@ namespace SalesManagement_SysDev
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
-
+            txt_PrID.Text = "";
+            txt_MaID.Text = "";
+            txt_PrName.Text = "";
+            txt_Price.Text = "";
+            txt_PrJCode.Text = "";
+            txt_PrSafetyStock.Text = "";
+            txt_ScID.Text = "";
+            txt_PrModelNumber.Text = "";
+            txt_PrColor.Text = "";
+            txt_PrReleaseDate.Text = "";
+            txt_PrHidden.Text = "";
         }
 
-        private void btn_update_Click_1(object sender, EventArgs e)
-        {
-
-        }
         //public void ReadSingleRow(IDataRecord record)
         //{
         //    dataGridView_Product.Rows.Add();
