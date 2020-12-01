@@ -348,7 +348,9 @@
     <Compile Include="Model\ContentsManagement\T_ChumonContents.cs" />
     <Compile Include="Model\ContentsManagement\M_ProductContents.cs" />
     <Compile Include="Model\ContentsManagement\StaffContents.cs" />
+    <Compile Include="Model\ContentsManagement\T_DispOrder.cs" />
     <Compile Include="Model\ContentsManagement\T_HattyuContents.cs" />
+    <Compile Include="Model\ContentsManagement\T_OrderContents.cs" />
     <Compile Include="Model\ContentsManagement\T_SaleContents.cs" />
     <Compile Include="Model\ContentsManagement\T_SipmentContens.cs" />
     <Compile Include="Model\ContentsManagement\T_StockContents.cs" />
