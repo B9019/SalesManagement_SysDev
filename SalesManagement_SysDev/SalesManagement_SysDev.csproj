@@ -337,6 +337,14 @@
     <Compile Include="Migrations\202011301429199_m3.designer.cs">
       <DependentUpon>202011301429199_m3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012010528034_ske.cs" />
+    <Compile Include="Migrations\202012010528034_ske.designer.cs">
+      <DependentUpon>202012010528034_ske.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012010540341_S.cs" />
+    <Compile Include="Migrations\202012010540341_S.designer.cs">
+      <DependentUpon>202012010540341_S.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\CommonFunction.cs" />
     <Compile Include="Model\Constants.cs" />
@@ -500,6 +508,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011301429199_m3.resx">
       <DependentUpon>202011301429199_m3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012010528034_ske.resx">
+      <DependentUpon>202012010528034_ske.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012010540341_S.resx">
+      <DependentUpon>202012010540341_S.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
