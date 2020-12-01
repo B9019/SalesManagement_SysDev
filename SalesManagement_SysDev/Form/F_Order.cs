@@ -426,7 +426,7 @@ namespace SalesManagement_SysDev
                 conn.Open();
                 //SQL文の実行、データが  readerに格納される
                 SqlDataReader rd = command.ExecuteReader();
-                dataGridView_Product.Rows.Clear();
+                dataGridView_Order.Rows.Clear();
 
 
                 if (rd.HasRows)
