@@ -743,7 +743,7 @@ namespace SalesManagement_SysDev
             txt_PrSafetyStock.Clear();
             txt_PrJCode.Clear();
             txt_memo.Clear();
-            txt_PrHidden.Clear();
+            OrHidden.Clear();
             chk_hide_FLG.Checked = false;
 
             //// ボタンリセット
@@ -960,7 +960,7 @@ namespace SalesManagement_SysDev
             txt_PrColor.Text = Convert.ToString(id9);
             txt_PrReleaseDate.Text = Convert.ToString(id10);
             chk_hide_FLG.Checked = Convert.ToBoolean(id11);
-            txt_PrHidden.Text = Convert.ToString(id12);
+            OrHidden.Text = Convert.ToString(id12);
             txt_memo.Text = Convert.ToString(id13);
 
         }
@@ -1085,10 +1085,10 @@ namespace SalesManagement_SysDev
                     command.CommandText = command.CommandText + AND + "PrReleaseDate LIKE @PrReleaseDate ";
                     ++andnum;
                 }
-                else if (txt_PrHidden.Text != "" && count == 10)
+                else if (OrHidden.Text != "" && count == 10)
                 {
                     command.Parameters.Add("@PrHidden", SqlDbType.NVarChar);
-                    command.Parameters["@PrHidden"].Value = "%" + txt_PrHidden.Text + "%";
+                    command.Parameters["@PrHidden"].Value = "%" + OrHidden.Text + "%";
                     //実行するSQL文の条件追加
                     command.CommandText = command.CommandText + AND + "PrHidden LIKE @PrHidden ";
                     ++andnum;
@@ -1144,7 +1144,7 @@ namespace SalesManagement_SysDev
             txt_PrModelNumber.Text = "";
             txt_PrColor.Text = "";
             txt_PrReleaseDate.Text = "";
-            txt_PrHidden.Text = "";
+            OrHidden.Text = "";
         }
 
         //public void ReadSingleRow(IDataRecord record)
