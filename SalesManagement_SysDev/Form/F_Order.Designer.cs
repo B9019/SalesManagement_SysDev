@@ -67,13 +67,13 @@
             this.社員管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.売上管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.発注管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView_Chumon_regist = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Order = new System.Windows.Forms.DataGridView();
             this.btn_regist = new System.Windows.Forms.Button();
             this.btn_sertch = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon_regist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Order)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -286,6 +286,7 @@
             this.txt_EmID.Name = "txt_EmID";
             this.txt_EmID.Size = new System.Drawing.Size(243, 22);
             this.txt_EmID.TabIndex = 64;
+            this.txt_EmID.TextChanged += new System.EventHandler(this.txt_OrID_TextChanged);
             // 
             // txt_OrID
             // 
@@ -448,13 +449,13 @@
             this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.発注管理ToolStripMenuItem.Text = "発注管理";
             // 
-            // dataGridView_Chumon_regist
+            // dataGridView_Order
             // 
-            this.dataGridView_Chumon_regist.Location = new System.Drawing.Point(11, 198);
-            this.dataGridView_Chumon_regist.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView_Chumon_regist.Name = "dataGridView_Chumon_regist";
-            this.dataGridView_Chumon_regist.Size = new System.Drawing.Size(1017, 552);
-            this.dataGridView_Chumon_regist.TabIndex = 163;
+            this.dataGridView_Order.Location = new System.Drawing.Point(11, 198);
+            this.dataGridView_Order.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView_Order.Name = "dataGridView_Order";
+            this.dataGridView_Order.Size = new System.Drawing.Size(1017, 552);
+            this.dataGridView_Order.TabIndex = 163;
             // 
             // btn_regist
             // 
@@ -496,7 +497,7 @@
             this.Controls.Add(this.btn_regist);
             this.Controls.Add(this.btn_sertch);
             this.Controls.Add(this.menuStrip2);
-            this.Controls.Add(this.dataGridView_Chumon_regist);
+            this.Controls.Add(this.dataGridView_Order);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "F_Order";
             this.Text = "販売在庫管理システム　受注情報管理画面";
@@ -506,7 +507,7 @@
             this.groupBox1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon_regist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Order)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -552,7 +553,7 @@
         private System.Windows.Forms.ToolStripMenuItem 社員管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 売上管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 発注管理ToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView_Chumon_regist;
+        private System.Windows.Forms.DataGridView dataGridView_Order;
         private System.Windows.Forms.Button btn_regist;
         private System.Windows.Forms.Button btn_sertch;
     }
