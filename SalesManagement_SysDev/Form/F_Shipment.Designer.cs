@@ -79,7 +79,7 @@
             // dataGridView_Shipment
             // 
             this.dataGridView_Shipment.Location = new System.Drawing.Point(11, 198);
-            this.dataGridView_Shipment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView_Shipment.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_Shipment.Name = "dataGridView_Shipment";
             this.dataGridView_Shipment.Size = new System.Drawing.Size(1017, 552);
             this.dataGridView_Shipment.TabIndex = 185;
@@ -128,7 +128,7 @@
             // 
             this.txt_ShFinishDate.BackColor = System.Drawing.SystemColors.Window;
             this.txt_ShFinishDate.Location = new System.Drawing.Point(452, 76);
-            this.txt_ShFinishDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ShFinishDate.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ShFinishDate.Name = "txt_ShFinishDate";
             this.txt_ShFinishDate.Size = new System.Drawing.Size(219, 22);
             this.txt_ShFinishDate.TabIndex = 67;
@@ -138,7 +138,7 @@
             this.btn_sertch.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_sertch.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_sertch.Location = new System.Drawing.Point(245, 1);
-            this.btn_sertch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_sertch.Margin = new System.Windows.Forms.Padding(4);
             this.btn_sertch.Name = "btn_sertch";
             this.btn_sertch.Size = new System.Drawing.Size(105, 26);
             this.btn_sertch.TabIndex = 187;
@@ -150,7 +150,7 @@
             // 
             this.btn_update.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_update.Location = new System.Drawing.Point(469, 1);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(4);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(105, 26);
             this.btn_update.TabIndex = 189;
@@ -162,17 +162,18 @@
             // 
             this.btn_clear.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_clear.Location = new System.Drawing.Point(923, 1);
-            this.btn_clear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_clear.Margin = new System.Windows.Forms.Padding(4);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(105, 26);
             this.btn_clear.TabIndex = 193;
             this.btn_clear.Text = "F7 入力クリア";
             this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // txt_ShID
             // 
             this.txt_ShID.Location = new System.Drawing.Point(97, 76);
-            this.txt_ShID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ShID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ShID.Name = "txt_ShID";
             this.txt_ShID.Size = new System.Drawing.Size(243, 22);
             this.txt_ShID.TabIndex = 66;
@@ -181,7 +182,7 @@
             // 
             this.btn_delete.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_delete.Location = new System.Drawing.Point(809, 1);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(105, 26);
             this.btn_delete.TabIndex = 192;
@@ -193,7 +194,7 @@
             // 
             this.btn_all.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_all.Location = new System.Drawing.Point(583, 1);
-            this.btn_all.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_all.Margin = new System.Windows.Forms.Padding(4);
             this.btn_all.Name = "btn_all";
             this.btn_all.Size = new System.Drawing.Size(105, 26);
             this.btn_all.TabIndex = 190;
@@ -216,9 +217,9 @@
             this.groupBox1.Controls.Add(this.lbl_OrID);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(13, 36);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(685, 154);
             this.groupBox1.TabIndex = 195;
             this.groupBox1.TabStop = false;
@@ -227,7 +228,7 @@
             // txt_ClID
             // 
             this.txt_ClID.Location = new System.Drawing.Point(452, 46);
-            this.txt_ClID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ClID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ClID.Name = "txt_ClID";
             this.txt_ClID.Size = new System.Drawing.Size(219, 22);
             this.txt_ClID.TabIndex = 65;
@@ -236,7 +237,7 @@
             // 
             this.txt_EmID.BackColor = System.Drawing.SystemColors.Window;
             this.txt_EmID.Location = new System.Drawing.Point(97, 45);
-            this.txt_EmID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_EmID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_EmID.Name = "txt_EmID";
             this.txt_EmID.Size = new System.Drawing.Size(243, 22);
             this.txt_EmID.TabIndex = 64;
@@ -244,7 +245,7 @@
             // txt_OrID
             // 
             this.txt_OrID.Location = new System.Drawing.Point(452, 16);
-            this.txt_OrID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_OrID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_OrID.Name = "txt_OrID";
             this.txt_OrID.Size = new System.Drawing.Size(219, 22);
             this.txt_OrID.TabIndex = 63;
@@ -253,7 +254,7 @@
             // 
             this.txt_SoID.BackColor = System.Drawing.SystemColors.Window;
             this.txt_SoID.Location = new System.Drawing.Point(97, 16);
-            this.txt_SoID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_SoID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SoID.Name = "txt_SoID";
             this.txt_SoID.Size = new System.Drawing.Size(243, 22);
             this.txt_SoID.TabIndex = 62;
@@ -282,7 +283,7 @@
             // 
             this.btn_regist.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_regist.Location = new System.Drawing.Point(357, 1);
-            this.btn_regist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_regist.Margin = new System.Windows.Forms.Padding(4);
             this.btn_regist.Name = "btn_regist";
             this.btn_regist.Size = new System.Drawing.Size(105, 26);
             this.btn_regist.TabIndex = 188;
@@ -293,7 +294,7 @@
             // txt_ShHidden
             // 
             this.txt_ShHidden.Location = new System.Drawing.Point(11, 126);
-            this.txt_ShHidden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ShHidden.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ShHidden.Multiline = true;
             this.txt_ShHidden.Name = "txt_ShHidden";
             this.txt_ShHidden.Size = new System.Drawing.Size(316, 23);
@@ -302,7 +303,7 @@
             // txt_memo
             // 
             this.txt_memo.Location = new System.Drawing.Point(11, 44);
-            this.txt_memo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_memo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_memo.Multiline = true;
             this.txt_memo.Name = "txt_memo";
             this.txt_memo.Size = new System.Drawing.Size(315, 23);
@@ -334,7 +335,7 @@
             this.chk_hide_FLG.AutoSize = true;
             this.chk_hide_FLG.ForeColor = System.Drawing.Color.White;
             this.chk_hide_FLG.Location = new System.Drawing.Point(11, 78);
-            this.chk_hide_FLG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chk_hide_FLG.Margin = new System.Windows.Forms.Padding(4);
             this.chk_hide_FLG.Name = "chk_hide_FLG";
             this.chk_hide_FLG.Size = new System.Drawing.Size(121, 19);
             this.chk_hide_FLG.TabIndex = 0;
@@ -345,7 +346,7 @@
             // 
             this.btn_print.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_print.Location = new System.Drawing.Point(697, 1);
-            this.btn_print.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_print.Margin = new System.Windows.Forms.Padding(4);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(105, 26);
             this.btn_print.TabIndex = 191;

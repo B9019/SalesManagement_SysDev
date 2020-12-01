@@ -44,13 +44,13 @@
             this.社員管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.売上管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.発注管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
             this.btn_sertch = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btn_regist = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_ChHidden = new System.Windows.Forms.TextBox();
             this.txt_memo = new System.Windows.Forms.TextBox();
@@ -79,7 +79,7 @@
             // dataGridView_Chumon
             // 
             this.dataGridView_Chumon.Location = new System.Drawing.Point(11, 198);
-            this.dataGridView_Chumon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView_Chumon.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_Chumon.Name = "dataGridView_Chumon";
             this.dataGridView_Chumon.Size = new System.Drawing.Size(1017, 552);
             this.dataGridView_Chumon.TabIndex = 110;
@@ -197,35 +197,35 @@
             this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.発注管理ToolStripMenuItem.Text = "発注管理";
             // 
-            // button3
+            // btn_clear
             // 
-            this.button3.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button3.Location = new System.Drawing.Point(923, 1);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 26);
-            this.button3.TabIndex = 159;
-            this.button3.Text = "F7 入力クリア";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.btn_clear_Click);
+            this.btn_clear.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_clear.Location = new System.Drawing.Point(923, 1);
+            this.btn_clear.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(105, 26);
+            this.btn_clear.TabIndex = 159;
+            this.btn_clear.Text = "F7 入力クリア";
+            this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
-            // button2
+            // btn_delete
             // 
-            this.button2.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button2.Location = new System.Drawing.Point(809, 1);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 26);
-            this.button2.TabIndex = 158;
-            this.button2.Text = "F6 削除";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.btn_delete_Click);
+            this.btn_delete.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_delete.Location = new System.Drawing.Point(809, 1);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(105, 26);
+            this.btn_delete.TabIndex = 158;
+            this.btn_delete.Text = "F6 削除";
+            this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.button1.Location = new System.Drawing.Point(697, 1);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 26);
             this.button1.TabIndex = 157;
@@ -236,31 +236,31 @@
             // 
             this.button4.BackColor = System.Drawing.Color.PaleTurquoise;
             this.button4.Location = new System.Drawing.Point(584, 1);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(105, 26);
             this.button4.TabIndex = 156;
             this.button4.Text = "F4 一覧表示";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btn_update
             // 
-            this.button5.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button5.Location = new System.Drawing.Point(471, 1);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(105, 26);
-            this.button5.TabIndex = 155;
-            this.button5.Text = "F3 更新";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.btn_update_Click);
+            this.btn_update.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_update.Location = new System.Drawing.Point(471, 1);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(105, 26);
+            this.btn_update.TabIndex = 155;
+            this.btn_update.Text = "F3 更新";
+            this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_sertch
             // 
             this.btn_sertch.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_sertch.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_sertch.Location = new System.Drawing.Point(247, 1);
-            this.btn_sertch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_sertch.Margin = new System.Windows.Forms.Padding(4);
             this.btn_sertch.Name = "btn_sertch";
             this.btn_sertch.Size = new System.Drawing.Size(105, 26);
             this.btn_sertch.TabIndex = 153;
@@ -268,17 +268,17 @@
             this.btn_sertch.UseVisualStyleBackColor = false;
             this.btn_sertch.Click += new System.EventHandler(this.btn_search_Click);
             // 
-            // button6
+            // btn_regist
             // 
-            this.button6.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button6.Location = new System.Drawing.Point(359, 1);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(105, 26);
-            this.button6.TabIndex = 154;
-            this.button6.Text = "F2 登録";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.btn_regist_Click);
+            this.btn_regist.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_regist.Location = new System.Drawing.Point(359, 1);
+            this.btn_regist.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_regist.Name = "btn_regist";
+            this.btn_regist.Size = new System.Drawing.Size(105, 26);
+            this.btn_regist.TabIndex = 154;
+            this.btn_regist.Text = "F2 登録";
+            this.btn_regist.UseVisualStyleBackColor = false;
+            this.btn_regist.Click += new System.EventHandler(this.btn_regist_Click);
             // 
             // groupBox2
             // 
@@ -301,7 +301,7 @@
             // txt_ChHidden
             // 
             this.txt_ChHidden.Location = new System.Drawing.Point(11, 126);
-            this.txt_ChHidden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ChHidden.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ChHidden.Multiline = true;
             this.txt_ChHidden.Name = "txt_ChHidden";
             this.txt_ChHidden.Size = new System.Drawing.Size(316, 23);
@@ -310,7 +310,7 @@
             // txt_memo
             // 
             this.txt_memo.Location = new System.Drawing.Point(11, 44);
-            this.txt_memo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_memo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_memo.Multiline = true;
             this.txt_memo.Name = "txt_memo";
             this.txt_memo.Size = new System.Drawing.Size(315, 23);
@@ -342,7 +342,7 @@
             this.chk_hide_FLG.AutoSize = true;
             this.chk_hide_FLG.ForeColor = System.Drawing.Color.White;
             this.chk_hide_FLG.Location = new System.Drawing.Point(11, 78);
-            this.chk_hide_FLG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chk_hide_FLG.Margin = new System.Windows.Forms.Padding(4);
             this.chk_hide_FLG.Name = "chk_hide_FLG";
             this.chk_hide_FLG.Size = new System.Drawing.Size(121, 19);
             this.chk_hide_FLG.TabIndex = 0;
@@ -365,9 +365,9 @@
             this.groupBox1.Controls.Add(this.lbl_OrID);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(13, 36);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(685, 154);
             this.groupBox1.TabIndex = 162;
             this.groupBox1.TabStop = false;
@@ -417,7 +417,7 @@
             // 
             this.txt_ChDate.BackColor = System.Drawing.SystemColors.Window;
             this.txt_ChDate.Location = new System.Drawing.Point(97, 75);
-            this.txt_ChDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ChDate.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ChDate.Name = "txt_ChDate";
             this.txt_ChDate.Size = new System.Drawing.Size(243, 22);
             this.txt_ChDate.TabIndex = 67;
@@ -425,7 +425,7 @@
             // txt_ChID
             // 
             this.txt_ChID.Location = new System.Drawing.Point(97, 105);
-            this.txt_ChID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ChID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ChID.Name = "txt_ChID";
             this.txt_ChID.Size = new System.Drawing.Size(243, 22);
             this.txt_ChID.TabIndex = 66;
@@ -433,7 +433,7 @@
             // txt_ClID
             // 
             this.txt_ClID.Location = new System.Drawing.Point(428, 46);
-            this.txt_ClID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ClID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ClID.Name = "txt_ClID";
             this.txt_ClID.Size = new System.Drawing.Size(243, 22);
             this.txt_ClID.TabIndex = 65;
@@ -442,7 +442,7 @@
             // 
             this.txt_EmID.BackColor = System.Drawing.SystemColors.Window;
             this.txt_EmID.Location = new System.Drawing.Point(97, 45);
-            this.txt_EmID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_EmID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_EmID.Name = "txt_EmID";
             this.txt_EmID.Size = new System.Drawing.Size(243, 22);
             this.txt_EmID.TabIndex = 64;
@@ -450,7 +450,7 @@
             // txt_OrID
             // 
             this.txt_OrID.Location = new System.Drawing.Point(428, 16);
-            this.txt_OrID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_OrID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_OrID.Name = "txt_OrID";
             this.txt_OrID.Size = new System.Drawing.Size(243, 22);
             this.txt_OrID.TabIndex = 63;
@@ -459,7 +459,7 @@
             // 
             this.txt_SoID.BackColor = System.Drawing.SystemColors.Window;
             this.txt_SoID.Location = new System.Drawing.Point(97, 16);
-            this.txt_SoID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_SoID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SoID.Name = "txt_SoID";
             this.txt_SoID.Size = new System.Drawing.Size(243, 22);
             this.txt_SoID.TabIndex = 62;
@@ -492,13 +492,13 @@
             this.ClientSize = new System.Drawing.Size(1040, 761);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_clear);
+            this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_sertch);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btn_regist);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.dataGridView_Chumon);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -534,13 +534,13 @@
         private System.Windows.Forms.ToolStripMenuItem 社員管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 売上管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 発注管理ToolStripMenuItem;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_sertch;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_regist;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txt_ChHidden;
         private System.Windows.Forms.TextBox txt_memo;

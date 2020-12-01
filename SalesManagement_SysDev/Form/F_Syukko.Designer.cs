@@ -47,8 +47,8 @@
             this.txt_SyID = new System.Windows.Forms.TextBox();
             this.lbl_SyID = new System.Windows.Forms.Label();
             this.lbl_EnID = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_all = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
@@ -97,7 +97,7 @@
             // txt_SyHidden
             // 
             this.txt_SyHidden.Location = new System.Drawing.Point(9, 121);
-            this.txt_SyHidden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_SyHidden.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SyHidden.Multiline = true;
             this.txt_SyHidden.Name = "txt_SyHidden";
             this.txt_SyHidden.Size = new System.Drawing.Size(316, 23);
@@ -118,7 +118,7 @@
             this.chk_SyFlag.AutoSize = true;
             this.chk_SyFlag.ForeColor = System.Drawing.Color.White;
             this.chk_SyFlag.Location = new System.Drawing.Point(9, 72);
-            this.chk_SyFlag.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chk_SyFlag.Margin = new System.Windows.Forms.Padding(4);
             this.chk_SyFlag.Name = "chk_SyFlag";
             this.chk_SyFlag.Size = new System.Drawing.Size(106, 19);
             this.chk_SyFlag.TabIndex = 78;
@@ -128,7 +128,7 @@
             // txt_memo
             // 
             this.txt_memo.Location = new System.Drawing.Point(11, 44);
-            this.txt_memo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_memo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_memo.Multiline = true;
             this.txt_memo.Name = "txt_memo";
             this.txt_memo.Size = new System.Drawing.Size(315, 23);
@@ -161,9 +161,9 @@
             this.groupBox1.Controls.Add(this.lbl_EnID);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(13, 35);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(685, 151);
             this.groupBox1.TabIndex = 146;
             this.groupBox1.TabStop = false;
@@ -183,7 +183,7 @@
             // 
             this.txt_SyDate.BackColor = System.Drawing.SystemColors.Window;
             this.txt_SyDate.Location = new System.Drawing.Point(97, 106);
-            this.txt_SyDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_SyDate.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SyDate.Name = "txt_SyDate";
             this.txt_SyDate.Size = new System.Drawing.Size(243, 22);
             this.txt_SyDate.TabIndex = 74;
@@ -192,7 +192,7 @@
             // 
             this.txt_OrID.BackColor = System.Drawing.SystemColors.Window;
             this.txt_OrID.Location = new System.Drawing.Point(97, 75);
-            this.txt_OrID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_OrID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_OrID.Name = "txt_OrID";
             this.txt_OrID.Size = new System.Drawing.Size(243, 22);
             this.txt_OrID.TabIndex = 73;
@@ -230,7 +230,7 @@
             // txt_SoID
             // 
             this.txt_SoID.Location = new System.Drawing.Point(428, 46);
-            this.txt_SoID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_SoID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SoID.Name = "txt_SoID";
             this.txt_SoID.Size = new System.Drawing.Size(243, 22);
             this.txt_SoID.TabIndex = 65;
@@ -239,7 +239,7 @@
             // 
             this.txt_ClID.BackColor = System.Drawing.SystemColors.Window;
             this.txt_ClID.Location = new System.Drawing.Point(97, 45);
-            this.txt_ClID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ClID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ClID.Name = "txt_ClID";
             this.txt_ClID.Size = new System.Drawing.Size(243, 22);
             this.txt_ClID.TabIndex = 64;
@@ -247,7 +247,7 @@
             // txt_EmID
             // 
             this.txt_EmID.Location = new System.Drawing.Point(428, 16);
-            this.txt_EmID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_EmID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_EmID.Name = "txt_EmID";
             this.txt_EmID.Size = new System.Drawing.Size(243, 22);
             this.txt_EmID.TabIndex = 63;
@@ -256,7 +256,7 @@
             // 
             this.txt_SyID.BackColor = System.Drawing.SystemColors.Window;
             this.txt_SyID.Location = new System.Drawing.Point(97, 16);
-            this.txt_SyID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_SyID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SyID.Name = "txt_SyID";
             this.txt_SyID.Size = new System.Drawing.Size(243, 22);
             this.txt_SyID.TabIndex = 62;
@@ -281,37 +281,37 @@
             this.lbl_EnID.TabIndex = 7;
             this.lbl_EnID.Text = "社員ID";
             // 
-            // button3
+            // btn_clear
             // 
-            this.button3.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(923, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 26);
-            this.button3.TabIndex = 154;
-            this.button3.Text = "F7 入力クリア";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_clear.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_clear.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_clear.Location = new System.Drawing.Point(923, 0);
+            this.btn_clear.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(105, 26);
+            this.btn_clear.TabIndex = 154;
+            this.btn_clear.Text = "F7 入力クリア";
+            this.btn_clear.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btn_delete
             // 
-            this.button2.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(809, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 26);
-            this.button2.TabIndex = 153;
-            this.button2.Text = "F6 削除";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.btn_delete_Click);
+            this.btn_delete.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_delete.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_delete.Location = new System.Drawing.Point(809, 0);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(105, 26);
+            this.btn_delete.TabIndex = 153;
+            this.btn_delete.Text = "F6 削除";
+            this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(697, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 26);
             this.button1.TabIndex = 152;
@@ -323,7 +323,7 @@
             this.btn_all.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_all.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_all.Location = new System.Drawing.Point(584, 0);
-            this.btn_all.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_all.Margin = new System.Windows.Forms.Padding(4);
             this.btn_all.Name = "btn_all";
             this.btn_all.Size = new System.Drawing.Size(105, 26);
             this.btn_all.TabIndex = 151;
@@ -335,7 +335,7 @@
             this.btn_update.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_update.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_update.Location = new System.Drawing.Point(471, 0);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(4);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(105, 26);
             this.btn_update.TabIndex = 150;
@@ -348,7 +348,7 @@
             this.btn_sertch.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_sertch.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_sertch.Location = new System.Drawing.Point(247, 0);
-            this.btn_sertch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_sertch.Margin = new System.Windows.Forms.Padding(4);
             this.btn_sertch.Name = "btn_sertch";
             this.btn_sertch.Size = new System.Drawing.Size(105, 26);
             this.btn_sertch.TabIndex = 148;
@@ -361,7 +361,7 @@
             this.btn_regist.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_regist.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_regist.Location = new System.Drawing.Point(359, 0);
-            this.btn_regist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_regist.Margin = new System.Windows.Forms.Padding(4);
             this.btn_regist.Name = "btn_regist";
             this.btn_regist.Size = new System.Drawing.Size(105, 26);
             this.btn_regist.TabIndex = 149;
@@ -372,7 +372,7 @@
             // dataGridView_Syukko
             // 
             this.dataGridView_Syukko.Location = new System.Drawing.Point(11, 194);
-            this.dataGridView_Syukko.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView_Syukko.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_Syukko.Name = "dataGridView_Syukko";
             this.dataGridView_Syukko.Size = new System.Drawing.Size(1017, 555);
             this.dataGridView_Syukko.TabIndex = 145;
@@ -498,8 +498,8 @@
             this.ClientSize = new System.Drawing.Size(1040, 749);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_clear);
+            this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_all);
             this.Controls.Add(this.btn_update);
@@ -508,7 +508,7 @@
             this.Controls.Add(this.dataGridView_Syukko);
             this.Controls.Add(this.menuStrip2);
             this.ForeColor = System.Drawing.SystemColors.Control;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "F_Syukko";
             this.Text = "販売在庫管理画面　出庫管理画面";
             this.Load += new System.EventHandler(this.F_Syukko_Load);
@@ -542,8 +542,8 @@
         private System.Windows.Forms.TextBox txt_SyID;
         private System.Windows.Forms.Label lbl_SyID;
         private System.Windows.Forms.Label lbl_EnID;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_all;
         private System.Windows.Forms.Button btn_update;
