@@ -822,7 +822,7 @@ namespace SalesManagement_SysDev
                     //    command.CommandText = command + "AND ";
                     //}
                     //実行するSQL文の条件追加
-                    command.CommandText = command.CommandText + AND + "PrSafetyStock LIKE @PrSafetyStock ";
+                    command.CommandText = command.CommandText + AND + "ChDate LIKE @ChDate ";
                     ++andnum;
                 }
                 else if (txt_ChHidden.Text != "" && count == 6)
