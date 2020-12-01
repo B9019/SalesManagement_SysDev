@@ -40,6 +40,8 @@ namespace SalesManagement_SysDev.Model.Entity
         public const string errorNotFoundSyukko = "出庫情報が見つかりませんでした。";
         //Hattyu
         public const string errorNotFoundHattyu = "発注情報が見つかりませんでした。";
+        //Warehousing
+        public const string errorNotFoundWarehousing = "入庫情報が見つかりませんでした。";
 
 
 

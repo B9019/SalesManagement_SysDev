@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView_Chumon_regist = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Warehousing = new System.Windows.Forms.DataGridView();
             this.lbl_WaDate = new System.Windows.Forms.Label();
             this.lblWaID = new System.Windows.Forms.Label();
             this.lbl_EmID = new System.Windows.Forms.Label();
@@ -36,15 +36,15 @@
             this.btn_sertch = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
-            this.txt_入庫ID = new System.Windows.Forms.TextBox();
+            this.txt_WaID = new System.Windows.Forms.TextBox();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_all = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_EmID = new System.Windows.Forms.TextBox();
-            this.txt_OrID = new System.Windows.Forms.TextBox();
-            this.lbl_OrID = new System.Windows.Forms.Label();
+            this.txt_HaID = new System.Windows.Forms.TextBox();
+            this.lbl_HaID = new System.Windows.Forms.Label();
             this.btn_regist = new System.Windows.Forms.Button();
-            this.txt_ChHidden = new System.Windows.Forms.TextBox();
+            this.txt_WaHidden = new System.Windows.Forms.TextBox();
             this.txt_memo = new System.Windows.Forms.TextBox();
             this.lbl_ArHidden = new System.Windows.Forms.Label();
             this.lbl_memo = new System.Windows.Forms.Label();
@@ -66,18 +66,18 @@
             this.売上管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.発注管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon_regist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Warehousing)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView_Chumon_regist
+            // dataGridView_Warehousing
             // 
-            this.dataGridView_Chumon_regist.Location = new System.Drawing.Point(8, 158);
-            this.dataGridView_Chumon_regist.Name = "dataGridView_Chumon_regist";
-            this.dataGridView_Chumon_regist.Size = new System.Drawing.Size(763, 442);
-            this.dataGridView_Chumon_regist.TabIndex = 185;
+            this.dataGridView_Warehousing.Location = new System.Drawing.Point(8, 158);
+            this.dataGridView_Warehousing.Name = "dataGridView_Warehousing";
+            this.dataGridView_Warehousing.Size = new System.Drawing.Size(763, 442);
+            this.dataGridView_Warehousing.TabIndex = 185;
             // 
             // lbl_WaDate
             // 
@@ -140,6 +140,7 @@
             this.btn_update.TabIndex = 189;
             this.btn_update.Text = "F3 更新";
             this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_clear
             // 
@@ -151,12 +152,12 @@
             this.btn_clear.Text = "F7 入力クリア";
             this.btn_clear.UseVisualStyleBackColor = false;
             // 
-            // txt_入庫ID
+            // txt_WaID
             // 
-            this.txt_入庫ID.Location = new System.Drawing.Point(89, 13);
-            this.txt_入庫ID.Name = "txt_入庫ID";
-            this.txt_入庫ID.Size = new System.Drawing.Size(167, 19);
-            this.txt_入庫ID.TabIndex = 66;
+            this.txt_WaID.Location = new System.Drawing.Point(89, 13);
+            this.txt_WaID.Name = "txt_WaID";
+            this.txt_WaID.Size = new System.Drawing.Size(167, 19);
+            this.txt_WaID.TabIndex = 66;
             // 
             // btn_delete
             // 
@@ -184,10 +185,10 @@
             this.groupBox1.Controls.Add(this.lblWaID);
             this.groupBox1.Controls.Add(this.lbl_EmID);
             this.groupBox1.Controls.Add(this.txt_WaDate);
-            this.groupBox1.Controls.Add(this.txt_入庫ID);
+            this.groupBox1.Controls.Add(this.txt_WaID);
             this.groupBox1.Controls.Add(this.txt_EmID);
-            this.groupBox1.Controls.Add(this.txt_OrID);
-            this.groupBox1.Controls.Add(this.lbl_OrID);
+            this.groupBox1.Controls.Add(this.txt_HaID);
+            this.groupBox1.Controls.Add(this.lbl_HaID);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(10, 29);
             this.groupBox1.Name = "groupBox1";
@@ -204,23 +205,23 @@
             this.txt_EmID.Size = new System.Drawing.Size(167, 19);
             this.txt_EmID.TabIndex = 64;
             // 
-            // txt_OrID
+            // txt_HaID
             // 
-            this.txt_OrID.Location = new System.Drawing.Point(321, 13);
-            this.txt_OrID.Name = "txt_OrID";
-            this.txt_OrID.Size = new System.Drawing.Size(183, 19);
-            this.txt_OrID.TabIndex = 63;
+            this.txt_HaID.Location = new System.Drawing.Point(321, 13);
+            this.txt_HaID.Name = "txt_HaID";
+            this.txt_HaID.Size = new System.Drawing.Size(183, 19);
+            this.txt_HaID.TabIndex = 63;
             // 
-            // lbl_OrID
+            // lbl_HaID
             // 
-            this.lbl_OrID.AutoSize = true;
-            this.lbl_OrID.ForeColor = System.Drawing.Color.White;
-            this.lbl_OrID.Location = new System.Drawing.Point(259, 15);
-            this.lbl_OrID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_OrID.Name = "lbl_OrID";
-            this.lbl_OrID.Size = new System.Drawing.Size(44, 12);
-            this.lbl_OrID.TabIndex = 7;
-            this.lbl_OrID.Text = "受注ID ";
+            this.lbl_HaID.AutoSize = true;
+            this.lbl_HaID.ForeColor = System.Drawing.Color.White;
+            this.lbl_HaID.Location = new System.Drawing.Point(259, 15);
+            this.lbl_HaID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_HaID.Name = "lbl_HaID";
+            this.lbl_HaID.Size = new System.Drawing.Size(44, 12);
+            this.lbl_HaID.TabIndex = 7;
+            this.lbl_HaID.Text = "発注ID ";
             // 
             // btn_regist
             // 
@@ -231,14 +232,15 @@
             this.btn_regist.TabIndex = 188;
             this.btn_regist.Text = "F2 登録";
             this.btn_regist.UseVisualStyleBackColor = false;
+            this.btn_regist.Click += new System.EventHandler(this.btn_regist_Click);
             // 
-            // txt_ChHidden
+            // txt_WaHidden
             // 
-            this.txt_ChHidden.Location = new System.Drawing.Point(8, 101);
-            this.txt_ChHidden.Multiline = true;
-            this.txt_ChHidden.Name = "txt_ChHidden";
-            this.txt_ChHidden.Size = new System.Drawing.Size(238, 19);
-            this.txt_ChHidden.TabIndex = 77;
+            this.txt_WaHidden.Location = new System.Drawing.Point(8, 101);
+            this.txt_WaHidden.Multiline = true;
+            this.txt_WaHidden.Name = "txt_WaHidden";
+            this.txt_WaHidden.Size = new System.Drawing.Size(238, 19);
+            this.txt_WaHidden.TabIndex = 77;
             // 
             // txt_memo
             // 
@@ -405,7 +407,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox2.Controls.Add(this.txt_ChHidden);
+            this.groupBox2.Controls.Add(this.txt_WaHidden);
             this.groupBox2.Controls.Add(this.txt_memo);
             this.groupBox2.Controls.Add(this.lbl_ArHidden);
             this.groupBox2.Controls.Add(this.lbl_memo);
@@ -426,7 +428,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(780, 609);
-            this.Controls.Add(this.dataGridView_Chumon_regist);
+            this.Controls.Add(this.dataGridView_Warehousing);
             this.Controls.Add(this.btn_sertch);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_clear);
@@ -437,11 +439,11 @@
             this.Controls.Add(this.btn_print);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.groupBox2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F_Warehousing";
             this.Text = "販売在庫管理システム　入庫情報管理画面";
             this.Load += new System.EventHandler(this.F_Warehousing_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon_regist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Warehousing)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
@@ -455,7 +457,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView_Chumon_regist;
+        private System.Windows.Forms.DataGridView dataGridView_Warehousing;
         private System.Windows.Forms.Label lbl_WaDate;
         private System.Windows.Forms.Label lblWaID;
         private System.Windows.Forms.Label lbl_EmID;
@@ -463,15 +465,15 @@
         private System.Windows.Forms.Button btn_sertch;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_clear;
-        private System.Windows.Forms.TextBox txt_入庫ID;
+        private System.Windows.Forms.TextBox txt_WaID;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_all;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txt_EmID;
-        private System.Windows.Forms.TextBox txt_OrID;
-        private System.Windows.Forms.Label lbl_OrID;
+        private System.Windows.Forms.TextBox txt_HaID;
+        private System.Windows.Forms.Label lbl_HaID;
         private System.Windows.Forms.Button btn_regist;
-        private System.Windows.Forms.TextBox txt_ChHidden;
+        private System.Windows.Forms.TextBox txt_WaHidden;
         private System.Windows.Forms.TextBox txt_memo;
         private System.Windows.Forms.Label lbl_ArHidden;
         private System.Windows.Forms.Label lbl_memo;
