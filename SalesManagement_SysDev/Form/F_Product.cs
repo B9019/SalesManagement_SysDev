@@ -17,6 +17,7 @@ namespace SalesManagement_SysDev
 {
     public partial class F_Product : Form
     {
+        public int transfer_int;
         // ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
 
         // 共通データベース処理モジュール
@@ -85,6 +86,8 @@ namespace SalesManagement_SysDev
             dataGridView_Product.Columns[8].HeaderText = "色";
             dataGridView_Product.Columns[9].HeaderText = "発売日";
             dataGridView_Product.Columns[10].HeaderText = "非表示理由";
+
+
 
         }
 

@@ -6,6 +6,8 @@ namespace SalesManagement_SysDev
 
     public partial class F_home : Form
     {
+        int transfer_int = 0;
+
         //エントリポイント
         [STAThread]
         static void Main()
@@ -24,13 +26,18 @@ namespace SalesManagement_SysDev
             F_login f_login = new F_login();
             f_home.Visible = false;
             f_login.ShowDialog();
+
+
+
         }
         ///// 画面遷移処理 /////
 
         private void ログイン管理toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             F_login form_login = new F_login();
+            form_login.transfer_int = transfer_int;
             form_login.ShowDialog();
+
         }
 
         private void 顧客管理ToolStripMenuItem_Click(object sender, EventArgs e)

@@ -583,7 +583,6 @@
             this.txt_EmPassword.Name = "txt_EmPassword";
             this.txt_EmPassword.Size = new System.Drawing.Size(242, 22);
             this.txt_EmPassword.TabIndex = 13;
-            this.txt_EmPassword.Leave += new System.EventHandler(this.txt_EmPassword_Leave);
             // 
             // txt_EmID
             // 
@@ -592,7 +591,6 @@
             this.txt_EmID.Name = "txt_EmID";
             this.txt_EmID.Size = new System.Drawing.Size(242, 22);
             this.txt_EmID.TabIndex = 12;
-            this.txt_EmID.Leave += new System.EventHandler(this.txt_EmID_Leave);
             // 
             // button3
             // 

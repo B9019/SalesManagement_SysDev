@@ -54,6 +54,55 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
 
             return string.Empty;
         }
+        // データ更新
+        // in   : M_Loginデータ
+        // out  : エラーメッセージ 
+        public string PutLogin(M_Employee regEmployee)
+        {
+            using (var db = new SalesManagement_DevContext())
+            {
+                M_Employee employee;
+                try
+                {
+                    employee = db.M_Employees.Single(x => x.EmID == regEmployee.EmID);
+                }
+                catch
+                {
+                    // throw new Exception(Messages.errorNotFoundItem, ex);
+                    // throw new Exception(_cm.GetMessage(110), ex);
+                    return _msc.GetMessage(110);
+                }
+                employee.EmID = regEmployee.EmID;
+                employee.EmPassword = regEmployee.EmPassword;
+
+                db.Entry(employee).State = EntityState.Modified;
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    // throw new Exception(Messages.errorConflict, ex);
+                    // throw new Exception(_cm.GetMessage(100), ex);
+                    return _msc.GetMessage(100);
+                }
+
+                // ログ出力
+                var operationLog = new OperationLog()
+                {
+                    EventRaisingTime = DateTime.Now,
+                    Operator = _logonUser,
+                    Table = "Login",
+                    Command = "Put",
+                    //Data = ProductLogData(regProduct),
+                    Comments = string.Empty
+                };
+                //StaticCommon.PostOperationLog(operationLog);
+
+                return string.Empty;
+            }
+        }
+
 
     }
 }

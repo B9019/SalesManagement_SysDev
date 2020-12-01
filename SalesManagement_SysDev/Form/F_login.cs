@@ -17,6 +17,8 @@ namespace SalesManagement_SysDev
 {
     public partial class F_login : Form
     {
+        public int transfer_int;
+
         // ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
 
         // 共通データベース処理モジュール
@@ -58,7 +60,7 @@ namespace SalesManagement_SysDev
         {
             //データベースの生成を行います．
             //再度実行する場合には，必ずデータベースの削除をしてから実行してください．
-            
+
             //役職マスタを生成するサンプル（1件目に管理者を追加する例）
             M_Position FirstPosition = new M_Position()
             {
@@ -272,19 +274,6 @@ namespace SalesManagement_SysDev
             form_Stock_search.ShowDialog();
 
         }
-        // ユーザーID入力チェック
-        private void txt_EmID_Leave(object sender, EventArgs e)
-        {
-            if (!_ic.HalfCharSpecialSymbolCheck(txt_EmID.Text, out string errorMessage)) txt_EmID.Focus();
-            //labelMessage.Text = errorMessage;
-        }
-
-        // パスワード入力チェック
-        private void txt_EmPassword_Leave(object sender, EventArgs e)
-        {
-            if (!_ic.HalfCharSpecialSymbolCheck(txt_EmPassword.Text, out string errorMessage)) txt_EmPassword.Focus();
-            //labelMessage.Text = errorMessage;
-        }
 
         // ログオン処理
         private void btn_login_Click(object sender, EventArgs e)
@@ -310,12 +299,9 @@ namespace SalesManagement_SysDev
             conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True";
 
             //実行するSQL文の指定
-            command.CommandText = @"SELECT * FROM M_Product WHERE EmID = @EmID AND EmPassword = @EmPassword;";
+            command.CommandText = @"SELECT * FROM M_Employee WHERE EmID = @EmID AND EmPassword = @EmPassword;";
             command.Connection = conn;
 
-            //sql文のwhere句の接続に使う
-            string AND = "";
-            int andnum = 0;
             //検索条件をテキストボックスから抽出し、SQL文をセット
             //　日本語可　：SqlDbType.NVarChar
             //　日本語不可：SqlDbType.VarChar
@@ -328,9 +314,27 @@ namespace SalesManagement_SysDev
 
                 command.Parameters.Add("@EmPassword", SqlDbType.VarChar);
                 command.Parameters["@EmPassword"].Value = txt_EmPassword.Text;
+                try
+                {
+                    //データベースに接続
+                    conn.Open();
+                    //SQL文の実行、データが  readerに格納される
+                    SqlDataReader rd = command.ExecuteReader();
 
-                _st.staffID =
 
+                    if (rd.HasRows)
+                    {
+                        while (rd.Read())
+                        {
+                            transfer_int = Convert.ToInt32(rd["PoID"]);//役職IDを共有変数に格納
+                        }
+                    }
+                }
+                finally
+                {
+                    //データベースを切断
+                    conn.Close();
+                }
                 //_topForm.MenuControl(Constants.salesMenu | Constants.stockMenu | Constants.orderMenu | Constants.systemMenu);
 
                 //// ユーザー情報トップフォームで記憶
@@ -362,73 +366,7 @@ namespace SalesManagement_SysDev
                 Dispose();
                 return;
             }
-            if (_st.CheckPasswordHash(textBoxUserId.Text, textBoxPassword.Text, out DsStaff staff))
-            {
-                // 通過後処理
-                // メニューコントロール
-                string accessAuth = _cm.GetAccessAuth(int.Parse(staff.M_Staff[0].AccessAuth));
-                switch(accessAuth)
-                {
-                    case Constants.strGeneral:
-                        _topForm.MenuControl(Constants.salesMenu | Constants.stockMenu | Constants.orderMenu | Constants.masterMenu);
-                        break;
 
-                    case Constants.strManager:
-                        _topForm.MenuControl(Constants.salesMenu | Constants.stockMenu | Constants.orderMenu | Constants.masterMenu | Constants.importMenu);
-                        break;
-
-                    case Constants.strMaster:
-                        _topForm.MenuControl(Constants.salesMenu | Constants.stockMenu | Constants.orderMenu | Constants.masterMenu | Constants.importMenu | Constants.systemMenu);
-                        break;
-
-                    default:
-                        break;
-                }
-
-                // ユーザー情報トップフォームで記憶
-                _topForm._staff = staff;
-
-                // SalesForm（親）に情報を表示
-                ((Label)_topForm.Controls["dataLogonUser"]).Text = staff.M_Staff[0].StaffName;
-                ((Label)_topForm.Controls["dataAccessAuth"]).Text = _cm.GetAccessAuth(int.Parse(staff.M_Staff[0].AccessAuth));
-                ((Label)_topForm.Controls["dataBelongingShop"]).Text = _sh.GetShop(staff.M_Staff[0].ShopID)?.ShopName;
-                ((Label)_topForm.Controls["dataLogonTime"]).Text = DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString();
-
-                // メニュー：ログオン　→　ログオフ
-                _topForm.SetLogOff();
-                _topForm._logonStatus = true;
-
-                // ログ出力
-                var operationLog = new OperationLog()
-                {
-                    EventRaisingTime = DateTime.Now,
-                    Operator = staff.M_Staff[0].StaffName,
-                    Table = string.Empty,
-                    Command = "Logon",
-                    Data = string.Empty,
-                    Comments = string.Empty
-                };
-                StaticCommon.PostOperationLog(operationLog);
-
-                Dispose();
-                return;
-            }
-            else
-            {
-                labelMessage.Text = "ユーザーIDまたはパスワードが違います。";
-
-                // ログ出力
-                var operationLog = new OperationLog()
-                {
-                    EventRaisingTime = DateTime.Now,
-                    Operator = string.Empty,
-                    Table = string.Empty,
-                    Command = "LogonFailed",
-                    Data = textBoxUserId.Text + "," + textBoxPassword.Text,
-                    Comments = string.Empty
-                };
-                StaticCommon.PostOperationLog(operationLog);
-            };
         }
 
         // 閉じるボタン
@@ -446,16 +384,83 @@ namespace SalesManagement_SysDev
                 return;
 
             // 1.1.2妥当なログイン情報作成
-            var regProduct = Generate_Data_AtRegistration();
+            var regLogin = Generate_Data_AtRegistration();
 
             // 1.1.3ログイン情報登録
-            if (!Generate_Registration(regLogin))
+            if (!LoginUpdate(regLogin))
                 return;
 
         }
+        // 
+        //
+        //1.1.1　妥当なログインデータ取得（新規登録）
+        //
+        //
+        private bool Get_Login_Data_AtRegistration()
+        {
+            // ログインデータの形式チェック
+            string errorMessage = string.Empty;
 
+            // ユーザーID入力チェック
+            if (!_ic.HalfCharSpecialSymbolCheck(txt_EmID.Text, out string errorMessage_UserId))
+            {
+                //labelMessage.Text = errorMessage_UserId;
+                txt_EmID.Focus();
+                return false;
+            }
 
-        // ユーザー情報イニシャライズ
+            // パスワード入力チェック
+            if (!_ic.HalfCharSpecialSymbolCheck(txt_EmPassword.Text, out string errorMessage_Password))
+            {
+                //labelMessage.Text = errorMessage_Password;
+                txt_EmPassword.Focus();
+                return false;
+            }
+
+            return true;
+
+        }
+        //
+        //
+        // 1.1.2 ログイン情報作成
+        //
+        //
+        private M_Employee Generate_Data_AtRegistration()
+        {
+            return new M_Employee
+            {
+                EmID = int.Parse(txt_EmID.Text),
+                EmPassword = txt_EmPassword.Text,
+
+            };
+
+        }
+        //
+        //
+        // 1.2.3 ログイン情報登録
+        //
+        //
+        private bool LoginUpdate(M_Employee regEmployee)
+        {
+            // 更新可否
+            if (DialogResult.OK != MessageBox.Show(this, "登録してよろしいですか", "登録可否", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+            {
+                return false;
+            }
+
+            var errorMessage = _Lo.PutLogin(regEmployee);
+
+            if (errorMessage != string.Empty)
+            {
+                MessageBox.Show(errorMessage);
+                return false;
+            }
+
+            txt_EmID.Focus();
+
+            return true;
+        }
+
 
     }
 }
