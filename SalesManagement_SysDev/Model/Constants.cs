@@ -6,12 +6,13 @@
         public const string sqlServerInitialDate = "1753/01/01 0:00:00";
 
         // アクセス権
-        public const int numSales = 0;
-        public const int numlogiManager = 1;
-        public const int numOffice = 2;
-        public const int numClient = 3;
-        public const int numManager = 4;
-        public const int numMaster = 5;
+        public const int notaccess = 0;
+        public const int numSales = 1;
+        public const int numlogiManager = 2;
+        public const int numOffice = 3;
+        public const int numClient = 4;
+        public const int numManager = 5;
+        public const int numMaster = 6;
 
         public const string strSales = "営業";
         public const string strlogiManager = "物流";

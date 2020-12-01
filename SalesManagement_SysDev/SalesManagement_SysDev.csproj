@@ -68,6 +68,7 @@
     <Compile Include="Entity\M_Product.cs" />
     <Compile Include="Entity\M_SalesOffice.cs" />
     <Compile Include="Entity\M_SmallClassification.cs" />
+    <Compile Include="Entity\staff.cs" />
     <Compile Include="Entity\T_Arrival.cs" />
     <Compile Include="Entity\T_ArrivalDetail.cs" />
     <Compile Include="Entity\T_Chumon.cs" />
@@ -344,6 +345,7 @@
     <Compile Include="Model\ContentsManagement\Common\StaticCommon.cs" />
     <Compile Include="Model\ContentsManagement\M_ClientContents.cs" />
     <Compile Include="Model\ContentsManagement\M_EmployeeContents.cs" />
+    <Compile Include="Model\ContentsManagement\M_LoginContents.cs" />
     <Compile Include="Model\ContentsManagement\T_ArrivalContents.cs" />
     <Compile Include="Model\ContentsManagement\T_ChumonContents.cs" />
     <Compile Include="Model\ContentsManagement\M_ProductContents.cs" />

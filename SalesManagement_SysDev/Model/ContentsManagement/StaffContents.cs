@@ -21,5 +21,6 @@ namespace SalesManagement_SysDev
 {
     class StaffContents
     {
+        public int staffID = 0;
     }
 }
