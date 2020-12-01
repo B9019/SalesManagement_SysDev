@@ -7,6 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Printing;
+using System.Reflection;
+using System.Text.RegularExpressions;
+using SalesManagement_SysDev.Model.Entity;
+using SalesManagement_SysDev.Model.ContentsManagement;
+using SalesManagement_SysDev.Model.Entity.Disp;
+using System.Data.SqlClient;
+
 
 namespace SalesManagement_SysDev
 {
@@ -236,8 +244,50 @@ namespace SalesManagement_SysDev
 
         }
 
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            
+        }
+        private bool login()
+        {
+            //接続先DBの情報をセット
+            SqlConnection conn = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True";
+
+            //実行するSQL文の指定 
+            command.CommandText = @"SELECT * FROM M_Employee WHERE EmID = @EmID AND EmPassword = @EmPassword;";
+            command.Connection = conn;
+
+            //sql文のwhere句の接続に使う
+            string AND = "";
+            int andnum = 0;
+            //検索条件をテキストボックスから抽出し、SQL文をセット
+            //　日本語可　：SqlDbType.NVarChar
+            //　日本語不可：SqlDbType.VarChar
+            if (txt_EmID.Text != "" && txt_EmPassword.Text != "")
+            {
+            }
+            try
+            {
+                //データベースに接続
+                conn.Open();
+                //SQL文の実行、データが  readerに格納される
+                SqlDataReader rd = command.ExecuteReader();
+
+                if (rd.HasRows)
+                {
+
+                }
+            }
+            finally
+            {
+                //データベースを切断
+                conn.Close();
+            }
 
 
 
+        }
     }
 }
