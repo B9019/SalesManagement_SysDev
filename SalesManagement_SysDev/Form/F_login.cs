@@ -17,7 +17,7 @@ namespace SalesManagement_SysDev
 {
     public partial class F_login : Form
     {
-        public int transfer_int;
+        public int transfer_int ;
 
         // ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
 
@@ -77,10 +77,12 @@ namespace SalesManagement_SysDev
         private void F_login_Load(object sender, EventArgs e)
         {
             ログイン.Enabled = false;
-        }
-        ///// 画面遷移処理 /////
+            transfer_int = 0;
 
-        private void ログイン_Click(object sender, EventArgs e)
+    }
+    ///// 画面遷移処理 /////
+
+    private void ログイン_Click(object sender, EventArgs e)
         {
             F_home f_home = new F_home();
             F_login form_login = new F_login();
@@ -337,9 +339,8 @@ namespace SalesManagement_SysDev
                 }
                 //_topForm.MenuControl(Constants.salesMenu | Constants.stockMenu | Constants.orderMenu | Constants.systemMenu);
 
-                //// ユーザー情報トップフォームで記憶
-                //f_home._staff_M_Employee[0].StaffName = "Administrator";
-                //f_home._M_Employee.M_Staff[0].AccessAuth = Constants.numMaster.ToString();
+                // ユーザー情報トップフォームで記憶
+                f_home._sds.M_Employee[0].EmPassword = txt_EmPassword.Text;
 
                 //// TopForm（親）に情報を表示
                 //((Label)_topForm.Controls["dataLogonUser"]).Text = "Administrator";
@@ -347,7 +348,7 @@ namespace SalesManagement_SysDev
                 //((Label)_topForm.Controls["dataBelongingShop"]).Text = "All Shop";
                 //((Label)_topForm.Controls["dataLogonTime"]).Text = DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString();
 
-                //// メニュー：ログオン　→　ログオフ
+                // メニュー：ログオン　→　ログオフ
                 //_topForm.SetLogOff();
                 //_topForm._logonStatus = true;
 
@@ -359,9 +360,8 @@ namespace SalesManagement_SysDev
                     Table = string.Empty,
                     Command = "Logon",
                     Data = string.Empty,
-                    Comments = string.Empty
                 };
-                StaticCommon.PostOperationLog(operationLog);
+                //StaticCommon.PostOperationLog(operationLog);
 
                 Dispose();
                 return;

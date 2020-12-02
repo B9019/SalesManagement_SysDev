@@ -33,5 +33,16 @@ namespace SalesManagement_SysDev.Properties {
                 return ((string)(this["設定"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesMa" +
+            "nagement_DevContext;Integrated Security=True")]
+        public string SalesManagement_SysDev_SalesManagement_DevContextConnectionString {
+            get {
+                return ((string)(this["SalesManagement_SysDev_SalesManagement_DevContextConnectionString"]));
+            }
+        }
     }
 }

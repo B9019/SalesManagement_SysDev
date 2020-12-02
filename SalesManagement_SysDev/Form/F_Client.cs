@@ -16,6 +16,7 @@ namespace SalesManagement_SysDev
 {
     public partial class F_Client : Form
     {
+        public int transfer_int;
         // ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
 
         // 共通データベース処理モジュール
@@ -40,6 +41,22 @@ namespace SalesManagement_SysDev
 
         //// トップフォーム
         public F_home f_home;
+
+        F_login f_login = new F_login();
+        F_Arrival f_arrival = new F_Arrival();
+        F_Chumon f_chumon = new F_Chumon();
+        F_Client f_client = new F_Client();
+        F_Employee f_employee = new F_Employee();
+        F_Hattyu f_hattyu = new F_Hattyu();
+        F_Order f_order = new F_Order();
+        F_Product f_product = new F_Product();
+        F_Sale f_sale = new F_Sale();
+        F_Shipment f_shipment = new F_Shipment();
+        F_Stock f_stock = new F_Stock();
+        F_Syukko f_syukko = new F_Syukko();
+        F_Warehousing f_warehousing = new F_Warehousing();
+
+
 
         //// 選択行番号
         private int _lineNo;
@@ -78,6 +95,7 @@ namespace SalesManagement_SysDev
 
         private void F_Client_Load_1(object sender, EventArgs e)
         {
+            transfer_int = f_login.transfer_int;    //権限割り当て
 
         }
 

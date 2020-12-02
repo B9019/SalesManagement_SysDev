@@ -12,6 +12,7 @@ using SalesManagement_SysDev.Model.Entity;
 using SalesManagement_SysDev.Model.ContentsManagement;
 using SalesManagement_SysDev.Model.Entity.Disp;
 using System.Data.SqlClient;
+using System.Data.Entity.Infrastructure.DependencyResolution;
 
 namespace SalesManagement_SysDev
 {
@@ -38,10 +39,26 @@ namespace SalesManagement_SysDev
         //// データベース処理モジュール（M_Division）
         private M_ProductContents _Pr = new M_ProductContents();
 
+        private StaffContents _St = new StaffContents();
+
         // ***** プロパティ定義
 
         //// トップフォーム
         public F_home f_home;
+
+        F_login f_login = new F_login();
+        F_Arrival f_arrival = new F_Arrival();
+        F_Chumon f_chumon = new F_Chumon();
+        F_Client f_client = new F_Client();
+        F_Employee f_employee = new F_Employee();
+        F_Hattyu f_hattyu = new F_Hattyu();
+        F_Order f_order = new F_Order();
+        F_Product f_product = new F_Product();
+        F_Sale f_sale = new F_Sale();
+        F_Shipment f_shipment = new F_Shipment();
+        F_Stock f_stock = new F_Stock();
+        F_Syukko f_syukko = new F_Syukko();
+        F_Warehousing f_warehousing = new F_Warehousing();
 
         //// 選択行番号
         private int _lineNo;
@@ -87,8 +104,16 @@ namespace SalesManagement_SysDev
             dataGridView_Product.Columns[9].HeaderText = "発売日";
             dataGridView_Product.Columns[10].HeaderText = "非表示理由";
 
+            transfer_int = f_login.transfer_int;
 
-
+            if(transfer_int == 1 ||
+               transfer_int == 2 ||
+               transfer_int == 3 ||
+               transfer_int == 4)
+            {
+                btn_delete.Enabled = false;
+            }
+            
         }
 
 

@@ -1,12 +1,65 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Drawing.Printing;
+using System.Linq;
+using System.Reflection;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using SalesManagement_SysDev.Model.Entity;
+using SalesManagement_SysDev.Model.ContentsManagement;
+using SalesManagement_SysDev.Model.Entity.Disp;
+using System.Data.SqlClient;
 
 namespace SalesManagement_SysDev
 {
 
+
     public partial class F_home : Form
     {
-        int transfer_int = 0;
+        // ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
+
+        // 共通データベース処理モジュール
+        private CommonFunction _cm = new CommonFunction();
+
+        //// データベース処理モジュール（項目処理）
+        //private ColumnsManagementCommon _cmc = new ColumnsManagementCommon();
+
+        //// データベース処理モジュール（コードカウンター）
+        //private CodeCounterCommon _cc = new CodeCounterCommon();
+
+        // 入力チェックモジュール
+        private InputCheck _ic = new InputCheck();
+
+        //// メッセージ処理モジュール
+        private Messages _ms = new Messages();
+
+        //// データベース処理モジュール（M_Login）
+        private M_LoginContents _Lo = new M_LoginContents();
+
+        //// スタッフ変数 ////
+        private StaffContents _st = new StaffContents();
+
+
+        // ***** プロパティ定義
+
+        //// トップフォーム
+        public F_home f_home;
+
+        public SalesDataSet _sds= new SalesDataSet();
+
+        //フォーム名の定義//
+        F_login f_login = new F_login();
+        F_Client f_client = new F_Client();
+        F_Employee f_employee = new F_Employee();
+
+
+        //// 選択行番号
+        private int _lineNo;
+
+        int transfer_int ;
 
         //エントリポイント
         [STAThread]
@@ -22,8 +75,6 @@ namespace SalesManagement_SysDev
 
         private void F_home_Load(object sender, EventArgs e)
         {
-            F_home f_home = new F_home();
-            F_login f_login = new F_login();
             f_home.Visible = false;
             f_login.ShowDialog();
 
@@ -43,6 +94,7 @@ namespace SalesManagement_SysDev
         private void 顧客管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             F_Client form_client = new F_Client();
+            f_client.transfer_int = transfer_int;
             form_client.ShowDialog();
         }
 
