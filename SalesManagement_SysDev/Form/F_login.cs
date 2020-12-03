@@ -17,7 +17,7 @@ namespace SalesManagement_SysDev
 {
     public partial class F_login : Form
     {
-        public int transfer_int ;
+        public int transfer_int= 0 ;
 
         // ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
 
@@ -339,8 +339,8 @@ namespace SalesManagement_SysDev
                 }
                 //_topForm.MenuControl(Constants.salesMenu | Constants.stockMenu | Constants.orderMenu | Constants.systemMenu);
 
-                // ユーザー情報トップフォームで記憶
-                f_home._sds.M_Employee[0].EmPassword = txt_EmPassword.Text;
+                //// ユーザー情報トップフォームで記憶
+                //f_home._sds.M_Employee[0].EmPassword = txt_EmPassword.Text;
 
                 //// TopForm（親）に情報を表示
                 //((Label)_topForm.Controls["dataLogonUser"]).Text = "Administrator";

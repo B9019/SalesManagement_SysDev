@@ -18,7 +18,7 @@ namespace SalesManagement_SysDev
 {
     public partial class F_Product : Form
     {
-        public int transfer_int;
+        public int transfer_int ;//権限変数
         // ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
 
         // 共通データベース処理モジュール
@@ -46,19 +46,18 @@ namespace SalesManagement_SysDev
         //// トップフォーム
         public F_home f_home;
 
-        F_login f_login = new F_login();
-        F_Arrival f_arrival = new F_Arrival();
-        F_Chumon f_chumon = new F_Chumon();
-        F_Client f_client = new F_Client();
-        F_Employee f_employee = new F_Employee();
-        F_Hattyu f_hattyu = new F_Hattyu();
-        F_Order f_order = new F_Order();
-        F_Product f_product = new F_Product();
-        F_Sale f_sale = new F_Sale();
-        F_Shipment f_shipment = new F_Shipment();
-        F_Stock f_stock = new F_Stock();
-        F_Syukko f_syukko = new F_Syukko();
-        F_Warehousing f_warehousing = new F_Warehousing();
+        //F_Arrival f_arrival = new F_Arrival();
+        //F_Chumon f_chumon = new F_Chumon();
+        //F_Client f_client = new F_Client();
+        //F_Employee f_employee = new F_Employee();
+        //F_Hattyu f_hattyu = new F_Hattyu();
+        //F_Order f_order = new F_Order();
+        //F_Product f_product = new F_Product();
+        //F_Sale f_sale = new F_Sale();
+        //F_Shipment f_shipment = new F_Shipment();
+        //F_Stock f_stock = new F_Stock();
+        //F_Syukko f_syukko = new F_Syukko();
+        //F_Warehousing f_warehousing = new F_Warehousing();
 
         //// 選択行番号
         private int _lineNo;
@@ -104,14 +103,15 @@ namespace SalesManagement_SysDev
             dataGridView_Product.Columns[9].HeaderText = "発売日";
             dataGridView_Product.Columns[10].HeaderText = "非表示理由";
 
+            F_login f_login = new F_login();
             transfer_int = f_login.transfer_int;
 
+            btn_delete.Enabled = false;
+
             if(transfer_int == 1 ||
-               transfer_int == 2 ||
-               transfer_int == 3 ||
-               transfer_int == 4)
+               transfer_int == 5)
             {
-                btn_delete.Enabled = false;
+                btn_delete.Enabled = true;
             }
             
         }

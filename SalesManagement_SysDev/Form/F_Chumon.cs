@@ -18,6 +18,7 @@ namespace SalesManagement_SysDev
 {
     public partial class F_Chumon : Form
     {
+        public int transfer_int;//権限変数
         // ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
 
         // 共通データベース処理モジュール

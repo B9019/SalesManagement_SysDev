@@ -18,6 +18,8 @@ namespace SalesManagement_SysDev
 {
     public partial class F_Order : Form
     {
+        public int transfer_int;//権限変数
+
         // ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
 
         // 共通データベース処理モジュール
@@ -470,6 +472,11 @@ namespace SalesManagement_SysDev
                 //データベースを切断
                 conn.Close();
             }
+        }
+
+        private void F_Order_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
