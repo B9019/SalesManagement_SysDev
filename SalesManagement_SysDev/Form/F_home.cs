@@ -19,28 +19,28 @@ namespace SalesManagement_SysDev
 
     public partial class F_home : Form
     {
-        // ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
+        //// ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
 
-        // 共通データベース処理モジュール
-        private CommonFunction _cm = new CommonFunction();
+        //// 共通データベース処理モジュール
+        //private CommonFunction _cm = new CommonFunction();
 
-        //// データベース処理モジュール（項目処理）
-        //private ColumnsManagementCommon _cmc = new ColumnsManagementCommon();
+        ////// データベース処理モジュール（項目処理）
+        ////private ColumnsManagementCommon _cmc = new ColumnsManagementCommon();
 
-        //// データベース処理モジュール（コードカウンター）
-        //private CodeCounterCommon _cc = new CodeCounterCommon();
+        ////// データベース処理モジュール（コードカウンター）
+        ////private CodeCounterCommon _cc = new CodeCounterCommon();
 
-        // 入力チェックモジュール
-        private InputCheck _ic = new InputCheck();
+        //// 入力チェックモジュール
+        //private InputCheck _ic = new InputCheck();
 
-        //// メッセージ処理モジュール
-        private Messages _ms = new Messages();
+        ////// メッセージ処理モジュール
+        //private Messages _ms = new Messages();
 
-        //// データベース処理モジュール（M_Login）
-        private M_LoginContents _Lo = new M_LoginContents();
+        ////// データベース処理モジュール（M_Login）
+        //private M_LoginContents _Lo = new M_LoginContents();
 
-        //// スタッフ変数 ////
-        private StaffContents _st = new StaffContents();
+        ////// スタッフ変数 ////
+        //private StaffContents _st = new StaffContents();
 
 
         // ***** プロパティ定義
@@ -82,10 +82,9 @@ namespace SalesManagement_SysDev
 
         private void F_home_Load(object sender, EventArgs e)
         {
-                    //// トップフォーム
-        F_home f_home　= new F_home();
-        f_home.Visible = false;
+            F_home f_home = new F_home();
             F_login f_login = new F_login();
+            f_home.Visible = false;
             f_login.ShowDialog();
 
 
