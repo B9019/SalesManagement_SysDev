@@ -45,13 +45,10 @@ namespace SalesManagement_SysDev
 
         // ***** プロパティ定義
 
-        //// トップフォーム
-        public F_home f_home;
 
         public SalesDataSet _sds= new SalesDataSet();
 
         //フォーム名の定義//
-        F_login f_login = new F_login();
         F_Client f_client = new F_Client();
         F_Employee f_employee = new F_Employee();
         F_Arrival f_arrival = new F_Arrival();
@@ -85,7 +82,10 @@ namespace SalesManagement_SysDev
 
         private void F_home_Load(object sender, EventArgs e)
         {
-            f_home.Visible = false;
+                    //// トップフォーム
+        F_home f_home　= new F_home();
+        f_home.Visible = false;
+            F_login f_login = new F_login();
             f_login.ShowDialog();
 
 

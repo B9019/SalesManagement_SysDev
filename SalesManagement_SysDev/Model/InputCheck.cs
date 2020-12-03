@@ -13,8 +13,8 @@ namespace SalesManagement_SysDev.Model.Entity
         // データベース処理モジュール
         private readonly CommonFunction _cm = new CommonFunction();
 
-        // データベース処理モジュール（Staff）
-        private readonly StaffContents _st = new StaffContents();
+        //// データベース処理モジュール（Staff）
+        //private readonly StaffContents _st = new StaffContents();
 
         // *** 複合機能チェック *****
 
