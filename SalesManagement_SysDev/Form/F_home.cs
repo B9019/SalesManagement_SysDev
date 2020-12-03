@@ -87,6 +87,7 @@ namespace SalesManagement_SysDev
 
 
 
+
         }
         ///// 画面遷移処理 /////
 
@@ -192,6 +193,25 @@ namespace SalesManagement_SysDev
 
         }
 
+        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripContainer2_ContentPanel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
     }
