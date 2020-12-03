@@ -71,7 +71,7 @@
             this.PrModelNumber = new System.Windows.Forms.Label();
             this.ScID = new System.Windows.Forms.Label();
             this.btn_regist = new System.Windows.Forms.Button();
-            this.txt_PrHidden = new System.Windows.Forms.TextBox();
+            this.OrHidden = new System.Windows.Forms.TextBox();
             this.txt_memo = new System.Windows.Forms.TextBox();
             this.lbl_ArHidden = new System.Windows.Forms.Label();
             this.lbl_memo = new System.Windows.Forms.Label();
@@ -102,142 +102,165 @@
             this.売上管理ToolStripMenuItem,
             this.発注管理ToolStripMenuItem});
             this.メニューToolStripMenuItem.Name = "メニューToolStripMenuItem";
-            this.メニューToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.メニューToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
             this.メニューToolStripMenuItem.Text = "管理メニュー";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(159, 26);
             this.toolStripMenuItem1.Text = "ログイン管理";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.ログイン管理toolStripMenuItem1_Click);
             // 
             // 顧客管理ToolStripMenuItem
             // 
             this.顧客管理ToolStripMenuItem.Name = "顧客管理ToolStripMenuItem";
-            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.顧客管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.顧客管理ToolStripMenuItem.Text = "顧客管理";
+            this.顧客管理ToolStripMenuItem.Click += new System.EventHandler(this.顧客管理ToolStripMenuItem_Click);
             // 
             // 商品管理ToolStripMenuItem
             // 
             this.商品管理ToolStripMenuItem.Name = "商品管理ToolStripMenuItem";
-            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.商品管理ToolStripMenuItem.Text = "商品管理";
+            this.商品管理ToolStripMenuItem.Click += new System.EventHandler(this.商品管理ToolStripMenuItem_Click);
             // 
             // 受注管理ToolStripMenuItem
             // 
             this.受注管理ToolStripMenuItem.Name = "受注管理ToolStripMenuItem";
-            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.受注管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.受注管理ToolStripMenuItem.Text = "受注管理";
+            this.受注管理ToolStripMenuItem.Click += new System.EventHandler(this.受注管理ToolStripMenuItem_Click);
             // 
             // 注文管理ToolStripMenuItem
             // 
             this.注文管理ToolStripMenuItem.Name = "注文管理ToolStripMenuItem";
-            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.注文管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.注文管理ToolStripMenuItem.Text = "注文管理";
+            this.注文管理ToolStripMenuItem.Click += new System.EventHandler(this.注文管理ToolStripMenuItem_Click);
             // 
             // 入荷管理ToolStripMenuItem
             // 
             this.入荷管理ToolStripMenuItem.Name = "入荷管理ToolStripMenuItem";
-            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.入荷管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.入荷管理ToolStripMenuItem.Text = "入荷管理";
+            this.入荷管理ToolStripMenuItem.Click += new System.EventHandler(this.入荷管理ToolStripMenuItem_Click);
             // 
             // 出荷管理ToolStripMenuItem
             // 
             this.出荷管理ToolStripMenuItem.Name = "出荷管理ToolStripMenuItem";
-            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.出荷管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.出荷管理ToolStripMenuItem.Text = "出荷管理";
+            this.出荷管理ToolStripMenuItem.Click += new System.EventHandler(this.出荷管理ToolStripMenuItem_Click);
             // 
             // 在庫管理ToolStripMenuItem
             // 
             this.在庫管理ToolStripMenuItem.Name = "在庫管理ToolStripMenuItem";
-            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.在庫管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.在庫管理ToolStripMenuItem.Text = "在庫管理";
+            this.在庫管理ToolStripMenuItem.Click += new System.EventHandler(this.在庫管理ToolStripMenuItem_Click);
             // 
             // 入庫管理ToolStripMenuItem
             // 
             this.入庫管理ToolStripMenuItem.Name = "入庫管理ToolStripMenuItem";
-            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.入庫管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.入庫管理ToolStripMenuItem.Text = "入庫管理";
+            this.入庫管理ToolStripMenuItem.Click += new System.EventHandler(this.入庫管理ToolStripMenuItem_Click);
             // 
             // 出庫管理ToolStripMenuItem
             // 
             this.出庫管理ToolStripMenuItem.Name = "出庫管理ToolStripMenuItem";
-            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.出庫管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.出庫管理ToolStripMenuItem.Text = "出庫管理";
+            this.出庫管理ToolStripMenuItem.Click += new System.EventHandler(this.出庫管理ToolStripMenuItem_Click);
             // 
             // 社員管理ToolStripMenuItem
             // 
             this.社員管理ToolStripMenuItem.Name = "社員管理ToolStripMenuItem";
-            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.社員管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.社員管理ToolStripMenuItem.Text = "社員管理";
+            this.社員管理ToolStripMenuItem.Click += new System.EventHandler(this.社員管理ToolStripMenuItem_Click);
             // 
             // 売上管理ToolStripMenuItem
             // 
             this.売上管理ToolStripMenuItem.Name = "売上管理ToolStripMenuItem";
-            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.売上管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.売上管理ToolStripMenuItem.Text = "売上管理";
+            this.売上管理ToolStripMenuItem.Click += new System.EventHandler(this.売上管理ToolStripMenuItem_Click);
             // 
             // 発注管理ToolStripMenuItem
             // 
             this.発注管理ToolStripMenuItem.Name = "発注管理ToolStripMenuItem";
-            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.発注管理ToolStripMenuItem.Text = "発注管理";
+            this.発注管理ToolStripMenuItem.Click += new System.EventHandler(this.発注管理ToolStripMenuItem_Click);
             // 
             // dataGridView_Product
             // 
-            this.dataGridView_Product.Location = new System.Drawing.Point(8, 173);
+            this.dataGridView_Product.Location = new System.Drawing.Point(11, 216);
+            this.dataGridView_Product.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView_Product.Name = "dataGridView_Product";
-            this.dataGridView_Product.Size = new System.Drawing.Size(763, 427);
+            this.dataGridView_Product.Size = new System.Drawing.Size(1017, 534);
             this.dataGridView_Product.TabIndex = 174;
+            this.dataGridView_Product.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Product_regist_CellDoubleClick);
             // 
             // btn_sertch
             // 
             this.btn_sertch.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_sertch.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_sertch.Location = new System.Drawing.Point(184, 1);
+            this.btn_sertch.Location = new System.Drawing.Point(245, 1);
+            this.btn_sertch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_sertch.Name = "btn_sertch";
-            this.btn_sertch.Size = new System.Drawing.Size(79, 21);
+            this.btn_sertch.Size = new System.Drawing.Size(105, 26);
             this.btn_sertch.TabIndex = 176;
             this.btn_sertch.Text = "F1　検索";
             this.btn_sertch.UseVisualStyleBackColor = false;
-            this.btn_sertch.Click += new System.EventHandler(this.btn_sertch_Click);
+            this.btn_sertch.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // btn_update
             // 
             this.btn_update.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_update.Location = new System.Drawing.Point(352, 1);
+            this.btn_update.Location = new System.Drawing.Point(469, 1);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(79, 21);
+            this.btn_update.Size = new System.Drawing.Size(105, 26);
             this.btn_update.TabIndex = 178;
             this.btn_update.Text = "F3 更新";
             this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_clear
             // 
             this.btn_clear.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_clear.Location = new System.Drawing.Point(692, 1);
+            this.btn_clear.Location = new System.Drawing.Point(923, 1);
+            this.btn_clear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(79, 21);
+            this.btn_clear.Size = new System.Drawing.Size(105, 26);
             this.btn_clear.TabIndex = 182;
             this.btn_clear.Text = "F7 入力クリア";
             this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_delete
             // 
             this.btn_delete.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_delete.Location = new System.Drawing.Point(607, 1);
+            this.btn_delete.Location = new System.Drawing.Point(809, 1);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(79, 21);
+            this.btn_delete.Size = new System.Drawing.Size(105, 26);
             this.btn_delete.TabIndex = 181;
             this.btn_delete.Text = "F6 削除";
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_print
             // 
             this.btn_print.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_print.Location = new System.Drawing.Point(523, 1);
+            this.btn_print.Location = new System.Drawing.Point(697, 1);
+            this.btn_print.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_print.Name = "btn_print";
-            this.btn_print.Size = new System.Drawing.Size(79, 21);
+            this.btn_print.Size = new System.Drawing.Size(105, 26);
             this.btn_print.TabIndex = 180;
             this.btn_print.Text = "F5 印刷";
             this.btn_print.UseVisualStyleBackColor = false;
@@ -245,13 +268,14 @@
             // btn_all
             // 
             this.btn_all.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_all.Location = new System.Drawing.Point(437, 1);
+            this.btn_all.Location = new System.Drawing.Point(583, 1);
+            this.btn_all.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_all.Name = "btn_all";
-            this.btn_all.Size = new System.Drawing.Size(79, 21);
+            this.btn_all.Size = new System.Drawing.Size(105, 26);
             this.btn_all.TabIndex = 179;
             this.btn_all.Text = "F4 一覧表示";
             this.btn_all.UseVisualStyleBackColor = false;
-            this.btn_all.Click += new System.EventHandler(this.btn_all_Click_1);
+            this.btn_all.Click += new System.EventHandler(this.btn_all_Click);
             // 
             // groupBox1
             // 
@@ -276,58 +300,66 @@
             this.groupBox1.Controls.Add(this.PrModelNumber);
             this.groupBox1.Controls.Add(this.ScID);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(10, 29);
+            this.groupBox1.Location = new System.Drawing.Point(13, 36);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(514, 139);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(685, 174);
             this.groupBox1.TabIndex = 184;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "基礎項目";
             // 
             // txt_PrSafetyStock
             // 
-            this.txt_PrSafetyStock.Location = new System.Drawing.Point(321, 109);
+            this.txt_PrSafetyStock.Location = new System.Drawing.Point(428, 136);
+            this.txt_PrSafetyStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_PrSafetyStock.Name = "txt_PrSafetyStock";
-            this.txt_PrSafetyStock.Size = new System.Drawing.Size(183, 19);
+            this.txt_PrSafetyStock.Size = new System.Drawing.Size(243, 22);
             this.txt_PrSafetyStock.TabIndex = 200;
             // 
             // txt_PrColor
             // 
-            this.txt_PrColor.Location = new System.Drawing.Point(321, 85);
+            this.txt_PrColor.Location = new System.Drawing.Point(428, 106);
+            this.txt_PrColor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_PrColor.Name = "txt_PrColor";
-            this.txt_PrColor.Size = new System.Drawing.Size(183, 19);
+            this.txt_PrColor.Size = new System.Drawing.Size(243, 22);
             this.txt_PrColor.TabIndex = 203;
             // 
             // PrSafetyStock
             // 
             this.PrSafetyStock.AutoSize = true;
             this.PrSafetyStock.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrSafetyStock.Location = new System.Drawing.Point(259, 111);
+            this.PrSafetyStock.Location = new System.Drawing.Point(345, 139);
+            this.PrSafetyStock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PrSafetyStock.Name = "PrSafetyStock";
-            this.PrSafetyStock.Size = new System.Drawing.Size(65, 12);
+            this.PrSafetyStock.Size = new System.Drawing.Size(82, 15);
             this.PrSafetyStock.TabIndex = 190;
             this.PrSafetyStock.Text = "安全在庫数";
             // 
             // txt_PrReleaseDate
             // 
-            this.txt_PrReleaseDate.Location = new System.Drawing.Point(73, 85);
+            this.txt_PrReleaseDate.Location = new System.Drawing.Point(97, 106);
+            this.txt_PrReleaseDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_PrReleaseDate.Name = "txt_PrReleaseDate";
-            this.txt_PrReleaseDate.Size = new System.Drawing.Size(183, 19);
+            this.txt_PrReleaseDate.Size = new System.Drawing.Size(243, 22);
             this.txt_PrReleaseDate.TabIndex = 204;
             // 
             // txt_Price
             // 
-            this.txt_Price.Location = new System.Drawing.Point(73, 109);
+            this.txt_Price.Location = new System.Drawing.Point(97, 136);
+            this.txt_Price.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Price.Name = "txt_Price";
-            this.txt_Price.Size = new System.Drawing.Size(183, 19);
+            this.txt_Price.Size = new System.Drawing.Size(243, 22);
             this.txt_Price.TabIndex = 198;
             // 
             // MaID
             // 
             this.MaID.AutoSize = true;
             this.MaID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.MaID.Location = new System.Drawing.Point(5, 15);
+            this.MaID.Location = new System.Drawing.Point(7, 19);
+            this.MaID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MaID.Name = "MaID";
-            this.MaID.Size = new System.Drawing.Size(43, 12);
+            this.MaID.Size = new System.Drawing.Size(54, 15);
             this.MaID.TabIndex = 186;
             this.MaID.Text = "メーカID";
             // 
@@ -335,26 +367,29 @@
             // 
             this.Price.AutoSize = true;
             this.Price.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Price.Location = new System.Drawing.Point(6, 111);
+            this.Price.Location = new System.Drawing.Point(8, 139);
+            this.Price.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Price.Name = "Price";
-            this.Price.Size = new System.Drawing.Size(29, 12);
+            this.Price.Size = new System.Drawing.Size(37, 15);
             this.Price.TabIndex = 188;
             this.Price.Text = "価格";
             // 
             // txt_MaID
             // 
-            this.txt_MaID.Location = new System.Drawing.Point(73, 13);
+            this.txt_MaID.Location = new System.Drawing.Point(97, 16);
+            this.txt_MaID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_MaID.Name = "txt_MaID";
-            this.txt_MaID.Size = new System.Drawing.Size(183, 19);
+            this.txt_MaID.Size = new System.Drawing.Size(243, 22);
             this.txt_MaID.TabIndex = 196;
             // 
             // PrJCode
             // 
             this.PrJCode.AutoSize = true;
             this.PrJCode.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrJCode.Location = new System.Drawing.Point(259, 15);
+            this.PrJCode.Location = new System.Drawing.Point(345, 19);
+            this.PrJCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PrJCode.Name = "PrJCode";
-            this.PrJCode.Size = new System.Drawing.Size(55, 12);
+            this.PrJCode.Size = new System.Drawing.Size(67, 15);
             this.PrJCode.TabIndex = 189;
             this.PrJCode.Text = "JANコード";
             // 
@@ -362,74 +397,83 @@
             // 
             this.PrColor.AutoSize = true;
             this.PrColor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrColor.Location = new System.Drawing.Point(259, 87);
+            this.PrColor.Location = new System.Drawing.Point(345, 109);
+            this.PrColor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PrColor.Name = "PrColor";
-            this.PrColor.Size = new System.Drawing.Size(17, 12);
+            this.PrColor.Size = new System.Drawing.Size(22, 15);
             this.PrColor.TabIndex = 193;
             this.PrColor.Text = "色";
             // 
             // txt_PrID
             // 
-            this.txt_PrID.Location = new System.Drawing.Point(73, 36);
+            this.txt_PrID.Location = new System.Drawing.Point(97, 45);
+            this.txt_PrID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_PrID.Name = "txt_PrID";
-            this.txt_PrID.Size = new System.Drawing.Size(183, 19);
+            this.txt_PrID.Size = new System.Drawing.Size(243, 22);
             this.txt_PrID.TabIndex = 195;
             // 
             // txt_PrModelNumber
             // 
-            this.txt_PrModelNumber.Location = new System.Drawing.Point(322, 61);
+            this.txt_PrModelNumber.Location = new System.Drawing.Point(429, 76);
+            this.txt_PrModelNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_PrModelNumber.Name = "txt_PrModelNumber";
-            this.txt_PrModelNumber.Size = new System.Drawing.Size(183, 19);
+            this.txt_PrModelNumber.Size = new System.Drawing.Size(243, 22);
             this.txt_PrModelNumber.TabIndex = 202;
             // 
             // PrReleaseDate
             // 
             this.PrReleaseDate.AutoSize = true;
             this.PrReleaseDate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrReleaseDate.Location = new System.Drawing.Point(5, 87);
+            this.PrReleaseDate.Location = new System.Drawing.Point(7, 109);
+            this.PrReleaseDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PrReleaseDate.Name = "PrReleaseDate";
-            this.PrReleaseDate.Size = new System.Drawing.Size(41, 12);
+            this.PrReleaseDate.Size = new System.Drawing.Size(52, 15);
             this.PrReleaseDate.TabIndex = 194;
             this.PrReleaseDate.Text = "発売日";
             // 
             // txt_PrJCode
             // 
-            this.txt_PrJCode.Location = new System.Drawing.Point(321, 13);
+            this.txt_PrJCode.Location = new System.Drawing.Point(428, 16);
+            this.txt_PrJCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_PrJCode.Name = "txt_PrJCode";
-            this.txt_PrJCode.Size = new System.Drawing.Size(183, 19);
+            this.txt_PrJCode.Size = new System.Drawing.Size(243, 22);
             this.txt_PrJCode.TabIndex = 199;
             // 
             // txt_ScID
             // 
-            this.txt_ScID.Location = new System.Drawing.Point(321, 36);
+            this.txt_ScID.Location = new System.Drawing.Point(428, 45);
+            this.txt_ScID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_ScID.Name = "txt_ScID";
-            this.txt_ScID.Size = new System.Drawing.Size(183, 19);
+            this.txt_ScID.Size = new System.Drawing.Size(243, 22);
             this.txt_ScID.TabIndex = 201;
             // 
             // PrID
             // 
             this.PrID.AutoSize = true;
             this.PrID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrID.Location = new System.Drawing.Point(5, 37);
+            this.PrID.Location = new System.Drawing.Point(7, 46);
+            this.PrID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PrID.Name = "PrID";
-            this.PrID.Size = new System.Drawing.Size(40, 12);
+            this.PrID.Size = new System.Drawing.Size(51, 15);
             this.PrID.TabIndex = 185;
             this.PrID.Text = "商品ID";
             // 
             // txt_PrName
             // 
-            this.txt_PrName.Location = new System.Drawing.Point(73, 61);
+            this.txt_PrName.Location = new System.Drawing.Point(97, 76);
+            this.txt_PrName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_PrName.Name = "txt_PrName";
-            this.txt_PrName.Size = new System.Drawing.Size(183, 19);
+            this.txt_PrName.Size = new System.Drawing.Size(243, 22);
             this.txt_PrName.TabIndex = 197;
             // 
             // PrName
             // 
             this.PrName.AutoSize = true;
             this.PrName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrName.Location = new System.Drawing.Point(5, 63);
+            this.PrName.Location = new System.Drawing.Point(7, 79);
+            this.PrName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PrName.Name = "PrName";
-            this.PrName.Size = new System.Drawing.Size(41, 12);
+            this.PrName.Size = new System.Drawing.Size(52, 15);
             this.PrName.TabIndex = 187;
             this.PrName.Text = "商品名";
             // 
@@ -437,9 +481,10 @@
             // 
             this.PrModelNumber.AutoSize = true;
             this.PrModelNumber.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PrModelNumber.Location = new System.Drawing.Point(259, 63);
+            this.PrModelNumber.Location = new System.Drawing.Point(345, 79);
+            this.PrModelNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PrModelNumber.Name = "PrModelNumber";
-            this.PrModelNumber.Size = new System.Drawing.Size(29, 12);
+            this.PrModelNumber.Size = new System.Drawing.Size(37, 15);
             this.PrModelNumber.TabIndex = 192;
             this.PrModelNumber.Text = "型番";
             // 
@@ -447,46 +492,50 @@
             // 
             this.ScID.AutoSize = true;
             this.ScID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ScID.Location = new System.Drawing.Point(259, 38);
+            this.ScID.Location = new System.Drawing.Point(345, 48);
+            this.ScID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ScID.Name = "ScID";
-            this.ScID.Size = new System.Drawing.Size(52, 12);
+            this.ScID.Size = new System.Drawing.Size(66, 15);
             this.ScID.TabIndex = 191;
             this.ScID.Text = "小分類ID";
             // 
             // btn_regist
             // 
             this.btn_regist.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_regist.Location = new System.Drawing.Point(268, 1);
+            this.btn_regist.Location = new System.Drawing.Point(357, 1);
+            this.btn_regist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_regist.Name = "btn_regist";
-            this.btn_regist.Size = new System.Drawing.Size(79, 21);
+            this.btn_regist.Size = new System.Drawing.Size(105, 26);
             this.btn_regist.TabIndex = 177;
             this.btn_regist.Text = "F2 登録";
             this.btn_regist.UseVisualStyleBackColor = false;
+            this.btn_regist.Click += new System.EventHandler(this.btn_regist_Click);
             // 
-            // txt_PrHidden
+            // OrHidden
             // 
-            this.txt_PrHidden.Location = new System.Drawing.Point(7, 109);
-            this.txt_PrHidden.Multiline = true;
-            this.txt_PrHidden.Name = "txt_PrHidden";
-            this.txt_PrHidden.Size = new System.Drawing.Size(238, 19);
-            this.txt_PrHidden.TabIndex = 77;
+            this.OrHidden.Location = new System.Drawing.Point(9, 136);
+            this.OrHidden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OrHidden.Multiline = true;
+            this.OrHidden.Name = "OrHidden";
+            this.OrHidden.Size = new System.Drawing.Size(316, 23);
+            this.OrHidden.TabIndex = 77;
             // 
             // txt_memo
             // 
-            this.txt_memo.Location = new System.Drawing.Point(8, 35);
+            this.txt_memo.Location = new System.Drawing.Point(11, 44);
+            this.txt_memo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_memo.Multiline = true;
             this.txt_memo.Name = "txt_memo";
-            this.txt_memo.Size = new System.Drawing.Size(237, 19);
+            this.txt_memo.Size = new System.Drawing.Size(315, 23);
             this.txt_memo.TabIndex = 70;
             // 
             // lbl_ArHidden
             // 
             this.lbl_ArHidden.AutoSize = true;
             this.lbl_ArHidden.ForeColor = System.Drawing.Color.White;
-            this.lbl_ArHidden.Location = new System.Drawing.Point(5, 87);
-            this.lbl_ArHidden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ArHidden.Location = new System.Drawing.Point(7, 109);
             this.lbl_ArHidden.Name = "lbl_ArHidden";
-            this.lbl_ArHidden.Size = new System.Drawing.Size(77, 12);
+            this.lbl_ArHidden.Size = new System.Drawing.Size(97, 15);
             this.lbl_ArHidden.TabIndex = 63;
             this.lbl_ArHidden.Text = "入荷失敗理由";
             // 
@@ -494,9 +543,10 @@
             // 
             this.lbl_memo.AutoSize = true;
             this.lbl_memo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_memo.Location = new System.Drawing.Point(5, 15);
+            this.lbl_memo.Location = new System.Drawing.Point(7, 19);
+            this.lbl_memo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_memo.Name = "lbl_memo";
-            this.lbl_memo.Size = new System.Drawing.Size(73, 12);
+            this.lbl_memo.Size = new System.Drawing.Size(93, 15);
             this.lbl_memo.TabIndex = 70;
             this.lbl_memo.Text = "備考(30文字)";
             // 
@@ -504,9 +554,10 @@
             // 
             this.chk_hide_FLG.AutoSize = true;
             this.chk_hide_FLG.ForeColor = System.Drawing.Color.White;
-            this.chk_hide_FLG.Location = new System.Drawing.Point(7, 62);
+            this.chk_hide_FLG.Location = new System.Drawing.Point(9, 78);
+            this.chk_hide_FLG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chk_hide_FLG.Name = "chk_hide_FLG";
-            this.chk_hide_FLG.Size = new System.Drawing.Size(97, 16);
+            this.chk_hide_FLG.Size = new System.Drawing.Size(121, 19);
             this.chk_hide_FLG.TabIndex = 0;
             this.chk_hide_FLG.Text = "入荷失敗フラグ";
             this.chk_hide_FLG.UseVisualStyleBackColor = true;
@@ -514,17 +565,17 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox2.Controls.Add(this.txt_PrHidden);
+            this.groupBox2.Controls.Add(this.OrHidden);
             this.groupBox2.Controls.Add(this.txt_memo);
             this.groupBox2.Controls.Add(this.lbl_ArHidden);
             this.groupBox2.Controls.Add(this.lbl_memo);
             this.groupBox2.Controls.Add(this.chk_hide_FLG);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(521, 29);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.groupBox2.Location = new System.Drawing.Point(695, 36);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox2.Size = new System.Drawing.Size(250, 139);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(333, 174);
             this.groupBox2.TabIndex = 183;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "追加項目";
@@ -538,16 +589,17 @@
             this.メニューToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(780, 24);
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip2.Size = new System.Drawing.Size(1040, 28);
             this.menuStrip2.TabIndex = 175;
             this.menuStrip2.Text = "menuStrip2";
             // 
             // F_Product
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(780, 609);
+            this.ClientSize = new System.Drawing.Size(1040, 761);
             this.Controls.Add(this.dataGridView_Product);
             this.Controls.Add(this.btn_sertch);
             this.Controls.Add(this.btn_update);
@@ -559,6 +611,7 @@
             this.Controls.Add(this.btn_regist);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.menuStrip2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "F_Product";
             this.Text = "販売在庫管理システム　商品情報管理画面";
             this.Load += new System.EventHandler(this.F_Product_Load);
@@ -599,7 +652,7 @@
         private System.Windows.Forms.Button btn_all;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_regist;
-        private System.Windows.Forms.TextBox txt_PrHidden;
+        private System.Windows.Forms.TextBox OrHidden;
         private System.Windows.Forms.TextBox txt_memo;
         private System.Windows.Forms.Label lbl_ArHidden;
         private System.Windows.Forms.Label lbl_memo;

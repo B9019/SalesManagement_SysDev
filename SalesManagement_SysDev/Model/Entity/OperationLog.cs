@@ -10,7 +10,6 @@ namespace SalesManagement_SysDev.Model.Entity
         public string Table { get; set; }
         public string Command { get; set; }
         public string Data { get; set; }
-        public string Comments { get; set; }
 
     }
 }

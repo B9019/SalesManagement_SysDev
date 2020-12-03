@@ -19,6 +19,7 @@ namespace SalesManagement_SysDev
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
         public int? WaWarehouseFlag { get; set; }	//入庫済フラグ（倉庫）
         public int HaFlag { get; set; }	            //発注管理フラグ
+        public String Hamemo { get; set; }          //備考
         public String HaHidden { get; set; }            //非表示理由	
   	
     }

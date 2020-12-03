@@ -22,8 +22,9 @@ namespace SalesManagement_SysDev
         public DateTime ChDate { get; set; }       //注文年月日
         public int ChStateFlag { get; set; }    //注文状態フラグ
         public int ChFlag { get; set; }	//注文管理フラグ
-        public String ChHidden { get; set; }	    //非表示理由	
+        public String ChHidden { get; set; }        //非表示理由	
+        public String memo { get; set; }       //備考
 
- 
+
     }
 }

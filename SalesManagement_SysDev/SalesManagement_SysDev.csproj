@@ -68,6 +68,7 @@
     <Compile Include="Entity\M_Product.cs" />
     <Compile Include="Entity\M_SalesOffice.cs" />
     <Compile Include="Entity\M_SmallClassification.cs" />
+    <Compile Include="Entity\staff.cs" />
     <Compile Include="Entity\T_Arrival.cs" />
     <Compile Include="Entity\T_ArrivalDetail.cs" />
     <Compile Include="Entity\T_Chumon.cs" />
@@ -333,6 +334,18 @@
     <Compile Include="Migrations\202011251417569_Add-Migration2.designer.cs">
       <DependentUpon>202011251417569_Add-Migration2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011301429199_m3.cs" />
+    <Compile Include="Migrations\202011301429199_m3.designer.cs">
+      <DependentUpon>202011301429199_m3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012010528034_ske.cs" />
+    <Compile Include="Migrations\202012010528034_ske.designer.cs">
+      <DependentUpon>202012010528034_ske.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012010540341_S.cs" />
+    <Compile Include="Migrations\202012010540341_S.designer.cs">
+      <DependentUpon>202012010540341_S.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\CommonFunction.cs" />
     <Compile Include="Model\Constants.cs" />
@@ -340,23 +353,41 @@
     <Compile Include="Model\ContentsManagement\Common\StaticCommon.cs" />
     <Compile Include="Model\ContentsManagement\M_ClientContents.cs" />
     <Compile Include="Model\ContentsManagement\M_EmployeeContents.cs" />
+    <Compile Include="Model\ContentsManagement\M_LoginContents.cs" />
+    <Compile Include="Model\ContentsManagement\T_ArrivalContents.cs" />
     <Compile Include="Model\ContentsManagement\T_ChumonContents.cs" />
     <Compile Include="Model\ContentsManagement\M_ProductContents.cs" />
     <Compile Include="Model\ContentsManagement\StaffContents.cs" />
+    <Compile Include="Model\ContentsManagement\T_DispOrder.cs" />
+    <Compile Include="Model\ContentsManagement\T_HattyuContents.cs" />
+    <Compile Include="Model\ContentsManagement\T_OrderContents.cs" />
+    <Compile Include="Model\ContentsManagement\T_SaleContents.cs" />
     <Compile Include="Model\ContentsManagement\T_SipmentContens.cs" />
     <Compile Include="Model\ContentsManagement\T_StockContents.cs" />
+    <Compile Include="Model\ContentsManagement\T_SyukkoContents.cs" />
+    <Compile Include="Model\ContentsManagement\T_WarehousingContents.cs" />
     <Compile Include="Model\Entity\Disp\M_DispClient.cs" />
     <Compile Include="Model\Entity\Disp\M_DispEmployee.cs" />
     <Compile Include="Model\Entity\Disp\M_DispProduct.cs" />
+    <Compile Include="Model\Entity\Disp\T_DispArrival.cs" />
+    <Compile Include="Model\Entity\Disp\T_DispHattyu.cs" />
+    <Compile Include="Model\Entity\Disp\T_DispSale.cs" />
     <Compile Include="Model\Entity\Disp\T_DispShipment.cs" />
     <Compile Include="Model\Entity\Disp\T_DispStock.cs" />
     <Compile Include="Model\Entity\Disp\T_DispChumon.cs" />
+    <Compile Include="Model\Entity\Disp\T_DispSyukko.cs" />
+    <Compile Include="Model\Entity\Disp\T_DispWarehousing.cs" />
     <Compile Include="Model\Entity\Messages.cs" />
     <Compile Include="Model\Entity\OperationLog.cs" />
     <Compile Include="Model\Entity\SortableBindingList.cs" />
     <Compile Include="Model\InputCheck.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SalesManagement_DevContext.cs" />
     <EmbeddedResource Include="Form\DeleteConfirmForm.resx">
       <DependentUpon>DeleteConfirmForm.cs</DependentUpon>
@@ -484,6 +515,15 @@
     <EmbeddedResource Include="Migrations\202011251417569_Add-Migration2.resx">
       <DependentUpon>202011251417569_Add-Migration2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011301429199_m3.resx">
+      <DependentUpon>202011301429199_m3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012010528034_ske.resx">
+      <DependentUpon>202012010528034_ske.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012010540341_S.resx">
+      <DependentUpon>202012010540341_S.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -504,6 +544,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SalesDataSet.xsc">
+      <DependentUpon>SalesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SalesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SalesDataSet.xss">
+      <DependentUpon>SalesDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -38,16 +38,16 @@
             this.txt_ClPhone = new System.Windows.Forms.TextBox();
             this.txt_ClAddress = new System.Windows.Forms.TextBox();
             this.txt_ClName = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btn_sertch = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_print = new System.Windows.Forms.Button();
+            this.btn_all = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_search = new System.Windows.Forms.Button();
+            this.btn_regist = new System.Windows.Forms.Button();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.メニューToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ログイン管理toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.顧客管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.商品管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.受注管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -168,78 +168,80 @@
             this.txt_ClName.Size = new System.Drawing.Size(183, 19);
             this.txt_ClName.TabIndex = 64;
             // 
-            // button3
+            // btn_clear
             // 
-            this.button3.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button3.Location = new System.Drawing.Point(692, 1);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(79, 21);
-            this.button3.TabIndex = 167;
-            this.button3.Text = "F7 入力クリア";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_clear.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_clear.Location = new System.Drawing.Point(692, 1);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(79, 21);
+            this.btn_clear.TabIndex = 167;
+            this.btn_clear.Text = "F7 入力クリア";
+            this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
-            // button2
+            // btn_delete
             // 
-            this.button2.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button2.Location = new System.Drawing.Point(607, 1);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(79, 21);
-            this.button2.TabIndex = 166;
-            this.button2.Text = "F6 削除";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_delete.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_delete.Location = new System.Drawing.Point(607, 1);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(79, 21);
+            this.btn_delete.TabIndex = 166;
+            this.btn_delete.Text = "F6 削除";
+            this.btn_delete.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btn_print
             // 
-            this.button1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button1.Location = new System.Drawing.Point(523, 1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 21);
-            this.button1.TabIndex = 165;
-            this.button1.Text = "F5 印刷";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_print.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_print.Location = new System.Drawing.Point(523, 1);
+            this.btn_print.Name = "btn_print";
+            this.btn_print.Size = new System.Drawing.Size(79, 21);
+            this.btn_print.TabIndex = 165;
+            this.btn_print.Text = "F5 印刷";
+            this.btn_print.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btn_all
             // 
-            this.button4.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button4.Location = new System.Drawing.Point(438, 1);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(79, 21);
-            this.button4.TabIndex = 164;
-            this.button4.Text = "F4 一覧表示";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btn_all.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_all.Location = new System.Drawing.Point(438, 1);
+            this.btn_all.Name = "btn_all";
+            this.btn_all.Size = new System.Drawing.Size(79, 21);
+            this.btn_all.TabIndex = 164;
+            this.btn_all.Text = "F4 一覧表示";
+            this.btn_all.UseVisualStyleBackColor = false;
+            this.btn_all.Click += new System.EventHandler(this.btn_all_Click);
             // 
-            // button5
+            // btn_update
             // 
-            this.button5.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button5.Location = new System.Drawing.Point(353, 1);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(79, 21);
-            this.button5.TabIndex = 163;
-            this.button5.Text = "F3 更新";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btn_update.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_update.Location = new System.Drawing.Point(353, 1);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(79, 21);
+            this.btn_update.TabIndex = 163;
+            this.btn_update.Text = "F3 更新";
+            this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
-            // btn_sertch
+            // btn_search
             // 
-            this.btn_sertch.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_sertch.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_sertch.Location = new System.Drawing.Point(185, 1);
-            this.btn_sertch.Name = "btn_sertch";
-            this.btn_sertch.Size = new System.Drawing.Size(79, 21);
-            this.btn_sertch.TabIndex = 161;
-            this.btn_sertch.Text = "F1　検索";
-            this.btn_sertch.UseVisualStyleBackColor = false;
-            this.btn_sertch.Click += new System.EventHandler(this.btn_sertch_Click);
+            this.btn_search.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_search.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_search.Location = new System.Drawing.Point(185, 1);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(79, 21);
+            this.btn_search.TabIndex = 161;
+            this.btn_search.Text = "F1　検索";
+            this.btn_search.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btn_regist
             // 
-            this.button6.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button6.Location = new System.Drawing.Point(269, 1);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(79, 21);
-            this.button6.TabIndex = 162;
-            this.button6.Text = "F2 登録";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btn_regist.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_regist.Location = new System.Drawing.Point(269, 1);
+            this.btn_regist.Name = "btn_regist";
+            this.btn_regist.Size = new System.Drawing.Size(79, 21);
+            this.btn_regist.TabIndex = 162;
+            this.btn_regist.Text = "F2 登録";
+            this.btn_regist.UseVisualStyleBackColor = false;
+            this.btn_regist.Click += new System.EventHandler(this.btn_regist_Click);
             // 
             // menuStrip2
             // 
@@ -258,7 +260,7 @@
             // 
             this.メニューToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.メニューToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
+            this.ログイン管理toolStripMenuItem1,
             this.顧客管理ToolStripMenuItem,
             this.商品管理ToolStripMenuItem,
             this.受注管理ToolStripMenuItem,
@@ -275,11 +277,11 @@
             this.メニューToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.メニューToolStripMenuItem.Text = "管理メニュー";
             // 
-            // toolStripMenuItem1
+            // ログイン管理toolStripMenuItem1
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
-            this.toolStripMenuItem1.Text = "ログイン管理";
+            this.ログイン管理toolStripMenuItem1.Name = "ログイン管理toolStripMenuItem1";
+            this.ログイン管理toolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
+            this.ログイン管理toolStripMenuItem1.Text = "ログイン管理";
             // 
             // 顧客管理ToolStripMenuItem
             // 
@@ -496,13 +498,13 @@
             this.ClientSize = new System.Drawing.Size(780, 609);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.btn_sertch);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btn_clear);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_print);
+            this.Controls.Add(this.btn_all);
+            this.Controls.Add(this.btn_update);
+            this.Controls.Add(this.btn_search);
+            this.Controls.Add(this.btn_regist);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.dataGridView_Client);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -532,16 +534,16 @@
         private System.Windows.Forms.TextBox txt_ClPhone;
         private System.Windows.Forms.TextBox txt_ClAddress;
         private System.Windows.Forms.TextBox txt_ClName;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button btn_sertch;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_print;
+        private System.Windows.Forms.Button btn_all;
+        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Button btn_search;
+        private System.Windows.Forms.Button btn_regist;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem メニューToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ログイン管理toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 顧客管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 商品管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 受注管理ToolStripMenuItem;

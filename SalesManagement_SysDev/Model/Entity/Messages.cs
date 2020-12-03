@@ -32,6 +32,19 @@ namespace SalesManagement_SysDev.Model.Entity
         public const string errorNotFoundEmployee = "社員情報が見つかりませんでした。";
         //Shipment
         public const string errorNotFoundShipment = "出荷情報が見つかりませんでした。";
+        //Sale
+        public const string errorNotFoundSale = "売上情報が見つかりませんでした。";
+        //Arrival
+        public const string errorNotFoundArrival= "入荷情報が見つかりませんでした。";
+        //Syukko
+        public const string errorNotFoundSyukko = "出庫情報が見つかりませんでした。";
+        //Hattyu
+        public const string errorNotFoundHattyu = "発注情報が見つかりませんでした。";
+        //Warehousing
+        public const string errorNotFoundWarehousing = "入庫情報が見つかりませんでした。";
+
+
+
 
 
         // ***** ContentsManagement

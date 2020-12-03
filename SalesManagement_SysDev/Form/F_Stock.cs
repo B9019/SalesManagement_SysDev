@@ -13,10 +13,13 @@ using SalesManagement_SysDev.Model.ContentsManagement;
 using SalesManagement_SysDev.Model.Entity.Disp;
 using System.Data.SqlClient;
 
+
 namespace SalesManagement_SysDev
 {
     public partial class F_Stock : Form
     {
+        public int transfer_int;//権限変数
+
         // ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
 
         // 共通データベース処理モジュール
@@ -513,7 +516,7 @@ namespace SalesManagement_SysDev
             }
 
             //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
-            private void dataGridView_Product_regist_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+            private void dataGridView_Stock_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
             {
                 int id = (int)dataGridView_Stock.CurrentRow.Cells[0].Value;
                 int id2 = (int)dataGridView_Stock.CurrentRow.Cells[1].Value;
@@ -530,6 +533,122 @@ namespace SalesManagement_SysDev
             txt_memo.Text = Convert.ToString(id4);
                
             }
+
+        private void F_Stock_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_sertch_Click(object sender, EventArgs e)
+        {
+            //接続先DBの情報をセット
+            SqlConnection conn = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True";
+
+            //実行するSQL文の指定
+            command.CommandText = @"SELECT * FROM T_Stock WHERE ";
+            command.Connection = conn;
+
+            //sql文のwhere句の接続に使う
+            string AND = "";
+            int andnum = 0;
+            //検索条件をテキストボックスから抽出し、SQL文をセット
+            //　日本語可　：SqlDbType.NVarChar
+            //　日本語不可：SqlDbType.VarChar
+            for (int count = 0; count < 5; count++)
+            {
+                if (txt_StID.Text != "" && count == 0)
+                {
+                    command.Parameters.Add("@StID", SqlDbType.VarChar);
+                    command.Parameters["@StID"].Value = txt_StID.Text;
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + "StID LIKE @StID ";
+                    ++andnum;
+
+                }
+                else if (txt_PrID.Text != "" && count == 1)
+                {
+                    command.Parameters.Add("@PrID", SqlDbType.VarChar);
+                    command.Parameters["@PrID"].Value = txt_PrID.Text;
+                    //if ("@SoID" != null)
+                    //{
+                    //    command.CommandText = command + "AND ";
+                    //}
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "PrID LIKE @PrID ";
+                    ++andnum;
+                }
+                else if (txt_StQuantity.Text != "" && count == 2)
+                {
+                    command.Parameters.Add("@StQuantity", SqlDbType.NVarChar);
+                    command.Parameters["@StQuantity"].Value = "%" + txt_StQuantity.Text + "%";
+                    //if ("@EmID" != null || "@EmID != null)
+                    //{
+                    //    command.CommandText = command + "AND ";
+                    //}
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "StQuantity LIKE @StQuantity ";
+                    ++andnum;
+                }
+                else if (txt_memo.Text != "" && count == 3)
+                {
+                    command.Parameters.Add("@memo", SqlDbType.VarChar);
+                    command.Parameters["@memo"].Value = txt_memo.Text;
+                    //if ("@PrID" != null || "@MaID" != null || "@Price" != null)
+                    //{
+                    //    command.CommandText = command + "AND ";
+                    //}
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "memo LIKE @memo ";
+                    ++andnum;
+                }
+               
+                //2つ目以降の条件の前部にANDを接続
+                if (andnum != 0)
+                {
+                    AND = "AND ";
+                }
+                //最後にセミコロンを接続する
+                while (count == 10)
+                {
+                    command.CommandText = command.CommandText + ";";
+                    break;
+                }
+
+            }
+            try
+            {
+                //データベースに接続
+                conn.Open();
+                //SQL文の実行、データが  readerに格納される
+                SqlDataReader rd = command.ExecuteReader();
+                dataGridView_Stock.Rows.Clear();
+
+
+                if (rd.HasRows)
+                {
+                    while (rd.Read())
+                    {
+                        dataGridView_Stock.Rows.Add(rd["StID"], rd["PrID"], rd["StQuantity"], rd["memo"]);
+                    }
+                }
+            }
+            finally
+            {
+                //データベースを切断
+                conn.Close();
+            }
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            txt_StID.Text = "";
+            txt_PrID.Text = "";
+            txt_StQuantity.Text = "";
+            txt_memo.Text = "";
         }
     }
+    }
+    
 

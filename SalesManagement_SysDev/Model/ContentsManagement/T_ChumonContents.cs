@@ -213,7 +213,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Chumon",
                     Command = "Chu",
                     //Data = ProductLogData(regChumon),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
 
@@ -255,7 +254,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Chumon",
                     Command = "Delete",
                     Data = chumon.ChID.ToString(),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
             }

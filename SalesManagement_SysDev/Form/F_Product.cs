@@ -12,11 +12,13 @@ using SalesManagement_SysDev.Model.Entity;
 using SalesManagement_SysDev.Model.ContentsManagement;
 using SalesManagement_SysDev.Model.Entity.Disp;
 using System.Data.SqlClient;
+using System.Data.Entity.Infrastructure.DependencyResolution;
 
 namespace SalesManagement_SysDev
 {
     public partial class F_Product : Form
     {
+        public int transfer_int ;//権限変数
         // ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
 
         // 共通データベース処理モジュール
@@ -37,10 +39,25 @@ namespace SalesManagement_SysDev
         //// データベース処理モジュール（M_Division）
         private M_ProductContents _Pr = new M_ProductContents();
 
+        private StaffContents _St = new StaffContents();
+
         // ***** プロパティ定義
 
         //// トップフォーム
         public F_home f_home;
+
+        //F_Arrival f_arrival = new F_Arrival();
+        //F_Chumon f_chumon = new F_Chumon();
+        //F_Client f_client = new F_Client();
+        //F_Employee f_employee = new F_Employee();
+        //F_Hattyu f_hattyu = new F_Hattyu();
+        //F_Order f_order = new F_Order();
+        //F_Product f_product = new F_Product();
+        //F_Sale f_sale = new F_Sale();
+        //F_Shipment f_shipment = new F_Shipment();
+        //F_Stock f_stock = new F_Stock();
+        //F_Syukko f_syukko = new F_Syukko();
+        //F_Warehousing f_warehousing = new F_Warehousing();
 
         //// 選択行番号
         private int _lineNo;
@@ -86,6 +103,17 @@ namespace SalesManagement_SysDev
             dataGridView_Product.Columns[9].HeaderText = "発売日";
             dataGridView_Product.Columns[10].HeaderText = "非表示理由";
 
+            F_login f_login = new F_login();
+            transfer_int = f_login.transfer_int;
+
+            btn_delete.Enabled = false;
+
+            if(transfer_int == 1 ||
+               transfer_int == 5)
+            {
+                btn_delete.Enabled = true;
+            }
+            
         }
 
 
@@ -743,7 +771,7 @@ namespace SalesManagement_SysDev
             txt_PrSafetyStock.Clear();
             txt_PrJCode.Clear();
             txt_memo.Clear();
-            txt_PrHidden.Clear();
+            OrHidden.Clear();
             chk_hide_FLG.Checked = false;
 
             //// ボタンリセット
@@ -893,9 +921,26 @@ namespace SalesManagement_SysDev
         }
         private void fncAllSelect()
         {
-            // データ取得&表示（データバインド）
-            _dispProductPaging = _Pr.GetDispProducts();
-            dataGridView_Product.DataSource = _dispProductPaging;
+            SqlConnection conn = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True";
+            //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
+            //command.Parameters["@PrFlag"].Value = "0";
+            command.CommandText = "SELECT * FROM M_Product WHERE PrFlag = 0.";
+            command.Connection = conn;
+            conn.Open();
+            SqlDataReader rd = command.ExecuteReader();
+            dataGridView_Product.Rows.Clear();
+            while (rd.Read())
+            {
+                dataGridView_Product.Rows.Add(rd["PrID"], rd["MaID"], rd["PrName"], rd["Price"],
+                    rd["PrJCode"], rd["PrSafetyStock"], rd["ScID"], rd["PrModelNumber"],
+                    rd["PrColor"], rd["PrReleaseDate"], rd["PrHidden"]);
+            }
+
+            //// データ取得&表示（データバインド）
+            //_dispProductPaging = _Pr.GetDispProducts();
+            //dataGridView_Product.DataSource = _dispProductPaging;
 
             ////全データの表示
             //dataGridView_Product.Rows.Clear();
@@ -943,7 +988,7 @@ namespace SalesManagement_SysDev
             txt_PrColor.Text = Convert.ToString(id9);
             txt_PrReleaseDate.Text = Convert.ToString(id10);
             chk_hide_FLG.Checked = Convert.ToBoolean(id11);
-            txt_PrHidden.Text = Convert.ToString(id12);
+            OrHidden.Text = Convert.ToString(id12);
             txt_memo.Text = Convert.ToString(id13);
 
         }
@@ -1068,10 +1113,10 @@ namespace SalesManagement_SysDev
                     command.CommandText = command.CommandText + AND + "PrReleaseDate LIKE @PrReleaseDate ";
                     ++andnum;
                 }
-                else if (txt_PrHidden.Text != "" && count == 10)
+                else if (OrHidden.Text != "" && count == 10)
                 {
                     command.Parameters.Add("@PrHidden", SqlDbType.NVarChar);
-                    command.Parameters["@PrHidden"].Value = "%" + txt_PrHidden.Text + "%";
+                    command.Parameters["@PrHidden"].Value = "%" + OrHidden.Text + "%";
                     //実行するSQL文の条件追加
                     command.CommandText = command.CommandText + AND + "PrHidden LIKE @PrHidden ";
                     ++andnum;
@@ -1115,15 +1160,21 @@ namespace SalesManagement_SysDev
             }
         }
 
-        private void btn_all_Click_1(object sender, EventArgs e)
+        private void btn_clear_Click(object sender, EventArgs e)
         {
-
+            txt_PrID.Text = "";
+            txt_MaID.Text = "";
+            txt_PrName.Text = "";
+            txt_Price.Text = "";
+            txt_PrJCode.Text = "";
+            txt_PrSafetyStock.Text = "";
+            txt_ScID.Text = "";
+            txt_PrModelNumber.Text = "";
+            txt_PrColor.Text = "";
+            txt_PrReleaseDate.Text = "";
+            OrHidden.Text = "";
         }
 
-        private void btn_sertch_Click(object sender, EventArgs e)
-        {
-
-        }
         //public void ReadSingleRow(IDataRecord record)
         //{
         //    dataGridView_Product.Rows.Add();

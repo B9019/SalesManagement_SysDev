@@ -194,7 +194,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Stock",
                     Command = "Sto",
                     //Data = ProductLogData(regStock),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
 
@@ -236,7 +235,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Stock",
                     Command = "Delete",
                     Data = stock.StID.ToString(),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
             }

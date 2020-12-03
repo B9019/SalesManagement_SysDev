@@ -220,7 +220,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Product",
                     Command = "Put",
                     //Data = ProductLogData(regProduct),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
 
@@ -262,7 +261,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Product",
                     Command = "Delete",
                     Data = product.PrID.ToString(),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
             }

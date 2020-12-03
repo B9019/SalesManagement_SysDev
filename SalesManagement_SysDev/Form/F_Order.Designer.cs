@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt_ChHidden = new System.Windows.Forms.TextBox();
+            this.OrHidden = new System.Windows.Forms.TextBox();
             this.txt_memo = new System.Windows.Forms.TextBox();
             this.lbl_ArHidden = new System.Windows.Forms.Label();
             this.lbl_memo = new System.Windows.Forms.Label();
@@ -67,19 +67,19 @@
             this.社員管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.売上管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.発注管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView_Chumon_regist = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Order = new System.Windows.Forms.DataGridView();
             this.btn_regist = new System.Windows.Forms.Button();
             this.btn_sertch = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon_regist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Order)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox2.Controls.Add(this.txt_ChHidden);
+            this.groupBox2.Controls.Add(this.OrHidden);
             this.groupBox2.Controls.Add(this.txt_memo);
             this.groupBox2.Controls.Add(this.lbl_ArHidden);
             this.groupBox2.Controls.Add(this.lbl_memo);
@@ -94,13 +94,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "追加項目";
             // 
-            // txt_ChHidden
+            // OrHidden
             // 
-            this.txt_ChHidden.Location = new System.Drawing.Point(8, 101);
-            this.txt_ChHidden.Multiline = true;
-            this.txt_ChHidden.Name = "txt_ChHidden";
-            this.txt_ChHidden.Size = new System.Drawing.Size(238, 19);
-            this.txt_ChHidden.TabIndex = 77;
+            this.OrHidden.Location = new System.Drawing.Point(8, 101);
+            this.OrHidden.Multiline = true;
+            this.OrHidden.Name = "OrHidden";
+            this.OrHidden.Size = new System.Drawing.Size(238, 19);
+            this.OrHidden.TabIndex = 77;
             // 
             // txt_memo
             // 
@@ -277,6 +277,7 @@
             this.txt_EmID.Name = "txt_EmID";
             this.txt_EmID.Size = new System.Drawing.Size(183, 19);
             this.txt_EmID.TabIndex = 64;
+            this.txt_EmID.TextChanged += new System.EventHandler(this.txt_OrID_TextChanged);
             // 
             // txt_OrID
             // 
@@ -437,12 +438,12 @@
             this.発注管理ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.発注管理ToolStripMenuItem.Text = "発注管理";
             // 
-            // dataGridView_Chumon_regist
+            // dataGridView_Order
             // 
-            this.dataGridView_Chumon_regist.Location = new System.Drawing.Point(8, 158);
-            this.dataGridView_Chumon_regist.Name = "dataGridView_Chumon_regist";
-            this.dataGridView_Chumon_regist.Size = new System.Drawing.Size(763, 442);
-            this.dataGridView_Chumon_regist.TabIndex = 163;
+            this.dataGridView_Order.Location = new System.Drawing.Point(8, 158);
+            this.dataGridView_Order.Name = "dataGridView_Order";
+            this.dataGridView_Order.Size = new System.Drawing.Size(763, 442);
+            this.dataGridView_Order.TabIndex = 163;
             // 
             // btn_regist
             // 
@@ -464,6 +465,7 @@
             this.btn_sertch.TabIndex = 165;
             this.btn_sertch.Text = "F1　検索";
             this.btn_sertch.UseVisualStyleBackColor = false;
+            this.btn_sertch.Click += new System.EventHandler(this.btn_sertch_Click);
             // 
             // F_Order
             // 
@@ -481,18 +483,18 @@
             this.Controls.Add(this.btn_regist);
             this.Controls.Add(this.btn_sertch);
             this.Controls.Add(this.menuStrip2);
-            this.Controls.Add(this.dataGridView_Chumon_regist);
+            this.Controls.Add(this.dataGridView_Order);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "F_Order";
             this.Text = "販売在庫管理システム　受注情報管理画面";
-            //this.Load += new System.EventHandler(this.F_Order_Load_1);
+            this.Load += new System.EventHandler(this.F_Order_Load_1);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon_regist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Order)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -500,7 +502,7 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txt_ChHidden;
+        private System.Windows.Forms.TextBox OrHidden;
         private System.Windows.Forms.TextBox txt_memo;
         private System.Windows.Forms.Label lbl_ArHidden;
         private System.Windows.Forms.Label lbl_memo;
@@ -538,7 +540,7 @@
         private System.Windows.Forms.ToolStripMenuItem 社員管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 売上管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 発注管理ToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView_Chumon_regist;
+        private System.Windows.Forms.DataGridView dataGridView_Order;
         private System.Windows.Forms.Button btn_regist;
         private System.Windows.Forms.Button btn_sertch;
     }
