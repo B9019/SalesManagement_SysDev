@@ -209,7 +209,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Operator = _logonUser,
                     Table = "Warehousing",
                     Command = "War",
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
 
@@ -251,7 +250,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Warehousing",
                     Command = "Delete",
                     Data = warehousing.WaID.ToString(),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
             }

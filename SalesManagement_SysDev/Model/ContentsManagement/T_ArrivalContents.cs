@@ -209,7 +209,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Arrival",
                     Command = "Put",
                     //Data = ArrivalLogData(regArrival),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
 
@@ -251,7 +250,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Arrival",
                     Command = "Delete",
                     Data = arrival.ArID.ToString(),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
             }

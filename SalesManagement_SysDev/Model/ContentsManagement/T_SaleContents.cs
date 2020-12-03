@@ -185,7 +185,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Sale",
                     Command = "Put",
                     //Data = ProductLogData(regClient),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
 
@@ -227,7 +226,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Sale",
                     Command = "Delete",
                     Data = sale.SaID.ToString(),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
             }

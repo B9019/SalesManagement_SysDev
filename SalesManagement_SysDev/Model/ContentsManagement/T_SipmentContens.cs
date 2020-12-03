@@ -212,7 +212,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Shipment",
                     Command = "Shi",
                     //Data = ProductLogData(regShipment),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
 
@@ -254,7 +253,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Shipment",
                     Command = "Delete",
                     Data = shipment.ShID.ToString(),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
             }
