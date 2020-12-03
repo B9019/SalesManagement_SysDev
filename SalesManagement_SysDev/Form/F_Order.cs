@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using SalesManagement_SysDev.Model.Entity;
 using SalesManagement_SysDev.Model.ContentsManagement;
 using SalesManagement_SysDev.Model.Entity.Disp;
+using System.Data.SqlClient;
+
 
 namespace SalesManagement_SysDev
 {
@@ -307,13 +309,37 @@ namespace SalesManagement_SysDev
                 MessageBox.Show(errorMessage);
                 return false;
             }
-            // 画面更新
-            RefreshDataGridView();
+            //// 画面更新
+            //RefreshDataGridView();
             txt_OrID.Focus();
 
             return true;
 
         }
+        //// 表示データ更新
+        //private void RefreshDataGridView()
+        //{
+        //    // スクロール位置取得
+        //    int ScrollPosition = dataGridView_Order.FirstDisplayedScrollingRowIndex;
+
+        //    // データ取得&表示（データバインド）
+        //    _dispOrderPaging = _Or.GetDispOrders();
+        //    dataGridView_Order.DataSource = _dispOrderPaging;
+
+        //    // 全データ数取得
+        //    _recordCount = _dispOrderPaging.Count();
+
+        //    // スクロール位置セット
+        //    if (0 < ScrollPosition) dataGridView_Order.FirstDisplayedScrollingRowIndex = ScrollPosition;
+
+        //    // 入力クリア
+        //    ClearInput();
+
+        //    // ページング初期化
+        //    ClearPaging();
+
+        //}
+
 
         private void btn_sertch_Click(object sender, EventArgs e)
         {

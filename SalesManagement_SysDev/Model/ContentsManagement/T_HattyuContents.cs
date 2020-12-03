@@ -206,7 +206,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Hattyu",
                     Command = "Put",
                     //Data = HattyuLogData(regHattyu),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
 
@@ -248,7 +247,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Hattyu",
                     Command = "Delete",
                     Data = hattyu.HaID.ToString(),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
             }

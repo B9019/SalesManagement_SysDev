@@ -95,7 +95,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Login",
                     Command = "Put",
                     //Data = ProductLogData(regProduct),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
 

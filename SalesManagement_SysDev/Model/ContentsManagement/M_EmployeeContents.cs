@@ -188,7 +188,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Employee",
                     Command = "Put",
                     //Data = EmployeeLogData(regEmployee),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
 
@@ -230,7 +229,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Employee",
                     Command = "Delete",
                     Data = employee.EmID.ToString(),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
             }

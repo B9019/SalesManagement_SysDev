@@ -823,5 +823,6 @@ namespace SalesManagement_SysDev
             txt_memo.Text = "";
         }
     }
-    }
+   
 }
+

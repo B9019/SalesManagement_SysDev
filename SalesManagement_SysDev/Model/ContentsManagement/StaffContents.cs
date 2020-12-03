@@ -47,45 +47,8 @@ namespace SalesManagement_SysDev
 
         // ***** メソッド定義
 
-        public void ContloLock(int access,string form)
-        {
-            switch (access)
-            {
-                case 0:if(form == f_home)//営業
-                    {
-
-                    }
-                    break;
-                case 1:if()//物流
-
-                    {
-
-                    }
-                    break;
-                case 2:if()//本社
-                    {
-
-                    }
-                    break;
-                case 3:if()//顧客
-                    {
-
-                    }
-                    break;
-                case 4:if()//管理者
-                    {
-
-                    }
-                    break;
-                case 5:if()//一般管理者
-                    {
-
-                    }
-                    break;
-            }       
-
         }
 
 
     }
-}
+

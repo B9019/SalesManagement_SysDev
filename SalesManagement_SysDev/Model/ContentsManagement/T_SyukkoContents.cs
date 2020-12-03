@@ -214,7 +214,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Syukko",
                     Command = "Syu",
                     //Data = ProductLogData(regChumon),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
 
@@ -256,7 +255,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Syukko",
                     Command = "Delete",
                     Data = syukko.SyID.ToString(),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
             }

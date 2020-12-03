@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using SalesManagement_SysDev.Model.Entity;
 using SalesManagement_SysDev.Model.ContentsManagement;
 using SalesManagement_SysDev.Model.Entity.Disp;
+using System.Data.SqlClient;
+
 
 namespace SalesManagement_SysDev
 {
@@ -859,9 +861,5 @@ namespace SalesManagement_SysDev
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
