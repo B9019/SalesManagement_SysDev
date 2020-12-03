@@ -213,7 +213,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Client",
                     Command = "Put",
                     //Data = ProductLogData(regClient),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
 
@@ -255,7 +254,6 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     Table = "Client",
                     Command = "Delete",
                     Data = client.ClID.ToString(),
-                    Comments = string.Empty
                 };
                 //StaticCommon.PostOperationLog(operationLog);
             }
