@@ -228,6 +228,7 @@
             this.btn_sertch.TabIndex = 161;
             this.btn_sertch.Text = "F1　検索";
             this.btn_sertch.UseVisualStyleBackColor = false;
+            this.btn_sertch.Click += new System.EventHandler(this.btn_sertch_Click);
             // 
             // button6
             // 

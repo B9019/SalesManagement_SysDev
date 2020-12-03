@@ -845,5 +845,10 @@ namespace SalesManagement_SysDev
         {
 
         }
+
+        private void btn_sertch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

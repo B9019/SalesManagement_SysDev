@@ -200,6 +200,7 @@
             this.btn_sertch.TabIndex = 176;
             this.btn_sertch.Text = "F1　検索";
             this.btn_sertch.UseVisualStyleBackColor = false;
+            this.btn_sertch.Click += new System.EventHandler(this.btn_sertch_Click);
             // 
             // btn_update
             // 
@@ -250,6 +251,7 @@
             this.btn_all.TabIndex = 179;
             this.btn_all.Text = "F4 一覧表示";
             this.btn_all.UseVisualStyleBackColor = false;
+            this.btn_all.Click += new System.EventHandler(this.btn_all_Click_1);
             // 
             // groupBox1
             // 
