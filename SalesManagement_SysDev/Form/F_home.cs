@@ -12,10 +12,11 @@ using SalesManagement_SysDev.Model.Entity;
 using SalesManagement_SysDev.Model.ContentsManagement;
 using SalesManagement_SysDev.Model.Entity.Disp;
 using System.Data.SqlClient;
+using MetroFramework.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_home : Form
+    public partial class F_home : MetroForm
     {
         //// ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
 
@@ -209,6 +210,61 @@ namespace SalesManagement_SysDev
         }
 
         private void toolStripContainer2_ContentPanel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show("nnnnnnn!!!");
+        }
+
+        private void toolStripContainer1_TopToolStripPanel_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void メニューToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_regist_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_all_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_print_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
         {
 
         }
