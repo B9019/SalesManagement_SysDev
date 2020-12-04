@@ -755,7 +755,7 @@ namespace SalesManagement_SysDev
             //検索条件をテキストボックスから抽出し、SQL文をセット
             //　日本語可　：SqlDbType.NVarChar
             //　日本語不可：SqlDbType.VarChar
-            for (int count = 0; count < 9; count++)
+            for (int count = 0; count < 8; count++)
             {
                 if (txt_ChID.Text != "" && count == 0)
                 {
@@ -781,7 +781,7 @@ namespace SalesManagement_SysDev
                 else if (txt_EmID.Text != "" && count == 2)
                 {
                     command.Parameters.Add("@EmID", SqlDbType.NVarChar);
-                    command.Parameters["@EmID"].Value = "%" + txt_EmID.Text + "%";
+                    command.Parameters["@EmID"].Value =  txt_EmID.Text ;
                     //if ("@EmID" != null || "@EmID != null)
                     //{
                     //    command.CommandText = command + "AND ";
@@ -805,7 +805,7 @@ namespace SalesManagement_SysDev
                 else if (txt_OrID.Text != "" && count == 4)
                 {
                     command.Parameters.Add("@OrID", SqlDbType.VarChar);
-                    command.Parameters["@OrID"].Value = "%" + txt_OrID.Text + "%";
+                    command.Parameters["@OrID"].Value = txt_OrID.Text ;
                     //if ("@PrID" != null || "@MaID" != null || "@Price" != null || "@PrJCode" != null)
                     //{
                     //    command.CommandText = command + "AND ";
@@ -829,13 +829,13 @@ namespace SalesManagement_SysDev
                 else if (txt_ChHidden.Text != "" && count == 6)
                 {
                     command.Parameters.Add("@ChHidden", SqlDbType.VarChar);
-                    command.Parameters["@ChHidden"].Value = txt_ChHidden.Text;
+                    command.Parameters["@ChHidden"].Value = "%"+txt_ChHidden.Text + "%";
                     //実行するSQL文の条件追加
                     command.CommandText = command.CommandText + AND + "ChHidden LIKE @ChHidden ";
                     ++andnum;
                 }
                
-                else if (txt_memo.Text != "" && count == 10)
+                else if (txt_memo.Text != "" && count == 7)
                 {
                     command.Parameters.Add("@memo", SqlDbType.NVarChar);
                     command.Parameters["@memo"].Value = "%" + txt_memo.Text + "%";
@@ -849,7 +849,7 @@ namespace SalesManagement_SysDev
                     AND = "AND ";
                 }
                 //最後にセミコロンを接続する
-                while (count == 10)
+                while (count == 7)
                 {
                     command.CommandText = command.CommandText + ";";
                     break;
