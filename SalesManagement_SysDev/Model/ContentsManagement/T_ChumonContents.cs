@@ -60,10 +60,10 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                     string maker;
                     try
                     {
-                        maker = (chumon.ChID != -1) ? db.T_Chumons.Single(m => m.ChID == chumon.ChID).ChHidden : string.Empty;
+                        //maker = (chumon.ChID != -1) ? db.T_Chumons.Single(m => m.ChID == chumon.ChID).ChHidden : string.Empty;
 
-                        // 無効表示
-                        if (db.T_Chumons.Single(m => m.ChID == chumon.ChID).ChFlag != 0) maker = "[" + chumon + "]";
+                        //// 無効表示
+                        //if (db.T_Chumons.Single(m => m.ChID == chumon.ChID).ChFlag != 0) maker = "[" + chumon + "]";
                     }
                     catch
                     {
@@ -94,6 +94,7 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                         ChStateFlag = chumon.ChStateFlag,
                         ChFlag = chumon.ChFlag,
                         ChHidden = chumon.ChHidden
+                        //memo = chumon.memo
                         //Timestamp = item.Timestamp,
                         //LogData = item.LogData,
                     });

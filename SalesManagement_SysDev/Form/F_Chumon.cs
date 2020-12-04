@@ -75,7 +75,7 @@ namespace SalesManagement_SysDev
         private void F_Chumon_Load(object sender, EventArgs e)
         {
             注文管理ToolStripMenuItem.Enabled = false;
-            dataGridView_Chumon.ColumnCount = 9;
+            dataGridView_Chumon.ColumnCount = 8;
 
             dataGridView_Chumon.Columns[0].HeaderText = "注文ID ";
             dataGridView_Chumon.Columns[1].HeaderText = "営業所ID ";
@@ -780,7 +780,7 @@ namespace SalesManagement_SysDev
                 }
                 else if (txt_EmID.Text != "" && count == 2)
                 {
-                    command.Parameters.Add("@EmID", SqlDbType.NVarChar);
+                    command.Parameters.Add("@EmID", SqlDbType.VarChar);
                     command.Parameters["@EmID"].Value =  txt_EmID.Text ;
                     //if ("@EmID" != null || "@EmID != null)
                     //{
@@ -828,13 +828,13 @@ namespace SalesManagement_SysDev
                 }
                 else if (txt_ChHidden.Text != "" && count == 6)
                 {
-                    command.Parameters.Add("@ChHidden", SqlDbType.VarChar);
+                    command.Parameters.Add("@ChHidden", SqlDbType.NVarChar);
                     command.Parameters["@ChHidden"].Value = "%"+txt_ChHidden.Text + "%";
                     //実行するSQL文の条件追加
                     command.CommandText = command.CommandText + AND + "ChHidden LIKE @ChHidden ";
                     ++andnum;
                 }
-               
+
                 else if (txt_memo.Text != "" && count == 7)
                 {
                     command.Parameters.Add("@memo", SqlDbType.NVarChar);
@@ -870,7 +870,7 @@ namespace SalesManagement_SysDev
                     while (rd.Read())
                     {
                         dataGridView_Chumon.Rows.Add(rd["ChID"], rd["SoID"], rd["EmID"], rd["ClID"],
-                            rd["OrID"], rd["ChDate"], rd["ChHidden"], rd["memo"]);
+                            rd["OrID"], rd["ChDate"], rd["ChHidden"],rd["memo"]);
                     }
                 }
             }
@@ -898,7 +898,10 @@ namespace SalesManagement_SysDev
 
         }
 
-        
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
    
 
