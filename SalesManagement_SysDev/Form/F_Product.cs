@@ -151,7 +151,7 @@ namespace SalesManagement_SysDev
             if (String.IsNullOrEmpty(txt_MaID.Text))
             {
                 MessageBox.Show("メーカIDは必須項目です");
-                MaID.Focus();
+                txt_MaID.Focus();
                 return false;
             }
             // 商品ID
@@ -300,7 +300,7 @@ namespace SalesManagement_SysDev
             if (txt_MaID.TextLength > 50)
             {
                 MessageBox.Show("メーカIDは4文字以下です");
-                MaID.Focus();
+                txt_MaID.Focus();
                 return false;
             }
             // 商品ID
@@ -451,7 +451,7 @@ namespace SalesManagement_SysDev
             if (String.IsNullOrEmpty(txt_MaID.Text))
             {
                 MessageBox.Show("メーカIDは必須項目です");
-                MaID.Focus();
+                txt_MaID.Focus();
                 return false;
             }
             // 商品ID
@@ -600,7 +600,7 @@ namespace SalesManagement_SysDev
             if (txt_MaID.TextLength > 50)
             {
                 MessageBox.Show("メーカIDは4文字以下です");
-                MaID.Focus();
+                txt_MaID.Focus();
                 return false;
             }
             // 商品ID
@@ -1175,6 +1175,11 @@ namespace SalesManagement_SysDev
             txt_PrColor.Text = "";
             txt_PrReleaseDate.Text = "";
             OrHidden.Text = "";
+        }
+
+        private void txt_ArHidden_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         //public void ReadSingleRow(IDataRecord record)
