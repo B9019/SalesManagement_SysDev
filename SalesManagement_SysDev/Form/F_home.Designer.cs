@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Home_Task = new System.Windows.Forms.DataGridView();
             this.txt_ArHidden = new System.Windows.Forms.TextBox();
             this.txt_memo = new System.Windows.Forms.TextBox();
             this.lbl_ArHidden = new System.Windows.Forms.Label();
@@ -39,7 +39,7 @@
             this.lbl_SoID = new MetroFramework.Controls.MetroLabel();
             this.txt_SoID = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView_Product_regist = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Home = new System.Windows.Forms.DataGridView();
             this.btn_search = new MetroFramework.Controls.MetroButton();
             this.btn_regist = new MetroFramework.Controls.MetroButton();
             this.btn_update = new MetroFramework.Controls.MetroButton();
@@ -48,8 +48,8 @@
             this.btn_delete = new MetroFramework.Controls.MetroButton();
             this.btn_clear = new MetroFramework.Controls.MetroButton();
             this.htmlToolTip1 = new MetroFramework.Drawing.Html.HtmlToolTip();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_EmName1 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_EmName2 = new MetroFramework.Controls.MetroLabel();
             this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.TopToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.RightToolStripPanel = new System.Windows.Forms.ToolStripPanel();
@@ -57,31 +57,31 @@
             this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
             this.miniToolStrip = new System.Windows.Forms.MenuStrip();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btn_hattyu = new System.Windows.Forms.Button();
+            this.btn_order = new System.Windows.Forms.Button();
+            this.btn_stock = new System.Windows.Forms.Button();
+            this.btn_chumon = new System.Windows.Forms.Button();
+            this.btn_arrival = new System.Windows.Forms.Button();
+            this.btn_shipment = new System.Windows.Forms.Button();
+            this.btn_warehousing = new System.Windows.Forms.Button();
+            this.btn_syukko = new System.Windows.Forms.Button();
+            this.btn_product = new System.Windows.Forms.Button();
+            this.btn_sale = new System.Windows.Forms.Button();
+            this.btn_employee = new System.Windows.Forms.Button();
+            this.btn_client = new System.Windows.Forms.Button();
+            this.btn_login = new System.Windows.Forms.Button();
+            this.lbl_title = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Home_Task)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Home)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dataGridView_Home_Task);
             this.groupBox2.Controls.Add(this.txt_ArHidden);
             this.groupBox2.Controls.Add(this.txt_memo);
             this.groupBox2.Controls.Add(this.lbl_ArHidden);
@@ -96,13 +96,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "追加項目";
             // 
-            // dataGridView1
+            // dataGridView_Home_Task
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView1.Location = new System.Drawing.Point(9, 95);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(261, 508);
-            this.dataGridView1.TabIndex = 174;
+            this.dataGridView_Home_Task.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView_Home_Task.Location = new System.Drawing.Point(9, 95);
+            this.dataGridView_Home_Task.Name = "dataGridView_Home_Task";
+            this.dataGridView_Home_Task.Size = new System.Drawing.Size(261, 508);
+            this.dataGridView_Home_Task.TabIndex = 174;
             // 
             // txt_ArHidden
             // 
@@ -190,14 +190,14 @@
             this.textBox1.Size = new System.Drawing.Size(183, 19);
             this.textBox1.TabIndex = 64;
             // 
-            // dataGridView_Product_regist
+            // dataGridView_Home
             // 
-            this.dataGridView_Product_regist.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView_Product_regist.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView_Product_regist.Location = new System.Drawing.Point(177, 295);
-            this.dataGridView_Product_regist.Name = "dataGridView_Product_regist";
-            this.dataGridView_Product_regist.Size = new System.Drawing.Size(642, 382);
-            this.dataGridView_Product_regist.TabIndex = 173;
+            this.dataGridView_Home.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView_Home.GridColor = System.Drawing.SystemColors.Control;
+            this.dataGridView_Home.Location = new System.Drawing.Point(177, 295);
+            this.dataGridView_Home.Name = "dataGridView_Home";
+            this.dataGridView_Home.Size = new System.Drawing.Size(642, 382);
+            this.dataGridView_Home.TabIndex = 173;
             // 
             // btn_search
             // 
@@ -297,24 +297,24 @@
             this.htmlToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Error;
             this.htmlToolTip1.ToolTipTitle = "検索ボタンです";
             // 
-            // metroLabel2
+            // lbl_EmName1
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(194, 12);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(65, 19);
-            this.metroLabel2.TabIndex = 194;
-            this.metroLabel2.Text = "担当者名";
-            this.metroLabel2.Click += new System.EventHandler(this.metroLabel2_Click);
+            this.lbl_EmName1.AutoSize = true;
+            this.lbl_EmName1.Location = new System.Drawing.Point(194, 12);
+            this.lbl_EmName1.Name = "lbl_EmName1";
+            this.lbl_EmName1.Size = new System.Drawing.Size(65, 19);
+            this.lbl_EmName1.TabIndex = 194;
+            this.lbl_EmName1.Text = "担当者名";
+            this.lbl_EmName1.Click += new System.EventHandler(this.metroLabel2_Click);
             // 
-            // metroLabel3
+            // lbl_EmName2
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(205, 31);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(37, 19);
-            this.metroLabel3.TabIndex = 195;
-            this.metroLabel3.Text = "生駒";
+            this.lbl_EmName2.AutoSize = true;
+            this.lbl_EmName2.Location = new System.Drawing.Point(205, 31);
+            this.lbl_EmName2.Name = "lbl_EmName2";
+            this.lbl_EmName2.Size = new System.Drawing.Size(37, 19);
+            this.lbl_EmName2.TabIndex = 195;
+            this.lbl_EmName2.Text = "生駒";
             // 
             // BottomToolStripPanel
             // 
@@ -372,253 +372,253 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkCyan;
-            this.panel2.Controls.Add(this.button13);
-            this.panel2.Controls.Add(this.button12);
-            this.panel2.Controls.Add(this.button11);
-            this.panel2.Controls.Add(this.button10);
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btn_hattyu);
+            this.panel2.Controls.Add(this.btn_order);
+            this.panel2.Controls.Add(this.btn_stock);
+            this.panel2.Controls.Add(this.btn_chumon);
+            this.panel2.Controls.Add(this.btn_arrival);
+            this.panel2.Controls.Add(this.btn_shipment);
+            this.panel2.Controls.Add(this.btn_warehousing);
+            this.panel2.Controls.Add(this.btn_syukko);
+            this.panel2.Controls.Add(this.btn_product);
+            this.panel2.Controls.Add(this.btn_sale);
+            this.panel2.Controls.Add(this.btn_employee);
+            this.panel2.Controls.Add(this.btn_client);
+            this.panel2.Controls.Add(this.btn_login);
             this.panel2.Location = new System.Drawing.Point(0, 73);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(145, 726);
             this.panel2.TabIndex = 198;
             // 
-            // button13
+            // btn_hattyu
             // 
-            this.button13.BackColor = System.Drawing.Color.DarkCyan;
-            this.button13.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button13.Location = new System.Drawing.Point(0, 577);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(150, 50);
-            this.button13.TabIndex = 212;
-            this.button13.Text = "発注管理";
-            this.button13.UseVisualStyleBackColor = false;
+            this.btn_hattyu.BackColor = System.Drawing.Color.DarkCyan;
+            this.btn_hattyu.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_hattyu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btn_hattyu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_hattyu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_hattyu.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_hattyu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_hattyu.Location = new System.Drawing.Point(0, 577);
+            this.btn_hattyu.Name = "btn_hattyu";
+            this.btn_hattyu.Size = new System.Drawing.Size(150, 50);
+            this.btn_hattyu.TabIndex = 212;
+            this.btn_hattyu.Text = "発注管理";
+            this.btn_hattyu.UseVisualStyleBackColor = false;
             // 
-            // button12
+            // btn_order
             // 
-            this.button12.BackColor = System.Drawing.Color.DarkCyan;
-            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button12.Location = new System.Drawing.Point(0, 529);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(150, 50);
-            this.button12.TabIndex = 211;
-            this.button12.Text = "受注管理";
-            this.button12.UseVisualStyleBackColor = false;
+            this.btn_order.BackColor = System.Drawing.Color.DarkCyan;
+            this.btn_order.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_order.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btn_order.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_order.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_order.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_order.Location = new System.Drawing.Point(0, 529);
+            this.btn_order.Name = "btn_order";
+            this.btn_order.Size = new System.Drawing.Size(150, 50);
+            this.btn_order.TabIndex = 211;
+            this.btn_order.Text = "受注管理";
+            this.btn_order.UseVisualStyleBackColor = false;
             // 
-            // button11
+            // btn_stock
             // 
-            this.button11.BackColor = System.Drawing.Color.DarkCyan;
-            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button11.Location = new System.Drawing.Point(0, 480);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(150, 50);
-            this.button11.TabIndex = 210;
-            this.button11.Text = "在庫管理";
-            this.button11.UseVisualStyleBackColor = false;
+            this.btn_stock.BackColor = System.Drawing.Color.DarkCyan;
+            this.btn_stock.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_stock.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btn_stock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_stock.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_stock.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_stock.Location = new System.Drawing.Point(0, 480);
+            this.btn_stock.Name = "btn_stock";
+            this.btn_stock.Size = new System.Drawing.Size(150, 50);
+            this.btn_stock.TabIndex = 210;
+            this.btn_stock.Text = "在庫管理";
+            this.btn_stock.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // btn_chumon
             // 
-            this.button10.BackColor = System.Drawing.Color.DarkCyan;
-            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button10.Location = new System.Drawing.Point(0, 431);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(150, 50);
-            this.button10.TabIndex = 209;
-            this.button10.Text = "注文管理";
-            this.button10.UseVisualStyleBackColor = false;
+            this.btn_chumon.BackColor = System.Drawing.Color.DarkCyan;
+            this.btn_chumon.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_chumon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btn_chumon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_chumon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_chumon.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_chumon.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_chumon.Location = new System.Drawing.Point(0, 431);
+            this.btn_chumon.Name = "btn_chumon";
+            this.btn_chumon.Size = new System.Drawing.Size(150, 50);
+            this.btn_chumon.TabIndex = 209;
+            this.btn_chumon.Text = "注文管理";
+            this.btn_chumon.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // btn_arrival
             // 
-            this.button9.BackColor = System.Drawing.Color.DarkCyan;
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button9.Location = new System.Drawing.Point(0, 385);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(150, 50);
-            this.button9.TabIndex = 208;
-            this.button9.Text = "入荷管理";
-            this.button9.UseVisualStyleBackColor = false;
+            this.btn_arrival.BackColor = System.Drawing.Color.DarkCyan;
+            this.btn_arrival.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_arrival.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btn_arrival.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_arrival.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_arrival.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_arrival.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_arrival.Location = new System.Drawing.Point(0, 385);
+            this.btn_arrival.Name = "btn_arrival";
+            this.btn_arrival.Size = new System.Drawing.Size(150, 50);
+            this.btn_arrival.TabIndex = 208;
+            this.btn_arrival.Text = "入荷管理";
+            this.btn_arrival.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // btn_shipment
             // 
-            this.button8.BackColor = System.Drawing.Color.DarkCyan;
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Location = new System.Drawing.Point(0, 336);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(150, 50);
-            this.button8.TabIndex = 207;
-            this.button8.Text = "出荷管理";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btn_shipment.BackColor = System.Drawing.Color.DarkCyan;
+            this.btn_shipment.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_shipment.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btn_shipment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_shipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_shipment.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_shipment.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_shipment.Location = new System.Drawing.Point(0, 336);
+            this.btn_shipment.Name = "btn_shipment";
+            this.btn_shipment.Size = new System.Drawing.Size(150, 50);
+            this.btn_shipment.TabIndex = 207;
+            this.btn_shipment.Text = "出荷管理";
+            this.btn_shipment.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // btn_warehousing
             // 
-            this.button7.BackColor = System.Drawing.Color.DarkCyan;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(0, 290);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(150, 50);
-            this.button7.TabIndex = 206;
-            this.button7.Text = "入庫管理";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btn_warehousing.BackColor = System.Drawing.Color.DarkCyan;
+            this.btn_warehousing.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_warehousing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btn_warehousing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_warehousing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_warehousing.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_warehousing.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_warehousing.Location = new System.Drawing.Point(0, 290);
+            this.btn_warehousing.Name = "btn_warehousing";
+            this.btn_warehousing.Size = new System.Drawing.Size(150, 50);
+            this.btn_warehousing.TabIndex = 206;
+            this.btn_warehousing.Text = "入庫管理";
+            this.btn_warehousing.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btn_syukko
             // 
-            this.button6.BackColor = System.Drawing.Color.DarkCyan;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(0, 241);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(150, 50);
-            this.button6.TabIndex = 205;
-            this.button6.Text = "出庫管理";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btn_syukko.BackColor = System.Drawing.Color.DarkCyan;
+            this.btn_syukko.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_syukko.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btn_syukko.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_syukko.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_syukko.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_syukko.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_syukko.Location = new System.Drawing.Point(0, 241);
+            this.btn_syukko.Name = "btn_syukko";
+            this.btn_syukko.Size = new System.Drawing.Size(150, 50);
+            this.btn_syukko.TabIndex = 205;
+            this.btn_syukko.Text = "出庫管理";
+            this.btn_syukko.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btn_product
             // 
-            this.button5.BackColor = System.Drawing.Color.DarkCyan;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(0, 192);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(150, 50);
-            this.button5.TabIndex = 204;
-            this.button5.Text = "商品管理";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btn_product.BackColor = System.Drawing.Color.DarkCyan;
+            this.btn_product.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_product.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btn_product.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_product.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_product.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_product.Location = new System.Drawing.Point(0, 192);
+            this.btn_product.Name = "btn_product";
+            this.btn_product.Size = new System.Drawing.Size(150, 50);
+            this.btn_product.TabIndex = 204;
+            this.btn_product.Text = "商品管理";
+            this.btn_product.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btn_sale
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkCyan;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(0, 143);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(150, 50);
-            this.button4.TabIndex = 203;
-            this.button4.Text = "売上管理";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btn_sale.BackColor = System.Drawing.Color.DarkCyan;
+            this.btn_sale.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_sale.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btn_sale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_sale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sale.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sale.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_sale.Location = new System.Drawing.Point(0, 143);
+            this.btn_sale.Name = "btn_sale";
+            this.btn_sale.Size = new System.Drawing.Size(150, 50);
+            this.btn_sale.TabIndex = 203;
+            this.btn_sale.Text = "売上管理";
+            this.btn_sale.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btn_employee
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkCyan;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(0, 95);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 50);
-            this.button3.TabIndex = 202;
-            this.button3.Text = "社員管理";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_employee.BackColor = System.Drawing.Color.DarkCyan;
+            this.btn_employee.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_employee.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btn_employee.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_employee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_employee.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_employee.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_employee.Location = new System.Drawing.Point(0, 95);
+            this.btn_employee.Name = "btn_employee";
+            this.btn_employee.Size = new System.Drawing.Size(150, 50);
+            this.btn_employee.TabIndex = 202;
+            this.btn_employee.Text = "社員管理";
+            this.btn_employee.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btn_client
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkCyan;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(0, 48);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 50);
-            this.button2.TabIndex = 201;
-            this.button2.Text = "顧客管理";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_client.BackColor = System.Drawing.Color.DarkCyan;
+            this.btn_client.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_client.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btn_client.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_client.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_client.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_client.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_client.Location = new System.Drawing.Point(0, 48);
+            this.btn_client.Name = "btn_client";
+            this.btn_client.Size = new System.Drawing.Size(150, 50);
+            this.btn_client.TabIndex = 201;
+            this.btn_client.Text = "顧客管理";
+            this.btn_client.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btn_login
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkCyan;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 50);
-            this.button1.TabIndex = 200;
-            this.button1.Text = "ログイン管理";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_login.BackColor = System.Drawing.Color.DarkCyan;
+            this.btn_login.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btn_login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_login.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_login.Location = new System.Drawing.Point(0, 0);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(150, 50);
+            this.btn_login.TabIndex = 200;
+            this.btn_login.Text = "ログイン管理";
+            this.btn_login.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // lbl_title
             // 
-            this.label2.AutoSize = true;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Bradley Hand ITC", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(11, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 37);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "ホーム画面";
+            this.lbl_title.AutoSize = true;
+            this.lbl_title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_title.Font = new System.Drawing.Font("Bradley Hand ITC", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_title.Location = new System.Drawing.Point(11, 16);
+            this.lbl_title.Name = "lbl_title";
+            this.lbl_title.Size = new System.Drawing.Size(159, 37);
+            this.lbl_title.TabIndex = 0;
+            this.lbl_title.Text = "ホーム画面";
             // 
             // F_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1125, 700);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.metroLabel3);
-            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.lbl_EmName2);
+            this.Controls.Add(this.lbl_EmName1);
             this.Controls.Add(this.btn_regist);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.btn_update);
@@ -628,15 +628,15 @@
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.dataGridView_Product_regist);
+            this.Controls.Add(this.dataGridView_Home);
             this.Name = "F_home";
             this.Load += new System.EventHandler(this.F_home_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Home_Task)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product_regist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Home)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -652,8 +652,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txt_SoID;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView_Product_regist;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView_Home;
+        private System.Windows.Forms.DataGridView dataGridView_Home_Task;
         private MetroFramework.Controls.MetroButton btn_search;
         private MetroFramework.Controls.MetroLabel lbl_SoID;
         private MetroFramework.Controls.MetroButton btn_clear;
@@ -663,8 +663,8 @@
         private MetroFramework.Controls.MetroButton btn_update;
         private MetroFramework.Controls.MetroButton btn_regist;
         private MetroFramework.Drawing.Html.HtmlToolTip htmlToolTip1;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel lbl_EmName1;
+        private MetroFramework.Controls.MetroLabel lbl_EmName2;
         private System.Windows.Forms.MenuStrip miniToolStrip;
         private System.Windows.Forms.ToolStripPanel BottomToolStripPanel;
         private System.Windows.Forms.ToolStripPanel TopToolStripPanel;
@@ -672,20 +672,20 @@
         private System.Windows.Forms.ToolStripPanel LeftToolStripPanel;
         private System.Windows.Forms.ToolStripContentPanel ContentPanel;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btn_login;
+        private System.Windows.Forms.Button btn_product;
+        private System.Windows.Forms.Button btn_sale;
+        private System.Windows.Forms.Button btn_employee;
+        private System.Windows.Forms.Button btn_client;
+        private System.Windows.Forms.Button btn_arrival;
+        private System.Windows.Forms.Button btn_shipment;
+        private System.Windows.Forms.Button btn_warehousing;
+        private System.Windows.Forms.Button btn_syukko;
+        private System.Windows.Forms.Button btn_hattyu;
+        private System.Windows.Forms.Button btn_order;
+        private System.Windows.Forms.Button btn_stock;
+        private System.Windows.Forms.Button btn_chumon;
         private MetroFramework.Controls.MetroLabel lbl_EmID;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_title;
     }
 }
