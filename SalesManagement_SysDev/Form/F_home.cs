@@ -268,6 +268,11 @@ namespace SalesManagement_SysDev
         {
 
         }
+
+        private void metroLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     }
