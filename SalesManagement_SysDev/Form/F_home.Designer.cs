@@ -615,11 +615,11 @@
             // 
             this.lbl_title.AutoSize = true;
             this.lbl_title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_title.Font = new System.Drawing.Font("Bradley Hand ITC", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title.ForeColor = System.Drawing.Color.Gray;
             this.lbl_title.Location = new System.Drawing.Point(11, 16);
             this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(159, 37);
+            this.lbl_title.Size = new System.Drawing.Size(145, 33);
             this.lbl_title.TabIndex = 0;
             this.lbl_title.Text = "ホーム画面";
             // 
