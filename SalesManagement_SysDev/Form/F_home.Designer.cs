@@ -244,7 +244,9 @@
             this.btn_search.Text = "検索";
             this.btn_search.UseVisualStyleBackColor = false;
             // 
+
             // btn_clear
+
             // 
             this.btn_clear.BackColor = System.Drawing.Color.PowderBlue;
             this.btn_clear.FlatAppearance.BorderSize = 0;
@@ -259,7 +261,9 @@
             this.btn_clear.Text = "入力クリア";
             this.btn_clear.UseVisualStyleBackColor = false;
             // 
+
             // btn_delete
+
             // 
             this.btn_delete.BackColor = System.Drawing.Color.PowderBlue;
             this.btn_delete.FlatAppearance.BorderSize = 0;
@@ -274,7 +278,9 @@
             this.btn_delete.Text = "削除";
             this.btn_delete.UseVisualStyleBackColor = false;
             // 
+
             // btn_print
+
             // 
             this.btn_print.BackColor = System.Drawing.Color.PowderBlue;
             this.btn_print.FlatAppearance.BorderSize = 0;
@@ -289,7 +295,9 @@
             this.btn_print.Text = "印刷";
             this.btn_print.UseVisualStyleBackColor = false;
             // 
+
             // btn_all
+
             // 
             this.btn_all.BackColor = System.Drawing.Color.PowderBlue;
             this.btn_all.FlatAppearance.BorderSize = 0;
@@ -304,7 +312,9 @@
             this.btn_all.Text = "一覧表示";
             this.btn_all.UseVisualStyleBackColor = false;
             // 
+
             // btn_update
+
             // 
             this.btn_update.BackColor = System.Drawing.Color.PowderBlue;
             this.btn_update.FlatAppearance.BorderSize = 0;
@@ -319,7 +329,9 @@
             this.btn_update.Text = "更新";
             this.btn_update.UseVisualStyleBackColor = false;
             // 
+
             // btn_regist
+
             // 
             this.btn_regist.BackColor = System.Drawing.Color.PowderBlue;
             this.btn_regist.FlatAppearance.BorderSize = 0;
@@ -334,7 +346,9 @@
             this.btn_regist.Text = "登録";
             this.btn_regist.UseVisualStyleBackColor = false;
             // 
+
             // label1
+
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
@@ -344,7 +358,9 @@
             this.label1.TabIndex = 206;
             this.label1.Text = "営業所ID";
             // 
+
             // label2
+
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
@@ -354,7 +370,9 @@
             this.label2.TabIndex = 207;
             this.label2.Text = "社員ID";
             // 
+
             // lbl_title
+
             // 
             this.lbl_title.AutoSize = true;
             this.lbl_title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -367,6 +385,7 @@
             this.lbl_title.TabIndex = 0;
             this.lbl_title.Text = "ホーム画面";
             // 
+
             // btn_login
             // 
             this.btn_login.BackColor = System.Drawing.Color.DarkCyan;
@@ -400,6 +419,7 @@
             this.btn_client.TabIndex = 201;
             this.btn_client.Text = "顧客管理";
             this.btn_client.UseVisualStyleBackColor = false;
+
             // 
             // btn_employee
             // 
@@ -417,9 +437,11 @@
             this.btn_employee.TabIndex = 202;
             this.btn_employee.Text = "社員管理";
             this.btn_employee.UseVisualStyleBackColor = false;
+            this.btn_employee.Click += new System.EventHandler(this.btn_employee_Click);
             // 
             // btn_sale
             // 
+
             this.btn_sale.BackColor = System.Drawing.Color.DarkCyan;
             this.btn_sale.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_sale.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
@@ -434,9 +456,11 @@
             this.btn_sale.TabIndex = 203;
             this.btn_sale.Text = "売上管理";
             this.btn_sale.UseVisualStyleBackColor = false;
+
             // 
             // btn_product
             // 
+
             this.btn_product.BackColor = System.Drawing.Color.DarkCyan;
             this.btn_product.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_product.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
@@ -451,6 +475,7 @@
             this.btn_product.TabIndex = 204;
             this.btn_product.Text = "商品管理";
             this.btn_product.UseVisualStyleBackColor = false;
+
             // 
             // btn_syukko
             // 
