@@ -231,14 +231,14 @@ namespace SalesManagement_SysDev
                 return false;
             }
             //　電話番号の文字チェック
-            if (!_ic.FullWidthCharCheck(txt_ClPhone.Text, out errorMessage))
+            if (!_ic.HalfCharCheck(txt_ClPhone.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
                 txt_ClPhone.Focus();
                 return false;
             }
             // 　FAXの文字チェック
-            if (!_ic.FullWidthCharCheck(txt_ClFAX.Text, out errorMessage))
+            if (!_ic.HalfCharCheck(txt_ClFAX.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
                 txt_ClFAX.Focus();
@@ -283,9 +283,9 @@ namespace SalesManagement_SysDev
                 return false;
             }
             // 電話番号
-            if (txt_ClPhone.TextLength > 2)
+            if (txt_ClPhone.TextLength > 11)
             {
-                MessageBox.Show("電話番号は2文字以下で入力してください");
+                MessageBox.Show("電話番号は11文字以下で入力してください");
                 txt_ClPhone.Focus();
                 return false;
             }
@@ -487,14 +487,14 @@ namespace SalesManagement_SysDev
                 return false;
             }
             //　電話番号の文字チェック
-            if (!_ic.FullWidthCharCheck(txt_ClPhone.Text, out errorMessage))
+            if (!_ic.HalfCharCheck(txt_ClPhone.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
                 txt_ClPhone.Focus();
                 return false;
             }
             // 　FAXの文字チェック
-            if (!_ic.FullWidthCharCheck(txt_ClFAX.Text, out errorMessage))
+            if (!_ic.HalfCharCheck(txt_ClFAX.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
                 txt_ClFAX.Focus();
