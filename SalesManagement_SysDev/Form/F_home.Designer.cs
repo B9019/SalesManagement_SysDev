@@ -405,6 +405,7 @@
             this.btn_hattyu.TabIndex = 212;
             this.btn_hattyu.Text = "発注管理";
             this.btn_hattyu.UseVisualStyleBackColor = false;
+            this.btn_hattyu.Click += new System.EventHandler(this.btn_hattyu_Click);
             // 
             // btn_order
             // 
@@ -421,6 +422,7 @@
             this.btn_order.TabIndex = 211;
             this.btn_order.Text = "受注管理";
             this.btn_order.UseVisualStyleBackColor = false;
+            this.btn_order.Click += new System.EventHandler(this.btn_order_Click);
             // 
             // btn_stock
             // 
@@ -437,6 +439,7 @@
             this.btn_stock.TabIndex = 210;
             this.btn_stock.Text = "在庫管理";
             this.btn_stock.UseVisualStyleBackColor = false;
+            this.btn_stock.Click += new System.EventHandler(this.btn_stock_Click);
             // 
             // btn_chumon
             // 
@@ -453,6 +456,7 @@
             this.btn_chumon.TabIndex = 209;
             this.btn_chumon.Text = "注文管理";
             this.btn_chumon.UseVisualStyleBackColor = false;
+            this.btn_chumon.Click += new System.EventHandler(this.btn_chumon_Click);
             // 
             // btn_arrival
             // 
@@ -469,6 +473,7 @@
             this.btn_arrival.TabIndex = 208;
             this.btn_arrival.Text = "入荷管理";
             this.btn_arrival.UseVisualStyleBackColor = false;
+            this.btn_arrival.Click += new System.EventHandler(this.btn_arrival_Click);
             // 
             // btn_shipment
             // 
@@ -485,6 +490,7 @@
             this.btn_shipment.TabIndex = 207;
             this.btn_shipment.Text = "出荷管理";
             this.btn_shipment.UseVisualStyleBackColor = false;
+            this.btn_shipment.Click += new System.EventHandler(this.btn_shipment_Click);
             // 
             // btn_warehousing
             // 
@@ -501,6 +507,7 @@
             this.btn_warehousing.TabIndex = 206;
             this.btn_warehousing.Text = "入庫管理";
             this.btn_warehousing.UseVisualStyleBackColor = false;
+            this.btn_warehousing.Click += new System.EventHandler(this.btn_warehousing_Click);
             // 
             // btn_syukko
             // 
@@ -517,6 +524,7 @@
             this.btn_syukko.TabIndex = 205;
             this.btn_syukko.Text = "出庫管理";
             this.btn_syukko.UseVisualStyleBackColor = false;
+            this.btn_syukko.Click += new System.EventHandler(this.btn_syukko_Click);
             // 
             // btn_product
             // 
@@ -533,6 +541,7 @@
             this.btn_product.TabIndex = 204;
             this.btn_product.Text = "商品管理";
             this.btn_product.UseVisualStyleBackColor = false;
+            this.btn_product.Click += new System.EventHandler(this.btn_product_Click);
             // 
             // btn_sale
             // 
@@ -549,6 +558,7 @@
             this.btn_sale.TabIndex = 203;
             this.btn_sale.Text = "売上管理";
             this.btn_sale.UseVisualStyleBackColor = false;
+            this.btn_sale.Click += new System.EventHandler(this.btn_sale_Click);
             // 
             // btn_employee
             // 
@@ -565,6 +575,7 @@
             this.btn_employee.TabIndex = 202;
             this.btn_employee.Text = "社員管理";
             this.btn_employee.UseVisualStyleBackColor = false;
+            this.btn_employee.Click += new System.EventHandler(this.btn_employee_Click);
             // 
             // btn_client
             // 
@@ -581,6 +592,7 @@
             this.btn_client.TabIndex = 201;
             this.btn_client.Text = "顧客管理";
             this.btn_client.UseVisualStyleBackColor = false;
+            this.btn_client.Click += new System.EventHandler(this.btn_client_Click);
             // 
             // btn_login
             // 
@@ -597,6 +609,7 @@
             this.btn_login.TabIndex = 200;
             this.btn_login.Text = "ログイン管理";
             this.btn_login.UseVisualStyleBackColor = false;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // lbl_title
             // 
