@@ -280,6 +280,11 @@ namespace SalesManagement_SysDev
 
         }
 
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
     }
 
     }

@@ -90,7 +90,7 @@ namespace SalesManagement_SysDev
         }
         private void F_Product_Load(object sender, EventArgs e)
         {
-            商品管理ToolStripMenuItem.Enabled = false;
+            btn_product.Enabled = false;
             dataGridView_Product.ColumnCount = 11;
 
             dataGridView_Product.Columns[0].HeaderText = "商品ID ";
