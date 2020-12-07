@@ -12,10 +12,11 @@ using SalesManagement_SysDev.Model.Entity;
 using SalesManagement_SysDev.Model.ContentsManagement;
 using SalesManagement_SysDev.Model.Entity.Disp;
 using System.Data.SqlClient;
+using MetroFramework.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_Arrival : Form
+    public partial class F_Arrival : MetroForm
     {
         public int transfer_int ;//権限変数
         // ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
@@ -878,6 +879,5 @@ namespace SalesManagement_SysDev
             txt_Armemo.Text = Convert.ToString(id7);
             txt_ArHidden.Text = Convert.ToString(id8);
         }
-
     }
 }
