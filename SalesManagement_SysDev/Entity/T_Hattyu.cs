@@ -21,6 +21,15 @@ namespace SalesManagement_SysDev
         public int HaFlag { get; set; }	            //発注管理フラグ
         public String Hamemo { get; set; }          //備考
         public String HaHidden { get; set; }            //非表示理由	
-  	
+        public M_Maker M_Maker { get; set; }//メーカID　外部キー
+        public M_Employee M_Employee { get; set; }//社員ID　外部キー
+        public List<T_HattyuDetail> T_HattyuDetail { get; set; }//ナビゲーションプロパティ
+        public List<T_Warehousing> T_Warehousing { get; set; }//ナビゲーションプロパティ
+
+
+
+
+
+
     }
 }

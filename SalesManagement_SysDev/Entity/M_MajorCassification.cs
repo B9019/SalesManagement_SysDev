@@ -16,7 +16,8 @@ namespace SalesManagement_SysDev
         [Required]
         public String McName { get; set; }      //大分類名		
         public int McFlag { get; set; }         //大分類管理フラグ
-        public String McHidden { get; set; }	//非表示理由		
+        public String McHidden { get; set; }    //非表示理由		
+        public List<M_SmallClassification> M_SmallClassification { get; set; }//ナビゲーションプロパティ
 
     }
 }

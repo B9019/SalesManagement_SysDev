@@ -27,8 +27,12 @@ namespace SalesManagement_SysDev
         [Required]
         public String MaFAX { get; set; }       //FAX		
         public int MaFlag { get; set; }         //メーカ管理フラグ
-        public String MaHidden { get; set; }	//非表示理由
-        public List<M_Product> M_Products { get; set; } //ナビゲーションプロパティ
+
+        public String MaHidden { get; set; }	//非表示理由		
+        public List<M_Product> M_Products { get; set; }//ナビゲーションプロパティ
+        public List<T_Hattyu> T_Hattyu { get; set; }//ナビゲーションプロパティ
+
+
 
     }
 }

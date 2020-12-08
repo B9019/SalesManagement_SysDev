@@ -22,7 +22,17 @@ namespace SalesManagement_SysDev
         public int? ArStateFlag { get; set; }   //入荷状態フラグ
         public int ArFlag { get; set; }	//入荷管理フラグ
         public String Armemo { get; set; }          //備考
-        public String ArHidden { get; set; }	    //非表示理由
+        public String ArHidden { get; set; }        //非表示理由
+        public M_SalesOffice M_SalesOffice { get; set; }//営業所　外部キー
+        public M_Employee M_Employee { get; set; }//社員ID　外部キー
+        public M_Client M_Client { get; set; }//顧客ID　外部キー
+        public T_Order T_Order { get; set; }//受注ID　外部キー
+        public List<T_ArrivalDetail> T_ArrivalDetail { get; set; }//ナビゲーションプロパティ
+
+
+
+
+
 
     }
 }

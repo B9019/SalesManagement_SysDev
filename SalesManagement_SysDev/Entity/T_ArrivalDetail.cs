@@ -14,7 +14,10 @@ namespace SalesManagement_SysDev
         public int ArDetailID { get; set; }     //入荷詳細ID
         public int ArID { get; set; }           //入荷ID
         public int PrID { get; set; }           //商品ID
-        public int ArQuantity { get; set; }	    //数量
+        public int ArQuantity { get; set; }     //数量
+        public T_Arrival T_Arrival { get; set; }//受注ID　外部キー
+        public M_Product M_Product { get; set; }//商品ID　外部キー
+
 
     }
 }

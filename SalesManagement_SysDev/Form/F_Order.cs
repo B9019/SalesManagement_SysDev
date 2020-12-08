@@ -84,6 +84,7 @@ namespace SalesManagement_SysDev
 
         private void F_Order_Load(object sender, EventArgs e)
         {
+
             dataGridView_Order.ColumnCount = 7;
 
             dataGridView_Order.Columns[0].HeaderText = "受注ID ";
@@ -93,6 +94,7 @@ namespace SalesManagement_SysDev
             dataGridView_Order.Columns[4].HeaderText = "受注年月日";
             dataGridView_Order.Columns[5].HeaderText = "非表示理由";
             dataGridView_Order.Columns[6].HeaderText = "備考";
+
         }
 
         // 登録ボタン

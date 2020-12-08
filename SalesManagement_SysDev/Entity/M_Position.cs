@@ -18,6 +18,8 @@ namespace SalesManagement_SysDev
         public String PoName { get; set; }      //役職名		
         public int PoFlag { get; set; }         //役職管理フラグ
         public String PoHidden { get; set; }    //非表示理由		
- 
+        public List<M_Employee> M_Employee { get; set; }//ナビゲーションプロパティ
+
+
     }
 }

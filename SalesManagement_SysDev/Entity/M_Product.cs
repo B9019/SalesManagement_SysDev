@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace SalesManagement_SysDev
 {
@@ -25,7 +29,22 @@ namespace SalesManagement_SysDev
         public DateTime PrReleaseDate { get; set; } //発売日		
         public int PrFlag { get; set; }             //商品管理フラグ
         public String PrHidden { get; set; }	    //非表示理由		
-        public String PrMemo { get; set; } //備考
+
+        public String PrMemo { get; set; }　//備考
+
+        public M_Maker M_Maker { get; set; }//メーカー　外部キー
+        public M_SmallClassification M_SmallClassification { get; set; }//小分類ID　外部キー
+        public List<T_ArrivalDetail> T_ArrivalDetail { get; set; }//ナビゲーションプロパティ
+        public T_ChumonDetail T_ChumonDetail { get; set; }//メーカー　外部キー
+        public List<T_HattyuDetail> T_HattyuDetail { get; set; }//ナビゲーションプロパティ
+        public List<T_OrderDetail> T_OrderDetail { get; set; }//ナビゲーションプロパティ
+        public List<T_SaleDetail> T_SaleDetail { get; set; }//ナビゲーションプロパティ
+        public List<T_ShipmentDetail> T_ShipmentDetail { get; set; }//ナビゲーションプロパティ
+        public List<T_Stock> T_Stock { get; set; }//ナビゲーションプロパティ
+        public List<T_SyukkoDetail> T_SyukkoDetail { get; set; }//ナビゲーションプロパティ
+        public List<T_WarehousingDetail> T_WarehousingDetail { get; set; }//ナビゲーションプロパティ
+
+
         //public M_SmallClassification M_SmallClassification { get; set; }　//小分類ID　外部キー
 
 

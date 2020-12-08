@@ -27,7 +27,20 @@ namespace SalesManagement_SysDev
         [Required]
         public String ClFAX { get; set; }       //FAX		
         public int ClFlag { get; set; }         //顧客管理フラグ	
-        public String ClHidden { get; set; }	//非表示理由		
+        public String ClHidden { get; set; }    //非表示理由		
+        public M_SalesOffice M_SalesOffice { get; set; }//小分類ID　外部キー
+        public List<T_Arrival> T_Arrival { get; set; }//ナビゲーションプロパティ
+        public List<T_Chumon> T_Chumon { get; set; }//ナビゲーションプロパティ
+        public List<T_Order> T_Order { get; set; }//ナビゲーションプロパティ
+        public List<T_Sale> T_Sale { get; set; }//ナビゲーションプロパティ
+        public List<T_Shipment> T_Shipment { get; set; }//ナビゲーションプロパティ
+        public List<T_Syukko> T_Syukko { get; set; }//ナビゲーションプロパティ
+
+
+
+
+
+
 
     }
 }
