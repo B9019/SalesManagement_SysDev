@@ -394,6 +394,7 @@
     <Compile Include="Model\Entity\Disp\M_DispProduct.cs" />
     <Compile Include="Model\Entity\Disp\T_DispArrival.cs" />
     <Compile Include="Model\Entity\Disp\T_DispHattyu.cs" />
+    <Compile Include="Model\Entity\Disp\T_DispOrder2.cs" />
     <Compile Include="Model\Entity\Disp\T_DispSale.cs" />
     <Compile Include="Model\Entity\Disp\T_DispShipment.cs" />
     <Compile Include="Model\Entity\Disp\T_DispStock.cs" />
