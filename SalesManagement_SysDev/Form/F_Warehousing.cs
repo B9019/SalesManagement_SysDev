@@ -73,7 +73,6 @@ namespace SalesManagement_SysDev
 
         private void F_Warehousing_Load(object sender, EventArgs e)
         {
-            入庫管理ToolStripMenuItem.Enabled = false;
         }
 
         // 登録ボタン

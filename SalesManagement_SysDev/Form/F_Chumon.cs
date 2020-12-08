@@ -75,7 +75,6 @@ namespace SalesManagement_SysDev
 
         private void F_Chumon_Load(object sender, EventArgs e)
         {
-            注文管理ToolStripMenuItem.Enabled = false;
             dataGridView_Chumon.ColumnCount = 8;
 
             dataGridView_Chumon.Columns[0].HeaderText = "注文ID ";

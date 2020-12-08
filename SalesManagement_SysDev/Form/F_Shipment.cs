@@ -74,7 +74,6 @@ namespace SalesManagement_SysDev
 
         private void F_Shipment_Load(object sender, EventArgs e)
         {
-            出荷管理ToolStripMenuItem.Enabled = false;
         }
 
         // 登録ボタン
