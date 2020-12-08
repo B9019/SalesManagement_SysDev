@@ -78,7 +78,6 @@ namespace SalesManagement_SysDev
 
         private void F_login_Load(object sender, EventArgs e)
         {
-            ログイン.Enabled = false;
             transfer_int = 0;
 
     }

@@ -285,6 +285,10 @@ namespace SalesManagement_SysDev
 
         }
 
+        private void btn_search_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
     }
