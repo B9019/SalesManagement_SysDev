@@ -75,7 +75,6 @@ namespace SalesManagement_SysDev
 
         private void F_Sale_Load(object sender, EventArgs e)
         {
-            売上管理ToolStripMenuItem.Enabled = false;
             dataGridView_Sale.ColumnCount = 8;
 
             dataGridView_Sale.Columns[0].HeaderText = "売上ID ";

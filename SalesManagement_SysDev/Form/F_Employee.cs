@@ -75,7 +75,6 @@ namespace SalesManagement_SysDev
         }
         private void F_Employee_Load_1(object sender, EventArgs e)
         {
-            商品管理ToolStripMenuItem.Enabled = false;
             dataGridView_Employee.ColumnCount = 9;
 
             dataGridView_Employee.Columns[0].HeaderText = "社員ID";
