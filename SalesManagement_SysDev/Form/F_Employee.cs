@@ -12,10 +12,11 @@ using SalesManagement_SysDev.Model.Entity;
 using SalesManagement_SysDev.Model.ContentsManagement;
 using SalesManagement_SysDev.Model.Entity.Disp;
 using System.Data.SqlClient;
+using MetroFramework.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_Employee : Form
+    public partial class F_Employee : MetroForm
     {
         public int transfer_int;//権限変数
 
