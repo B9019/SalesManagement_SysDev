@@ -365,9 +365,11 @@
     <Compile Include="Migrations\202012050218496_e1.designer.cs">
       <DependentUpon>202012050218496_e1.cs</DependentUpon>
     </Compile>
+
     <Compile Include="Migrations\202012080608270_foreinkey5.cs" />
     <Compile Include="Migrations\202012080608270_foreinkey5.designer.cs">
       <DependentUpon>202012080608270_foreinkey5.cs</DependentUpon>
+
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\CommonFunction.cs" />
@@ -394,6 +396,7 @@
     <Compile Include="Model\Entity\Disp\M_DispProduct.cs" />
     <Compile Include="Model\Entity\Disp\T_DispArrival.cs" />
     <Compile Include="Model\Entity\Disp\T_DispHattyu.cs" />
+    <Compile Include="Model\Entity\Disp\T_DispOrder2.cs" />
     <Compile Include="Model\Entity\Disp\T_DispSale.cs" />
     <Compile Include="Model\Entity\Disp\T_DispShipment.cs" />
     <Compile Include="Model\Entity\Disp\T_DispStock.cs" />
@@ -550,8 +553,10 @@
     <EmbeddedResource Include="Migrations\202012050218496_e1.resx">
       <DependentUpon>202012050218496_e1.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Migrations\202012080608270_foreinkey5.resx">
       <DependentUpon>202012080608270_foreinkey5.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

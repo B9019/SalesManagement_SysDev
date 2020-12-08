@@ -93,7 +93,7 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                         OrDate = order.OrDate,
                         OrStateFlag = order.OrStateFlag,
                         OrFlag = order.OrFlag,
-                        OrHidden = order.OrHidden,
+                        OrHidden = order.OrHidden
 
                         //Timestamp = item.Timestamp,
                         //LogData = item.LogData,
