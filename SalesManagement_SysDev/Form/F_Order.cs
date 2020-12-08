@@ -84,7 +84,6 @@ namespace SalesManagement_SysDev
 
         private void F_Order_Load(object sender, EventArgs e)
         {
-            受注管理ToolStripMenuItem.Enabled = false;
         }
 
         // 登録ボタン

@@ -378,7 +378,7 @@ namespace SalesManagement_SysDev
             return new M_Product
             {
                 PrID = int.Parse(txt_PrID.Text),
-                MaID = int.Parse(txt_MaID.Text),
+                MaID= int.Parse(txt_MaID.Text),
                 PrName = txt_PrName.Text,
                 Price = int.Parse(txt_Price.Text),
                 PrJCode = txt_PrJCode.Text,

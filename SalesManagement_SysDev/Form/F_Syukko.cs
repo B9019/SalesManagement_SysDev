@@ -74,7 +74,6 @@ namespace SalesManagement_SysDev
 
         private void F_Syukko_Load(object sender, EventArgs e)
         {
-            出庫管理ToolStripMenuItem.Enabled = false;
         }
 
         // 登録ボタン

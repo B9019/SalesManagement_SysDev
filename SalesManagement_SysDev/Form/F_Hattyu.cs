@@ -75,7 +75,6 @@ namespace SalesManagement_SysDev
 
         private void F_Hattyu_Load(object sender, EventArgs e)
         {
-            発注管理ToolStripMenuItem.Enabled = false;
             dataGridView_Hattyu.ColumnCount = 11;
 
             dataGridView_Hattyu.Columns[0].HeaderText = "発注ID";

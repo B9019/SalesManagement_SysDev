@@ -13,7 +13,7 @@ namespace SalesManagement_SysDev
         public int MaID { get; set; }           //メーカID
         [MaxLength(50)]
         [Required]
-        public String MaName { get; set; }      //メーカ名	 
+        public String MaName { get; set; }      //メーカ名
         [MaxLength(50)]
         [Required]
         public String MaAdress { get; set; }    //住所
@@ -27,7 +27,8 @@ namespace SalesManagement_SysDev
         [Required]
         public String MaFAX { get; set; }       //FAX		
         public int MaFlag { get; set; }         //メーカ管理フラグ
-        public String MaHidden { get; set; }	//非表示理由		
+        public String MaHidden { get; set; }	//非表示理由
+        public List<M_Product> M_Products { get; set; } //ナビゲーションプロパティ
 
     }
 }
