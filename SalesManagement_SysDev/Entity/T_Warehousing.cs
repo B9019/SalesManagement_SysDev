@@ -20,9 +20,9 @@ namespace SalesManagement_SysDev
         public int WaShelfFlag { get; set; }       //入庫済フラグ(棚）
         public String WaHidden { get; set; }	    //非表示理由
         public int WaFlag { get; set; } //入庫管理フラグ
-        public T_Hattyu T_Hattyu { get; set; }//発注ID　外部キー
-        public M_Employee M_Employee { get; set; }//発注ID　外部キー
-        public List<T_WarehousingDetail> T_WarehousingDetails { get; set; }//ナビゲーションプロパティ
+        public virtual T_Hattyu T_Hattyu { get; set; }//発注ID　外部キー
+        public virtual M_Employee M_Employee { get; set; }//発注ID　外部キー
+        public virtual ICollection<T_WarehousingDetail> T_WarehousingDetails { get; set; }//ナビゲーションプロパティ
 
 
 

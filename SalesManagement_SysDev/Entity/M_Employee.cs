@@ -31,18 +31,18 @@ namespace SalesManagement_SysDev
         public int EmFlag { get; set; }             //社員管理フラグ
         public String EmHidden { get; set; }	    //非表示理由	
         public String Emmemo { get; set; }          //備考
-        public M_SalesOffice M_SalesOffice { get; set; }//小分類ID　外部キー
-        public M_Position M_Position { get; set; }//役職ID　外部キー
-        public List<T_Arrival> T_Arrivals { get; set; }//ナビゲーションプロパティ
-        public List<T_Chumon> T_Chumons { get; set; }//ナビゲーションプロパティ
-        public List<T_Hattyu> T_Hattyus { get; set; }//ナビゲーションプロパティ
-        public List<T_LoginHistory> T_LoginHistorys { get; set; }//ナビゲーションプロパティ
-        public List<T_OperationHistory> T_OperationHistorys { get; set; }//ナビゲーションプロパティ
-        public List<T_Order> T_Orders { get; set; }//ナビゲーションプロパティ
-        public List<T_Sale> T_Sales { get; set; }//ナビゲーションプロパティ
-        public List<T_Shipment> T_Shipments { get; set; }//ナビゲーションプロパティ
-        public List<T_Syukko> T_Syukkos { get; set; }//ナビゲーションプロパティ
-        public List<T_Warehousing> T_Warehousings { get; set; }//ナビゲーションプロパティ
+        public virtual M_SalesOffice M_SalesOffice { get; set; }//小分類ID　外部キー
+        public virtual M_Position M_Position { get; set; }//役職ID　外部キー
+        public virtual ICollection<T_Arrival> T_Arrivals { get; set; }//ナビゲーションプロパティ
+        public virtual ICollection<T_Chumon> T_Chumons { get; set; }//ナビゲーションプロパティ
+        public virtual ICollection<T_Hattyu> T_Hattyus { get; set; }//ナビゲーションプロパティ
+        public virtual ICollection<T_LoginHistory> T_LoginHistorys { get; set; }//ナビゲーションプロパティ
+        public virtual ICollection<T_OperationHistory> T_OperationHistorys { get; set; }//ナビゲーションプロパティ
+        public virtual ICollection<T_Order> T_Orders { get; set; }//ナビゲーションプロパティ
+        public virtual ICollection<T_Sale> T_Sales { get; set; }//ナビゲーションプロパティ
+        public virtual ICollection<T_Shipment> T_Shipments { get; set; }//ナビゲーションプロパティ
+        public virtual ICollection<T_Syukko> T_Syukkos { get; set; }//ナビゲーションプロパティ
+        public virtual ICollection<T_Warehousing> T_Warehousings { get; set; }//ナビゲーションプロパティ
 
 
 

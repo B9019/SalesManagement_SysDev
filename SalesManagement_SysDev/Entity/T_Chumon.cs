@@ -24,11 +24,11 @@ namespace SalesManagement_SysDev
         public int ChFlag { get; set; }	//注文管理フラグ
         public String ChHidden{ get; set; }        //非表示理由	
         public String memo { get; set; }       //備考
-        public M_SalesOffice M_SalesOffice { get; set; }//営業所　外部キー
-        public M_Employee M_Employee { get; set; }//社員ID　外部キー
-        public M_Client M_Client { get; set; }//顧客ID　外部キー
-        public T_Order T_Order { get; set; }//受注ID　外部キー
-        public T_ChumonDetail T_ChumonDetail { get; set; }//小分類ID　外部キー
+        public virtual M_SalesOffice M_SalesOffice { get; set; }//営業所　外部キー
+        public virtual M_Employee M_Employee { get; set; }//社員ID　外部キー
+        public virtual M_Client M_Client { get; set; }//顧客ID　外部キー
+        public virtual T_Order T_Order { get; set; }//受注ID　外部キー
+        public virtual T_ChumonDetail T_ChumonDetail { get; set; }//小分類ID　外部キー
 
 
 
