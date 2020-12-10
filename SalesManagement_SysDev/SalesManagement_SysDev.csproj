@@ -58,6 +58,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -409,6 +411,7 @@
     <Compile Include="Model\Entity\OperationLog.cs" />
     <Compile Include="Model\Entity\SortableBindingList.cs" />
     <Compile Include="Model\InputCheck.cs" />
+    <Compile Include="Model\M_ProductDbContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalesDataSet.Designer.cs">

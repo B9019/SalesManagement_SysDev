@@ -15,8 +15,8 @@ namespace SalesManagement_SysDev
         public int WaID { get; set; }           //入庫ID
         public int PrID { get; set; }           //商品ID
         public int WaQuantity { get; set; }     //数量
-        public T_Warehousing T_Warehousing { get; set; }//入庫ID　外部キー
-        public M_Product M_Product { get; set; }//商品ID　外部キー
+        public virtual T_Warehousing T_Warehousing { get; set; }//入庫ID　外部キー
+        public virtual M_Product M_Product { get; set; }//商品ID　外部キー
 
     }
 }

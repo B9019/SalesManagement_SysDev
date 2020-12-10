@@ -16,8 +16,8 @@ namespace SalesManagement_SysDev
         public int PrID { get; set; }               //商品ID
         public int SaQuantity { get; set; }         //個数
         public int SaPrTotalPrice { get; set; }     //合計金額
-        public T_Sale T_Sale { get; set; }//売上ID　外部キー
-        public M_Product M_Product { get; set; }//商品ID　外部キー
+        public virtual T_Sale T_Sale { get; set; }//売上ID　外部キー
+        public virtual M_Product M_Product { get; set; }//商品ID　外部キー
 
 
 
