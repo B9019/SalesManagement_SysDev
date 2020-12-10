@@ -19,7 +19,7 @@ namespace SalesManagement_SysDev
         public int ScFlag { get; set; }         //小分類管理フラグ
         public String ScHidden { get; set; }    //非表示理由	
         public List<M_Product> M_Products { get; set; }//ナビゲーションプロパティ
-        public List<M_MajorCassification> M_MajorCassification { get; set; }//ナビゲーションプロパティ
+        public List<M_MajorCassification> M_MajorCassifications { get; set; }//ナビゲーションプロパティ
         public List<M_Employee> M_Employees { get; set; }//ナビゲーションプロパティ
 
 

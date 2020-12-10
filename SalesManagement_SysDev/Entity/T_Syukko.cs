@@ -26,7 +26,7 @@ namespace SalesManagement_SysDev
         public M_Client M_Client { get; set; }//顧客ID　外部キー
         public T_Order T_Order { get; set; }//受注ID　外部キー
         public M_SalesOffice M_SalesOffice { get; set; }//顧客ID　外部キー
-        public List<T_SyukkoDetail> T_SyukkoDetail { get; set; }//ナビゲーションプロパティ
+        public List<T_SyukkoDetail> T_SyukkoDetails { get; set; }//ナビゲーションプロパティ
 
 
 

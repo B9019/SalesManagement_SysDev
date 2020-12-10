@@ -22,7 +22,7 @@ namespace SalesManagement_SysDev
         public int WaFlag { get; set; } //入庫管理フラグ
         public T_Hattyu T_Hattyu { get; set; }//発注ID　外部キー
         public M_Employee M_Employee { get; set; }//発注ID　外部キー
-        public List<T_WarehousingDetail> T_WarehousingDetail { get; set; }//ナビゲーションプロパティ
+        public List<T_WarehousingDetail> T_WarehousingDetails { get; set; }//ナビゲーションプロパティ
 
 
 

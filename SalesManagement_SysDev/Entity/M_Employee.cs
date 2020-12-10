@@ -33,16 +33,16 @@ namespace SalesManagement_SysDev
         public String Emmemo { get; set; }          //備考
         public M_SalesOffice M_SalesOffice { get; set; }//小分類ID　外部キー
         public M_Position M_Position { get; set; }//役職ID　外部キー
-        public List<T_Arrival> T_Arrival { get; set; }//ナビゲーションプロパティ
-        public List<T_Chumon> T_Chumon { get; set; }//ナビゲーションプロパティ
-        public List<T_Hattyu> T_Hattyu { get; set; }//ナビゲーションプロパティ
-        public List<T_LoginHistory> T_LoginHistory { get; set; }//ナビゲーションプロパティ
-        public List<T_OperationHistory> T_OperationHistory { get; set; }//ナビゲーションプロパティ
-        public List<T_Order> T_Order { get; set; }//ナビゲーションプロパティ
-        public List<T_Sale> T_Sale { get; set; }//ナビゲーションプロパティ
-        public List<T_Shipment> T_Shipment { get; set; }//ナビゲーションプロパティ
-        public List<T_Syukko> T_Syukko { get; set; }//ナビゲーションプロパティ
-        public List<T_Warehousing> T_Warehousing { get; set; }//ナビゲーションプロパティ
+        public List<T_Arrival> T_Arrivals { get; set; }//ナビゲーションプロパティ
+        public List<T_Chumon> T_Chumons { get; set; }//ナビゲーションプロパティ
+        public List<T_Hattyu> T_Hattyus { get; set; }//ナビゲーションプロパティ
+        public List<T_LoginHistory> T_LoginHistorys { get; set; }//ナビゲーションプロパティ
+        public List<T_OperationHistory> T_OperationHistorys { get; set; }//ナビゲーションプロパティ
+        public List<T_Order> T_Orders { get; set; }//ナビゲーションプロパティ
+        public List<T_Sale> T_Sales { get; set; }//ナビゲーションプロパティ
+        public List<T_Shipment> T_Shipments { get; set; }//ナビゲーションプロパティ
+        public List<T_Syukko> T_Syukkos { get; set; }//ナビゲーションプロパティ
+        public List<T_Warehousing> T_Warehousings { get; set; }//ナビゲーションプロパティ
 
 
 

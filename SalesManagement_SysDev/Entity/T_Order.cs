@@ -28,12 +28,12 @@ namespace SalesManagement_SysDev
         public M_Employee M_Employee { get; set; }//ナビゲーションプロパティ
         public M_Client M_Client { get; set; }//ナビゲーションプロパティ
 
-        public List<T_Arrival> T_Arrival { get; set; }//ナビゲーションプロパティ
-        public List<T_Chumon> T_Chumon { get; set; }//ナビゲーションプロパティ
-        public List<T_OrderDetail> T_OrderDetail { get; set; }//ナビゲーションプロパティ
-        public List<T_Sale> T_Sale { get; set; }//ナビゲーションプロパティ
-        public List<T_Shipment> T_Shipment { get; set; }//ナビゲーションプロパティ
-        public List<T_Syukko> T_Syukko { get; set; }//ナビゲーションプロパティ
+        public List<T_Arrival> T_Arrivals { get; set; }//ナビゲーションプロパティ
+        public List<T_Chumon> T_Chumons { get; set; }//ナビゲーションプロパティ
+        public List<T_OrderDetail> T_OrderDetails { get; set; }//ナビゲーションプロパティ
+        public List<T_Sale> T_Sales { get; set; }//ナビゲーションプロパティ
+        public List<T_Shipment> T_Shipments { get; set; }//ナビゲーションプロパティ
+        public List<T_Syukko> T_Syukkos { get; set; }//ナビゲーションプロパティ
 
 
     }
