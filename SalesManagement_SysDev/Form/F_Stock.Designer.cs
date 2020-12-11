@@ -63,10 +63,10 @@
             this.lbl_ArHidden = new System.Windows.Forms.Label();
             this.lbl_memo = new System.Windows.Forms.Label();
             this.chk_hide_FLG = new System.Windows.Forms.CheckBox();
-            this.dataGridView_Syukko = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Stock = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txt_SyHidden = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Syukko)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Stock)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -555,14 +555,14 @@
             this.chk_hide_FLG.TabIndex = 240;
             this.chk_hide_FLG.UseVisualStyleBackColor = true;
             // 
-            // dataGridView_Syukko
+            // dataGridView_Stock
             // 
-            this.dataGridView_Syukko.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView_Syukko.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView_Syukko.Location = new System.Drawing.Point(6, 174);
-            this.dataGridView_Syukko.Name = "dataGridView_Syukko";
-            this.dataGridView_Syukko.Size = new System.Drawing.Size(924, 442);
-            this.dataGridView_Syukko.TabIndex = 173;
+            this.dataGridView_Stock.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_Stock.GridColor = System.Drawing.SystemColors.Control;
+            this.dataGridView_Stock.Location = new System.Drawing.Point(6, 174);
+            this.dataGridView_Stock.Name = "dataGridView_Stock";
+            this.dataGridView_Stock.Size = new System.Drawing.Size(924, 442);
+            this.dataGridView_Stock.TabIndex = 173;
             // 
             // groupBox3
             // 
@@ -578,7 +578,7 @@
             this.groupBox3.Controls.Add(this.lbl_ArHidden);
             this.groupBox3.Controls.Add(this.lbl_memo);
             this.groupBox3.Controls.Add(this.chk_hide_FLG);
-            this.groupBox3.Controls.Add(this.dataGridView_Syukko);
+            this.groupBox3.Controls.Add(this.dataGridView_Stock);
             this.groupBox3.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
             this.groupBox3.Location = new System.Drawing.Point(160, 68);
@@ -629,7 +629,7 @@
             this.Controls.Add(this.groupBox3);
             this.Name = "F_Stock";
             this.Load += new System.EventHandler(this.F_Stock_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Syukko)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Stock)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -674,7 +674,7 @@
         private System.Windows.Forms.Label lbl_ArHidden;
         private System.Windows.Forms.Label lbl_memo;
         private System.Windows.Forms.CheckBox chk_hide_FLG;
-        private System.Windows.Forms.DataGridView dataGridView_Syukko;
+        private System.Windows.Forms.DataGridView dataGridView_Stock;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txt_SyHidden;
     }
