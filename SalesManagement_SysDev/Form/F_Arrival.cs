@@ -183,16 +183,22 @@ namespace SalesManagement_SysDev
                 txt_OrID.Focus();
                 return false;
             }
-
-            ////　文字チェック ////
-
-            //　備考
-            if (!_ic.FullWidthCharCheck(txt_Armemo.Text, out errorMessage))
+            ////　日付型チェック ////
+            if (!_ic.DateFormCheck(txt_ArDate.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
-                txt_Armemo.Focus();
+                txt_ArDate.Focus();
                 return false;
             }
+            ////　文字チェック ////
+
+            ////　備考
+            //if (!_ic.FullWidthCharCheck(txt_Armemo.Text, out errorMessage))
+            //{
+            //    MessageBox.Show(errorMessage);
+            //    txt_Armemo.Focus();
+            //    return false;
+            //}
             // 　非表示理由の文字チェック
             if (!_ic.FullWidthCharCheck(txt_ArHidden.Text, out errorMessage))
             {
@@ -238,9 +244,9 @@ namespace SalesManagement_SysDev
                 return false;
             }
             // 入荷年月日
-            if (txt_ArDate.TextLength > 9)
+            if (txt_ArDate.TextLength > 10)
             {
-                MessageBox.Show("入荷年月日は9文字以下です");
+                MessageBox.Show("入荷年月日は10文字以下です");
                 txt_ArDate.Focus();
                 return false;
             }
@@ -468,7 +474,13 @@ namespace SalesManagement_SysDev
                 txt_OrID.Focus();
                 return false;
             }
-
+            ////　日付型チェック ////
+            if (!_ic.DateFormCheck(txt_ArDate.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_ArDate.Focus();
+                return false;
+            }
             ////　文字チェック ////
 
             //　備考
