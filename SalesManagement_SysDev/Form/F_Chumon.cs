@@ -12,11 +12,12 @@ using SalesManagement_SysDev.Model.Entity;
 using SalesManagement_SysDev.Model.ContentsManagement;
 using SalesManagement_SysDev.Model.Entity.Disp;
 using System.Data.SqlClient;
+using MetroFramework.Forms;
 
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_Chumon : Form
+    public partial class F_Chumon : MetroForm
     {
         public int transfer_int;//権限変数
         // ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
@@ -74,7 +75,6 @@ namespace SalesManagement_SysDev
 
         private void F_Chumon_Load(object sender, EventArgs e)
         {
-            注文管理ToolStripMenuItem.Enabled = false;
             dataGridView_Chumon.ColumnCount = 8;
 
             dataGridView_Chumon.Columns[0].HeaderText = "注文ID ";

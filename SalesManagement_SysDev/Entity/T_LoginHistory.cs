@@ -18,7 +18,9 @@ namespace SalesManagement_SysDev
         public DateTime LoginDate { get; set; }     //ログイン年月日
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
-        public DateTime? LogoutDate { get; set; }	//ログアウト年月日
+        public DateTime? LogoutDate { get; set; }   //ログアウト年月日
+        public virtual M_Employee M_Employee { get; set; }//社員ID　外部キー
+
 
     }
 }

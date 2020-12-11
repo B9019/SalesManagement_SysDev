@@ -275,6 +275,20 @@ namespace SalesManagement_SysDev
         }
 
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_search_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
     }

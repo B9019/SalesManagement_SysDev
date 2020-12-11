@@ -12,10 +12,12 @@ using SalesManagement_SysDev.Model.Entity;
 using SalesManagement_SysDev.Model.ContentsManagement;
 using SalesManagement_SysDev.Model.Entity.Disp;
 using System.Data.SqlClient;
+using MetroFramework.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_login : Form
+    public partial class F_login : MetroForm
+
     {
         public int transfer_int= 0 ;
 
@@ -76,7 +78,6 @@ namespace SalesManagement_SysDev
 
         private void F_login_Load(object sender, EventArgs e)
         {
-            ログイン.Enabled = false;
             transfer_int = 0;
 
     }

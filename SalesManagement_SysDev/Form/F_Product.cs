@@ -13,10 +13,12 @@ using SalesManagement_SysDev.Model.ContentsManagement;
 using SalesManagement_SysDev.Model.Entity.Disp;
 using System.Data.SqlClient;
 using System.Data.Entity.Infrastructure.DependencyResolution;
+using MetroFramework.Forms;
+
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_Product : Form
+    public partial class F_Product : MetroForm
     {
         public int transfer_int ;//権限変数
         // ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
@@ -88,7 +90,7 @@ namespace SalesManagement_SysDev
         }
         private void F_Product_Load(object sender, EventArgs e)
         {
-            商品管理ToolStripMenuItem.Enabled = false;
+            btn_product.Enabled = false;
             dataGridView_Product.ColumnCount = 11;
 
             dataGridView_Product.Columns[0].HeaderText = "商品ID ";
@@ -149,7 +151,7 @@ namespace SalesManagement_SysDev
             if (String.IsNullOrEmpty(txt_MaID.Text))
             {
                 MessageBox.Show("メーカIDは必須項目です");
-                MaID.Focus();
+                txt_MaID.Focus();
                 return false;
             }
             // 商品ID
@@ -298,7 +300,7 @@ namespace SalesManagement_SysDev
             if (txt_MaID.TextLength > 50)
             {
                 MessageBox.Show("メーカIDは4文字以下です");
-                MaID.Focus();
+                txt_MaID.Focus();
                 return false;
             }
             // 商品ID
@@ -376,7 +378,7 @@ namespace SalesManagement_SysDev
             return new M_Product
             {
                 PrID = int.Parse(txt_PrID.Text),
-                MaID = int.Parse(txt_MaID.Text),
+                MaID= int.Parse(txt_MaID.Text),
                 PrName = txt_PrName.Text,
                 Price = int.Parse(txt_Price.Text),
                 PrJCode = txt_PrJCode.Text,
@@ -449,7 +451,7 @@ namespace SalesManagement_SysDev
             if (String.IsNullOrEmpty(txt_MaID.Text))
             {
                 MessageBox.Show("メーカIDは必須項目です");
-                MaID.Focus();
+                txt_MaID.Focus();
                 return false;
             }
             // 商品ID
@@ -598,7 +600,7 @@ namespace SalesManagement_SysDev
             if (txt_MaID.TextLength > 50)
             {
                 MessageBox.Show("メーカIDは4文字以下です");
-                MaID.Focus();
+                txt_MaID.Focus();
                 return false;
             }
             // 商品ID
@@ -1173,6 +1175,11 @@ namespace SalesManagement_SysDev
             txt_PrColor.Text = "";
             txt_PrReleaseDate.Text = "";
             OrHidden.Text = "";
+        }
+
+        private void txt_ArHidden_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         //public void ReadSingleRow(IDataRecord record)

@@ -12,11 +12,11 @@ using SalesManagement_SysDev.Model.Entity;
 using SalesManagement_SysDev.Model.ContentsManagement;
 using SalesManagement_SysDev.Model.Entity.Disp;
 using System.Data.SqlClient;
-
+using MetroFramework.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_Client : Form
+    public partial class F_Client : MetroForm
     {
         public int transfer_int;
         // ***** モジュール実装（よく使う他クラスで定義したメソッドが利用できるようあらかじめ実装します。）
@@ -863,5 +863,9 @@ namespace SalesManagement_SysDev
 
         }
 
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

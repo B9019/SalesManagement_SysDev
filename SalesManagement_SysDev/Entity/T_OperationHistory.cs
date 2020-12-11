@@ -21,7 +21,9 @@ namespace SalesManagement_SysDev
         public DateTime OpStartTime { get; set; }   //操作開始時刻	
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
-        public DateTime? OpEndTime { get; set; }	//操作終了時刻		
+        public DateTime? OpEndTime { get; set; }    //操作終了時刻		
+        public virtual M_Employee M_Employee { get; set; }//社員ID　外部キー
+
 
     }
 }

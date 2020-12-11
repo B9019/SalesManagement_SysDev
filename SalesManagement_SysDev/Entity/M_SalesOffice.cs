@@ -27,6 +27,18 @@ namespace SalesManagement_SysDev
         [Required]
         public String SoFAX { get; set; }       //FAX		
         public int SoFlag { get; set; }         //営業所管理フラグ	 
-        public String SoHidden { get; set; }	//非表示理由		
+        public String SoHidden { get; set; }    //非表示理由		
+        public virtual ICollection<M_Employee> M_Employees { get; set; }//ナビゲーションプロパティ
+        public virtual ICollection<T_Arrival> T_Arrivals { get; set; }//ナビゲーションプロパティ
+        public virtual ICollection<T_Chumon> T_Chumons { get; set; }//ナビゲーションプロパティ
+        public virtual ICollection<T_Order> T_Orders { get; set; }//ナビゲーションプロパティ
+        public virtual ICollection<T_Sale> T_Sales { get; set; }//ナビゲーションプロパティ
+        public virtual ICollection<T_Shipment> T_Shipments { get; set; }//ナビゲーションプロパティ
+        public virtual ICollection<T_Syukko> T_Syukkos { get; set; }//ナビゲーションプロパティ
+
+
+
+
+
     }
 }

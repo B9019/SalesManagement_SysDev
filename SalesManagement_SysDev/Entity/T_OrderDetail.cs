@@ -15,7 +15,11 @@ namespace SalesManagement_SysDev
         public int OrID { get; set; }           //受注ID
         public int PrID { get; set; }           //商品ID
         public int OrQuantity { get; set; }	    //数量
-        public int OrTotalPrice { get; set; }	//合計金額
+        public int OrTotalPrice { get; set; }   //合計金額
+        public virtual T_Order T_Order { get; set; }//メーカー　外部キー
+        public virtual M_Product M_Product { get; set; }//メーカー　外部キー
+
+
 
     }
 }
