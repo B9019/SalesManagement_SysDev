@@ -262,6 +262,7 @@
             this.btn_regist.TabIndex = 287;
             this.btn_regist.Text = "登録";
             this.btn_regist.UseVisualStyleBackColor = false;
+            this.btn_regist.Click += new System.EventHandler(this.btn_regist_Click);
             // 
             // btn_client
             // 
@@ -295,6 +296,7 @@
             this.btn_update.TabIndex = 285;
             this.btn_update.Text = "更新";
             this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_arrival
             // 
@@ -328,6 +330,7 @@
             this.btn_all.TabIndex = 284;
             this.btn_all.Text = "一覧表示";
             this.btn_all.UseVisualStyleBackColor = false;
+            this.btn_all.Click += new System.EventHandler(this.btn_all_Click);
             // 
             // btn_employee
             // 
@@ -394,6 +397,7 @@
             this.btn_delete.TabIndex = 279;
             this.btn_delete.Text = "削除";
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_sale
             // 
@@ -427,6 +431,7 @@
             this.btn_clear.TabIndex = 277;
             this.btn_clear.Text = "入力クリア";
             this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_warehousing
             // 
@@ -460,6 +465,7 @@
             this.btn_search.TabIndex = 276;
             this.btn_search.Text = "検索";
             this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_sertch_Click);
             // 
             // btn_product
             // 
