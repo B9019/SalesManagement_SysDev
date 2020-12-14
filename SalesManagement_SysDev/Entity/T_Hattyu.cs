@@ -17,14 +17,14 @@ namespace SalesManagement_SysDev
         public DateTime HaDate { get; set; }            //発注年月日	
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
-        public int WaShelfFlag { get; set; }	//入庫済フラグ（倉庫）
+        public int WaWarehouseFlag { get; set; }	//入庫済フラグ（倉庫）
         public int HaFlag { get; set; }	            //発注管理フラグ
         public String Hamemo { get; set; }          //備考
         public String HaHidden { get; set; }            //非表示理由	
-        public virtual M_Maker M_Maker { get; set; }//メーカID　外部キー
-        public virtual M_Employee M_Employee { get; set; }//社員ID　外部キー
-        public virtual ICollection<T_HattyuDetail> T_HattyuDetails { get; set; }//ナビゲーションプロパティ
-        public virtual ICollection<T_Warehousing> T_Warehousings { get; set; }//ナビゲーションプロパティ
+        //public virtual M_Maker M_Maker { get; set; }//メーカID　外部キー
+        //public virtual M_Employee M_Employee { get; set; }//社員ID　外部キー
+        //public virtual ICollection<T_HattyuDetail> T_HattyuDetails { get; set; }//ナビゲーションプロパティ
+        //public virtual ICollection<T_Warehousing> T_Warehousings { get; set; }//ナビゲーションプロパティ
 
 
 

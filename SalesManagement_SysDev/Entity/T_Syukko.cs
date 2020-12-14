@@ -22,11 +22,11 @@ namespace SalesManagement_SysDev
         public int SyStateFlag { get; set; }    //出庫状態フラグ
         public int SyFlag { get; set; }	//出庫管理フラグ
         public String SyHidden { get; set; }        //非表示理由	
-        public virtual M_Employee M_Employee { get; set; }//社員ID　外部キー
-        public virtual M_Client M_Client { get; set; }//顧客ID　外部キー
-        public virtual T_Order T_Order { get; set; }//受注ID　外部キー
-        public virtual M_SalesOffice M_SalesOffice { get; set; }//顧客ID　外部キー
-        public virtual ICollection<T_SyukkoDetail> T_SyukkoDetails { get; set; }//ナビゲーションプロパティ
+        //public virtual M_Employee M_Employee { get; set; }//社員ID　外部キー
+        //public virtual M_Client M_Client { get; set; }//顧客ID　外部キー
+        //public virtual T_Order T_Order { get; set; }//受注ID　外部キー
+        //public virtual M_SalesOffice M_SalesOffice { get; set; }//顧客ID　外部キー
+        //public virtual ICollection<T_SyukkoDetail> T_SyukkoDetails { get; set; }//ナビゲーションプロパティ
 
 
 

@@ -32,17 +32,17 @@ namespace SalesManagement_SysDev
 
         public String PrMemo { get; set; }　//備考
 
-        public virtual M_Maker M_Maker { get; set; }//メーカー　外部キー
-        public virtual M_SmallClassification M_SmallClassification { get; set; }//小分類ID　外部キー
-        public virtual ICollection<T_ArrivalDetail> T_ArrivalDetails { get; set; }//ナビゲーションプロパティ
-        public virtual T_ChumonDetail T_ChumonDetail { get; set; }//メーカー　外部キー
-        public virtual ICollection<T_HattyuDetail> T_HattyuDetails { get; set; }//ナビゲーションプロパティ
-        public virtual ICollection<T_OrderDetail> T_OrderDetails { get; set; }//ナビゲーションプロパティ
-        public virtual ICollection<T_SaleDetail> T_SaleDetails { get; set; }//ナビゲーションプロパティ
-        public virtual ICollection<T_ShipmentDetail> T_ShipmentDetails { get; set; }//ナビゲーションプロパティ
-        public virtual ICollection<T_Stock> T_Stocks { get; set; }//ナビゲーションプロパティ
-        public virtual ICollection<T_SyukkoDetail> T_SyukkoDetails { get; set; }//ナビゲーションプロパティ
-        public virtual ICollection<T_WarehousingDetail> T_WarehousingDetails { get; set; }//ナビゲーションプロパティ
+        //public virtual M_Maker M_Maker { get; set; }//メーカー　外部キー
+        //public virtual M_SmallClassification M_SmallClassification { get; set; }//小分類ID　外部キー
+        //public virtual ICollection<T_ArrivalDetail> T_ArrivalDetails { get; set; }//ナビゲーションプロパティ
+        //public virtual T_ChumonDetail T_ChumonDetail { get; set; }//メーカー　外部キー
+        //public virtual ICollection<T_HattyuDetail> T_HattyuDetails { get; set; }//ナビゲーションプロパティ
+        //public virtual ICollection<T_OrderDetail> T_OrderDetails { get; set; }//ナビゲーションプロパティ
+        //public virtual ICollection<T_SaleDetail> T_SaleDetails { get; set; }//ナビゲーションプロパティ
+        //public virtual ICollection<T_ShipmentDetail> T_ShipmentDetails { get; set; }//ナビゲーションプロパティ
+        //public virtual ICollection<T_Stock> T_Stocks { get; set; }//ナビゲーションプロパティ
+        //public virtual ICollection<T_SyukkoDetail> T_SyukkoDetails { get; set; }//ナビゲーションプロパティ
+        //public virtual ICollection<T_WarehousingDetail> T_WarehousingDetails { get; set; }//ナビゲーションプロパティ
 
 
         //public M_SmallClassification M_SmallClassification { get; set; }　//小分類ID　外部キー

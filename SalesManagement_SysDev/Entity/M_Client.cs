@@ -28,13 +28,13 @@ namespace SalesManagement_SysDev
         public String ClFAX { get; set; }       //FAX		
         public int ClFlag { get; set; }         //顧客管理フラグ	
         public String ClHidden { get; set; }    //非表示理由		
-        public virtual M_SalesOffice M_SalesOffice { get; set; }//小分類ID　外部キー
-        public virtual ICollection<T_Arrival> T_Arrivals { get; set; }//ナビゲーションプロパティ
-        public virtual ICollection<T_Chumon> T_Chumons { get; set; }//ナビゲーションプロパティ
-        public virtual ICollection<T_Order> T_Orders { get; set; }//ナビゲーションプロパティ
-        public virtual  ICollection<T_Sale> T_Sales { get; set; }//ナビゲーションプロパティ
-        public virtual ICollection<T_Shipment> T_Shipments { get; set; }//ナビゲーションプロパティ
-        public virtual ICollection<T_Syukko> T_Syukkos { get; set; }//ナビゲーションプロパティ
+        //public virtual M_SalesOffice M_SalesOffice { get; set; }//小分類ID　外部キー
+        //public virtual ICollection<T_Arrival> T_Arrivals { get; set; }//ナビゲーションプロパティ
+        //public virtual ICollection<T_Chumon> T_Chumons { get; set; }//ナビゲーションプロパティ
+        //public virtual ICollection<T_Order> T_Orders { get; set; }//ナビゲーションプロパティ
+        //public virtual  ICollection<T_Sale> T_Sales { get; set; }//ナビゲーションプロパティ
+        //public virtual ICollection<T_Shipment> T_Shipments { get; set; }//ナビゲーションプロパティ
+        //public virtual ICollection<T_Syukko> T_Syukkos { get; set; }//ナビゲーションプロパティ
 
 
 

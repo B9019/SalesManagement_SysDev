@@ -359,21 +359,9 @@
     <Compile Include="Migrations\202012010528034_ske.designer.cs">
       <DependentUpon>202012010528034_ske.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202012010540341_S.cs" />
-    <Compile Include="Migrations\202012010540341_S.designer.cs">
-      <DependentUpon>202012010540341_S.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012050218496_e1.cs" />
-    <Compile Include="Migrations\202012050218496_e1.designer.cs">
-      <DependentUpon>202012050218496_e1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012080608270_foreinkey5.cs" />
-    <Compile Include="Migrations\202012080608270_foreinkey5.designer.cs">
-      <DependentUpon>202012080608270_foreinkey5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012100432302_phoreinkey6.cs" />
-    <Compile Include="Migrations\202012100432302_phoreinkey6.designer.cs">
-      <DependentUpon>202012100432302_phoreinkey6.cs</DependentUpon>
+    <Compile Include="Migrations\202012140343094_arrival12.cs" />
+    <Compile Include="Migrations\202012140343094_arrival12.designer.cs">
+      <DependentUpon>202012140343094_arrival12.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\CommonFunction.cs" />
@@ -552,17 +540,8 @@
     <EmbeddedResource Include="Migrations\202012010528034_ske.resx">
       <DependentUpon>202012010528034_ske.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012010540341_S.resx">
-      <DependentUpon>202012010540341_S.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012050218496_e1.resx">
-      <DependentUpon>202012050218496_e1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012080608270_foreinkey5.resx">
-      <DependentUpon>202012080608270_foreinkey5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012100432302_phoreinkey6.resx">
-      <DependentUpon>202012100432302_phoreinkey6.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012140343094_arrival12.resx">
+      <DependentUpon>202012140343094_arrival12.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

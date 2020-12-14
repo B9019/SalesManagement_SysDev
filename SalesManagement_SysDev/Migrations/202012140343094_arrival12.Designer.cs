@@ -7,13 +7,13 @@ namespace SalesManagement_SysDev.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class foreinkey5 : IMigrationMetadata
+    public sealed partial class arrival12 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(foreinkey5));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(arrival12));
         
         string IMigrationMetadata.Id
         {
-            get { return "202012080608270_foreinkey5"; }
+            get { return "202012140343094_arrival12"; }
         }
         
         string IMigrationMetadata.Source
