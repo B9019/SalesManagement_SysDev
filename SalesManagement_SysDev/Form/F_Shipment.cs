@@ -864,11 +864,13 @@ namespace SalesManagement_SysDev
         } //接続先DBの情報をセット
 
 
+
         private void btn_all_Click(object sender, EventArgs e)
         {
             fncAllSelect();
         }
 
         
+
     }
 }
