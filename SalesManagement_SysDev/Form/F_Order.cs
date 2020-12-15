@@ -387,6 +387,7 @@ namespace SalesManagement_SysDev
             return new T_OrderDetail
             {
                 OrDetailID = int.Parse(txt_OrDetailID.Text),
+                OrID = int.Parse(txt_OrID.Text),
                 PrID = int.Parse(txt_PrID.Text),
                 OrQuantity = int.Parse(txt_OrQuantity.Text),
                 OrTotalPrice = int.Parse(txt_OrTotalPrice.Text)
@@ -423,15 +424,15 @@ namespace SalesManagement_SysDev
         private bool Generate_Registration_Detail(T_OrderDetail regOrderDetail)
         {
             // 商品情報の登録
-            //var errorMessage = _Or.PostT_OrderDetail(regOrderDetail);
+            var errorMessage = _Or.PostT_OrderDetail(regOrderDetail);
 
-            //if (errorMessage != string.Empty)
-            //{
-            //    MessageBox.Show(errorMessage);
-            //    return false;
-            //}
+            if (errorMessage != string.Empty)
+            {
+                MessageBox.Show(errorMessage);
+                return false;
+            }
             //// 画面更新
-            //RefreshDataGridView();
+            RefreshDataGridView();
             return true;
 
         }

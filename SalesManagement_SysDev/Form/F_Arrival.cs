@@ -728,7 +728,7 @@ namespace SalesManagement_SysDev
                 }
                 else if (txt_ArHidden.Text != "" && count == 7)
                 {
-                    command.Parameters.Add("@ArHiddenr", SqlDbType.VarChar);
+                    command.Parameters.Add("@ArHidden", SqlDbType.VarChar);
                     command.Parameters["@ArHidden"].Value = txt_ArHidden.Text;
                     //実行するSQL文の条件追加
                     command.CommandText = command.CommandText + AND + "ArHidden LIKE @ArHidden ";
