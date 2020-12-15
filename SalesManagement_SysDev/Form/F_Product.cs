@@ -1170,6 +1170,7 @@ namespace SalesManagement_SysDev
             txt_Price.Text = "";
             txt_PrJCode.Text = "";
             txt_PrSafetyStock.Text = "";
+            txt_memo.Text = "";
             txt_ScID.Text = "";
             txt_PrModelNumber.Text = "";
             txt_PrColor.Text = "";

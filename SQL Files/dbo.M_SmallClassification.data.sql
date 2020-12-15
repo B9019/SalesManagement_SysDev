@@ -1,0 +1,1 @@
+INSERT INTO dbo.M_SmallClassification(MaName,MaAdress,MaPhone,MaPostal,MaFax,MaFlag,MaHidden) VALUES ('駒井','大阪市住之江区','080-1111-1111','1111111','090-1111-1111','0','');
