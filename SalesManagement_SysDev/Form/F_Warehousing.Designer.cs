@@ -194,6 +194,7 @@
             this.chk_hide_FLG.Size = new System.Drawing.Size(18, 17);
             this.chk_hide_FLG.TabIndex = 240;
             this.chk_hide_FLG.UseVisualStyleBackColor = true;
+            this.chk_hide_FLG.CheckedChanged += new System.EventHandler(this.Checked_Warehousing_HideFlag);
             // 
             // groupBox3
             // 
@@ -233,9 +234,11 @@
             // 
             this.lbl_ArQuantity.AutoSize = true;
             this.lbl_ArQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.lbl_ArQuantity.Location = new System.Drawing.Point(655, 82);
             this.lbl_ArQuantity.Name = "lbl_ArQuantity";
             this.lbl_ArQuantity.Size = new System.Drawing.Size(42, 17);
+
             this.lbl_ArQuantity.TabIndex = 317;
             this.lbl_ArQuantity.Text = "数量";
             // 
@@ -243,19 +246,23 @@
             // 
             this.txt_ArQuantity.BackColor = System.Drawing.SystemColors.Window;
             this.txt_ArQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.txt_ArQuantity.Location = new System.Drawing.Point(788, 79);
             this.txt_ArQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_ArQuantity.Name = "txt_ArQuantity";
             this.txt_ArQuantity.Size = new System.Drawing.Size(447, 24);
+
             this.txt_ArQuantity.TabIndex = 316;
             // 
             // lbl_PrID
             // 
             this.lbl_PrID.AutoSize = true;
             this.lbl_PrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.lbl_PrID.Location = new System.Drawing.Point(655, 55);
             this.lbl_PrID.Name = "lbl_PrID";
             this.lbl_PrID.Size = new System.Drawing.Size(63, 17);
+
             this.lbl_PrID.TabIndex = 315;
             this.lbl_PrID.Text = "商品ID";
             // 
@@ -263,28 +270,34 @@
             // 
             this.txt_PrID.BackColor = System.Drawing.SystemColors.Window;
             this.txt_PrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.txt_PrID.Location = new System.Drawing.Point(788, 52);
             this.txt_PrID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_PrID.Name = "txt_PrID";
             this.txt_PrID.Size = new System.Drawing.Size(447, 24);
+
             this.txt_PrID.TabIndex = 314;
             // 
             // txt_WaDetailID
             // 
             this.txt_WaDetailID.BackColor = System.Drawing.SystemColors.Window;
+
             this.txt_WaDetailID.Location = new System.Drawing.Point(788, 25);
             this.txt_WaDetailID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_WaDetailID.Name = "txt_WaDetailID";
             this.txt_WaDetailID.Size = new System.Drawing.Size(447, 24);
+
             this.txt_WaDetailID.TabIndex = 312;
             // 
             // lbl_WaDetailID
             // 
             this.lbl_WaDetailID.AutoSize = true;
             this.lbl_WaDetailID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.lbl_WaDetailID.Location = new System.Drawing.Point(655, 28);
             this.lbl_WaDetailID.Name = "lbl_WaDetailID";
             this.lbl_WaDetailID.Size = new System.Drawing.Size(97, 17);
+
             this.lbl_WaDetailID.TabIndex = 313;
             this.lbl_WaDetailID.Text = "入庫詳細ID";
             // 

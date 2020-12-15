@@ -375,6 +375,10 @@ namespace SalesManagement_SysDev
         //
         private M_Product Generate_Data_AtRegistration()
         {
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_PrHidden.Text = "";
+            }
             return new M_Product
             {
                 PrID = int.Parse(txt_PrID.Text),
@@ -414,6 +418,10 @@ namespace SalesManagement_SysDev
                 return false;
             }
             // 画面更新
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_PrHidden.Text = "非表示理由を入力(50文字)";
+            }
             RefreshDataGridView();
             txt_MaID.Focus();
 
@@ -677,6 +685,10 @@ namespace SalesManagement_SysDev
         // out      Category : Categoryデータ
         private M_Product GenerateDataAtUpdate()
         {
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_PrHidden.Text = "";
+            }
             return new M_Product
             {
                 PrID = int.Parse(txt_PrID.Text),
@@ -716,6 +728,10 @@ namespace SalesManagement_SysDev
             }
 
             // 表示データ更新 & 入力クリア
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_PrHidden.Text = "非表示理由を入力(50文字)";
+            }
             RefreshDataGridView();
             txt_MaID.Focus();
 
@@ -773,7 +789,7 @@ namespace SalesManagement_SysDev
             txt_PrSafetyStock.Clear();
             txt_PrJCode.Clear();
             txt_memo.Clear();
-            OrHidden.Clear();
+            txt_PrHidden.Clear();
             chk_hide_FLG.Checked = false;
 
             //// ボタンリセット
@@ -990,7 +1006,7 @@ namespace SalesManagement_SysDev
             txt_PrColor.Text = Convert.ToString(id9);
             txt_PrReleaseDate.Text = Convert.ToString(id10);
             chk_hide_FLG.Checked = Convert.ToBoolean(id11);
-            OrHidden.Text = Convert.ToString(id12);
+            txt_PrHidden.Text = Convert.ToString(id12);
             txt_memo.Text = Convert.ToString(id13);
 
         }
@@ -1115,10 +1131,10 @@ namespace SalesManagement_SysDev
                     command.CommandText = command.CommandText + AND + "PrReleaseDate LIKE @PrReleaseDate ";
                     ++andnum;
                 }
-                else if (OrHidden.Text != "" && count == 10)
+                else if (txt_PrHidden.Text != "" && count == 10)
                 {
                     command.Parameters.Add("@PrHidden", SqlDbType.NVarChar);
-                    command.Parameters["@PrHidden"].Value = "%" + OrHidden.Text + "%";
+                    command.Parameters["@PrHidden"].Value = "%" + txt_PrHidden.Text + "%";
                     //実行するSQL文の条件追加
                     command.CommandText = command.CommandText + AND + "PrHidden LIKE @PrHidden ";
                     ++andnum;
@@ -1174,11 +1190,24 @@ namespace SalesManagement_SysDev
             txt_PrModelNumber.Text = "";
             txt_PrColor.Text = "";
             txt_PrReleaseDate.Text = "";
-            OrHidden.Text = "";
+            txt_PrHidden.Text = "";
         }
 
         private void txt_ArHidden_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void Checked_Product_HideFlag(object sender, EventArgs e)
+        {
+            if (chk_hide_FLG.Checked == true)
+                txt_PrHidden.Text = "";
+            else if (chk_hide_FLG.Checked == false)
+            {
+                txt_PrHidden.Text = "非表示理由を入力(50文字)";
+            }
+            return;
+
 
         }
 
