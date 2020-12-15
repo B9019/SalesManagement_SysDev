@@ -824,6 +824,11 @@ namespace SalesManagement_SysDev
             txt_SyHidden.Text = "";
             txt_memo.Text = "";
         }
+
+        private void lbl_memo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
    
 }

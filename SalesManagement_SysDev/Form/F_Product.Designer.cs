@@ -110,7 +110,7 @@
             this.btn_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_order.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_order.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_order.Location = new System.Drawing.Point(0, 753);
+            this.btn_order.Location = new System.Drawing.Point(0, 752);
             this.btn_order.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_order.Name = "btn_order";
             this.btn_order.Size = new System.Drawing.Size(200, 62);
@@ -149,7 +149,7 @@
             this.btn_stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_stock.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_stock.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_stock.Location = new System.Drawing.Point(0, 692);
+            this.btn_stock.Location = new System.Drawing.Point(0, 691);
             this.btn_stock.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_stock.Name = "btn_stock";
             this.btn_stock.Size = new System.Drawing.Size(200, 62);
@@ -211,7 +211,7 @@
             this.btn_regist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_regist.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_regist.Location = new System.Drawing.Point(510, 12);
-            this.btn_regist.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_regist.Margin = new System.Windows.Forms.Padding(2);
             this.btn_regist.Name = "btn_regist";
             this.btn_regist.Size = new System.Drawing.Size(138, 52);
             this.btn_regist.TabIndex = 229;
@@ -245,7 +245,7 @@
             this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_update.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_update.Location = new System.Drawing.Point(652, 12);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(2);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(138, 52);
             this.btn_update.TabIndex = 227;
@@ -279,7 +279,7 @@
             this.btn_all.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_all.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_all.Location = new System.Drawing.Point(794, 12);
-            this.btn_all.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_all.Margin = new System.Windows.Forms.Padding(2);
             this.btn_all.Name = "btn_all";
             this.btn_all.Size = new System.Drawing.Size(138, 52);
             this.btn_all.TabIndex = 226;
@@ -313,7 +313,7 @@
             this.btn_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_print.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_print.Location = new System.Drawing.Point(938, 12);
-            this.btn_print.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_print.Margin = new System.Windows.Forms.Padding(2);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(138, 52);
             this.btn_print.TabIndex = 223;
@@ -346,7 +346,7 @@
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_delete.Location = new System.Drawing.Point(1078, 12);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(2);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(138, 52);
             this.btn_delete.TabIndex = 221;
@@ -380,7 +380,7 @@
             this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clear.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_clear.Location = new System.Drawing.Point(1222, 12);
-            this.btn_clear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_clear.Margin = new System.Windows.Forms.Padding(2);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(138, 52);
             this.btn_clear.TabIndex = 219;
@@ -414,7 +414,7 @@
             this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_search.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_search.Location = new System.Drawing.Point(366, 12);
-            this.btn_search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(2);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(138, 52);
             this.btn_search.TabIndex = 218;
@@ -431,7 +431,7 @@
             this.btn_product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_product.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_product.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_product.Location = new System.Drawing.Point(0, 332);
+            this.btn_product.Location = new System.Drawing.Point(0, 331);
             this.btn_product.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_product.Name = "btn_product";
             this.btn_product.Size = new System.Drawing.Size(200, 62);
@@ -459,7 +459,7 @@
             this.btn_syukko.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_syukko.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_syukko.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_syukko.Location = new System.Drawing.Point(0, 393);
+            this.btn_syukko.Location = new System.Drawing.Point(0, 392);
             this.btn_syukko.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_syukko.Name = "btn_syukko";
             this.btn_syukko.Size = new System.Drawing.Size(200, 62);
@@ -504,7 +504,7 @@
             // lbl_memo
             // 
             this.lbl_memo.AutoSize = true;
-            this.lbl_memo.Location = new System.Drawing.Point(6, 163);
+            this.lbl_memo.Location = new System.Drawing.Point(7, 162);
             this.lbl_memo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_memo.Name = "lbl_memo";
             this.lbl_memo.Size = new System.Drawing.Size(42, 17);
@@ -524,8 +524,8 @@
             // 
             // txt_memo
             // 
-            this.txt_memo.Location = new System.Drawing.Point(130, 162);
-            this.txt_memo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_memo.Location = new System.Drawing.Point(131, 162);
+            this.txt_memo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_memo.Name = "txt_memo";
             this.txt_memo.Size = new System.Drawing.Size(448, 24);
             this.txt_memo.TabIndex = 195;
@@ -583,8 +583,8 @@
             // 
             // txt_PrReleaseDate
             // 
-            this.txt_PrReleaseDate.Location = new System.Drawing.Point(794, 133);
-            this.txt_PrReleaseDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_PrReleaseDate.Location = new System.Drawing.Point(792, 133);
+            this.txt_PrReleaseDate.Margin = new System.Windows.Forms.Padding(2);
             this.txt_PrReleaseDate.Name = "txt_PrReleaseDate";
             this.txt_PrReleaseDate.Size = new System.Drawing.Size(446, 24);
             this.txt_PrReleaseDate.TabIndex = 193;
@@ -592,7 +592,7 @@
             // lbl_PrReleaseDate
             // 
             this.lbl_PrReleaseDate.AutoSize = true;
-            this.lbl_PrReleaseDate.Location = new System.Drawing.Point(670, 137);
+            this.lbl_PrReleaseDate.Location = new System.Drawing.Point(670, 136);
             this.lbl_PrReleaseDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_PrReleaseDate.Name = "lbl_PrReleaseDate";
             this.lbl_PrReleaseDate.Size = new System.Drawing.Size(59, 17);
@@ -601,8 +601,8 @@
             // 
             // txt_PrColor
             // 
-            this.txt_PrColor.Location = new System.Drawing.Point(794, 107);
-            this.txt_PrColor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_PrColor.Location = new System.Drawing.Point(792, 106);
+            this.txt_PrColor.Margin = new System.Windows.Forms.Padding(2);
             this.txt_PrColor.Name = "txt_PrColor";
             this.txt_PrColor.Size = new System.Drawing.Size(446, 24);
             this.txt_PrColor.TabIndex = 191;
@@ -619,8 +619,8 @@
             // 
             // txt_PrModelNumber
             // 
-            this.txt_PrModelNumber.Location = new System.Drawing.Point(794, 78);
-            this.txt_PrModelNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_PrModelNumber.Location = new System.Drawing.Point(792, 79);
+            this.txt_PrModelNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txt_PrModelNumber.Name = "txt_PrModelNumber";
             this.txt_PrModelNumber.Size = new System.Drawing.Size(446, 24);
             this.txt_PrModelNumber.TabIndex = 189;
@@ -628,7 +628,7 @@
             // lbl_PrModelNumber
             // 
             this.lbl_PrModelNumber.AutoSize = true;
-            this.lbl_PrModelNumber.Location = new System.Drawing.Point(670, 82);
+            this.lbl_PrModelNumber.Location = new System.Drawing.Point(670, 81);
             this.lbl_PrModelNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_PrModelNumber.Name = "lbl_PrModelNumber";
             this.lbl_PrModelNumber.Size = new System.Drawing.Size(42, 17);
@@ -637,8 +637,8 @@
             // 
             // txt_ScID
             // 
-            this.txt_ScID.Location = new System.Drawing.Point(794, 52);
-            this.txt_ScID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_ScID.Location = new System.Drawing.Point(792, 52);
+            this.txt_ScID.Margin = new System.Windows.Forms.Padding(2);
             this.txt_ScID.Name = "txt_ScID";
             this.txt_ScID.Size = new System.Drawing.Size(446, 24);
             this.txt_ScID.TabIndex = 187;
@@ -646,7 +646,7 @@
             // lbl_ScID
             // 
             this.lbl_ScID.AutoSize = true;
-            this.lbl_ScID.Location = new System.Drawing.Point(670, 53);
+            this.lbl_ScID.Location = new System.Drawing.Point(670, 54);
             this.lbl_ScID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ScID.Name = "lbl_ScID";
             this.lbl_ScID.Size = new System.Drawing.Size(80, 17);
@@ -655,8 +655,8 @@
             // 
             // txt_PrSafetyStock
             // 
-            this.txt_PrSafetyStock.Location = new System.Drawing.Point(794, 23);
-            this.txt_PrSafetyStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_PrSafetyStock.Location = new System.Drawing.Point(792, 25);
+            this.txt_PrSafetyStock.Margin = new System.Windows.Forms.Padding(2);
             this.txt_PrSafetyStock.Name = "txt_PrSafetyStock";
             this.txt_PrSafetyStock.Size = new System.Drawing.Size(446, 24);
             this.txt_PrSafetyStock.TabIndex = 185;
@@ -664,7 +664,7 @@
             // lbl_PrSafetyStock
             // 
             this.lbl_PrSafetyStock.AutoSize = true;
-            this.lbl_PrSafetyStock.Location = new System.Drawing.Point(670, 27);
+            this.lbl_PrSafetyStock.Location = new System.Drawing.Point(670, 28);
             this.lbl_PrSafetyStock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_PrSafetyStock.Name = "lbl_PrSafetyStock";
             this.lbl_PrSafetyStock.Size = new System.Drawing.Size(93, 17);
@@ -673,8 +673,8 @@
             // 
             // txt_PrJCode
             // 
-            this.txt_PrJCode.Location = new System.Drawing.Point(130, 133);
-            this.txt_PrJCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_PrJCode.Location = new System.Drawing.Point(131, 134);
+            this.txt_PrJCode.Margin = new System.Windows.Forms.Padding(2);
             this.txt_PrJCode.Name = "txt_PrJCode";
             this.txt_PrJCode.Size = new System.Drawing.Size(448, 24);
             this.txt_PrJCode.TabIndex = 183;
@@ -682,7 +682,7 @@
             // lbl_PrJCode
             // 
             this.lbl_PrJCode.AutoSize = true;
-            this.lbl_PrJCode.Location = new System.Drawing.Point(6, 137);
+            this.lbl_PrJCode.Location = new System.Drawing.Point(7, 136);
             this.lbl_PrJCode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_PrJCode.Name = "lbl_PrJCode";
             this.lbl_PrJCode.Size = new System.Drawing.Size(89, 17);
@@ -691,8 +691,8 @@
             // 
             // txt_Price
             // 
-            this.txt_Price.Location = new System.Drawing.Point(130, 107);
-            this.txt_Price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Price.Location = new System.Drawing.Point(131, 106);
+            this.txt_Price.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.Size = new System.Drawing.Size(448, 24);
             this.txt_Price.TabIndex = 181;
@@ -700,7 +700,7 @@
             // lbl_Price
             // 
             this.lbl_Price.AutoSize = true;
-            this.lbl_Price.Location = new System.Drawing.Point(6, 108);
+            this.lbl_Price.Location = new System.Drawing.Point(7, 109);
             this.lbl_Price.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Price.Name = "lbl_Price";
             this.lbl_Price.Size = new System.Drawing.Size(42, 17);
@@ -709,8 +709,8 @@
             // 
             // txt_PrName
             // 
-            this.txt_PrName.Location = new System.Drawing.Point(130, 78);
-            this.txt_PrName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_PrName.Location = new System.Drawing.Point(131, 79);
+            this.txt_PrName.Margin = new System.Windows.Forms.Padding(2);
             this.txt_PrName.Name = "txt_PrName";
             this.txt_PrName.Size = new System.Drawing.Size(448, 24);
             this.txt_PrName.TabIndex = 179;
@@ -718,7 +718,7 @@
             // blb_PrName
             // 
             this.blb_PrName.AutoSize = true;
-            this.blb_PrName.Location = new System.Drawing.Point(6, 82);
+            this.blb_PrName.Location = new System.Drawing.Point(7, 81);
             this.blb_PrName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.blb_PrName.Name = "blb_PrName";
             this.blb_PrName.Size = new System.Drawing.Size(59, 17);
@@ -727,8 +727,8 @@
             // 
             // txt_MaID
             // 
-            this.txt_MaID.Location = new System.Drawing.Point(130, 52);
-            this.txt_MaID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_MaID.Location = new System.Drawing.Point(131, 52);
+            this.txt_MaID.Margin = new System.Windows.Forms.Padding(2);
             this.txt_MaID.Name = "txt_MaID";
             this.txt_MaID.Size = new System.Drawing.Size(448, 24);
             this.txt_MaID.TabIndex = 177;
@@ -736,7 +736,7 @@
             // lbl_MaID
             // 
             this.lbl_MaID.AutoSize = true;
-            this.lbl_MaID.Location = new System.Drawing.Point(6, 53);
+            this.lbl_MaID.Location = new System.Drawing.Point(7, 54);
             this.lbl_MaID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_MaID.Name = "lbl_MaID";
             this.lbl_MaID.Size = new System.Drawing.Size(93, 17);
@@ -745,8 +745,8 @@
             // 
             // txt_PrID
             // 
-            this.txt_PrID.Location = new System.Drawing.Point(130, 23);
-            this.txt_PrID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_PrID.Location = new System.Drawing.Point(131, 24);
+            this.txt_PrID.Margin = new System.Windows.Forms.Padding(2);
             this.txt_PrID.Name = "txt_PrID";
             this.txt_PrID.Size = new System.Drawing.Size(448, 24);
             this.txt_PrID.TabIndex = 175;
@@ -754,7 +754,7 @@
             // lbl_PrID
             // 
             this.lbl_PrID.AutoSize = true;
-            this.lbl_PrID.Location = new System.Drawing.Point(6, 27);
+            this.lbl_PrID.Location = new System.Drawing.Point(7, 28);
             this.lbl_PrID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_PrID.Name = "lbl_PrID";
             this.lbl_PrID.Size = new System.Drawing.Size(63, 17);

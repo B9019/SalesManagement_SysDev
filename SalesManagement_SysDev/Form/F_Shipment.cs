@@ -826,6 +826,10 @@ namespace SalesManagement_SysDev
             txt_ShHidden.Text = "";
             txt_memo.Text = "";
         } //接続先DBの情報をセット
-       
+
+        private void txt_ArQuantity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
