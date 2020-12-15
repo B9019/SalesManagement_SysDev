@@ -83,7 +83,9 @@
             this.txt_ClPostal.Location = new System.Drawing.Point(595, 19);
             this.txt_ClPostal.Name = "txt_ClPostal";
             this.txt_ClPostal.Size = new System.Drawing.Size(336, 21);
-            this.txt_ClPostal.TabIndex = 79;
+
+            this.txt_ClPostal.TabIndex = 5;
+
             // 
             // lbl_ClPostal
             // 
@@ -126,14 +128,18 @@
             this.txt_ClAddress.Location = new System.Drawing.Point(98, 85);
             this.txt_ClAddress.Name = "txt_ClAddress";
             this.txt_ClAddress.Size = new System.Drawing.Size(337, 21);
-            this.txt_ClAddress.TabIndex = 77;
+
+            this.txt_ClAddress.TabIndex = 3;
+
             // 
             // txt_ClFAX
             // 
             this.txt_ClFAX.Location = new System.Drawing.Point(595, 41);
             this.txt_ClFAX.Name = "txt_ClFAX";
             this.txt_ClFAX.Size = new System.Drawing.Size(336, 21);
-            this.txt_ClFAX.TabIndex = 80;
+
+            this.txt_ClFAX.TabIndex = 6;
+
             // 
             // lbl_ClPhone
             // 
@@ -152,14 +158,18 @@
             this.txt_ClPhone.Location = new System.Drawing.Point(98, 107);
             this.txt_ClPhone.Name = "txt_ClPhone";
             this.txt_ClPhone.Size = new System.Drawing.Size(337, 21);
-            this.txt_ClPhone.TabIndex = 78;
+
+            this.txt_ClPhone.TabIndex = 4;
+
             // 
             // txt_ClName
             // 
             this.txt_ClName.Location = new System.Drawing.Point(98, 63);
             this.txt_ClName.Name = "txt_ClName";
             this.txt_ClName.Size = new System.Drawing.Size(337, 21);
-            this.txt_ClName.TabIndex = 76;
+
+            this.txt_ClName.TabIndex = 2;
+
             // 
             // lbl_ClName
             // 
@@ -179,7 +189,9 @@
             this.txt_Clmemo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Clmemo.Name = "txt_Clmemo";
             this.txt_Clmemo.Size = new System.Drawing.Size(337, 21);
-            this.txt_Clmemo.TabIndex = 195;
+
+            this.txt_Clmemo.TabIndex = 7;
+
             // 
             // btn_regist
             // 
@@ -189,7 +201,9 @@
             this.btn_regist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_regist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_regist.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
-            this.btn_regist.Location = new System.Drawing.Point(382, 9);
+
+            this.btn_regist.Location = new System.Drawing.Point(407, 11);
+
             this.btn_regist.Margin = new System.Windows.Forms.Padding(2);
             this.btn_regist.Name = "btn_regist";
             this.btn_regist.Size = new System.Drawing.Size(103, 41);
@@ -222,7 +236,9 @@
             this.btn_update.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_update.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
-            this.btn_update.Location = new System.Drawing.Point(489, 9);
+
+            this.btn_update.Location = new System.Drawing.Point(514, 11);
+
             this.btn_update.Margin = new System.Windows.Forms.Padding(2);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(103, 41);
@@ -282,7 +298,9 @@
             this.btn_all.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_all.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_all.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
-            this.btn_all.Location = new System.Drawing.Point(596, 9);
+
+            this.btn_all.Location = new System.Drawing.Point(621, 11);
+
             this.btn_all.Margin = new System.Windows.Forms.Padding(2);
             this.btn_all.Name = "btn_all";
             this.btn_all.Size = new System.Drawing.Size(103, 41);
@@ -324,14 +342,18 @@
             this.txt_ClHidden.Multiline = true;
             this.txt_ClHidden.Name = "txt_ClHidden";
             this.txt_ClHidden.Size = new System.Drawing.Size(815, 19);
-            this.txt_ClHidden.TabIndex = 90;
+
+            this.txt_ClHidden.TabIndex = 8;
+
             this.txt_ClHidden.Text = "非表示理由を入力(50文字)";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
-            this.label1.Location = new System.Drawing.Point(164, 14);
+
+            this.label1.Location = new System.Drawing.Point(181, 14);
+
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 14);
@@ -368,7 +390,9 @@
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Window;
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(230, 13);
+
+            this.textBox1.Location = new System.Drawing.Point(253, 12);
+
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(42, 19);
             this.textBox1.TabIndex = 267;
@@ -378,7 +402,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
-            this.label2.Location = new System.Drawing.Point(164, 33);
+
+            this.label2.Location = new System.Drawing.Point(181, 36);
+
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 14);
@@ -428,7 +454,9 @@
             this.txt_SoID.Location = new System.Drawing.Point(98, 41);
             this.txt_SoID.Name = "txt_SoID";
             this.txt_SoID.Size = new System.Drawing.Size(337, 21);
-            this.txt_SoID.TabIndex = 81;
+
+            this.txt_SoID.TabIndex = 1;
+
             // 
             // btn_employee
             // 
@@ -454,7 +482,9 @@
             this.btn_print.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_print.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
-            this.btn_print.Location = new System.Drawing.Point(703, 9);
+
+            this.btn_print.Location = new System.Drawing.Point(728, 11);
+
             this.btn_print.Margin = new System.Windows.Forms.Padding(2);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(103, 41);
@@ -486,7 +516,9 @@
             this.btn_delete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
-            this.btn_delete.Location = new System.Drawing.Point(809, 9);
+
+            this.btn_delete.Location = new System.Drawing.Point(835, 11);
+
             this.btn_delete.Margin = new System.Windows.Forms.Padding(2);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(103, 41);
@@ -501,7 +533,9 @@
             this.txt_ClID.Location = new System.Drawing.Point(98, 19);
             this.txt_ClID.Name = "txt_ClID";
             this.txt_ClID.Size = new System.Drawing.Size(337, 21);
-            this.txt_ClID.TabIndex = 84;
+
+            this.txt_ClID.TabIndex = 0;
+
             // 
             // btn_hattyu
             // 
@@ -543,7 +577,9 @@
             this.btn_clear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clear.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
-            this.btn_clear.Location = new System.Drawing.Point(916, 9);
+
+            this.btn_clear.Location = new System.Drawing.Point(942, 11);
+
             this.btn_clear.Margin = new System.Windows.Forms.Padding(2);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(103, 41);
@@ -576,7 +612,9 @@
             this.btn_search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_search.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
-            this.btn_search.Location = new System.Drawing.Point(275, 9);
+
+            this.btn_search.Location = new System.Drawing.Point(300, 11);
+
             this.btn_search.Margin = new System.Windows.Forms.Padding(2);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(103, 41);
@@ -605,7 +643,9 @@
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Window;
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(230, 32);
+
+            this.textBox2.Location = new System.Drawing.Point(253, 33);
+
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(42, 19);
             this.textBox2.TabIndex = 268;
@@ -667,7 +707,9 @@
             this.groupBox3.Location = new System.Drawing.Point(156, 73);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(936, 621);
-            this.groupBox3.TabIndex = 269;
+
+            this.groupBox3.TabIndex = 0;
+
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "基礎項目";
             // 
