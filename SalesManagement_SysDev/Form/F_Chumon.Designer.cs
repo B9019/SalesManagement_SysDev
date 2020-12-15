@@ -72,6 +72,12 @@
             this.lbl_memo = new System.Windows.Forms.Label();
             this.chk_hide_FLG = new System.Windows.Forms.CheckBox();
             this.dataGridView_Chumon = new System.Windows.Forms.DataGridView();
+            this.txt_ChDetailID = new System.Windows.Forms.TextBox();
+            this.lbl_ChDetailID = new System.Windows.Forms.Label();
+            this.lbl_ArQuantity = new System.Windows.Forms.Label();
+            this.txt_ArQuantity = new System.Windows.Forms.TextBox();
+            this.lbl_PrID = new System.Windows.Forms.Label();
+            this.txt_PrID = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon)).BeginInit();
             this.SuspendLayout();
@@ -570,6 +576,12 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.lbl_ArQuantity);
+            this.groupBox3.Controls.Add(this.txt_ArQuantity);
+            this.groupBox3.Controls.Add(this.lbl_PrID);
+            this.groupBox3.Controls.Add(this.txt_PrID);
+            this.groupBox3.Controls.Add(this.txt_ChDetailID);
+            this.groupBox3.Controls.Add(this.lbl_ChDetailID);
             this.groupBox3.Controls.Add(this.txt_memo);
             this.groupBox3.Controls.Add(this.txt_ChHidden);
             this.groupBox3.Controls.Add(this.lbl_ArHidden);
@@ -654,6 +666,65 @@
             this.dataGridView_Chumon.Name = "dataGridView_Chumon";
             this.dataGridView_Chumon.Size = new System.Drawing.Size(924, 442);
             this.dataGridView_Chumon.TabIndex = 173;
+            // 
+            // txt_ChDetailID
+            // 
+            this.txt_ChDetailID.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_ChDetailID.Location = new System.Drawing.Point(594, 41);
+            this.txt_ChDetailID.Name = "txt_ChDetailID";
+            this.txt_ChDetailID.Size = new System.Drawing.Size(336, 21);
+            this.txt_ChDetailID.TabIndex = 294;
+            // 
+            // lbl_ChDetailID
+            // 
+            this.lbl_ChDetailID.AutoSize = true;
+            this.lbl_ChDetailID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_ChDetailID.Location = new System.Drawing.Point(501, 43);
+            this.lbl_ChDetailID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ChDetailID.Name = "lbl_ChDetailID";
+            this.lbl_ChDetailID.Size = new System.Drawing.Size(81, 14);
+            this.lbl_ChDetailID.TabIndex = 295;
+            this.lbl_ChDetailID.Text = "入荷詳細ID";
+            // 
+            // lbl_ArQuantity
+            // 
+            this.lbl_ArQuantity.AutoSize = true;
+            this.lbl_ArQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_ArQuantity.Location = new System.Drawing.Point(502, 86);
+            this.lbl_ArQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ArQuantity.Name = "lbl_ArQuantity";
+            this.lbl_ArQuantity.Size = new System.Drawing.Size(35, 14);
+            this.lbl_ArQuantity.TabIndex = 299;
+            this.lbl_ArQuantity.Text = "数量";
+            // 
+            // txt_ArQuantity
+            // 
+            this.txt_ArQuantity.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_ArQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_ArQuantity.Location = new System.Drawing.Point(595, 84);
+            this.txt_ArQuantity.Name = "txt_ArQuantity";
+            this.txt_ArQuantity.Size = new System.Drawing.Size(336, 21);
+            this.txt_ArQuantity.TabIndex = 298;
+            // 
+            // lbl_PrID
+            // 
+            this.lbl_PrID.AutoSize = true;
+            this.lbl_PrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_PrID.Location = new System.Drawing.Point(502, 64);
+            this.lbl_PrID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_PrID.Name = "lbl_PrID";
+            this.lbl_PrID.Size = new System.Drawing.Size(53, 14);
+            this.lbl_PrID.TabIndex = 297;
+            this.lbl_PrID.Text = "商品ID";
+            // 
+            // txt_PrID
+            // 
+            this.txt_PrID.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_PrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_PrID.Location = new System.Drawing.Point(595, 62);
+            this.txt_PrID.Name = "txt_PrID";
+            this.txt_PrID.Size = new System.Drawing.Size(336, 21);
+            this.txt_PrID.TabIndex = 296;
             // 
             // F_Chumon
             // 
@@ -743,5 +814,11 @@
         private System.Windows.Forms.DataGridView dataGridView_Chumon;
         private System.Windows.Forms.TextBox txt_ChHidden;
         private System.Windows.Forms.TextBox txt_memo;
+        private System.Windows.Forms.TextBox txt_ChDetailID;
+        private System.Windows.Forms.Label lbl_ChDetailID;
+        private System.Windows.Forms.Label lbl_ArQuantity;
+        private System.Windows.Forms.TextBox txt_ArQuantity;
+        private System.Windows.Forms.Label lbl_PrID;
+        private System.Windows.Forms.TextBox txt_PrID;
     }
 }

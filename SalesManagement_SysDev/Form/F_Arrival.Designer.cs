@@ -72,6 +72,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_order = new System.Windows.Forms.Button();
             this.btn_hattyu = new System.Windows.Forms.Button();
+            this.lbl_ArDetailID = new System.Windows.Forms.Label();
+            this.txt_ArDetailID = new System.Windows.Forms.TextBox();
+            this.lbl_PrID = new System.Windows.Forms.Label();
+            this.txt_PrID = new System.Windows.Forms.TextBox();
+            this.lbl_ArQuantity = new System.Windows.Forms.Label();
+            this.txt_ArQuantity = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Arrival)).BeginInit();
             this.SuspendLayout();
@@ -235,6 +241,12 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.lbl_ArQuantity);
+            this.groupBox3.Controls.Add(this.txt_ArQuantity);
+            this.groupBox3.Controls.Add(this.lbl_PrID);
+            this.groupBox3.Controls.Add(this.txt_PrID);
+            this.groupBox3.Controls.Add(this.lbl_ArDetailID);
+            this.groupBox3.Controls.Add(this.txt_ArDetailID);
             this.groupBox3.Controls.Add(this.txt_Armemo);
             this.groupBox3.Controls.Add(this.lbl_ArHidden);
             this.groupBox3.Controls.Add(this.lbl_memo);
@@ -675,6 +687,66 @@
             this.btn_hattyu.UseVisualStyleBackColor = false;
             this.btn_hattyu.Click += new System.EventHandler(this.btn_hattyu_Click);
             // 
+            // lbl_ArDetailID
+            // 
+            this.lbl_ArDetailID.AutoSize = true;
+            this.lbl_ArDetailID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_ArDetailID.Location = new System.Drawing.Point(502, 43);
+            this.lbl_ArDetailID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ArDetailID.Name = "lbl_ArDetailID";
+            this.lbl_ArDetailID.Size = new System.Drawing.Size(81, 14);
+            this.lbl_ArDetailID.TabIndex = 243;
+            this.lbl_ArDetailID.Text = "入荷詳細ID";
+            // 
+            // txt_ArDetailID
+            // 
+            this.txt_ArDetailID.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_ArDetailID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_ArDetailID.Location = new System.Drawing.Point(595, 41);
+            this.txt_ArDetailID.Name = "txt_ArDetailID";
+            this.txt_ArDetailID.Size = new System.Drawing.Size(336, 21);
+            this.txt_ArDetailID.TabIndex = 242;
+            // 
+            // lbl_PrID
+            // 
+            this.lbl_PrID.AutoSize = true;
+            this.lbl_PrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_PrID.Location = new System.Drawing.Point(502, 65);
+            this.lbl_PrID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_PrID.Name = "lbl_PrID";
+            this.lbl_PrID.Size = new System.Drawing.Size(53, 14);
+            this.lbl_PrID.TabIndex = 245;
+            this.lbl_PrID.Text = "商品ID";
+            // 
+            // txt_PrID
+            // 
+            this.txt_PrID.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_PrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_PrID.Location = new System.Drawing.Point(595, 63);
+            this.txt_PrID.Name = "txt_PrID";
+            this.txt_PrID.Size = new System.Drawing.Size(336, 21);
+            this.txt_PrID.TabIndex = 244;
+            // 
+            // lbl_ArQuantity
+            // 
+            this.lbl_ArQuantity.AutoSize = true;
+            this.lbl_ArQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_ArQuantity.Location = new System.Drawing.Point(502, 87);
+            this.lbl_ArQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ArQuantity.Name = "lbl_ArQuantity";
+            this.lbl_ArQuantity.Size = new System.Drawing.Size(35, 14);
+            this.lbl_ArQuantity.TabIndex = 247;
+            this.lbl_ArQuantity.Text = "数量";
+            // 
+            // txt_ArQuantity
+            // 
+            this.txt_ArQuantity.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_ArQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_ArQuantity.Location = new System.Drawing.Point(595, 85);
+            this.txt_ArQuantity.Name = "txt_ArQuantity";
+            this.txt_ArQuantity.Size = new System.Drawing.Size(336, 21);
+            this.txt_ArQuantity.TabIndex = 246;
+            // 
             // F_Arrival
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -764,6 +836,12 @@
         private System.Windows.Forms.TextBox txt_OrID;
         private System.Windows.Forms.Label lbl_ClID;
         private System.Windows.Forms.TextBox txt_ClID;
+        private System.Windows.Forms.Label lbl_ArDetailID;
+        private System.Windows.Forms.TextBox txt_ArDetailID;
+        private System.Windows.Forms.Label lbl_PrID;
+        private System.Windows.Forms.TextBox txt_PrID;
+        private System.Windows.Forms.Label lbl_ArQuantity;
+        private System.Windows.Forms.TextBox txt_ArQuantity;
     }
 
 

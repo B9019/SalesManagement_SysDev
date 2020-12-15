@@ -68,6 +68,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_syukko = new System.Windows.Forms.Button();
             this.lbl_title = new System.Windows.Forms.Label();
+            this.lbl_ArQuantity = new System.Windows.Forms.Label();
+            this.txt_ArQuantity = new System.Windows.Forms.TextBox();
+            this.lbl_PrID = new System.Windows.Forms.Label();
+            this.txt_PrID = new System.Windows.Forms.TextBox();
+            this.txt_WaDetailID = new System.Windows.Forms.TextBox();
+            this.lbl_WaDetailID = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Warehousing)).BeginInit();
             this.SuspendLayout();
@@ -191,6 +197,12 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.lbl_ArQuantity);
+            this.groupBox3.Controls.Add(this.txt_ArQuantity);
+            this.groupBox3.Controls.Add(this.lbl_PrID);
+            this.groupBox3.Controls.Add(this.txt_PrID);
+            this.groupBox3.Controls.Add(this.txt_WaDetailID);
+            this.groupBox3.Controls.Add(this.lbl_WaDetailID);
             this.groupBox3.Controls.Add(this.txt_WaHidden);
             this.groupBox3.Controls.Add(this.txt_memo);
             this.groupBox3.Controls.Add(this.lbl_ArHidden);
@@ -614,6 +626,65 @@
             this.lbl_title.TabIndex = 246;
             this.lbl_title.Text = "入庫管理画面";
             // 
+            // lbl_ArQuantity
+            // 
+            this.lbl_ArQuantity.AutoSize = true;
+            this.lbl_ArQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_ArQuantity.Location = new System.Drawing.Point(474, 66);
+            this.lbl_ArQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ArQuantity.Name = "lbl_ArQuantity";
+            this.lbl_ArQuantity.Size = new System.Drawing.Size(35, 14);
+            this.lbl_ArQuantity.TabIndex = 317;
+            this.lbl_ArQuantity.Text = "数量";
+            // 
+            // txt_ArQuantity
+            // 
+            this.txt_ArQuantity.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_ArQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_ArQuantity.Location = new System.Drawing.Point(567, 64);
+            this.txt_ArQuantity.Name = "txt_ArQuantity";
+            this.txt_ArQuantity.Size = new System.Drawing.Size(336, 21);
+            this.txt_ArQuantity.TabIndex = 316;
+            // 
+            // lbl_PrID
+            // 
+            this.lbl_PrID.AutoSize = true;
+            this.lbl_PrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_PrID.Location = new System.Drawing.Point(474, 44);
+            this.lbl_PrID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_PrID.Name = "lbl_PrID";
+            this.lbl_PrID.Size = new System.Drawing.Size(53, 14);
+            this.lbl_PrID.TabIndex = 315;
+            this.lbl_PrID.Text = "商品ID";
+            // 
+            // txt_PrID
+            // 
+            this.txt_PrID.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_PrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_PrID.Location = new System.Drawing.Point(567, 42);
+            this.txt_PrID.Name = "txt_PrID";
+            this.txt_PrID.Size = new System.Drawing.Size(336, 21);
+            this.txt_PrID.TabIndex = 314;
+            // 
+            // txt_WaDetailID
+            // 
+            this.txt_WaDetailID.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_WaDetailID.Location = new System.Drawing.Point(566, 21);
+            this.txt_WaDetailID.Name = "txt_WaDetailID";
+            this.txt_WaDetailID.Size = new System.Drawing.Size(336, 21);
+            this.txt_WaDetailID.TabIndex = 312;
+            // 
+            // lbl_WaDetailID
+            // 
+            this.lbl_WaDetailID.AutoSize = true;
+            this.lbl_WaDetailID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_WaDetailID.Location = new System.Drawing.Point(473, 23);
+            this.lbl_WaDetailID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_WaDetailID.Name = "lbl_WaDetailID";
+            this.lbl_WaDetailID.Size = new System.Drawing.Size(81, 14);
+            this.lbl_WaDetailID.TabIndex = 313;
+            this.lbl_WaDetailID.Text = "入庫詳細ID";
+            // 
             // F_Warehousing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -699,5 +770,11 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btn_syukko;
         private System.Windows.Forms.Label lbl_title;
+        private System.Windows.Forms.Label lbl_ArQuantity;
+        private System.Windows.Forms.TextBox txt_ArQuantity;
+        private System.Windows.Forms.Label lbl_PrID;
+        private System.Windows.Forms.TextBox txt_PrID;
+        private System.Windows.Forms.TextBox txt_WaDetailID;
+        private System.Windows.Forms.Label lbl_WaDetailID;
     }
 }
