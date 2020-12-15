@@ -194,14 +194,16 @@ namespace SalesManagement_SysDev
         //
         private T_Warehousing Generate_Data_AtRegistration()
         {
+            if(chk_hide_FLG.Checked == false)
+            {
+                txt_WaHidden.Text = "";
+            }
             return new T_Warehousing
             {
                 WaID = int.Parse(txt_WaID.Text),
                 HaID = int.Parse(txt_HaID.Text),
                 EmID = int.Parse(txt_EmID.Text),
-                WaDate = DateTime.Parse(txt_WaDate.Text),
-                WaHidden = txt_WaHidden.Text
-
+                WaDate = DateTime.Parse(txt_WaDate.Text)
             };
 
         }
@@ -226,6 +228,10 @@ namespace SalesManagement_SysDev
                 return false;
             }
             // 画面更新
+            if(chk_hide_FLG.Checked == false)
+            {
+                txt_WaHidden.Text = "非表示理由を入力(50文字)";
+            }
             RefreshDataGridView();
             txt_WaID.Focus();
 
@@ -346,12 +352,16 @@ namespace SalesManagement_SysDev
         }
         //
         //
-        // 4.2.2 カテゴリー情報作成
+        // 4.2.2 入庫情報作成
         //
         //
         // out      Category : Categoryデータ
         private T_Warehousing GenerateDataAtUpdate()
         {
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_WaHidden.Text = "";
+            }
             return new T_Warehousing
             {
                 WaID = int.Parse(txt_WaID.Text),
@@ -384,6 +394,11 @@ namespace SalesManagement_SysDev
             }
 
             // 表示データ更新 & 入力クリア
+            // 画面更新
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_WaHidden.Text = "非表示理由を入力(50文字)";
+            }
             RefreshDataGridView();
             txt_WaID.Focus();
 
@@ -729,6 +744,19 @@ namespace SalesManagement_SysDev
             txt_WaDate.Text = "";
             txt_WaHidden.Text = "";
             txt_memo.Text = "";
+        }
+
+        private void Checked_Warehousing_HideFlag(object sender, EventArgs e)
+        {
+            if (chk_hide_FLG.Checked == true)
+                txt_WaHidden.Text = "";
+            else if(chk_hide_FLG.Checked == false)
+            {
+                txt_WaHidden.Text = "非表示理由を入力(50文字)";
+            }
+            return ;
+
+
         }
     }
     }
