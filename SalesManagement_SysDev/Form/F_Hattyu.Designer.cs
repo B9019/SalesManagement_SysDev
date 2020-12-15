@@ -111,42 +111,52 @@
             // txt_HaDate
             // 
             this.txt_HaDate.BackColor = System.Drawing.SystemColors.Window;
+
             this.txt_HaDate.Location = new System.Drawing.Point(131, 106);
             this.txt_HaDate.Margin = new System.Windows.Forms.Padding(4);
             this.txt_HaDate.Name = "txt_HaDate";
             this.txt_HaDate.Size = new System.Drawing.Size(448, 24);
             this.txt_HaDate.TabIndex = 77;
+
             // 
             // txt_MaID
             // 
             this.txt_MaID.Location = new System.Drawing.Point(131, 51);
             this.txt_MaID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MaID.Name = "txt_MaID";
+
             this.txt_MaID.Size = new System.Drawing.Size(448, 24);
             this.txt_MaID.TabIndex = 76;
+
             // 
             // txt_EmID
             // 
             this.txt_EmID.BackColor = System.Drawing.SystemColors.Window;
+
             this.txt_EmID.Location = new System.Drawing.Point(131, 79);
             this.txt_EmID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_EmID.Name = "txt_EmID";
             this.txt_EmID.Size = new System.Drawing.Size(448, 24);
             this.txt_EmID.TabIndex = 75;
+
             // 
             // txt_HaID
             // 
             this.txt_HaID.Location = new System.Drawing.Point(131, 24);
             this.txt_HaID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_HaID.Name = "txt_HaID";
+
             this.txt_HaID.Size = new System.Drawing.Size(448, 24);
             this.txt_HaID.TabIndex = 74;
+
             // 
             // lbl_HaID
             // 
             this.lbl_HaID.AutoSize = true;
             this.lbl_HaID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.lbl_HaID.Location = new System.Drawing.Point(7, 28);
+
             this.lbl_HaID.Name = "lbl_HaID";
             this.lbl_HaID.Size = new System.Drawing.Size(69, 17);
             this.lbl_HaID.TabIndex = 73;
@@ -159,8 +169,10 @@
             this.txt_HaHidden.Margin = new System.Windows.Forms.Padding(4);
             this.txt_HaHidden.Multiline = true;
             this.txt_HaHidden.Name = "txt_HaHidden";
+
             this.txt_HaHidden.Size = new System.Drawing.Size(1083, 23);
             this.txt_HaHidden.TabIndex = 242;
+
             this.txt_HaHidden.Text = "非表示理由を入力(50文字)";
             // 
             // btn_hattyu
@@ -201,8 +213,10 @@
             // 
             this.txt_SoID.BackColor = System.Drawing.SystemColors.Window;
             this.txt_SoID.Enabled = false;
+
             this.txt_SoID.Location = new System.Drawing.Point(307, 16);
             this.txt_SoID.Margin = new System.Windows.Forms.Padding(4);
+
             this.txt_SoID.Name = "txt_SoID";
             this.txt_SoID.Size = new System.Drawing.Size(55, 22);
             this.txt_SoID.TabIndex = 246;
@@ -212,7 +226,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
+
             this.label2.Location = new System.Drawing.Point(219, 41);
+
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 17);
             this.label2.TabIndex = 265;
@@ -222,7 +238,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
+
             this.label1.Location = new System.Drawing.Point(219, 18);
+
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 17);
             this.label1.TabIndex = 262;
@@ -270,8 +288,10 @@
             this.btn_regist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_regist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_regist.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
+
             this.btn_regist.Location = new System.Drawing.Point(509, 11);
             this.btn_regist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.btn_regist.Name = "btn_regist";
             this.btn_regist.Size = new System.Drawing.Size(137, 51);
             this.btn_regist.TabIndex = 260;
@@ -287,8 +307,10 @@
             this.btn_update.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_update.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
+
             this.btn_update.Location = new System.Drawing.Point(652, 11);
             this.btn_update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(137, 51);
             this.btn_update.TabIndex = 258;
@@ -425,8 +447,10 @@
             this.txt_Hamemo.Location = new System.Drawing.Point(131, 161);
             this.txt_Hamemo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Hamemo.Name = "txt_Hamemo";
+
             this.txt_Hamemo.Size = new System.Drawing.Size(448, 24);
             this.txt_Hamemo.TabIndex = 255;
+
             // 
             // lbl_memo
             // 
@@ -496,8 +520,10 @@
             this.btn_all.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_all.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_all.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
+
             this.btn_all.Location = new System.Drawing.Point(795, 11);
             this.btn_all.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.btn_all.Name = "btn_all";
             this.btn_all.Size = new System.Drawing.Size(137, 51);
             this.btn_all.TabIndex = 257;
@@ -530,8 +556,10 @@
             this.btn_print.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_print.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
+
             this.btn_print.Location = new System.Drawing.Point(937, 11);
             this.btn_print.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(137, 51);
             this.btn_print.TabIndex = 254;
@@ -563,8 +591,10 @@
             this.btn_delete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
+
             this.btn_delete.Location = new System.Drawing.Point(1079, 11);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(137, 51);
             this.btn_delete.TabIndex = 252;
@@ -596,8 +626,10 @@
             this.btn_clear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clear.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
+
             this.btn_clear.Location = new System.Drawing.Point(1221, 11);
             this.btn_clear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(137, 51);
             this.btn_clear.TabIndex = 250;
@@ -629,8 +661,10 @@
             this.btn_search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_search.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
+
             this.btn_search.Location = new System.Drawing.Point(367, 11);
             this.btn_search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(137, 51);
             this.btn_search.TabIndex = 249;
@@ -659,8 +693,10 @@
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Window;
             this.textBox1.Enabled = false;
+
             this.textBox1.Location = new System.Drawing.Point(307, 40);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(55, 22);
             this.textBox1.TabIndex = 247;
