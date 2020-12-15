@@ -142,7 +142,7 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
         //}
 
         // データ追加
-        // in   : M_Itemデータ
+        // in   : T_Orderデータ
         public string PostT_Order(T_Order regOrder)
         {
             using (var db1 = new SalesManagement_DevContext())
@@ -166,6 +166,32 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
 
             return string.Empty;
         }
+        // データ追加
+        // in   : T_OrderDetailデータ
+        public string PostT_OrderDetail(T_OrderDetail regOrderDetail)
+        {
+            using (var db1 = new SalesManagement_DevContext())
+            {
+                db1.T_OrderDetails.Add(regOrderDetail);
+                db1.Entry(regOrderDetail).State = EntityState.Added;
+                db1.SaveChanges();
+            }
+
+            //// ログ出力
+            //var operationLog = new OperationLog()
+            //{
+            //    EventRaisingTime = DateTime.Now,
+            //    Operator = _logonUser,
+            //    Table = "Order",
+            //    Command = "Post",
+            //    Data = T_OrderLogData(regOrder),
+            //    Comments = string.Empty
+            //};
+            //StaticCommon.PostOperationLog(operationLog);
+
+            return string.Empty;
+        }
+
         // データ更新
         // in   : M_Productデータ
         // out  : エラーメッセージ 

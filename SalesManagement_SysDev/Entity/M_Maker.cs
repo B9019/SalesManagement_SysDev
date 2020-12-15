@@ -29,8 +29,8 @@ namespace SalesManagement_SysDev
         public int MaFlag { get; set; }         //メーカ管理フラグ
 
         public String MaHidden { get; set; }	//非表示理由		
-        public virtual ICollection<M_Product> M_Products { get; set; }//ナビゲーションプロパティ
-        public virtual ICollection<T_Hattyu> T_Hattyus { get; set; }//ナビゲーションプロパティ
+        //public virtual ICollection<M_Product> M_Products { get; set; }//ナビゲーションプロパティ
+        //public virtual ICollection<T_Hattyu> T_Hattyus { get; set; }//ナビゲーションプロパティ
 
 
 

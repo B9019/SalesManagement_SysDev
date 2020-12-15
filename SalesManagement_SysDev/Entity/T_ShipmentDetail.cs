@@ -15,7 +15,7 @@ namespace SalesManagement_SysDev
         public int ShID { get; set; }           //出荷ID
         public int PrID { get; set; }           //商品ID
         public int ShDquantity { get; set; }    //数量
-        public virtual M_Product M_Product { get; set; }//ナビゲーションプロパティ
+        //public virtual M_Product M_Product { get; set; }//ナビゲーションプロパティ
 
 
 

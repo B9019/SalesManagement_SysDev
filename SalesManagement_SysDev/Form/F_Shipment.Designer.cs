@@ -72,6 +72,12 @@
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.btn_syukko = new System.Windows.Forms.Button();
             this.lbl_title = new System.Windows.Forms.Label();
+            this.lbl_ArQuantity = new System.Windows.Forms.Label();
+            this.txt_ArQuantity = new System.Windows.Forms.TextBox();
+            this.lbl_PrID = new System.Windows.Forms.Label();
+            this.txt_PrID = new System.Windows.Forms.TextBox();
+            this.txt_ShDetailID = new System.Windows.Forms.TextBox();
+            this.lbl_ShDetailID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Shipment)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -270,6 +276,12 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.lbl_ArQuantity);
+            this.groupBox3.Controls.Add(this.txt_ArQuantity);
+            this.groupBox3.Controls.Add(this.lbl_PrID);
+            this.groupBox3.Controls.Add(this.txt_PrID);
+            this.groupBox3.Controls.Add(this.txt_ShDetailID);
+            this.groupBox3.Controls.Add(this.lbl_ShDetailID);
             this.groupBox3.Controls.Add(this.txt_ShHidden);
             this.groupBox3.Controls.Add(this.txt_memo);
             this.groupBox3.Controls.Add(this.lbl_ArHidden);
@@ -408,6 +420,7 @@
             this.btn_regist.TabIndex = 261;
             this.btn_regist.Text = "登録";
             this.btn_regist.UseVisualStyleBackColor = false;
+            this.btn_regist.Click += new System.EventHandler(this.btn_regist_Click);
             // 
             // btn_client
             // 
@@ -440,6 +453,7 @@
             this.btn_update.TabIndex = 259;
             this.btn_update.Text = "更新";
             this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_arrival
             // 
@@ -472,6 +486,7 @@
             this.btn_all.TabIndex = 258;
             this.btn_all.Text = "一覧表示";
             this.btn_all.UseVisualStyleBackColor = false;
+            this.btn_all.Click += new System.EventHandler(this.btn_all_Click);
             // 
             // btn_employee
             // 
@@ -536,6 +551,7 @@
             this.btn_delete.TabIndex = 253;
             this.btn_delete.Text = "削除";
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_sale
             // 
@@ -568,6 +584,7 @@
             this.btn_clear.TabIndex = 251;
             this.btn_clear.Text = "入力クリア";
             this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_warehousing
             // 
@@ -600,6 +617,7 @@
             this.btn_search.TabIndex = 250;
             this.btn_search.Text = "検索";
             this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_sertch_Click);
             // 
             // btn_product
             // 
@@ -654,6 +672,65 @@
             this.lbl_title.Size = new System.Drawing.Size(183, 32);
             this.lbl_title.TabIndex = 246;
             this.lbl_title.Text = "出荷管理画面";
+            // 
+            // lbl_ArQuantity
+            // 
+            this.lbl_ArQuantity.AutoSize = true;
+            this.lbl_ArQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_ArQuantity.Location = new System.Drawing.Point(503, 84);
+            this.lbl_ArQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ArQuantity.Name = "lbl_ArQuantity";
+            this.lbl_ArQuantity.Size = new System.Drawing.Size(35, 14);
+            this.lbl_ArQuantity.TabIndex = 305;
+            this.lbl_ArQuantity.Text = "数量";
+            // 
+            // txt_ArQuantity
+            // 
+            this.txt_ArQuantity.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_ArQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_ArQuantity.Location = new System.Drawing.Point(596, 82);
+            this.txt_ArQuantity.Name = "txt_ArQuantity";
+            this.txt_ArQuantity.Size = new System.Drawing.Size(336, 21);
+            this.txt_ArQuantity.TabIndex = 304;
+            // 
+            // lbl_PrID
+            // 
+            this.lbl_PrID.AutoSize = true;
+            this.lbl_PrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_PrID.Location = new System.Drawing.Point(503, 62);
+            this.lbl_PrID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_PrID.Name = "lbl_PrID";
+            this.lbl_PrID.Size = new System.Drawing.Size(53, 14);
+            this.lbl_PrID.TabIndex = 303;
+            this.lbl_PrID.Text = "商品ID";
+            // 
+            // txt_PrID
+            // 
+            this.txt_PrID.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_PrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_PrID.Location = new System.Drawing.Point(596, 60);
+            this.txt_PrID.Name = "txt_PrID";
+            this.txt_PrID.Size = new System.Drawing.Size(336, 21);
+            this.txt_PrID.TabIndex = 302;
+            // 
+            // txt_ShDetailID
+            // 
+            this.txt_ShDetailID.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_ShDetailID.Location = new System.Drawing.Point(595, 39);
+            this.txt_ShDetailID.Name = "txt_ShDetailID";
+            this.txt_ShDetailID.Size = new System.Drawing.Size(336, 21);
+            this.txt_ShDetailID.TabIndex = 300;
+            // 
+            // lbl_ShDetailID
+            // 
+            this.lbl_ShDetailID.AutoSize = true;
+            this.lbl_ShDetailID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_ShDetailID.Location = new System.Drawing.Point(502, 41);
+            this.lbl_ShDetailID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ShDetailID.Name = "lbl_ShDetailID";
+            this.lbl_ShDetailID.Size = new System.Drawing.Size(81, 14);
+            this.lbl_ShDetailID.TabIndex = 301;
+            this.lbl_ShDetailID.Text = "出荷詳細ID";
             // 
             // F_Shipment
             // 
@@ -744,5 +821,11 @@
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Button btn_syukko;
         private System.Windows.Forms.Label lbl_title;
+        private System.Windows.Forms.Label lbl_ArQuantity;
+        private System.Windows.Forms.TextBox txt_ArQuantity;
+        private System.Windows.Forms.Label lbl_PrID;
+        private System.Windows.Forms.TextBox txt_PrID;
+        private System.Windows.Forms.TextBox txt_ShDetailID;
+        private System.Windows.Forms.Label lbl_ShDetailID;
     }
 }

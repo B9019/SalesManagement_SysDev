@@ -37,8 +37,9 @@ namespace SalesManagement_SysDev
         //// メッセージ処理モジュール
         private Messages _ms = new Messages();
 
-        //// データベース処理モジュール（T_Division）
+        //// データベース処理モジュール（T_Order）
         private T_OrderContents _Or = new T_OrderContents();
+
 
         // ***** プロパティ定義
 
@@ -107,9 +108,12 @@ namespace SalesManagement_SysDev
 
             // 8.1.2妥当な受注情報作成
             var regOrder = Generate_Data_AtRegistration();
+            var regOrderDetail = Generate_Data_AtRegistration_Detail();
 
             // 8.1.3受注情報登録
             if (!Generate_Registration(regOrder))
+
+            if(!Generate_Registration_Detail(regOrderDetail))
                 return;
         }
         // 
@@ -145,13 +149,6 @@ namespace SalesManagement_SysDev
                 txt_EmID.Focus();
                 return false;
             }
-            ////　JANコード
-            //if (String.IsNullOrEmpty(txt_PrJCode.Text))
-            //{
-            //    MessageBox.Show("JANコードは必須項目です");         //画面デザインでJANコードが必須項目になっているが、JANコードはNULL可なので必要ない。画面の訂正必要。
-            //    txt_PrJCode.Focus();
-            //    return false;
-            //}
             // 顧客ID
             if (String.IsNullOrEmpty(txt_ClID.Text))
             {
@@ -171,6 +168,34 @@ namespace SalesManagement_SysDev
             {
                 MessageBox.Show("受注年月日は必須項目です");
                 txt_OrDate.Focus();
+                return false;
+            }
+            //　受注詳細ID
+            if (String.IsNullOrEmpty(txt_OrDetailID.Text))
+            {
+                MessageBox.Show("受注詳細IDは必須項目です");
+                txt_OrDetailID.Focus();
+                return false;
+            }
+            //　商品ID
+            if (String.IsNullOrEmpty(txt_PrID.Text))
+            {
+                MessageBox.Show("商品IDは必須項目です");
+                txt_PrID.Focus();
+                return false;
+            }
+            //　数量
+            if (String.IsNullOrEmpty(txt_OrQuantity.Text))
+            {
+                MessageBox.Show("数量は必須項目です");
+                txt_OrQuantity.Focus();
+                return false;
+            }
+            //　合計金額
+            if (String.IsNullOrEmpty(txt_OrTotalPrice.Text))
+            {
+                MessageBox.Show("合計金額は必須項目です");
+                txt_OrTotalPrice.Focus();
                 return false;
             }
             ///// 入力内容の形式チェック /////
@@ -219,7 +244,34 @@ namespace SalesManagement_SysDev
                 txt_OrDate.Focus();
                 return false;
             }
-
+            // 受注詳細ID
+            if (!_ic.NumericCheck(txt_OrDetailID.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_OrDetailID.Focus();
+                return false;
+            }
+            // 商品ID
+            if (!_ic.NumericCheck(txt_PrID.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_PrID.Focus();
+                return false;
+            }
+            // 数量
+            if (!_ic.NumericCheck(txt_OrQuantity.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_OrQuantity.Focus();
+                return false;
+            }
+            // 合計金額
+            if (!_ic.NumericCheck(txt_OrTotalPrice.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_OrTotalPrice.Focus();
+                return false;
+            }
             ////　文字チェック ////
 
             //　顧客担当者名の文字チェック
@@ -280,6 +332,34 @@ namespace SalesManagement_SysDev
                 txt_OrDate.Focus();
                 return false;
             }
+            // 受注詳細ID
+            if (txt_OrDetailID.TextLength > 6)
+            {
+                MessageBox.Show("受注詳細IDは6文字以下です");
+                txt_OrDetailID.Focus();
+                return false;
+            }
+            // 商品ID
+            if (txt_PrID.TextLength > 6)
+            {
+                MessageBox.Show("商品IDは6文字以下です");
+                txt_PrID.Focus();
+                return false;
+            }
+            // 数量
+            if (txt_OrQuantity.TextLength > 4)
+            {
+                MessageBox.Show("数量は4文字以下です");
+                txt_OrQuantity.Focus();
+                return false;
+            }
+            // 合計金額
+            if (txt_OrTotalPrice.TextLength > 10)
+            {
+                MessageBox.Show("合計金額は10文字以下です");
+                txt_OrTotalPrice.Focus();
+                return false;
+            }
             return true;
         }
         //
@@ -298,6 +378,19 @@ namespace SalesManagement_SysDev
                 ClCharge = txt_ClCharge.Text,
                 OrDate = DateTime.Parse(txt_OrDate.Text),
                 OrHidden = txt_OrHidden.Text,
+
+            };
+
+        }
+        private T_OrderDetail Generate_Data_AtRegistration_Detail()
+        {
+            return new T_OrderDetail
+            {
+                OrDetailID = int.Parse(txt_OrDetailID.Text),
+                OrID = int.Parse(txt_OrID.Text),
+                PrID = int.Parse(txt_PrID.Text),
+                OrQuantity = int.Parse(txt_OrQuantity.Text),
+                OrTotalPrice = int.Parse(txt_OrTotalPrice.Text)
             };
 
         }
@@ -328,6 +421,23 @@ namespace SalesManagement_SysDev
             return true;
 
         }
+        private bool Generate_Registration_Detail(T_OrderDetail regOrderDetail)
+        {
+            // 商品情報の登録
+            var errorMessage = _Or.PostT_OrderDetail(regOrderDetail);
+
+            if (errorMessage != string.Empty)
+            {
+                MessageBox.Show(errorMessage);
+                return false;
+            }
+            //// 画面更新
+            RefreshDataGridView();
+            return true;
+
+        }
+
+
         //// 表示データ更新
         //private void RefreshDataGridView()
         //{

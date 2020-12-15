@@ -183,16 +183,22 @@ namespace SalesManagement_SysDev
                 txt_OrID.Focus();
                 return false;
             }
-
-            ////　文字チェック ////
-
-            //　備考
-            if (!_ic.FullWidthCharCheck(txt_Armemo.Text, out errorMessage))
+            ////　日付型チェック ////
+            if (!_ic.DateFormCheck(txt_ArDate.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
-                txt_Armemo.Focus();
+                txt_ArDate.Focus();
                 return false;
             }
+            ////　文字チェック ////
+
+            ////　備考
+            //if (!_ic.FullWidthCharCheck(txt_Armemo.Text, out errorMessage))
+            //{
+            //    MessageBox.Show(errorMessage);
+            //    txt_Armemo.Focus();
+            //    return false;
+            //}
             // 　非表示理由の文字チェック
             if (!_ic.FullWidthCharCheck(txt_ArHidden.Text, out errorMessage))
             {
@@ -205,56 +211,56 @@ namespace SalesManagement_SysDev
             // 入荷ID
             if (txt_ArID.TextLength > 6)
             {
-                MessageBox.Show("メーカIDは6文字以下です");
+                MessageBox.Show("入荷IDは6文字以下です");
                 txt_ArID.Focus();
                 return false;
             }
             // 営業所ID
             if (txt_SoID.TextLength > 2)
             {
-                MessageBox.Show("商品IDは2文字以下です");
+                MessageBox.Show("営業所IDは2文字以下です");
                 txt_SoID.Focus();
                 return false;
             }
             // 社員ID
             if (txt_EmID.TextLength > 6)
             {
-                MessageBox.Show("商品名は6文字以下です");
+                MessageBox.Show("社員IDは6文字以下です");
                 txt_EmID.Focus();
                 return false;
             }
             //　顧客ID
             if (txt_ClID.TextLength > 4)
             {
-                MessageBox.Show("JANコードは4文字以下です");
+                MessageBox.Show("顧客IDは4文字以下です");
                 txt_ClID.Focus();
                 return false;
             }
             // 受注ID
             if (txt_OrID.TextLength > 6)
             {
-                MessageBox.Show("小分類IDは6文字以下です");
+                MessageBox.Show("受注IDは6文字以下です");
                 txt_OrID.Focus();
                 return false;
             }
             // 入荷年月日
-            if (txt_ArDate.TextLength > 9)
+            if (txt_ArDate.TextLength > 10)
             {
-                MessageBox.Show("型番は9文字以下です");
+                MessageBox.Show("入荷年月日は10文字以下です");
                 txt_ArDate.Focus();
                 return false;
             }
             //　備考
             if (txt_Armemo.TextLength > 30)
             {
-                MessageBox.Show("色は30文字以下です");
+                MessageBox.Show("備考は30文字以下です");
                 txt_Armemo.Focus();
                 return false;
             }
             //　非表示理由
             if (txt_ArHidden.TextLength > 30)
             {
-                MessageBox.Show("価格は30文字以下です");
+                MessageBox.Show("非表示理由は30文字以下です");
                 txt_ArHidden.Focus();
                 return false;
             }
@@ -468,7 +474,13 @@ namespace SalesManagement_SysDev
                 txt_OrID.Focus();
                 return false;
             }
-
+            ////　日付型チェック ////
+            if (!_ic.DateFormCheck(txt_ArDate.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_ArDate.Focus();
+                return false;
+            }
             ////　文字チェック ////
 
             //　備考
@@ -490,56 +502,56 @@ namespace SalesManagement_SysDev
             // 入荷ID
             if (txt_ArID.TextLength > 6)
             {
-                MessageBox.Show("メーカIDは6文字以下です");
+                MessageBox.Show("入荷IDは6文字以下です");
                 txt_ArID.Focus();
                 return false;
             }
             // 営業所ID
             if (txt_SoID.TextLength > 2)
             {
-                MessageBox.Show("商品IDは2文字以下です");
+                MessageBox.Show("営業所IDは2文字以下です");
                 txt_SoID.Focus();
                 return false;
             }
             // 社員ID
             if (txt_EmID.TextLength > 6)
             {
-                MessageBox.Show("商品名は6文字以下です");
+                MessageBox.Show("社員IDは6文字以下です");
                 txt_EmID.Focus();
                 return false;
             }
             //　顧客ID
             if (txt_ClID.TextLength > 4)
             {
-                MessageBox.Show("JANコードは4文字以下です");
+                MessageBox.Show("顧客IDは4文字以下です");
                 txt_ClID.Focus();
                 return false;
             }
             // 受注ID
             if (txt_OrID.TextLength > 6)
             {
-                MessageBox.Show("小分類IDは6文字以下です");
+                MessageBox.Show("受注IDは6文字以下です");
                 txt_OrID.Focus();
                 return false;
             }
             // 入荷年月日
             if (txt_ArDate.TextLength > 9)
             {
-                MessageBox.Show("型番は9文字以下です");
+                MessageBox.Show("入荷年月日は9文字以下です");
                 txt_ArDate.Focus();
                 return false;
             }
             //　備考
             if (txt_Armemo.TextLength > 30)
             {
-                MessageBox.Show("色は30文字以下です");
+                MessageBox.Show("備考は30文字以下です");
                 txt_Armemo.Focus();
                 return false;
             }
             //　非表示理由
             if (txt_ArHidden.TextLength > 30)
             {
-                MessageBox.Show("価格は30文字以下です");
+                MessageBox.Show("非表示理由は30文字以下です");
                 txt_ArHidden.Focus();
                 return false;
             }
@@ -601,27 +613,23 @@ namespace SalesManagement_SysDev
         }
         private void fncAllSelect()
         {
-            // データ取得&表示（データバインド）
-            _dispArrivalPaging = _Ar.GetDispArrivals();
-            dataGridView_Arrival.DataSource = _dispArrivalPaging;
-
-            ////全データの表示
-            //dataGridView_Product.Rows.Clear();
-            //try
-            //{
-            //    var context = new SalesManagement_DevContext();
-            //    foreach (var p in context.M_Products)
-            //    {
-            //        dataGridView_Product.Rows.Add(p.PrID, p.MaID, p.PrName, p.Price,p.PrJCode,p.);
-            //    }
-            //    context.Dispose();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            SqlConnection conn = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True";
+            //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
+            //command.Parameters["@PrFlag"].Value = "0";
+            command.CommandText = "SELECT * FROM T_Arrival WHERE ArFlag = 0 AND ";
+            command.Connection = conn;
+            conn.Open();
+            SqlDataReader rd = command.ExecuteReader();
+            dataGridView_Arrival.Rows.Clear();
+            while (rd.Read())
+            {
+                dataGridView_Arrival.Rows.Add(rd["ArID"], rd["SoID"], rd["EmID"], rd["ClID"],
+                    rd["OrID"], rd["ArDate"], rd["ArStateFlag"], rd["ArFlag"],
+                    rd["ArHidden"], rd["Armemo"]);
+            }
         }
-
         private void btn_search_Click(object sender, EventArgs e)
         {
             //接続先DBの情報をセット
@@ -720,7 +728,7 @@ namespace SalesManagement_SysDev
                 }
                 else if (txt_ArHidden.Text != "" && count == 7)
                 {
-                    command.Parameters.Add("@ArHiddenr", SqlDbType.VarChar);
+                    command.Parameters.Add("@ArHidden", SqlDbType.VarChar);
                     command.Parameters["@ArHidden"].Value = txt_ArHidden.Text;
                     //実行するSQL文の条件追加
                     command.CommandText = command.CommandText + AND + "ArHidden LIKE @ArHidden ";
@@ -753,7 +761,7 @@ namespace SalesManagement_SysDev
                     while (rd.Read())
                     {
                         dataGridView_Arrival.Rows.Add(rd["ArID"], rd["SoID"], rd["EmID"], rd["ClID"],
-                            rd["OrID"], rd["ArDate"], rd["Armemo"], rd["ArHidden"]);
+                            rd["OrID"], rd["ArDate"], rd["ArHidden"], rd["Armemo"]);
                     }
                 }
             }
@@ -765,92 +773,88 @@ namespace SalesManagement_SysDev
 
         }
 
-        private void btn_txt_clear_Click(object sender, EventArgs e)
-        {
-            ClearInput();
-        }
-        private void ログイン管理toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void btn_login_Click(object sender, EventArgs e)
         {
             F_login form_login = new F_login();
             form_login.ShowDialog();
         }
 
-        private void 顧客管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_client_Click(object sender, EventArgs e)
         {
             F_Client form_client = new F_Client();
             form_client.ShowDialog();
         }
 
-        private void 商品管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_product_Click(object sender, EventArgs e)
         {
             F_Product form_product = new F_Product();
             form_product.ShowDialog();
 
         }
 
-        private void 受注管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_order_Click(object sender, EventArgs e)
         {
             F_Order form_order = new F_Order();
             form_order.ShowDialog();
 
         }
 
-        private void 注文管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_chumon_Click(object sender, EventArgs e)
         {
             F_Chumon form_chumon = new F_Chumon();
             form_chumon.ShowDialog();
 
         }
 
-        private void 入荷管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_arrival_Click(object sender, EventArgs e)
         {
             F_Arrival form_arrival = new F_Arrival();
             form_arrival.ShowDialog();
 
         }
 
-        private void 出荷管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_syukka_Click(object sender, EventArgs e)
         {
             F_Shipment form_shipment = new F_Shipment();
             form_shipment.ShowDialog();
 
         }
 
-        private void 在庫管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_zaiko_Click(object sender, EventArgs e)
         {
             F_Stock form_stock = new F_Stock();
             form_stock.ShowDialog();
 
         }
 
-        private void 入庫管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_warehousing_Click(object sender, EventArgs e)
         {
             F_Warehousing form_warehousing = new F_Warehousing();
             form_warehousing.ShowDialog();
         }
 
-        private void 出庫管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_syukko_Click(object sender, EventArgs e)
         {
             F_Syukko form_syukko = new F_Syukko();
             form_syukko.ShowDialog();
 
         }
 
-        private void 社員管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_employee_Click(object sender, EventArgs e)
         {
             F_Employee form_employee = new F_Employee();
             form_employee.ShowDialog();
 
         }
 
-        private void 売上管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_sale_Click(object sender, EventArgs e)
         {
             F_Sale form_sale = new F_Sale();
             form_sale.ShowDialog();
 
         }
 
-        private void 発注管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_hattyu_Click(object sender, EventArgs e)
         {
             F_Hattyu form_hattyu = new F_Hattyu();
             form_hattyu.ShowDialog();
@@ -878,5 +882,42 @@ namespace SalesManagement_SysDev
             txt_Armemo.Text = Convert.ToString(id7);
             txt_ArHidden.Text = Convert.ToString(id8);
         }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            // データ行番号を取得
+            int ArID = int.Parse(txt_ArID.Text);
+            using (var dcm = new DeleteConfirmForm())
+            {
+                // 確認後、削除実行
+                if (dcm.ShowDialog(this) == DialogResult.OK) Delete(ArID);
+            }
+
+            // 表示データ更新 & 入力クリア
+            RefreshDataGridView();
+
+        }
+        // 削除処理
+        // in       ArID : 削除するArID
+        private void Delete(int ArID)
+        {
+            // _it.DeletePrID(int.Parse(PrID));
+            _Ar.DeleteArrival(ArID);
+
+            // データ取得&表示
+            dataGridView_Arrival.DataSource = _Ar.GetDispArrivals();
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            txt_ArID.Text = "";
+            txt_SoID.Text = "";
+            txt_EmID.Text = "";
+            txt_ClID.Text = "";
+            txt_OrID.Text = "";
+            txt_ArDate.Text = "";
+            txt_ArHidden.Text = "";
+        }
+
     }
 }

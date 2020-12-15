@@ -72,6 +72,8 @@
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.btn_syukko = new System.Windows.Forms.Button();
             this.lbl_title = new System.Windows.Forms.Label();
+
+
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Syukko)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -88,7 +90,9 @@
             // 
             // txt_memo
             // 
+
             this.txt_memo.Location = new System.Drawing.Point(98, 131);
+
             this.txt_memo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_memo.Name = "txt_memo";
             this.txt_memo.Size = new System.Drawing.Size(337, 21);
@@ -153,6 +157,12 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.lbl_ArQuantity);
+            this.groupBox3.Controls.Add(this.txt_ArQuantity);
+            this.groupBox3.Controls.Add(this.lbl_PrID);
+            this.groupBox3.Controls.Add(this.txt_PrID);
+            this.groupBox3.Controls.Add(this.txt_SyDetailID);
+            this.groupBox3.Controls.Add(this.lbl_SyDetailID);
             this.groupBox3.Controls.Add(this.txt_SyHidden);
             this.groupBox3.Controls.Add(this.txt_memo);
             this.groupBox3.Controls.Add(this.lbl_ArHidden);
@@ -198,7 +208,9 @@
             this.txt_SyID.Location = new System.Drawing.Point(98, 21);
             this.txt_SyID.Name = "txt_SyID";
             this.txt_SyID.Size = new System.Drawing.Size(337, 21);
+
             this.txt_SyID.TabIndex = 0;
+
             // 
             // lbl_EnID
             // 
@@ -217,7 +229,9 @@
             this.txt_EmID.Location = new System.Drawing.Point(98, 43);
             this.txt_EmID.Name = "txt_EmID";
             this.txt_EmID.Size = new System.Drawing.Size(337, 21);
+
             this.txt_EmID.TabIndex = 1;
+
             // 
             // lbl_ClID
             // 
@@ -237,13 +251,17 @@
             this.txt_ClID.Location = new System.Drawing.Point(98, 65);
             this.txt_ClID.Name = "txt_ClID";
             this.txt_ClID.Size = new System.Drawing.Size(337, 21);
+
             this.txt_ClID.TabIndex = 2;
+
             // 
             // lbl_SoID
             // 
             this.lbl_SoID.AutoSize = true;
             this.lbl_SoID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.lbl_SoID.Location = new System.Drawing.Point(5, 86);
+
             this.lbl_SoID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_SoID.Name = "lbl_SoID";
             this.lbl_SoID.Size = new System.Drawing.Size(67, 14);
@@ -256,13 +274,17 @@
             this.txt_SoID.Location = new System.Drawing.Point(98, 87);
             this.txt_SoID.Name = "txt_SoID";
             this.txt_SoID.Size = new System.Drawing.Size(337, 21);
+
             this.txt_SoID.TabIndex = 3;
+
             // 
             // lbl_OrID
             // 
             this.lbl_OrID.AutoSize = true;
             this.lbl_OrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.lbl_OrID.Location = new System.Drawing.Point(5, 109);
+
             this.lbl_OrID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_OrID.Name = "lbl_OrID";
             this.lbl_OrID.Size = new System.Drawing.Size(53, 14);
@@ -276,7 +298,9 @@
             this.txt_OrID.Location = new System.Drawing.Point(98, 109);
             this.txt_OrID.Name = "txt_OrID";
             this.txt_OrID.Size = new System.Drawing.Size(337, 21);
+
             this.txt_OrID.TabIndex = 4;
+
             // 
             // lbl_SyDate
             // 
@@ -296,7 +320,9 @@
             this.txt_SyDate.Location = new System.Drawing.Point(594, 19);
             this.txt_SyDate.Name = "txt_SyDate";
             this.txt_SyDate.Size = new System.Drawing.Size(336, 21);
+
             this.txt_SyDate.TabIndex = 5;
+
             // 
             // btn_order
             // 
@@ -406,13 +432,16 @@
             this.btn_regist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_regist.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_regist.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.btn_regist.Location = new System.Drawing.Point(407, 11);
+
             this.btn_regist.Margin = new System.Windows.Forms.Padding(2);
             this.btn_regist.Name = "btn_regist";
             this.btn_regist.Size = new System.Drawing.Size(103, 41);
             this.btn_regist.TabIndex = 261;
             this.btn_regist.Text = "登録";
             this.btn_regist.UseVisualStyleBackColor = false;
+            this.btn_regist.Click += new System.EventHandler(this.btn_regist_Click);
             // 
             // btn_client
             // 
@@ -439,13 +468,16 @@
             this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_update.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_update.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.btn_update.Location = new System.Drawing.Point(514, 11);
+
             this.btn_update.Margin = new System.Windows.Forms.Padding(2);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(103, 41);
             this.btn_update.TabIndex = 259;
             this.btn_update.Text = "更新";
             this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_arrival
             // 
@@ -472,13 +504,16 @@
             this.btn_all.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_all.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_all.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.btn_all.Location = new System.Drawing.Point(621, 11);
+
             this.btn_all.Margin = new System.Windows.Forms.Padding(2);
             this.btn_all.Name = "btn_all";
             this.btn_all.Size = new System.Drawing.Size(103, 41);
             this.btn_all.TabIndex = 258;
             this.btn_all.Text = "一覧表示";
             this.btn_all.UseVisualStyleBackColor = false;
+            this.btn_all.Click += new System.EventHandler(this.btn_all_Click);
             // 
             // btn_employee
             // 
@@ -505,7 +540,9 @@
             this.btn_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_print.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_print.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.btn_print.Location = new System.Drawing.Point(728, 11);
+
             this.btn_print.Margin = new System.Windows.Forms.Padding(2);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(103, 41);
@@ -538,13 +575,16 @@
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_delete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.btn_delete.Location = new System.Drawing.Point(835, 11);
+
             this.btn_delete.Margin = new System.Windows.Forms.Padding(2);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(103, 41);
             this.btn_delete.TabIndex = 253;
             this.btn_delete.Text = "削除";
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_sale
             // 
@@ -571,13 +611,16 @@
             this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clear.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_clear.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.btn_clear.Location = new System.Drawing.Point(942, 11);
+
             this.btn_clear.Margin = new System.Windows.Forms.Padding(2);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(103, 41);
             this.btn_clear.TabIndex = 251;
             this.btn_clear.Text = "入力クリア";
             this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_warehousing
             // 
@@ -604,13 +647,16 @@
             this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_search.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_search.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.btn_search.Location = new System.Drawing.Point(300, 11);
+
             this.btn_search.Margin = new System.Windows.Forms.Padding(2);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(103, 41);
             this.btn_search.TabIndex = 250;
             this.btn_search.Text = "検索";
             this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_sertch_Click);
             // 
             // btn_product
             // 
@@ -667,6 +713,8 @@
             this.lbl_title.TabIndex = 246;
             this.lbl_title.Text = "出庫管理画面";
             // 
+
+
             // F_Syukko
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -755,5 +803,11 @@
         private System.Windows.Forms.TextBox txt_OrID;
         private System.Windows.Forms.Label lbl_SyDate;
         private System.Windows.Forms.TextBox txt_SyDate;
+        private System.Windows.Forms.Label lbl_ArQuantity;
+        private System.Windows.Forms.TextBox txt_ArQuantity;
+        private System.Windows.Forms.Label lbl_PrID;
+        private System.Windows.Forms.TextBox txt_PrID;
+        private System.Windows.Forms.TextBox txt_SyDetailID;
+        private System.Windows.Forms.Label lbl_SyDetailID;
     }
 }
