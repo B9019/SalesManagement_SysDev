@@ -74,6 +74,27 @@ namespace SalesManagement_SysDev
 
         private void F_Shipment_Load(object sender, EventArgs e)
         {
+            btn_shipment.Enabled = false;
+            dataGridView_Shipment.ColumnCount = 7;
+
+            dataGridView_Shipment.Columns[0].HeaderText = "出荷ID ";
+            dataGridView_Shipment.Columns[1].HeaderText = "顧客ID ";
+            dataGridView_Shipment.Columns[2].HeaderText = "社員ID ";
+            dataGridView_Shipment.Columns[3].HeaderText = "営業所ID";
+            dataGridView_Shipment.Columns[4].HeaderText = "受注ID";
+            dataGridView_Shipment.Columns[5].HeaderText = "出荷完了年月日 ";
+            dataGridView_Shipment.Columns[6].HeaderText = "非表示理由";
+
+            F_login f_login = new F_login();
+            transfer_int = f_login.transfer_int;
+
+            btn_delete.Enabled = false;
+
+            if (transfer_int == 1 ||
+               transfer_int == 5)
+            {
+                btn_delete.Enabled = true;
+            }
         }
 
         // 登録ボタン
@@ -259,7 +280,8 @@ namespace SalesManagement_SysDev
                 return false;
             }
             // 画面更新
-            RefreshDataGridView();
+            //RefreshDataGridView();
+            fncAllSelect();
             txt_ShID.Focus();
 
             return true;
@@ -448,7 +470,8 @@ namespace SalesManagement_SysDev
             }
 
             // 表示データ更新 & 入力クリア
-            RefreshDataGridView();
+            //RefreshDataGridView();
+            fncAllSelect();
             txt_ShID.Focus();
 
             return true;
@@ -514,7 +537,24 @@ namespace SalesManagement_SysDev
             // 入力フォーカスリセット
             txt_ShID.Focus();
         }
-
+        private void fncAllSelect()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True";
+            //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
+            //command.Parameters["@PrFlag"].Value = "0";
+            command.CommandText = "SELECT * FROM T_Shipment WHERE ShFlag = 0.";
+            command.Connection = conn;
+            conn.Open();
+            SqlDataReader rd = command.ExecuteReader();
+            dataGridView_Shipment.Rows.Clear();
+            while (rd.Read())
+            {
+                dataGridView_Shipment.Rows.Add(rd["ShID"], rd["SoID"], rd["EmID"], rd["ClID"],
+                                rd["OrID"], rd["ShFinishDate"], rd["ShHidden"], rd["memo"]);
+            }
+        }
         // 表示データ更新
         private void RefreshDataGridView()
         {
@@ -644,10 +684,6 @@ namespace SalesManagement_SysDev
 
         }
 
-        private void btn_all_Click(object sender, EventArgs e)
-        {
-            RefreshDataGridView();
-        }
 
         //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
         private void dataGridView_Shipment_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -826,6 +862,13 @@ namespace SalesManagement_SysDev
             txt_ShHidden.Text = "";
             txt_memo.Text = "";
         } //接続先DBの情報をセット
-       
+
+
+        private void btn_all_Click(object sender, EventArgs e)
+        {
+            fncAllSelect();
+        }
+
+        
     }
 }

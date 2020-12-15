@@ -20,7 +20,8 @@ namespace SalesManagement_SysDev
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
         public DateTime? ShFinishDate { get; set; }  //出荷完了年月日
         public int ShFlag { get; set; }	//出荷管理フラグ
-        public String ShHidden { get; set; }        //非表示理由	
+        public String ShHidden { get; set; }        //非表示理由
+        public String memo { get; set; }　//備考
         //public virtual M_Client M_Client { get; set; }//顧客ID　外部キー
         //public virtual M_Employee M_Employee { get; set; }//顧客ID　外部キー
         //public virtual M_SalesOffice M_SalesOffice { get; set; }//営業所ID　外部キー
