@@ -588,14 +588,14 @@
             // txt_PrHidden
             // 
 
-            this.OrHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.OrHidden.Location = new System.Drawing.Point(117, 152);
-            this.OrHidden.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.OrHidden.Multiline = true;
-            this.OrHidden.Name = "OrHidden";
-            this.OrHidden.Size = new System.Drawing.Size(812, 18);
-            this.OrHidden.TabIndex = 11;
-            this.OrHidden.Text = "非表示理由を入力(50文字)";
+            //this.PrHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            //this.PrHidden.Location = new System.Drawing.Point(117, 152);
+            //this.PrHidden.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            //this.PrHidden.Multiline = true;
+            //this.PrHidden.Name = "OrHidden";
+            //this.PrHidden.Size = new System.Drawing.Size(812, 18);
+            //this.PrHidden.TabIndex = 11;
+            //this.PrHidden.Text = "非表示理由を入力(50文字)";
 
             // 
             // groupBox3

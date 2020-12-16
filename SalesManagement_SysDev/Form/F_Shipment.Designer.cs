@@ -342,7 +342,6 @@
             this.txt_ArQuantity.Name = "txt_ArQuantity";
             this.txt_ArQuantity.Size = new System.Drawing.Size(447, 24);
             this.txt_ArQuantity.TabIndex = 304;
-            this.txt_ArQuantity.TextChanged += new System.EventHandler(this.txt_ArQuantity_TextChanged);
             // 
             // lbl_PrID
             // 
