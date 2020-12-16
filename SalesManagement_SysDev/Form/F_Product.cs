@@ -84,6 +84,8 @@ namespace SalesManagement_SysDev
         private int _pageSizePrinting;                                      // １ページ印刷データ行数
         private List<M_DispProduct> _dispProductPrinting;                 // 印刷用データ
 
+        int HIDEFlag = 0;                                               　//検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+
         public F_Product()
         {
             InitializeComponent();
@@ -91,7 +93,7 @@ namespace SalesManagement_SysDev
         private void F_Product_Load(object sender, EventArgs e)
         {
             btn_product.Enabled = false;
-            dataGridView_Product.ColumnCount = 11;
+            dataGridView_Product.ColumnCount = 13;
 
             dataGridView_Product.Columns[0].HeaderText = "商品ID ";
             dataGridView_Product.Columns[1].HeaderText = "メーカID ";
@@ -103,7 +105,10 @@ namespace SalesManagement_SysDev
             dataGridView_Product.Columns[7].HeaderText = "型番";
             dataGridView_Product.Columns[8].HeaderText = "色";
             dataGridView_Product.Columns[9].HeaderText = "発売日";
-            dataGridView_Product.Columns[10].HeaderText = "非表示理由";
+            dataGridView_Product.Columns[10].HeaderText = "非表示フラグ";
+            dataGridView_Product.Columns[11].HeaderText = "非表示理由";
+            dataGridView_Product.Columns[12].HeaderText = "備考";
+
 
             F_login f_login = new F_login();
             transfer_int = f_login.transfer_int;
@@ -423,7 +428,7 @@ namespace SalesManagement_SysDev
                 txt_PrHidden.Text = "非表示理由を入力(50文字)";
             }
             RefreshDataGridView();
-            txt_MaID.Focus();
+            txt_PrID.Focus();
 
             return true;
 
@@ -689,10 +694,9 @@ namespace SalesManagement_SysDev
             {
                 txt_PrHidden.Text = "";
             }
-            int Flag = 0;
             if(chk_hide_FLG.Checked == true)
             {
-                Flag = 1;
+                HIDEFlag = 1;
             }
             return new M_Product
             {
@@ -706,7 +710,7 @@ namespace SalesManagement_SysDev
                 PrModelNumber = int.Parse(txt_PrModelNumber.Text),
                 PrColor = txt_PrColor.Text,
                 PrReleaseDate = DateTime.Parse(txt_PrReleaseDate.Text),
-                PrFlag = Flag,
+                PrFlag = HIDEFlag,
                 PrMemo = txt_memo.Text
 
             };
@@ -806,7 +810,7 @@ namespace SalesManagement_SysDev
             //txt_MaID.Enabled = false;
 
             // 入力フォーカスリセット
-            txt_MaID.Focus();
+            txt_PrID.Focus();
         }
 
         // 表示データ更新
@@ -1030,10 +1034,11 @@ namespace SalesManagement_SysDev
             //sql文のwhere句の接続に使う
             string AND = "";
             int andnum = 0;
+            //
             //検索条件をテキストボックスから抽出し、SQL文をセット
             //　日本語可　：SqlDbType.NVarChar
             //　日本語不可：SqlDbType.VarChar
-            for (int count = 0; count < 11; count++)
+            for (int count = 0; count < 13; count++)
             {
                 if (txt_PrID.Text != "" && count == 0)
                 {
@@ -1136,12 +1141,28 @@ namespace SalesManagement_SysDev
                     command.CommandText = command.CommandText + AND + "PrReleaseDate LIKE @PrReleaseDate ";
                     ++andnum;
                 }
-                else if (txt_PrHidden.Text != "" && count == 10)
+                else if (count == 10)
+                {
+                    command.Parameters.Add("@PrFlag", SqlDbType.NVarChar);
+                    command.Parameters["@PrFlag"].Value =　HIDEFlag;
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "PrFlag LIKE @PrFlag ";
+                    ++andnum;
+                }
+                else if (txt_PrHidden.Text != "" && count == 11)
                 {
                     command.Parameters.Add("@PrHidden", SqlDbType.NVarChar);
                     command.Parameters["@PrHidden"].Value = "%" + txt_PrHidden.Text + "%";
                     //実行するSQL文の条件追加
                     command.CommandText = command.CommandText + AND + "PrHidden LIKE @PrHidden ";
+                    ++andnum;
+                }
+                else if (txt_memo.Text != "" && count == 12)
+                {
+                    command.Parameters.Add("@PrMemo", SqlDbType.NVarChar);
+                    command.Parameters["@PrMemo"].Value = "%" + txt_memo.Text + "%";
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "PrMemo LIKE @PrMemo ";
                     ++andnum;
                 }
                 //2つ目以降の条件の前部にANDを接続
@@ -1150,7 +1171,7 @@ namespace SalesManagement_SysDev
                     AND = "AND ";
                 }
                 //最後にセミコロンを接続する
-                while (count == 10)
+                while (count == 12)
                 {
                     command.CommandText = command.CommandText + ";";
                     break;
@@ -1206,10 +1227,14 @@ namespace SalesManagement_SysDev
         private void Checked_Product_HideFlag(object sender, EventArgs e)
         {
             if (chk_hide_FLG.Checked == true)
+            {
                 txt_PrHidden.Text = "";
+                HIDEFlag = 1;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
             else if (chk_hide_FLG.Checked == false)
             {
                 txt_PrHidden.Text = "非表示理由を入力(50文字)";
+                HIDEFlag = 0;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
             }
             return;
 
