@@ -93,7 +93,7 @@ namespace SalesManagement_SysDev
         private void F_Product_Load(object sender, EventArgs e)
         {
             btn_product.Enabled = false;
-            dataGridView_Product.ColumnCount = 11;
+            dataGridView_Product.ColumnCount = 13;
 
             dataGridView_Product.Columns[0].HeaderText = "商品ID ";
             dataGridView_Product.Columns[1].HeaderText = "メーカID ";
