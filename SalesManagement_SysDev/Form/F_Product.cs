@@ -1216,6 +1216,11 @@ namespace SalesManagement_SysDev
 
         }
 
+        private void btn_warehousing_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //public void ReadSingleRow(IDataRecord record)
         //{
         //    dataGridView_Product.Rows.Add();
