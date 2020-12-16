@@ -112,8 +112,7 @@ namespace SalesManagement_SysDev
 
             // 8.1.3受注情報登録
             if (!Generate_Registration(regOrder))
-
-            if(!Generate_Registration_Detail(regOrderDetail))
+            if (!Generate_Registration_Detail(regOrderDetail))
                 return;
         }
         // 

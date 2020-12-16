@@ -689,6 +689,11 @@ namespace SalesManagement_SysDev
             {
                 txt_PrHidden.Text = "";
             }
+            int Flag = 0;
+            if(chk_hide_FLG.Checked == true)
+            {
+                Flag = 1;
+            }
             return new M_Product
             {
                 PrID = int.Parse(txt_PrID.Text),
@@ -701,7 +706,7 @@ namespace SalesManagement_SysDev
                 PrModelNumber = int.Parse(txt_PrModelNumber.Text),
                 PrColor = txt_PrColor.Text,
                 PrReleaseDate = DateTime.Parse(txt_PrReleaseDate.Text),
-                PrFlag = 0,
+                PrFlag = Flag,
                 PrMemo = txt_memo.Text
 
             };
@@ -944,7 +949,7 @@ namespace SalesManagement_SysDev
             conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True";
             //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
             //command.Parameters["@PrFlag"].Value = "0";
-            command.CommandText = "SELECT * FROM M_Product WHERE PrFlag = 0.";
+            command.CommandText = "SELECT * FROM M_Product WHERE PrFlag = 0";
             command.Connection = conn;
             conn.Open();
             SqlDataReader rd = command.ExecuteReader();

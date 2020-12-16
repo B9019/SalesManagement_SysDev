@@ -529,12 +529,14 @@
             // 
             // txt_PrHidden
             // 
+
             this.txt_PrHidden.Location = new System.Drawing.Point(195, 228);
             this.txt_PrHidden.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txt_PrHidden.Name = "txt_PrHidden";
             this.txt_PrHidden.Size = new System.Drawing.Size(1353, 27);
             this.txt_PrHidden.TabIndex = 0;
             this.txt_PrHidden.Text = "非表示理由を入力(50文字)";
+
             // 
             // groupBox3
             // 
