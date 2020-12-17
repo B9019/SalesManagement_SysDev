@@ -713,11 +713,29 @@ namespace SalesManagement_SysDev
 
             private void btn_all_Click(object sender, EventArgs e)
             {
-                RefreshDataGridView();
+                fncAllSelect();
             }
+        private void fncAllSelect()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\81807\DESKTOP\SALESMANAGEMENT_SYSDEV\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
+            //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
+            //command.Parameters["@PrFlag"].Value = "0";
+            command.CommandText = "SELECT * FROM T_Chumon WHERE ChFlag = 0 AND ";
+            command.Connection = conn;
+            conn.Open();
+            SqlDataReader rd = command.ExecuteReader();
+            dataGridView_Chumon.Rows.Clear();
+            while (rd.Read())
+            {
+                dataGridView_Chumon.Rows.Add(rd["ChID"], rd["SoID"], rd["EmID"], rd["ClID"],
+                    rd["OrID"], rd["ChDate"], rd["ChHidden"],rd["ChStateFlag"],rd["ChFlag"], rd["memo"]);
+            }
+        }
 
-            //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
-            private void dataGridView_Product_regist_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
+        private void dataGridView_Product_regist_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
             {
                 int id = (int)dataGridView_Chumon.CurrentRow.Cells[0].Value;
                 int id2 = (int)dataGridView_Chumon.CurrentRow.Cells[1].Value;
@@ -743,7 +761,7 @@ namespace SalesManagement_SysDev
             //接続先DBの情報をセット
             SqlConnection conn = new SqlConnection();
             SqlCommand command = new SqlCommand();
-            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\81807\DESKTOP\SALESMANAGEMENT_SYSDEV\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
 
             //実行するSQL文の指定
             command.CommandText = @"SELECT * FROM T_Chumon WHERE ";
