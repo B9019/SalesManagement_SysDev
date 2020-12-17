@@ -615,7 +615,7 @@ namespace SalesManagement_SysDev
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand command = new SqlCommand();
-            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=65B7FDBF103579B7D7CE0C17EE5CC7E8_)\システム開発演習I\プロジェクト\SALESMANAGEMENT_SYSDEV\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
             //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
             //command.Parameters["@PrFlag"].Value = "0";
             command.CommandText = "SELECT * FROM T_Arrival WHERE ArFlag = 0 AND ";
@@ -635,7 +635,7 @@ namespace SalesManagement_SysDev
             //接続先DBの情報をセット
             SqlConnection conn = new SqlConnection();
             SqlCommand command = new SqlCommand();
-            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=65B7FDBF103579B7D7CE0C17EE5CC7E8_)\システム開発演習I\プロジェクト\SALESMANAGEMENT_SYSDEV\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
 
             //実行するSQL文の指定
             command.CommandText = @"SELECT * FROM T_Arrival WHERE ";
