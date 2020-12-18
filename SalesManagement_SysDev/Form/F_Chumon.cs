@@ -292,15 +292,15 @@ namespace SalesManagement_SysDev
             {
             // 19.2.1 妥当な注文データ取得
             if (!GetValidDataAtUpdate()) return;
-            if (!GetValidDataAtUpdate_Stock()) return;
-            if (!GetValidDataAtUpdate_Syukko()) return;
-            if (!GetValidDataAtUpdate_Syukko_Detail()) return;
+            //if (!GetValidDataAtUpdate_Stock()) return;
+            //if (!GetValidDataAtUpdate_Syukko()) return;
+            //if (!GetValidDataAtUpdate_Syukko_Detail()) return;
 
             // 19.2.2 注文情報作成
             var regChumon = GenerateDataAtUpdate();
-            var regStock = GenerateDataAtUpdate_Stock();
-            var regSyukko = GenerateDataAtUpdate_Syukko();
-            var regSyukkoDetail = GenerateDataAtUpdate_Syukko_Detail();
+            //var regStock = GenerateDataAtUpdate_Stock();
+            //var regSyukko = GenerateDataAtUpdate_Syukko();
+            //var regSyukkoDetail = GenerateDataAtUpdate_Syukko_Detail();
 
             // 19.2.3 注文情報更新
             ChumonUpdate(regChumon);
