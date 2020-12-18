@@ -43,7 +43,7 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
             catch
             {
                 return null;
-               
+
             }
         }
         // 表示データ取得（始点・終点指定）
@@ -51,11 +51,11 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
         //      endRec   : 配列抜出の終点
 
 
-       public IEnumerable<T_DispStock> GetDispStock()
+        public IEnumerable<T_DispStock> GetDispStock()
         {
             using (var db = new SalesManagement_DevContext())
             {
-               List<T_DispStock> dispStock = new List<T_DispStock>();
+                List<T_DispStock> dispStock = new List<T_DispStock>();
                 //foreach (T_Stock stock in db.T_Stocks)
                 //{
                 //    string maker;
@@ -99,7 +99,7 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
 
                 return sortableDispStock;
             }
-            
+
         }
 
         //// データ追加
@@ -200,6 +200,56 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                 return string.Empty;
             }
         }
+        // データ更新(注文)
+        // in   : M_Chumonデータ
+        // out  : エラーメッセージ 
+        public string PutStockCh(T_Stock regStock)
+        {
+            using (var db = new SalesManagement_DevContext())
+            {
+                T_Stock stock;
+                try
+                {
+                    stock = db.T_Stocks.Single(x => x.StID == regStock.StID);
+                }
+                catch
+                {
+                    // throw new Exception(Messages.errorNotFoundItem, ex);
+                    // throw new Exception(_cm.GetMessage(110), ex);
+                    return _msc.GetMessage(110);
+                }
+                stock.StID = regStock.StID;
+                stock.PrID = regStock.PrID;
+                stock.StQuantity = regStock.StQuantity;
+                stock.StFlag = regStock.StFlag;
+                //Timestamp = item.Timestamp,
+                //LogData = item.LogData,
+                db.Entry(stock).State = EntityState.Modified;
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    // throw new Exception(Messages.errorConflict, ex);
+                    // throw new Exception(_cm.GetMessage(100), ex);
+                    return _msc.GetMessage(100);
+                }
+
+                // ログ出力
+                var operationLog = new OperationLog()
+                {
+                    EventRaisingTime = DateTime.Now,
+                    Operator = _logonUser,
+                    Table = "Stock",
+                    Command = "Sto",
+                    //Data = ProductLogData(regStock),
+                };
+                //StaticCommon.PostOperationLog(operationLog);
+
+                return string.Empty;
+            }
+        }
         // データ削除
         // in       Stock : 削除する商品ID
         public void DeleteStock(int T_StID)
@@ -251,9 +301,14 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
             return regT_Stock.StID.ToString() + ", " +
             regT_Stock.PrID.ToString() + ", " +
             regT_Stock.StQuantity.ToString() + ", " +
-            regT_Stock.StFlag.ToString() + ", " ;
+            regT_Stock.StFlag.ToString() + ", ";
 
 
         }
+
     }
 }
+
+
+    
+
