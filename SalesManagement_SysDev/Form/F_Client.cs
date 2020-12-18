@@ -82,7 +82,7 @@ namespace SalesManagement_SysDev
         private int _pageNumber = 0;                                        // 印刷ページ番号
         private int _pageSizePrinting;                                      // １ページ印刷データ行数
         private List<M_DispClient> _dispClientPrinting;                 // 印刷用データ
-
+        int HIDEFlag;
 
         public F_Client()
         {
@@ -97,10 +97,31 @@ namespace SalesManagement_SysDev
 
         private void F_Client_Load_1(object sender, EventArgs e)
         {
+            btn_client.Enabled = false;
+            dataGridView_Client.ColumnCount = 9;
+
+            dataGridView_Client.Columns[0].HeaderText = "顧客ID ";
+            dataGridView_Client.Columns[1].HeaderText = "営業所ID ";
+            dataGridView_Client.Columns[2].HeaderText = "顧客名 ";
+            dataGridView_Client.Columns[3].HeaderText = "住所";
+            dataGridView_Client.Columns[4].HeaderText = "電話番号";
+            dataGridView_Client.Columns[5].HeaderText = "郵便番号 ";
+            dataGridView_Client.Columns[6].HeaderText = "FAX";
+            dataGridView_Client.Columns[7].HeaderText = "顧客管理フラグ";
+            dataGridView_Client.Columns[8].HeaderText = "非表示理由";
+           
+
             F_login f_login = new F_login();
+            transfer_int = f_login.transfer_int;
 
-            transfer_int = f_login.transfer_int;    //権限割り当て
+            btn_delete.Enabled = false;
 
+            if (transfer_int == 1 ||
+               transfer_int == 5)
+            {
+                btn_delete.Enabled = true;
+            }
+            HIDEFlag = 0;
         }
 
 
@@ -320,6 +341,11 @@ namespace SalesManagement_SysDev
         //
         private M_Client Generate_Data_AtRegistration()
         {
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_ClHidden.Text = "";
+            }
+
             return new M_Client
             {
                 ClID = int.Parse(txt_ClID.Text),
@@ -329,6 +355,7 @@ namespace SalesManagement_SysDev
                 ClPhone = txt_ClPhone.Text,
                 ClPostal = int.Parse(txt_ClPostal.Text),
                 ClFAX = txt_ClFAX.Text,
+                ClFlag = 0,
                 ClHidden = txt_ClHidden.Text,
 
             };
@@ -578,6 +605,14 @@ namespace SalesManagement_SysDev
         // out      Category : Categoryデータ
         private M_Client GenerateDataAtUpdate()
         {
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_ClHidden.Text = "";
+            }
+            if (chk_hide_FLG.Checked == true)
+            {
+                HIDEFlag = 1;
+            }
             return new M_Client
             {
                 ClID = int.Parse(txt_ClID.Text),
@@ -587,6 +622,7 @@ namespace SalesManagement_SysDev
                 ClPhone = txt_ClPhone.Text,
                 ClPostal = int.Parse(txt_ClPostal.Text),
                 ClFAX = txt_ClFAX.Text,
+                ClFlag = HIDEFlag,
                 ClHidden = txt_ClHidden.Text,
 
             };
@@ -617,6 +653,166 @@ namespace SalesManagement_SysDev
             txt_ClID.Focus();
 
             return true;
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            //接続先DBの情報をセット
+            SqlConnection conn = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\81807\DESKTOP\SALESMANAGEMENT_SYSDEV\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
+
+            //実行するSQL文の指定
+            command.CommandText = @"SELECT * FROM T_Client WHERE ";
+            command.Connection = conn;
+
+            //sql文のwhere句の接続に使う
+            string AND = "";
+            int andnum = 0;
+            //検索条件をテキストボックスから抽出し、SQL文をセット
+            //　日本語可　：SqlDbType.NVarChar
+            //　日本語不可：SqlDbType.VarChar
+            for (int count = 0; count < 10; count++)
+            {
+                if (txt_ClID.Text != "" && count == 0)
+                {
+                    command.Parameters.Add("@ClID", SqlDbType.VarChar);
+                    command.Parameters["@ClID"].Value = txt_ClID.Text;
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + "ClID LIKE @ClID ";
+                    ++andnum;
+
+                }
+                else if (txt_SoID.Text != "" && count == 1)
+                {
+                    command.Parameters.Add("@SoID", SqlDbType.VarChar);
+                    command.Parameters["@SoID"].Value = txt_SoID.Text;
+                    //if ("@SoID" != null)
+                    //{
+                    //    command.CommandText = command + "AND ";
+                    //}
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "SoID LIKE @SoID ";
+                    ++andnum;
+                }
+                else if (txt_ClName.Text != "" && count == 2)
+                {
+                    command.Parameters.Add("@ClName", SqlDbType.VarChar);
+                    command.Parameters["@ClName"].Value = txt_ClName.Text;
+                    //if ("@EmID" != null || "@EmID != null)
+                    //{
+                    //    command.CommandText = command + "AND ";
+                    //}
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "ClName LIKE @ClName ";
+                    ++andnum;
+                }
+                else if (txt_ClAddress.Text != "" && count == 3)
+                {
+                    command.Parameters.Add("@ClAddress", SqlDbType.VarChar);
+                    command.Parameters["@ClAddress"].Value = txt_ClAddress.Text;
+                    //if ("@PrID" != null || "@MaID" != null || "@Price" != null)
+                    //{
+                    //    command.CommandText = command + "AND ";
+                    //}
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "ClAddress LIKE @ClAddress ";
+                    ++andnum;
+                }
+                else if (txt_ClPhone.Text != "" && count == 4)
+                {
+                    command.Parameters.Add("@ClPhone", SqlDbType.VarChar);
+                    command.Parameters["@ClPhone"].Value = txt_ClPhone.Text;
+                    //if ("@PrID" != null || "@MaID" != null || "@Price" != null || "@PrJCode" != null)
+                    //{
+                    //    command.CommandText = command + "AND ";
+                    //}
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "ClPhone LIKE @ClPhone ";
+                    ++andnum;
+                }
+                else if (txt_ClPostal.Text != "" && count == 5)
+                {
+                    command.Parameters.Add("@ClPostal", SqlDbType.VarChar);
+                    command.Parameters["@ClPostal"].Value = txt_ClPostal.Text;
+                    //if ("@PrID" != null || "@MaID" != null || "@Price" != null || "@PrJCode" != null || )
+                    //{
+                    //    command.CommandText = command + "AND ";
+                    //}
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "ClPostal LIKE @ClPostal ";
+                    ++andnum;
+                }
+                else if (txt_ClFAX.Text != "" && count == 6)
+                {
+                    command.Parameters.Add("@ClFAX", SqlDbType.NVarChar);
+                    command.Parameters["@ClFAX"].Value = "%" + txt_ClFAX.Text + "%";
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "ClFAX LIKE @ClFAX ";
+                    ++andnum;
+                }
+                else if (txt_ClHidden.Text != "" && count == 7)
+                {
+                    command.Parameters.Add("@ClHidden", SqlDbType.NVarChar);
+                    command.Parameters["@ClHidden"].Value = "%" + txt_ClHidden.Text + "%";
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "ClHidden LIKE @ClHidden ";
+                    ++andnum;
+                }
+
+                else if (txt_Clmemo.Text != "" && count == 8)
+                {
+                    command.Parameters.Add("@Clmemo", SqlDbType.NVarChar);
+                    command.Parameters["@Clmemo"].Value = "%" + txt_Clmemo.Text + "%";
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "Clmemo LIKE @Clmemo ";
+                    ++andnum;
+                }
+                else if (count == 9)
+                {
+                    command.Parameters.Add("@ClFlag", SqlDbType.NVarChar);
+                    command.Parameters["@ClFlag"].Value = HIDEFlag;
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "ClFlag LIKE @ClFlag ";
+                    ++andnum;
+                }
+
+                //2つ目以降の条件の前部にANDを接続
+                if (andnum != 0)
+                {
+                    AND = "AND ";
+                }
+                //最後にセミコロンを接続する
+                while (count == 9)
+                {
+                    command.CommandText = command.CommandText + ";";
+                    break;
+                }
+
+            }
+            try
+            {
+                //データベースに接続
+                conn.Open();
+                //SQL文の実行、データが  readerに格納される
+                SqlDataReader rd = command.ExecuteReader();
+                dataGridView_Client.Rows.Clear();
+
+
+                if (rd.HasRows)
+                {
+                    while (rd.Read())
+                    {
+                        dataGridView_Client.Rows.Add(rd["ClID"], rd["SoID"], rd["ClName"], rd["ClAddress"],
+                            rd["ClPhone"], rd["ClPostal"], rd["ClFAX"], rd["ClHidden"], rd["Clmemo"]);
+                    }
+                }
+            }
+            finally
+            {
+                //データベースを切断
+                conn.Close();
+            }
         }
 
         // 削除処理
@@ -771,7 +967,7 @@ namespace SalesManagement_SysDev
             txt_ClPhone.Text = Convert.ToString(id5);
             txt_ClPostal.Text = Convert.ToString(id6);
             txt_ClFAX.Text = Convert.ToString(id7);
-            chk_ClFlag.Checked = Convert.ToBoolean(id8);
+            chk_hide_FLG.Checked = Convert.ToBoolean(id8);
             txt_ClHidden.Text = Convert.ToString(id9);
 
         }
@@ -863,8 +1059,19 @@ namespace SalesManagement_SysDev
 
         }
 
-        private void btn_search_Click(object sender, EventArgs e)
+        private void Checked_Client_HideFlag(object sender, EventArgs e)
         {
+            if (chk_hide_FLG.Checked == true)
+            {
+                txt_ClHidden.Text = "";
+                HIDEFlag = 1;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
+            else if (chk_hide_FLG.Checked == false)
+            {
+                txt_ClHidden.Text = "非表示理由を入力(50文字)";
+                HIDEFlag = 0;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
+            return;
 
         }
     }

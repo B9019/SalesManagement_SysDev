@@ -68,6 +68,8 @@ namespace SalesManagement_SysDev
         private int _pageSizePrinting;                                      // １ページ印刷データ行数
         private List<T_DispHattyu> _dispHattyuPrinting;                 // 印刷用データ
 
+        int HIDEFlag;
+
         public F_Hattyu()
         {
             InitializeComponent();
@@ -75,6 +77,7 @@ namespace SalesManagement_SysDev
 
         private void F_Hattyu_Load(object sender, EventArgs e)
         {
+            btn_hattyu.Enabled = false;
             dataGridView_Hattyu.ColumnCount = 11;
 
             dataGridView_Hattyu.Columns[0].HeaderText = "発注ID";
@@ -83,7 +86,17 @@ namespace SalesManagement_SysDev
             dataGridView_Hattyu.Columns[3].HeaderText = "発注年月日";
             dataGridView_Hattyu.Columns[4].HeaderText = "備考";
             dataGridView_Hattyu.Columns[5].HeaderText = "非表示理由";
+            F_login f_login = new F_login();
+            transfer_int = f_login.transfer_int;
 
+            btn_delete.Enabled = false;
+
+            if (transfer_int == 1 ||
+               transfer_int == 5)
+            {
+                btn_delete.Enabled = true;
+            }
+            HIDEFlag = 0;
         }
         // 登録ボタン
         // 14.1発注情報登録
@@ -250,6 +263,10 @@ namespace SalesManagement_SysDev
         //
         private T_Hattyu Generate_Data_AtRegistration()
         {
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_HaHidden.Text = "";
+            }
             return new T_Hattyu
             {
                 HaID = int.Parse(txt_HaID.Text),
@@ -257,6 +274,7 @@ namespace SalesManagement_SysDev
                 EmID = int.Parse(txt_EmID.Text),
                 HaDate = DateTime.Parse(txt_HaDate.Text),
                 Hamemo = txt_Hamemo.Text,
+                HaFlag = 0,
                 HaHidden = txt_HaHidden.Text,
 
             };
@@ -454,6 +472,14 @@ namespace SalesManagement_SysDev
         // out      Category : Categoryデータ
         private T_Hattyu GenerateDataAtUpdate()
         {
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_HaHidden.Text = "";
+            }
+            if (chk_hide_FLG.Checked == true)
+            {
+                HIDEFlag = 1;
+            }
             return new T_Hattyu
             {
                 HaID = int.Parse(txt_HaID.Text),
@@ -461,6 +487,7 @@ namespace SalesManagement_SysDev
                 EmID = int.Parse(txt_EmID.Text),
                 HaDate = DateTime.Parse(txt_HaDate.Text),
                 Hamemo = txt_Hamemo.Text,
+                HaFlag = HIDEFlag,
                 HaHidden = txt_HaHidden.Text,
 
             };
@@ -761,13 +788,21 @@ namespace SalesManagement_SysDev
                     command.CommandText = command.CommandText + AND + "HaHidden LIKE @HaHidden ";
                     ++andnum;
                 }
+                else if (count ==6)
+                {
+                    command.Parameters.Add("@HaFlag", SqlDbType.NVarChar);
+                    command.Parameters["@HaFlag"].Value = HIDEFlag;
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "HaFlag LIKE @HaFlag ";
+                    ++andnum;
+                }
                 //2つ目以降の条件の前部にANDを接続
                 if (andnum != 0)
                 {
                     AND = "AND ";
                 }
                 //最後にセミコロンを接続する
-                while (count == 5)
+                while (count == 6)
                 {
                     command.CommandText = command.CommandText + ";";
                     break;
@@ -814,6 +849,21 @@ namespace SalesManagement_SysDev
             txt_EmID.Text = Convert.ToString(id3);
             txt_Hamemo.Text = Convert.ToString(id4);
             txt_HaHidden.Text = Convert.ToString(id5);
+
+        }
+        private void Checked_Hattyu_HideFlag(object sender, EventArgs e)
+        {
+            if (chk_hide_FLG.Checked == true)
+            {
+                txt_HaHidden.Text = "";
+                HIDEFlag = 1;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
+            else if (chk_hide_FLG.Checked == false)
+            {
+                txt_HaHidden.Text = "非表示理由を入力(50文字)";
+                HIDEFlag = 0;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
+            return;
 
         }
 
