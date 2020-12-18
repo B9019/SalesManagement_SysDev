@@ -165,7 +165,7 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
             return string.Empty;
         }
         // データ更新
-        // in   : M_Chumonデータ
+        // in   : M_Syukkoデータ
         // out  : エラーメッセージ 
         public string PutSyukko(T_Syukko regSyukko)
         {
@@ -220,6 +220,58 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                 return string.Empty;
             }
         }
+        // データ更新
+        // in   : M_Syukkoデータ
+        // out  : エラーメッセージ 
+        public string PutSyukkoDetail(T_SyukkoDetail regSyukkoDetail)
+        {
+            using (var db = new SalesManagement_DevContext())
+            {
+                T_SyukkoDetail syukkoDetail
+;
+                try
+                {
+                    syukkoDetail = db.T_SyukkoDetails.Single(x => x.SyDetailID == regSyukkoDetail.SyDetailID);
+                }
+                catch
+                {
+                    // throw new Exception(Messages.errorNotFoundItem, ex);
+                    // throw new Exception(_cm.GetMessage(110), ex);
+                    return _msc.GetMessage(110);
+                }
+                syukkoDetail.SyDetailID = regSyukkoDetail.SyDetailID;
+                syukkoDetail.SyID = regSyukkoDetail.SyID;
+                syukkoDetail.PrID = regSyukkoDetail.PrID;
+                syukkoDetail.SyQuantity = regSyukkoDetail.SyQuantity;
+                //Timestamp = item.Timestamp,
+                //LogData = item.LogData,
+                db.Entry(syukkoDetail).State = EntityState.Modified;
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    // throw new Exception(Messages.errorConflict, ex);
+                    // throw new Exception(_cm.GetMessage(100), ex);
+                    return _msc.GetMessage(100);
+                }
+
+                // ログ出力
+                var operationLog = new OperationLog()
+                {
+                    EventRaisingTime = DateTime.Now,
+                    Operator = _logonUser,
+                    Table = "Syukko",
+                    Command = "Syu",
+                    //Data = ProductLogData(regChumon),
+                };
+                //StaticCommon.PostOperationLog(operationLog);
+
+                return string.Empty;
+            }
+        }
+
         // データ削除
         // in       Product : 削除する商品ID
         public void DeleteSyukko(int T_SyID)

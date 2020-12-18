@@ -39,6 +39,8 @@ namespace SalesManagement_SysDev
 
         //// データベース処理モジュール（M_Division）
         private T_ChumonContents _Ch = new T_ChumonContents();
+        private T_StockContents _St = new T_StockContents();
+        private T_SyukkoContents _Sy = new T_SyukkoContents();
 
         // ***** プロパティ定義
 
@@ -296,9 +298,6 @@ namespace SalesManagement_SysDev
             {
             // 19.2.1 妥当な注文データ取得
             if (!GetValidDataAtUpdate()) return;
-            if (!GetValidDataAtUpdate_Stock()) return;
-            if (!GetValidDataAtUpdate_Syukko()) return;
-            if (!GetValidDataAtUpdate_Syukko_Detail()) return;
 
             // 19.2.2 注文情報作成
             var regChumon = GenerateDataAtUpdate();
@@ -308,8 +307,9 @@ namespace SalesManagement_SysDev
 
             // 19.2.3 注文情報更新
             ChumonUpdate(regChumon);
-            
-
+            StockUpdate(regStock);
+            SyukkoUpdate(regSyukko);
+            SyukkoDetailUpdate(regSyukkoDetail);
             }
         //
         //
@@ -523,54 +523,78 @@ namespace SalesManagement_SysDev
             };
         }
 
-        private void Stock_search(object sender, EventArgs e)
+
+        private T_Stock GenerateDataAtUpdate_Stock()
         {
+            //if (chk_commit_FLG.Checked == true)
+            {
+
+            }
             StockNum = 0;
-            int StQuantity = 0;
-            int ChQuantity = int.Parse(txt_ChQuantity.Text);
+            int StID_L  = 0;
+            int PrID_L  = 0;
+            int StQuantity_L = 0;
+            int StFlag_L = 0;
+            int ChQuantity_L = int.Parse(txt_ChQuantity.Text);
             //接続先DBの情報をセット
             SqlConnection conn = new SqlConnection();
             SqlCommand command = new SqlCommand();
             conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True";
 
             //実行するSQL文の指定
-            command.CommandText = @"SELECT StQuantity FROM T_Stock WHERE PrID LIKE @PrID AND";
+            command.CommandText = @"SELECT * FROM T_Stock WHERE PrID LIKE @PrID";
             command.Connection = conn;
 
             //sql文のwhere句の接続に使う
             //検索条件をテキストボックスから抽出し、SQL文をセット
             //　日本語可　：SqlDbType.NVarChar
             //　日本語不可：SqlDbType.VarChar
-                    command.Parameters.Add("@PrID", SqlDbType.VarChar);
-                    command.Parameters["@PrID"].Value = txt_PrID.Text;
-            try
-            {
+            command.Parameters.Add("@PrID", SqlDbType.VarChar);
+            command.Parameters["@PrID"].Value = txt_PrID.Text;
                 //データベースに接続
                 conn.Open();
                 //SQL文の実行、データが  readerに格納される
                 SqlDataReader rd = command.ExecuteReader();
                 if (rd.HasRows)
                 {
-                    StQuantity = (int)rd["StQuantity"];
+                    StID_L = (int)rd["StID"];
+                    PrID_L = (int)rd["PrID"];
+                    StQuantity_L = (int)rd["StQuantity"];
+                    StFlag_L = (int)rd["StFlag"];
+                    StockNum = StQuantity_L - ChQuantity_L;//在庫数更新用の変数に値を代入
+
                 }
-            }
-            finally
-            {
-                //データベースを切断
-                conn.Close();
-            }
-            StockNum = StQuantity - ChQuantity;//在庫数更新用の変数に値を代入
 
-        }
-
-        private T_Stock GenerateDataAtUpdateStock()
-        {
             return new T_Stock
             {
-                
+                StID = StID_L,
+                PrID = PrID_L,
+                StQuantity = StockNum,
+                StFlag = StFlag_L
+            };
+
+        }
+        private T_Syukko GenerateDataAtUpdate_Syukko()
+        {
+            return new T_Syukko
+            {
+                SyID = int.Parse(txt_ChID.Text),
+                EmID = int.Parse(txt_EmID.Text),
+                ClID = int.Parse(txt_ClID.Text),
+                SoID = int.Parse(txt_SoID.Text),
+                OrID = int.Parse(txt_OrID.Text)
             };
         }
-
+        private T_SyukkoDetail GenerateDataAtUpdate_Syukko_Detail()
+        {
+            return new T_SyukkoDetail
+            {
+                SyDetailID = int.Parse(txt_ChDetailID.Text),
+                SyID = int.Parse(txt_ChID.Text),
+                PrID = int.Parse(txt_PrID.Text),
+                SyQuantity = StockNum
+            };
+        }
         //
         //
         // 19.2.3 注文情報更新
@@ -592,12 +616,50 @@ namespace SalesManagement_SysDev
                     return false;
                 }
 
-                // 表示データ更新 & 入力クリア
-                RefreshDataGridView();
-            txt_ChID.Focus();
 
                 return true;
             }
+        private bool StockUpdate(T_Stock regStock)
+        {
+            var errorMessage = _St.PutStockCh(regStock);
+
+            if (errorMessage != string.Empty)
+            {
+                MessageBox.Show(errorMessage);
+                return false;
+            }
+
+            return true;
+        }
+        private bool SyukkoUpdate(T_Syukko regSyukko)
+        {
+            var errorMessage = _Sy.PutSyukko(regSyukko);
+
+            if (errorMessage != string.Empty)
+            {
+                MessageBox.Show(errorMessage);
+                return false;
+            }
+
+
+            return true;
+        }
+        private bool SyukkoDetailUpdate(T_SyukkoDetail regSyukkoDetail)
+        {
+            var errorMessage = _Sy.PutSyukkoDetail(regSyukkoDetail);
+
+            if (errorMessage != string.Empty)
+            {
+                MessageBox.Show(errorMessage);
+                return false;
+            }
+
+            // 表示データ更新 & 入力クリア
+            RefreshDataGridView();
+            txt_ChID.Focus();
+
+            return true;
+        }
 
         // 削除ボタン
         // 19.3 注文情報削除
