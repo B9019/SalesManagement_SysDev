@@ -407,6 +407,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalesManagement_DevContext.cs" />
+    <Compile Include="SysDev_DataSet.cs">
+      <DependentUpon>SysDev_DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SysDev_DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

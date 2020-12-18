@@ -165,6 +165,19 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
 
             return string.Empty;
         }
+        // データ追加
+        // in   : T_ChumonDetailデータ
+        public string PostT_ChumonDetail(T_ChumonDetail regChumonDetail)
+        {
+            using (var db1 = new SalesManagement_DevContext())
+            {
+                db1.T_ChumonDetails.Add(regChumonDetail);
+                db1.Entry(regChumonDetail).State = EntityState.Added;
+                db1.SaveChanges();
+            }
+            return string.Empty;
+        }
+
         // データ更新
         // in   : M_Chumonデータ
         // out  : エラーメッセージ 
