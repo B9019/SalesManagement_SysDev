@@ -68,6 +68,8 @@ namespace SalesManagement_SysDev
         private int _pageSizePrinting;                                      // １ページ印刷データ行数
         private List<T_DispChumon> _dispChumonPrinting;   // 印刷用データ
 
+        int StockNum;                                   //在庫数変更用の変数
+
         public F_Chumon()
         {
             InitializeComponent();
@@ -78,6 +80,8 @@ namespace SalesManagement_SysDev
             dataGridView_Chumon.ColumnCount = 13;
 
             btn_regist.Enabled = false; //受注処理の時点で注文テーブルに共通項目は登録されているので、この画面では更新処理でデータを追加するべき。
+            btn_search.Enabled = false; //検索処理はこの画面には必要ない
+            StockNum = 0;
 
             dataGridView_Chumon.Columns[0].HeaderText = "注文ID ";
             dataGridView_Chumon.Columns[1].HeaderText = "営業所ID ";
@@ -292,18 +296,19 @@ namespace SalesManagement_SysDev
             {
             // 19.2.1 妥当な注文データ取得
             if (!GetValidDataAtUpdate()) return;
-            //if (!GetValidDataAtUpdate_Stock()) return;
-            //if (!GetValidDataAtUpdate_Syukko()) return;
-            //if (!GetValidDataAtUpdate_Syukko_Detail()) return;
+            if (!GetValidDataAtUpdate_Stock()) return;
+            if (!GetValidDataAtUpdate_Syukko()) return;
+            if (!GetValidDataAtUpdate_Syukko_Detail()) return;
 
             // 19.2.2 注文情報作成
             var regChumon = GenerateDataAtUpdate();
-            //var regStock = GenerateDataAtUpdate_Stock();
-            //var regSyukko = GenerateDataAtUpdate_Syukko();
-            //var regSyukkoDetail = GenerateDataAtUpdate_Syukko_Detail();
+            var regStock = GenerateDataAtUpdate_Stock();
+            var regSyukko = GenerateDataAtUpdate_Syukko();
+            var regSyukkoDetail = GenerateDataAtUpdate_Syukko_Detail();
 
             // 19.2.3 注文情報更新
             ChumonUpdate(regChumon);
+            
 
             }
         //
@@ -506,6 +511,66 @@ namespace SalesManagement_SysDev
 
                 };
             }
+        private T_ChumonDetail GenerateDataAtUpdateDetail()
+        {
+            return new T_ChumonDetail
+            {
+                ChDetailID = int.Parse(txt_ChDetailID.Text),
+                ChID = int.Parse(txt_ChID.Text),
+                PrID = int.Parse(txt_PrID.Text),
+                ChQuantity = int.Parse(txt_ChQuantity.Text)
+
+            };
+        }
+
+        private void Stock_search(object sender, EventArgs e)
+        {
+            StockNum = 0;
+            int StQuantity = 0;
+            int ChQuantity = int.Parse(txt_ChQuantity.Text);
+            //接続先DBの情報をセット
+            SqlConnection conn = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True";
+
+            //実行するSQL文の指定
+            command.CommandText = @"SELECT StQuantity FROM T_Stock WHERE PrID LIKE @PrID AND";
+            command.Connection = conn;
+
+            //sql文のwhere句の接続に使う
+            //検索条件をテキストボックスから抽出し、SQL文をセット
+            //　日本語可　：SqlDbType.NVarChar
+            //　日本語不可：SqlDbType.VarChar
+                    command.Parameters.Add("@PrID", SqlDbType.VarChar);
+                    command.Parameters["@PrID"].Value = txt_PrID.Text;
+            try
+            {
+                //データベースに接続
+                conn.Open();
+                //SQL文の実行、データが  readerに格納される
+                SqlDataReader rd = command.ExecuteReader();
+                if (rd.HasRows)
+                {
+                    StQuantity = (int)rd["StQuantity"];
+                }
+            }
+            finally
+            {
+                //データベースを切断
+                conn.Close();
+            }
+            StockNum = StQuantity - ChQuantity;//在庫数更新用の変数に値を代入
+
+        }
+
+        private T_Stock GenerateDataAtUpdateStock()
+        {
+            return new T_Stock
+            {
+                
+            };
+        }
+
         //
         //
         // 19.2.3 注文情報更新
