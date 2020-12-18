@@ -75,7 +75,9 @@ namespace SalesManagement_SysDev
 
         private void F_Chumon_Load(object sender, EventArgs e)
         {
-            dataGridView_Chumon.ColumnCount = 8;
+            dataGridView_Chumon.ColumnCount = 13;
+
+            btn_regist.Enabled = false; //受注処理の時点で注文テーブルに共通項目は登録されているので、この画面では更新処理でデータを追加するべき。
 
             dataGridView_Chumon.Columns[0].HeaderText = "注文ID ";
             dataGridView_Chumon.Columns[1].HeaderText = "営業所ID ";
@@ -83,36 +85,41 @@ namespace SalesManagement_SysDev
             dataGridView_Chumon.Columns[3].HeaderText = "顧客ID";
             dataGridView_Chumon.Columns[4].HeaderText = "受注ID";
             dataGridView_Chumon.Columns[5].HeaderText = "注文年月日 ";
-            dataGridView_Chumon.Columns[6].HeaderText = "非表示理由";
-            dataGridView_Chumon.Columns[7].HeaderText = "備考";
+            dataGridView_Chumon.Columns[6].HeaderText = "注文状態フラグ";
+            dataGridView_Chumon.Columns[7].HeaderText = "注文管理フラグ";
+            dataGridView_Chumon.Columns[8].HeaderText = "非表示理由";
+            dataGridView_Chumon.Columns[9].HeaderText = "注文詳細ID";
+            dataGridView_Chumon.Columns[10].HeaderText = "商品ID";
+            dataGridView_Chumon.Columns[11].HeaderText = "数量";
+            dataGridView_Chumon.Columns[12].HeaderText = "備考";
         }
 
 
         private void btn_regist_Click(object sender, EventArgs e)
         {
             // 登録ボタン
-            // 4.1商品情報登録
-           
-                // 4.1.1妥当な商品情報取得
-                if (!Get_Chumon_Data_AtRegistration())
+            // 19.1注文情報登録
+
+            // 19.1.1妥当な注文情報取得
+            if (!Get_Chumon_Data_AtRegistration())
                     return;
 
-                // 4.1.2妥当な商品情報作成
-                var regChumon = Generate_Data_AtRegistration();
+            // 19.1.2妥当な注文情報作成
+            var regChumon = Generate_Data_AtRegistration();
 
-                // 4.1.3商品情報登録
-                if (!Generate_Registration(regChumon))
+            // 19.1.3注文情報登録
+            if (!Generate_Registration(regChumon))
                     return;
 
         }
-            // 
-            //
-            //4.1.1　妥当な商品データ取得（新規登録）
-            //
-            //
-            private bool Get_Chumon_Data_AtRegistration()
+        // 
+        //
+        //19.1.1　妥当な注文データ取得（新規登録）
+        //
+        //
+        private bool Get_Chumon_Data_AtRegistration()
             {
-                // 商品データの形式チェック
+                // 注文データの形式チェック
                 string errorMessage = string.Empty;
 
             ///// 入力内容の適否 /////
@@ -231,12 +238,12 @@ namespace SalesManagement_SysDev
             }
             return true;
             }
-            //
-            //
-            // 4.1.2 商品情報作成
-            //
-            //
-            private T_Chumon Generate_Data_AtRegistration()
+        //
+        //
+        // 19.1.2 注文情報作成
+        //
+        //
+        private T_Chumon Generate_Data_AtRegistration()
             {
                 return new T_Chumon
                 {
@@ -251,12 +258,12 @@ namespace SalesManagement_SysDev
                 };
 
             }
-            //
-            //
-            // 4.1.3　商品情報登録
-            //
-            //
-            private bool Generate_Registration(T_Chumon regChumon)
+        //
+        //
+        // 19.1.3　注文情報登録
+        //
+        //
+        private bool Generate_Registration(T_Chumon regChumon)
             {
                 // 登録可否
                 if (DialogResult.OK != MessageBox.Show(this, "登録してよろしいですか", "登録可否", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
@@ -273,34 +280,40 @@ namespace SalesManagement_SysDev
                 }
                 // 画面更新
                 RefreshDataGridView();
-            txt_ChID.Focus();
+                txt_ChID.Focus();
 
                 return true;
 
             }
 
-            // 更新ボタン
-            // 4.2 商品情報更新
-            private void btn_update_Click(object sender, EventArgs e)
+        // 更新ボタン
+        // 19.2 注文情報更新
+        private void btn_update_Click(object sender, EventArgs e)
             {
-                // 4.2.1 妥当な商品データ取得
-                if (!GetValidDataAtUpdate()) return;
+            // 19.2.1 妥当な注文データ取得
+            if (!GetValidDataAtUpdate()) return;
+            //if (!GetValidDataAtUpdate_Stock()) return;
+            //if (!GetValidDataAtUpdate_Syukko()) return;
+            //if (!GetValidDataAtUpdate_Syukko_Detail()) return;
 
-                // 4.2.2 商品情報作成
-                var regChumon = GenerateDataAtUpdate();
+            // 19.2.2 注文情報作成
+            var regChumon = GenerateDataAtUpdate();
+            //var regStock = GenerateDataAtUpdate_Stock();
+            //var regSyukko = GenerateDataAtUpdate_Syukko();
+            //var regSyukkoDetail = GenerateDataAtUpdate_Syukko_Detail();
 
-            // 4.2.3 商品情報更新
+            // 19.2.3 注文情報更新
             ChumonUpdate(regChumon);
 
             }
-            //
-            //
-            // 5.3.2.1 妥当な商品データ取得（更新）
-            //
-            //
-            private bool GetValidDataAtUpdate()
+        //
+        //
+        // 19.3.2.1 妥当な注文データ取得（更新）
+        //
+        //
+        private bool GetValidDataAtUpdate()
             {
-                // 商品データの形式チェック
+                // 注文データの形式チェック
                 string errorMessage = string.Empty;
 
             ///// 入力内容の適否 /////
@@ -473,13 +486,13 @@ namespace SalesManagement_SysDev
             }
             return true;
             }
-            //
-            //
-            // 4.2.2 カテゴリー情報作成
-            //
-            //
-            // out      Category : Categoryデータ
-            private T_Chumon GenerateDataAtUpdate()
+        //
+        //
+        // 19.2.2 カテゴリー情報作成
+        //
+        //
+        // out      Category : Categoryデータ
+        private T_Chumon GenerateDataAtUpdate()
             {
                 return new T_Chumon
                 {
@@ -493,12 +506,12 @@ namespace SalesManagement_SysDev
 
                 };
             }
-            //
-            //
-            // 4.2.3 商品情報更新
-            //
-            //
-            private bool ChumonUpdate(T_Chumon regChumon)
+        //
+        //
+        // 19.2.3 注文情報更新
+        //
+        //
+        private bool ChumonUpdate(T_Chumon regChumon)
             {
                 // 更新可否
                 if (DialogResult.OK != MessageBox.Show(this, "更新してよろしいですか", "更新可否", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
@@ -521,9 +534,9 @@ namespace SalesManagement_SysDev
                 return true;
             }
 
-            // 削除ボタン
-            // 4.3 商品情報削除
-            private void btn_delete_Click(object sender, EventArgs e)
+        // 削除ボタン
+        // 19.3 注文情報削除
+        private void btn_delete_Click(object sender, EventArgs e)
             {
                 // データ行番号を取得
                 int ChID = int.Parse(txt_ChID.Text);
@@ -911,10 +924,6 @@ namespace SalesManagement_SysDev
             txt_memo.Text = "";
         }
 
-        private void F_Chumon_Load_2(object sender, EventArgs e)
-        {
-
-        }
 
         private void button4_Click(object sender, EventArgs e)
         {

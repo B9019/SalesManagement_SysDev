@@ -193,7 +193,7 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
         }
 
         // データ更新
-        // in   : M_Productデータ
+        // in   : T_Orderデータ
         // out  : エラーメッセージ 
         public string PutOrder(T_Order regOrder)
         {
@@ -247,6 +247,55 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                 return string.Empty;
             }
         }
+        // 詳細データ更新
+        // in   : T_OrderDetailデータ
+        // out  : エラーメッセージ 
+
+        public string PutOrderDetail(T_OrderDetail regOrderDetail)
+        {
+            using (var db = new SalesManagement_DevContext())
+            {
+                T_OrderDetail orderdetail;
+                try
+                {
+                    orderdetail = db.T_OrderDetails.Single(x => x.OrDetailID == regOrderDetail.OrDetailID);
+                }
+                catch
+                {
+                    return _msc.GetMessage(110);
+                }
+                orderdetail.OrDetailID = regOrderDetail.OrDetailID;
+                orderdetail.OrID = regOrderDetail.OrID;
+                orderdetail.PrID = regOrderDetail.PrID;
+                orderdetail.OrQuantity = regOrderDetail.OrQuantity;
+                orderdetail.OrTotalPrice = regOrderDetail.OrTotalPrice;
+                db.Entry(orderdetail).State = EntityState.Modified;
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    // throw new Exception(Messages.errorConflict, ex);
+                    // throw new Exception(_cm.GetMessage(100), ex);
+                    return _msc.GetMessage(100);
+                }
+
+                // ログ出力
+                var operationLog = new OperationLog()
+                {
+                    EventRaisingTime = DateTime.Now,
+                    Operator = _logonUser,
+                    Table = "OrderDetail",
+                    Command = "Put",
+                    //Data = ProductLogData(regProduct),
+                };
+                //StaticCommon.PostOperationLog(operationLog);
+
+                return string.Empty;
+            }
+        }
+
         // データ削除
         // in       Product : 削除する商品ID
         public void DeleteOrder(int T_OrID)
