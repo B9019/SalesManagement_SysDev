@@ -67,6 +67,8 @@ namespace SalesManagement_SysDev
         private int _pageSizePrinting;                                      // １ページ印刷データ行数
         private List<T_DispArrival> _dispArrivalPrinting;                 // 印刷用データ
 
+        int HIDEFlag;
+
         public F_Arrival()
         {
             InitializeComponent();
@@ -74,6 +76,7 @@ namespace SalesManagement_SysDev
 
         private void F_Arrival_Load(object sender, EventArgs e)
         {
+            btn_arrival.Enabled = false;
             dataGridView_Arrival.ColumnCount = 9;
 
             dataGridView_Arrival.Columns[0].HeaderText = "入荷ID ";
@@ -86,6 +89,18 @@ namespace SalesManagement_SysDev
             dataGridView_Arrival.Columns[7].HeaderText = "備考";
             dataGridView_Arrival.Columns[8].HeaderText = "入荷失敗フラグ";
 
+            F_login f_login = new F_login();
+            transfer_int = f_login.transfer_int;
+
+            btn_delete.Enabled = false;
+
+            if (transfer_int == 1 ||
+               transfer_int == 5)
+            {
+                btn_delete.Enabled = true;
+            }
+
+            HIDEFlag = 0;
         }
         // 登録ボタン
         //11.1入荷情報登録
@@ -273,6 +288,10 @@ namespace SalesManagement_SysDev
         //
         private T_Arrival Generate_Data_AtRegistration()
         {
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_ArHidden.Text = "";
+            }
             return new T_Arrival
             {
                 ArID = int.Parse(txt_ArID.Text),
@@ -282,6 +301,7 @@ namespace SalesManagement_SysDev
                 OrID = int.Parse(txt_OrID.Text),
                 ArDate = DateTime.Parse(txt_ArDate.Text),
                 Armemo= txt_Armemo.Text,
+                ArFlag = 0,
                 ArHidden = txt_ArHidden.Text,
 
             };
@@ -575,6 +595,7 @@ namespace SalesManagement_SysDev
                 OrID = int.Parse(txt_OrID.Text),
                 ArDate = DateTime.Parse(txt_ArDate.Text),
                 Armemo = txt_Armemo.Text,
+                ArFlag = HIDEFlag,
                 ArHidden = txt_ArHidden.Text,
 
             };
@@ -647,7 +668,7 @@ namespace SalesManagement_SysDev
             //検索条件をテキストボックスから抽出し、SQL文をセット
             //　日本語可　：SqlDbType.NVarChar
             //　日本語不可：SqlDbType.VarChar
-            for (int count = 0; count < 8; count++)
+            for (int count = 0; count < 9; count++)
             {
                 if (txt_ArID.Text != "" && count == 0)
                 {
@@ -734,13 +755,21 @@ namespace SalesManagement_SysDev
                     command.CommandText = command.CommandText + AND + "ArHidden LIKE @ArHidden ";
                     ++andnum;
                 }
+                else if (count == 8)
+                {
+                    command.Parameters.Add("@ArFlag", SqlDbType.NVarChar);
+                    command.Parameters["@ArFlag"].Value = HIDEFlag;
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "ArFlag LIKE @ArFlag ";
+                    ++andnum;
+                }
                 //2つ目以降の条件の前部にANDを接続
                 if (andnum != 0)
                 {
                     AND = "AND ";
                 }
                 //最後にセミコロンを接続する
-                while (count == 7)
+                while (count == 8)
                 {
                     command.CommandText = command.CommandText + ";";
                     break;
@@ -917,6 +946,23 @@ namespace SalesManagement_SysDev
             txt_OrID.Text = "";
             txt_ArDate.Text = "";
             txt_ArHidden.Text = "";
+        }
+
+        private void Checked_Arrival_HideFlag(object sender, EventArgs e)
+        {
+            if (chk_hide_FLG.Checked == true)
+            {
+                txt_ArHidden.Text = "";
+                HIDEFlag = 1;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
+            else if (chk_hide_FLG.Checked == false)
+            {
+                txt_ArHidden.Text = "非表示理由を入力(50文字)";
+                HIDEFlag = 0;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
+            return;
+
+
         }
 
     }
