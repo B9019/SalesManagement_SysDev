@@ -67,7 +67,7 @@ namespace SalesManagement_SysDev
         private int _pageNumber = 0;                                        // 印刷ページ番号
         private int _pageSizePrinting;                                      // １ページ印刷データ行数
         private List<M_DispEmployee> _dispEmployeePrinting;                 // 印刷用データ
-
+        int HIDEFlag;
 
         public F_Employee()
         {
@@ -75,6 +75,7 @@ namespace SalesManagement_SysDev
         }
         private void F_Employee_Load_1(object sender, EventArgs e)
         {
+            btn_employee.Enabled = false;
             dataGridView_Employee.ColumnCount = 9;
 
             dataGridView_Employee.Columns[0].HeaderText = "社員ID";
@@ -86,7 +87,18 @@ namespace SalesManagement_SysDev
             dataGridView_Employee.Columns[6].HeaderText = "電話番号";
             dataGridView_Employee.Columns[7].HeaderText = "社員管理フラグ";
             dataGridView_Employee.Columns[8].HeaderText = "非表示理由";
+            HIDEFlag = 0;
 
+            F_login f_login = new F_login();
+            transfer_int = f_login.transfer_int;
+
+            btn_delete.Enabled = false;
+
+            if (transfer_int == 1 ||
+               transfer_int == 5)
+            {
+                btn_delete.Enabled = true;
+            }
         }
         // 登録ボタン
         // 6.1社員情報登録
@@ -272,6 +284,10 @@ namespace SalesManagement_SysDev
         //
         private M_Employee Generate_Data_AtRegistration()
         {
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_EmHidden.Text = "";
+            }
             return new M_Employee
             {
                 EmID = int.Parse(txt_EmID.Text),
@@ -282,6 +298,7 @@ namespace SalesManagement_SysDev
                 //EmPassword = txt_EmPassword.Text,
                 EmPhone = txt_EmPhone.Text,
                 EmHidden = txt_EmHidden.Text,
+                EmFlag = 0,
                 Emmemo = txt_Emmemo.Text,
 
             };
@@ -559,6 +576,14 @@ namespace SalesManagement_SysDev
         // out      Employee : Employeeデータ
         private M_Employee GenerateDataAtUpdate()
         {
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_EmHidden.Text = "";
+            }
+            if (chk_hide_FLG.Checked == true)
+            {
+                HIDEFlag = 1;
+            }
             return new M_Employee
             {
                 EmID = int.Parse(txt_EmID.Text),
@@ -568,6 +593,7 @@ namespace SalesManagement_SysDev
                 EmHiredate = DateTime.Parse(txt_EmHiredate.Text),
                 //EmPassword = txt_EmPassword.Text,
                 EmPhone = txt_EmPhone.Text,
+                EmFlag = HIDEFlag,
                 EmHidden = txt_EmHidden.Text,
 
             };
@@ -675,7 +701,7 @@ namespace SalesManagement_SysDev
             //検索条件をテキストボックスから抽出し、SQL文をセット
             //　日本語可　：SqlDbType.NVarChar
             //　日本語不可：SqlDbType.VarChar
-            for (int count = 0; count < 8; count++)
+            for (int count = 0; count < 9; count++)
             {
                 if (txt_EmID.Text != "" && count == 0)
                 {
@@ -762,13 +788,21 @@ namespace SalesManagement_SysDev
                     command.CommandText = command.CommandText + AND + "Emmemo LIKE @Emmemo ";
                     ++andnum;
                 }
+                else if (count == 8)
+                {
+                    command.Parameters.Add("@EmFlag", SqlDbType.NVarChar);
+                    command.Parameters["@EmFlag"].Value = HIDEFlag;
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "EmFlag LIKE @EmFlag ";
+                    ++andnum;
+                }
                 //2つ目以降の条件の前部にANDを接続
                 if (andnum != 0)
                 {
                     AND = "AND ";
                 }
                 //最後にセミコロンを接続する
-                while (count == 7)
+                while (count == 8)
                 {
                     command.CommandText = command.CommandText + ";";
                     break;
@@ -866,5 +900,20 @@ namespace SalesManagement_SysDev
 
         }
 
+        private void Checked_Employee_HideFlag(object sender, EventArgs e)
+        {
+            if (chk_hide_FLG.Checked == true)
+            {
+                txt_EmHidden.Text = "";
+                HIDEFlag = 1;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
+            else if (chk_hide_FLG.Checked == false)
+            {
+                txt_EmHidden.Text = "非表示理由を入力(50文字)";
+                HIDEFlag = 0;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
+            return;
+
+        }
     }
 }

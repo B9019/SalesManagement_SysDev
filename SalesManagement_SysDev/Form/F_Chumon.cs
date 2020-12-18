@@ -67,6 +67,7 @@ namespace SalesManagement_SysDev
         private int _pageNumber = 0;                                        // 印刷ページ番号
         private int _pageSizePrinting;                                      // １ページ印刷データ行数
         private List<T_DispChumon> _dispChumonPrinting;   // 印刷用データ
+        int HIDEFlag;
 
         public F_Chumon()
         {
@@ -75,6 +76,7 @@ namespace SalesManagement_SysDev
 
         private void F_Chumon_Load(object sender, EventArgs e)
         {
+            btn_chumon.Enabled = false;
             dataGridView_Chumon.ColumnCount = 13;
 
             btn_regist.Enabled = false; //受注処理の時点で注文テーブルに共通項目は登録されているので、この画面では更新処理でデータを追加するべき。
@@ -92,10 +94,26 @@ namespace SalesManagement_SysDev
             dataGridView_Chumon.Columns[10].HeaderText = "商品ID";
             dataGridView_Chumon.Columns[11].HeaderText = "数量";
             dataGridView_Chumon.Columns[12].HeaderText = "備考";
+
+            HIDEFlag = 0;
+
+            F_login f_login = new F_login();
+            transfer_int = f_login.transfer_int;
+
+            btn_delete.Enabled = false;
+
+            if (transfer_int == 1 ||
+               transfer_int == 5)
+            {
+                btn_delete.Enabled = true;
+            }
         }
 
+       
 
-        private void btn_regist_Click(object sender, EventArgs e)
+
+
+    private void btn_regist_Click(object sender, EventArgs e)
         {
             // 登録ボタン
             // 19.1注文情報登録
@@ -245,7 +263,11 @@ namespace SalesManagement_SysDev
         //
         private T_Chumon Generate_Data_AtRegistration()
             {
-                return new T_Chumon
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_ChHidden.Text = "";
+            }
+            return new T_Chumon
                 {
                     ChID = int.Parse(txt_ChID.Text),
                     SoID = int.Parse(txt_SoID.Text),
@@ -253,7 +275,8 @@ namespace SalesManagement_SysDev
                     ClID = int.Parse(txt_ClID.Text),
                     OrID = int.Parse(txt_OrID.Text),
                     ChDate = DateTime.Parse(txt_ChDate.Text),
-                    ChHidden = txt_ChHidden.Text
+                ChFlag = 0,
+                ChHidden = txt_ChHidden.Text
 
                 };
 
@@ -494,14 +517,24 @@ namespace SalesManagement_SysDev
         // out      Category : Categoryデータ
         private T_Chumon GenerateDataAtUpdate()
             {
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_ChHidden.Text = "";
+            }
+            if(chk_hide_FLG.Checked == true)
+            {
+                HIDEFlag = 1;
+            }
                 return new T_Chumon
                 {
+
                     ChID = int.Parse(txt_ChID.Text),
                     SoID = int.Parse(txt_SoID.Text),
                     EmID = int.Parse(txt_EmID.Text),
                     ClID = int.Parse(txt_ClID.Text),
                     OrID = int.Parse(txt_OrID.Text),
                     ChDate = DateTime.Parse(txt_ChDate.Text),
+                    ChFlag = HIDEFlag,
                     ChHidden = txt_ChHidden.Text
 
                 };
@@ -786,7 +819,7 @@ namespace SalesManagement_SysDev
             //検索条件をテキストボックスから抽出し、SQL文をセット
             //　日本語可　：SqlDbType.NVarChar
             //　日本語不可：SqlDbType.VarChar
-            for (int count = 0; count < 8; count++)
+            for (int count = 0; count < 9; count++)
             {
                 if (txt_ChID.Text != "" && count == 0)
                 {
@@ -874,13 +907,22 @@ namespace SalesManagement_SysDev
                     command.CommandText = command.CommandText + AND + "memo LIKE @memo ";
                     ++andnum;
                 }
+                else if (count == 8)
+                {
+                    command.Parameters.Add("@ChFlag", SqlDbType.NVarChar);
+                    command.Parameters["@ChFlag"].Value = HIDEFlag;
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "ChFlag LIKE @ChFlag ";
+                    ++andnum;
+                }
+
                 //2つ目以降の条件の前部にANDを接続
                 if (andnum != 0)
                 {
                     AND = "AND ";
                 }
                 //最後にセミコロンを接続する
-                while (count == 7)
+                while (count == 8)
                 {
                     command.CommandText = command.CommandText + ";";
                     break;
@@ -924,6 +966,21 @@ namespace SalesManagement_SysDev
             txt_memo.Text = "";
         }
 
+        private void Checked_Chumon_HideFlag(object sender, EventArgs e)
+        {
+            if (chk_hide_FLG.Checked == true)
+            {
+                txt_ChHidden.Text = "";
+                HIDEFlag = 1;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
+            else if (chk_hide_FLG.Checked == false)
+            {
+                txt_ChHidden.Text = "非表示理由を入力(50文字)";
+                HIDEFlag = 0;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
+            return;
+
+        }
 
         private void button4_Click(object sender, EventArgs e)
         {
