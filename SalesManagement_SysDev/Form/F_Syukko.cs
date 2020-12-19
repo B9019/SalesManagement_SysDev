@@ -39,7 +39,7 @@ namespace SalesManagement_SysDev
 
         //// データベース処理モジュール（M_Division）
         private T_SyukkoContents _Sy = new T_SyukkoContents();
-
+        private T_ArrivalContents _Ar = new T_ArrivalContents();
         // ***** プロパティ定義
 
         //// トップフォーム
@@ -74,26 +74,41 @@ namespace SalesManagement_SysDev
 
         private void F_Syukko_Load(object sender, EventArgs e)
         {
+            btn_regist.Enabled = false;
+            dataGridView_Syukko.ColumnCount = 12;
+
+            dataGridView_Syukko.Columns[0].HeaderText = "出庫ID";
+            dataGridView_Syukko.Columns[1].HeaderText = "社員ID";
+            dataGridView_Syukko.Columns[2].HeaderText = "顧客ID";
+            dataGridView_Syukko.Columns[3].HeaderText = "営業所ID";
+            dataGridView_Syukko.Columns[4].HeaderText = "受注ID";
+            dataGridView_Syukko.Columns[5].HeaderText = "出庫年月日";
+            dataGridView_Syukko.Columns[6].HeaderText = "出庫状態フラグ";
+            dataGridView_Syukko.Columns[7].HeaderText = "出庫管理フラグ";
+            dataGridView_Syukko.Columns[8].HeaderText = "非表示理由";
+            dataGridView_Syukko.Columns[9].HeaderText = "出庫詳細ID";
+            dataGridView_Syukko.Columns[10].HeaderText = "商品ID";
+            dataGridView_Syukko.Columns[11].HeaderText = "数量";
         }
 
         // 登録ボタン
-        // 4.1商品情報登録
+        // 10.1出庫情報登録
         private void btn_regist_Click(object sender, EventArgs e)
         {
-            // 4.1.1妥当な商品情報取得
+            // 10.1.1妥当な商品情報取得
             if (!Get_Syukko_Data_AtRegistration())
                 return;
 
-            // 4.1.2妥当な商品情報作成
+            // 10.1.2妥当な商品情報作成
             var regSyukko = Generate_Data_AtRegistration();
 
-            // 4.1.3商品情報登録
+            // 10.1.3商品情報登録
             if (!Generate_Registration(regSyukko))
                 return;
         }
         // 
         //
-        //4.1.1　妥当な商品データ取得（新規登録）
+        //10.1.1　妥当な出庫データ取得（新規登録）
         //
         //
         private bool Get_Syukko_Data_AtRegistration()
@@ -219,7 +234,7 @@ namespace SalesManagement_SysDev
         }
         //
         //
-        // 4.1.2 商品情報作成
+        // 10.1.2 商品情報作成
         //
         //
         private T_Syukko Generate_Data_AtRegistration()
@@ -239,7 +254,7 @@ namespace SalesManagement_SysDev
         }
         //
         //
-        // 4.1.3　出庫情報登録
+        // 10.1.3　出庫情報登録
         //
         //
         private bool Generate_Registration(T_Syukko regSyukko)
@@ -266,22 +281,31 @@ namespace SalesManagement_SysDev
         }
 
         // 更新ボタン
-        // 4.2 商品情報更新
+        // 10.2 出庫情報更新
         private void btn_update_Click(object sender, EventArgs e)
         {
-            // 4.2.1 妥当な商品データ取得
+            // 10.2.1 妥当な出庫データ取得
             if (!GetValidDataAtUpdate()) return;
 
-            // 4.2.2 商品情報作成
+            // 10.2.2 出庫情報作成
             var regSyukko = GenerateDataAtUpdate();
+            var regSyukkoDetail = GenerateDataAtUpdateDetail();
+            var regArrival = GenerateDataAtUpdateArrival();
+            var regArrivalDetail = GenerateDataAtUpdateArrivalDetail();
 
-            // 4.2.3 商品情報更新
+            // 10.2.3 出庫情報更新
             SyukkoUpdate(regSyukko);
+            SyukkoDetailUpdate(regSyukkoDetail);
+            if(chk_commit_FLG.Checked == true)
+            {
+                Generate_RegistrationArrival(regArrival);
+                Generate_RegistrationArrivalDetail(regArrivalDetail);
+            }
 
         }
         //
         //
-        // 5.3.2.1 妥当な商品データ取得（更新）
+        //10.3.2.1 妥当な出庫データ取得（更新）
         //
         //
         private bool GetValidDataAtUpdate()
@@ -406,12 +430,17 @@ namespace SalesManagement_SysDev
         }
         //
         //
-        // 4.2.2 カテゴリー情報作成
+        // 10.2.2 カテゴリー情報作成
         //
         //
         // out      Category : Categoryデータ
         private T_Syukko GenerateDataAtUpdate()
         {
+            int Flag = 0;                   //確定処理をフラグで判定
+            if(chk_commit_FLG.Checked == true)
+            {
+                Flag = 1;
+            }
             return new T_Syukko
             {
                 SyID = int.Parse(txt_SyID.Text),
@@ -419,14 +448,50 @@ namespace SalesManagement_SysDev
                 EmID = int.Parse(txt_EmID.Text),
                 ClID = int.Parse(txt_ClID.Text),
                 OrID = int.Parse(txt_OrID.Text),
-                SyDate = DateTime.Parse(txt_SyDate.Text),
+                SyDate = DateTime.Now,
+                SyStateFlag = Flag,
+                //SyFlag = HIDEFlag,
                 SyHidden = txt_SyHidden.Text
+
+            };
+        }
+        private T_SyukkoDetail GenerateDataAtUpdateDetail()
+        {
+            return new T_SyukkoDetail
+            {
+                SyDetailID = int.Parse(txt_SyDetailID.Text),
+                SyID = int.Parse(txt_SyID.Text),
+                PrID = int.Parse(txt_PrID.Text),
+                SyQuantity = int.Parse(txt_ArQuantity.Text),
+
+            };
+        }
+        private T_Arrival GenerateDataAtUpdateArrival()
+        {
+            return new T_Arrival
+            {
+                ArID = int.Parse(txt_SyID.Text),
+                SoID = int.Parse(txt_SoID.Text),
+                ClID = int.Parse(txt_ClID.Text),
+                OrID = int.Parse(txt_OrID.Text),
+                ArStateFlag = 0
+
+            };
+        }
+        private T_ArrivalDetail GenerateDataAtUpdateArrivalDetail()
+        {
+            return new T_ArrivalDetail
+            {
+                ArDetailID = int.Parse(txt_SyDetailID.Text),
+                ArID = int.Parse(txt_SyID.Text),
+                PrID = int.Parse(txt_PrID.Text),
+                ArQuantity = int.Parse(txt_ArQuantity.Text)
 
             };
         }
         //
         //
-        // 4.2.3 商品情報更新
+        // 10.2.3 出庫情報更新
         //
         //
         private bool SyukkoUpdate(T_Syukko regSyukko)
@@ -451,9 +516,52 @@ namespace SalesManagement_SysDev
 
             return true;
         }
+        private bool SyukkoDetailUpdate(T_SyukkoDetail regSyukkoDetail)
+        {
+            var errorMessage = _Sy.PutSyukkoDetail(regSyukkoDetail);
+
+            if (errorMessage != string.Empty)
+            {
+                MessageBox.Show(errorMessage);
+                return false;
+            }
+            txt_SyID.Focus();
+
+            return true;
+        }
+        private bool Generate_RegistrationArrival(T_Arrival regArrival)
+        {
+            // 入荷情報の登録
+            var errorMessage = _Ar.PostT_Arrival(regArrival);
+
+            if (errorMessage != string.Empty)
+            {
+                MessageBox.Show(errorMessage);
+                return false;
+            }
+
+            return true;
+
+        }
+        private bool Generate_RegistrationArrivalDetail(T_ArrivalDetail regArrivalDetail)
+        {
+            // 入荷情報の登録
+            var errorMessage = _Ar.PostT_ArrivalDetail(regArrivalDetail);
+
+            if (errorMessage != string.Empty)
+            {
+                MessageBox.Show(errorMessage);
+                return false;
+            }
+
+            return true;
+
+        }
+
+
 
         // 削除ボタン
-        // 4.3 商品情報削除
+        // 10.3 出庫情報削除
         private void btn_delete_Click(object sender, EventArgs e)
         {
             // データ行番号を取得

@@ -324,16 +324,24 @@ namespace SalesManagement_SysDev
 
             // 19.2.2 注文情報作成
             var regChumon = GenerateDataAtUpdate();
+            var regChumonDetail = GenerateDataAtUpdateDetail();
             var regStock = GenerateDataAtUpdate_Stock();
             var regSyukko = GenerateDataAtUpdate_Syukko();
             var regSyukkoDetail = GenerateDataAtUpdate_Syukko_Detail();
 
             // 19.2.3 注文情報更新
             ChumonUpdate(regChumon);
-            StockUpdate(regStock);
-            SyukkoUpdate(regSyukko);
-            SyukkoDetailUpdate(regSyukkoDetail);
+            ChumonDetailUpdate(regChumonDetail);
+            if (chk_commit_FLG.Checked == true)
+            {
+                StockUpdate(regStock);
+                SyukkoUpdate(regSyukko);
+                SyukkoDetailUpdate(regSyukkoDetail);
+
             }
+
+
+        }
         //
         //
         // 19.3.2.1 妥当な注文データ取得（更新）
@@ -538,7 +546,7 @@ namespace SalesManagement_SysDev
                     EmID = int.Parse(txt_EmID.Text),
                     ClID = int.Parse(txt_ClID.Text),
                     OrID = int.Parse(txt_OrID.Text),
-                    ChDate = DateTime.Parse(txt_ChDate.Text),
+                    ChDate = DateTime.Now,
                     ChFlag = HIDEFlag,
                     ChHidden = txt_ChHidden.Text
 
@@ -612,10 +620,10 @@ namespace SalesManagement_SysDev
             return new T_Syukko
             {
                 SyID = int.Parse(txt_ChID.Text),
-                EmID = int.Parse(txt_EmID.Text),
                 ClID = int.Parse(txt_ClID.Text),
                 SoID = int.Parse(txt_SoID.Text),
-                OrID = int.Parse(txt_OrID.Text)
+                OrID = int.Parse(txt_OrID.Text),
+                SyStateFlag = 0
             };
         }
         private T_SyukkoDetail GenerateDataAtUpdate_Syukko_Detail()
@@ -652,6 +660,19 @@ namespace SalesManagement_SysDev
 
                 return true;
             }
+        private bool ChumonDetailUpdate(T_ChumonDetail regChumonDetail)
+        {
+            var errorMessage = _Ch.PutChumonDetail(regChumonDetail);
+
+            if (errorMessage != string.Empty)
+            {
+                MessageBox.Show(errorMessage);
+                return false;
+            }
+
+            return true;
+        }
+
         private bool StockUpdate(T_Stock regStock)
         {
             var errorMessage = _St.PutStockCh(regStock);
