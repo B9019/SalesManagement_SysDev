@@ -326,8 +326,8 @@ namespace SalesManagement_SysDev
             var regChumon = GenerateDataAtUpdate();
             var regChumonDetail = GenerateDataAtUpdateDetail();
             var regStock = GenerateDataAtUpdate_Stock();
-            var regSyukko = GenerateDataAtUpdate_Syukko();
-            var regSyukkoDetail = GenerateDataAtUpdate_Syukko_Detail();
+            var regSyukko = Generate_Registration_Syukko();
+            var regSyukkoDetail = Generate_Registration_SyukkoDetail();
 
             // 19.2.3 注文情報更新
             ChumonUpdate(regChumon);
@@ -335,8 +335,8 @@ namespace SalesManagement_SysDev
             if (chk_commit_FLG.Checked == true)
             {
                 StockUpdate(regStock);
-                SyukkoUpdate(regSyukko);
-                SyukkoDetailUpdate(regSyukkoDetail);
+                Generate_Registration_Syukko(regSyukko);
+                Generate_Registration_SyukkoDetail(regSyukkoDetail);
 
             }
 
@@ -615,7 +615,7 @@ namespace SalesManagement_SysDev
             };
 
         }
-        private T_Syukko GenerateDataAtUpdate_Syukko()
+        private T_Syukko Generate_Registration_Syukko()
         {
             return new T_Syukko
             {
@@ -626,7 +626,7 @@ namespace SalesManagement_SysDev
                 SyStateFlag = 0
             };
         }
-        private T_SyukkoDetail GenerateDataAtUpdate_Syukko_Detail()
+        private T_SyukkoDetail Generate_Registration_SyukkoDetail()
         {
             return new T_SyukkoDetail
             {
@@ -685,34 +685,31 @@ namespace SalesManagement_SysDev
 
             return true;
         }
-        private bool SyukkoUpdate(T_Syukko regSyukko)
+        private bool Generate_Registration_Syukko(T_Syukko regSyukko)
         {
-            var errorMessage = _Sy.PutSyukko(regSyukko);
+            // 出庫情報の登録
+            var errorMessage = _Sy.PostT_Syukko(regSyukko);
 
             if (errorMessage != string.Empty)
             {
                 MessageBox.Show(errorMessage);
                 return false;
             }
-
-
             return true;
+
         }
-        private bool SyukkoDetailUpdate(T_SyukkoDetail regSyukkoDetail)
+        private bool Generate_Registration_SyukkoDetail(T_SyukkoDetail regSyukkoDetail)
         {
-            var errorMessage = _Sy.PutSyukkoDetail(regSyukkoDetail);
+            // 出庫詳細情報の登録
+            var errorMessage = _Sy.PostT_SyukkoDetail(regSyukkoDetail);
 
             if (errorMessage != string.Empty)
             {
                 MessageBox.Show(errorMessage);
                 return false;
             }
-
-            // 表示データ更新 & 入力クリア
-            RefreshDataGridView();
-            txt_ChID.Focus();
-
             return true;
+
         }
 
         // 削除ボタン
