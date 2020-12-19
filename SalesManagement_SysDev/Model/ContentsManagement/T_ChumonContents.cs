@@ -233,6 +233,57 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                 return string.Empty;
             }
         }
+        // データ更新
+        // in   : M_ChumonDetailデータ
+        // out  : エラーメッセージ 
+        public string PutChumonDetail(T_ChumonDetail regChumonDetail)
+        {
+            using (var db = new SalesManagement_DevContext())
+            {
+                T_ChumonDetail chumonDetail;
+                try
+                {
+                    chumonDetail = db.T_ChumonDetails.Single(x => x.ChDetailID == regChumonDetail.ChDetailID);
+                }
+                catch
+                {
+                    // throw new Exception(Messages.errorNotFoundItem, ex);
+                    // throw new Exception(_cm.GetMessage(110), ex);
+                    return _msc.GetMessage(110);
+                }
+                chumonDetail.ChDetailID = regChumonDetail.ChDetailID;
+                chumonDetail.ChID = regChumonDetail.ChID;
+                chumonDetail.PrID = regChumonDetail.PrID;
+                chumonDetail.ChQuantity = regChumonDetail.ChQuantity;
+                //Timestamp = item.Timestamp,
+                //LogData = item.LogData,
+                db.Entry(chumonDetail).State = EntityState.Modified;
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    // throw new Exception(Messages.errorConflict, ex);
+                    // throw new Exception(_cm.GetMessage(100), ex);
+                    return _msc.GetMessage(100);
+                }
+
+                // ログ出力
+                var operationLog = new OperationLog()
+                {
+                    EventRaisingTime = DateTime.Now,
+                    Operator = _logonUser,
+                    Table = "ChumonDetail",
+                    Command = "ChuDe",
+                    //Data = ProductLogData(regChumon),
+                };
+                //StaticCommon.PostOperationLog(operationLog);
+
+                return string.Empty;
+            }
+        }
+
         // データ削除
         // in       Product : 削除する商品ID
         public void DeleteChumon(int T_ChID)

@@ -140,7 +140,7 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
         //}
 
         // データ追加
-        // in   : M_Itemデータ
+        // in   : T_Syukkoデータ
         public string PostT_Syukko(T_Syukko regSyukko)
         {
             using (var db1 = new SalesManagement_DevContext())
@@ -164,6 +164,32 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
 
             return string.Empty;
         }
+        // データ追加
+        // in   : T_SyukkoDetailデータ
+        public string PostT_SyukkoDetail(T_SyukkoDetail regSyukkoDetail)
+        {
+            using (var db1 = new SalesManagement_DevContext())
+            {
+                db1.T_SyukkoDetails.Add(regSyukkoDetail);
+                db1.Entry(regSyukkoDetail).State = EntityState.Added;
+                db1.SaveChanges();
+            }
+
+            //// ログ出力
+            //var operationLog = new OperationLog()
+            //{
+            //    EventRaisingTime = DateTime.Now,
+            //    Operator = _logonUser,
+            //    Table = "Product",
+            //    Command = "Post",
+            //    Data = M_ProductLogData(regProduct),
+            //    Comments = string.Empty
+            //};
+            //StaticCommon.PostOperationLog(operationLog);
+
+            return string.Empty;
+        }
+
         // データ更新
         // in   : M_Syukkoデータ
         // out  : エラーメッセージ 

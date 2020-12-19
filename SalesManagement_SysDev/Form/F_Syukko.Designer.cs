@@ -144,7 +144,6 @@
             this.lbl_memo.Size = new System.Drawing.Size(49, 20);
             this.lbl_memo.TabIndex = 194;
             this.lbl_memo.Text = "備考";
-            this.lbl_memo.Click += new System.EventHandler(this.lbl_memo_Click);
             // 
             // btn_hattyu
             // 
