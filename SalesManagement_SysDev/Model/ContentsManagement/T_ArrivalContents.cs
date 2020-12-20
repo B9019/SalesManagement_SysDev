@@ -241,6 +241,56 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                 return string.Empty;
             }
         }
+        // データ更新
+        // in   : T_ArrivalDetailデータ
+        // out  : エラーメッセージ 
+        public string PutArrivalDetail(T_ArrivalDetail regArrivalDetail)
+        {
+            using (var db = new SalesManagement_DevContext())
+            {
+                T_ArrivalDetail arrivalDetail;
+                try
+                {
+                    arrivalDetail = db.T_ArrivalDetails.Single(x => x.ArID == regArrivalDetail.ArID);
+                }
+                catch
+                {
+                    // throw new Exception(Messages.errorNotFoundItem, ex);
+                    // throw new Exception(_cm.GetMessage(110), ex);
+                    return _msc.GetMessage(110);
+                }
+                arrivalDetail.ArDetailID = regArrivalDetail.ArDetailID;
+                arrivalDetail.ArID = regArrivalDetail.ArID;
+                arrivalDetail.PrID = regArrivalDetail.PrID;
+                arrivalDetail.ArQuantity = regArrivalDetail.ArQuantity;
+
+                db.Entry(arrivalDetail).State = EntityState.Modified;
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    // throw new Exception(Messages.errorConflict, ex);
+                    // throw new Exception(_cm.GetMessage(100), ex);
+                    return _msc.GetMessage(100);
+                }
+
+                // ログ出力
+                var operationLog = new OperationLog()
+                {
+                    EventRaisingTime = DateTime.Now,
+                    Operator = _logonUser,
+                    Table = "ArrivalDetail",
+                    Command = "Put",
+                    //Data = ArrivalLogData(regArrival),
+                };
+                //StaticCommon.PostOperationLog(operationLog);
+
+                return string.Empty;
+            }
+        }
+
         // データ削除
         // in       Arrival : 削除する入荷ID
         public void DeleteArrival(int T_ArID)

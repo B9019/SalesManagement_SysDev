@@ -38,6 +38,7 @@ namespace SalesManagement_SysDev
 
         //// データベース処理モジュール（M_Division）
         private T_ArrivalContents _Ar = new T_ArrivalContents();
+        private T_ShipmentContents _Sh = new T_ShipmentContents();
 
         // ***** プロパティ定義
 
@@ -84,11 +85,12 @@ namespace SalesManagement_SysDev
             dataGridView_Arrival.Columns[2].HeaderText = "社員ID ";
             dataGridView_Arrival.Columns[3].HeaderText = "顧客ID";
             dataGridView_Arrival.Columns[4].HeaderText = "受注ID";
-            dataGridView_Arrival.Columns[5].HeaderText = " 入荷年月日";
-            dataGridView_Arrival.Columns[6].HeaderText = "非表示理由";
-            dataGridView_Arrival.Columns[7].HeaderText = "備考";
-            dataGridView_Arrival.Columns[8].HeaderText = "入荷失敗フラグ";
-
+            dataGridView_Arrival.Columns[5].HeaderText = "入荷年月日";
+            dataGridView_Arrival.Columns[6].HeaderText = "入荷状態フラグ";
+            dataGridView_Arrival.Columns[7].HeaderText = "入荷管理フラグ";
+            dataGridView_Arrival.Columns[8].HeaderText = "入荷詳細ID";
+            dataGridView_Arrival.Columns[9].HeaderText = "商品ID";
+            dataGridView_Arrival.Columns[10].HeaderText = "数量";
             F_login f_login = new F_login();
             transfer_int = f_login.transfer_int;
 
@@ -410,9 +412,17 @@ namespace SalesManagement_SysDev
 
             //11.2.2 入荷情報作成
             var regArrival = GenerateDataAtUpdate();
-
+            var regArrivalDetail = GenerateDataAtUpdateDetail();
+            var regShipment = Generate_Data_AtRegistration_Shipment();
+            var regShipmentDetail = Generate_Data_AtRegistration_ShipmentDetail();
             // 11.2.3 入荷情報更新
             ArrivalUpdate(regArrival);
+            ArrivalDetailUpdate(regArrivalDetail);
+            if(chk_commit_FLG.Checked == true)
+            {
+                Generate_RegistrationShipment(regShipment);
+                Generate_RegistrationShipmentDetail(regShipmentDetail);
+            }
 
         }
         //
@@ -455,6 +465,28 @@ namespace SalesManagement_SysDev
                 txt_ArDate.Focus();
                 return false;
             }
+            //　入荷詳細ID
+            if (String.IsNullOrEmpty(txt_ArDetailID.Text))
+            {
+                MessageBox.Show("入荷年月日は必須項目です");
+                txt_ArDetailID.Focus();
+                return false;
+            }
+            //　商品ID
+            if (String.IsNullOrEmpty(txt_PrID.Text))
+            {
+                MessageBox.Show("入荷年月日は必須項目です");
+                txt_PrID.Focus();
+                return false;
+            }
+            //　数量
+            if (String.IsNullOrEmpty(txt_ArQuantity.Text))
+            {
+                MessageBox.Show("入荷年月日は必須項目です");
+                txt_ArQuantity.Focus();
+                return false;
+            }
+
             ///// 入力内容の形式チェック /////
 
             //// 数値チェック ////
@@ -494,6 +526,28 @@ namespace SalesManagement_SysDev
                 txt_OrID.Focus();
                 return false;
             }
+            // 入荷詳細ID
+            if (!_ic.NumericCheck(txt_ArDetailID.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_ArDetailID.Focus();
+                return false;
+            }
+            //　商品ID
+            if (!_ic.NumericCheck(txt_PrID.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_PrID.Focus();
+                return false;
+            }
+            // 数量
+            if (!_ic.NumericCheck(txt_ArQuantity.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_ArQuantity.Focus();
+                return false;
+            }
+
             ////　日付型チェック ////
             if (!_ic.DateFormCheck(txt_ArDate.Text, out errorMessage))
             {
@@ -586,6 +640,11 @@ namespace SalesManagement_SysDev
         // out      Arrival : Arrivalデータ
         private T_Arrival GenerateDataAtUpdate()
         {
+            int Flag = 0;                   //確定処理をフラグで判定
+            if (chk_commit_FLG.Checked == true)
+            {
+                Flag = 1;
+            }
             return new T_Arrival
             {
                 ArID = int.Parse(txt_ArID.Text),
@@ -593,11 +652,44 @@ namespace SalesManagement_SysDev
                 EmID = int.Parse(txt_EmID.Text),
                 ClID = int.Parse(txt_ClID.Text),
                 OrID = int.Parse(txt_OrID.Text),
-                ArDate = DateTime.Parse(txt_ArDate.Text),
+                ArDate = DateTime.Now,
+                ArStateFlag = Flag,
                 Armemo = txt_Armemo.Text,
                 ArFlag = HIDEFlag,
                 ArHidden = txt_ArHidden.Text,
 
+            };
+        }
+        private T_ArrivalDetail GenerateDataAtUpdateDetail()
+        {
+            return new T_ArrivalDetail
+            {
+                ArDetailID = int.Parse(txt_ArDetailID.Text),
+                ArID = int.Parse(txt_ArID.Text),
+                PrID = int.Parse(txt_PrID.Text),
+                ArQuantity = int.Parse(txt_ArQuantity.Text),
+            };
+        }
+        private T_Shipment Generate_Data_AtRegistration_Shipment()
+        {
+            return new T_Shipment
+            {
+                ShID = int.Parse(txt_ArID.Text),
+                ClID = int.Parse(txt_ClID.Text),
+                SoID = int.Parse(txt_SoID.Text),
+                OrID = int.Parse(txt_OrID.Text),
+                ShStateFlag = 0
+
+            };
+        }
+        private T_ShipmentDetail Generate_Data_AtRegistration_ShipmentDetail()
+        {
+            return new T_ShipmentDetail
+            {
+                ShDetailID = int.Parse(txt_ArDetailID.Text),
+                ShID = int.Parse(txt_ArID.Text),
+                PrID = int.Parse(txt_PrID.Text),
+                ShDquantity = int.Parse(txt_ArQuantity.Text),
             };
         }
         //
@@ -620,13 +712,52 @@ namespace SalesManagement_SysDev
                 MessageBox.Show(errorMessage);
                 return false;
             }
+            return true;
+        }
+        private bool ArrivalDetailUpdate(T_ArrivalDetail regArrivalDetail)
+        {
+            var errorMessage = _Ar.PutArrivalDetail(regArrivalDetail);
 
-            // 表示データ更新 & 入力クリア
+            if (errorMessage != string.Empty)
+            {
+                MessageBox.Show(errorMessage);
+                return false;
+            }
+
+            return true;
+        }
+        private bool Generate_RegistrationShipment(T_Shipment regShipment)
+        {
+            // 入荷情報の登録
+            var errorMessage = _Sh.PostT_Shipment(regShipment);
+
+            if (errorMessage != string.Empty)
+            {
+                MessageBox.Show(errorMessage);
+                return false;
+            }
+
+            return true;
+
+        }
+        private bool Generate_RegistrationShipmentDetail(T_ShipmentDetail regShipmentDetail)
+        {
+            // 入荷情報の登録
+            var errorMessage = _Sh.PostT_ShipmentDetail(regShipmentDetail);
+
+            if (errorMessage != string.Empty)
+            {
+                MessageBox.Show(errorMessage);
+                return false;
+            }
+            // 画面更新
             RefreshDataGridView();
             txt_ArID.Focus();
 
             return true;
+
         }
+
 
         private void btn_all_Click(object sender, EventArgs e)
         {
