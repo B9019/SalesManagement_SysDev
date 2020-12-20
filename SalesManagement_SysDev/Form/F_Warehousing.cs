@@ -66,6 +66,8 @@ namespace SalesManagement_SysDev
         private int _pageNumber = 0;                                        // 印刷ページ番号
         private int _pageSizePrinting;                                      // １ページ印刷データ行数
         private List<T_DispWarehousing> _dispWarehousingPrinting;   // 印刷用データ
+
+        int HIDEFlag;
         public F_Warehousing()
         {
             InitializeComponent();
@@ -73,6 +75,29 @@ namespace SalesManagement_SysDev
 
         private void F_Warehousing_Load(object sender, EventArgs e)
         {
+            HIDEFlag = 0;
+            btn_warehousing.Enabled = false;
+
+            F_login f_login = new F_login();
+            transfer_int = f_login.transfer_int;
+
+            btn_delete.Enabled = false;
+
+            if (transfer_int == 1 ||
+               transfer_int == 5)
+            {
+                btn_delete.Enabled = true;
+            }
+
+
+            dataGridView_Warehousing.ColumnCount = 6;
+
+            dataGridView_Warehousing.Columns[0].HeaderText = "入庫ID ";
+            dataGridView_Warehousing.Columns[1].HeaderText = "発注ID ";
+            dataGridView_Warehousing.Columns[2].HeaderText = "入庫確認社員ID";
+            dataGridView_Warehousing.Columns[3].HeaderText = "入庫年月日";
+            dataGridView_Warehousing.Columns[4].HeaderText = "非表示理由";
+            dataGridView_Warehousing.Columns[5].HeaderText = "備考 ";
         }
 
         // 登録ボタン
@@ -203,6 +228,7 @@ namespace SalesManagement_SysDev
                 WaID = int.Parse(txt_WaID.Text),
                 HaID = int.Parse(txt_HaID.Text),
                 EmID = int.Parse(txt_EmID.Text),
+                WaFlag = 0,
                 WaDate = DateTime.Parse(txt_WaDate.Text)
             };
 
@@ -358,9 +384,14 @@ namespace SalesManagement_SysDev
         // out      Category : Categoryデータ
         private T_Warehousing GenerateDataAtUpdate()
         {
+
             if (chk_hide_FLG.Checked == false)
             {
                 txt_WaHidden.Text = "";
+            }
+            if (chk_hide_FLG.Checked == true)
+            {
+                HIDEFlag = 1;
             }
             return new T_Warehousing
             {
@@ -368,6 +399,7 @@ namespace SalesManagement_SysDev
                 HaID = int.Parse(txt_HaID.Text),
                 EmID = int.Parse(txt_EmID.Text),
                 WaDate = DateTime.Parse(txt_WaDate.Text),
+                WaFlag = HIDEFlag,
                 WaHidden = txt_WaHidden.Text
 
             };
@@ -670,7 +702,7 @@ namespace SalesManagement_SysDev
                     ++andnum;
                 }
                 
-                else if (txt_WaDate.Text != "" && count == 5)
+                else if (txt_WaDate.Text != "" && count == 3)
                 {
                     command.Parameters.Add("@WaDate", SqlDbType.VarChar);
                     command.Parameters["@WaDate"].Value = txt_WaDate.Text;
@@ -682,7 +714,7 @@ namespace SalesManagement_SysDev
                     command.CommandText = command.CommandText + AND + "WaDate LIKE @WaDate ";
                     ++andnum;
                 }
-                else if (txt_WaHidden.Text != "" && count == 6)
+                else if (txt_WaHidden.Text != "" && count == 4)
                 {
                     command.Parameters.Add("@WaHidden", SqlDbType.VarChar);
                     command.Parameters["@WaHidden"].Value = txt_WaHidden.Text;
@@ -691,12 +723,20 @@ namespace SalesManagement_SysDev
                     ++andnum;
                 }
 
-                else if (txt_memo.Text != "" && count == 10)
+                else if (txt_memo.Text != "" && count == 5)
                 {
                     command.Parameters.Add("@memo", SqlDbType.NVarChar);
                     command.Parameters["@memo"].Value = "%" + txt_memo.Text + "%";
                     //実行するSQL文の条件追加
                     command.CommandText = command.CommandText + AND + "memo LIKE @memo ";
+                    ++andnum;
+                }
+                else if (count == 6)
+                {
+                    command.Parameters.Add("@PrFlag", SqlDbType.NVarChar);
+                    command.Parameters["@PrFlag"].Value = HIDEFlag;
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "PrFlag LIKE @PrFlag ";
                     ++andnum;
                 }
                 //2つ目以降の条件の前部にANDを接続
@@ -705,7 +745,7 @@ namespace SalesManagement_SysDev
                     AND = "AND ";
                 }
                 //最後にセミコロンを接続する
-                while (count == 10)
+                while (count == 6)
                 {
                     command.CommandText = command.CommandText + ";";
                     break;
@@ -749,13 +789,16 @@ namespace SalesManagement_SysDev
         private void Checked_Warehousing_HideFlag(object sender, EventArgs e)
         {
             if (chk_hide_FLG.Checked == true)
+            {
                 txt_WaHidden.Text = "";
-            else if(chk_hide_FLG.Checked == false)
+                HIDEFlag = 1;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
+            else if (chk_hide_FLG.Checked == false)
             {
                 txt_WaHidden.Text = "非表示理由を入力(50文字)";
+                HIDEFlag = 0;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
             }
-            return ;
-
+            return;
 
         }
     }

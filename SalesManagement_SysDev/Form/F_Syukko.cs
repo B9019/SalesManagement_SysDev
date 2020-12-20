@@ -67,6 +67,8 @@ namespace SalesManagement_SysDev
         private int _pageNumber = 0;                                        // 印刷ページ番号
         private int _pageSizePrinting;                                      // １ページ印刷データ行数
         private List<T_DispSyukko> _dispSyukkoPrinting;   // 印刷用データ
+        int HIDEFlag;
+
         public F_Syukko()
         {
             InitializeComponent();
@@ -74,6 +76,7 @@ namespace SalesManagement_SysDev
 
         private void F_Syukko_Load(object sender, EventArgs e)
         {
+            HIDEFlag = 0;
             btn_regist.Enabled = false;
             dataGridView_Syukko.ColumnCount = 12;
 
@@ -89,6 +92,17 @@ namespace SalesManagement_SysDev
             dataGridView_Syukko.Columns[9].HeaderText = "出庫詳細ID";
             dataGridView_Syukko.Columns[10].HeaderText = "商品ID";
             dataGridView_Syukko.Columns[11].HeaderText = "数量";
+
+            F_login f_login = new F_login();
+            transfer_int = f_login.transfer_int;
+
+            btn_delete.Enabled = false;
+
+            if (transfer_int == 1 ||
+               transfer_int == 5)
+            {
+                btn_delete.Enabled = true;
+            }
         }
 
         // 登録ボタン
@@ -239,6 +253,10 @@ namespace SalesManagement_SysDev
         //
         private T_Syukko Generate_Data_AtRegistration()
         {
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_SyHidden.Text = "";
+            }
             return new T_Syukko
             {
                 SyID = int.Parse(txt_SyID.Text),
@@ -246,6 +264,7 @@ namespace SalesManagement_SysDev
                 EmID = int.Parse(txt_EmID.Text),
                 ClID = int.Parse(txt_ClID.Text),
                 OrID = int.Parse(txt_OrID.Text),
+                SyFlag = 0,
                 SyDate = DateTime.Parse(txt_SyDate.Text),
                 SyHidden = txt_SyHidden.Text
 
@@ -441,14 +460,26 @@ namespace SalesManagement_SysDev
             {
                 Flag = 1;
             }
+
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_SyHidden.Text = "";
+            }
+            if (chk_hide_FLG.Checked == true)
+            {
+                HIDEFlag = 1;
+            }
             return new T_Syukko
             {
+
                 SyID = int.Parse(txt_SyID.Text),
                 SoID = int.Parse(txt_SoID.Text),
                 EmID = int.Parse(txt_EmID.Text),
                 ClID = int.Parse(txt_ClID.Text),
                 OrID = int.Parse(txt_OrID.Text),
                 SyDate = DateTime.Now,
+                SyFlag = HIDEFlag,
+
                 SyStateFlag = Flag,
                 //SyFlag = HIDEFlag,
                 SyHidden = txt_SyHidden.Text
@@ -875,12 +906,20 @@ namespace SalesManagement_SysDev
                     ++andnum;
                 }
 
-                else if (txt_memo.Text != "" && count == 10)
+                else if (txt_memo.Text != "" && count == 7)
                 {
                     command.Parameters.Add("@memo", SqlDbType.NVarChar);
                     command.Parameters["@memo"].Value = "%" + txt_memo.Text + "%";
                     //実行するSQL文の条件追加
                     command.CommandText = command.CommandText + AND + "memo LIKE @memo ";
+                    ++andnum;
+                }
+                else if (count == 8)
+                {
+                    command.Parameters.Add("@SyFlag", SqlDbType.NVarChar);
+                    command.Parameters["@SyFlag"].Value = HIDEFlag;
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "SyFlag LIKE @SyFlag ";
                     ++andnum;
                 }
                 //2つ目以降の条件の前部にANDを接続
@@ -889,7 +928,7 @@ namespace SalesManagement_SysDev
                     AND = "AND ";
                 }
                 //最後にセミコロンを接続する
-                while (count == 10)
+                while (count == 8)
                 {
                     command.CommandText = command.CommandText + ";";
                     break;
@@ -935,6 +974,22 @@ namespace SalesManagement_SysDev
 
         private void lbl_memo_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void Checked_Syukko_HideFlag(object sender, EventArgs e)
+        {
+            if (chk_hide_FLG.Checked == true)
+            {
+                txt_SyHidden.Text = "";
+                HIDEFlag = 1;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
+            else if (chk_hide_FLG.Checked == false)
+            {
+                txt_SyHidden.Text = "非表示理由を入力(50文字)";
+                HIDEFlag = 0;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
+            return;
 
         }
     }

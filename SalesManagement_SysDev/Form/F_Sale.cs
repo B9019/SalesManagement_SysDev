@@ -67,6 +67,7 @@ namespace SalesManagement_SysDev
         private int _pageNumber = 0;                                        // 印刷ページ番号
         private int _pageSizePrinting;                                      // １ページ印刷データ行数
         private List<T_DispSale> _dispsalePrinting;                 // 印刷用データ
+        int HIDEFlag;
 
         public F_Sale()
         {
@@ -75,6 +76,8 @@ namespace SalesManagement_SysDev
 
         private void F_Sale_Load(object sender, EventArgs e)
         {
+            HIDEFlag = 0;
+            btn_sale.Enabled = false;
             dataGridView_Sale.ColumnCount = 8;
 
             dataGridView_Sale.Columns[0].HeaderText = "売上ID ";
@@ -86,6 +89,16 @@ namespace SalesManagement_SysDev
             dataGridView_Sale.Columns[6].HeaderText = "備考";
             dataGridView_Sale.Columns[7].HeaderText = "非表示理由";
 
+            F_login f_login = new F_login();
+            transfer_int = f_login.transfer_int;
+
+            btn_delete.Enabled = false;
+
+            if (transfer_int == 1 ||
+               transfer_int == 5)
+            {
+                btn_delete.Enabled = true;
+            }
         }
 
         // 登録ボタン
@@ -291,6 +304,11 @@ namespace SalesManagement_SysDev
         //
         private T_Sale Generate_Data_AtRegistration()
         {
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_SaHidden.Text = "";
+            }
+
             return new T_Sale
             {
                 SaID = int.Parse(txt_SaID.Text),
@@ -300,6 +318,7 @@ namespace SalesManagement_SysDev
                 OrID = int.Parse(txt_OrID.Text),
                 SaDate = DateTime.Parse(txt_SaDate.Text),
                 SaHidden = txt_SaHidden.Text,
+                SaFlag = 0,
                 Samemo = txt_Samemo.Text
 
             };
@@ -600,6 +619,14 @@ namespace SalesManagement_SysDev
         // out      Sale : Saleデータ
         private T_Sale GenerateDataAtUpdate()
         {
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_SaHidden.Text = "";
+            }
+            if (chk_hide_FLG.Checked == true)
+            {
+                HIDEFlag = 1;
+            }
             return new T_Sale
             {
                 SaID = int.Parse(txt_SaID.Text),
@@ -609,6 +636,7 @@ namespace SalesManagement_SysDev
                 OrID = int.Parse(txt_OrID.Text),
                 SaDate = DateTime.Parse(txt_SaDate.Text),
                 SaHidden = txt_SaHidden.Text,
+                SaFlag = HIDEFlag,
                 Samemo = txt_Samemo.Text
 
             };
@@ -713,7 +741,7 @@ namespace SalesManagement_SysDev
             //検索条件をテキストボックスから抽出し、SQL文をセット
             //　日本語可　：SqlDbType.NVarChar
             //　日本語不可：SqlDbType.VarChar
-            for (int count = 0; count < 8; count++)
+            for (int count = 0; count < 9; count++)
             {
                 if (txt_SaID.Text != "" && count == 0)
                 {
@@ -800,13 +828,21 @@ namespace SalesManagement_SysDev
                     command.CommandText = command.CommandText + AND + "Samemo LIKE @Samemo ";
                     ++andnum;
                 }
+                else if (count == 8)
+                {
+                    command.Parameters.Add("@SaFlag", SqlDbType.NVarChar);
+                    command.Parameters["@SaFlag"].Value = HIDEFlag;
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "SaFlag LIKE @SaFlag ";
+                    ++andnum;
+                }
                 //2つ目以降の条件の前部にANDを接続
                 if (andnum != 0)
                 {
                     AND = "AND ";
                 }
                 //最後にセミコロンを接続する
-                while (count == 7)
+                while (count == 8)
                 {
                     command.CommandText = command.CommandText + ";";
                     break;
@@ -869,5 +905,110 @@ namespace SalesManagement_SysDev
             txt_Samemo.Text = Convert.ToString(id8);
 
         }
+        private void Checked_Sale_HideFlag(object sender, EventArgs e)
+        {
+            if (chk_hide_FLG.Checked == true)
+            {
+                txt_SaHidden.Text = "";
+                HIDEFlag = 1;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
+            else if (chk_hide_FLG.Checked == false)
+            {
+                txt_SaHidden.Text = "非表示理由を入力(50文字)";
+                HIDEFlag = 0;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
+            return;
+
+        }
+
+        private void ログイン管理toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            F_login form_login = new F_login();
+            form_login.ShowDialog();
+        }
+
+        private void 顧客管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Client form_client = new F_Client();
+            form_client.ShowDialog();
+        }
+
+        private void 商品管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Product form_product = new F_Product();
+            form_product.ShowDialog();
+
+        }
+
+        private void 受注管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Order form_order = new F_Order();
+            form_order.ShowDialog();
+
+        }
+
+        private void 注文管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Chumon form_chumon = new F_Chumon();
+            form_chumon.ShowDialog();
+
+        }
+
+        private void 入荷管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Arrival form_arrival = new F_Arrival();
+            form_arrival.ShowDialog();
+
+        }
+
+        private void 出荷管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Shipment form_shipment = new F_Shipment();
+            form_shipment.ShowDialog();
+
+        }
+
+        private void 在庫管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Stock form_stock = new F_Stock();
+            form_stock.ShowDialog();
+
+        }
+
+        private void 入庫管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Warehousing form_warehousing = new F_Warehousing();
+            form_warehousing.ShowDialog();
+        }
+
+        private void 出庫管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Syukko form_syukko = new F_Syukko();
+            form_syukko.ShowDialog();
+
+        }
+
+        private void 社員管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Employee form_employee = new F_Employee();
+            form_employee.ShowDialog();
+
+        }
+
+        private void 売上管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Sale form_sale = new F_Sale();
+            form_sale.ShowDialog();
+
+        }
+
+        private void 発注管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            F_Hattyu form_hattyu = new F_Hattyu();
+            form_hattyu.ShowDialog();
+
+        }
+
+       
     }
 }
