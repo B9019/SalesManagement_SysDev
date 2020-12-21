@@ -38,7 +38,7 @@ namespace SalesManagement_SysDev
         private Messages _ms = new Messages();
 
         //// データベース処理モジュール（M_Division）
-        private T_ShipmentContents _Ch = new T_ShipmentContents();
+        private T_ShipmentContents _Sh = new T_ShipmentContents();
 
         // ***** プロパティ定義
 
@@ -85,8 +85,13 @@ namespace SalesManagement_SysDev
             dataGridView_Shipment.Columns[2].HeaderText = "社員ID ";
             dataGridView_Shipment.Columns[3].HeaderText = "営業所ID";
             dataGridView_Shipment.Columns[4].HeaderText = "受注ID";
-            dataGridView_Shipment.Columns[5].HeaderText = "出荷完了年月日 ";
-            dataGridView_Shipment.Columns[6].HeaderText = "非表示理由";
+            dataGridView_Shipment.Columns[5].HeaderText = "出荷状態フラグ";
+            dataGridView_Shipment.Columns[6].HeaderText = "出荷完了年月日 ";
+            dataGridView_Shipment.Columns[7].HeaderText = "出荷管理フラグ";
+            dataGridView_Shipment.Columns[8].HeaderText = "非表示理由";
+            dataGridView_Shipment.Columns[9].HeaderText = "出荷詳細ID";
+            dataGridView_Shipment.Columns[10].HeaderText = "商品ID";
+            dataGridView_Shipment.Columns[11].HeaderText = "数量";
 
             F_login f_login = new F_login();
             transfer_int = f_login.transfer_int;
@@ -282,7 +287,7 @@ namespace SalesManagement_SysDev
                 return false;
             }
             // 商品情報の登録
-            var errorMessage = _Ch.PostT_Shipment(regChumon);
+            var errorMessage = _Sh.PostT_Shipment(regChumon);
 
             if (errorMessage != string.Empty)
             {
@@ -307,9 +312,11 @@ namespace SalesManagement_SysDev
 
             // 4.2.2 商品情報作成
             var regShipment = GenerateDataAtUpdate();
+            var regShipmentDetail = GenerateDataAtUpdateDetail();
 
             // 4.2.3 商品情報更新
             ShipmentUpdate(regShipment);
+            ShipmentDetailUpdate(regShipmentDetail);
 
         }
         //
@@ -360,15 +367,38 @@ namespace SalesManagement_SysDev
                 txt_OrID.Focus();
                 return false;
             }
-            //　出荷完了年月日
-            if (String.IsNullOrEmpty(txt_ShFinishDate.Text))
+            //　出荷詳細ID
+            if (String.IsNullOrEmpty(txt_ShDetailID.Text))
             {
                 MessageBox.Show("注文年月日は必須項目です");
-                txt_ShFinishDate.Focus();
+                txt_ShDetailID.Focus();
                 return false;
             }
+            //　商品ID
+            if (String.IsNullOrEmpty(txt_PrID.Text))
+            {
+                MessageBox.Show("注文年月日は必須項目です");
+                txt_PrID.Focus();
+                return false;
+            }
+            //　数量
+            if (String.IsNullOrEmpty(txt_ArQuantity.Text))
+            {
+                MessageBox.Show("注文年月日は必須項目です");
+                txt_ArQuantity.Focus();
+                return false;
+            }
+            if (chk_commit_FLG.Checked == true)
+            {
+                //　出荷完了年月日
+                if (String.IsNullOrEmpty(txt_ShFinishDate.Text))
+                {
+                    MessageBox.Show("注文年月日は確定処理の際、必須項目です");
+                    txt_ShFinishDate.Focus();
+                    return false;
+                }
 
-
+            }
             ///// 入力内容の形式チェック /////
 
             //// 数値チェック ////
@@ -408,6 +438,28 @@ namespace SalesManagement_SysDev
                 txt_OrID.Focus();
                 return false;
             }
+            // 出荷詳細ID
+            if (!_ic.NumericCheck(txt_ShDetailID.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_ShDetailID.Focus();
+                return false;
+            }
+            // 商品ID
+            if (!_ic.NumericCheck(txt_PrID.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_PrID.Focus();
+                return false;
+            }
+            // 数量
+            if (!_ic.NumericCheck(txt_ArQuantity.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_ArQuantity.Focus();
+                return false;
+            }
+
 
             ////　文字チェック ////
 
@@ -418,8 +470,82 @@ namespace SalesManagement_SysDev
                 txt_ShHidden.Focus();
                 return false;
             }
-
+            ////　日付チェック ////
+            if (chk_commit_FLG.Checked == true)
+            {
+                //　出荷完了年月日
+                if (!_ic.DateFormCheck(txt_ShFinishDate.Text, out errorMessage))
+                {
+                    MessageBox.Show(errorMessage);
+                    txt_ShFinishDate.Focus();
+                    return false;
+                }
+            }
             /////文字数チェック/////
+            ///            //出荷完了年月日
+            if (txt_ShHidden.TextLength > 10)
+            {
+                MessageBox.Show("出荷完了年月日は10文字以下です");
+                txt_ShHidden.Focus();
+                return false;
+            }
+
+            // 出荷ID
+            if (txt_ShHidden.TextLength > 6)
+            {
+                MessageBox.Show("出荷IDは6文字以下です");
+                txt_ShHidden.Focus();
+                return false;
+            }
+            // 顧客ID
+            if (txt_ShHidden.TextLength > 4)
+            {
+                MessageBox.Show("顧客IDは4文字以下です");
+                txt_ShHidden.Focus();
+                return false;
+            }
+            // 社員ID
+            if (txt_ShHidden.TextLength > 6)
+            {
+                MessageBox.Show("社員IDは6文字以下です");
+                txt_ShHidden.Focus();
+                return false;
+            }
+            // 営業所ID
+            if (txt_ShHidden.TextLength > 2)
+            {
+                MessageBox.Show("営業所IDは2文字以下です");
+                txt_ShHidden.Focus();
+                return false;
+            }
+            // 受注ID
+            if (txt_ShHidden.TextLength > 6)
+            {
+                MessageBox.Show("受注IDは6文字以下です");
+                txt_ShHidden.Focus();
+                return false;
+            }
+            // 出荷詳細ID
+            if (txt_ShHidden.TextLength > 6)
+            {
+                MessageBox.Show("出荷詳細IDは6文字以下です");
+                txt_ShHidden.Focus();
+                return false;
+            }
+            // 商品ID
+            if (txt_ShHidden.TextLength > 6)
+            {
+                MessageBox.Show("商品IDは6文字以下です");
+                txt_ShHidden.Focus();
+                return false;
+            }
+            // 数量
+            if (txt_ShHidden.TextLength > 4)
+            {
+                MessageBox.Show("数量は4文字以下です");
+                txt_ShHidden.Focus();
+                return false;
+            }
             // 非表示理由
             if (txt_ShHidden.TextLength > 50)
             {
@@ -427,16 +553,9 @@ namespace SalesManagement_SysDev
                 txt_ShHidden.Focus();
                 return false;
             }
-            ////　日付チェック ////
 
-            //　出荷完了年月日
-            if (!_ic.DateFormCheck(txt_ShFinishDate.Text, out errorMessage))
-            {
-                MessageBox.Show(errorMessage);
-                txt_ShFinishDate.Focus();
-                return false;
-            }
             return true;
+
         }
         //
         //
@@ -462,11 +581,22 @@ namespace SalesManagement_SysDev
                 ClID = int.Parse(txt_ClID.Text),
                 OrID = int.Parse(txt_OrID.Text),
                 ShFlag = HIDEFlag,
-                ShFinishDate = DateTime.Parse(txt_ShFinishDate.Text),
+                ShFinishDate = DateTime.Now,
                 ShHidden = txt_ShHidden.Text
 
             };
         }
+        private T_ShipmentDetail GenerateDataAtUpdateDetail()
+        {
+            return new T_ShipmentDetail
+            {
+                ShDetailID = int.Parse(txt_ShDetailID.Text),
+                ShID = int.Parse(txt_ShID.Text),
+                PrID = int.Parse(txt_PrID.Text),
+                ShDquantity = int.Parse(txt_ArQuantity.Text)
+            };
+        }
+
         //
         //
         // 4.2.3 商品情報更新
@@ -480,7 +610,19 @@ namespace SalesManagement_SysDev
                 return false;
             }
 
-            var errorMessage = _Ch.PutShipment(regShipment);
+            var errorMessage = _Sh.PutShipment(regShipment);
+
+            if (errorMessage != string.Empty)
+            {
+                MessageBox.Show(errorMessage);
+                return false;
+            }
+
+            return true;
+        }
+        private bool ShipmentDetailUpdate(T_ShipmentDetail regShipmentDetail)
+        {
+            var errorMessage = _Sh.PutShipmentDetail(regShipmentDetail);
 
             if (errorMessage != string.Empty)
             {
@@ -517,10 +659,10 @@ namespace SalesManagement_SysDev
         private void Delete(int ShID)
         {
 
-            _Ch.DeleteShipment(ShID);
+            _Sh.DeleteShipment(ShID);
 
             // データ取得&表示
-            dataGridView_Shipment.DataSource = _Ch.GetDispShipment();
+            dataGridView_Shipment.DataSource = _Sh.GetDispShipment();
         }
 
 
@@ -581,7 +723,7 @@ namespace SalesManagement_SysDev
             int ScrollPosition = dataGridView_Shipment.FirstDisplayedScrollingRowIndex;
 
             // データ取得&表示（データバインド）
-            _dispShipmentPaging = _Ch.GetDispShipment();
+            _dispShipmentPaging = _Sh.GetDispShipment();
             dataGridView_Shipment.DataSource = _dispShipmentPaging;
 
             // 全データ数取得

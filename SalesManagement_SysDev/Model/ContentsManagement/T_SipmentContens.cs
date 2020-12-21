@@ -163,7 +163,7 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
             return string.Empty;
         }
         // データ更新
-        // in   : M_Chumonデータ
+        // in   : M_Shipmentデータ
         // out  : エラーメッセージ 
         public string PutShipment(T_Shipment regShipment)
         {
@@ -218,6 +218,58 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
                 return string.Empty;
             }
         }
+        // データ更新
+        // in   : M_ShipmentDetailデータ
+        // out  : エラーメッセージ 
+        public string PutShipmentDetail(T_ShipmentDetail regShipmentDetail)
+        {
+            using (var db = new SalesManagement_DevContext())
+            {
+                T_ShipmentDetail shipmentDetail;
+                try
+                {
+                    shipmentDetail = db.T_ShipmentDetails.Single(x => x.ShDetailID == regShipmentDetail.ShDetailID);
+                }
+                catch
+                {
+                    // throw new Exception(Messages.errorNotFoundItem, ex);
+                    // throw new Exception(_cm.GetMessage(110), ex);
+                    return _msc.GetMessage(110);
+                }
+
+                shipmentDetail.ShDetailID = regShipmentDetail.ShDetailID;
+                shipmentDetail.ShID = regShipmentDetail.ShID;
+                shipmentDetail.PrID = regShipmentDetail.PrID;
+                shipmentDetail.ShDquantity = regShipmentDetail.ShDquantity;
+                //Timestamp = item.Timestamp,
+                //LogData = item.LogData,
+                db.Entry(shipmentDetail).State = EntityState.Modified;
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    // throw new Exception(Messages.errorConflict, ex);
+                    // throw new Exception(_cm.GetMessage(100), ex);
+                    return _msc.GetMessage(100);
+                }
+
+                // ログ出力
+                var operationLog = new OperationLog()
+                {
+                    EventRaisingTime = DateTime.Now,
+                    Operator = _logonUser,
+                    Table = "Shipment",
+                    Command = "Shi",
+                    //Data = ProductLogData(regShipment),
+                };
+                //StaticCommon.PostOperationLog(operationLog);
+
+                return string.Empty;
+            }
+        }
+
         // データ削除
         // in       Product : 削除する商品ID
         public void DeleteShipment(int T_ShID)
