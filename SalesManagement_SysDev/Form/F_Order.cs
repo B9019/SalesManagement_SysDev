@@ -69,6 +69,8 @@ namespace SalesManagement_SysDev
         private int _pageNumber = 0;                                        // 印刷ページ番号
         private int _pageSizePrinting;                                      // １ページ印刷データ行数
         private List<T_DispOrder> _dispOrderPrinting;                 // 印刷用データ
+
+        int HIDEFlag;
         public F_Order()
         {
             InitializeComponent();
@@ -86,7 +88,8 @@ namespace SalesManagement_SysDev
 
         private void F_Order_Load(object sender, EventArgs e)
         {
-
+            btn_order.Enabled = false;
+            HIDEFlag = 0;
             dataGridView_Order.ColumnCount = 14;
 
             dataGridView_Order.Columns[0].HeaderText = "受注ID ";
@@ -104,7 +107,16 @@ namespace SalesManagement_SysDev
             dataGridView_Order.Columns[12].HeaderText = "数量";
             dataGridView_Order.Columns[13].HeaderText = "合計金額";
 
+            F_login f_login = new F_login();
+            transfer_int = f_login.transfer_int;
 
+            btn_delete.Enabled = false;
+
+            if (transfer_int == 1 ||
+               transfer_int == 5)
+            {
+                btn_delete.Enabled = true;
+            }
         }
 
         // 登録ボタン
@@ -370,6 +382,10 @@ namespace SalesManagement_SysDev
         //
         private T_Order Generate_Data_AtRegistration()
         {
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_OrHidden.Text = "";
+            }
             return new T_Order
             {
                 OrID = int.Parse(txt_OrID.Text),
@@ -379,6 +395,7 @@ namespace SalesManagement_SysDev
                 ClCharge = txt_ClCharge.Text,
                 OrDate = DateTime.Parse(txt_OrDate.Text),
                 OrStateFlag = 0,
+                OrFlag = 0,
                 OrHidden = txt_OrHidden.Text,
 
             };
@@ -770,6 +787,14 @@ namespace SalesManagement_SysDev
         // out      Category : Categoryデータ
         private T_Order GenerateDataAtUpdate()
         {
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_OrHidden.Text = "";
+            }
+            if (chk_hide_FLG.Checked == true)
+            {
+                HIDEFlag = 1;
+            }
             return new T_Order
             {
                 OrID = int.Parse(txt_OrID.Text),
@@ -778,6 +803,7 @@ namespace SalesManagement_SysDev
                 ClID = int.Parse(txt_ClID.Text),
                 ClCharge = txt_ClCharge.Text,
                 OrDate = DateTime.Parse(txt_OrDate.Text),
+                OrFlag = HIDEFlag,
                 OrHidden = txt_OrHidden.Text,
 
             };
@@ -862,7 +888,7 @@ namespace SalesManagement_SysDev
             //検索条件をテキストボックスから抽出し、SQL文をセット
             //　日本語可　：SqlDbType.NVarChar
             //　日本語不可：SqlDbType.VarChar
-            for (int count = 0; count < 9; count++)
+            for (int count = 0; count < 8; count++)
             {
                 if (txt_OrID.Text != "" && count == 0)
                 {
@@ -921,7 +947,7 @@ namespace SalesManagement_SysDev
                     command.CommandText = command.CommandText + AND + "ClCharge LIKE @ClCharge ";
                     ++andnum;
                 }
-                else if (txt_OrDate.Text != "" && count == 9)
+                else if (txt_OrDate.Text != "" && count == 5)
                 {
                     command.Parameters.Add("@OrDate", SqlDbType.VarChar);
                     command.Parameters["@PrReleaseDate"].Value = "%" + txt_OrDate.Text + "%";
@@ -929,12 +955,20 @@ namespace SalesManagement_SysDev
                     command.CommandText = command.CommandText + AND + "OrDate LIKE @OrDate ";
                     ++andnum;
                 }
-                else if (txt_OrHidden.Text != "" && count == 10)
+                else if (txt_OrHidden.Text != "" && count == 6)
                 {
                     command.Parameters.Add("@PrHidden", SqlDbType.NVarChar);
                     command.Parameters["@PrHidden"].Value = "%" + txt_OrHidden.Text + "%";
                     //実行するSQL文の条件追加
                     command.CommandText = command.CommandText + AND + "PrHidden LIKE @PrHidden ";
+                    ++andnum;
+                }
+                else if (count == 7)
+                {
+                    command.Parameters.Add("@OrFlag", SqlDbType.NVarChar);
+                    command.Parameters["@OrFlag"].Value = HIDEFlag;
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "OrFlag LIKE @OrFlag ";
                     ++andnum;
                 }
                 //2つ目以降の条件の前部にANDを接続
@@ -943,7 +977,7 @@ namespace SalesManagement_SysDev
                     AND = "AND ";
                 }
                 //最後にセミコロンを接続する
-                while (count == 10)
+                while (count == 7)
                 {
                     command.CommandText = command.CommandText + ";";
                     break;
@@ -1231,6 +1265,21 @@ namespace SalesManagement_SysDev
             txt_OrDate.Text = Convert.ToString(id6);
             txt_OrHidden.Text = Convert.ToString(id7);
             txt_memo.Text = Convert.ToString(id8);
+
+        }
+        private void Checked_Order_HideFlag(object sender, EventArgs e)
+        {
+            if (chk_hide_FLG.Checked == true)
+            {
+                txt_OrHidden.Text = "";
+                HIDEFlag = 1;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
+            else if (chk_hide_FLG.Checked == false)
+            {
+                txt_OrHidden.Text = "非表示理由を入力(50文字)";
+                HIDEFlag = 0;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
+            return;
 
         }
 

@@ -65,7 +65,7 @@
             this.chk_hide_FLG = new System.Windows.Forms.CheckBox();
             this.dataGridView_Stock = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txt_SyHidden = new System.Windows.Forms.TextBox();
+            this.txt_StHidden = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Stock)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -78,7 +78,7 @@
             this.lbl_StID.Location = new System.Drawing.Point(9, 34);
             this.lbl_StID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_StID.Name = "lbl_StID";
-            this.lbl_StID.Size = new System.Drawing.Size(81, 20);
+            this.lbl_StID.Size = new System.Drawing.Size(58, 14);
             this.lbl_StID.TabIndex = 78;
             this.lbl_StID.Text = "在庫ID ";
             // 
@@ -89,7 +89,7 @@
             this.txt_StID.Location = new System.Drawing.Point(164, 29);
             this.txt_StID.Margin = new System.Windows.Forms.Padding(5);
             this.txt_StID.Name = "txt_StID";
-            this.txt_StID.Size = new System.Drawing.Size(559, 27);
+            this.txt_StID.Size = new System.Drawing.Size(559, 21);
             this.txt_StID.TabIndex = 79;
             // 
             // lbl_PrID
@@ -100,7 +100,7 @@
             this.lbl_PrID.Location = new System.Drawing.Point(9, 65);
             this.lbl_PrID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_PrID.Name = "lbl_PrID";
-            this.lbl_PrID.Size = new System.Drawing.Size(74, 20);
+            this.lbl_PrID.Size = new System.Drawing.Size(53, 14);
             this.lbl_PrID.TabIndex = 83;
             this.lbl_PrID.Text = "商品ID";
             // 
@@ -111,7 +111,7 @@
             this.txt_PrID.Location = new System.Drawing.Point(164, 62);
             this.txt_PrID.Margin = new System.Windows.Forms.Padding(5);
             this.txt_PrID.Name = "txt_PrID";
-            this.txt_PrID.Size = new System.Drawing.Size(559, 27);
+            this.txt_PrID.Size = new System.Drawing.Size(559, 21);
             this.txt_PrID.TabIndex = 81;
             // 
             // lbl_StQuantity
@@ -122,7 +122,7 @@
             this.lbl_StQuantity.Location = new System.Drawing.Point(9, 97);
             this.lbl_StQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_StQuantity.Name = "lbl_StQuantity";
-            this.lbl_StQuantity.Size = new System.Drawing.Size(69, 20);
+            this.lbl_StQuantity.Size = new System.Drawing.Size(49, 14);
             this.lbl_StQuantity.TabIndex = 82;
             this.lbl_StQuantity.Text = "在庫数";
             // 
@@ -134,7 +134,7 @@
             this.txt_StQuantity.Location = new System.Drawing.Point(164, 95);
             this.txt_StQuantity.Margin = new System.Windows.Forms.Padding(5);
             this.txt_StQuantity.Name = "txt_StQuantity";
-            this.txt_StQuantity.Size = new System.Drawing.Size(559, 27);
+            this.txt_StQuantity.Size = new System.Drawing.Size(559, 21);
             this.txt_StQuantity.TabIndex = 80;
             // 
             // btn_hattyu
@@ -179,7 +179,7 @@
             this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox1.Location = new System.Drawing.Point(384, 19);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(67, 25);
+            this.textBox1.Size = new System.Drawing.Size(67, 19);
             this.textBox1.TabIndex = 273;
             this.textBox1.Text = "12";
             // 
@@ -191,7 +191,7 @@
             this.label2.Location = new System.Drawing.Point(274, 49);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 20);
+            this.label2.Size = new System.Drawing.Size(53, 14);
             this.label2.TabIndex = 292;
             this.label2.Text = "社員ID";
             // 
@@ -220,7 +220,7 @@
             this.label1.Location = new System.Drawing.Point(274, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 20);
+            this.label1.Size = new System.Drawing.Size(67, 14);
             this.label1.TabIndex = 289;
             this.label1.Text = "営業所ID";
             // 
@@ -510,7 +510,7 @@
             this.textBox9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox9.Location = new System.Drawing.Point(384, 48);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(67, 25);
+            this.textBox9.Size = new System.Drawing.Size(67, 19);
             this.textBox9.TabIndex = 274;
             this.textBox9.Text = "123456";
             // 
@@ -539,7 +539,7 @@
             this.lbl_title.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lbl_title.Location = new System.Drawing.Point(4, 26);
             this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(272, 48);
+            this.lbl_title.Size = new System.Drawing.Size(183, 32);
             this.lbl_title.TabIndex = 272;
             this.lbl_title.Text = "在庫管理画面";
             // 
@@ -549,7 +549,7 @@
             this.txt_memo.Location = new System.Drawing.Point(164, 193);
             this.txt_memo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_memo.Name = "txt_memo";
-            this.txt_memo.Size = new System.Drawing.Size(559, 27);
+            this.txt_memo.Size = new System.Drawing.Size(559, 21);
             this.txt_memo.TabIndex = 195;
             // 
             // lbl_ArHidden
@@ -560,7 +560,7 @@
             this.lbl_ArHidden.Location = new System.Drawing.Point(9, 229);
             this.lbl_ArHidden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ArHidden.Name = "lbl_ArHidden";
-            this.lbl_ArHidden.Size = new System.Drawing.Size(124, 20);
+            this.lbl_ArHidden.Size = new System.Drawing.Size(87, 14);
             this.lbl_ArHidden.TabIndex = 241;
             this.lbl_ArHidden.Text = "非表示モード";
             // 
@@ -571,7 +571,7 @@
             this.lbl_memo.Location = new System.Drawing.Point(9, 197);
             this.lbl_memo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_memo.Name = "lbl_memo";
-            this.lbl_memo.Size = new System.Drawing.Size(49, 20);
+            this.lbl_memo.Size = new System.Drawing.Size(35, 14);
             this.lbl_memo.TabIndex = 194;
             this.lbl_memo.Text = "備考";
             // 
@@ -582,9 +582,10 @@
             this.chk_hide_FLG.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.chk_hide_FLG.Location = new System.Drawing.Point(164, 230);
             this.chk_hide_FLG.Name = "chk_hide_FLG";
-            this.chk_hide_FLG.Size = new System.Drawing.Size(22, 21);
+            this.chk_hide_FLG.Size = new System.Drawing.Size(15, 14);
             this.chk_hide_FLG.TabIndex = 240;
             this.chk_hide_FLG.UseVisualStyleBackColor = true;
+            this.chk_hide_FLG.CheckedChanged += new System.EventHandler(this.Checked_Stock_HideFlag);
             // 
             // dataGridView_Stock
             // 
@@ -605,7 +606,7 @@
             this.groupBox3.Controls.Add(this.lbl_StID);
             this.groupBox3.Controls.Add(this.lbl_PrID);
             this.groupBox3.Controls.Add(this.lbl_StQuantity);
-            this.groupBox3.Controls.Add(this.txt_SyHidden);
+            this.groupBox3.Controls.Add(this.txt_StHidden);
             this.groupBox3.Controls.Add(this.txt_memo);
             this.groupBox3.Controls.Add(this.lbl_ArHidden);
             this.groupBox3.Controls.Add(this.lbl_memo);
@@ -620,20 +621,20 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "基礎項目";
             // 
-            // txt_SyHidden
+            // txt_StHidden
             // 
-            this.txt_SyHidden.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
-            this.txt_SyHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_SyHidden.Location = new System.Drawing.Point(195, 228);
-            this.txt_SyHidden.Multiline = true;
-            this.txt_SyHidden.Name = "txt_SyHidden";
-            this.txt_SyHidden.Size = new System.Drawing.Size(1353, 27);
-            this.txt_SyHidden.TabIndex = 242;
-            this.txt_SyHidden.Text = "非表示理由を入力(50文字)";
+            this.txt_StHidden.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
+            this.txt_StHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_StHidden.Location = new System.Drawing.Point(195, 228);
+            this.txt_StHidden.Multiline = true;
+            this.txt_StHidden.Name = "txt_StHidden";
+            this.txt_StHidden.Size = new System.Drawing.Size(1353, 27);
+            this.txt_StHidden.TabIndex = 242;
+            this.txt_StHidden.Text = "非表示理由を入力(50文字)";
             // 
             // F_Stock
             // 
-            this.ClientSize = new System.Drawing.Size(1834, 1050);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.btn_hattyu);
             this.Controls.Add(this.btn_order);
             this.Controls.Add(this.textBox1);
@@ -661,7 +662,7 @@
             this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.groupBox3);
             this.Name = "F_Stock";
-            this.Load += new System.EventHandler(this.F_Stock_Load_1);
+            this.Load += new System.EventHandler(this.F_Stock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Stock)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -709,6 +710,6 @@
         private System.Windows.Forms.CheckBox chk_hide_FLG;
         private System.Windows.Forms.DataGridView dataGridView_Stock;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txt_SyHidden;
+        private System.Windows.Forms.TextBox txt_StHidden;
     }
 }

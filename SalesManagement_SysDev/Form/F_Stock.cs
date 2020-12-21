@@ -67,6 +67,7 @@ namespace SalesManagement_SysDev
         private int _pageNumber = 0;                                        // 印刷ページ番号
         private int _pageSizePrinting;                                      // １ページ印刷データ行数
         private List<T_DispChumon> _dispChumonPrinting;   // 印刷用データ
+        int HIDEFlag;
         public F_Stock()
         {
             InitializeComponent();
@@ -79,7 +80,26 @@ namespace SalesManagement_SysDev
 
         private void F_Stock_Load(object sender, EventArgs e)
         {
+            HIDEFlag = 0;
+            btn_stock.Enabled = false;
 
+            F_login f_login = new F_login();
+            transfer_int = f_login.transfer_int;
+
+            btn_delete.Enabled = false;
+
+            if (transfer_int == 1 ||
+               transfer_int == 5)
+            {
+                btn_delete.Enabled = true;
+            }
+
+            dataGridView_Stock.ColumnCount = 3;
+
+            dataGridView_Stock.Columns[0].HeaderText = "在庫ID ";
+            dataGridView_Stock.Columns[1].HeaderText = "商品ID ";
+            dataGridView_Stock.Columns[2].HeaderText = "在庫数 ";
+            
         }
 
         private void btn_regist_Click(object sender, EventArgs e)
@@ -169,10 +189,15 @@ namespace SalesManagement_SysDev
         //
         private T_Stock Generate_Data_AtRegistration()
         {
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_StHidden.Text = "";
+            }
             return new T_Stock
             {
                 StID = int.Parse(txt_StID.Text),
                 PrID = int.Parse(txt_PrID.Text),
+                StFlag = 0,
                 //StQuantity = int.Parse(txt_StQuantity.Text)
 
             };
@@ -288,13 +313,22 @@ namespace SalesManagement_SysDev
             // out      Category : Categoryデータ
             private T_Stock GenerateDataAtUpdate()
             {
-                return new T_Stock
+            if (chk_hide_FLG.Checked == false)
+            {
+                txt_StHidden.Text = "";
+            }
+            if (chk_hide_FLG.Checked == true)
+            {
+                HIDEFlag = 1;
+            }
+            return new T_Stock
                 {
                     StID = int.Parse(txt_StID.Text),
                     PrID = int.Parse(txt_PrID.Text),
-                    //StQuantity = int.Parse(txt_StQuantity.Text)
+                StFlag = HIDEFlag,
+                //StQuantity = int.Parse(txt_StQuantity.Text)
 
-                };
+            };
             }
             //
             //
@@ -534,10 +568,7 @@ namespace SalesManagement_SysDev
                
             }
 
-        private void F_Stock_Load_1(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btn_sertch_Click(object sender, EventArgs e)
         {
@@ -603,14 +634,22 @@ namespace SalesManagement_SysDev
                     command.CommandText = command.CommandText + AND + "memo LIKE @memo ";
                     ++andnum;
                 }
-               
+                else if (count == 4)
+                {
+                    command.Parameters.Add("@StFlag", SqlDbType.NVarChar);
+                    command.Parameters["@StFlag"].Value = HIDEFlag;
+                    //実行するSQL文の条件追加
+                    command.CommandText = command.CommandText + AND + "StFlag LIKE @StFlag ";
+                    ++andnum;
+                }
+
                 //2つ目以降の条件の前部にANDを接続
                 if (andnum != 0)
                 {
                     AND = "AND ";
                 }
                 //最後にセミコロンを接続する
-                while (count == 10)
+                while (count == 4)
                 {
                     command.CommandText = command.CommandText + ";";
                     break;
@@ -647,6 +686,21 @@ namespace SalesManagement_SysDev
             txt_PrID.Text = "";
             txt_StQuantity.Text = "";
             txt_memo.Text = "";
+        }
+        private void Checked_Stock_HideFlag(object sender, EventArgs e)
+        {
+            if (chk_hide_FLG.Checked == true)
+            {
+                txt_StHidden.Text = "";
+                HIDEFlag = 1;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
+            else if (chk_hide_FLG.Checked == false)
+            {
+                txt_StHidden.Text = "非表示理由を入力(50文字)";
+                HIDEFlag = 0;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
+            }
+            return;
+
         }
     }
     }
