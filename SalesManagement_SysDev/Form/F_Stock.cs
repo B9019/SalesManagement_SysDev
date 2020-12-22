@@ -144,15 +144,35 @@ namespace SalesManagement_SysDev
                 txt_PrID.Focus();
                 return false;
             }
-            //// 在庫数
-            //if (String.IsNullOrEmpty(txt_StQuantity.Text))
-            //{
-            //    MessageBox.Show("在庫数は必須項目です");
-            //    txt_StQuantity.Focus();
-            //    return false;
-            //}
-
-
+            // 在庫数
+            if (String.IsNullOrEmpty(txt_StQuantity.Text))
+            {
+                MessageBox.Show("在庫数は必須項目です");
+                txt_StQuantity.Focus();
+                return false;
+            }
+            //文字数チェック//
+            // 在庫ID
+            if (txt_StID.TextLength > 6)
+            {
+                MessageBox.Show("在庫IDは6文字以下です");
+                txt_StID.Focus();
+                return false;
+            }
+            // 商品ID
+            if (txt_PrID.TextLength > 6)
+            {
+                MessageBox.Show("商品IDは6文字以下です");
+                txt_PrID.Focus();
+                return false;
+            }
+            // 在庫数
+            if (txt_StQuantity.TextLength > 4)
+            {
+                MessageBox.Show("在庫数は4文字以下です");
+                txt_StQuantity.Focus();
+                return false;
+            }
 
             ///// 入力内容の形式チェック /////
 
@@ -172,14 +192,15 @@ namespace SalesManagement_SysDev
                 txt_PrID.Focus();
                 return false;
             }
-            //// 在庫数
-            //if (!_ic.NumericCheck(txt_StQuantity.Text, out errorMessage))
-            //{
-            //    MessageBox.Show(errorMessage);
-            //    txt_StQuantity.Focus();
-            //    return false;
-            //}
-           
+
+            // 在庫数
+            if (!_ic.NumericCheck(txt_StQuantity.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_StQuantity.Focus();
+                return false;
+            }
+
             return true;
         }
         //
@@ -272,12 +293,37 @@ namespace SalesManagement_SysDev
                 return false;
             }
             //// 在庫数
-            //if (String.IsNullOrEmpty(txt_StQuantity.Text))
-            //{
-            //    MessageBox.Show("在庫数は必須項目です");
-            //    txt_StQuantity.Focus();
-            //    return false;
-            //}
+            if (String.IsNullOrEmpty(txt_StQuantity.Text))
+            {
+                MessageBox.Show("在庫数は必須項目です");
+                txt_StQuantity.Focus();
+                return false;
+            }
+
+            //文字数チェック
+
+            // 在庫ID
+            if (txt_StID.TextLength > 6)
+            {
+                MessageBox.Show("在庫IDは6文字以下です");
+                txt_StID.Focus();
+                return false;
+            }
+            // 商品ID
+            if (txt_PrID.TextLength > 6)
+            {
+                MessageBox.Show("商品IDは6文字以下です");
+                txt_PrID.Focus();
+                return false;
+            }
+            // 在庫数
+            if (txt_StQuantity.TextLength > 4)
+            {
+                MessageBox.Show("在庫数は4文字以下です");
+                txt_StQuantity.Focus();
+                return false;
+            }
+
             ///// 入力内容の形式チェック /////
 
             //// 数値チェック ////
@@ -296,13 +342,13 @@ namespace SalesManagement_SysDev
                 txt_PrID.Focus();
                 return false;
             }
-            //// 在庫数
-            //if (!_ic.NumericCheck(txt_StQuantity.Text, out errorMessage))
-            //{
-            //    MessageBox.Show(errorMessage);
-            //    txt_StQuantity.Focus();
-            //    return false;
-            //}
+            // 在庫数
+            if (!_ic.NumericCheck(txt_StQuantity.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_StQuantity.Focus();
+                return false;
+            }
             return true;
             }
             //

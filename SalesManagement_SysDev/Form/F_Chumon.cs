@@ -497,7 +497,7 @@ namespace SalesManagement_SysDev
 
             //　非表示理由
             if (!_ic.FullWidthCharCheck(txt_ChHidden.Text, out errorMessage))
-                {
+            {
                     MessageBox.Show(errorMessage);
                 txt_ChHidden.Focus();
                     return false;
@@ -511,6 +511,64 @@ namespace SalesManagement_SysDev
                 txt_ChHidden.Focus();
                     return false;
                 }
+
+            // 注文ID
+            if (txt_ChID.TextLength > 6)
+            {
+                MessageBox.Show("注文IDは6文字以下です");
+                txt_ChID.Focus();
+                return false;
+            }
+            // 営業所ID
+            if (txt_SoID.TextLength > 2)
+            {
+                MessageBox.Show("営業所IDは2文字以下です");
+                txt_SoID.Focus();
+                return false;
+            }
+            // 社員ID
+            if (txt_EmID.TextLength > 6)
+            {
+                MessageBox.Show("社員IDは6文字以下です");
+                txt_EmID.Focus();
+                return false;
+            }
+            //　顧客ID
+            if (txt_ClID.TextLength > 4)
+            {
+                MessageBox.Show("顧客IDは4文字以下です");
+                txt_ClID.Focus();
+                return false;
+            }
+            //　受注ID
+            if (txt_OrID.TextLength > 6)
+            {
+                MessageBox.Show("受注IDは6文字以下です");
+                txt_OrID.Focus();
+                return false;
+            }
+            //　注文年月日
+            if (txt_ChDate.TextLength > 10)
+            { 
+                MessageBox.Show("注文年月日は10文字以下です");
+                txt_ChDate.Focus();
+                return false;
+            }
+            // 備考
+            if (txt_memo.TextLength > 30)
+            {
+                MessageBox.Show("備考は30文字以下です");
+                txt_memo.Focus();
+                return false;
+            }
+            // 非表示理由
+            if (txt_ChHidden.TextLength > 30)
+            {
+                MessageBox.Show("非表示理由は30文字以下です");
+                txt_ChHidden.Focus();
+                return false;
+            }
+           
             ////　文字チェック ////
 
             //　注文年月日
