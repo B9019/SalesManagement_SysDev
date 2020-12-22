@@ -76,17 +76,16 @@ namespace SalesManagement_SysDev
         private void F_Employee_Load_1(object sender, EventArgs e)
         {
             btn_employee.Enabled = false;
-            dataGridView_Employee.ColumnCount = 9;
+            dataGridView_Employee.ColumnCount = 8;
 
             dataGridView_Employee.Columns[0].HeaderText = "社員ID";
             dataGridView_Employee.Columns[1].HeaderText = "社員名";
             dataGridView_Employee.Columns[2].HeaderText = "営業所ID";
             dataGridView_Employee.Columns[3].HeaderText = "役職ID";
             dataGridView_Employee.Columns[4].HeaderText = "入社年月日";
-            dataGridView_Employee.Columns[5].HeaderText = "パスワード ";
-            dataGridView_Employee.Columns[6].HeaderText = "電話番号";
-            dataGridView_Employee.Columns[7].HeaderText = "社員管理フラグ";
-            dataGridView_Employee.Columns[8].HeaderText = "非表示理由";
+            dataGridView_Employee.Columns[5].HeaderText = "電話番号";
+            dataGridView_Employee.Columns[6].HeaderText = "社員管理フラグ";
+            dataGridView_Employee.Columns[7].HeaderText = "非表示理由";
             HIDEFlag = 0;
 
             F_login f_login = new F_login();
@@ -626,31 +625,28 @@ namespace SalesManagement_SysDev
             return true;
         }
 
-        private void btn_al_Click(object sender, EventArgs e)
+        private void btn_all_Click(object sender, EventArgs e)
         {
             fncAllSelect();
         }
         private void fncAllSelect()
         {
-            // データ取得&表示（データバインド）
-            _dispEmployeePaging = _Em.GetDispEmployees();
-            dataGridView_Employee.DataSource = _dispEmployeePaging;
-
-            ////全データの表示
-            //dataGridView_Product.Rows.Clear();
-            //try
-            //{
-            //    var context = new SalesManagement_DevContext();
-            //    foreach (var p in context.M_Products)
-            //    {
-            //        dataGridView_Product.Rows.Add(p.PrID, p.MaID, p.PrName, p.Price,p.PrJCode,p.);
-            //    }
-            //    context.Dispose();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            SqlConnection conn = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
+            //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
+            //command.Parameters["@PrFlag"].Value = "0";
+            command.CommandText = "SELECT * FROM M_Employee WHERE EmFlag = 0";
+            command.Connection = conn;
+            conn.Open();
+            SqlDataReader rd = command.ExecuteReader();
+            dataGridView_Employee.Rows.Clear();
+            while (rd.Read())
+            {
+                dataGridView_Employee.Rows.Add(rd["EmID"], rd["EmName"], rd["SoID"], rd["PoID"],
+                    rd["EmHiredate"],  rd["EmPhone"], rd["EmFlag"],
+                    rd["EmHidden"]);
+            }
         }
         // 削除ボタン
         // 6.3 社員情報削除

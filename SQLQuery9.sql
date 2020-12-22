@@ -1,0 +1,1 @@
+﻿insert into dbo.M_Product(MaID,PrName,Price,PrJCode,PrSafetyStock,ScID,PrModelNumber,PrColor,PrReleaseDate,PrFlag,PrHidden) values (13,N'フリーザー 水冷式冷蔵庫',18000,N'3039107820558',300,3,7067716,N'ホワイト',('2019-08-27 18:12:44.413' ),0,N'') ;

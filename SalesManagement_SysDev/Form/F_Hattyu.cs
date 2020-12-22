@@ -679,25 +679,21 @@ namespace SalesManagement_SysDev
         }
         private void fncAllSelect()
         {
-            // データ取得&表示（データバインド）
-            _dispHattyuPaging = _Ha.GetDispHattyus();
-            dataGridView_Hattyu.DataSource = _dispHattyuPaging;
-
-            ////全データの表示
-            //dataGridView_Product.Rows.Clear();
-            //try
-            //{
-            //    var context = new SalesManagement_DevContext();
-            //    foreach (var p in context.M_Products)
-            //    {
-            //        dataGridView_Product.Rows.Add(p.PrID, p.MaID, p.PrName, p.Price,p.PrJCode,p.);
-            //    }
-            //    context.Dispose();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            SqlConnection conn = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\81807\DESKTOP\SALESMANAGEMENT_SYSDEV\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
+            //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
+            //command.Parameters["@PrFlag"].Value = "0";
+            command.CommandText = "SELECT * FROM T_Hattyu WHERE HaFlag = 0 AND ";
+            command.Connection = conn;
+            conn.Open();
+            SqlDataReader rd = command.ExecuteReader();
+            dataGridView_Hattyu.Rows.Clear();
+            while (rd.Read())
+            {
+                dataGridView_Hattyu.Rows.Add(rd["HaID"], rd["MaID"], rd["EmID"], rd["HaDate"],
+                    rd["WaWarehouseFlag"], rd["HaFlag"], rd["HaHidden"]);
+            }
         }
 
         private void btn_search_Click(object sender, EventArgs e)

@@ -214,8 +214,10 @@
             this.btn_regist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_regist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_regist.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
+
             this.btn_regist.Location = new System.Drawing.Point(509, 11);
             this.btn_regist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.btn_regist.Name = "btn_regist";
             this.btn_regist.Size = new System.Drawing.Size(137, 51);
             this.btn_regist.TabIndex = 3;
@@ -248,8 +250,10 @@
             this.btn_update.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_update.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
+
             this.btn_update.Location = new System.Drawing.Point(652, 11);
             this.btn_update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(137, 51);
             this.btn_update.TabIndex = 4;
@@ -305,8 +309,10 @@
             // 
             // txt_Emmemo
             // 
+
             this.txt_Emmemo.Location = new System.Drawing.Point(131, 161);
             this.txt_Emmemo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.txt_Emmemo.Name = "txt_Emmemo";
             this.txt_Emmemo.Size = new System.Drawing.Size(448, 24);
             this.txt_Emmemo.TabIndex = 9;
@@ -499,14 +505,16 @@
             this.btn_all.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_all.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_all.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
+
             this.btn_all.Location = new System.Drawing.Point(795, 11);
             this.btn_all.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.btn_all.Name = "btn_all";
             this.btn_all.Size = new System.Drawing.Size(137, 51);
             this.btn_all.TabIndex = 5;
             this.btn_all.Text = "一覧表示";
             this.btn_all.UseVisualStyleBackColor = false;
-            this.btn_all.Click += new System.EventHandler(this.btn_al_Click);
+            this.btn_all.Click += new System.EventHandler(this.btn_all_Click);
             // 
             // btn_employee
             // 
@@ -533,8 +541,10 @@
             this.btn_print.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_print.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
+
             this.btn_print.Location = new System.Drawing.Point(937, 11);
             this.btn_print.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(137, 51);
             this.btn_print.TabIndex = 6;
@@ -566,8 +576,10 @@
             this.btn_delete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
+
             this.btn_delete.Location = new System.Drawing.Point(1079, 11);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(137, 51);
             this.btn_delete.TabIndex = 7;
@@ -600,8 +612,10 @@
             this.btn_clear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clear.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
+
             this.btn_clear.Location = new System.Drawing.Point(1221, 11);
             this.btn_clear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(137, 51);
             this.btn_clear.TabIndex = 8;
@@ -634,8 +648,10 @@
             this.btn_search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_search.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
+
             this.btn_search.Location = new System.Drawing.Point(367, 11);
             this.btn_search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(137, 51);
             this.btn_search.TabIndex = 2;
@@ -791,7 +807,9 @@
             this.Controls.Add(this.btn_syukko);
             this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.groupBox3);
+
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.Name = "F_Employee";
             this.Padding = new System.Windows.Forms.Padding(16, 75, 16, 16);
             this.Load += new System.EventHandler(this.F_Employee_Load_1);
