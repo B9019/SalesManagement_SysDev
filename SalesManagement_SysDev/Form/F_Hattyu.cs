@@ -187,7 +187,7 @@ namespace SalesManagement_SysDev
                 return false;
             }
             // 発注年月日
-            if (!_ic.NumericCheck(txt_HaDate.Text, out errorMessage))
+            if (!_ic.DateFormCheck(txt_HaDate.Text, out errorMessage))
             {
                 MessageBox.Show("発注年月日は必須項目です");
                 txt_HaDate.Focus();
@@ -394,7 +394,7 @@ namespace SalesManagement_SysDev
                 return false;
             }
             // 発注年月日
-            if (!_ic.NumericCheck(txt_HaDate.Text, out errorMessage))
+            if (!_ic.DateFormCheck(txt_HaDate.Text, out errorMessage))
             {
                 MessageBox.Show("発注年月日は必須項目です");
                 txt_HaDate.Focus();

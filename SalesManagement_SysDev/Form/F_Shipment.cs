@@ -382,10 +382,10 @@ namespace SalesManagement_SysDev
                 return false;
             }
             //　数量
-            if (String.IsNullOrEmpty(txt_ArQuantity.Text))
+            if (String.IsNullOrEmpty(txt_ShDquantity.Text))
             {
                 MessageBox.Show("注文年月日は必須項目です");
-                txt_ArQuantity.Focus();
+                txt_ShDquantity.Focus();
                 return false;
             }
             if (chk_commit_FLG.Checked == true)
@@ -453,10 +453,10 @@ namespace SalesManagement_SysDev
                 return false;
             }
             // 数量
-            if (!_ic.NumericCheck(txt_ArQuantity.Text, out errorMessage))
+            if (!_ic.NumericCheck(txt_ShDquantity.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
-                txt_ArQuantity.Focus();
+                txt_ShDquantity.Focus();
                 return false;
             }
 
@@ -483,67 +483,67 @@ namespace SalesManagement_SysDev
             }
             /////文字数チェック/////
             ///            //出荷完了年月日
-            if (txt_ShHidden.TextLength > 10)
+            if (txt_ShFinishDate.TextLength > 10)
             {
                 MessageBox.Show("出荷完了年月日は10文字以下です");
-                txt_ShHidden.Focus();
+                txt_ShFinishDate.Focus();
                 return false;
             }
 
             // 出荷ID
-            if (txt_ShHidden.TextLength > 6)
+            if (txt_ShID.TextLength > 6)
             {
                 MessageBox.Show("出荷IDは6文字以下です");
-                txt_ShHidden.Focus();
+                txt_ShID.Focus();
                 return false;
             }
             // 顧客ID
-            if (txt_ShHidden.TextLength > 4)
+            if (txt_ClID.TextLength > 4)
             {
                 MessageBox.Show("顧客IDは4文字以下です");
-                txt_ShHidden.Focus();
+                txt_ClID.Focus();
                 return false;
             }
             // 社員ID
-            if (txt_ShHidden.TextLength > 6)
+            if (txt_EmID.TextLength > 6)
             {
                 MessageBox.Show("社員IDは6文字以下です");
-                txt_ShHidden.Focus();
+                txt_EmID.Focus();
                 return false;
             }
             // 営業所ID
-            if (txt_ShHidden.TextLength > 2)
+            if (txt_SoID.TextLength > 2)
             {
                 MessageBox.Show("営業所IDは2文字以下です");
-                txt_ShHidden.Focus();
+                txt_SoID.Focus();
                 return false;
             }
             // 受注ID
-            if (txt_ShHidden.TextLength > 6)
+            if (txt_OrID.TextLength > 6)
             {
                 MessageBox.Show("受注IDは6文字以下です");
-                txt_ShHidden.Focus();
+                txt_OrID.Focus();
                 return false;
             }
             // 出荷詳細ID
-            if (txt_ShHidden.TextLength > 6)
+            if (txt_ShDetailID.TextLength > 6)
             {
                 MessageBox.Show("出荷詳細IDは6文字以下です");
-                txt_ShHidden.Focus();
+                txt_ShDetailID.Focus();
                 return false;
             }
             // 商品ID
-            if (txt_ShHidden.TextLength > 6)
+            if (txt_PrID.TextLength > 6)
             {
                 MessageBox.Show("商品IDは6文字以下です");
-                txt_ShHidden.Focus();
+                txt_PrID.Focus();
                 return false;
             }
             // 数量
-            if (txt_ShHidden.TextLength > 4)
+            if (txt_ShDquantity.TextLength > 4)
             {
                 MessageBox.Show("数量は4文字以下です");
-                txt_ShHidden.Focus();
+                txt_ShDquantity.Focus();
                 return false;
             }
             // 非表示理由
@@ -593,7 +593,7 @@ namespace SalesManagement_SysDev
                 ShDetailID = int.Parse(txt_ShDetailID.Text),
                 ShID = int.Parse(txt_ShID.Text),
                 PrID = int.Parse(txt_PrID.Text),
-                ShDquantity = int.Parse(txt_ArQuantity.Text)
+                ShDquantity = int.Parse(txt_ShDquantity.Text)
             };
         }
 

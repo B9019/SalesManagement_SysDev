@@ -228,7 +228,7 @@ namespace SalesManagement_SysDev
                 return false;
             }
             // 郵便番号
-            if (!_ic.NumericCheck(txt_ClPostal.Text, out errorMessage))
+            if (!_ic.PostNoCheck(txt_ClPostal.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
                 txt_ClPostal.Focus();
@@ -252,7 +252,7 @@ namespace SalesManagement_SysDev
                 return false;
             }
             //　電話番号の文字チェック
-            if (!_ic.HalfCharCheck(txt_ClPhone.Text, out errorMessage))
+            if (!_ic.PhoneNoCheck(txt_ClPhone.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
                 txt_ClPhone.Focus();
@@ -276,16 +276,16 @@ namespace SalesManagement_SysDev
 
             /////文字数チェック/////
             // 顧客ID
-            if (txt_ClID.TextLength > 50)
+            if (txt_ClID.TextLength > 4)
             {
-                MessageBox.Show("顧客IDは50文字以下で入力してください");
+                MessageBox.Show("顧客IDは4文字以下で入力してください");
                 txt_ClID.Focus();
                 return false;
             }
             // 営業所ID
-            if (txt_SoID.TextLength > 4)
+            if (txt_SoID.TextLength > 2)
             {
-                MessageBox.Show("営業所IDは4文字以下で入力してください");
+                MessageBox.Show("営業所IDは2文字以下で入力してください");
                 txt_SoID.Focus();
                 return false;
             }
@@ -297,37 +297,37 @@ namespace SalesManagement_SysDev
                 return false;
             }
             //　住所
-            if (txt_ClAddress.TextLength > 13)
+            if (txt_ClAddress.TextLength > 50)
             {
-                MessageBox.Show("住所は13文字以下で入力してください");
+                MessageBox.Show("住所は50文字以下で入力してください");
                 txt_ClAddress.Focus();
                 return false;
             }
             // 電話番号
-            if (txt_ClPhone.TextLength > 11)
+            if (txt_ClPhone.TextLength > 13)
             {
                 MessageBox.Show("電話番号は11文字以下で入力してください");
                 txt_ClPhone.Focus();
                 return false;
             }
             // 郵便番号
-            if (txt_ClPostal.TextLength > 20)
+            if (txt_ClPostal.TextLength > 7)
             {
-                MessageBox.Show("郵便番号は20文字以下で入力してください");
+                MessageBox.Show("郵便番号は7文字以下で入力してください");
                 txt_ClPostal.Focus();
                 return false;
             }
             //　FAX
-            if (txt_ClFAX.TextLength > 20)
+            if (txt_ClFAX.TextLength >13)
             {
                 MessageBox.Show("FAXは20文字以下で入力してください");
                 txt_ClFAX.Focus();
                 return false;
             }
             //　非表示理由
-            if (txt_ClHidden.TextLength > 9)
+            if (txt_ClHidden.TextLength > 30)
             {
-                MessageBox.Show("非表示は9文字以下で入力してください");
+                MessageBox.Show("非表示は30文字以下で入力してください");
                 txt_ClHidden.Focus();
                 return false;
             }
@@ -490,7 +490,7 @@ namespace SalesManagement_SysDev
                 return false;
             }
             // 郵便番号
-            if (!_ic.NumericCheck(txt_ClPostal.Text, out errorMessage))
+            if (!_ic.PostNoCheck(txt_ClPostal.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
                 txt_ClPostal.Focus();
@@ -514,7 +514,7 @@ namespace SalesManagement_SysDev
                 return false;
             }
             //　電話番号の文字チェック
-            if (!_ic.HalfCharCheck(txt_ClPhone.Text, out errorMessage))
+            if (!_ic.PhoneNoCheck(txt_ClPhone.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
                 txt_ClPhone.Focus();
@@ -538,58 +538,58 @@ namespace SalesManagement_SysDev
 
             /////文字数チェック/////
             // 顧客ID
-            if (txt_ClID.TextLength > 50)
+            if (txt_ClID.TextLength > 4)
             {
-                MessageBox.Show("メーカIDは4文字以下です");
+                MessageBox.Show("顧客IDは4文字以下です");
                 txt_ClID.Focus();
                 return false;
             }
             // 営業所ID
-            if (txt_SoID.TextLength > 4)
+            if (txt_SoID.TextLength > 2)
             {
-                MessageBox.Show("商品IDは4文字以下です");
+                MessageBox.Show("営業所IDは2文字以下です");
                 txt_SoID.Focus();
                 return false;
             }
             // 顧客名
             if (txt_ClName.TextLength > 50)
             {
-                MessageBox.Show("商品名は50文字以下です");
+                MessageBox.Show("顧客名は50文字以下です");
                 txt_ClName.Focus();
                 return false;
             }
             //　住所
-            if (txt_ClAddress.TextLength > 13)
+            if (txt_ClAddress.TextLength > 50)
             {
-                MessageBox.Show("JANコードは13文字以下です");
+                MessageBox.Show("住所は50文字以下です");
                 txt_ClAddress.Focus();
                 return false;
             }
             // 電話番号
-            if (txt_ClPhone.TextLength > 2)
+            if (txt_ClPhone.TextLength > 13)
             {
-                MessageBox.Show("小分類IDは2文字以下です");
+                MessageBox.Show("電話番号は13文字以下です");
                 txt_ClPhone.Focus();
                 return false;
             }
             // 郵便番号
-            if (txt_ClPostal.TextLength > 20)
+            if (txt_ClPostal.TextLength > 7)
             {
-                MessageBox.Show("型番は20文字以下です");
+                MessageBox.Show("郵便番号は7文字以下です");
                 txt_ClPostal.Focus();
                 return false;
             }
             //　FAX
-            if (txt_ClFAX.TextLength > 20)
+            if (txt_ClFAX.TextLength > 13)
             {
-                MessageBox.Show("色は20文字以下です");
+                MessageBox.Show("FAXは13文字以下です");
                 txt_ClFAX.Focus();
                 return false;
             }
             //　非表示理由
-            if (txt_ClHidden.TextLength > 9)
+            if (txt_ClHidden.TextLength > 30)
             {
-                MessageBox.Show("価格は9文字以下です");
+                MessageBox.Show("非表示理由は30文字以下です");
                 txt_ClHidden.Focus();
                 return false;
             }
