@@ -829,11 +829,29 @@ namespace SalesManagement_SysDev
         //一覧表示
         private void btn_all_Click(object sender, EventArgs e)
         {
-            AllDataGridView();
+            fncAllSelect();
         }
-
-        //入力クリア処理
-        private void btn_clear_Click(object sender, EventArgs e)
+        private void fncAllSelect()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
+            //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
+            //command.Parameters["@PrFlag"].Value = "0";
+            command.CommandText = "SELECT * FROM M_Client WHERE ClFlag = 0";
+            command.Connection = conn;
+            conn.Open();
+            SqlDataReader rd = command.ExecuteReader();
+            dataGridView_Client.Rows.Clear();
+            while (rd.Read())
+            {
+                dataGridView_Client.Rows.Add(rd["ClID"], rd["SoID"], rd["ClName"], rd["ClAddress"],
+                    rd["ClPhone"], rd["ClPostal"], rd["ClFAX"], rd["ClFlag"],
+                    rd["ClHidden"]);
+            }
+        }
+            //入力クリア処理
+            private void btn_clear_Click(object sender, EventArgs e)
         {
             ClearInput();
         }
