@@ -555,9 +555,9 @@ namespace SalesManagement_SysDev
                 return false;
             }
             // 入荷年月日
-            if (txt_ArDate.TextLength > 9)
+            if (txt_ArDate.TextLength > 10)
             {
-                MessageBox.Show("入荷年月日は9文字以下です");
+                MessageBox.Show("入荷年月日は10文字以下です");
                 txt_ArDate.Focus();
                 return false;
             }
