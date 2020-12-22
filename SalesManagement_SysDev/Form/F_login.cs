@@ -69,7 +69,7 @@ namespace SalesManagement_SysDev
                 PoName = "管理者"
             };
             SalesManagement_DevContext context = new SalesManagement_DevContext();
-            context.M_Positions.Add(FirstPosition);
+            
             context.SaveChanges();
             context.Dispose();
 
