@@ -78,7 +78,7 @@
             this.lbl_StID.Location = new System.Drawing.Point(9, 34);
             this.lbl_StID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_StID.Name = "lbl_StID";
-            this.lbl_StID.Size = new System.Drawing.Size(58, 14);
+            this.lbl_StID.Size = new System.Drawing.Size(69, 17);
             this.lbl_StID.TabIndex = 78;
             this.lbl_StID.Text = "在庫ID ";
             // 
@@ -89,8 +89,8 @@
             this.txt_StID.Location = new System.Drawing.Point(164, 29);
             this.txt_StID.Margin = new System.Windows.Forms.Padding(5);
             this.txt_StID.Name = "txt_StID";
-            this.txt_StID.Size = new System.Drawing.Size(559, 21);
-            this.txt_StID.TabIndex = 79;
+            this.txt_StID.Size = new System.Drawing.Size(559, 24);
+            this.txt_StID.TabIndex = 0;
             // 
             // lbl_PrID
             // 
@@ -100,7 +100,7 @@
             this.lbl_PrID.Location = new System.Drawing.Point(9, 65);
             this.lbl_PrID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_PrID.Name = "lbl_PrID";
-            this.lbl_PrID.Size = new System.Drawing.Size(53, 14);
+            this.lbl_PrID.Size = new System.Drawing.Size(63, 17);
             this.lbl_PrID.TabIndex = 83;
             this.lbl_PrID.Text = "商品ID";
             // 
@@ -111,8 +111,8 @@
             this.txt_PrID.Location = new System.Drawing.Point(164, 62);
             this.txt_PrID.Margin = new System.Windows.Forms.Padding(5);
             this.txt_PrID.Name = "txt_PrID";
-            this.txt_PrID.Size = new System.Drawing.Size(559, 21);
-            this.txt_PrID.TabIndex = 81;
+            this.txt_PrID.Size = new System.Drawing.Size(559, 24);
+            this.txt_PrID.TabIndex = 1;
             // 
             // lbl_StQuantity
             // 
@@ -122,7 +122,7 @@
             this.lbl_StQuantity.Location = new System.Drawing.Point(9, 97);
             this.lbl_StQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_StQuantity.Name = "lbl_StQuantity";
-            this.lbl_StQuantity.Size = new System.Drawing.Size(49, 14);
+            this.lbl_StQuantity.Size = new System.Drawing.Size(59, 17);
             this.lbl_StQuantity.TabIndex = 82;
             this.lbl_StQuantity.Text = "在庫数";
             // 
@@ -134,8 +134,8 @@
             this.txt_StQuantity.Location = new System.Drawing.Point(164, 95);
             this.txt_StQuantity.Margin = new System.Windows.Forms.Padding(5);
             this.txt_StQuantity.Name = "txt_StQuantity";
-            this.txt_StQuantity.Size = new System.Drawing.Size(559, 21);
-            this.txt_StQuantity.TabIndex = 80;
+            this.txt_StQuantity.Size = new System.Drawing.Size(559, 24);
+            this.txt_StQuantity.TabIndex = 2;
             // 
             // btn_hattyu
             // 
@@ -179,7 +179,7 @@
             this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox1.Location = new System.Drawing.Point(384, 19);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(67, 19);
+            this.textBox1.Size = new System.Drawing.Size(67, 22);
             this.textBox1.TabIndex = 273;
             this.textBox1.Text = "12";
             // 
@@ -191,7 +191,7 @@
             this.label2.Location = new System.Drawing.Point(274, 49);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 14);
+            this.label2.Size = new System.Drawing.Size(63, 17);
             this.label2.TabIndex = 292;
             this.label2.Text = "社員ID";
             // 
@@ -220,7 +220,7 @@
             this.label1.Location = new System.Drawing.Point(274, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 14);
+            this.label1.Size = new System.Drawing.Size(80, 17);
             this.label1.TabIndex = 289;
             this.label1.Text = "営業所ID";
             // 
@@ -271,7 +271,7 @@
             this.btn_regist.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_regist.Name = "btn_regist";
             this.btn_regist.Size = new System.Drawing.Size(171, 61);
-            this.btn_regist.TabIndex = 287;
+            this.btn_regist.TabIndex = 2;
             this.btn_regist.Text = "登録";
             this.btn_regist.UseVisualStyleBackColor = false;
             this.btn_regist.Click += new System.EventHandler(this.btn_regist_Click);
@@ -306,7 +306,7 @@
             this.btn_update.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(171, 61);
-            this.btn_update.TabIndex = 285;
+            this.btn_update.TabIndex = 3;
             this.btn_update.Text = "更新";
             this.btn_update.UseVisualStyleBackColor = false;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
@@ -341,7 +341,7 @@
             this.btn_all.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_all.Name = "btn_all";
             this.btn_all.Size = new System.Drawing.Size(171, 61);
-            this.btn_all.TabIndex = 284;
+            this.btn_all.TabIndex = 4;
             this.btn_all.Text = "一覧表示";
             this.btn_all.UseVisualStyleBackColor = false;
             this.btn_all.Click += new System.EventHandler(this.btn_all_Click);
@@ -376,7 +376,7 @@
             this.btn_print.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(171, 61);
-            this.btn_print.TabIndex = 281;
+            this.btn_print.TabIndex = 6;
             this.btn_print.Text = "印刷";
             this.btn_print.UseVisualStyleBackColor = false;
             // 
@@ -410,7 +410,7 @@
             this.btn_delete.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(171, 61);
-            this.btn_delete.TabIndex = 279;
+            this.btn_delete.TabIndex = 5;
             this.btn_delete.Text = "削除";
             this.btn_delete.UseVisualStyleBackColor = false;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
@@ -480,7 +480,7 @@
             this.btn_search.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(171, 61);
-            this.btn_search.TabIndex = 276;
+            this.btn_search.TabIndex = 1;
             this.btn_search.Text = "検索";
             this.btn_search.UseVisualStyleBackColor = false;
             this.btn_search.Click += new System.EventHandler(this.btn_sertch_Click);
@@ -510,7 +510,7 @@
             this.textBox9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox9.Location = new System.Drawing.Point(384, 48);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(67, 19);
+            this.textBox9.Size = new System.Drawing.Size(67, 22);
             this.textBox9.TabIndex = 274;
             this.textBox9.Text = "123456";
             // 
@@ -539,7 +539,7 @@
             this.lbl_title.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lbl_title.Location = new System.Drawing.Point(4, 26);
             this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(183, 32);
+            this.lbl_title.Size = new System.Drawing.Size(227, 39);
             this.lbl_title.TabIndex = 272;
             this.lbl_title.Text = "在庫管理画面";
             // 
@@ -549,8 +549,8 @@
             this.txt_memo.Location = new System.Drawing.Point(164, 193);
             this.txt_memo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_memo.Name = "txt_memo";
-            this.txt_memo.Size = new System.Drawing.Size(559, 21);
-            this.txt_memo.TabIndex = 195;
+            this.txt_memo.Size = new System.Drawing.Size(559, 24);
+            this.txt_memo.TabIndex = 3;
             // 
             // lbl_ArHidden
             // 
@@ -560,7 +560,7 @@
             this.lbl_ArHidden.Location = new System.Drawing.Point(9, 229);
             this.lbl_ArHidden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ArHidden.Name = "lbl_ArHidden";
-            this.lbl_ArHidden.Size = new System.Drawing.Size(87, 14);
+            this.lbl_ArHidden.Size = new System.Drawing.Size(105, 17);
             this.lbl_ArHidden.TabIndex = 241;
             this.lbl_ArHidden.Text = "非表示モード";
             // 
@@ -571,7 +571,7 @@
             this.lbl_memo.Location = new System.Drawing.Point(9, 197);
             this.lbl_memo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_memo.Name = "lbl_memo";
-            this.lbl_memo.Size = new System.Drawing.Size(35, 14);
+            this.lbl_memo.Size = new System.Drawing.Size(42, 17);
             this.lbl_memo.TabIndex = 194;
             this.lbl_memo.Text = "備考";
             // 
@@ -582,7 +582,7 @@
             this.chk_hide_FLG.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.chk_hide_FLG.Location = new System.Drawing.Point(164, 230);
             this.chk_hide_FLG.Name = "chk_hide_FLG";
-            this.chk_hide_FLG.Size = new System.Drawing.Size(15, 14);
+            this.chk_hide_FLG.Size = new System.Drawing.Size(18, 17);
             this.chk_hide_FLG.TabIndex = 240;
             this.chk_hide_FLG.UseVisualStyleBackColor = true;
             this.chk_hide_FLG.CheckedChanged += new System.EventHandler(this.Checked_Stock_HideFlag);
@@ -596,6 +596,7 @@
             this.dataGridView_Stock.Name = "dataGridView_Stock";
             this.dataGridView_Stock.Size = new System.Drawing.Size(1540, 662);
             this.dataGridView_Stock.TabIndex = 173;
+            this.dataGridView_Stock.TabStop = false;
             // 
             // groupBox3
             // 
@@ -617,7 +618,7 @@
             this.groupBox3.Location = new System.Drawing.Point(260, 109);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1560, 931);
-            this.groupBox3.TabIndex = 275;
+            this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "基礎項目";
             // 
@@ -629,12 +630,12 @@
             this.txt_StHidden.Multiline = true;
             this.txt_StHidden.Name = "txt_StHidden";
             this.txt_StHidden.Size = new System.Drawing.Size(1353, 27);
-            this.txt_StHidden.TabIndex = 242;
+            this.txt_StHidden.TabIndex = 4;
             this.txt_StHidden.Text = "非表示理由を入力(50文字)";
             // 
             // F_Stock
             // 
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1467, 875);
             this.Controls.Add(this.btn_hattyu);
             this.Controls.Add(this.btn_order);
             this.Controls.Add(this.textBox1);
