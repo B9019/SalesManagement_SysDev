@@ -267,7 +267,7 @@
             this.btn_regist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_regist.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_regist.Location = new System.Drawing.Point(382, 9);
-            this.btn_regist.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_regist.Margin = new System.Windows.Forms.Padding(2);
             this.btn_regist.Name = "btn_regist";
             this.btn_regist.Size = new System.Drawing.Size(103, 41);
             this.btn_regist.TabIndex = 260;
@@ -284,7 +284,7 @@
             this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_update.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_update.Location = new System.Drawing.Point(489, 9);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(2);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(103, 41);
             this.btn_update.TabIndex = 258;
@@ -350,7 +350,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
             this.groupBox3.Location = new System.Drawing.Point(156, 73);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(936, 621);
+            this.groupBox3.Size = new System.Drawing.Size(936, 622);
             this.groupBox3.TabIndex = 248;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "基礎項目";
@@ -417,7 +417,7 @@
             // txt_Hamemo
             // 
             this.txt_Hamemo.Location = new System.Drawing.Point(98, 129);
-            this.txt_Hamemo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Hamemo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Hamemo.Name = "txt_Hamemo";
             this.txt_Hamemo.Size = new System.Drawing.Size(337, 21);
             this.txt_Hamemo.TabIndex = 255;
@@ -489,7 +489,7 @@
             this.btn_all.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_all.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_all.Location = new System.Drawing.Point(596, 9);
-            this.btn_all.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_all.Margin = new System.Windows.Forms.Padding(2);
             this.btn_all.Name = "btn_all";
             this.btn_all.Size = new System.Drawing.Size(103, 41);
             this.btn_all.TabIndex = 257;
@@ -522,7 +522,7 @@
             this.btn_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_print.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_print.Location = new System.Drawing.Point(703, 9);
-            this.btn_print.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_print.Margin = new System.Windows.Forms.Padding(2);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(103, 41);
             this.btn_print.TabIndex = 254;
@@ -554,7 +554,7 @@
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_delete.Location = new System.Drawing.Point(809, 9);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(2);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(103, 41);
             this.btn_delete.TabIndex = 252;
@@ -586,7 +586,7 @@
             this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clear.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_clear.Location = new System.Drawing.Point(916, 9);
-            this.btn_clear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_clear.Margin = new System.Windows.Forms.Padding(2);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(103, 41);
             this.btn_clear.TabIndex = 250;
@@ -618,7 +618,7 @@
             this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_search.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_search.Location = new System.Drawing.Point(275, 9);
-            this.btn_search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(2);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(103, 41);
             this.btn_search.TabIndex = 249;
@@ -684,7 +684,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 630);
+            this.ClientSize = new System.Drawing.Size(1100, 700);
             this.Controls.Add(this.btn_hattyu);
             this.Controls.Add(this.btn_order);
             this.Controls.Add(this.txt_SoID);
@@ -711,7 +711,7 @@
             this.Controls.Add(this.btn_syukko);
             this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.groupBox3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F_Hattyu";
             this.Load += new System.EventHandler(this.F_Hattyu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Hattyu)).EndInit();

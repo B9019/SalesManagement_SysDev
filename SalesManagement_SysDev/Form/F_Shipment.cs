@@ -78,7 +78,7 @@ namespace SalesManagement_SysDev
         {
             HIDEFlag = 0;
             btn_shipment.Enabled = false;
-            dataGridView_Shipment.ColumnCount = 7;
+            dataGridView_Shipment.ColumnCount = 12;
 
             dataGridView_Shipment.Columns[0].HeaderText = "出荷ID ";
             dataGridView_Shipment.Columns[1].HeaderText = "顧客ID ";
