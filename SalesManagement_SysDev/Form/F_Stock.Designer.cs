@@ -267,10 +267,10 @@
             this.btn_regist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_regist.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_regist.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_regist.Location = new System.Drawing.Point(636, 13);
+            this.btn_regist.Location = new System.Drawing.Point(570, 13);
             this.btn_regist.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_regist.Name = "btn_regist";
-            this.btn_regist.Size = new System.Drawing.Size(171, 61);
+            this.btn_regist.Size = new System.Drawing.Size(103, 41);
             this.btn_regist.TabIndex = 2;
             this.btn_regist.Text = "登録";
             this.btn_regist.UseVisualStyleBackColor = false;
@@ -302,10 +302,10 @@
             this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_update.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_update.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_update.Location = new System.Drawing.Point(815, 13);
+            this.btn_update.Location = new System.Drawing.Point(681, 13);
             this.btn_update.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(171, 61);
+            this.btn_update.Size = new System.Drawing.Size(103, 41);
             this.btn_update.TabIndex = 3;
             this.btn_update.Text = "更新";
             this.btn_update.UseVisualStyleBackColor = false;
@@ -337,10 +337,10 @@
             this.btn_all.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_all.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_all.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_all.Location = new System.Drawing.Point(994, 13);
+            this.btn_all.Location = new System.Drawing.Point(792, 13);
             this.btn_all.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_all.Name = "btn_all";
-            this.btn_all.Size = new System.Drawing.Size(171, 61);
+            this.btn_all.Size = new System.Drawing.Size(103, 41);
             this.btn_all.TabIndex = 4;
             this.btn_all.Text = "一覧表示";
             this.btn_all.UseVisualStyleBackColor = false;
@@ -372,10 +372,10 @@
             this.btn_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_print.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_print.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_print.Location = new System.Drawing.Point(1349, 13);
+            this.btn_print.Location = new System.Drawing.Point(1014, 13);
             this.btn_print.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_print.Name = "btn_print";
-            this.btn_print.Size = new System.Drawing.Size(171, 61);
+            this.btn_print.Size = new System.Drawing.Size(103, 41);
             this.btn_print.TabIndex = 6;
             this.btn_print.Text = "印刷";
             this.btn_print.UseVisualStyleBackColor = false;
@@ -406,10 +406,10 @@
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_delete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_delete.Location = new System.Drawing.Point(1171, 13);
+            this.btn_delete.Location = new System.Drawing.Point(903, 13);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(171, 61);
+            this.btn_delete.Size = new System.Drawing.Size(103, 41);
             this.btn_delete.TabIndex = 5;
             this.btn_delete.Text = "削除";
             this.btn_delete.UseVisualStyleBackColor = false;
@@ -441,10 +441,10 @@
             this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clear.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_clear.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_clear.Location = new System.Drawing.Point(1526, 13);
+            this.btn_clear.Location = new System.Drawing.Point(1125, 13);
             this.btn_clear.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(171, 61);
+            this.btn_clear.Size = new System.Drawing.Size(103, 41);
             this.btn_clear.TabIndex = 277;
             this.btn_clear.Text = "入力クリア";
             this.btn_clear.UseVisualStyleBackColor = false;
@@ -479,7 +479,7 @@
             this.btn_search.Location = new System.Drawing.Point(459, 13);
             this.btn_search.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(171, 61);
+            this.btn_search.Size = new System.Drawing.Size(103, 41);
             this.btn_search.TabIndex = 1;
             this.btn_search.Text = "検索";
             this.btn_search.UseVisualStyleBackColor = false;
@@ -635,7 +635,7 @@
             // 
             // F_Stock
             // 
-            this.ClientSize = new System.Drawing.Size(1467, 875);
+            this.ClientSize = new System.Drawing.Size(1740, 875);
             this.Controls.Add(this.btn_hattyu);
             this.Controls.Add(this.btn_order);
             this.Controls.Add(this.textBox1);
