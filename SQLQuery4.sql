@@ -1,0 +1,3 @@
+﻿insert into dbo.M_SalesOffice(SoName,SoAddress,SoPhone,SoPostal,SoFAX,SoFlag,SoHidden) values (N'TT21宮城営業所',N'宮城県黒川郡大和町落合三ケ内579番地17号',N'07058998443',N'9813401',N'07092544191',0,N'') ;
+insert into dbo.M_SalesOffice(SoName,SoAddress,SoPhone,SoPostal,SoFAX,SoFlag,SoHidden) values (N'TT21新潟営業所',N'新潟県南魚沼市中子新田乙694番地4号',N'07099612384',N'9496427',N'07067965161',0,N'') ;
+insert into dbo.M_SalesOffice(SoName,SoAddress,SoPhone,SoPostal,SoFAX,SoFlag,SoHidden) values (N'TT21奈良営業所',N'奈良県宇陀市榛原大貝753番地12号',N'07090854695',N'9496427',N'07058396856',0,N'') ;

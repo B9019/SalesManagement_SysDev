@@ -1,0 +1,3 @@
+﻿insert into dbo.M_Client(SoID,ClName,ClAddress,ClPhone,ClPostal,ClFAX,ClFlag,ClHidden) values (3,N'松澤 直樹',N'長崎県五島市玉之浦町頓泊771番地5号',N'07094389624',N'8530507',N'07092923402',0,N'') ;
+insert into dbo.M_Client(SoID,ClName,ClAddress,ClPhone,ClPostal,ClFAX,ClFlag,ClHidden) values (2,N'梁池 荘太',N'愛知県名古屋市港区西川町3丁目397番地2号',N'07060710551',N'4550824',N'07067085780',0,N'') ;
+insert into dbo.M_Client(SoID,ClName,ClAddress,ClPhone,ClPostal,ClFAX,ClFlag,ClHidden) values (1,N'岑国',N'宮城県柴田郡柴田町四日市場103番地9号',N'07096211310',N'9891743',N'07088789664',0,N'') ;

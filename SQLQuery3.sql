@@ -1,0 +1,3 @@
+﻿insert into dbo.M_Maker(MaName,MaAdress,MaPhone,MaPostal,MaFAX,MaFlag,MaHidden) values (N'家電製造ゼロワン',N'新潟県新潟市江南区丸山749番地10号',N'07095469755',N'9500115',N'07095335991',0,N'') ;
+insert into dbo.M_Maker(MaName,MaAdress,MaPhone,MaPostal,MaFAX,MaFlag,MaHidden) values (N'マルニ電気',N'愛知県瀬戸市定光寺町287番地3号',N'07057982759',N'4801201',N'07096021114',0,N'') ;
+insert into dbo.M_Maker(MaName,MaAdress,MaPhone,MaPostal,MaFAX,MaFlag,MaHidden) values (N'株式会社サード',N'岐阜県美濃加茂市下米田町小山296番地9号',N'07088594165',N'5050017',N'07092813989',0,N'') ;
