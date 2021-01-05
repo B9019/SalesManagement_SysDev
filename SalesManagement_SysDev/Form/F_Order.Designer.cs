@@ -45,6 +45,8 @@
             this.lbl_memo = new System.Windows.Forms.Label();
             this.btn_hattyu = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lbl_ArHidden = new System.Windows.Forms.Label();
+            this.chk_hide_FLG = new System.Windows.Forms.CheckBox();
             this.lbl_commit_FLG = new System.Windows.Forms.Label();
             this.chk_commit_FLG = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -55,8 +57,6 @@
             this.txt_OrQuantity = new System.Windows.Forms.TextBox();
             this.txt_PrID = new System.Windows.Forms.TextBox();
             this.txt_OrDetailID = new System.Windows.Forms.TextBox();
-            this.lbl_ArHidden = new System.Windows.Forms.Label();
-            this.chk_hide_FLG = new System.Windows.Forms.CheckBox();
             this.dataGridView_Order = new System.Windows.Forms.DataGridView();
             this.btn_client = new System.Windows.Forms.Button();
             this.btn_order = new System.Windows.Forms.Button();
@@ -88,9 +88,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.chk_orderdetail = new System.Windows.Forms.CheckBox();
+            this.dataGridView_Order_Detail = new System.Windows.Forms.DataGridView();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Order)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Order_Detail)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_OrDate
@@ -303,6 +305,29 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "受注項目";
             // 
+            // lbl_ArHidden
+            // 
+            this.lbl_ArHidden.AutoSize = true;
+            this.lbl_ArHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_ArHidden.Location = new System.Drawing.Point(4, 159);
+            this.lbl_ArHidden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ArHidden.Name = "lbl_ArHidden";
+            this.lbl_ArHidden.Size = new System.Drawing.Size(87, 14);
+            this.lbl_ArHidden.TabIndex = 241;
+            this.lbl_ArHidden.Text = "非表示モード";
+            // 
+            // chk_hide_FLG
+            // 
+            this.chk_hide_FLG.AutoSize = true;
+            this.chk_hide_FLG.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.chk_hide_FLG.Location = new System.Drawing.Point(98, 159);
+            this.chk_hide_FLG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chk_hide_FLG.Name = "chk_hide_FLG";
+            this.chk_hide_FLG.Size = new System.Drawing.Size(15, 14);
+            this.chk_hide_FLG.TabIndex = 240;
+            this.chk_hide_FLG.UseVisualStyleBackColor = true;
+            this.chk_hide_FLG.CheckedChanged += new System.EventHandler(this.Checked_Order_HideFlag);
+            // 
             // lbl_commit_FLG
             // 
             this.lbl_commit_FLG.AutoSize = true;
@@ -406,29 +431,6 @@
             this.txt_OrDetailID.Size = new System.Drawing.Size(336, 21);
             this.txt_OrDetailID.TabIndex = 6;
             // 
-            // lbl_ArHidden
-            // 
-            this.lbl_ArHidden.AutoSize = true;
-            this.lbl_ArHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_ArHidden.Location = new System.Drawing.Point(4, 159);
-            this.lbl_ArHidden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_ArHidden.Name = "lbl_ArHidden";
-            this.lbl_ArHidden.Size = new System.Drawing.Size(87, 14);
-            this.lbl_ArHidden.TabIndex = 241;
-            this.lbl_ArHidden.Text = "非表示モード";
-            // 
-            // chk_hide_FLG
-            // 
-            this.chk_hide_FLG.AutoSize = true;
-            this.chk_hide_FLG.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.chk_hide_FLG.Location = new System.Drawing.Point(98, 159);
-            this.chk_hide_FLG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chk_hide_FLG.Name = "chk_hide_FLG";
-            this.chk_hide_FLG.Size = new System.Drawing.Size(15, 14);
-            this.chk_hide_FLG.TabIndex = 240;
-            this.chk_hide_FLG.UseVisualStyleBackColor = true;
-            this.chk_hide_FLG.CheckedChanged += new System.EventHandler(this.Checked_Order_HideFlag);
-            // 
             // dataGridView_Order
             // 
             this.dataGridView_Order.BackgroundColor = System.Drawing.Color.White;
@@ -436,7 +438,7 @@
             this.dataGridView_Order.Location = new System.Drawing.Point(156, 297);
             this.dataGridView_Order.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView_Order.Name = "dataGridView_Order";
-            this.dataGridView_Order.Size = new System.Drawing.Size(929, 387);
+            this.dataGridView_Order.Size = new System.Drawing.Size(451, 387);
             this.dataGridView_Order.TabIndex = 173;
             this.dataGridView_Order.TabStop = false;
             // 
@@ -898,11 +900,23 @@
             this.chk_orderdetail.TabIndex = 285;
             this.chk_orderdetail.UseVisualStyleBackColor = true;
             // 
+            // dataGridView_Order_Detail
+            // 
+            this.dataGridView_Order_Detail.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_Order_Detail.GridColor = System.Drawing.SystemColors.Control;
+            this.dataGridView_Order_Detail.Location = new System.Drawing.Point(634, 297);
+            this.dataGridView_Order_Detail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView_Order_Detail.Name = "dataGridView_Order_Detail";
+            this.dataGridView_Order_Detail.Size = new System.Drawing.Size(451, 387);
+            this.dataGridView_Order_Detail.TabIndex = 286;
+            this.dataGridView_Order_Detail.TabStop = false;
+            // 
             // F_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 700);
+            this.Controls.Add(this.dataGridView_Order_Detail);
             this.Controls.Add(this.chk_orderdetail);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.checkBox2);
@@ -947,6 +961,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Order)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Order_Detail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1014,5 +1029,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox chk_orderdetail;
+        private System.Windows.Forms.DataGridView dataGridView_Order_Detail;
     }
 }
