@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Printing;
-using System.Linq;
-using System.Reflection;
-using System.Text.RegularExpressions;
-using System.Windows.Forms;
-using SalesManagement_SysDev.Model.Entity;
+﻿using MetroFramework.Forms;
 using SalesManagement_SysDev.Model.ContentsManagement;
+using SalesManagement_SysDev.Model.Entity;
 using SalesManagement_SysDev.Model.Entity.Disp;
+using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
-using MetroFramework.Forms;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
@@ -71,6 +66,10 @@ namespace SalesManagement_SysDev
         private List<T_DispOrder> _dispOrderPrinting;                 // 印刷用データ
 
         int HIDEFlag;
+        int ComitFlag;
+        int rdChID;
+        DateTime chdate;
+
         public F_Order()
         {
             InitializeComponent();
@@ -90,7 +89,8 @@ namespace SalesManagement_SysDev
         {
             btn_order.Enabled = false;
             HIDEFlag = 0;
-            dataGridView_Order.ColumnCount = 14;
+            ComitFlag = 0;
+            dataGridView_Order.ColumnCount = 10;
 
             dataGridView_Order.Columns[0].HeaderText = "受注ID ";
             dataGridView_Order.Columns[1].HeaderText = "営業所ID ";
@@ -102,10 +102,13 @@ namespace SalesManagement_SysDev
             dataGridView_Order.Columns[7].HeaderText = "受注管理フラグ";
             dataGridView_Order.Columns[8].HeaderText = "非表示理由";
             dataGridView_Order.Columns[9].HeaderText = "備考";
-            dataGridView_Order.Columns[10].HeaderText = "受注詳細ID";
-            dataGridView_Order.Columns[11].HeaderText = "商品ID";
-            dataGridView_Order.Columns[12].HeaderText = "数量";
-            dataGridView_Order.Columns[13].HeaderText = "合計金額";
+
+            dataGridView_Order_Detail.ColumnCount = 4;
+
+            dataGridView_Order_Detail.Columns[0].HeaderText = "受注詳細ID";
+            dataGridView_Order_Detail.Columns[1].HeaderText = "商品ID";
+            dataGridView_Order_Detail.Columns[2].HeaderText = "数量";
+            dataGridView_Order_Detail.Columns[3].HeaderText = "合計金額";
 
             F_login f_login = new F_login();
             transfer_int = f_login.transfer_int;
@@ -123,23 +126,22 @@ namespace SalesManagement_SysDev
         // 8.1受注情報登録
         private void btn_regist_Click(object sender, EventArgs e)
         {
-
-            // 8.1.1妥当な受注情報取得
-            if (!Get_Order_Data_AtRegistration())
-                return;
-
-            // 8.1.2妥当な受注情報作成
-            var regOrder = Generate_Data_AtRegistration();
-            var regOrderDetail = Generate_Data_AtRegistration_Detail();
-            var regChumon = Generate_Data_AtRegistration_Chumon();
-            var regChumonDetail = Generate_Data_AtRegistration_Detail_Chumon();
-
-            // 8.1.3受注情報登録
-            if (!Generate_Registration(regOrder))
-            if (!Generate_Registration_Detail(regOrderDetail))
-            if (!Generate_Registration_Chumon(regChumon))
-            if (!Generate_Registration_ChumonDetail(regChumonDetail)) 
-                return;
+            if(chk_order.Enabled == true)//受注登録
+            {
+                if (!Get_Order_Data_AtRegistration())
+                    return;
+                var regOrder = Generate_Data_AtRegistration();
+                if (!Generate_Registration(regOrder))
+                    return;
+            }
+            else if (chk_orderdetail.Enabled == true)//受注詳細登録
+            {
+                if (!Get_Order_Detail_Data_AtRegistration())
+                    return;
+                var regOrderDetail = Generate_Data_AtRegistration_Detail();
+                if (!Generate_Registration_Detail(regOrderDetail))
+                    return;
+            }
         }
         // 
         //
@@ -153,13 +155,13 @@ namespace SalesManagement_SysDev
 
             ///// 入力内容の適否 /////
 
-            // 受注ID
-            if (String.IsNullOrEmpty(txt_OrID.Text))
-            {
-                MessageBox.Show("受注IDは必須項目です");
-                txt_OrID.Focus();
-                return false;
-            }
+            //// 受注ID
+            //if (String.IsNullOrEmpty(txt_OrID.Text))
+            //{
+            //    MessageBox.Show("受注IDは必須項目です");
+            //    txt_OrID.Focus();
+            //    return false;
+            //}
             // 営業所ID
             if (String.IsNullOrEmpty(txt_SoID.Text))
             {
@@ -195,46 +197,12 @@ namespace SalesManagement_SysDev
                 txt_OrDate.Focus();
                 return false;
             }
-            //　受注詳細ID
-            if (String.IsNullOrEmpty(txt_OrDetailID.Text))
-            {
-                MessageBox.Show("受注詳細IDは必須項目です");
-                txt_OrDetailID.Focus();
-                return false;
-            }
-            //　商品ID
-            if (String.IsNullOrEmpty(txt_PrID.Text))
-            {
-                MessageBox.Show("商品IDは必須項目です");
-                txt_PrID.Focus();
-                return false;
-            }
-            //　数量
-            if (String.IsNullOrEmpty(txt_OrQuantity.Text))
-            {
-                MessageBox.Show("数量は必須項目です");
-                txt_OrQuantity.Focus();
-                return false;
-            }
-            //　合計金額
-            if (String.IsNullOrEmpty(txt_OrTotalPrice.Text))
-            {
-                MessageBox.Show("合計金額は必須項目です");
-                txt_OrTotalPrice.Focus();
-                return false;
-            }
 
             ///// 入力内容の形式チェック /////
 
             //// 数値チェック ////
 
-            // 受注ID
-            if (!_ic.NumericCheck(txt_OrID.Text, out errorMessage))
-            {
-                MessageBox.Show(errorMessage);
-                txt_OrID.Focus();
-                return false;
-            }
+
             //　営業所ID
             if (!_ic.NumericCheck(txt_SoID.Text, out errorMessage))
             {
@@ -256,34 +224,6 @@ namespace SalesManagement_SysDev
                 txt_ClID.Focus();
                 return false;
             }
-            // 受注詳細ID
-            if (!_ic.NumericCheck(txt_OrDetailID.Text, out errorMessage))
-            {
-                MessageBox.Show(errorMessage);
-                txt_OrDetailID.Focus();
-                return false;
-            }
-            // 商品ID
-            if (!_ic.NumericCheck(txt_PrID.Text, out errorMessage))
-            {
-                MessageBox.Show(errorMessage);
-                txt_PrID.Focus();
-                return false;
-            }
-            // 数量
-            if (!_ic.NumericCheck(txt_OrQuantity.Text, out errorMessage))
-            {
-                MessageBox.Show(errorMessage);
-                txt_OrQuantity.Focus();
-                return false;
-            }
-            // 合計金額
-            if (!_ic.NumericCheck(txt_OrTotalPrice.Text, out errorMessage))
-            {
-                MessageBox.Show(errorMessage);
-                txt_OrTotalPrice.Focus();
-                return false;
-            }
             ////　文字チェック ////
 
             //　顧客担当者名の文字チェック
@@ -303,13 +243,13 @@ namespace SalesManagement_SysDev
             }
 
             /////文字数チェック/////
-            // 受注ID
-            if (txt_OrID.TextLength > 6)
-            {
-                MessageBox.Show("受注IDは6文字以下です");
-                txt_OrID.Focus();
-                return false;
-            }
+            //// 受注ID
+            //if (txt_OrID.TextLength > 6)
+            //{
+            //    MessageBox.Show("受注IDは6文字以下です");
+            //    txt_OrID.Focus();
+            //    return false;
+            //}
             // 営業所ID
             if (txt_SoID.TextLength > 2)
             {
@@ -345,6 +285,84 @@ namespace SalesManagement_SysDev
                 txt_OrDate.Focus();
                 return false;
             }
+            return true;
+        }
+        private bool Get_Order_Detail_Data_AtRegistration()
+        {
+            // 受注データの形式チェック
+            string errorMessage = string.Empty;
+
+            ///// 入力内容の適否 /////
+
+            //// 受注ID
+            //if (String.IsNullOrEmpty(txt_OrID.Text))
+            //{
+            //    MessageBox.Show("受注IDは必須項目です");
+            //    txt_OrID.Focus();
+            //    return false;
+            //}
+            //　受注詳細ID
+            if (String.IsNullOrEmpty(txt_OrDetailID.Text))
+            {
+                MessageBox.Show("受注詳細IDは必須項目です");
+                txt_OrDetailID.Focus();
+                return false;
+            }
+            //　商品ID
+            if (String.IsNullOrEmpty(txt_PrID.Text))
+            {
+                MessageBox.Show("商品IDは必須項目です");
+                txt_PrID.Focus();
+                return false;
+            }
+            //　数量
+            if (String.IsNullOrEmpty(txt_OrQuantity.Text))
+            {
+                MessageBox.Show("数量は必須項目です");
+                txt_OrQuantity.Focus();
+                return false;
+            }
+            //　合計金額
+            if (String.IsNullOrEmpty(txt_OrTotalPrice.Text))
+            {
+                MessageBox.Show("合計金額は必須項目です");
+                txt_OrTotalPrice.Focus();
+                return false;
+            }
+
+            ///// 入力内容の形式チェック /////
+
+            //// 数値チェック ////
+
+            // 受注詳細ID
+            if (!_ic.NumericCheck(txt_OrDetailID.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_OrDetailID.Focus();
+                return false;
+            }
+            // 商品ID
+            if (!_ic.NumericCheck(txt_PrID.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_PrID.Focus();
+                return false;
+            }
+            // 数量
+            if (!_ic.NumericCheck(txt_OrQuantity.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_OrQuantity.Focus();
+                return false;
+            }
+            // 合計金額
+            if (!_ic.NumericCheck(txt_OrTotalPrice.Text, out errorMessage))
+            {
+                MessageBox.Show(errorMessage);
+                txt_OrTotalPrice.Focus();
+                return false;
+            }
+            ///文字数チェック
             // 受注詳細ID
             if (txt_OrDetailID.TextLength > 6)
             {
@@ -375,6 +393,7 @@ namespace SalesManagement_SysDev
             }
             return true;
         }
+
         //
         //
         // 8.1.2 受注情報作成,注文情報作成
@@ -388,12 +407,12 @@ namespace SalesManagement_SysDev
             }
             return new T_Order
             {
-                OrID = int.Parse(txt_OrID.Text),
+                //OrID = int.Parse(txt_OrID.Text),
                 SoID = int.Parse(txt_SoID.Text),
                 EmID = int.Parse(txt_EmID.Text),
                 ClID = int.Parse(txt_ClID.Text),
                 ClCharge = txt_ClCharge.Text,
-                OrDate = DateTime.Parse(txt_OrDate.Text),
+                OrDate = DateTime.Now,
                 OrStateFlag = 0,
                 OrFlag = 0,
                 OrHidden = txt_OrHidden.Text,
@@ -405,35 +424,11 @@ namespace SalesManagement_SysDev
         {
             return new T_OrderDetail
             {
-                OrDetailID = int.Parse(txt_OrDetailID.Text),
+                //OrDetailID = int.Parse(txt_OrDetailID.Text),
                 OrID = int.Parse(txt_OrID.Text),
                 PrID = int.Parse(txt_PrID.Text),
                 OrQuantity = int.Parse(txt_OrQuantity.Text),
                 OrTotalPrice = int.Parse(txt_OrTotalPrice.Text)
-            };
-
-        }
-        private T_Chumon Generate_Data_AtRegistration_Chumon()
-        {
-            return new T_Chumon
-            {
-                ChID = int.Parse(txt_OrID.Text),
-                SoID = int.Parse(txt_SoID.Text),
-                ClID = int.Parse(txt_ClID.Text),
-                OrID = int.Parse(txt_OrID.Text),
-                ChDate = DateTime.Now,
-                ChStateFlag = 0,
-
-            };
-        }
-        private T_ChumonDetail Generate_Data_AtRegistration_Detail_Chumon()
-        {
-            return new T_ChumonDetail
-            {
-                ChDetailID = int.Parse(txt_OrDetailID.Text),
-                ChID = int.Parse(txt_OrID.Text),
-                PrID = int.Parse(txt_PrID.Text),
-                ChQuantity = int.Parse(txt_OrQuantity.Text),
             };
 
         }
@@ -460,7 +455,7 @@ namespace SalesManagement_SysDev
                 return false;
             }
             //// 画面更新
-            //RefreshDataGridView();
+            fncAllSelect();
             txt_OrID.Focus();
 
             return true;
@@ -539,20 +534,43 @@ namespace SalesManagement_SysDev
         //}
 
         // 更新ボタン
-        // 4.2 商品情報更新
+        // 4.2 受注情報更新
         private void btn_update_Click(object sender, EventArgs e)
         {
-            // 4.2.1 妥当な商品データ取得
-            if (!GetValidDataAtUpdate()) return;
+            if(chk_order.Enabled == true)
+            {
+                // 4.2.1 妥当な受注データ取得
+                if (!GetValidDataAtUpdate()) return;
+                // 4.2.2 受注情報作成
+                var regOrder = GenerateDataAtUpdate();
+                // 4.2.3 受注情報更新
+                OrderUpdate(regOrder);
+                return;
+            }
+            else if(chk_orderdetail.Enabled == true)
+            {
+                // 4.2.1 妥当な受注データ取得
+                if (!GetValidDataAtUpdate()) return;
+                var regOrderDetail = GenerateDataAtUpdate_Detail();
+                OrderUpdateDetail(regOrderDetail);
+                return;
+            }
+            else if(chk_commit_FLG.Enabled == true)
+            {
+                // 8.1.1妥当な受注情報取得
+                if (!GetValidDataAtUpdate()) return;
 
-            // 4.2.2 商品情報作成
-            var regOrder = GenerateDataAtUpdate();
-            var regOrderDetail = GenerateDataAtUpdate_Detail();
-
-            // 4.2.3 商品情報更新
-            OrderUpdate(regOrder);
-            OrderUpdateDetail(regOrderDetail);
-
+                // 8.1.2妥当な受注情報作成
+                var regChumon = Generate_Data_AtRegistration_Chumon();
+                // 8.1.3受注情報登録
+                if (!Generate_Registration_Chumon(regChumon)) 
+                    return;
+                // 8.1.2妥当な受注詳細情報作成
+                var regChumonDetail = Generate_Data_AtRegistration_Detail_Chumon();
+                // 8.1.3受注詳細情報登録
+                    if (!Generate_Registration_ChumonDetail(regChumonDetail))
+                        return;
+            }
         }
         //
         //
@@ -791,9 +809,23 @@ namespace SalesManagement_SysDev
             {
                 txt_OrHidden.Text = "";
             }
+
             if (chk_hide_FLG.Checked == true)
             {
                 HIDEFlag = 1;
+            }
+            else
+            {
+                HIDEFlag = 0;
+            }
+
+            if(chk_commit_FLG.Enabled == true)
+            {
+                ComitFlag = 1;
+            }
+            else
+            {
+                ComitFlag = 0;
             }
             return new T_Order
             {
@@ -802,7 +834,8 @@ namespace SalesManagement_SysDev
                 EmID = int.Parse(txt_EmID.Text),
                 ClID = int.Parse(txt_ClID.Text),
                 ClCharge = txt_ClCharge.Text,
-                OrDate = DateTime.Parse(txt_OrDate.Text),
+                OrDate = DateTime.Now,
+                OrStateFlag = ComitFlag,
                 OrFlag = HIDEFlag,
                 OrHidden = txt_OrHidden.Text,
 
@@ -819,6 +852,68 @@ namespace SalesManagement_SysDev
                 OrTotalPrice = int.Parse(txt_OrTotalPrice.Text)
             };
 
+        }
+        private T_Chumon Generate_Data_AtRegistration_Chumon()
+        {
+            chdate = DateTime.Now;
+
+            return new T_Chumon
+            {
+                //ChID = int.Parse(txt_OrID.Text),
+                SoID = int.Parse(txt_SoID.Text),
+                ClID = int.Parse(txt_ClID.Text),
+                OrID = int.Parse(txt_OrID.Text),
+                ChDate = chdate,
+                ChStateFlag = 0,
+
+            };
+        }
+        private T_ChumonDetail Generate_Data_AtRegistration_Detail_Chumon()
+        {            //接続先DBの情報をセット
+            SqlConnection conn = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
+            //実行するSQL文の指定
+            command.CommandText = @"SELECT ChID from T_Chumon WHERE ChDate LIKE @ChDate;";
+            command.Connection = conn;
+            //sql文のwhere句の接続に使う
+            //検索条件をテキストボックスから抽出し、SQL文をセット
+            //　日本語可　：SqlDbType.NVarChar
+            //　日本語不可：SqlDbType.VarChar
+            command.Parameters.Add("@ChDate", SqlDbType.VarChar);
+            command.Parameters["@ChDate"].Value = chdate;
+            //if ("@PrID" != null || "@MaID" != null || "@Price" != null || "@PrJCode" != null || )
+            //{
+            //    command.CommandText = command + "AND ";
+            //}
+            //実行するSQL文の条件追加
+            try
+            {
+                //データベースに接続
+                conn.Open();
+                //SQL文の実行、データが  readerに格納される
+                SqlDataReader rd = command.ExecuteReader();
+                if (rd.HasRows)
+                {
+                    while (rd.Read())
+                    {
+                        rdChID = rd.GetInt32(rd.GetOrdinal("ChID"));
+                    }
+                }
+            }
+            finally
+            {
+                //データベースを切断
+                conn.Close();
+            }
+
+            return new T_ChumonDetail
+            {
+                //ChDetailID = int.Parse(txt_OrDetailID.Text),
+                ChID = rdChID,
+                PrID = int.Parse(txt_PrID.Text),
+                ChQuantity = int.Parse(txt_OrQuantity.Text),
+            };
         }
 
         //
@@ -1212,7 +1307,7 @@ namespace SalesManagement_SysDev
             conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
             //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
             //command.Parameters["@PrFlag"].Value = "0";
-            command.CommandText = "SELECT * FROM T_Order WHERE OrFlag = 0";
+            command.CommandText = "SELECT * FROM T_Order WHERE OrFlag = 0;";
             command.Connection = conn;
             conn.Open();
             SqlDataReader rd = command.ExecuteReader();
@@ -1221,7 +1316,21 @@ namespace SalesManagement_SysDev
             {
                 dataGridView_Order.Rows.Add(rd["OrID"], rd["SoID"], rd["EmID"], rd["ClID"],
                     rd["ClCharge"], rd["OrDate"], rd["OrStateFlag"], rd["OrFlagr"],
-                    rd["OrHidden"], rd["OrDetailID"], rd["PrID"],rd["OrQuantityz"],rd["OrTotalPrice"]);
+                    rd["OrHidden"]/*, rd["OrDetailID"], rd["PrID"],rd["OrQuantityz"],rd["OrTotalPrice"]*/);
+            }
+            SqlConnection conn2 = new SqlConnection();
+            SqlCommand command2 = new SqlCommand();
+            conn2.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
+            //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
+            //command.Parameters["@PrFlag"].Value = "0";
+            command2.CommandText = "SELECT * FROM T_OrderDetail;";
+            command2.Connection = conn2;
+            conn2.Open();
+            SqlDataReader rd2 = command2.ExecuteReader();
+            dataGridView_Order_Detail.Rows.Clear();
+            while (rd2.Read())
+            {
+                dataGridView_Order_Detail.Rows.Add(rd["OrDetailID"], rd["PrID"], rd["OrQuantityz"], rd["OrTotalPrice"]);
             }
 
             //// データ取得&表示（データバインド）
@@ -1280,6 +1389,19 @@ namespace SalesManagement_SysDev
                 HIDEFlag = 0;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
             }
             return;
+
+        }
+        private void identity()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
+            //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
+            //command.Parameters["@PrFlag"].Value = "0";
+            command.CommandText = "SELECT ";
+            command.Connection = conn;
+            conn.Open();
+            SqlDataReader rd = command.ExecuteReader();
 
         }
 
