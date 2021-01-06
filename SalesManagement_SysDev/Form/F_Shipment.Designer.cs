@@ -375,13 +375,13 @@
             // txt_ShDquantity
             // 
 
-            this.txt_ArQuantity.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_ArQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_ArQuantity.Location = new System.Drawing.Point(788, 106);
-            this.txt_ArQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_ArQuantity.Name = "txt_ArQuantity";
-            this.txt_ArQuantity.Size = new System.Drawing.Size(447, 24);
-            this.txt_ArQuantity.TabIndex = 8;
+            this.txt_ShDquantity.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_ShDquantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_ShDquantity.Location = new System.Drawing.Point(788, 106);
+            this.txt_ShDquantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ShDquantity.Name = "txt_ArQuantity";
+            this.txt_ShDquantity.Size = new System.Drawing.Size(447, 24);
+            this.txt_ShDquantity.TabIndex = 8;
 
             // 
             // lbl_PrID
