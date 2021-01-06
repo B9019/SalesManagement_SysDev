@@ -352,11 +352,13 @@
             // 
             // txt_ShDquantity
             // 
+
             this.txt_ShDquantity.Location = new System.Drawing.Point(0, 0);
             this.txt_ShDquantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_ShDquantity.Name = "txt_ShDquantity";
             this.txt_ShDquantity.Size = new System.Drawing.Size(76, 21);
             this.txt_ShDquantity.TabIndex = 308;
+
             // 
             // lbl_PrID
             // 
