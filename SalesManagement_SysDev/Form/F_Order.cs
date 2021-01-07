@@ -155,13 +155,13 @@ namespace SalesManagement_SysDev
 
             ///// 入力内容の適否 /////
 
-            //// 受注ID
-            //if (String.IsNullOrEmpty(txt_OrID.Text))
-            //{
-            //    MessageBox.Show("受注IDは必須項目です");
-            //    txt_OrID.Focus();
-            //    return false;
-            //}
+            // 受注ID
+            if (String.IsNullOrEmpty(txt_OrID.Text))
+            {
+                MessageBox.Show("受注IDは必須項目です");
+                txt_OrID.Focus();
+                return false;
+            }
             // 営業所ID
             if (String.IsNullOrEmpty(txt_SoID.Text))
             {
@@ -243,13 +243,13 @@ namespace SalesManagement_SysDev
             }
 
             /////文字数チェック/////
-            //// 受注ID
-            //if (txt_OrID.TextLength > 6)
-            //{
-            //    MessageBox.Show("受注IDは6文字以下です");
-            //    txt_OrID.Focus();
-            //    return false;
-            //}
+            // 受注ID
+            if (txt_OrID.TextLength > 6)
+            {
+                MessageBox.Show("受注IDは6文字以下です");
+                txt_OrID.Focus();
+                return false;
+            }
             // 営業所ID
             if (txt_SoID.TextLength > 2)
             {
@@ -294,13 +294,13 @@ namespace SalesManagement_SysDev
 
             ///// 入力内容の適否 /////
 
-            //// 受注ID
-            //if (String.IsNullOrEmpty(txt_OrID.Text))
-            //{
-            //    MessageBox.Show("受注IDは必須項目です");
-            //    txt_OrID.Focus();
-            //    return false;
-            //}
+            // 受注ID
+            if (String.IsNullOrEmpty(txt_OrID.Text))
+            {
+                MessageBox.Show("受注IDは必須項目です");
+                txt_OrID.Focus();
+                return false;
+            }
             //　受注詳細ID
             if (String.IsNullOrEmpty(txt_OrDetailID.Text))
             {
@@ -407,7 +407,7 @@ namespace SalesManagement_SysDev
             }
             return new T_Order
             {
-                //OrID = int.Parse(txt_OrID.Text),
+                OrID = int.Parse(txt_OrID.Text),
                 SoID = int.Parse(txt_SoID.Text),
                 EmID = int.Parse(txt_EmID.Text),
                 ClID = int.Parse(txt_ClID.Text),
@@ -425,7 +425,7 @@ namespace SalesManagement_SysDev
             return new T_OrderDetail
             {
                 //OrDetailID = int.Parse(txt_OrDetailID.Text),
-                OrID = int.Parse(txt_OrID.Text),
+                OrID = int.Parse(txt_OrID2.Text),
                 PrID = int.Parse(txt_PrID.Text),
                 OrQuantity = int.Parse(txt_OrQuantity.Text),
                 OrTotalPrice = int.Parse(txt_OrTotalPrice.Text)
@@ -585,10 +585,10 @@ namespace SalesManagement_SysDev
             ///// 入力内容の適否 /////
 
             // 受注ID
-            if (String.IsNullOrEmpty(txt_OrID.Text))
+            if (String.IsNullOrEmpty(txt_OrID2.Text))
             {
                 MessageBox.Show("受注IDは必須項目です");
-                txt_OrID.Focus();
+                txt_OrID2.Focus();
                 return false;
             }
             // 営業所ID
@@ -638,10 +638,10 @@ namespace SalesManagement_SysDev
             //// 数値チェック ////
 
             // 受注ID
-            if (!_ic.NumericCheck(txt_OrID.Text, out errorMessage))
+            if (!_ic.NumericCheck(txt_OrID2.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
-                txt_OrID.Focus();
+                txt_OrID2.Focus();
                 return false;
             }
             //　営業所ID
@@ -726,10 +726,10 @@ namespace SalesManagement_SysDev
 
             /////文字数チェック/////
             // 受注ID
-            if (txt_OrID.TextLength > 6)
+            if (txt_OrID2.TextLength > 6)
             {
                 MessageBox.Show("受注IDは6文字以下です");
-                txt_OrID.Focus();
+                txt_OrID2.Focus();
                 return false;
             }
             // 営業所ID
@@ -829,7 +829,7 @@ namespace SalesManagement_SysDev
             }
             return new T_Order
             {
-                OrID = int.Parse(txt_OrID.Text),
+                OrID = int.Parse(txt_OrID2.Text),
                 SoID = int.Parse(txt_SoID.Text),
                 EmID = int.Parse(txt_EmID.Text),
                 ClID = int.Parse(txt_ClID.Text),
@@ -846,7 +846,7 @@ namespace SalesManagement_SysDev
             return new T_OrderDetail
             {
                 OrDetailID = int.Parse(txt_OrDetailID.Text),
-                OrID = int.Parse(txt_OrID.Text),
+                OrID = int.Parse(txt_OrID2.Text),
                 PrID = int.Parse(txt_PrID.Text),
                 OrQuantity = int.Parse(txt_OrQuantity.Text),
                 OrTotalPrice = int.Parse(txt_OrTotalPrice.Text)
@@ -862,7 +862,7 @@ namespace SalesManagement_SysDev
                 //ChID = int.Parse(txt_OrID.Text),
                 SoID = int.Parse(txt_SoID.Text),
                 ClID = int.Parse(txt_ClID.Text),
-                OrID = int.Parse(txt_OrID.Text),
+                OrID = int.Parse(txt_OrID2.Text),
                 ChDate = chdate,
                 ChStateFlag = 0,
 
@@ -939,7 +939,7 @@ namespace SalesManagement_SysDev
 
             // 表示データ更新 & 入力クリア
             RefreshDataGridView();
-            txt_OrID.Focus();
+            txt_OrID2.Focus();
 
             return true;
         }
@@ -961,7 +961,7 @@ namespace SalesManagement_SysDev
 
             // 表示データ更新 & 入力クリア
             RefreshDataGridView();
-            txt_OrID.Focus();
+            txt_OrID2.Focus();
 
             return true;
         }
@@ -985,10 +985,10 @@ namespace SalesManagement_SysDev
             //　日本語不可：SqlDbType.VarChar
             for (int count = 0; count < 8; count++)
             {
-                if (txt_OrID.Text != "" && count == 0)
+                if (txt_OrID2.Text != "" && count == 0)
                 {
                     command.Parameters.Add("@OrID", SqlDbType.VarChar);
-                    command.Parameters["@OrID"].Value = txt_OrID.Text;
+                    command.Parameters["@OrID"].Value = txt_OrID2.Text;
                     //実行するSQL文の条件追加
                     command.CommandText = command.CommandText + "OrID LIKE @OrID ";
                     ++andnum;
@@ -1111,7 +1111,7 @@ namespace SalesManagement_SysDev
         private void btn_delete_Click(object sender, EventArgs e)
         {
             // データ行番号を取得
-            int OrID = int.Parse(txt_OrID.Text);
+            int OrID = int.Parse(txt_OrID2.Text);
             using (var dcm = new DeleteConfirmForm())
             {
                 // 確認後、削除実行
@@ -1146,7 +1146,7 @@ namespace SalesManagement_SysDev
             dataGridView_Order.ClearSelection();
 
             // テキストボックス＆コンボボックスクリア
-            txt_OrID.Clear();
+            txt_OrID2.Clear();
             txt_SoID.Clear();
             txt_EmID.Clear();
             txt_ClID.Clear();
@@ -1164,7 +1164,7 @@ namespace SalesManagement_SysDev
             //txt_MaID.Enabled = false;
 
             // 入力フォーカスリセット
-            txt_OrID.Focus();
+            txt_OrID2.Focus();
         }
 
         // 表示データ更新
@@ -1304,7 +1304,7 @@ namespace SalesManagement_SysDev
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand command = new SqlCommand();
-            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
             //command.Parameters["@PrFlag"].Value = "0";
             command.CommandText = "SELECT * FROM T_Order WHERE OrFlag = 0;";
@@ -1315,23 +1315,23 @@ namespace SalesManagement_SysDev
             while (rd.Read())
             {
                 dataGridView_Order.Rows.Add(rd["OrID"], rd["SoID"], rd["EmID"], rd["ClID"],
-                    rd["ClCharge"], rd["OrDate"], rd["OrStateFlag"], rd["OrFlagr"],
-                    rd["OrHidden"]/*, rd["OrDetailID"], rd["PrID"],rd["OrQuantityz"],rd["OrTotalPrice"]*/);
+                    rd["ClCharge"], rd["OrDate"], rd["OrStateFlag"], rd["OrFlag"],
+                    rd["OrHidden"]);
             }
-            SqlConnection conn2 = new SqlConnection();
-            SqlCommand command2 = new SqlCommand();
-            conn2.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
-            //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
-            //command.Parameters["@PrFlag"].Value = "0";
-            command2.CommandText = "SELECT * FROM T_OrderDetail;";
-            command2.Connection = conn2;
-            conn2.Open();
-            SqlDataReader rd2 = command2.ExecuteReader();
-            dataGridView_Order_Detail.Rows.Clear();
-            while (rd2.Read())
-            {
-                dataGridView_Order_Detail.Rows.Add(rd["OrDetailID"], rd["PrID"], rd["OrQuantityz"], rd["OrTotalPrice"]);
-            }
+            //SqlConnection conn2 = new SqlConnection();
+            //SqlCommand command2 = new SqlCommand();
+            //conn2.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            ////command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
+            ////command.Parameters["@PrFlag"].Value = "0";
+            //command2.CommandText = "SELECT * FROM T_OrderDetail;";
+            //command2.Connection = conn2;
+            //conn2.Open();
+            //SqlDataReader rd2 = command2.ExecuteReader();
+            //dataGridView_Order_Detail.Rows.Clear();
+            //while (rd2.Read())
+            //{
+            //    dataGridView_Order_Detail.Rows.Add(rd["OrDetailID"], rd["PrID"], rd["OrQuantityz"], rd["OrTotalPrice"]);
+            //}
 
             //// データ取得&表示（データバインド）
             //_dispProductPaging = _Pr.GetDispProducts();
@@ -1366,7 +1366,7 @@ namespace SalesManagement_SysDev
             string id7 = (string)dataGridView_Order.CurrentRow.Cells[6].Value;
             string id8 = (string)dataGridView_Order.CurrentRow.Cells[7].Value;
 
-            txt_OrID.Text = Convert.ToString(id);
+            txt_OrID2.Text = Convert.ToString(id);
             txt_SoID.Text = Convert.ToString(id2);
             txt_EmID.Text = Convert.ToString(id3);
             txt_ClID.Text = Convert.ToString(id4);

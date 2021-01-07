@@ -36,7 +36,7 @@
             this.txt_ClCharge = new System.Windows.Forms.TextBox();
             this.txt_ClID = new System.Windows.Forms.TextBox();
             this.txt_EmID = new System.Windows.Forms.TextBox();
-            this.txt_OrID = new System.Windows.Forms.TextBox();
+            this.txt_OrID2 = new System.Windows.Forms.TextBox();
             this.txt_SoID = new System.Windows.Forms.TextBox();
             this.lbl_SoID = new System.Windows.Forms.Label();
             this.lbl_OrID = new System.Windows.Forms.Label();
@@ -89,6 +89,8 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.chk_orderdetail = new System.Windows.Forms.CheckBox();
             this.dataGridView_Order_Detail = new System.Windows.Forms.DataGridView();
+            this.txt_OrID = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Order)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -100,7 +102,7 @@
             this.lbl_OrDate.AutoSize = true;
             this.lbl_OrDate.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.lbl_OrDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_OrDate.Location = new System.Drawing.Point(5, 114);
+            this.lbl_OrDate.Location = new System.Drawing.Point(5, 136);
             this.lbl_OrDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_OrDate.Name = "lbl_OrDate";
             this.lbl_OrDate.Size = new System.Drawing.Size(77, 14);
@@ -112,7 +114,7 @@
             this.lbl_ClCharge.AutoSize = true;
             this.lbl_ClCharge.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.lbl_ClCharge.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_ClCharge.Location = new System.Drawing.Point(6, 68);
+            this.lbl_ClCharge.Location = new System.Drawing.Point(6, 90);
             this.lbl_ClCharge.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ClCharge.Name = "lbl_ClCharge";
             this.lbl_ClCharge.Size = new System.Drawing.Size(91, 14);
@@ -124,7 +126,7 @@
             this.lbl_ClID.AutoSize = true;
             this.lbl_ClID.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.lbl_ClID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_ClID.Location = new System.Drawing.Point(5, 92);
+            this.lbl_ClID.Location = new System.Drawing.Point(5, 114);
             this.lbl_ClID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ClID.Name = "lbl_ClID";
             this.lbl_ClID.Size = new System.Drawing.Size(53, 14);
@@ -136,7 +138,7 @@
             this.lbl_EmID.AutoSize = true;
             this.lbl_EmID.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.lbl_EmID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_EmID.Location = new System.Drawing.Point(5, 42);
+            this.lbl_EmID.Location = new System.Drawing.Point(5, 64);
             this.lbl_EmID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_EmID.Name = "lbl_EmID";
             this.lbl_EmID.Size = new System.Drawing.Size(53, 14);
@@ -148,7 +150,7 @@
             this.txt_OrDate.BackColor = System.Drawing.SystemColors.Window;
             this.txt_OrDate.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.txt_OrDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_OrDate.Location = new System.Drawing.Point(98, 113);
+            this.txt_OrDate.Location = new System.Drawing.Point(98, 135);
             this.txt_OrDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_OrDate.Name = "txt_OrDate";
             this.txt_OrDate.Size = new System.Drawing.Size(337, 21);
@@ -158,7 +160,7 @@
             // 
             this.txt_ClCharge.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.txt_ClCharge.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_ClCharge.Location = new System.Drawing.Point(98, 66);
+            this.txt_ClCharge.Location = new System.Drawing.Point(98, 88);
             this.txt_ClCharge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_ClCharge.Name = "txt_ClCharge";
             this.txt_ClCharge.Size = new System.Drawing.Size(336, 21);
@@ -168,7 +170,7 @@
             // 
             this.txt_ClID.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.txt_ClID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_ClID.Location = new System.Drawing.Point(98, 91);
+            this.txt_ClID.Location = new System.Drawing.Point(98, 113);
             this.txt_ClID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_ClID.Name = "txt_ClID";
             this.txt_ClID.Size = new System.Drawing.Size(337, 21);
@@ -179,28 +181,28 @@
             this.txt_EmID.BackColor = System.Drawing.SystemColors.Window;
             this.txt_EmID.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.txt_EmID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_EmID.Location = new System.Drawing.Point(98, 41);
+            this.txt_EmID.Location = new System.Drawing.Point(98, 63);
             this.txt_EmID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_EmID.Name = "txt_EmID";
             this.txt_EmID.Size = new System.Drawing.Size(337, 21);
             this.txt_EmID.TabIndex = 2;
             // 
-            // txt_OrID
+            // txt_OrID2
             // 
-            this.txt_OrID.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
-            this.txt_OrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_OrID.Location = new System.Drawing.Point(97, 42);
-            this.txt_OrID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_OrID.Name = "txt_OrID";
-            this.txt_OrID.Size = new System.Drawing.Size(337, 21);
-            this.txt_OrID.TabIndex = 0;
+            this.txt_OrID2.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
+            this.txt_OrID2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_OrID2.Location = new System.Drawing.Point(97, 42);
+            this.txt_OrID2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_OrID2.Name = "txt_OrID2";
+            this.txt_OrID2.Size = new System.Drawing.Size(337, 21);
+            this.txt_OrID2.TabIndex = 0;
             // 
             // txt_SoID
             // 
             this.txt_SoID.BackColor = System.Drawing.SystemColors.Window;
             this.txt_SoID.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.txt_SoID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_SoID.Location = new System.Drawing.Point(98, 19);
+            this.txt_SoID.Location = new System.Drawing.Point(98, 41);
             this.txt_SoID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_SoID.Name = "txt_SoID";
             this.txt_SoID.Size = new System.Drawing.Size(337, 21);
@@ -211,7 +213,7 @@
             this.lbl_SoID.AutoSize = true;
             this.lbl_SoID.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.lbl_SoID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_SoID.Location = new System.Drawing.Point(5, 20);
+            this.lbl_SoID.Location = new System.Drawing.Point(5, 42);
             this.lbl_SoID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_SoID.Name = "lbl_SoID";
             this.lbl_SoID.Size = new System.Drawing.Size(67, 14);
@@ -232,7 +234,7 @@
             // 
             // txt_memo
             // 
-            this.txt_memo.Location = new System.Drawing.Point(98, 135);
+            this.txt_memo.Location = new System.Drawing.Point(98, 157);
             this.txt_memo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_memo.Name = "txt_memo";
             this.txt_memo.Size = new System.Drawing.Size(337, 21);
@@ -241,7 +243,7 @@
             // txt_OrHidden
             // 
             this.txt_OrHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_OrHidden.Location = new System.Drawing.Point(117, 157);
+            this.txt_OrHidden.Location = new System.Drawing.Point(117, 179);
             this.txt_OrHidden.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_OrHidden.Multiline = true;
             this.txt_OrHidden.Name = "txt_OrHidden";
@@ -252,7 +254,7 @@
             // lbl_memo
             // 
             this.lbl_memo.AutoSize = true;
-            this.lbl_memo.Location = new System.Drawing.Point(5, 135);
+            this.lbl_memo.Location = new System.Drawing.Point(5, 157);
             this.lbl_memo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_memo.Name = "lbl_memo";
             this.lbl_memo.Size = new System.Drawing.Size(35, 14);
@@ -279,6 +281,8 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.txt_OrID);
+            this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.txt_ClCharge);
             this.groupBox3.Controls.Add(this.lbl_ClCharge);
             this.groupBox3.Controls.Add(this.lbl_OrDate);
@@ -296,11 +300,11 @@
             this.groupBox3.Controls.Add(this.chk_hide_FLG);
             this.groupBox3.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
-            this.groupBox3.Location = new System.Drawing.Point(158, 96);
+            this.groupBox3.Location = new System.Drawing.Point(158, 74);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(449, 185);
+            this.groupBox3.Size = new System.Drawing.Size(449, 207);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "受注項目";
@@ -309,7 +313,7 @@
             // 
             this.lbl_ArHidden.AutoSize = true;
             this.lbl_ArHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_ArHidden.Location = new System.Drawing.Point(4, 159);
+            this.lbl_ArHidden.Location = new System.Drawing.Point(4, 181);
             this.lbl_ArHidden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ArHidden.Name = "lbl_ArHidden";
             this.lbl_ArHidden.Size = new System.Drawing.Size(87, 14);
@@ -320,7 +324,7 @@
             // 
             this.chk_hide_FLG.AutoSize = true;
             this.chk_hide_FLG.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.chk_hide_FLG.Location = new System.Drawing.Point(98, 159);
+            this.chk_hide_FLG.Location = new System.Drawing.Point(98, 181);
             this.chk_hide_FLG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chk_hide_FLG.Name = "chk_hide_FLG";
             this.chk_hide_FLG.Size = new System.Drawing.Size(15, 14);
@@ -830,7 +834,7 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txt_OrID);
+            this.groupBox1.Controls.Add(this.txt_OrID2);
             this.groupBox1.Controls.Add(this.lbl_OrID);
             this.groupBox1.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
@@ -911,6 +915,28 @@
             this.dataGridView_Order_Detail.TabIndex = 286;
             this.dataGridView_Order_Detail.TabStop = false;
             // 
+            // txt_OrID
+            // 
+            this.txt_OrID.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
+            this.txt_OrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_OrID.Location = new System.Drawing.Point(97, 18);
+            this.txt_OrID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_OrID.Name = "txt_OrID";
+            this.txt_OrID.Size = new System.Drawing.Size(337, 21);
+            this.txt_OrID.TabIndex = 279;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(6, 19);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(58, 14);
+            this.label9.TabIndex = 280;
+            this.label9.Text = "受注ID ";
+            // 
             // F_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -977,7 +1003,7 @@
         private System.Windows.Forms.TextBox txt_ClCharge;
         private System.Windows.Forms.TextBox txt_ClID;
         private System.Windows.Forms.TextBox txt_EmID;
-        private System.Windows.Forms.TextBox txt_OrID;
+        private System.Windows.Forms.TextBox txt_OrID2;
         private System.Windows.Forms.TextBox txt_SoID;
         private System.Windows.Forms.Label lbl_SoID;
         private System.Windows.Forms.Label lbl_OrID;
@@ -1030,5 +1056,7 @@
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox chk_orderdetail;
         private System.Windows.Forms.DataGridView dataGridView_Order_Detail;
+        private System.Windows.Forms.TextBox txt_OrID;
+        private System.Windows.Forms.Label label9;
     }
 }
