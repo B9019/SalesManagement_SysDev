@@ -194,10 +194,10 @@ namespace SalesManagement_SysDev
             ////　文字チェック ////
 
             //　社員名
-            if (!_ic.FullWidthCharCheck(txt_EmID.Text, out errorMessage))
+            if (!_ic.FullWidthCharCheck(txt_EmName.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);
-                txt_EmID.Focus();
+                txt_EmName.Focus();
                 return false;
             }
             // 　入社年月日の文字チェック
