@@ -129,10 +129,10 @@ namespace SalesManagement_SysDev
             ///// 入力内容の適否 /////
 
             //　社員ID
-            if (String.IsNullOrEmpty(txt_SoID.Text))
+            if (String.IsNullOrEmpty(txt_EmID.Text))
             {
                 MessageBox.Show("社員IDは必須項目です");
-                txt_SoID.Focus();
+                txt_EmID.Focus();
                 return false;
             }
             // 社員名
@@ -422,10 +422,10 @@ namespace SalesManagement_SysDev
             ///// 入力内容の適否 /////
 
             //　社員ID
-            if (String.IsNullOrEmpty(txt_SoID.Text))
+            if (String.IsNullOrEmpty(txt_EmID.Text))
             {
                 MessageBox.Show("社員IDは必須項目です");
-                txt_SoID.Focus();
+                txt_EmID.Focus();
                 return false;
             }
             // 社員名
