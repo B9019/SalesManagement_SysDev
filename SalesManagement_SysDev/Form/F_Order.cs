@@ -103,12 +103,13 @@ namespace SalesManagement_SysDev
             dataGridView_Order.Columns[8].HeaderText = "非表示理由";
             dataGridView_Order.Columns[9].HeaderText = "備考";
 
-            dataGridView_Order_Detail.ColumnCount = 4;
+            dataGridView_Order_Detail.ColumnCount = 5;
 
             dataGridView_Order_Detail.Columns[0].HeaderText = "受注詳細ID";
-            dataGridView_Order_Detail.Columns[1].HeaderText = "商品ID";
-            dataGridView_Order_Detail.Columns[2].HeaderText = "数量";
-            dataGridView_Order_Detail.Columns[3].HeaderText = "合計金額";
+            dataGridView_Order_Detail.Columns[1].HeaderText = "受注ID";
+            dataGridView_Order_Detail.Columns[2].HeaderText = "商品ID";
+            dataGridView_Order_Detail.Columns[3].HeaderText = "数量";
+            dataGridView_Order_Detail.Columns[4].HeaderText = "合計金額";
 
             F_login f_login = new F_login();
             transfer_int = f_login.transfer_int;
@@ -126,7 +127,7 @@ namespace SalesManagement_SysDev
         // 8.1受注情報登録
         private void btn_regist_Click(object sender, EventArgs e)
         {
-            if(chk_order.Enabled == true)//受注登録
+            if(chk_order.Checked == true)//受注登録
             {
                 if (!Get_Order_Data_AtRegistration())
                     return;
@@ -134,7 +135,7 @@ namespace SalesManagement_SysDev
                 if (!Generate_Registration(regOrder))
                     return;
             }
-            else if (chk_orderdetail.Enabled == true)//受注詳細登録
+            else if (chk_orderdetail.Checked == true)//受注詳細登録
             {
                 if (!Get_Order_Detail_Data_AtRegistration())
                     return;
@@ -294,18 +295,18 @@ namespace SalesManagement_SysDev
 
             ///// 入力内容の適否 /////
 
-            // 受注ID
-            if (String.IsNullOrEmpty(txt_OrID.Text))
-            {
-                MessageBox.Show("受注IDは必須項目です");
-                txt_OrID.Focus();
-                return false;
-            }
             //　受注詳細ID
             if (String.IsNullOrEmpty(txt_OrDetailID.Text))
             {
                 MessageBox.Show("受注詳細IDは必須項目です");
                 txt_OrDetailID.Focus();
+                return false;
+            }
+            // 受注ID
+            if (String.IsNullOrEmpty(txt_OrID2.Text))
+            {
+                MessageBox.Show("受注IDは必須項目です");
+                txt_OrID.Focus();
                 return false;
             }
             //　商品ID
@@ -416,7 +417,6 @@ namespace SalesManagement_SysDev
                 OrStateFlag = 0,
                 OrFlag = 0,
                 OrHidden = txt_OrHidden.Text,
-
             };
 
         }
@@ -424,7 +424,7 @@ namespace SalesManagement_SysDev
         {
             return new T_OrderDetail
             {
-                //OrDetailID = int.Parse(txt_OrDetailID.Text),
+                OrDetailID = int.Parse(txt_OrDetailID.Text),
                 OrID = int.Parse(txt_OrID2.Text),
                 PrID = int.Parse(txt_PrID.Text),
                 OrQuantity = int.Parse(txt_OrQuantity.Text),
@@ -432,8 +432,6 @@ namespace SalesManagement_SysDev
             };
 
         }
-
-
         //
         //
         // 8.1.3　受注情報登録
@@ -463,6 +461,11 @@ namespace SalesManagement_SysDev
         }
         private bool Generate_Registration_Detail(T_OrderDetail regOrderDetail)
         {
+            // 登録可否
+            if (DialogResult.OK != MessageBox.Show(this, "登録してよろしいですか", "登録可否", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+            {
+                return false;
+            }
             // 商品情報の登録
             var errorMessage = _Or.PostT_OrderDetail(regOrderDetail);
 
@@ -472,7 +475,8 @@ namespace SalesManagement_SysDev
                 return false;
             }
             //// 画面更新
-            RefreshDataGridView();
+            fncAllSelect();
+            txt_OrID.Focus();
             return true;
 
         }
@@ -829,7 +833,7 @@ namespace SalesManagement_SysDev
             }
             return new T_Order
             {
-                OrID = int.Parse(txt_OrID2.Text),
+                OrID = int.Parse(txt_OrID.Text),
                 SoID = int.Parse(txt_SoID.Text),
                 EmID = int.Parse(txt_EmID.Text),
                 ClID = int.Parse(txt_ClID.Text),
@@ -1318,20 +1322,20 @@ namespace SalesManagement_SysDev
                     rd["ClCharge"], rd["OrDate"], rd["OrStateFlag"], rd["OrFlag"],
                     rd["OrHidden"]);
             }
-            //SqlConnection conn2 = new SqlConnection();
-            //SqlCommand command2 = new SqlCommand();
-            //conn2.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            ////command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
-            ////command.Parameters["@PrFlag"].Value = "0";
-            //command2.CommandText = "SELECT * FROM T_OrderDetail;";
-            //command2.Connection = conn2;
-            //conn2.Open();
-            //SqlDataReader rd2 = command2.ExecuteReader();
-            //dataGridView_Order_Detail.Rows.Clear();
-            //while (rd2.Read())
-            //{
-            //    dataGridView_Order_Detail.Rows.Add(rd["OrDetailID"], rd["PrID"], rd["OrQuantityz"], rd["OrTotalPrice"]);
-            //}
+            SqlConnection conn2 = new SqlConnection();
+            SqlCommand command2 = new SqlCommand();
+            conn2.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
+            //command.Parameters["@PrFlag"].Value = "0";
+            command2.CommandText = "SELECT * FROM T_OrderDetail;";
+            command2.Connection = conn2;
+            conn2.Open();
+            SqlDataReader rd2 = command2.ExecuteReader();
+            dataGridView_Order_Detail.Rows.Clear();
+            while (rd2.Read())
+            {
+                dataGridView_Order_Detail.Rows.Add(rd2["OrDetailID"],rd2["OrID"], rd2["PrID"], rd2["OrQuantity"], rd2["OrTotalPrice"]);
+            }
 
             //// データ取得&表示（データバインド）
             //_dispProductPaging = _Pr.GetDispProducts();
