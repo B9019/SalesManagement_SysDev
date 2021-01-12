@@ -508,18 +508,48 @@ namespace SalesManagement_SysDev
 
         }
         private bool Get_Chumon_Data_AtRegistration()
-        {
-            int id = int.Parse(txt_OrID.Text);
-            using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())
-            {
-                var result = dbContext.T_Orders
-                    .Where(o => o.OrID == id).GroupJoin(
+        {                //受注情報を注文テーブルに送る
+                int id = int.Parse(txt_OrID.Text);
+                using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())
+                {
+                    var result = dbContext.T_Orders
+                        .Where(o => o.OrID == id).GroupJoin(
+                        dbContext.T_Chumons,
+                        o => o.OrID,
+                        c => c.OrID,
+                        (o, c) => new { o.SoID, o.ClID, o.OrFlag, o.OrID })
+                        .ToArray();
+                    foreach (var item in result)
+                    {
+                        var regChumon = new T_Chumon()
+                        {
+                            SoID = item.SoID,
+                            EmID = null,
+                            ClID = item.ClID,
+                            OrID = item.OrID,
+                            ChDate = null,
+                            ChStateFlag = 0,
+                            ChFlag = 0,
+                            ChHidden = txt_OrHidden.Text
+                        };
+                        // 注文情報の登録
+                        var errorMessage = _Ch.PostT_Chumon(regChumon);
+
+                        if (errorMessage != string.Empty)
+                        {
+                            MessageBox.Show(errorMessage);
+                            return false;
+                        }
+                    }
+                int id2 = int.Parse(txt_OrDetailID.Text);
+                var dtresult = dbContext.T_Orders
+                    .Where(o => o.OrID == id2).GroupJoin(
                     dbContext.T_Chumons,
                     o => o.OrID,
                     c => c.OrID,
-                    (o, c) => new { o.SoID, o.ClID, o.OrFlag, o.OrID })
+                    (o, c) => new {o.SoID, o.ClID, o.OrFlag, o.OrID})
                     .ToArray();
-                foreach (var item in result)
+                foreach (var item in dtresult)
                 {
                     var regChumon = new T_Chumon()
                     {
@@ -541,12 +571,13 @@ namespace SalesManagement_SysDev
                         return false;
                     }
                 }
-                    //// 画面更新
-                    fncAllSelect();
-                    txt_OrID.Focus();
-                    return true;
-                
+
+                ////// 画面更新
+                //fncAllSelect();
+                //txt_OrID.Focus();
+                //return true;
             }
+
             return true;
         }
         //private bool Generate_Registration_Chumon(T_Chumon regChumon)
