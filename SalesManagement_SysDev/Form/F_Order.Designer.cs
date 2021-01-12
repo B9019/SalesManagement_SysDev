@@ -45,6 +45,8 @@
             this.lbl_memo = new System.Windows.Forms.Label();
             this.btn_hattyu = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txt_OrID = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.lbl_ArHidden = new System.Windows.Forms.Label();
             this.chk_hide_FLG = new System.Windows.Forms.CheckBox();
             this.lbl_commit_FLG = new System.Windows.Forms.Label();
@@ -89,8 +91,6 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.chk_orderdetail = new System.Windows.Forms.CheckBox();
             this.dataGridView_Order_Detail = new System.Windows.Forms.DataGridView();
-            this.txt_OrID = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Order)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -309,6 +309,28 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "受注項目";
             // 
+            // txt_OrID
+            // 
+            this.txt_OrID.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
+            this.txt_OrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_OrID.Location = new System.Drawing.Point(97, 18);
+            this.txt_OrID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_OrID.Name = "txt_OrID";
+            this.txt_OrID.Size = new System.Drawing.Size(337, 21);
+            this.txt_OrID.TabIndex = 279;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(6, 19);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(58, 14);
+            this.label9.TabIndex = 280;
+            this.label9.Text = "受注ID ";
+            // 
             // lbl_ArHidden
             // 
             this.lbl_ArHidden.AutoSize = true;
@@ -445,6 +467,7 @@
             this.dataGridView_Order.Size = new System.Drawing.Size(451, 387);
             this.dataGridView_Order.TabIndex = 173;
             this.dataGridView_Order.TabStop = false;
+            this.dataGridView_Order.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Order_regist_CellDoubleClick);
             // 
             // btn_client
             // 
@@ -563,6 +586,7 @@
             this.btn_chumon.TabIndex = 267;
             this.btn_chumon.Text = "注文管理";
             this.btn_chumon.UseVisualStyleBackColor = false;
+            this.btn_chumon.Click += new System.EventHandler(this.btn_chumon_Click);
             // 
             // btn_regist
             // 
@@ -914,28 +938,7 @@
             this.dataGridView_Order_Detail.Size = new System.Drawing.Size(451, 387);
             this.dataGridView_Order_Detail.TabIndex = 286;
             this.dataGridView_Order_Detail.TabStop = false;
-            // 
-            // txt_OrID
-            // 
-            this.txt_OrID.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
-            this.txt_OrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_OrID.Location = new System.Drawing.Point(97, 18);
-            this.txt_OrID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_OrID.Name = "txt_OrID";
-            this.txt_OrID.Size = new System.Drawing.Size(337, 21);
-            this.txt_OrID.TabIndex = 279;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
-            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(6, 19);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(58, 14);
-            this.label9.TabIndex = 280;
-            this.label9.Text = "受注ID ";
+            this.dataGridView_Order_Detail.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Order_Detail_regist_CellDoubleClick);
             // 
             // F_Order
             // 

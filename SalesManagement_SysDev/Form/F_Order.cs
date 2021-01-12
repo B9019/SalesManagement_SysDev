@@ -5,7 +5,9 @@ using SalesManagement_SysDev.Model.Entity.Disp;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity;
 using System.Data.SqlClient;
+using System.Drawing.Text;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -70,6 +72,17 @@ namespace SalesManagement_SysDev
         int rdChID;
         DateTime chdate;
 
+        //int OrIDneiv;       //注文管理画面に情報を映す際の変数
+        //int SoIDneiv;
+        //int EmIDneiv;
+        //int ClIDneiv;
+        //string ClChargeneiv;
+        //DateTime OrDateneiv;
+        //int OrStateFlagneiv;
+        //int OrFlagneiv;
+        //string OrHiddenneiv;
+
+
         public F_Order()
         {
             InitializeComponent();
@@ -121,6 +134,16 @@ namespace SalesManagement_SysDev
             {
                 btn_delete.Enabled = true;
             }
+            //OrIDneiv = 0;           //注文管理画面にデータを移す際の変数をロード時に初期化
+            //SoIDneiv = 0;
+            //EmIDneiv = 0;
+            //ClIDneiv = 0;
+            //ClChargeneiv = "";
+            //OrDateneiv = DateTime.Now;
+            //OrStateFlagneiv  = 0;
+            //OrFlagneiv = 0;
+            //OrHiddenneiv = "";
+
         }
 
         // 登録ボタン
@@ -142,6 +165,10 @@ namespace SalesManagement_SysDev
                 var regOrderDetail = Generate_Data_AtRegistration_Detail();
                 if (!Generate_Registration_Detail(regOrderDetail))
                     return;
+            }
+            else if(chk_commit_FLG.Checked == true)//確定処理
+            {
+                Get_Chumon_Data_AtRegistration();
             }
         }
         // 
@@ -480,36 +507,56 @@ namespace SalesManagement_SysDev
             return true;
 
         }
-        private bool Generate_Registration_Chumon(T_Chumon regChumon)
+        private bool Get_Chumon_Data_AtRegistration()
         {
-            // 商品情報の登録
-            var errorMessage = _Ch.PostT_Chumon(regChumon);
-
-            if (errorMessage != string.Empty)
+            using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())
             {
-                MessageBox.Show(errorMessage);
-                return false;
+                var result = dbContext.T_Orders.Join(
+                    dbContext.T_Chumons,
+                    o => o.OrID,
+                    c => c.OrID,
+                    (o, c) => new { o.SoID, o.ClID, o.OrFlag,o.OrID }).ToArray();
+                foreach(var item in result)
+                {
+                        OrID = item.OrID,
+                        SoID = item.SoID,
+                        ClID = item.ClID,
+                        OrFlag = item.OrFlag,
+
+                }
             }
-            //// 画面更新
-            RefreshDataGridView();
-            return true;
-
+                return true;
         }
-        private bool Generate_Registration_ChumonDetail(T_ChumonDetail regChumonDetail)
-        {
-            // 商品情報の登録
-            var errorMessage = _Ch.PostT_ChumonDetail(regChumonDetail);
+        //private bool Generate_Registration_Chumon(T_Chumon regChumon)
+        //{
+        //    // 商品情報の登録
+        //    var errorMessage = _Ch.PostT_Chumon(regChumon);
 
-            if (errorMessage != string.Empty)
-            {
-                MessageBox.Show(errorMessage);
-                return false;
-            }
-            //// 画面更新
-            RefreshDataGridView();
-            return true;
+        //    if (errorMessage != string.Empty)
+        //    {
+        //        MessageBox.Show(errorMessage);
+        //        return false;
+        //    }
+        //    //// 画面更新
+        //    RefreshDataGridView();
+        //    return true;
 
-        }
+        //}
+        //private bool Generate_Registration_ChumonDetail(T_ChumonDetail regChumonDetail)
+        //{
+        //    // 商品情報の登録
+        //    var errorMessage = _Ch.PostT_ChumonDetail(regChumonDetail);
+
+        //    if (errorMessage != string.Empty)
+        //    {
+        //        MessageBox.Show(errorMessage);
+        //        return false;
+        //    }
+        //    //// 画面更新
+        //    RefreshDataGridView();
+        //    return true;
+
+        //}
 
 
 
@@ -541,7 +588,7 @@ namespace SalesManagement_SysDev
         // 4.2 受注情報更新
         private void btn_update_Click(object sender, EventArgs e)
         {
-            if(chk_order.Enabled == true)
+            if(chk_order.Checked== true)
             {
                 // 4.2.1 妥当な受注データ取得
                 if (!GetValidDataAtUpdate()) return;
@@ -551,7 +598,7 @@ namespace SalesManagement_SysDev
                 OrderUpdate(regOrder);
                 return;
             }
-            else if(chk_orderdetail.Enabled == true)
+            else if(chk_orderdetail.Checked == true)
             {
                 // 4.2.1 妥当な受注データ取得
                 if (!GetValidDataAtUpdate()) return;
@@ -559,22 +606,22 @@ namespace SalesManagement_SysDev
                 OrderUpdateDetail(regOrderDetail);
                 return;
             }
-            else if(chk_commit_FLG.Enabled == true)
-            {
-                // 8.1.1妥当な受注情報取得
-                if (!GetValidDataAtUpdate()) return;
+            //else if(chk_commit_FLG.Enabled == true)
+            //{
+            //    // 8.1.1妥当な受注情報取得
+            //    if (!GetValidDataAtUpdate()) return;
 
-                // 8.1.2妥当な受注情報作成
-                var regChumon = Generate_Data_AtRegistration_Chumon();
-                // 8.1.3受注情報登録
-                if (!Generate_Registration_Chumon(regChumon)) 
-                    return;
-                // 8.1.2妥当な受注詳細情報作成
-                var regChumonDetail = Generate_Data_AtRegistration_Detail_Chumon();
-                // 8.1.3受注詳細情報登録
-                    if (!Generate_Registration_ChumonDetail(regChumonDetail))
-                        return;
-            }
+            //    // 8.1.2妥当な受注情報作成
+            //    var regChumon = Generate_Data_AtRegistration_Chumon();
+            //    // 8.1.3受注情報登録
+            //    if (!Generate_Registration_Chumon(regChumon)) 
+            //        return;
+            //    // 8.1.2妥当な受注詳細情報作成
+            //    var regChumonDetail = Generate_Data_AtRegistration_Detail_Chumon();
+            //    // 8.1.3受注詳細情報登録
+            //        if (!Generate_Registration_ChumonDetail(regChumonDetail))
+            //            return;
+            //}
         }
         //
         //
@@ -857,68 +904,68 @@ namespace SalesManagement_SysDev
             };
 
         }
-        private T_Chumon Generate_Data_AtRegistration_Chumon()
-        {
-            chdate = DateTime.Now;
+        //private T_Chumon Generate_Data_AtRegistration_Chumon()
+        //{
+        //    chdate = DateTime.Now;
 
-            return new T_Chumon
-            {
-                //ChID = int.Parse(txt_OrID.Text),
-                SoID = int.Parse(txt_SoID.Text),
-                ClID = int.Parse(txt_ClID.Text),
-                OrID = int.Parse(txt_OrID2.Text),
-                ChDate = chdate,
-                ChStateFlag = 0,
+        //    return new T_Chumon
+        //    {
+        //        //ChID = int.Parse(txt_OrID.Text),
+        //        SoID = int.Parse(txt_SoID.Text),
+        //        ClID = int.Parse(txt_ClID.Text),
+        //        OrID = int.Parse(txt_OrID2.Text),
+        //        ChDate = chdate,
+        //        ChStateFlag = 0,
 
-            };
-        }
-        private T_ChumonDetail Generate_Data_AtRegistration_Detail_Chumon()
-        {            //接続先DBの情報をセット
-            SqlConnection conn = new SqlConnection();
-            SqlCommand command = new SqlCommand();
-            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
-            //実行するSQL文の指定
-            command.CommandText = @"SELECT ChID from T_Chumon WHERE ChDate LIKE @ChDate;";
-            command.Connection = conn;
-            //sql文のwhere句の接続に使う
-            //検索条件をテキストボックスから抽出し、SQL文をセット
-            //　日本語可　：SqlDbType.NVarChar
-            //　日本語不可：SqlDbType.VarChar
-            command.Parameters.Add("@ChDate", SqlDbType.VarChar);
-            command.Parameters["@ChDate"].Value = chdate;
-            //if ("@PrID" != null || "@MaID" != null || "@Price" != null || "@PrJCode" != null || )
-            //{
-            //    command.CommandText = command + "AND ";
-            //}
-            //実行するSQL文の条件追加
-            try
-            {
-                //データベースに接続
-                conn.Open();
-                //SQL文の実行、データが  readerに格納される
-                SqlDataReader rd = command.ExecuteReader();
-                if (rd.HasRows)
-                {
-                    while (rd.Read())
-                    {
-                        rdChID = rd.GetInt32(rd.GetOrdinal("ChID"));
-                    }
-                }
-            }
-            finally
-            {
-                //データベースを切断
-                conn.Close();
-            }
+        //    };
+        //}
+        //private T_ChumonDetail Generate_Data_AtRegistration_Detail_Chumon()
+        //{            //接続先DBの情報をセット
+        //    SqlConnection conn = new SqlConnection();
+        //    SqlCommand command = new SqlCommand();
+        //    conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
+        //    //実行するSQL文の指定
+        //    command.CommandText = @"SELECT ChID from T_Chumon WHERE ChDate LIKE @ChDate;";
+        //    command.Connection = conn;
+        //    //sql文のwhere句の接続に使う
+        //    //検索条件をテキストボックスから抽出し、SQL文をセット
+        //    //　日本語可　：SqlDbType.NVarChar
+        //    //　日本語不可：SqlDbType.VarChar
+        //    command.Parameters.Add("@ChDate", SqlDbType.VarChar);
+        //    command.Parameters["@ChDate"].Value = chdate;
+        //    //if ("@PrID" != null || "@MaID" != null || "@Price" != null || "@PrJCode" != null || )
+        //    //{
+        //    //    command.CommandText = command + "AND ";
+        //    //}
+        //    //実行するSQL文の条件追加
+        //    try
+        //    {
+        //        //データベースに接続
+        //        conn.Open();
+        //        //SQL文の実行、データが  readerに格納される
+        //        SqlDataReader rd = command.ExecuteReader();
+        //        if (rd.HasRows)
+        //        {
+        //            while (rd.Read())
+        //            {
+        //                rdChID = rd.GetInt32(rd.GetOrdinal("ChID"));
+        //            }
+        //        }
+        //    }
+        //    finally
+        //    {
+        //        //データベースを切断
+        //        conn.Close();
+        //    }
 
-            return new T_ChumonDetail
-            {
-                //ChDetailID = int.Parse(txt_OrDetailID.Text),
-                ChID = rdChID,
-                PrID = int.Parse(txt_PrID.Text),
-                ChQuantity = int.Parse(txt_OrQuantity.Text),
-            };
-        }
+        //    return new T_ChumonDetail
+        //    {
+        //        //ChDetailID = int.Parse(txt_OrDetailID.Text),
+        //        ChID = rdChID,
+        //        PrID = int.Parse(txt_PrID.Text),
+        //        ChQuantity = int.Parse(txt_OrQuantity.Text),
+        //    };
+        //}
 
         //
         //
@@ -1367,19 +1414,33 @@ namespace SalesManagement_SysDev
             int id4 = (int)dataGridView_Order.CurrentRow.Cells[3].Value;
             string id5 = (string)dataGridView_Order.CurrentRow.Cells[4].Value;
             DateTime id6 = (DateTime)dataGridView_Order.CurrentRow.Cells[5].Value;
-            string id7 = (string)dataGridView_Order.CurrentRow.Cells[6].Value;
-            string id8 = (string)dataGridView_Order.CurrentRow.Cells[7].Value;
+            int id7 = (int)dataGridView_Order.CurrentRow.Cells[6].Value;
+            int id8 = (int)dataGridView_Order.CurrentRow.Cells[7].Value;
+            string id9 = (string)dataGridView_Order.CurrentRow.Cells[8].Value;
 
-            txt_OrID2.Text = Convert.ToString(id);
+            txt_OrID.Text = Convert.ToString(id);
             txt_SoID.Text = Convert.ToString(id2);
             txt_EmID.Text = Convert.ToString(id3);
             txt_ClID.Text = Convert.ToString(id4);
             txt_ClCharge.Text = Convert.ToString(id5);
             txt_OrDate.Text = Convert.ToString(id6);
-            txt_OrHidden.Text = Convert.ToString(id7);
-            txt_memo.Text = Convert.ToString(id8);
-
+            txt_OrHidden.Text = Convert.ToString(id9);
         }
+        private void dataGridView_Order_Detail_regist_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int Dt = (int)dataGridView_Order_Detail.CurrentRow.Cells[0].Value;
+            int Dt1 = (int)dataGridView_Order_Detail.CurrentRow.Cells[1].Value;
+            int Dt2 = (int)dataGridView_Order_Detail.CurrentRow.Cells[2].Value;
+            int Dt3 = (int)dataGridView_Order_Detail.CurrentRow.Cells[3].Value;
+            int Dt4 = (int)dataGridView_Order_Detail.CurrentRow.Cells[4].Value;
+
+            txt_OrDetailID.Text = Convert.ToString(Dt);
+            txt_OrID2.Text = Convert.ToString(Dt1);
+            txt_PrID.Text = Convert.ToString(Dt2);
+            txt_OrQuantity.Text = Convert.ToString(Dt3);
+            txt_OrTotalPrice.Text = Convert.ToString(Dt4);
+        }
+
         private void Checked_Order_HideFlag(object sender, EventArgs e)
         {
             if (chk_hide_FLG.Checked == true)
@@ -1409,5 +1470,9 @@ namespace SalesManagement_SysDev
 
         }
 
+        private void btn_chumon_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
