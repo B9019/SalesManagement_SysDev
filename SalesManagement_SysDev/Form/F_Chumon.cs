@@ -968,10 +968,10 @@ namespace SalesManagement_SysDev
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand command = new SqlCommand();
-            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\81807\DESKTOP\SALESMANAGEMENT_SYSDEV\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
             //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
             //command.Parameters["@PrFlag"].Value = "0";
-            command.CommandText = "SELECT * FROM T_Chumon WHERE ChFlag = 0 AND ";
+            command.CommandText = "SELECT * FROM T_Chumon WHERE ChFlag = 0;";
             command.Connection = conn;
             conn.Open();
             SqlDataReader rd = command.ExecuteReader();

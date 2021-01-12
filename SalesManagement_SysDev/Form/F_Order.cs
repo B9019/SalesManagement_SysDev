@@ -509,23 +509,45 @@ namespace SalesManagement_SysDev
         }
         private bool Get_Chumon_Data_AtRegistration()
         {
+            int id = int.Parse(txt_OrID.Text);
             using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())
             {
-                var result = dbContext.T_Orders.Join(
+                var result = dbContext.T_Orders
+                    .Where(o => o.OrID == id).GroupJoin(
                     dbContext.T_Chumons,
                     o => o.OrID,
                     c => c.OrID,
-                    (o, c) => new { o.SoID, o.ClID, o.OrFlag,o.OrID }).ToArray();
-                foreach(var item in result)
+                    (o, c) => new { o.SoID, o.ClID, o.OrFlag, o.OrID })
+                    .ToArray();
+                foreach (var item in result)
                 {
-                        OrID = item.OrID,
+                    var regChumon = new T_Chumon()
+                    {
                         SoID = item.SoID,
+                        EmID = null,
                         ClID = item.ClID,
-                        OrFlag = item.OrFlag,
+                        OrID = item.OrID,
+                        ChDate = null,
+                        ChStateFlag = 0,
+                        ChFlag = 0,
+                        ChHidden = txt_OrHidden.Text
+                    };
+                    // 注文情報の登録
+                    var errorMessage = _Ch.PostT_Chumon(regChumon);
 
+                    if (errorMessage != string.Empty)
+                    {
+                        MessageBox.Show(errorMessage);
+                        return false;
+                    }
                 }
+                    //// 画面更新
+                    fncAllSelect();
+                    txt_OrID.Focus();
+                    return true;
+                
             }
-                return true;
+            return true;
         }
         //private bool Generate_Registration_Chumon(T_Chumon regChumon)
         //{
