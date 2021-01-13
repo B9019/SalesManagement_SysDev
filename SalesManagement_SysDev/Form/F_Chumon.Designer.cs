@@ -66,28 +66,20 @@
             this.btn_syukko = new System.Windows.Forms.Button();
             this.lbl_title = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lbl_commit_FLG = new System.Windows.Forms.Label();
-            this.chk_commit_FLG = new System.Windows.Forms.CheckBox();
-            this.lbl_ArQuantity = new System.Windows.Forms.Label();
-            this.txt_ChQuantity = new System.Windows.Forms.TextBox();
-            this.lbl_PrID = new System.Windows.Forms.Label();
-            this.txt_PrID = new System.Windows.Forms.TextBox();
-            this.txt_ChDetailID = new System.Windows.Forms.TextBox();
-            this.lbl_ChDetailID = new System.Windows.Forms.Label();
-            this.txt_memo = new System.Windows.Forms.TextBox();
             this.txt_ChHidden = new System.Windows.Forms.TextBox();
             this.lbl_ArHidden = new System.Windows.Forms.Label();
-            this.lbl_memo = new System.Windows.Forms.Label();
             this.chk_hide_FLG = new System.Windows.Forms.CheckBox();
             this.dataGridView_Chumon = new System.Windows.Forms.DataGridView();
+            this.lbl_commit_FLG = new System.Windows.Forms.Label();
+            this.chk_commit_FLG = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView_Chumon2 = new System.Windows.Forms.DataGridView();
             this.lbl_ChQuantity2 = new System.Windows.Forms.Label();
             this.lbl_ChID2 = new System.Windows.Forms.Label();
             this.txt_ChID2 = new System.Windows.Forms.TextBox();
-            this.txt_PrID2 = new System.Windows.Forms.TextBox();
-            this.txt_ChQuantity2 = new System.Windows.Forms.TextBox();
-            this.txt_ChDetailID2 = new System.Windows.Forms.TextBox();
+            this.txt_PrID = new System.Windows.Forms.TextBox();
+            this.txt_ChQuantity = new System.Windows.Forms.TextBox();
+            this.txt_ChDetailID = new System.Windows.Forms.TextBox();
             this.lbl_PrID2 = new System.Windows.Forms.Label();
             this.lbl_ChDetailID2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -104,7 +96,7 @@
             // 
             this.lbl_ChDate.AutoSize = true;
             this.lbl_ChDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_ChDate.Location = new System.Drawing.Point(5, 133);
+            this.lbl_ChDate.Location = new System.Drawing.Point(5, 135);
             this.lbl_ChDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ChDate.Name = "lbl_ChDate";
             this.lbl_ChDate.Size = new System.Drawing.Size(77, 14);
@@ -115,7 +107,7 @@
             // 
             this.lbl_ChID.AutoSize = true;
             this.lbl_ChID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_ChID.Location = new System.Drawing.Point(5, 23);
+            this.lbl_ChID.Location = new System.Drawing.Point(5, 25);
             this.lbl_ChID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ChID.Name = "lbl_ChID";
             this.lbl_ChID.Size = new System.Drawing.Size(53, 14);
@@ -126,7 +118,7 @@
             // 
             this.lbl_ClID.AutoSize = true;
             this.lbl_ClID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_ClID.Location = new System.Drawing.Point(5, 87);
+            this.lbl_ClID.Location = new System.Drawing.Point(5, 89);
             this.lbl_ClID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ClID.Name = "lbl_ClID";
             this.lbl_ClID.Size = new System.Drawing.Size(53, 14);
@@ -137,7 +129,7 @@
             // 
             this.lbl_EmID.AutoSize = true;
             this.lbl_EmID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_EmID.Location = new System.Drawing.Point(5, 65);
+            this.lbl_EmID.Location = new System.Drawing.Point(5, 67);
             this.lbl_EmID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_EmID.Name = "lbl_EmID";
             this.lbl_EmID.Size = new System.Drawing.Size(53, 14);
@@ -147,21 +139,21 @@
             // txt_ChDate
             // 
             this.txt_ChDate.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_ChDate.Location = new System.Drawing.Point(98, 130);
+            this.txt_ChDate.Location = new System.Drawing.Point(98, 132);
             this.txt_ChDate.Name = "txt_ChDate";
             this.txt_ChDate.Size = new System.Drawing.Size(325, 21);
             this.txt_ChDate.TabIndex = 5;
             // 
             // txt_ChID
             // 
-            this.txt_ChID.Location = new System.Drawing.Point(98, 19);
+            this.txt_ChID.Location = new System.Drawing.Point(98, 21);
             this.txt_ChID.Name = "txt_ChID";
             this.txt_ChID.Size = new System.Drawing.Size(325, 21);
             this.txt_ChID.TabIndex = 0;
             // 
             // txt_ClID
             // 
-            this.txt_ClID.Location = new System.Drawing.Point(98, 85);
+            this.txt_ClID.Location = new System.Drawing.Point(98, 87);
             this.txt_ClID.Name = "txt_ClID";
             this.txt_ClID.Size = new System.Drawing.Size(325, 21);
             this.txt_ClID.TabIndex = 3;
@@ -169,14 +161,14 @@
             // txt_EmID
             // 
             this.txt_EmID.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_EmID.Location = new System.Drawing.Point(98, 63);
+            this.txt_EmID.Location = new System.Drawing.Point(98, 65);
             this.txt_EmID.Name = "txt_EmID";
             this.txt_EmID.Size = new System.Drawing.Size(325, 21);
             this.txt_EmID.TabIndex = 2;
             // 
             // txt_OrID
             // 
-            this.txt_OrID.Location = new System.Drawing.Point(98, 107);
+            this.txt_OrID.Location = new System.Drawing.Point(98, 109);
             this.txt_OrID.Name = "txt_OrID";
             this.txt_OrID.Size = new System.Drawing.Size(325, 21);
             this.txt_OrID.TabIndex = 4;
@@ -184,7 +176,7 @@
             // txt_SoID
             // 
             this.txt_SoID.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_SoID.Location = new System.Drawing.Point(98, 41);
+            this.txt_SoID.Location = new System.Drawing.Point(98, 43);
             this.txt_SoID.Name = "txt_SoID";
             this.txt_SoID.Size = new System.Drawing.Size(325, 21);
             this.txt_SoID.TabIndex = 1;
@@ -193,7 +185,7 @@
             // 
             this.lbl_SoID.AutoSize = true;
             this.lbl_SoID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_SoID.Location = new System.Drawing.Point(5, 43);
+            this.lbl_SoID.Location = new System.Drawing.Point(5, 45);
             this.lbl_SoID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_SoID.Name = "lbl_SoID";
             this.lbl_SoID.Size = new System.Drawing.Size(67, 14);
@@ -204,7 +196,7 @@
             // 
             this.lbl_OrID.AutoSize = true;
             this.lbl_OrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_OrID.Location = new System.Drawing.Point(5, 109);
+            this.lbl_OrID.Location = new System.Drawing.Point(5, 111);
             this.lbl_OrID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_OrID.Name = "lbl_OrID";
             this.lbl_OrID.Size = new System.Drawing.Size(58, 14);
@@ -594,16 +586,8 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.lbl_ArQuantity);
-            this.groupBox3.Controls.Add(this.txt_ChQuantity);
-            this.groupBox3.Controls.Add(this.lbl_PrID);
-            this.groupBox3.Controls.Add(this.txt_PrID);
-            this.groupBox3.Controls.Add(this.txt_ChDetailID);
-            this.groupBox3.Controls.Add(this.lbl_ChDetailID);
-            this.groupBox3.Controls.Add(this.txt_memo);
             this.groupBox3.Controls.Add(this.txt_ChHidden);
             this.groupBox3.Controls.Add(this.lbl_ArHidden);
-            this.groupBox3.Controls.Add(this.lbl_memo);
             this.groupBox3.Controls.Add(this.chk_hide_FLG);
             this.groupBox3.Controls.Add(this.dataGridView_Chumon);
             this.groupBox3.Controls.Add(this.lbl_ClID);
@@ -620,11 +604,53 @@
             this.groupBox3.Controls.Add(this.lbl_ChDate);
             this.groupBox3.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
-            this.groupBox3.Location = new System.Drawing.Point(156, 73);
+            this.groupBox3.Location = new System.Drawing.Point(156, 133);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(436, 621);
+            this.groupBox3.Size = new System.Drawing.Size(436, 526);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
+            // 
+            // txt_ChHidden
+            // 
+            this.txt_ChHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_ChHidden.Location = new System.Drawing.Point(116, 159);
+            this.txt_ChHidden.Multiline = true;
+            this.txt_ChHidden.Name = "txt_ChHidden";
+            this.txt_ChHidden.Size = new System.Drawing.Size(307, 19);
+            this.txt_ChHidden.TabIndex = 10;
+            this.txt_ChHidden.Text = "非表示理由を入力(50文字)";
+            // 
+            // lbl_ArHidden
+            // 
+            this.lbl_ArHidden.AutoSize = true;
+            this.lbl_ArHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_ArHidden.Location = new System.Drawing.Point(5, 162);
+            this.lbl_ArHidden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ArHidden.Name = "lbl_ArHidden";
+            this.lbl_ArHidden.Size = new System.Drawing.Size(87, 14);
+            this.lbl_ArHidden.TabIndex = 241;
+            this.lbl_ArHidden.Text = "非表示モード";
+            // 
+            // chk_hide_FLG
+            // 
+            this.chk_hide_FLG.AutoSize = true;
+            this.chk_hide_FLG.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.chk_hide_FLG.Location = new System.Drawing.Point(95, 162);
+            this.chk_hide_FLG.Name = "chk_hide_FLG";
+            this.chk_hide_FLG.Size = new System.Drawing.Size(15, 14);
+            this.chk_hide_FLG.TabIndex = 240;
+            this.chk_hide_FLG.UseVisualStyleBackColor = true;
+            this.chk_hide_FLG.CheckedChanged += new System.EventHandler(this.Checked_Chumon_HideFlag);
+            // 
+            // dataGridView_Chumon
+            // 
+            this.dataGridView_Chumon.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_Chumon.GridColor = System.Drawing.SystemColors.Control;
+            this.dataGridView_Chumon.Location = new System.Drawing.Point(8, 199);
+            this.dataGridView_Chumon.Name = "dataGridView_Chumon";
+            this.dataGridView_Chumon.Size = new System.Drawing.Size(417, 317);
+            this.dataGridView_Chumon.TabIndex = 12;
+            this.dataGridView_Chumon.TabStop = false;
             // 
             // lbl_commit_FLG
             // 
@@ -649,125 +675,6 @@
             this.chk_commit_FLG.TabIndex = 11;
             this.chk_commit_FLG.UseVisualStyleBackColor = true;
             // 
-            // lbl_ArQuantity
-            // 
-            this.lbl_ArQuantity.AutoSize = true;
-            this.lbl_ArQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_ArQuantity.Location = new System.Drawing.Point(5, 205);
-            this.lbl_ArQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_ArQuantity.Name = "lbl_ArQuantity";
-            this.lbl_ArQuantity.Size = new System.Drawing.Size(35, 14);
-            this.lbl_ArQuantity.TabIndex = 299;
-            this.lbl_ArQuantity.Text = "数量";
-            // 
-            // txt_ChQuantity
-            // 
-            this.txt_ChQuantity.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_ChQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_ChQuantity.Location = new System.Drawing.Point(98, 198);
-            this.txt_ChQuantity.Name = "txt_ChQuantity";
-            this.txt_ChQuantity.Size = new System.Drawing.Size(325, 21);
-            this.txt_ChQuantity.TabIndex = 8;
-            // 
-            // lbl_PrID
-            // 
-            this.lbl_PrID.AutoSize = true;
-            this.lbl_PrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_PrID.Location = new System.Drawing.Point(5, 178);
-            this.lbl_PrID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_PrID.Name = "lbl_PrID";
-            this.lbl_PrID.Size = new System.Drawing.Size(53, 14);
-            this.lbl_PrID.TabIndex = 297;
-            this.lbl_PrID.Text = "商品ID";
-            // 
-            // txt_PrID
-            // 
-            this.txt_PrID.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_PrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_PrID.Location = new System.Drawing.Point(98, 175);
-            this.txt_PrID.Name = "txt_PrID";
-            this.txt_PrID.Size = new System.Drawing.Size(325, 21);
-            this.txt_PrID.TabIndex = 7;
-            // 
-            // txt_ChDetailID
-            // 
-            this.txt_ChDetailID.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_ChDetailID.Location = new System.Drawing.Point(98, 153);
-            this.txt_ChDetailID.Name = "txt_ChDetailID";
-            this.txt_ChDetailID.Size = new System.Drawing.Size(325, 21);
-            this.txt_ChDetailID.TabIndex = 6;
-            // 
-            // lbl_ChDetailID
-            // 
-            this.lbl_ChDetailID.AutoSize = true;
-            this.lbl_ChDetailID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_ChDetailID.Location = new System.Drawing.Point(5, 156);
-            this.lbl_ChDetailID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_ChDetailID.Name = "lbl_ChDetailID";
-            this.lbl_ChDetailID.Size = new System.Drawing.Size(81, 14);
-            this.lbl_ChDetailID.TabIndex = 295;
-            this.lbl_ChDetailID.Text = "注文詳細ID";
-            // 
-            // txt_memo
-            // 
-            this.txt_memo.Location = new System.Drawing.Point(97, 223);
-            this.txt_memo.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.txt_memo.Name = "txt_memo";
-            this.txt_memo.Size = new System.Drawing.Size(326, 21);
-            this.txt_memo.TabIndex = 9;
-            // 
-            // txt_ChHidden
-            // 
-            this.txt_ChHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_ChHidden.Location = new System.Drawing.Point(116, 248);
-            this.txt_ChHidden.Multiline = true;
-            this.txt_ChHidden.Name = "txt_ChHidden";
-            this.txt_ChHidden.Size = new System.Drawing.Size(307, 19);
-            this.txt_ChHidden.TabIndex = 10;
-            this.txt_ChHidden.Text = "非表示理由を入力(50文字)";
-            // 
-            // lbl_ArHidden
-            // 
-            this.lbl_ArHidden.AutoSize = true;
-            this.lbl_ArHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_ArHidden.Location = new System.Drawing.Point(5, 251);
-            this.lbl_ArHidden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_ArHidden.Name = "lbl_ArHidden";
-            this.lbl_ArHidden.Size = new System.Drawing.Size(87, 14);
-            this.lbl_ArHidden.TabIndex = 241;
-            this.lbl_ArHidden.Text = "非表示モード";
-            // 
-            // lbl_memo
-            // 
-            this.lbl_memo.AutoSize = true;
-            this.lbl_memo.Location = new System.Drawing.Point(5, 226);
-            this.lbl_memo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_memo.Name = "lbl_memo";
-            this.lbl_memo.Size = new System.Drawing.Size(35, 14);
-            this.lbl_memo.TabIndex = 194;
-            this.lbl_memo.Text = "備考";
-            // 
-            // chk_hide_FLG
-            // 
-            this.chk_hide_FLG.AutoSize = true;
-            this.chk_hide_FLG.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.chk_hide_FLG.Location = new System.Drawing.Point(95, 251);
-            this.chk_hide_FLG.Name = "chk_hide_FLG";
-            this.chk_hide_FLG.Size = new System.Drawing.Size(15, 14);
-            this.chk_hide_FLG.TabIndex = 240;
-            this.chk_hide_FLG.UseVisualStyleBackColor = true;
-            this.chk_hide_FLG.CheckedChanged += new System.EventHandler(this.Checked_Chumon_HideFlag);
-            // 
-            // dataGridView_Chumon
-            // 
-            this.dataGridView_Chumon.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView_Chumon.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView_Chumon.Location = new System.Drawing.Point(6, 299);
-            this.dataGridView_Chumon.Name = "dataGridView_Chumon";
-            this.dataGridView_Chumon.Size = new System.Drawing.Size(417, 317);
-            this.dataGridView_Chumon.TabIndex = 12;
-            this.dataGridView_Chumon.TabStop = false;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
@@ -775,14 +682,14 @@
             this.groupBox1.Controls.Add(this.lbl_ChQuantity2);
             this.groupBox1.Controls.Add(this.lbl_ChID2);
             this.groupBox1.Controls.Add(this.txt_ChID2);
-            this.groupBox1.Controls.Add(this.txt_PrID2);
-            this.groupBox1.Controls.Add(this.txt_ChQuantity2);
-            this.groupBox1.Controls.Add(this.txt_ChDetailID2);
+            this.groupBox1.Controls.Add(this.txt_PrID);
+            this.groupBox1.Controls.Add(this.txt_ChQuantity);
+            this.groupBox1.Controls.Add(this.txt_ChDetailID);
             this.groupBox1.Controls.Add(this.lbl_PrID2);
             this.groupBox1.Controls.Add(this.lbl_ChDetailID2);
             this.groupBox1.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(598, 158);
+            this.groupBox1.Location = new System.Drawing.Point(609, 140);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(421, 537);
             this.groupBox1.TabIndex = 292;
@@ -828,27 +735,27 @@
             this.txt_ChID2.Size = new System.Drawing.Size(317, 21);
             this.txt_ChID2.TabIndex = 1;
             // 
-            // txt_PrID2
+            // txt_PrID
             // 
-            this.txt_PrID2.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_PrID2.Location = new System.Drawing.Point(98, 123);
-            this.txt_PrID2.Name = "txt_PrID2";
-            this.txt_PrID2.Size = new System.Drawing.Size(317, 21);
-            this.txt_PrID2.TabIndex = 2;
+            this.txt_PrID.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_PrID.Location = new System.Drawing.Point(98, 123);
+            this.txt_PrID.Name = "txt_PrID";
+            this.txt_PrID.Size = new System.Drawing.Size(317, 21);
+            this.txt_PrID.TabIndex = 2;
             // 
-            // txt_ChQuantity2
+            // txt_ChQuantity
             // 
-            this.txt_ChQuantity2.Location = new System.Drawing.Point(98, 171);
-            this.txt_ChQuantity2.Name = "txt_ChQuantity2";
-            this.txt_ChQuantity2.Size = new System.Drawing.Size(317, 21);
-            this.txt_ChQuantity2.TabIndex = 3;
+            this.txt_ChQuantity.Location = new System.Drawing.Point(98, 171);
+            this.txt_ChQuantity.Name = "txt_ChQuantity";
+            this.txt_ChQuantity.Size = new System.Drawing.Size(317, 21);
+            this.txt_ChQuantity.TabIndex = 3;
             // 
-            // txt_ChDetailID2
+            // txt_ChDetailID
             // 
-            this.txt_ChDetailID2.Location = new System.Drawing.Point(98, 28);
-            this.txt_ChDetailID2.Name = "txt_ChDetailID2";
-            this.txt_ChDetailID2.Size = new System.Drawing.Size(317, 21);
-            this.txt_ChDetailID2.TabIndex = 0;
+            this.txt_ChDetailID.Location = new System.Drawing.Point(98, 28);
+            this.txt_ChDetailID.Name = "txt_ChDetailID";
+            this.txt_ChDetailID.Size = new System.Drawing.Size(317, 21);
+            this.txt_ChDetailID.TabIndex = 0;
             // 
             // lbl_PrID2
             // 
@@ -1012,17 +919,9 @@
         private System.Windows.Forms.Label lbl_title;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label lbl_ArHidden;
-        private System.Windows.Forms.Label lbl_memo;
         private System.Windows.Forms.CheckBox chk_hide_FLG;
         private System.Windows.Forms.DataGridView dataGridView_Chumon;
         private System.Windows.Forms.TextBox txt_ChHidden;
-        private System.Windows.Forms.TextBox txt_memo;
-        private System.Windows.Forms.TextBox txt_ChDetailID;
-        private System.Windows.Forms.Label lbl_ChDetailID;
-        private System.Windows.Forms.Label lbl_ArQuantity;
-        private System.Windows.Forms.TextBox txt_ChQuantity;
-        private System.Windows.Forms.Label lbl_PrID;
-        private System.Windows.Forms.TextBox txt_PrID;
         private System.Windows.Forms.Label lbl_commit_FLG;
         private System.Windows.Forms.CheckBox chk_commit_FLG;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -1030,9 +929,9 @@
         private System.Windows.Forms.Label lbl_ChQuantity2;
         private System.Windows.Forms.Label lbl_ChID2;
         private System.Windows.Forms.TextBox txt_ChID2;
-        private System.Windows.Forms.TextBox txt_PrID2;
-        private System.Windows.Forms.TextBox txt_ChQuantity2;
-        private System.Windows.Forms.TextBox txt_ChDetailID2;
+        private System.Windows.Forms.TextBox txt_PrID;
+        private System.Windows.Forms.TextBox txt_ChQuantity;
+        private System.Windows.Forms.TextBox txt_ChDetailID;
         private System.Windows.Forms.Label lbl_PrID2;
         private System.Windows.Forms.Label lbl_ChDetailID2;
         private System.Windows.Forms.Label label3;

@@ -541,32 +541,19 @@ namespace SalesManagement_SysDev
                             return false;
                         }
                     }
-                int id2 = int.Parse(txt_OrDetailID.Text);
-                var dtresult = dbContext.T_Orders
-                    .Where(c => c.OrID == id).GroupJoin(
-                    dbContext.T_Chumons,
-                    o => o.OrID,
-                    c => c.OrID,
-                    (o, c) => new {o.SoID, o.ClID, o.OrFlag, o.OrID})
+                var chresult = dbContext.T_Chumons
+                    .Where(c => c.OrID == id)
                     .ToArray();
-
-
-
-                foreach (var item in dtresult)
+                foreach (var item in chresult)
                 {
-                    var regChumon = new T_Chumon()
+                    var regChumonDetail = new T_ChumonDetail()
                     {
-                        SoID = item.SoID,
-                        EmID = null,
-                        ClID = item.ClID,
-                        OrID = item.OrID,
-                        ChDate = null,
-                        ChStateFlag = 0,
-                        ChFlag = 0,
-                        ChHidden = txt_OrHidden.Text
+                        ChID = item.ChID,
+                        PrID = int.Parse(txt_PrID.Text),
+                        ChQuantity = int.Parse(txt_OrQuantity.Text)
                     };
                     // 注文情報の登録
-                    var errorMessage = _Ch.PostT_Chumon(regChumon);
+                    var errorMessage = _Ch.PostT_ChumonDetail(regChumonDetail);
 
                     if (errorMessage != string.Empty)
                     {
@@ -574,7 +561,6 @@ namespace SalesManagement_SysDev
                         return false;
                     }
                 }
-
                 //// 画面更新
                 fncAllSelect();
                 txt_OrID.Focus();

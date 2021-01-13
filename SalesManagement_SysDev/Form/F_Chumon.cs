@@ -553,13 +553,6 @@ namespace SalesManagement_SysDev
                 txt_ChDate.Focus();
                 return false;
             }
-            // 備考
-            if (txt_memo.TextLength > 30)
-            {
-                MessageBox.Show("備考は30文字以下です");
-                txt_memo.Focus();
-                return false;
-            }
             // 非表示理由
             if (txt_ChHidden.TextLength > 30)
             {
@@ -614,7 +607,7 @@ namespace SalesManagement_SysDev
             return new T_ChumonDetail
             {
                 ChDetailID = int.Parse(txt_ChDetailID.Text),
-                ChID2 = int.Parse(txt_ChID.Text),
+                ChID = int.Parse(txt_ChID.Text),
                 PrID = int.Parse(txt_PrID.Text),
                 ChQuantity = int.Parse(txt_ChQuantity.Text)
 
@@ -1001,7 +994,6 @@ namespace SalesManagement_SysDev
             txt_OrID.Text = Convert.ToString(id5);
             txt_ChDate.Text = Convert.ToString(id6);
             txt_ChHidden.Text = Convert.ToString(id7);
-                txt_memo.Text = Convert.ToString(id8);
 
             }
         private void btn_search_Click(object sender, EventArgs e)
@@ -1021,7 +1013,7 @@ namespace SalesManagement_SysDev
             //検索条件をテキストボックスから抽出し、SQL文をセット
             //　日本語可　：SqlDbType.NVarChar
             //　日本語不可：SqlDbType.VarChar
-            for (int count = 0; count < 9; count++)
+            for (int count = 0; count < 8; count++)
             {
                 if (txt_ChID.Text != "" && count == 0)
                 {
@@ -1101,15 +1093,7 @@ namespace SalesManagement_SysDev
                     ++andnum;
                 }
 
-                else if (txt_memo.Text != "" && count == 7)
-                {
-                    command.Parameters.Add("@memo", SqlDbType.NVarChar);
-                    command.Parameters["@memo"].Value = "%" + txt_memo.Text + "%";
-                    //実行するSQL文の条件追加
-                    command.CommandText = command.CommandText + AND + "memo LIKE @memo ";
-                    ++andnum;
-                }
-                else if (count == 8)
+                else if (count == 7)
                 {
                     command.Parameters.Add("@ChFlag", SqlDbType.NVarChar);
                     command.Parameters["@ChFlag"].Value = HIDEFlag;
@@ -1124,7 +1108,7 @@ namespace SalesManagement_SysDev
                     AND = "AND ";
                 }
                 //最後にセミコロンを接続する
-                while (count == 8)
+                while (count == 7)
                 {
                     command.CommandText = command.CommandText + ";";
                     break;
@@ -1165,7 +1149,6 @@ namespace SalesManagement_SysDev
             txt_OrID.Text = "";
             txt_ChDate.Text = "";
             txt_ChHidden.Text = "";
-            txt_memo.Text = "";
         }
 
         private void Checked_Chumon_HideFlag(object sender, EventArgs e)
