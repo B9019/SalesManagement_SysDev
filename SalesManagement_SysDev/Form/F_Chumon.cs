@@ -81,7 +81,7 @@ namespace SalesManagement_SysDev
         private void F_Chumon_Load(object sender, EventArgs e)
         {
             btn_chumon.Enabled = false;
-            dataGridView_Chumon.ColumnCount = 13;
+            dataGridView_Chumon.ColumnCount = 12;
 
             btn_regist.Enabled = false; //受注処理の時点で注文テーブルに共通項目は登録されているので、この画面では更新処理でデータを追加するべき。
             btn_search.Enabled = false; //検索処理はこの画面には必要ない
@@ -99,7 +99,6 @@ namespace SalesManagement_SysDev
             dataGridView_Chumon.Columns[9].HeaderText = "注文詳細ID";
             dataGridView_Chumon.Columns[10].HeaderText = "商品ID";
             dataGridView_Chumon.Columns[11].HeaderText = "数量";
-            dataGridView_Chumon.Columns[12].HeaderText = "備考";
 
             HIDEFlag = 0;
 
@@ -968,7 +967,7 @@ namespace SalesManagement_SysDev
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand command = new SqlCommand();
-            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
             //command.Parameters["@PrFlag"].Value = "0";
             command.CommandText = "SELECT * FROM T_Chumon WHERE ChFlag = 0;";
@@ -979,7 +978,7 @@ namespace SalesManagement_SysDev
             while (rd.Read())
             {
                 dataGridView_Chumon.Rows.Add(rd["ChID"], rd["SoID"], rd["EmID"], rd["ClID"],
-                    rd["OrID"], rd["ChDate"], rd["ChHidden"],rd["ChStateFlag"],rd["ChFlag"], rd["memo"]);
+                    rd["OrID"], rd["ChDate"], rd["ChHidden"],rd["ChStateFlag"],rd["ChFlag"]);
             }
         }
 
@@ -1010,7 +1009,7 @@ namespace SalesManagement_SysDev
             //接続先DBの情報をセット
             SqlConnection conn = new SqlConnection();
             SqlCommand command = new SqlCommand();
-            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\81807\DESKTOP\SALESMANAGEMENT_SYSDEV\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
             //実行するSQL文の指定
             command.CommandText = @"SELECT * FROM T_Chumon WHERE ";

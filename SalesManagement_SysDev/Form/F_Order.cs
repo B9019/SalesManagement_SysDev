@@ -543,12 +543,15 @@ namespace SalesManagement_SysDev
                     }
                 int id2 = int.Parse(txt_OrDetailID.Text);
                 var dtresult = dbContext.T_Orders
-                    .Where(o => o.OrID == id2).GroupJoin(
+                    .Where(c => c.OrID == id).GroupJoin(
                     dbContext.T_Chumons,
                     o => o.OrID,
                     c => c.OrID,
                     (o, c) => new {o.SoID, o.ClID, o.OrFlag, o.OrID})
                     .ToArray();
+
+
+
                 foreach (var item in dtresult)
                 {
                     var regChumon = new T_Chumon()
@@ -572,10 +575,10 @@ namespace SalesManagement_SysDev
                     }
                 }
 
-                ////// 画面更新
-                //fncAllSelect();
-                //txt_OrID.Focus();
-                //return true;
+                //// 画面更新
+                fncAllSelect();
+                txt_OrID.Focus();
+                return true;
             }
 
             return true;
@@ -1076,7 +1079,7 @@ namespace SalesManagement_SysDev
             //接続先DBの情報をセット
             SqlConnection conn = new SqlConnection();
             SqlCommand command = new SqlCommand();
-            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             //実行するSQL文の指定
             command.CommandText = @"SELECT * FROM T_Order WHERE ";
             command.Connection = conn;
