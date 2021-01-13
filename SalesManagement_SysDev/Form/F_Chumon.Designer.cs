@@ -73,7 +73,7 @@
             this.lbl_commit_FLG = new System.Windows.Forms.Label();
             this.chk_commit_FLG = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView_Chumon2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Chumon_Detail = new System.Windows.Forms.DataGridView();
             this.lbl_ChQuantity2 = new System.Windows.Forms.Label();
             this.lbl_ChID2 = new System.Windows.Forms.Label();
             this.txt_ChID2 = new System.Windows.Forms.TextBox();
@@ -89,7 +89,7 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon_Detail)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_ChDate
@@ -678,7 +678,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.dataGridView_Chumon2);
+            this.groupBox1.Controls.Add(this.dataGridView_Chumon_Detail);
             this.groupBox1.Controls.Add(this.lbl_ChQuantity2);
             this.groupBox1.Controls.Add(this.lbl_ChID2);
             this.groupBox1.Controls.Add(this.txt_ChID2);
@@ -695,15 +695,15 @@
             this.groupBox1.TabIndex = 292;
             this.groupBox1.TabStop = false;
             // 
-            // dataGridView_Chumon2
+            // dataGridView_Chumon_Detail
             // 
-            this.dataGridView_Chumon2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView_Chumon2.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView_Chumon2.Location = new System.Drawing.Point(8, 214);
-            this.dataGridView_Chumon2.Name = "dataGridView_Chumon2";
-            this.dataGridView_Chumon2.Size = new System.Drawing.Size(409, 317);
-            this.dataGridView_Chumon2.TabIndex = 12;
-            this.dataGridView_Chumon2.TabStop = false;
+            this.dataGridView_Chumon_Detail.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_Chumon_Detail.GridColor = System.Drawing.SystemColors.Control;
+            this.dataGridView_Chumon_Detail.Location = new System.Drawing.Point(8, 214);
+            this.dataGridView_Chumon_Detail.Name = "dataGridView_Chumon_Detail";
+            this.dataGridView_Chumon_Detail.Size = new System.Drawing.Size(409, 317);
+            this.dataGridView_Chumon_Detail.TabIndex = 12;
+            this.dataGridView_Chumon_Detail.TabStop = false;
             // 
             // lbl_ChQuantity2
             // 
@@ -872,7 +872,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon_Detail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -925,7 +925,7 @@
         private System.Windows.Forms.Label lbl_commit_FLG;
         private System.Windows.Forms.CheckBox chk_commit_FLG;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView_Chumon2;
+        private System.Windows.Forms.DataGridView dataGridView_Chumon_Detail;
         private System.Windows.Forms.Label lbl_ChQuantity2;
         private System.Windows.Forms.Label lbl_ChID2;
         private System.Windows.Forms.TextBox txt_ChID2;

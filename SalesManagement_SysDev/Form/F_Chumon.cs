@@ -100,8 +100,15 @@ namespace SalesManagement_SysDev
             dataGridView_Chumon.Columns[10].HeaderText = "商品ID";
             dataGridView_Chumon.Columns[11].HeaderText = "数量";
 
-            HIDEFlag = 0;
 
+            dataGridView_Chumon_Detail.ColumnCount = 4;
+
+            dataGridView_Chumon_Detail.Columns[0].HeaderText = "注文詳細ID";
+            dataGridView_Chumon_Detail.Columns[1].HeaderText = "注文ID";
+            dataGridView_Chumon_Detail.Columns[2].HeaderText = "商品ID";
+            dataGridView_Chumon_Detail.Columns[3].HeaderText = "数量";
+
+            HIDEFlag = 0;
             F_login f_login = new F_login();
             transfer_int = f_login.transfer_int;
 
@@ -973,6 +980,18 @@ namespace SalesManagement_SysDev
                 dataGridView_Chumon.Rows.Add(rd["ChID"], rd["SoID"], rd["EmID"], rd["ClID"],
                     rd["OrID"], rd["ChDate"], rd["ChHidden"],rd["ChStateFlag"],rd["ChFlag"]);
             }
+            SqlConnection conn2 = new SqlConnection();
+            SqlCommand command2 = new SqlCommand();
+            command2.CommandText = "SELECT * FROM T_ChumonDetail;";
+            command2.Connection = conn2;
+            conn2.Open();
+            SqlDataReader rd2 = command2.ExecuteReader();
+            dataGridView_Chumon_Detail.Rows.Clear();
+            while (rd2.Read())
+            {
+                dataGridView_Chumon.Rows.Add(rd["ChDetailID"], rd["ChID"], rd["PrID"], rd["ChQuantity"]);
+            }
+
         }
 
         //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
