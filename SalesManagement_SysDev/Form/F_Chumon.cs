@@ -615,7 +615,7 @@ namespace SalesManagement_SysDev
             return new T_ChumonDetail
             {
                 ChDetailID = int.Parse(txt_ChDetailID.Text),
-                ChID = int.Parse(txt_ChID.Text),
+                ChID2 = int.Parse(txt_ChID.Text),
                 PrID = int.Parse(txt_PrID.Text),
                 ChQuantity = int.Parse(txt_ChQuantity.Text)
 
@@ -1186,6 +1186,11 @@ namespace SalesManagement_SysDev
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
         {
 
         }
