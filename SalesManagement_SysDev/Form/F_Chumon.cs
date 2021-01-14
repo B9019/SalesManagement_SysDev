@@ -982,6 +982,7 @@ namespace SalesManagement_SysDev
             }
             SqlConnection conn2 = new SqlConnection();
             SqlCommand command2 = new SqlCommand();
+            conn2.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             command2.CommandText = "SELECT * FROM T_ChumonDetail;";
             command2.Connection = conn2;
             conn2.Open();
@@ -989,11 +990,9 @@ namespace SalesManagement_SysDev
             dataGridView_Chumon_Detail.Rows.Clear();
             while (rd2.Read())
             {
-                dataGridView_Chumon.Rows.Add(rd["ChDetailID"], rd["ChID"], rd["PrID"], rd["ChQuantity"]);
+                dataGridView_Chumon_Detail.Rows.Add(rd2["ChDetailID"], rd2["ChID"], rd2["PrID"], rd2["ChQuantity"]);
             }
-
         }
-
         //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
         private void dataGridView_Product_regist_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
             {

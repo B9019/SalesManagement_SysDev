@@ -383,6 +383,10 @@
     <Compile Include="Migrations\202101120614199_chumon3.designer.cs">
       <DependentUpon>202101120614199_chumon3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101140447304_chmondetail1.cs" />
+    <Compile Include="Migrations\202101140447304_chmondetail1.designer.cs">
+      <DependentUpon>202101140447304_chmondetail1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\CommonFunction.cs" />
     <Compile Include="Model\Constants.cs" />
@@ -580,6 +584,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101120614199_chumon3.resx">
       <DependentUpon>202101120614199_chumon3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101140447304_chmondetail1.resx">
+      <DependentUpon>202101140447304_chmondetail1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

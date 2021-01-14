@@ -86,10 +86,25 @@ namespace SalesManagement_SysDev
             f_home.Visible = false;
             f_login.ShowDialog();
 
-
-
-
+            transfer_int = f_login.transfer_int;
+            loginauthor();
         }
+        private bool loginauthor()
+        {
+            using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())
+            {
+                var loresult = dbContext.M_Employees
+                    .Where(e => e.EmID == transfer_int)
+                    .ToArray();
+                foreach (var item in loresult)
+                {
+                    txt_loginSoID.Text = (item.SoID).ToString();
+                    txt_loginEmID.Text = (item.EmID).ToString();
+                }
+                return true;
+            }
+        }
+
         ///// 画面遷移処理 /////
 
         private void btn_login_Click(object sender, EventArgs e)

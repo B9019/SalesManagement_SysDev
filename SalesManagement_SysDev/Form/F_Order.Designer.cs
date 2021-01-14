@@ -62,7 +62,7 @@
             this.dataGridView_Order = new System.Windows.Forms.DataGridView();
             this.btn_client = new System.Windows.Forms.Button();
             this.btn_order = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_loginSoID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_stock = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -81,7 +81,7 @@
             this.btn_warehousing = new System.Windows.Forms.Button();
             this.btn_search = new System.Windows.Forms.Button();
             this.btn_product = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txt_loginEmID = new System.Windows.Forms.TextBox();
             this.btn_syukko = new System.Windows.Forms.Button();
             this.lbl_title = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -308,6 +308,7 @@
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "受注項目";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // txt_OrID
             // 
@@ -503,16 +504,16 @@
             this.btn_order.Text = "受注管理";
             this.btn_order.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txt_loginSoID
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(230, 14);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(42, 19);
-            this.textBox1.TabIndex = 246;
-            this.textBox1.Text = "12";
+            this.txt_loginSoID.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_loginSoID.Enabled = false;
+            this.txt_loginSoID.Location = new System.Drawing.Point(230, 14);
+            this.txt_loginSoID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_loginSoID.Name = "txt_loginSoID";
+            this.txt_loginSoID.Size = new System.Drawing.Size(42, 19);
+            this.txt_loginSoID.TabIndex = 246;
+            this.txt_loginSoID.Text = "12";
             // 
             // label2
             // 
@@ -807,16 +808,16 @@
             this.btn_product.Text = "商品管理";
             this.btn_product.UseVisualStyleBackColor = false;
             // 
-            // textBox9
+            // txt_loginEmID
             // 
-            this.textBox9.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(230, 32);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(42, 19);
-            this.textBox9.TabIndex = 247;
-            this.textBox9.Text = "123456";
+            this.txt_loginEmID.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_loginEmID.Enabled = false;
+            this.txt_loginEmID.Location = new System.Drawing.Point(230, 32);
+            this.txt_loginEmID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_loginEmID.Name = "txt_loginEmID";
+            this.txt_loginEmID.Size = new System.Drawing.Size(42, 19);
+            this.txt_loginEmID.TabIndex = 247;
+            this.txt_loginEmID.Text = "123456";
             // 
             // btn_syukko
             // 
@@ -959,7 +960,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btn_client);
             this.Controls.Add(this.btn_order);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_loginSoID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_stock);
             this.Controls.Add(this.label1);
@@ -977,7 +978,7 @@
             this.Controls.Add(this.btn_warehousing);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.btn_product);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txt_loginEmID);
             this.Controls.Add(this.btn_syukko);
             this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.dataGridView_Order);
@@ -1020,7 +1021,7 @@
         private System.Windows.Forms.DataGridView dataGridView_Order;
         private System.Windows.Forms.Button btn_client;
         private System.Windows.Forms.Button btn_order;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_loginSoID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_stock;
         private System.Windows.Forms.Label label1;
@@ -1039,7 +1040,7 @@
         private System.Windows.Forms.Button btn_warehousing;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Button btn_product;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txt_loginEmID;
         private System.Windows.Forms.Button btn_syukko;
         private System.Windows.Forms.Label lbl_title;
         private System.Windows.Forms.Label label6;
