@@ -124,10 +124,10 @@ namespace SalesManagement_SysDev
             dataGridView_Order_Detail.Columns[3].HeaderText = "数量";
             dataGridView_Order_Detail.Columns[4].HeaderText = "合計金額";
 
-            F_login f_login = new F_login();
-            F_home f_home = new F_home();
+            //F_login f_login = new F_login();
+            //F_home f_home = new F_home();
+            ////transfer_int = f_home.transfer_int;
             //transfer_int = f_home.transfer_int;
-            transfer_int = f_login.transfer_int;
 
             btn_delete.Enabled = false;
 

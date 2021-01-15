@@ -47,25 +47,25 @@ namespace SalesManagement_SysDev
 
         //public SalesDataSet _sds= new SalesDataSet();
 
-        ////フォーム名の定義//
-        //F_Client f_client = new F_Client();
-        //F_Employee f_employee = new F_Employee();
-        //F_Arrival f_arrival = new F_Arrival();
-        //F_Chumon f_chumon = new F_Chumon();
-        //F_Hattyu f_hattyu = new F_Hattyu();
-        //F_Order f_order = new F_Order();
-        //F_Product f_product = new F_Product();
-        //F_Sale f_sale = new F_Sale();
-        //F_Shipment f_shipment = new F_Shipment();
-        //F_Stock f_stock = new F_Stock();
-        //F_Syukko f_syukko = new F_Syukko();
-        //F_Warehousing f_warehousing = new F_Warehousing();
+        //フォーム名の定義//
+        F_Client f_client = new F_Client();
+        F_Employee f_employee = new F_Employee();
+        F_Arrival f_arrival = new F_Arrival();
+        F_Chumon f_chumon = new F_Chumon();
+        F_Hattyu f_hattyu = new F_Hattyu();
+        F_Order f_order = new F_Order();
+        F_Product f_product = new F_Product();
+        F_Sale f_sale = new F_Sale();
+        F_Shipment f_shipment = new F_Shipment();
+        F_Stock f_stock = new F_Stock();
+        F_Syukko f_syukko = new F_Syukko();
+        F_Warehousing f_warehousing = new F_Warehousing();
 
 
         ////// 選択行番号
         //private int _lineNo;
 
-        int transfer_int ;
+        public int transfer_int ;
 
         //エントリポイント
         [STAThread]
@@ -86,7 +86,12 @@ namespace SalesManagement_SysDev
             f_home.Visible = false;
             f_login.ShowDialog();
 
+            //権限割り当て
             transfer_int = f_login.transfer_int;
+            f_order.transfer_int = transfer_int;
+            f_chumon.transfer_int = transfer_int;
+            f_product.transfer_int = transfer_int;
+            f_employee.transfer_int = transfer_int;
             loginauthor();
         }
         private bool loginauthor()

@@ -53,7 +53,7 @@
             this.txt_EmHidden = new System.Windows.Forms.TextBox();
             this.btn_hattyu = new System.Windows.Forms.Button();
             this.btn_order = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_loginSoID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_stock = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -72,7 +72,7 @@
             this.btn_warehousing = new System.Windows.Forms.Button();
             this.btn_search = new System.Windows.Forms.Button();
             this.btn_product = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_loginEmID = new System.Windows.Forms.TextBox();
             this.btn_syukko = new System.Windows.Forms.Button();
             this.lbl_title = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -89,7 +89,7 @@
             this.lbl_EmRetirementdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_EmRetirementdate.Location = new System.Drawing.Point(669, 106);
             this.lbl_EmRetirementdate.Name = "lbl_EmRetirementdate";
-            this.lbl_EmRetirementdate.Size = new System.Drawing.Size(93, 17);
+            this.lbl_EmRetirementdate.Size = new System.Drawing.Size(77, 14);
             this.lbl_EmRetirementdate.TabIndex = 90;
             this.lbl_EmRetirementdate.Text = "退社年月日";
             // 
@@ -98,9 +98,9 @@
             this.tet_EmRetirementdate.BackColor = System.Drawing.SystemColors.Window;
             this.tet_EmRetirementdate.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.tet_EmRetirementdate.Location = new System.Drawing.Point(793, 106);
-            this.tet_EmRetirementdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tet_EmRetirementdate.Margin = new System.Windows.Forms.Padding(4);
             this.tet_EmRetirementdate.Name = "tet_EmRetirementdate";
-            this.tet_EmRetirementdate.Size = new System.Drawing.Size(447, 24);
+            this.tet_EmRetirementdate.Size = new System.Drawing.Size(447, 21);
             this.tet_EmRetirementdate.TabIndex = 8;
             // 
             // lbl_EmHiredate
@@ -110,7 +110,7 @@
             this.lbl_EmHiredate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_EmHiredate.Location = new System.Drawing.Point(7, 136);
             this.lbl_EmHiredate.Name = "lbl_EmHiredate";
-            this.lbl_EmHiredate.Size = new System.Drawing.Size(93, 17);
+            this.lbl_EmHiredate.Size = new System.Drawing.Size(77, 14);
             this.lbl_EmHiredate.TabIndex = 88;
             this.lbl_EmHiredate.Text = "入社年月日";
             // 
@@ -120,9 +120,9 @@
             this.txt_EmHiredate.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.txt_EmHiredate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txt_EmHiredate.Location = new System.Drawing.Point(131, 134);
-            this.txt_EmHiredate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_EmHiredate.Margin = new System.Windows.Forms.Padding(4);
             this.txt_EmHiredate.Name = "txt_EmHiredate";
-            this.txt_EmHiredate.Size = new System.Drawing.Size(447, 24);
+            this.txt_EmHiredate.Size = new System.Drawing.Size(447, 21);
             this.txt_EmHiredate.TabIndex = 4;
             // 
             // lbl_EmName
@@ -132,7 +132,7 @@
             this.lbl_EmName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_EmName.Location = new System.Drawing.Point(5, 54);
             this.lbl_EmName.Name = "lbl_EmName";
-            this.lbl_EmName.Size = new System.Drawing.Size(59, 17);
+            this.lbl_EmName.Size = new System.Drawing.Size(49, 14);
             this.lbl_EmName.TabIndex = 86;
             this.lbl_EmName.Text = "社員名";
             // 
@@ -143,7 +143,7 @@
             this.lbl_EmAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_EmAddress.Location = new System.Drawing.Point(669, 81);
             this.lbl_EmAddress.Name = "lbl_EmAddress";
-            this.lbl_EmAddress.Size = new System.Drawing.Size(42, 17);
+            this.lbl_EmAddress.Size = new System.Drawing.Size(35, 14);
             this.lbl_EmAddress.TabIndex = 84;
             this.lbl_EmAddress.Text = "住所";
             // 
@@ -152,9 +152,9 @@
             this.txt_EmAddress.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.txt_EmAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txt_EmAddress.Location = new System.Drawing.Point(793, 79);
-            this.txt_EmAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_EmAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txt_EmAddress.Name = "txt_EmAddress";
-            this.txt_EmAddress.Size = new System.Drawing.Size(447, 24);
+            this.txt_EmAddress.Size = new System.Drawing.Size(447, 21);
             this.txt_EmAddress.TabIndex = 7;
             // 
             // lbl_PoID
@@ -164,7 +164,7 @@
             this.lbl_PoID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_PoID.Location = new System.Drawing.Point(7, 109);
             this.lbl_PoID.Name = "lbl_PoID";
-            this.lbl_PoID.Size = new System.Drawing.Size(63, 17);
+            this.lbl_PoID.Size = new System.Drawing.Size(53, 14);
             this.lbl_PoID.TabIndex = 85;
             this.lbl_PoID.Text = "役職ID";
             // 
@@ -172,18 +172,18 @@
             // 
             this.txt_EmName.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.txt_EmName.Location = new System.Drawing.Point(131, 51);
-            this.txt_EmName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_EmName.Margin = new System.Windows.Forms.Padding(4);
             this.txt_EmName.Name = "txt_EmName";
-            this.txt_EmName.Size = new System.Drawing.Size(447, 24);
+            this.txt_EmName.Size = new System.Drawing.Size(447, 21);
             this.txt_EmName.TabIndex = 1;
             // 
             // txt_PoID
             // 
             this.txt_PoID.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.txt_PoID.Location = new System.Drawing.Point(131, 106);
-            this.txt_PoID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PoID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_PoID.Name = "txt_PoID";
-            this.txt_PoID.Size = new System.Drawing.Size(447, 24);
+            this.txt_PoID.Size = new System.Drawing.Size(447, 21);
             this.txt_PoID.TabIndex = 3;
             // 
             // lbl_EmPhone
@@ -193,7 +193,7 @@
             this.lbl_EmPhone.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_EmPhone.Location = new System.Drawing.Point(669, 54);
             this.lbl_EmPhone.Name = "lbl_EmPhone";
-            this.lbl_EmPhone.Size = new System.Drawing.Size(76, 17);
+            this.lbl_EmPhone.Size = new System.Drawing.Size(63, 14);
             this.lbl_EmPhone.TabIndex = 79;
             this.lbl_EmPhone.Text = "電話番号";
             // 
@@ -201,9 +201,9 @@
             // 
             this.txt_EmPhone.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.txt_EmPhone.Location = new System.Drawing.Point(793, 51);
-            this.txt_EmPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_EmPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txt_EmPhone.Name = "txt_EmPhone";
-            this.txt_EmPhone.Size = new System.Drawing.Size(447, 24);
+            this.txt_EmPhone.Size = new System.Drawing.Size(447, 21);
             this.txt_EmPhone.TabIndex = 6;
             // 
             // btn_regist
@@ -214,10 +214,8 @@
             this.btn_regist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_regist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_regist.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
-
             this.btn_regist.Location = new System.Drawing.Point(509, 11);
             this.btn_regist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.btn_regist.Name = "btn_regist";
             this.btn_regist.Size = new System.Drawing.Size(137, 51);
             this.btn_regist.TabIndex = 3;
@@ -235,7 +233,7 @@
             this.btn_client.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_client.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_client.Location = new System.Drawing.Point(0, 151);
-            this.btn_client.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_client.Margin = new System.Windows.Forms.Padding(4);
             this.btn_client.Name = "btn_client";
             this.btn_client.Size = new System.Drawing.Size(200, 62);
             this.btn_client.TabIndex = 274;
@@ -250,10 +248,8 @@
             this.btn_update.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_update.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
-
             this.btn_update.Location = new System.Drawing.Point(652, 11);
             this.btn_update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(137, 51);
             this.btn_update.TabIndex = 4;
@@ -271,7 +267,7 @@
             this.btn_arrival.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_arrival.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_arrival.Location = new System.Drawing.Point(0, 572);
-            this.btn_arrival.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_arrival.Margin = new System.Windows.Forms.Padding(4);
             this.btn_arrival.Name = "btn_arrival";
             this.btn_arrival.Size = new System.Drawing.Size(200, 62);
             this.btn_arrival.TabIndex = 287;
@@ -283,9 +279,9 @@
             this.chk_hide_FLG.AutoSize = true;
             this.chk_hide_FLG.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.chk_hide_FLG.Location = new System.Drawing.Point(131, 192);
-            this.chk_hide_FLG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chk_hide_FLG.Margin = new System.Windows.Forms.Padding(4);
             this.chk_hide_FLG.Name = "chk_hide_FLG";
-            this.chk_hide_FLG.Size = new System.Drawing.Size(18, 17);
+            this.chk_hide_FLG.Size = new System.Drawing.Size(15, 14);
             this.chk_hide_FLG.TabIndex = 240;
             this.chk_hide_FLG.UseVisualStyleBackColor = true;
             this.chk_hide_FLG.CheckedChanged += new System.EventHandler(this.Checked_Employee_HideFlag);
@@ -300,7 +296,7 @@
             this.btn_chumon.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_chumon.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_chumon.Location = new System.Drawing.Point(0, 630);
-            this.btn_chumon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_chumon.Margin = new System.Windows.Forms.Padding(4);
             this.btn_chumon.Name = "btn_chumon";
             this.btn_chumon.Size = new System.Drawing.Size(200, 62);
             this.btn_chumon.TabIndex = 288;
@@ -309,12 +305,10 @@
             // 
             // txt_Emmemo
             // 
-
             this.txt_Emmemo.Location = new System.Drawing.Point(131, 161);
             this.txt_Emmemo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.txt_Emmemo.Name = "txt_Emmemo";
-            this.txt_Emmemo.Size = new System.Drawing.Size(448, 24);
+            this.txt_Emmemo.Size = new System.Drawing.Size(448, 21);
             this.txt_Emmemo.TabIndex = 9;
             // 
             // lbl_ArHidden
@@ -323,7 +317,7 @@
             this.lbl_ArHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_ArHidden.Location = new System.Drawing.Point(7, 191);
             this.lbl_ArHidden.Name = "lbl_ArHidden";
-            this.lbl_ArHidden.Size = new System.Drawing.Size(105, 17);
+            this.lbl_ArHidden.Size = new System.Drawing.Size(87, 14);
             this.lbl_ArHidden.TabIndex = 241;
             this.lbl_ArHidden.Text = "非表示モード";
             // 
@@ -332,7 +326,7 @@
             this.lbl_memo.AutoSize = true;
             this.lbl_memo.Location = new System.Drawing.Point(7, 164);
             this.lbl_memo.Name = "lbl_memo";
-            this.lbl_memo.Size = new System.Drawing.Size(42, 17);
+            this.lbl_memo.Size = new System.Drawing.Size(35, 14);
             this.lbl_memo.TabIndex = 194;
             this.lbl_memo.Text = "備考";
             // 
@@ -341,7 +335,7 @@
             this.dataGridView_Employee.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_Employee.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridView_Employee.Location = new System.Drawing.Point(8, 218);
-            this.dataGridView_Employee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView_Employee.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_Employee.Name = "dataGridView_Employee";
             this.dataGridView_Employee.Size = new System.Drawing.Size(1232, 552);
             this.dataGridView_Employee.TabIndex = 173;
@@ -351,7 +345,7 @@
             // 
             this.txt_EmHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txt_EmHidden.Location = new System.Drawing.Point(156, 190);
-            this.txt_EmHidden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_EmHidden.Margin = new System.Windows.Forms.Padding(4);
             this.txt_EmHidden.Multiline = true;
             this.txt_EmHidden.Name = "txt_EmHidden";
             this.txt_EmHidden.Size = new System.Drawing.Size(1085, 23);
@@ -368,7 +362,7 @@
             this.btn_hattyu.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_hattyu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_hattyu.Location = new System.Drawing.Point(0, 812);
-            this.btn_hattyu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_hattyu.Margin = new System.Windows.Forms.Padding(4);
             this.btn_hattyu.Name = "btn_hattyu";
             this.btn_hattyu.Size = new System.Drawing.Size(200, 62);
             this.btn_hattyu.TabIndex = 291;
@@ -385,23 +379,23 @@
             this.btn_order.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_order.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_order.Location = new System.Drawing.Point(0, 752);
-            this.btn_order.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_order.Margin = new System.Windows.Forms.Padding(4);
             this.btn_order.Name = "btn_order";
             this.btn_order.Size = new System.Drawing.Size(200, 62);
             this.btn_order.TabIndex = 290;
             this.btn_order.Text = "受注管理";
             this.btn_order.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txt_loginSoID
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(307, 16);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(55, 22);
-            this.textBox1.TabIndex = 267;
-            this.textBox1.Text = "12";
+            this.txt_loginSoID.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_loginSoID.Enabled = false;
+            this.txt_loginSoID.Location = new System.Drawing.Point(307, 16);
+            this.txt_loginSoID.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_loginSoID.Name = "txt_loginSoID";
+            this.txt_loginSoID.Size = new System.Drawing.Size(55, 22);
+            this.txt_loginSoID.TabIndex = 267;
+            this.txt_loginSoID.Text = "12";
             // 
             // label2
             // 
@@ -409,7 +403,7 @@
             this.label2.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.label2.Location = new System.Drawing.Point(219, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 17);
+            this.label2.Size = new System.Drawing.Size(53, 14);
             this.label2.TabIndex = 286;
             this.label2.Text = "社員ID";
             // 
@@ -423,7 +417,7 @@
             this.btn_stock.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_stock.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_stock.Location = new System.Drawing.Point(0, 691);
-            this.btn_stock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_stock.Margin = new System.Windows.Forms.Padding(4);
             this.btn_stock.Name = "btn_stock";
             this.btn_stock.Size = new System.Drawing.Size(200, 62);
             this.btn_stock.TabIndex = 289;
@@ -436,7 +430,7 @@
             this.label1.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.label1.Location = new System.Drawing.Point(219, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 17);
+            this.label1.Size = new System.Drawing.Size(67, 14);
             this.label1.TabIndex = 283;
             this.label1.Text = "営業所ID";
             // 
@@ -450,7 +444,7 @@
             this.btn_login.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_login.Location = new System.Drawing.Point(0, 91);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(4);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(200, 62);
             this.btn_login.TabIndex = 272;
@@ -463,7 +457,7 @@
             this.lbl_SoID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_SoID.Location = new System.Drawing.Point(7, 81);
             this.lbl_SoID.Name = "lbl_SoID";
-            this.lbl_SoID.Size = new System.Drawing.Size(80, 17);
+            this.lbl_SoID.Size = new System.Drawing.Size(67, 14);
             this.lbl_SoID.TabIndex = 79;
             this.lbl_SoID.Text = "営業所ID";
             // 
@@ -472,9 +466,9 @@
             this.txt_SoID.BackColor = System.Drawing.SystemColors.Window;
             this.txt_SoID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txt_SoID.Location = new System.Drawing.Point(131, 79);
-            this.txt_SoID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_SoID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SoID.Name = "txt_SoID";
-            this.txt_SoID.Size = new System.Drawing.Size(448, 24);
+            this.txt_SoID.Size = new System.Drawing.Size(448, 21);
             this.txt_SoID.TabIndex = 2;
             // 
             // lbl_EmID
@@ -483,7 +477,7 @@
             this.lbl_EmID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_EmID.Location = new System.Drawing.Point(7, 28);
             this.lbl_EmID.Name = "lbl_EmID";
-            this.lbl_EmID.Size = new System.Drawing.Size(63, 17);
+            this.lbl_EmID.Size = new System.Drawing.Size(53, 14);
             this.lbl_EmID.TabIndex = 87;
             this.lbl_EmID.Text = "社員ID";
             // 
@@ -492,9 +486,9 @@
             this.txt_EmID.BackColor = System.Drawing.SystemColors.Window;
             this.txt_EmID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txt_EmID.Location = new System.Drawing.Point(131, 24);
-            this.txt_EmID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_EmID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_EmID.Name = "txt_EmID";
-            this.txt_EmID.Size = new System.Drawing.Size(448, 24);
+            this.txt_EmID.Size = new System.Drawing.Size(448, 21);
             this.txt_EmID.TabIndex = 0;
             // 
             // btn_all
@@ -505,10 +499,8 @@
             this.btn_all.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_all.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_all.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
-
             this.btn_all.Location = new System.Drawing.Point(795, 11);
             this.btn_all.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.btn_all.Name = "btn_all";
             this.btn_all.Size = new System.Drawing.Size(137, 51);
             this.btn_all.TabIndex = 5;
@@ -526,7 +518,7 @@
             this.btn_employee.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_employee.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_employee.Location = new System.Drawing.Point(0, 210);
-            this.btn_employee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_employee.Margin = new System.Windows.Forms.Padding(4);
             this.btn_employee.Name = "btn_employee";
             this.btn_employee.Size = new System.Drawing.Size(200, 62);
             this.btn_employee.TabIndex = 276;
@@ -541,10 +533,8 @@
             this.btn_print.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_print.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
-
             this.btn_print.Location = new System.Drawing.Point(937, 11);
             this.btn_print.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(137, 51);
             this.btn_print.TabIndex = 6;
@@ -561,7 +551,7 @@
             this.btn_shipment.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_shipment.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_shipment.Location = new System.Drawing.Point(0, 511);
-            this.btn_shipment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_shipment.Margin = new System.Windows.Forms.Padding(4);
             this.btn_shipment.Name = "btn_shipment";
             this.btn_shipment.Size = new System.Drawing.Size(200, 62);
             this.btn_shipment.TabIndex = 285;
@@ -576,10 +566,8 @@
             this.btn_delete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
-
             this.btn_delete.Location = new System.Drawing.Point(1079, 11);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(137, 51);
             this.btn_delete.TabIndex = 7;
@@ -597,7 +585,7 @@
             this.btn_sale.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_sale.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_sale.Location = new System.Drawing.Point(0, 270);
-            this.btn_sale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_sale.Margin = new System.Windows.Forms.Padding(4);
             this.btn_sale.Name = "btn_sale";
             this.btn_sale.Size = new System.Drawing.Size(200, 62);
             this.btn_sale.TabIndex = 277;
@@ -612,10 +600,8 @@
             this.btn_clear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clear.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
-
             this.btn_clear.Location = new System.Drawing.Point(1221, 11);
             this.btn_clear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(137, 51);
             this.btn_clear.TabIndex = 8;
@@ -633,7 +619,7 @@
             this.btn_warehousing.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_warehousing.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_warehousing.Location = new System.Drawing.Point(0, 452);
-            this.btn_warehousing.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_warehousing.Margin = new System.Windows.Forms.Padding(4);
             this.btn_warehousing.Name = "btn_warehousing";
             this.btn_warehousing.Size = new System.Drawing.Size(200, 62);
             this.btn_warehousing.TabIndex = 284;
@@ -648,10 +634,8 @@
             this.btn_search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_search.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
-
             this.btn_search.Location = new System.Drawing.Point(367, 11);
             this.btn_search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(137, 51);
             this.btn_search.TabIndex = 2;
@@ -669,23 +653,23 @@
             this.btn_product.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_product.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_product.Location = new System.Drawing.Point(0, 331);
-            this.btn_product.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_product.Margin = new System.Windows.Forms.Padding(4);
             this.btn_product.Name = "btn_product";
             this.btn_product.Size = new System.Drawing.Size(200, 62);
             this.btn_product.TabIndex = 280;
             this.btn_product.Text = "商品管理";
             this.btn_product.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // txt_loginEmID
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(307, 40);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(55, 22);
-            this.textBox2.TabIndex = 268;
-            this.textBox2.Text = "123456";
+            this.txt_loginEmID.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_loginEmID.Enabled = false;
+            this.txt_loginEmID.Location = new System.Drawing.Point(307, 40);
+            this.txt_loginEmID.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_loginEmID.Name = "txt_loginEmID";
+            this.txt_loginEmID.Size = new System.Drawing.Size(55, 22);
+            this.txt_loginEmID.TabIndex = 268;
+            this.txt_loginEmID.Text = "123456";
             // 
             // btn_syukko
             // 
@@ -697,7 +681,7 @@
             this.btn_syukko.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_syukko.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_syukko.Location = new System.Drawing.Point(0, 392);
-            this.btn_syukko.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_syukko.Margin = new System.Windows.Forms.Padding(4);
             this.btn_syukko.Name = "btn_syukko";
             this.btn_syukko.Size = new System.Drawing.Size(200, 62);
             this.btn_syukko.TabIndex = 282;
@@ -713,7 +697,7 @@
             this.lbl_title.Location = new System.Drawing.Point(3, 22);
             this.lbl_title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(227, 39);
+            this.lbl_title.Size = new System.Drawing.Size(183, 32);
             this.lbl_title.TabIndex = 266;
             this.lbl_title.Text = "社員管理画面";
             // 
@@ -747,9 +731,9 @@
             this.groupBox3.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
             this.groupBox3.Location = new System.Drawing.Point(208, 91);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(1248, 776);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
@@ -762,7 +746,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(669, 26);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 17);
+            this.label3.Size = new System.Drawing.Size(72, 14);
             this.label3.TabIndex = 243;
             this.label3.Text = "パスワード";
             // 
@@ -771,9 +755,9 @@
             this.textBox3.Font = new System.Drawing.Font("BIZ UDPゴシック", 10F);
             this.textBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox3.Location = new System.Drawing.Point(793, 24);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(447, 24);
+            this.textBox3.Size = new System.Drawing.Size(447, 21);
             this.textBox3.TabIndex = 5;
             // 
             // F_Employee
@@ -788,7 +772,7 @@
             this.Controls.Add(this.btn_chumon);
             this.Controls.Add(this.btn_hattyu);
             this.Controls.Add(this.btn_order);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_loginSoID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_stock);
             this.Controls.Add(this.label1);
@@ -803,13 +787,11 @@
             this.Controls.Add(this.btn_warehousing);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.btn_product);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_loginEmID);
             this.Controls.Add(this.btn_syukko);
             this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.groupBox3);
-
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.Name = "F_Employee";
             this.Padding = new System.Windows.Forms.Padding(16, 75, 16, 16);
             this.Load += new System.EventHandler(this.F_Employee_Load_1);
@@ -848,7 +830,7 @@
         private System.Windows.Forms.TextBox txt_EmHidden;
         private System.Windows.Forms.Button btn_hattyu;
         private System.Windows.Forms.Button btn_order;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_loginSoID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_stock;
         private System.Windows.Forms.Label label1;
@@ -867,7 +849,7 @@
         private System.Windows.Forms.Button btn_warehousing;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Button btn_product;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_loginEmID;
         private System.Windows.Forms.Button btn_syukko;
         private System.Windows.Forms.Label lbl_title;
         private System.Windows.Forms.GroupBox groupBox3;

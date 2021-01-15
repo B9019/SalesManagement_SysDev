@@ -111,7 +111,6 @@ namespace SalesManagement_SysDev
 
 
             F_login f_login = new F_login();
-            transfer_int = f_login.transfer_int;
 
             btn_delete.Enabled = false;
 
@@ -120,7 +119,22 @@ namespace SalesManagement_SysDev
             {
                 btn_delete.Enabled = true;
             }
-            
+            loginauthor();
+        }
+        private bool loginauthor()
+        {
+            using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())
+            {
+                var loresult = dbContext.M_Employees
+                    .Where(e => e.EmID == transfer_int)
+                    .ToArray();
+                foreach (var item in loresult)
+                {
+                    txt_loginSoID.Text = (item.SoID).ToString();
+                    txt_loginEmID.Text = (item.EmID).ToString();
+                }
+                return true;
+            }
         }
 
 
