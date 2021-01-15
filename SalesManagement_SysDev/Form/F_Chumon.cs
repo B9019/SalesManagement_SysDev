@@ -81,7 +81,7 @@ namespace SalesManagement_SysDev
         private void F_Chumon_Load(object sender, EventArgs e)
         {
             btn_chumon.Enabled = false;
-            dataGridView_Chumon.ColumnCount = 12;
+            dataGridView_Chumon.ColumnCount = 8;
 
             btn_regist.Enabled = false; //受注処理の時点で注文テーブルに共通項目は登録されているので、この画面では更新処理でデータを追加するべき。
             btn_search.Enabled = false; //検索処理はこの画面には必要ない
@@ -93,13 +93,8 @@ namespace SalesManagement_SysDev
             dataGridView_Chumon.Columns[3].HeaderText = "顧客ID";
             dataGridView_Chumon.Columns[4].HeaderText = "受注ID";
             dataGridView_Chumon.Columns[5].HeaderText = "注文年月日 ";
-            dataGridView_Chumon.Columns[6].HeaderText = "注文状態フラグ";
-            dataGridView_Chumon.Columns[7].HeaderText = "注文管理フラグ";
-            dataGridView_Chumon.Columns[8].HeaderText = "非表示理由";
-            dataGridView_Chumon.Columns[9].HeaderText = "注文詳細ID";
-            dataGridView_Chumon.Columns[10].HeaderText = "商品ID";
-            dataGridView_Chumon.Columns[11].HeaderText = "数量";
-
+            dataGridView_Chumon.Columns[6].HeaderText = "注文管理フラグ";
+            dataGridView_Chumon.Columns[7].HeaderText = "非表示理由";
 
             dataGridView_Chumon_Detail.ColumnCount = 4;
 
@@ -140,16 +135,33 @@ namespace SalesManagement_SysDev
             // 登録ボタン
             // 19.1注文情報登録
 
-            // 19.1.1妥当な注文情報取得
-            if (!Get_Chumon_Data_AtRegistration())
-                    return;
 
-            // 19.1.2妥当な注文情報作成
-            var regChumon = Generate_Data_AtRegistration();
-
-            // 19.1.3注文情報登録
-            if (!Generate_Registration(regChumon))
+            //if (chk_chumon.Checked == true)//注文情報登録
+            //{
+            //    if (!Get_Chumon_Data_AtRegistration())
+            //        return;
+            //    var regChumon = Generate_Data_AtRegistration();
+            //    if (!Generate_Registration(regChumon))
+            //        return;
+            //}
+            //else if (chk_chumonDetail.Checked == true)//注文詳細登録
+            //{
+            //    if (!Get_Chumon_Detail_Data_AtRegistration())
+            //        return;
+            //    var regOrderDetail = Generate_Data_AtRegistration_Detail();
+            //    if (!Generate_Registration_Detail(regChumonDetail))
+            //        return;
+            //}
+            if (chk_commit_FLG.Checked == true)//確定処理
+            {
+                // 19.1.1妥当な注文情報取得
+                if (!Get_Chumon_Data_AtRegistration())
                     return;
+                GetValidDataAtSyukkoUpdate();
+                Get_Syukko_Data_AtRegistration();
+                return;
+
+            }
 
         }
         // 
@@ -330,7 +342,111 @@ namespace SalesManagement_SysDev
                 return true;
 
             }
+        private bool GetValidDataAtSyukkoUpdate()
+        {
+            int id = int.Parse(txt_PrID.Text);
+            using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())
+            {
+                var result = dbContext.T_Stocks
+                    .Where(s => s.PrID == id).ToArray();
+                foreach (var item in result)
+                {
+                    var regStock = new T_Stock()
+                    {
+                        PrID = item.PrID,
+                        StQuantity = item.PrID - int.Parse(txt_ChQuantity.Text),
+                        StFlag = item.StFlag
+                    };
+                    // 注文情報の登録
+                    var errorMessage = _St.PutStock(regStock);
 
+                    if (errorMessage != string.Empty)
+                    {
+                        MessageBox.Show(errorMessage);
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+        private bool Get_Syukko_Data_AtRegistration()
+        {
+            //注文情報を出庫テーブルに送る
+            int id = int.Parse(txt_ChID.Text);
+            using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())
+            {
+                var result = dbContext.T_Chumons
+                    .Where(c => c.ChID == id).ToArray();
+                foreach (var item in result)
+                {
+                    var regSyukko = new T_Syukko()
+                    {
+                        EmID = null,
+                        ClID = item.ClID,
+                        SoID = item.SoID,
+                        OrID = item.OrID,
+                        SyDate = null,
+                        SyStateFlag = 0,
+                        SyFlag = 0,
+                        SyHidden = ""
+                    };
+                    // 注文情報の登録
+                    var errorMessage = _Sy.PostT_Syukko(regSyukko);
+
+                    if (errorMessage != string.Empty)
+                    {
+                        MessageBox.Show(errorMessage);
+                        return false;
+                    }
+                }
+                int id2 = int.Parse(txt_OrID.Text);
+                var syresult = dbContext.T_Syukkos
+                    .Where(s => s.OrID == id2)
+                    .ToArray();
+                foreach (var item in syresult)
+                {
+                    var regSyukkoDetail = new T_SyukkoDetail()
+                    {
+                        SyID = item.SyID,
+                        PrID = int.Parse(txt_PrID.Text),
+                        SyQuantity = int.Parse(txt_ChQuantity.Text)
+                    };
+                    // 注文情報の登録
+                    var errorMessage = _Sy.PostT_SyukkoDetail(regSyukkoDetail);
+
+                    if (errorMessage != string.Empty)
+                    {
+                        MessageBox.Show(errorMessage);
+                        return false;
+                    }
+                }
+                foreach (var item in result)
+                {
+                    var regChumon = new T_Chumon()
+                    {
+                        SoID = item.SoID,
+                        EmID = transfer_int,
+                        ClID = item.ClID,
+                        OrID = item.OrID,
+                        ChDate = item.ChDate,
+                        ChStateFlag = 1,
+                        ChFlag = item.ChFlag,
+                        ChHidden = item.ChHidden
+                    };
+                    // 注文情報の登録
+                    var errorMessage = _Ch.PostT_Chumon(regChumon);
+                    if (errorMessage != string.Empty)
+                    {
+                        MessageBox.Show(errorMessage);
+                        return false;
+                    }
+                }
+                //// 画面更新
+                fncAllSelect();
+                txt_ChID.Focus();
+                return true;
+            }
+        }
         // 更新ボタン
         // 19.2 注文情報更新
         private void btn_update_Click(object sender, EventArgs e)
@@ -341,22 +457,20 @@ namespace SalesManagement_SysDev
             // 19.2.2 注文情報作成
             var regChumon = GenerateDataAtUpdate();
             var regChumonDetail = GenerateDataAtUpdateDetail();
-            var regStock = GenerateDataAtUpdate_Stock();
-            var regSyukko = Generate_Registration_Syukko();
-            var regSyukkoDetail = Generate_Registration_SyukkoDetail();
+            //var regStock = GenerateDataAtUpdate_Stock();
+            //var regSyukko = Generate_Registration_Syukko();
+            //var regSyukkoDetail = Generate_Registration_SyukkoDetail();
 
             // 19.2.3 注文情報更新
             ChumonUpdate(regChumon);
             ChumonDetailUpdate(regChumonDetail);
-            if (chk_commit_FLG.Checked == true)
-            {
-                StockUpdate(regStock);
-                Generate_Registration_Syukko(regSyukko);
-                Generate_Registration_SyukkoDetail(regSyukkoDetail);
+            //if (chk_commit_FLG.Checked == true)
+            //{
+            //    StockUpdate(regStock);
+            //    Generate_Registration_Syukko(regSyukko);
+            //    Generate_Registration_SyukkoDetail(regSyukkoDetail);
 
-            }
-
-
+            //}
         }
         //
         //
@@ -988,7 +1102,7 @@ namespace SalesManagement_SysDev
             while (rd.Read())
             {
                 dataGridView_Chumon.Rows.Add(rd["ChID"], rd["SoID"], rd["EmID"], rd["ClID"],
-                    rd["OrID"], rd["ChDate"], rd["ChHidden"],rd["ChStateFlag"],rd["ChFlag"]);
+                    rd["OrID"], rd["ChDate"], rd["ChHidden"]);
             }
             SqlConnection conn2 = new SqlConnection();
             SqlCommand command2 = new SqlCommand();
@@ -1004,26 +1118,46 @@ namespace SalesManagement_SysDev
             }
         }
         //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
-        private void dataGridView_Product_regist_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView_Chumon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
             {
                 int id = (int)dataGridView_Chumon.CurrentRow.Cells[0].Value;
                 int id2 = (int)dataGridView_Chumon.CurrentRow.Cells[1].Value;
-            int id3 = (int)dataGridView_Chumon.CurrentRow.Cells[2].Value;
-                int id4 = (int)dataGridView_Chumon.CurrentRow.Cells[3].Value;
-            int id5 = (int)dataGridView_Chumon.CurrentRow.Cells[4].Value;
-            DateTime id6 = (DateTime)dataGridView_Chumon.CurrentRow.Cells[5].Value;
-            string id7 = (string)dataGridView_Chumon.CurrentRow.Cells[6].Value;
-            string id8 = (string)dataGridView_Chumon.CurrentRow.Cells[7].Value;
+            //if (dataGridView_Chumon.CurrentRow.Cells[2].Value != null)
+            //{
+            //    int id3 = (int)dataGridView_Chumon.CurrentRow.Cells[2].Value;
+            //    txt_EmID.Text = Convert.ToString(id3);
+            //    return;
+            //}
+            int id4 = (int)dataGridView_Chumon.CurrentRow.Cells[3].Value;
+                int id5 = (int)dataGridView_Chumon.CurrentRow.Cells[4].Value;
+            //if (dataGridView_Chumon.CurrentRow.Cells[5].Value != null)
+            //{
+            //    DateTime id6 = (DateTime)dataGridView_Chumon.CurrentRow.Cells[5].Value;
+            //    txt_ChDate.Text = Convert.ToString(id6);
+            //    return;
+            //}
+                //int id7 = (int)dataGridView_Chumon.CurrentRow.Cells[6].Value;                
+                int id8 = (int)dataGridView_Chumon.CurrentRow.Cells[7].Value;
                
-            txt_ChID.Text = Convert.ToString(id);
-            txt_SoID.Text = Convert.ToString(id2);
-            txt_EmID.Text = Convert.ToString(id3);
-            txt_ClID.Text = Convert.ToString(id4);
-            txt_OrID.Text = Convert.ToString(id5);
-            txt_ChDate.Text = Convert.ToString(id6);
-            txt_ChHidden.Text = Convert.ToString(id7);
-
+                txt_ChID.Text = Convert.ToString(id);
+                txt_SoID.Text = Convert.ToString(id2);
+                txt_ClID.Text = Convert.ToString(id4);
+                txt_OrID.Text = Convert.ToString(id5);
+                txt_ChHidden.Text = Convert.ToString(id8);
             }
+        private void dataGridView_Chumon_Detail_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = (int)dataGridView_Chumon_Detail.CurrentRow.Cells[0].Value;
+            int id2 = (int)dataGridView_Chumon_Detail.CurrentRow.Cells[1].Value;
+            int id3 = (int)dataGridView_Chumon_Detail.CurrentRow.Cells[2].Value;
+            int id4 = (int)dataGridView_Chumon_Detail.CurrentRow.Cells[3].Value;
+
+            txt_ChDetailID.Text = Convert.ToString(id);
+            txt_ChID.Text = Convert.ToString(id2);
+            txt_PrID.Text = Convert.ToString(id3);
+            txt_ChQuantity.Text = Convert.ToString(id4);
+        }
+
         private void btn_search_Click(object sender, EventArgs e)
         {
             //接続先DBの情報をセット

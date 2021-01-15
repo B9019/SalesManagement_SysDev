@@ -216,10 +216,9 @@ namespace SalesManagement_SysDev
             }
             return new T_Stock
             {
-                StID = int.Parse(txt_StID.Text),
                 PrID = int.Parse(txt_PrID.Text),
                 StFlag = 0,
-                //StQuantity = int.Parse(txt_StQuantity.Text)
+                StQuantity = int.Parse(txt_StQuantity.Text)
 
             };
 
@@ -245,7 +244,7 @@ namespace SalesManagement_SysDev
                 return false;
             }
             // 画面更新
-            RefreshDataGridView();
+            fncAllSelect();
             txt_StID.Focus();
 
             return true;
@@ -397,8 +396,8 @@ namespace SalesManagement_SysDev
                     return false;
                 }
 
-                // 表示データ更新 & 入力クリア
-                RefreshDataGridView();
+            // 表示データ更新 & 入力クリア
+            fncAllSelect();
             txt_StID.Focus();
 
                 return true;
@@ -430,10 +429,6 @@ namespace SalesManagement_SysDev
             // データ取得&表示
             dataGridView_Stock.DataSource = _St.GetDispStock();
             }
-
-
-
-
             // 入力クリア
             internal void ClearInput()
             {
@@ -592,26 +587,37 @@ namespace SalesManagement_SysDev
 
             private void btn_all_Click(object sender, EventArgs e)
             {
-                RefreshDataGridView();
+                 fncAllSelect();
             }
-
-            //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
-            private void dataGridView_Stock_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void fncAllSelect()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
+            //command.Parameters["@PrFlag"].Value = "0";
+            command.CommandText = "SELECT * FROM T_Stock;";
+            command.Connection = conn;
+            conn.Open();
+            SqlDataReader rd = command.ExecuteReader();
+            dataGridView_Stock.Rows.Clear();
+            while (rd.Read())
+            {
+                dataGridView_Stock.Rows.Add(rd["StID"], rd["PrID"], rd["StQuantity"], rd["StFlag"]);
+            }
+        }
+        //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
+        private void dataGridView_Stock_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
             {
                 int id = (int)dataGridView_Stock.CurrentRow.Cells[0].Value;
                 int id2 = (int)dataGridView_Stock.CurrentRow.Cells[1].Value;
                 int id3 = (int)dataGridView_Stock.CurrentRow.Cells[2].Value;
                 int id4 = (int)dataGridView_Stock.CurrentRow.Cells[3].Value;
-                int id5 = (int)dataGridView_Stock.CurrentRow.Cells[4].Value;
-                DateTime id6 = (DateTime)dataGridView_Stock.CurrentRow.Cells[5].Value;
-                string id7 = (string)dataGridView_Stock.CurrentRow.Cells[6].Value;
-                string id8 = (string)dataGridView_Stock.CurrentRow.Cells[7].Value;
 
             txt_StID.Text = Convert.ToString(id);
             txt_PrID.Text = Convert.ToString(id2);
-            //txt_StQuantity.Text = Convert.ToString(id3);
+            txt_StQuantity.Text = Convert.ToString(id3);
             txt_memo.Text = Convert.ToString(id4);
-               
             }
 
         

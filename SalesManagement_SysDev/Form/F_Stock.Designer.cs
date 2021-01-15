@@ -597,6 +597,7 @@
             this.dataGridView_Stock.Size = new System.Drawing.Size(924, 441);
             this.dataGridView_Stock.TabIndex = 173;
             this.dataGridView_Stock.TabStop = false;
+            this.dataGridView_Stock.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Stock_CellDoubleClick);
             // 
             // groupBox3
             // 

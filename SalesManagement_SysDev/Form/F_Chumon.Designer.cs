@@ -84,8 +84,8 @@
             this.lbl_ChDetailID2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.chk_chumon = new System.Windows.Forms.CheckBox();
+            this.chk_chumonDetail = new System.Windows.Forms.CheckBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -669,6 +669,7 @@
             this.dataGridView_Chumon.Size = new System.Drawing.Size(556, 396);
             this.dataGridView_Chumon.TabIndex = 12;
             this.dataGridView_Chumon.TabStop = false;
+            this.dataGridView_Chumon.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Chumon_CellDoubleClick);
             // 
             // lbl_commit_FLG
             // 
@@ -724,6 +725,7 @@
             this.dataGridView_Chumon_Detail.Size = new System.Drawing.Size(545, 396);
             this.dataGridView_Chumon_Detail.TabIndex = 12;
             this.dataGridView_Chumon_Detail.TabStop = false;
+            this.dataGridView_Chumon_Detail.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Chumon_Detail_CellDoubleClick);
             // 
             // lbl_ChQuantity2
             // 
@@ -822,35 +824,35 @@
             this.label4.TabIndex = 303;
             this.label4.Text = "注文情報詳細";
             // 
-            // checkBox1
+            // chk_chumon
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.checkBox1.Location = new System.Drawing.Point(937, 134);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 304;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chk_chumon.AutoSize = true;
+            this.chk_chumon.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.chk_chumon.Location = new System.Drawing.Point(937, 134);
+            this.chk_chumon.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.chk_chumon.Name = "chk_chumon";
+            this.chk_chumon.Size = new System.Drawing.Size(15, 14);
+            this.chk_chumon.TabIndex = 304;
+            this.chk_chumon.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chk_chumonDetail
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.checkBox2.Location = new System.Drawing.Point(1165, 134);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 305;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chk_chumonDetail.AutoSize = true;
+            this.chk_chumonDetail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.chk_chumonDetail.Location = new System.Drawing.Point(1165, 134);
+            this.chk_chumonDetail.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.chk_chumonDetail.Name = "chk_chumonDetail";
+            this.chk_chumonDetail.Size = new System.Drawing.Size(15, 14);
+            this.chk_chumonDetail.TabIndex = 305;
+            this.chk_chumonDetail.UseVisualStyleBackColor = true;
             // 
             // F_Chumon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1467, 875);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.chk_chumonDetail);
+            this.Controls.Add(this.chk_chumon);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.chk_commit_FLG);
@@ -955,7 +957,7 @@
         private System.Windows.Forms.Label lbl_ChDetailID2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox chk_chumon;
+        private System.Windows.Forms.CheckBox chk_chumonDetail;
     }
 }

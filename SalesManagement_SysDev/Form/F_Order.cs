@@ -527,7 +527,8 @@ namespace SalesManagement_SysDev
 
             }
             private bool Get_Chumon_Data_AtRegistration()
-            {                //受注情報を注文テーブルに送る
+            {               
+            //受注情報を注文テーブルに送る
                 int id = int.Parse(txt_OrID.Text);
                 using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())
                 {
