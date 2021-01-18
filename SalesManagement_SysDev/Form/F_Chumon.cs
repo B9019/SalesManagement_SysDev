@@ -83,7 +83,7 @@ namespace SalesManagement_SysDev
             btn_chumon.Enabled = false;
             dataGridView_Chumon.ColumnCount = 8;
 
-            btn_regist.Enabled = false; //受注処理の時点で注文テーブルに共通項目は登録されているので、この画面では更新処理でデータを追加するべき。
+            //btn_regist.Enabled = false; //受注処理の時点で注文テーブルに共通項目は登録されているので、この画面では更新処理でデータを追加するべき。
             btn_search.Enabled = false; //検索処理はこの画面には必要ない
             StockNum = 0;
 
@@ -351,10 +351,13 @@ namespace SalesManagement_SysDev
                     .Where(s => s.PrID == id).ToArray();
                 foreach (var item in result)
                 {
+                    int stquntity = item.StQuantity - int.Parse(txt_ChQuantity.Text);
+
                     var regStock = new T_Stock()
                     {
+                        StID = item.StID,
                         PrID = item.PrID,
-                        StQuantity = item.PrID - int.Parse(txt_ChQuantity.Text),
+                        StQuantity =stquntity,
                         StFlag = item.StFlag
                     };
                     // 注文情報の登録
@@ -428,7 +431,7 @@ namespace SalesManagement_SysDev
                         EmID = transfer_int,
                         ClID = item.ClID,
                         OrID = item.OrID,
-                        ChDate = item.ChDate,
+                        ChDate = DateTime.Now,
                         ChStateFlag = 1,
                         ChFlag = item.ChFlag,
                         ChHidden = item.ChHidden
@@ -746,56 +749,56 @@ namespace SalesManagement_SysDev
         }
 
 
-        private T_Stock GenerateDataAtUpdate_Stock()
-        {
-            //if (chk_commit_FLG.Checked == true)
-            {
+        //private T_Stock GenerateDataAtUpdate_Stock()
+        //{
+        //    //if (chk_commit_FLG.Checked == true)
+        //    {
 
-            }
-            StockNum = 0;
-            int StID_L  = 0;
-            int PrID_L  = 0;
-            int StQuantity_L = 0;
-            int StFlag_L = 0;
-            int ChQuantity_L = int.Parse(txt_ChQuantity.Text);
-            //接続先DBの情報をセット
-            SqlConnection conn = new SqlConnection();
-            SqlCommand command = new SqlCommand();
-            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True";
+        //    }
+        //    StockNum = 0;
+        //    int StID_L  = 0;
+        //    int PrID_L  = 0;
+        //    int StQuantity_L = 0;
+        //    int StFlag_L = 0;
+        //    int ChQuantity_L = int.Parse(txt_ChQuantity.Text);
+        //    //接続先DBの情報をセット
+        //    SqlConnection conn = new SqlConnection();
+        //    SqlCommand command = new SqlCommand();
+        //    conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True";
 
-            //実行するSQL文の指定
-            command.CommandText = @"SELECT * FROM T_Stock WHERE PrID LIKE @PrID";
-            command.Connection = conn;
+        //    //実行するSQL文の指定
+        //    command.CommandText = @"SELECT * FROM T_Stock WHERE PrID LIKE @PrID";
+        //    command.Connection = conn;
 
-            //sql文のwhere句の接続に使う
-            //検索条件をテキストボックスから抽出し、SQL文をセット
-            //　日本語可　：SqlDbType.NVarChar
-            //　日本語不可：SqlDbType.VarChar
-            command.Parameters.Add("@PrID", SqlDbType.VarChar);
-            command.Parameters["@PrID"].Value = txt_PrID.Text;
-                //データベースに接続
-                conn.Open();
-                //SQL文の実行、データが  readerに格納される
-                SqlDataReader rd = command.ExecuteReader();
-                if (rd.HasRows)
-                {
-                    StID_L = (int)rd["StID"];
-                    PrID_L = (int)rd["PrID"];
-                    StQuantity_L = (int)rd["StQuantity"];
-                    StFlag_L = (int)rd["StFlag"];
-                    StockNum = StQuantity_L - ChQuantity_L;//在庫数更新用の変数に値を代入
+        //    //sql文のwhere句の接続に使う
+        //    //検索条件をテキストボックスから抽出し、SQL文をセット
+        //    //　日本語可　：SqlDbType.NVarChar
+        //    //　日本語不可：SqlDbType.VarChar
+        //    command.Parameters.Add("@PrID", SqlDbType.VarChar);
+        //    command.Parameters["@PrID"].Value = txt_PrID.Text;
+        //        //データベースに接続
+        //        conn.Open();
+        //        //SQL文の実行、データが  readerに格納される
+        //        SqlDataReader rd = command.ExecuteReader();
+        //        if (rd.HasRows)
+        //        {
+        //            StID_L = (int)rd["StID"];
+        //            PrID_L = (int)rd["PrID"];
+        //            StQuantity_L = (int)rd["StQuantity"];
+        //            StFlag_L = (int)rd["StFlag"];
+        //            StockNum = StQuantity_L - ChQuantity_L;//在庫数更新用の変数に値を代入
 
-                }
+        //        }
 
-            return new T_Stock
-            {
-                StID = StID_L,
-                PrID = PrID_L,
-                StQuantity = StockNum,
-                StFlag = StFlag_L
-            };
+        //    return new T_Stock
+        //    {
+        //        StID = StID_L,
+        //        PrID = PrID_L,
+        //        StQuantity = StockNum,
+        //        StFlag = StFlag_L
+        //    };
 
-        }
+        //}
         private T_Syukko Generate_Registration_Syukko()
         {
             return new T_Syukko
@@ -1137,13 +1140,13 @@ namespace SalesManagement_SysDev
             //    return;
             //}
                 //int id7 = (int)dataGridView_Chumon.CurrentRow.Cells[6].Value;                
-                int id8 = (int)dataGridView_Chumon.CurrentRow.Cells[7].Value;
+                string id8 = (string)dataGridView_Chumon.CurrentRow.Cells[7].Value;
                
                 txt_ChID.Text = Convert.ToString(id);
                 txt_SoID.Text = Convert.ToString(id2);
                 txt_ClID.Text = Convert.ToString(id4);
                 txt_OrID.Text = Convert.ToString(id5);
-                txt_ChHidden.Text = Convert.ToString(id8);
+                txt_ChHidden.Text =(id8);
             }
         private void dataGridView_Chumon_Detail_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -1153,7 +1156,7 @@ namespace SalesManagement_SysDev
             int id4 = (int)dataGridView_Chumon_Detail.CurrentRow.Cells[3].Value;
 
             txt_ChDetailID.Text = Convert.ToString(id);
-            txt_ChID.Text = Convert.ToString(id2);
+            txt_ChID2.Text = Convert.ToString(id2);
             txt_PrID.Text = Convert.ToString(id3);
             txt_ChQuantity.Text = Convert.ToString(id4);
         }
