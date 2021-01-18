@@ -100,7 +100,6 @@ namespace SalesManagement_SysDev
 
         private void F_Order_Load(object sender, EventArgs e)
         {
-            btn_order.Enabled = false;
             HIDEFlag = 0;
             ComitFlag = 0;
             dataGridView_Order.ColumnCount = 10;
@@ -124,6 +123,8 @@ namespace SalesManagement_SysDev
             dataGridView_Order_Detail.Columns[3].HeaderText = "数量";
             dataGridView_Order_Detail.Columns[4].HeaderText = "合計金額";
 
+            dataGridView_Order.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataGridView_Order_Detail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
             //F_login f_login = new F_login();
             //F_home f_home = new F_home();
             ////transfer_int = f_home.transfer_int;
@@ -185,17 +186,23 @@ namespace SalesManagement_SysDev
                     if (!Generate_Registration_Detail(regOrderDetail))
                         return;
                 }
-                else if (chk_commit_FLG.Checked == true)//確定処理
-                {
-                    Get_Chumon_Data_AtRegistration();
-                }
+                //else if (chk_commit_FLG.Checked == true)//確定処理
+                //{
+                //    Get_Chumon_Data_AtRegistration();
+                //}
             }
-            // 
-            //
-            //8.1.1　妥当な受注データ取得（新規登録）
-            //
-            //
-            private bool Get_Order_Data_AtRegistration()
+        private void btn_commit_FLG_Click(object sender, EventArgs e)
+        {
+            Get_Chumon_Data_AtRegistration();//確定処理
+
+        }
+
+        // 
+        //
+        //8.1.1　妥当な受注データ取得（新規登録）
+        //
+        //
+        private bool Get_Order_Data_AtRegistration()
             {
                 // 受注データの形式チェック
                 string errorMessage = string.Empty;
@@ -932,7 +939,7 @@ namespace SalesManagement_SysDev
                     HIDEFlag = 0;
                 }
 
-                if (chk_commit_FLG.Enabled == true)
+                if (btn_commit_FLG.Enabled == true)
                 {
                     ComitFlag = 1;
                 }
@@ -1431,7 +1438,9 @@ namespace SalesManagement_SysDev
                         rd["ClCharge"], rd["OrDate"], rd["OrStateFlag"], rd["OrFlag"],
                         rd["OrHidden"]);
                 }
-                SqlConnection conn2 = new SqlConnection();
+            dataGridView_Order.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            SqlConnection conn2 = new SqlConnection();
                 SqlCommand command2 = new SqlCommand();
                 conn2.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
                 //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
@@ -1445,30 +1454,31 @@ namespace SalesManagement_SysDev
                 {
                     dataGridView_Order_Detail.Rows.Add(rd2["OrDetailID"], rd2["OrID"], rd2["PrID"], rd2["OrQuantity"], rd2["OrTotalPrice"]);
                 }
+            dataGridView_Order_Detail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
-                //// データ取得&表示（データバインド）
-                //_dispProductPaging = _Pr.GetDispProducts();
-                //dataGridView_Product.DataSource = _dispProductPaging;
+            //// データ取得&表示（データバインド）
+            //_dispProductPaging = _Pr.GetDispProducts();
+            //dataGridView_Product.DataSource = _dispProductPaging;
 
-                ////全データの表示
-                //dataGridView_Product.Rows.Clear();
-                //try
-                //{
-                //    var context = new SalesManagement_DevContext();
-                //    foreach (var p in context.M_Products)
-                //    {
-                //        dataGridView_Product.Rows.Add(p.PrID, p.MaID, p.PrName, p.Price,p.PrJCode,p.);
-                //    }
-                //    context.Dispose();
-                //}
-                //catch (Exception ex)
-                //{
-                //    MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //}
-            }
+            ////全データの表示
+            //dataGridView_Product.Rows.Clear();
+            //try
+            //{
+            //    var context = new SalesManagement_DevContext();
+            //    foreach (var p in context.M_Products)
+            //    {
+            //        dataGridView_Product.Rows.Add(p.PrID, p.MaID, p.PrName, p.Price,p.PrJCode,p.);
+            //    }
+            //    context.Dispose();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+        }
 
-            //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
-            private void dataGridView_Order_regist_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
+        private void dataGridView_Order_regist_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
             {
                 int id = (int)dataGridView_Order.CurrentRow.Cells[0].Value;
                 int id2 = (int)dataGridView_Order.CurrentRow.Cells[1].Value;
@@ -1541,6 +1551,7 @@ namespace SalesManagement_SysDev
         {
 
         }
+
     }
     }
 
