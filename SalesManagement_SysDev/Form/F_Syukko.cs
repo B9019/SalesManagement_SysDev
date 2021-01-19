@@ -78,7 +78,7 @@ namespace SalesManagement_SysDev
         {
             HIDEFlag = 0;
             btn_regist.Enabled = false;
-            dataGridView_Syukko.ColumnCount = 12;
+            dataGridView_Syukko.ColumnCount = 7;
 
             dataGridView_Syukko.Columns[0].HeaderText = "出庫ID";
             dataGridView_Syukko.Columns[1].HeaderText = "社員ID";
@@ -86,12 +86,15 @@ namespace SalesManagement_SysDev
             dataGridView_Syukko.Columns[3].HeaderText = "営業所ID";
             dataGridView_Syukko.Columns[4].HeaderText = "受注ID";
             dataGridView_Syukko.Columns[5].HeaderText = "出庫年月日";
-            dataGridView_Syukko.Columns[6].HeaderText = "出庫状態フラグ";
-            dataGridView_Syukko.Columns[7].HeaderText = "出庫管理フラグ";
-            dataGridView_Syukko.Columns[8].HeaderText = "非表示理由";
-            dataGridView_Syukko.Columns[9].HeaderText = "出庫詳細ID";
-            dataGridView_Syukko.Columns[10].HeaderText = "商品ID";
-            dataGridView_Syukko.Columns[11].HeaderText = "数量";
+            dataGridView_Syukko.Columns[6].HeaderText = "非表示理由";
+
+            dataGridView_Syukko_Detail.ColumnCount = 4;
+
+            dataGridView_Syukko_Detail.Columns[0].HeaderText = "出庫詳細ID";
+            dataGridView_Syukko_Detail.Columns[1].HeaderText = "出庫ID";
+            dataGridView_Syukko_Detail.Columns[2].HeaderText = "商品ID";
+            dataGridView_Syukko_Detail.Columns[3].HeaderText = "数量";
+
 
             F_login f_login = new F_login();
             transfer_int = f_login.transfer_int;
@@ -315,7 +318,7 @@ namespace SalesManagement_SysDev
             // 10.2.3 出庫情報更新
             SyukkoUpdate(regSyukko);
             SyukkoDetailUpdate(regSyukkoDetail);
-            if(chk_commit_FLG.Checked == true)
+            if (chk_commit_FLG.Checked == true)
             {
                 Generate_RegistrationArrival(regArrival);
                 Generate_RegistrationArrivalDetail(regArrivalDetail);
@@ -456,7 +459,7 @@ namespace SalesManagement_SysDev
         private T_Syukko GenerateDataAtUpdate()
         {
             int Flag = 0;                   //確定処理をフラグで判定
-            if(chk_commit_FLG.Checked == true)
+            if (chk_commit_FLG.Checked == true)
             {
                 Flag = 1;
             }
@@ -783,8 +786,39 @@ namespace SalesManagement_SysDev
 
         private void btn_all_Click(object sender, EventArgs e)
         {
-            RefreshDataGridView();
+            fncAllSelect();
         }
+        private void fncAllSelect()
+        {
+            SqlConnection conn = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
+            //command.Parameters["@PrFlag"].Value = "0";
+            command.CommandText = "SELECT * FROM T_Syukko WHERE SyFlag = 0;";
+            command.Connection = conn;
+            conn.Open();
+            SqlDataReader rd = command.ExecuteReader();
+            dataGridView_Syukko.Rows.Clear();
+            while (rd.Read())
+            {
+                dataGridView_Syukko.Rows.Add(rd["SyID"], rd["EmID"], rd["ClID"], rd["SoID"],
+                    rd["OrID"], rd["SyDate"], rd["SyHidden"]);
+            }
+            SqlConnection conn2 = new SqlConnection();
+            SqlCommand command2 = new SqlCommand();
+            conn2.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            command2.CommandText = "SELECT * FROM T_SyukkoDetail;";
+            command2.Connection = conn2;
+            conn2.Open();
+            SqlDataReader rd2 = command2.ExecuteReader();
+            dataGridView_Syukko_Detail.Rows.Clear();
+            while (rd2.Read())
+            {
+                dataGridView_Syukko_Detail.Rows.Add(rd2["SyDetailID"], rd2["SyID"], rd2["PrID"], rd2["SyQuantity"]);
+            }
+        }
+
 
         //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
         private void dataGridView_Syukko_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -992,7 +1026,90 @@ namespace SalesManagement_SysDev
             return;
 
         }
+
+        private void btn_commit_FLG_Click(object sender, EventArgs e)
+        {
+
+            //出庫情報を入荷テーブルに送る
+            using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())
+            {
+                int id = int.Parse(txt_SyID.Text);
+                var result = dbContext.T_Syukkos
+                    .Where(s => s.SyID == id).ToArray();
+                foreach (var item in result)
+                {
+                    var regArrival = new T_Arrival()
+                    {
+                        EmID = null,
+                        ClID = item.ClID,
+                        SoID = item.SoID,
+                        OrID = item.OrID,
+                        ArDate = null,
+                        ArStateFlag = 0,
+                        ArFlag = 0,
+                        ArHidden = ""
+                    };
+                    // 入荷情報の登録
+                    var errorMessage = _Ar.PostT_Arrival(regArrival);
+
+                    if (errorMessage != string.Empty)
+                    {
+                        MessageBox.Show(errorMessage);
+                        return;
+                    }
+                }
+                 //出庫詳細情報を入荷詳細テーブルに送る
+                 int id2 = int.Parse(txt_OrID.Text);
+                 var syresult = dbContext.T_Arrivals
+                        .Where(a => a.ArID == id2)
+                        .ToArray();
+                 foreach (var item in syresult)
+                    {
+                        var regArrivalDetail = new T_ArrivalDetail()
+                        {
+                            ArID = item.ArID,
+                            PrID = int.Parse(txt_PrID.Text),
+                            ArQuantity = int.Parse(txt_ArQuantity.Text)
+                        };
+                        // 注文情報の登録
+                        var errorMessage2 = _Ar.PostT_ArrivalDetail(regArrivalDetail);
+                        if (errorMessage2 != string.Empty)
+                        {
+                            MessageBox.Show(errorMessage2);
+                            return;
+                        }
+                    }
+                 foreach (var item in result)
+                 {
+                        var regSyukko = new T_Syukko()
+                        {
+                            SyID = item.SyID,
+                            EmID = transfer_int,
+                            ClID = item.ClID,
+                            SoID = item.SoID,
+                            OrID = item.OrID,
+                            SyDate = DateTime.Now,
+                            SyStateFlag = 1,
+                            SyFlag = item.SyFlag,
+                            SyHidden = item.SyHidden
+                 };
+                        // 注文情報の登録
+                        var errorMessage = _Sy.PostT_Syukko(regSyukko);
+                        if (errorMessage != string.Empty)
+                        {
+                            MessageBox.Show(errorMessage);
+                            return ;
+                        }
+                  }
+                    //// 画面更新
+                    fncAllSelect();
+                    txt_SyID.Focus();
+                    return ;
+
+                
+            }
+
+        }
     }
-   
 }
 
