@@ -80,7 +80,6 @@ namespace SalesManagement_SysDev
 
         private void F_Chumon_Load(object sender, EventArgs e)
         {
-            btn_chumon.Enabled = false;
             dataGridView_Chumon.ColumnCount = 8;
 
             //btn_regist.Enabled = false; //受注処理の時点で注文テーブルに共通項目は登録されているので、この画面では更新処理でデータを追加するべき。
@@ -152,8 +151,6 @@ namespace SalesManagement_SysDev
             //    if (!Generate_Registration_Detail(regChumonDetail))
             //        return;
             //}
-            if (chk_commit_FLG.Checked == true)//確定処理
-            {
                 // 19.1.1妥当な注文情報取得
                 if (!Get_Chumon_Data_AtRegistration())
                     return;
@@ -161,7 +158,6 @@ namespace SalesManagement_SysDev
                 Get_Syukko_Data_AtRegistration();
                 return;
 
-            }
 
         }
         // 
