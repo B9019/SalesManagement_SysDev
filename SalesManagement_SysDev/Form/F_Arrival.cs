@@ -39,6 +39,7 @@ namespace SalesManagement_SysDev
         //// データベース処理モジュール（M_Division）
         private T_ArrivalContents _Ar = new T_ArrivalContents();
 
+        private T_ShipmentContents _Sh = new T_ShipmentContents();
         // ***** プロパティ定義
 
         //// トップフォーム
@@ -965,5 +966,85 @@ namespace SalesManagement_SysDev
 
         }
 
+        private void btn_commit_FLG_Click(object sender, EventArgs e)
+        {
+            //入荷情報を出荷テーブルに送る
+            int id = int.Parse(txt_ArID.Text);
+            using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())
+            {
+                var result = dbContext.T_Arrivals
+                    .Where(c => c.ArID == id).ToArray();
+                foreach (var item in result)
+                {
+                    var regShipment = new T_Shipment()
+                    {
+                        EmID = null,
+                        ClID = item.ClID,
+                        SoID = item.SoID,
+                        OrID = item.OrID,
+                        ShFinishDate = null,
+                        ShStateFlag = 0,
+                        ShFlag = 0,
+                        ShHidden = ""
+                    };
+                    // 入荷情報の登録
+                    var errorMessage = _Sh.PostT_Shipment(regShipment);
+
+                    if (errorMessage != string.Empty)
+                    {
+                        MessageBox.Show(errorMessage);
+                        return ;
+                    }
+                }
+                int id2 = int.Parse(txt_OrID.Text);
+                var syresult = dbContext.T_Shipments
+                    .Where(s => s.OrID == id2)
+                    .ToArray();
+                foreach (var item in syresult)
+                {
+                    var regShipmentDetail = new T_ShipmentDetail()
+                    {
+                        ShID = item.ShID,
+                        PrID = int.Parse(txt_PrID.Text),
+                        ShDquantity = int.Parse(txt_ArQuantity.Text)
+                    };
+                    // 注文情報の登録
+                    var errorMessage = _Sh.PostT_ShipmentDetail(regShipmentDetail);
+
+                    if (errorMessage != string.Empty)
+                    {
+                        MessageBox.Show(errorMessage);
+                        return ;
+                    }
+                }
+                foreach (var item in result)
+                {
+                    var regArrival = new T_Arrival()
+                    {
+                        ArID = item.ArID,
+                        SoID = item.SoID,
+                        EmID = transfer_int,
+                        ClID = item.ClID,
+                        OrID = item.OrID,
+                        ArDate = DateTime.Now,
+                        ArStateFlag = 1,
+                        ArFlag = item.ArFlag,
+                        ArHidden = item.ArHidden
+                    };
+                    // 注文情報の登録
+                    var errorMessage = _Ar.PutArrival(regArrival);
+                    if (errorMessage != string.Empty)
+                    {
+                        MessageBox.Show(errorMessage);
+                        return ;
+                    }
+                }
+                //// 画面更新
+                fncAllSelect();
+                txt_ArID.Focus();
+                return ;
+            }
+
+        }
     }
 }

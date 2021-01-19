@@ -162,6 +162,32 @@ namespace SalesManagement_SysDev.Model.ContentsManagement
 
             return string.Empty;
         }
+        // データ追加
+        // in   : M_Itemデータ
+        public string PostT_ShipmentDetail(T_ShipmentDetail regShipmentDetail)
+        {
+            using (var db1 = new SalesManagement_DevContext())
+            {
+                db1.T_ShipmentDetails.Add(regShipmentDetail);
+                db1.Entry(regShipmentDetail).State = EntityState.Added;
+                db1.SaveChanges();
+            }
+
+            //// ログ出力
+            //var operationLog = new OperationLog()
+            //{
+            //    EventRaisingTime = DateTime.Now,
+            //    Operator = _logonUser,
+            //    Table = "Product",
+            //    Command = "Post",
+            //    Data = M_ProductLogData(regProduct),
+            //    Comments = string.Empty
+            //};
+            //StaticCommon.PostOperationLog(operationLog);
+
+            return string.Empty;
+        }
+
         // データ更新
         // in   : M_Shipmentデータ
         // out  : エラーメッセージ 
