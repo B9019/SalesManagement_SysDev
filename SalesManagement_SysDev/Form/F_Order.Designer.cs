@@ -50,6 +50,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txt_OrID = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.chk_order = new System.Windows.Forms.CheckBox();
             this.lbl_ArHidden = new System.Windows.Forms.Label();
             this.chk_hide_FLG = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -74,7 +75,6 @@
             this.txt_loginEmID = new System.Windows.Forms.TextBox();
             this.lbl_title = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chk_order = new System.Windows.Forms.CheckBox();
             this.chk_orderdetail = new System.Windows.Forms.CheckBox();
             this.dataGridView_Order_Detail = new System.Windows.Forms.DataGridView();
             this.btn_commit_FLG = new System.Windows.Forms.Button();
@@ -140,7 +140,7 @@
             this.txt_OrDate.Location = new System.Drawing.Point(204, 241);
             this.txt_OrDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_OrDate.Name = "txt_OrDate";
-            this.txt_OrDate.Size = new System.Drawing.Size(549, 26);
+            this.txt_OrDate.Size = new System.Drawing.Size(728, 26);
             this.txt_OrDate.TabIndex = 4;
             // 
             // txt_ClCharge
@@ -150,7 +150,7 @@
             this.txt_ClCharge.Location = new System.Drawing.Point(204, 156);
             this.txt_ClCharge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_ClCharge.Name = "txt_ClCharge";
-            this.txt_ClCharge.Size = new System.Drawing.Size(548, 26);
+            this.txt_ClCharge.Size = new System.Drawing.Size(727, 26);
             this.txt_ClCharge.TabIndex = 5;
             // 
             // txt_ClID
@@ -160,7 +160,7 @@
             this.txt_ClID.Location = new System.Drawing.Point(204, 197);
             this.txt_ClID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_ClID.Name = "txt_ClID";
-            this.txt_ClID.Size = new System.Drawing.Size(549, 26);
+            this.txt_ClID.Size = new System.Drawing.Size(728, 26);
             this.txt_ClID.TabIndex = 3;
             // 
             // txt_EmID
@@ -171,7 +171,7 @@
             this.txt_EmID.Location = new System.Drawing.Point(204, 112);
             this.txt_EmID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_EmID.Name = "txt_EmID";
-            this.txt_EmID.Size = new System.Drawing.Size(549, 26);
+            this.txt_EmID.Size = new System.Drawing.Size(728, 26);
             this.txt_EmID.TabIndex = 2;
             // 
             // txt_OrID2
@@ -192,7 +192,7 @@
             this.txt_SoID.Location = new System.Drawing.Point(204, 70);
             this.txt_SoID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_SoID.Name = "txt_SoID";
-            this.txt_SoID.Size = new System.Drawing.Size(549, 26);
+            this.txt_SoID.Size = new System.Drawing.Size(728, 26);
             this.txt_SoID.TabIndex = 1;
             // 
             // lbl_SoID
@@ -225,7 +225,7 @@
             this.txt_memo.Location = new System.Drawing.Point(204, 280);
             this.txt_memo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_memo.Name = "txt_memo";
-            this.txt_memo.Size = new System.Drawing.Size(549, 26);
+            this.txt_memo.Size = new System.Drawing.Size(728, 26);
             this.txt_memo.TabIndex = 10;
             // 
             // txt_OrHidden
@@ -236,7 +236,7 @@
             this.txt_OrHidden.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_OrHidden.Multiline = true;
             this.txt_OrHidden.Name = "txt_OrHidden";
-            this.txt_OrHidden.Size = new System.Drawing.Size(549, 58);
+            this.txt_OrHidden.Size = new System.Drawing.Size(728, 58);
             this.txt_OrHidden.TabIndex = 11;
             this.txt_OrHidden.Text = "非表示理由を入力(50文字)";
             // 
@@ -291,7 +291,7 @@
             this.txt_OrID.Location = new System.Drawing.Point(204, 31);
             this.txt_OrID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_OrID.Name = "txt_OrID";
-            this.txt_OrID.Size = new System.Drawing.Size(549, 26);
+            this.txt_OrID.Size = new System.Drawing.Size(728, 26);
             this.txt_OrID.TabIndex = 279;
             // 
             // label9
@@ -305,6 +305,17 @@
             this.label9.Size = new System.Drawing.Size(77, 19);
             this.label9.TabIndex = 280;
             this.label9.Text = "受注ID ";
+            // 
+            // chk_order
+            // 
+            this.chk_order.AutoSize = true;
+            this.chk_order.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.chk_order.Location = new System.Drawing.Point(94, 3);
+            this.chk_order.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chk_order.Name = "chk_order";
+            this.chk_order.Size = new System.Drawing.Size(15, 14);
+            this.chk_order.TabIndex = 281;
+            this.chk_order.UseVisualStyleBackColor = true;
             // 
             // lbl_ArHidden
             // 
@@ -649,17 +660,6 @@
             this.groupBox1.TabIndex = 242;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "受注詳細項目";
-            // 
-            // chk_order
-            // 
-            this.chk_order.AutoSize = true;
-            this.chk_order.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.chk_order.Location = new System.Drawing.Point(94, 3);
-            this.chk_order.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chk_order.Name = "chk_order";
-            this.chk_order.Size = new System.Drawing.Size(15, 14);
-            this.chk_order.TabIndex = 281;
-            this.chk_order.UseVisualStyleBackColor = true;
             // 
             // chk_orderdetail
             // 

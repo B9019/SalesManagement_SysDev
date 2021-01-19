@@ -137,6 +137,7 @@ namespace SalesManagement_SysDev
             {
                 btn_delete.Enabled = true;
             }
+
             //OrIDneiv = 0;           //注文管理画面にデータを移す際の変数をロード時に初期化
             //SoIDneiv = 0;
             //EmIDneiv = 0;
@@ -546,9 +547,9 @@ namespace SalesManagement_SysDev
                         c => c.OrID,
                         (o, c) => new { o.SoID, o.ClID, o.OrFlag, o.OrID })
                         .ToArray();
-                    foreach (var item in result)
-                    {
-                        var regChumon = new T_Chumon()
+                foreach (var item in result)
+                {
+                    var regChumon = new T_Chumon()
                         {
                             SoID = item.SoID,
                             EmID = null,
@@ -567,8 +568,8 @@ namespace SalesManagement_SysDev
                             MessageBox.Show(errorMessage);
                             return false;
                         }
-                    }
-                    var chresult = dbContext.T_Chumons
+                }
+            var chresult = dbContext.T_Chumons
                         .Where(c => c.OrID == id)
                         .ToArray();
                     foreach (var item in chresult)
@@ -705,7 +706,7 @@ namespace SalesManagement_SysDev
                 ///// 入力内容の適否 /////
 
                 // 受注ID
-                if (String.IsNullOrEmpty(txt_OrID2.Text))
+                if (String.IsNullOrEmpty(txt_OrID.Text))
                 {
                     MessageBox.Show("受注IDは必須項目です");
                     txt_OrID2.Focus();
@@ -758,7 +759,7 @@ namespace SalesManagement_SysDev
                 //// 数値チェック ////
 
                 // 受注ID
-                if (!_ic.NumericCheck(txt_OrID2.Text, out errorMessage))
+                if (!_ic.NumericCheck(txt_OrID.Text, out errorMessage))
                 {
                     MessageBox.Show(errorMessage);
                     txt_OrID2.Focus();
@@ -846,7 +847,7 @@ namespace SalesManagement_SysDev
 
                 /////文字数チェック/////
                 // 受注ID
-                if (txt_OrID2.TextLength > 6)
+                if (txt_OrID.TextLength > 6)
                 {
                     MessageBox.Show("受注IDは6文字以下です");
                     txt_OrID2.Focus();
