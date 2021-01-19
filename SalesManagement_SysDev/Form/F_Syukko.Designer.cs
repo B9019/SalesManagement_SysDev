@@ -39,7 +39,7 @@
             this.lbl_commit_FLG = new System.Windows.Forms.Label();
             this.chk_commit_FLG = new System.Windows.Forms.CheckBox();
             this.lbl_ArQuantity = new System.Windows.Forms.Label();
-            this.txt_ArQuantity = new System.Windows.Forms.TextBox();
+            this.txt_SyQuantity = new System.Windows.Forms.TextBox();
             this.lbl_PrID = new System.Windows.Forms.Label();
             this.txt_PrID = new System.Windows.Forms.TextBox();
             this.txt_SyDetailID = new System.Windows.Forms.TextBox();
@@ -229,14 +229,14 @@
             this.lbl_ArQuantity.TabIndex = 311;
             this.lbl_ArQuantity.Text = "数量";
             // 
-            // txt_ArQuantity
+            // txt_SyQuantity
             // 
-            this.txt_ArQuantity.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_ArQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_ArQuantity.Location = new System.Drawing.Point(108, 86);
-            this.txt_ArQuantity.Name = "txt_ArQuantity";
-            this.txt_ArQuantity.Size = new System.Drawing.Size(336, 19);
-            this.txt_ArQuantity.TabIndex = 8;
+            this.txt_SyQuantity.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_SyQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_SyQuantity.Location = new System.Drawing.Point(108, 86);
+            this.txt_SyQuantity.Name = "txt_SyQuantity";
+            this.txt_SyQuantity.Size = new System.Drawing.Size(336, 19);
+            this.txt_SyQuantity.TabIndex = 8;
             // 
             // lbl_PrID
             // 
@@ -786,7 +786,7 @@
             this.groupBox1.Controls.Add(this.txt_SyID2);
             this.groupBox1.Controls.Add(this.lbl_SyDetailID);
             this.groupBox1.Controls.Add(this.lbl_ArQuantity);
-            this.groupBox1.Controls.Add(this.txt_ArQuantity);
+            this.groupBox1.Controls.Add(this.txt_SyQuantity);
             this.groupBox1.Controls.Add(this.txt_SyDetailID);
             this.groupBox1.Controls.Add(this.lbl_PrID);
             this.groupBox1.Controls.Add(this.txt_PrID);
@@ -932,7 +932,7 @@
         private System.Windows.Forms.Label lbl_SyDate;
         private System.Windows.Forms.TextBox txt_SyDate;
         private System.Windows.Forms.Label lbl_ArQuantity;
-        private System.Windows.Forms.TextBox txt_ArQuantity;
+        private System.Windows.Forms.TextBox txt_SyQuantity;
         private System.Windows.Forms.Label lbl_PrID;
         private System.Windows.Forms.TextBox txt_PrID;
         private System.Windows.Forms.TextBox txt_SyDetailID;

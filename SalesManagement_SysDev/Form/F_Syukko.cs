@@ -496,7 +496,7 @@ namespace SalesManagement_SysDev
                 SyDetailID = int.Parse(txt_SyDetailID.Text),
                 SyID = int.Parse(txt_SyID.Text),
                 PrID = int.Parse(txt_PrID.Text),
-                SyQuantity = int.Parse(txt_ArQuantity.Text),
+                SyQuantity = int.Parse(txt_SyQuantity.Text),
 
             };
         }
@@ -519,7 +519,7 @@ namespace SalesManagement_SysDev
                 ArDetailID = int.Parse(txt_SyDetailID.Text),
                 ArID = int.Parse(txt_SyID.Text),
                 PrID = int.Parse(txt_PrID.Text),
-                ArQuantity = int.Parse(txt_ArQuantity.Text)
+                ArQuantity = int.Parse(txt_SyQuantity.Text)
 
             };
         }
@@ -1069,7 +1069,7 @@ namespace SalesManagement_SysDev
                         {
                             ArID = item.ArID,
                             PrID = int.Parse(txt_PrID.Text),
-                            ArQuantity = int.Parse(txt_ArQuantity.Text)
+                            ArQuantity = int.Parse(txt_SyQuantity.Text)
                         };
                         // 注文情報の登録
                         var errorMessage2 = _Ar.PostT_ArrivalDetail(regArrivalDetail);
@@ -1079,6 +1079,7 @@ namespace SalesManagement_SysDev
                             return;
                         }
                     }
+                 //出庫情報を更新
                  foreach (var item in result)
                  {
                         var regSyukko = new T_Syukko()
@@ -1094,7 +1095,7 @@ namespace SalesManagement_SysDev
                             SyHidden = item.SyHidden
                  };
                         // 注文情報の登録
-                        var errorMessage = _Sy.PostT_Syukko(regSyukko);
+                        var errorMessage = _Sy.PutSyukko(regSyukko);
                         if (errorMessage != string.Empty)
                         {
                             MessageBox.Show(errorMessage);
@@ -1105,8 +1106,6 @@ namespace SalesManagement_SysDev
                     fncAllSelect();
                     txt_SyID.Focus();
                     return ;
-
-                
             }
 
         }
