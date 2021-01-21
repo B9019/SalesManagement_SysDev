@@ -75,7 +75,6 @@ namespace SalesManagement_SysDev
         }
         private void F_Employee_Load_1(object sender, EventArgs e)
         {
-            btn_employee.Enabled = false;
             dataGridView_Employee.ColumnCount = 8;
 
             dataGridView_Employee.Columns[0].HeaderText = "社員ID";
@@ -230,7 +229,7 @@ namespace SalesManagement_SysDev
             //    txt_EmPhone.Focus();
             //    return false;
             //}
-            // 　備考の文字チェック
+            //備考の文字チェック
             if (!_ic.FullWidthCharCheck(txt_Emmemo.Text, out errorMessage))
             {
                 MessageBox.Show(errorMessage);

@@ -77,7 +77,6 @@ namespace SalesManagement_SysDev
         private void F_Shipment_Load(object sender, EventArgs e)
         {
             HIDEFlag = 0;
-            btn_shipment.Enabled = false;
             dataGridView_Shipment.ColumnCount = 12;
 
             dataGridView_Shipment.Columns[0].HeaderText = "出荷ID ";
@@ -388,17 +387,17 @@ namespace SalesManagement_SysDev
                 txt_ShDquantity.Focus();
                 return false;
             }
-            if (chk_commit_FLG.Checked == true)
-            {
-                //　出荷完了年月日
-                if (String.IsNullOrEmpty(txt_ShFinishDate.Text))
-                {
-                    MessageBox.Show("注文年月日は確定処理の際、必須項目です");
-                    txt_ShFinishDate.Focus();
-                    return false;
-                }
+            //if (chk_commit_FLG.Checked == true)
+            //{
+            //    //　出荷完了年月日
+            //    if (String.IsNullOrEmpty(txt_ShFinishDate.Text))
+            //    {
+            //        MessageBox.Show("注文年月日は確定処理の際、必須項目です");
+            //        txt_ShFinishDate.Focus();
+            //        return false;
+            //    }
 
-            }
+            //}
             ///// 入力内容の形式チェック /////
 
             //// 数値チェック ////
@@ -470,17 +469,17 @@ namespace SalesManagement_SysDev
                 txt_ShHidden.Focus();
                 return false;
             }
-            ////　日付チェック ////
-            if (chk_commit_FLG.Checked == true)
-            {
-                //　出荷完了年月日
-                if (!_ic.DateFormCheck(txt_ShFinishDate.Text, out errorMessage))
-                {
-                    MessageBox.Show(errorMessage);
-                    txt_ShFinishDate.Focus();
-                    return false;
-                }
-            }
+            //////　日付チェック ////
+            //if (chk_commit_FLG.Checked == true)
+            //{
+            //    //　出荷完了年月日
+            //    if (!_ic.DateFormCheck(txt_ShFinishDate.Text, out errorMessage))
+            //    {
+            //        MessageBox.Show(errorMessage);
+            //        txt_ShFinishDate.Focus();
+            //        return false;
+            //    }
+            //}
             /////文字数チェック/////
             ///            //出荷完了年月日
             if (txt_ShFinishDate.TextLength > 10)

@@ -312,17 +312,17 @@ namespace SalesManagement_SysDev
             // 10.2.2 出庫情報作成
             var regSyukko = GenerateDataAtUpdate();
             var regSyukkoDetail = GenerateDataAtUpdateDetail();
-            var regArrival = GenerateDataAtUpdateArrival();
-            var regArrivalDetail = GenerateDataAtUpdateArrivalDetail();
+            //var regArrival = GenerateDataAtUpdateArrival();
+            //var regArrivalDetail = GenerateDataAtUpdateArrivalDetail();
 
             // 10.2.3 出庫情報更新
             SyukkoUpdate(regSyukko);
             SyukkoDetailUpdate(regSyukkoDetail);
-            if (chk_commit_FLG.Checked == true)
-            {
-                Generate_RegistrationArrival(regArrival);
-                Generate_RegistrationArrivalDetail(regArrivalDetail);
-            }
+            //if (chk_commit_FLG.Checked == true)
+            //{
+            //    Generate_RegistrationArrival(regArrival);
+            //    Generate_RegistrationArrivalDetail(regArrivalDetail);
+            //}
 
         }
         //
@@ -459,10 +459,10 @@ namespace SalesManagement_SysDev
         private T_Syukko GenerateDataAtUpdate()
         {
             int Flag = 0;                   //確定処理をフラグで判定
-            if (chk_commit_FLG.Checked == true)
-            {
-                Flag = 1;
-            }
+            //if (chk_commit_FLG.Checked == true)
+            //{
+            //    Flag = 1;
+            //}
 
             if (chk_hide_FLG.Checked == false)
             {

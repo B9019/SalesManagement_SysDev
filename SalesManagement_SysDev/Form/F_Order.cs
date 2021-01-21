@@ -594,8 +594,6 @@ namespace SalesManagement_SysDev
                     txt_OrID.Focus();
                     return true;
                 }
-
-                return true;
             }
             //private bool Generate_Registration_Chumon(T_Chumon regChumon)
             //{

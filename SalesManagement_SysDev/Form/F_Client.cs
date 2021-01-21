@@ -97,7 +97,6 @@ namespace SalesManagement_SysDev
 
         private void F_Client_Load_1(object sender, EventArgs e)
         {
-            btn_client.Enabled = false;
             dataGridView_Client.ColumnCount = 9;
 
             dataGridView_Client.Columns[0].HeaderText = "顧客ID ";

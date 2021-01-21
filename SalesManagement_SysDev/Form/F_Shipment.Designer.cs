@@ -50,7 +50,7 @@
             this.chk_hide_FLG = new System.Windows.Forms.CheckBox();
             this.lbl_memo = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txt_ArQuantity = new System.Windows.Forms.TextBox();
+            this.txt_ShDquantity = new System.Windows.Forms.TextBox();
             this.lbl_ArQuantity = new System.Windows.Forms.Label();
             this.lbl_PrID = new System.Windows.Forms.Label();
             this.txt_PrID = new System.Windows.Forms.TextBox();
@@ -294,15 +294,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "基礎項目";
             // 
-            // txt_ArQuantity
+            // txt_ShDquantity
             // 
-            this.txt_ArQuantity.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_ArQuantity.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F);
-            this.txt_ArQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_ArQuantity.Location = new System.Drawing.Point(124, 157);
-            this.txt_ArQuantity.Name = "txt_ArQuantity";
-            this.txt_ArQuantity.Size = new System.Drawing.Size(293, 26);
-            this.txt_ArQuantity.TabIndex = 309;
+            this.txt_ShDquantity.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_ShDquantity.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F);
+            this.txt_ShDquantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_ShDquantity.Location = new System.Drawing.Point(124, 157);
+            this.txt_ShDquantity.Name = "txt_ShDquantity";
+            this.txt_ShDquantity.Size = new System.Drawing.Size(293, 26);
+            this.txt_ShDquantity.TabIndex = 309;
             // 
             // lbl_ArQuantity
             // 
@@ -611,7 +611,7 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.chk_chumondetail);
-            this.groupBox1.Controls.Add(this.txt_ArQuantity);
+            this.groupBox1.Controls.Add(this.txt_ShDquantity);
             this.groupBox1.Controls.Add(this.lbl_ShDetailID);
             this.groupBox1.Controls.Add(this.txt_ShDetailID);
             this.groupBox1.Controls.Add(this.txt_PrID);
@@ -730,7 +730,7 @@
         private System.Windows.Forms.TextBox txt_PrID;
         private System.Windows.Forms.TextBox txt_ShDetailID;
         private System.Windows.Forms.Label lbl_ShDetailID;
-        private System.Windows.Forms.TextBox txt_ArQuantity;
+        private System.Windows.Forms.TextBox txt_ShDquantity;
         private System.Windows.Forms.Label lbl_ShID2;
         private System.Windows.Forms.TextBox txt_ShID2;
         private System.Windows.Forms.Button btn_commit_FLG;

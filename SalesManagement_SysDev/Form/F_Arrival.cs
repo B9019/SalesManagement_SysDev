@@ -76,7 +76,6 @@ namespace SalesManagement_SysDev
 
         private void F_Arrival_Load(object sender, EventArgs e)
         {
-            btn_arrival.Enabled = false;
             dataGridView_Arrival.ColumnCount = 9;
 
             dataGridView_Arrival.Columns[0].HeaderText = "入荷ID ";

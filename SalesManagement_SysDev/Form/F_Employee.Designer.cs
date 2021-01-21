@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_EmRetirementdate = new System.Windows.Forms.Label();
-            this.tet_EmRetirementdate = new System.Windows.Forms.TextBox();
+            this.txt_Emmemo = new System.Windows.Forms.TextBox();
             this.lbl_EmHiredate = new System.Windows.Forms.Label();
             this.txt_EmHiredate = new System.Windows.Forms.TextBox();
             this.lbl_EmName = new System.Windows.Forms.Label();
@@ -66,9 +66,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.btn_commit_FLG = new System.Windows.Forms.Button();
-            this.dataGridView_Employe = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Employee = new System.Windows.Forms.DataGridView();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Employe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Employee)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_EmRetirementdate
@@ -83,14 +83,14 @@
             this.lbl_EmRetirementdate.TabIndex = 90;
             this.lbl_EmRetirementdate.Text = "退社年月日";
             // 
-            // tet_EmRetirementdate
+            // txt_Emmemo
             // 
-            this.tet_EmRetirementdate.BackColor = System.Drawing.SystemColors.Window;
-            this.tet_EmRetirementdate.Font = new System.Drawing.Font("BIZ UDPゴシック", 15F);
-            this.tet_EmRetirementdate.Location = new System.Drawing.Point(170, 357);
-            this.tet_EmRetirementdate.Name = "tet_EmRetirementdate";
-            this.tet_EmRetirementdate.Size = new System.Drawing.Size(773, 27);
-            this.tet_EmRetirementdate.TabIndex = 8;
+            this.txt_Emmemo.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_Emmemo.Font = new System.Drawing.Font("BIZ UDPゴシック", 15F);
+            this.txt_Emmemo.Location = new System.Drawing.Point(170, 357);
+            this.txt_Emmemo.Name = "txt_Emmemo";
+            this.txt_Emmemo.Size = new System.Drawing.Size(773, 27);
+            this.txt_Emmemo.TabIndex = 8;
             // 
             // lbl_EmHiredate
             // 
@@ -204,7 +204,7 @@
             this.btn_regist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_regist.Font = new System.Drawing.Font("BIZ UDPゴシック", 15F);
             this.btn_regist.Location = new System.Drawing.Point(527, 10);
-            this.btn_regist.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_regist.Margin = new System.Windows.Forms.Padding(2);
             this.btn_regist.Name = "btn_regist";
             this.btn_regist.Size = new System.Drawing.Size(115, 53);
             this.btn_regist.TabIndex = 3;
@@ -221,7 +221,7 @@
             this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_update.Font = new System.Drawing.Font("BIZ UDPゴシック", 15F);
             this.btn_update.Location = new System.Drawing.Point(648, 10);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(2);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(115, 53);
             this.btn_update.TabIndex = 4;
@@ -355,7 +355,7 @@
             this.btn_all.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_all.Font = new System.Drawing.Font("BIZ UDPゴシック", 15F);
             this.btn_all.Location = new System.Drawing.Point(769, 10);
-            this.btn_all.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_all.Margin = new System.Windows.Forms.Padding(2);
             this.btn_all.Name = "btn_all";
             this.btn_all.Size = new System.Drawing.Size(115, 53);
             this.btn_all.TabIndex = 5;
@@ -372,7 +372,7 @@
             this.btn_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_print.Font = new System.Drawing.Font("BIZ UDPゴシック", 15F);
             this.btn_print.Location = new System.Drawing.Point(890, 10);
-            this.btn_print.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_print.Margin = new System.Windows.Forms.Padding(2);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(115, 53);
             this.btn_print.TabIndex = 6;
@@ -388,7 +388,7 @@
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.Font = new System.Drawing.Font("BIZ UDPゴシック", 15F);
             this.btn_delete.Location = new System.Drawing.Point(1011, 10);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(2);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(115, 53);
             this.btn_delete.TabIndex = 7;
@@ -405,7 +405,7 @@
             this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clear.Font = new System.Drawing.Font("BIZ UDPゴシック", 15F);
             this.btn_clear.Location = new System.Drawing.Point(1132, 10);
-            this.btn_clear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_clear.Margin = new System.Windows.Forms.Padding(2);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(115, 53);
             this.btn_clear.TabIndex = 8;
@@ -422,7 +422,7 @@
             this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_search.Font = new System.Drawing.Font("BIZ UDPゴシック", 15F);
             this.btn_search.Location = new System.Drawing.Point(406, 10);
-            this.btn_search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(2);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(115, 53);
             this.btn_search.TabIndex = 2;
@@ -456,7 +456,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.tet_EmRetirementdate);
+            this.groupBox3.Controls.Add(this.txt_Emmemo);
             this.groupBox3.Controls.Add(this.lbl_EmRetirementdate);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.textBox3);
@@ -524,42 +524,42 @@
             this.btn_commit_FLG.Text = "確定";
             this.btn_commit_FLG.UseVisualStyleBackColor = false;
             // 
-            // dataGridView_Employe
+            // dataGridView_Employee
             // 
-            this.dataGridView_Employe.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView_Employe.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("BIZ UDPゴシック", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Employe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView_Employe.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView_Employe.Location = new System.Drawing.Point(10, 548);
-            this.dataGridView_Employe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView_Employe.Name = "dataGridView_Employe";
-            this.dataGridView_Employe.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Employe.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView_Employe.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
-            this.dataGridView_Employe.Size = new System.Drawing.Size(1402, 412);
-            this.dataGridView_Employe.TabIndex = 289;
-            this.dataGridView_Employe.TabStop = false;
+            this.dataGridView_Employee.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_Employee.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("BIZ UDPゴシック", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Employee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView_Employee.GridColor = System.Drawing.SystemColors.Control;
+            this.dataGridView_Employee.Location = new System.Drawing.Point(10, 548);
+            this.dataGridView_Employee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView_Employee.Name = "dataGridView_Employee";
+            this.dataGridView_Employee.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Employee.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView_Employee.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
+            this.dataGridView_Employee.Size = new System.Drawing.Size(1402, 412);
+            this.dataGridView_Employee.TabIndex = 289;
+            this.dataGridView_Employee.TabStop = false;
             // 
             // F_Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1440, 888);
-            this.Controls.Add(this.dataGridView_Employe);
+            this.Controls.Add(this.dataGridView_Employee);
             this.Controls.Add(this.btn_commit_FLG);
             this.Controls.Add(this.btn_regist);
             this.Controls.Add(this.btn_update);
@@ -574,13 +574,13 @@
             this.Controls.Add(this.txt_loginEmID);
             this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.groupBox3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F_Employee";
             this.Padding = new System.Windows.Forms.Padding(12, 60, 12, 13);
             this.Load += new System.EventHandler(this.F_Employee_Load_1);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Employe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Employee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -589,7 +589,7 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_EmRetirementdate;
-        private System.Windows.Forms.TextBox tet_EmRetirementdate;
+        private System.Windows.Forms.TextBox txt_Emmemo;
         private System.Windows.Forms.Label lbl_EmHiredate;
         private System.Windows.Forms.TextBox txt_EmHiredate;
         private System.Windows.Forms.Label lbl_EmName;
@@ -624,6 +624,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button btn_commit_FLG;
-        private System.Windows.Forms.DataGridView dataGridView_Employe;
+        private System.Windows.Forms.DataGridView dataGridView_Employee;
     }
 }
