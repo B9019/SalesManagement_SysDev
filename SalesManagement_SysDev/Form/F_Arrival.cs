@@ -965,5 +965,19 @@ namespace SalesManagement_SysDev
 
         }
 
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chk_chumondetail_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
