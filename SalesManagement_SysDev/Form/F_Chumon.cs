@@ -1337,6 +1337,11 @@ namespace SalesManagement_SysDev
         {
 
         }
+
+        private void btn_all_Click_1(object sender, EventArgs e)
+        {
+            fncAllSelect();
+        }
     }
    
 

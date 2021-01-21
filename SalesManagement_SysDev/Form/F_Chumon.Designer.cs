@@ -47,10 +47,12 @@
             this.lbl_OrID = new System.Windows.Forms.Label();
             this.lbl_title = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.chk_chumon = new System.Windows.Forms.CheckBox();
             this.txt_ChHidden = new System.Windows.Forms.TextBox();
             this.lbl_ArHidden = new System.Windows.Forms.Label();
             this.chk_hide_FLG = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chk_chumondetail = new System.Windows.Forms.CheckBox();
             this.lbl_ChQuantity2 = new System.Windows.Forms.Label();
             this.lbl_ChID2 = new System.Windows.Forms.Label();
             this.txt_ChID2 = new System.Windows.Forms.TextBox();
@@ -71,8 +73,6 @@
             this.btn_search = new System.Windows.Forms.Button();
             this.txt_loginEmID = new System.Windows.Forms.TextBox();
             this.dataGridView_Chumon_Detail = new System.Windows.Forms.DataGridView();
-            this.chk_chumon = new System.Windows.Forms.CheckBox();
-            this.chk_chumondetail = new System.Windows.Forms.CheckBox();
             this.dataGridView_Chumon = new System.Windows.Forms.DataGridView();
             btn_commit_FLG = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
@@ -80,6 +80,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon_Detail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Chumon)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btn_commit_FLG
+            // 
+            btn_commit_FLG.BackColor = System.Drawing.Color.PowderBlue;
+            btn_commit_FLG.FlatAppearance.BorderSize = 0;
+            btn_commit_FLG.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            btn_commit_FLG.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+            btn_commit_FLG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btn_commit_FLG.Font = new System.Drawing.Font("BIZ UDPゴシック", 15F);
+            btn_commit_FLG.Location = new System.Drawing.Point(1241, 10);
+            btn_commit_FLG.Margin = new System.Windows.Forms.Padding(2);
+            btn_commit_FLG.Name = "btn_commit_FLG";
+            btn_commit_FLG.Size = new System.Drawing.Size(115, 53);
+            btn_commit_FLG.TabIndex = 304;
+            btn_commit_FLG.Text = "確定";
+            btn_commit_FLG.UseVisualStyleBackColor = false;
             // 
             // lbl_ChDate
             // 
@@ -232,6 +248,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "注文項目";
             // 
+            // chk_chumon
+            // 
+            this.chk_chumon.AutoSize = true;
+            this.chk_chumon.Location = new System.Drawing.Point(98, 0);
+            this.chk_chumon.Name = "chk_chumon";
+            this.chk_chumon.Size = new System.Drawing.Size(15, 14);
+            this.chk_chumon.TabIndex = 282;
+            this.chk_chumon.UseVisualStyleBackColor = true;
+            // 
             // txt_ChHidden
             // 
             this.txt_ChHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -284,6 +309,15 @@
             this.groupBox1.TabIndex = 292;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "注文詳細項目";
+            // 
+            // chk_chumondetail
+            // 
+            this.chk_chumondetail.AutoSize = true;
+            this.chk_chumondetail.Location = new System.Drawing.Point(133, 0);
+            this.chk_chumondetail.Name = "chk_chumondetail";
+            this.chk_chumondetail.Size = new System.Drawing.Size(15, 14);
+            this.chk_chumondetail.TabIndex = 283;
+            this.chk_chumondetail.UseVisualStyleBackColor = true;
             // 
             // lbl_ChQuantity2
             // 
@@ -359,22 +393,6 @@
             this.lbl_ChDetailID2.TabIndex = 75;
             this.lbl_ChDetailID2.Text = "注文詳細ID\r\n";
             this.lbl_ChDetailID2.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // btn_commit_FLG
-            // 
-            btn_commit_FLG.BackColor = System.Drawing.Color.PowderBlue;
-            btn_commit_FLG.FlatAppearance.BorderSize = 0;
-            btn_commit_FLG.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
-            btn_commit_FLG.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
-            btn_commit_FLG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btn_commit_FLG.Font = new System.Drawing.Font("BIZ UDPゴシック", 15F);
-            btn_commit_FLG.Location = new System.Drawing.Point(1241, 10);
-            btn_commit_FLG.Margin = new System.Windows.Forms.Padding(2);
-            btn_commit_FLG.Name = "btn_commit_FLG";
-            btn_commit_FLG.Size = new System.Drawing.Size(115, 53);
-            btn_commit_FLG.TabIndex = 304;
-            btn_commit_FLG.Text = "確定";
-            btn_commit_FLG.UseVisualStyleBackColor = false;
             // 
             // txt_loginSoID
             // 
@@ -457,6 +475,7 @@
             this.btn_all.TabIndex = 296;
             this.btn_all.Text = "一覧表示";
             this.btn_all.UseVisualStyleBackColor = false;
+            this.btn_all.Click += new System.EventHandler(this.btn_all_Click_1);
             // 
             // btn_print
             // 
@@ -562,24 +581,6 @@
             this.dataGridView_Chumon_Detail.Size = new System.Drawing.Size(423, 412);
             this.dataGridView_Chumon_Detail.TabIndex = 306;
             this.dataGridView_Chumon_Detail.TabStop = false;
-            // 
-            // chk_chumon
-            // 
-            this.chk_chumon.AutoSize = true;
-            this.chk_chumon.Location = new System.Drawing.Point(98, 0);
-            this.chk_chumon.Name = "chk_chumon";
-            this.chk_chumon.Size = new System.Drawing.Size(15, 14);
-            this.chk_chumon.TabIndex = 282;
-            this.chk_chumon.UseVisualStyleBackColor = true;
-            // 
-            // chk_chumondetail
-            // 
-            this.chk_chumondetail.AutoSize = true;
-            this.chk_chumondetail.Location = new System.Drawing.Point(133, 0);
-            this.chk_chumondetail.Name = "chk_chumondetail";
-            this.chk_chumondetail.Size = new System.Drawing.Size(15, 14);
-            this.chk_chumondetail.TabIndex = 283;
-            this.chk_chumondetail.UseVisualStyleBackColor = true;
             // 
             // dataGridView_Chumon
             // 
