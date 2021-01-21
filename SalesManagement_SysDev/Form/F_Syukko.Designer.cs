@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_SyHidden = new System.Windows.Forms.TextBox();
             this.txt_memo = new System.Windows.Forms.TextBox();
             this.lbl_ArHidden = new System.Windows.Forms.Label();
@@ -39,8 +39,6 @@
             this.lbl_memo = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.chk_chumon = new System.Windows.Forms.CheckBox();
-            this.txt_SyDate = new System.Windows.Forms.TextBox();
-            this.lbl_SyDate = new System.Windows.Forms.Label();
             this.lbl_SyID = new System.Windows.Forms.Label();
             this.txt_SyID = new System.Windows.Forms.TextBox();
             this.lbl_EnID = new System.Windows.Forms.Label();
@@ -51,17 +49,19 @@
             this.txt_SoID = new System.Windows.Forms.TextBox();
             this.lbl_OrID = new System.Windows.Forms.Label();
             this.txt_OrID = new System.Windows.Forms.TextBox();
+            this.lbl_SyDate = new System.Windows.Forms.Label();
+            this.txt_SyDate = new System.Windows.Forms.TextBox();
             this.lbl_title = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chk_chumondetail = new System.Windows.Forms.CheckBox();
             this.lbl_SyID2 = new System.Windows.Forms.Label();
-            this.txt_SyDetailID = new System.Windows.Forms.TextBox();
-            this.lbl_SyDetailID = new System.Windows.Forms.Label();
-            this.txt_SyID2 = new System.Windows.Forms.TextBox();
-            this.txt_PrID = new System.Windows.Forms.TextBox();
-            this.lbl_PrID = new System.Windows.Forms.Label();
             this.txt_SyQuantity = new System.Windows.Forms.TextBox();
+            this.txt_SyID2 = new System.Windows.Forms.TextBox();
+            this.lbl_SyDetailID = new System.Windows.Forms.Label();
             this.lbl_ArQuantity = new System.Windows.Forms.Label();
+            this.txt_SyDetailID = new System.Windows.Forms.TextBox();
+            this.lbl_PrID = new System.Windows.Forms.Label();
+            this.txt_PrID = new System.Windows.Forms.TextBox();
             this.dataGridView_Syukko_Detail = new System.Windows.Forms.DataGridView();
             this.btn_commit_FLG = new System.Windows.Forms.Button();
             this.txt_loginSoID = new System.Windows.Forms.TextBox();
@@ -171,26 +171,6 @@
             this.chk_chumon.TabIndex = 283;
             this.chk_chumon.UseVisualStyleBackColor = true;
             // 
-            // txt_SyDate
-            // 
-            this.txt_SyDate.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_SyDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_SyDate.Location = new System.Drawing.Point(170, 237);
-            this.txt_SyDate.Name = "txt_SyDate";
-            this.txt_SyDate.Size = new System.Drawing.Size(771, 26);
-            this.txt_SyDate.TabIndex = 5;
-            // 
-            // lbl_SyDate
-            // 
-            this.lbl_SyDate.AutoSize = true;
-            this.lbl_SyDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_SyDate.Location = new System.Drawing.Point(7, 240);
-            this.lbl_SyDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_SyDate.Name = "lbl_SyDate";
-            this.lbl_SyDate.Size = new System.Drawing.Size(104, 19);
-            this.lbl_SyDate.TabIndex = 87;
-            this.lbl_SyDate.Text = "出庫年月日";
-            // 
             // lbl_SyID
             // 
             this.lbl_SyID.AutoSize = true;
@@ -289,6 +269,26 @@
             this.txt_OrID.Size = new System.Drawing.Size(772, 26);
             this.txt_OrID.TabIndex = 4;
             // 
+            // lbl_SyDate
+            // 
+            this.lbl_SyDate.AutoSize = true;
+            this.lbl_SyDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_SyDate.Location = new System.Drawing.Point(7, 240);
+            this.lbl_SyDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_SyDate.Name = "lbl_SyDate";
+            this.lbl_SyDate.Size = new System.Drawing.Size(104, 19);
+            this.lbl_SyDate.TabIndex = 87;
+            this.lbl_SyDate.Text = "出庫年月日";
+            // 
+            // txt_SyDate
+            // 
+            this.txt_SyDate.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_SyDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_SyDate.Location = new System.Drawing.Point(170, 237);
+            this.txt_SyDate.Name = "txt_SyDate";
+            this.txt_SyDate.Size = new System.Drawing.Size(771, 26);
+            this.txt_SyDate.TabIndex = 5;
+            // 
             // lbl_title
             // 
             this.lbl_title.AutoSize = true;
@@ -315,9 +315,9 @@
             this.groupBox1.Controls.Add(this.txt_PrID);
             this.groupBox1.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(624, 73);
+            this.groupBox1.Location = new System.Drawing.Point(1000, 70);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(511, 177);
+            this.groupBox1.Size = new System.Drawing.Size(423, 382);
             this.groupBox1.TabIndex = 315;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "出庫詳細項目";
@@ -343,14 +343,25 @@
             this.lbl_SyID2.TabIndex = 315;
             this.lbl_SyID2.Text = "出庫ID";
             // 
-            // txt_SyDetailID
+            // txt_SyQuantity
             // 
-            this.txt_SyDetailID.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_SyDetailID.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.5F);
-            this.txt_SyDetailID.Location = new System.Drawing.Point(131, 32);
-            this.txt_SyDetailID.Name = "txt_SyDetailID";
-            this.txt_SyDetailID.Size = new System.Drawing.Size(288, 27);
-            this.txt_SyDetailID.TabIndex = 6;
+            this.txt_SyQuantity.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_SyQuantity.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.5F);
+            this.txt_SyQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_SyQuantity.Location = new System.Drawing.Point(131, 152);
+            this.txt_SyQuantity.Name = "txt_SyQuantity";
+            this.txt_SyQuantity.Size = new System.Drawing.Size(288, 27);
+            this.txt_SyQuantity.TabIndex = 8;
+            // 
+            // txt_SyID2
+            // 
+            this.txt_SyID2.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_SyID2.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.5F);
+            this.txt_SyID2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_SyID2.Location = new System.Drawing.Point(131, 108);
+            this.txt_SyID2.Name = "txt_SyID2";
+            this.txt_SyID2.Size = new System.Drawing.Size(288, 27);
+            this.txt_SyID2.TabIndex = 312;
             // 
             // lbl_SyDetailID
             // 
@@ -364,25 +375,26 @@
             this.lbl_SyDetailID.TabIndex = 307;
             this.lbl_SyDetailID.Text = "出庫詳細ID";
             // 
-            // txt_SyID2
+            // lbl_ArQuantity
             // 
-            this.txt_SyID2.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_SyID2.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.5F);
-            this.txt_SyID2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_SyID2.Location = new System.Drawing.Point(108, 41);
-            this.txt_SyID2.Name = "txt_SyID2";
-            this.txt_SyID2.Size = new System.Drawing.Size(336, 27);
-            this.txt_SyID2.TabIndex = 312;
+            this.lbl_ArQuantity.AutoSize = true;
+            this.lbl_ArQuantity.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.5F);
+            this.lbl_ArQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_ArQuantity.Location = new System.Drawing.Point(5, 155);
+            this.lbl_ArQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ArQuantity.Name = "lbl_ArQuantity";
+            this.lbl_ArQuantity.Size = new System.Drawing.Size(49, 20);
+            this.lbl_ArQuantity.TabIndex = 311;
+            this.lbl_ArQuantity.Text = "数量";
             // 
-            // txt_PrID
+            // txt_SyDetailID
             // 
-            this.txt_PrID.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_PrID.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.5F);
-            this.txt_PrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_PrID.Location = new System.Drawing.Point(131, 72);
-            this.txt_PrID.Name = "txt_PrID";
-            this.txt_PrID.Size = new System.Drawing.Size(287, 27);
-            this.txt_PrID.TabIndex = 7;
+            this.txt_SyDetailID.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_SyDetailID.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.5F);
+            this.txt_SyDetailID.Location = new System.Drawing.Point(131, 32);
+            this.txt_SyDetailID.Name = "txt_SyDetailID";
+            this.txt_SyDetailID.Size = new System.Drawing.Size(288, 27);
+            this.txt_SyDetailID.TabIndex = 6;
             // 
             // lbl_PrID
             // 
@@ -396,54 +408,42 @@
             this.lbl_PrID.TabIndex = 309;
             this.lbl_PrID.Text = "商品ID";
             // 
-            // txt_SyQuantity
+            // txt_PrID
             // 
-            this.txt_SyQuantity.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_SyQuantity.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.5F);
-            this.txt_SyQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_SyQuantity.Location = new System.Drawing.Point(131, 152);
-            this.txt_SyQuantity.Name = "txt_SyQuantity";
-            this.txt_SyQuantity.Size = new System.Drawing.Size(288, 27);
-            this.txt_SyQuantity.TabIndex = 8;
-            // 
-            // lbl_ArQuantity
-            // 
-            this.lbl_ArQuantity.AutoSize = true;
-            this.lbl_ArQuantity.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.5F);
-            this.lbl_ArQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_ArQuantity.Location = new System.Drawing.Point(5, 155);
-            this.lbl_ArQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_ArQuantity.Name = "lbl_ArQuantity";
-            this.lbl_ArQuantity.Size = new System.Drawing.Size(49, 20);
-            this.lbl_ArQuantity.TabIndex = 311;
-            this.lbl_ArQuantity.Text = "数量";
+            this.txt_PrID.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_PrID.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.5F);
+            this.txt_PrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_PrID.Location = new System.Drawing.Point(131, 72);
+            this.txt_PrID.Name = "txt_PrID";
+            this.txt_PrID.Size = new System.Drawing.Size(288, 27);
+            this.txt_PrID.TabIndex = 7;
             // 
             // dataGridView_Syukko_Detail
             // 
             this.dataGridView_Syukko_Detail.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_Syukko_Detail.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("BIZ UDPゴシック", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Syukko_Detail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("BIZ UDPゴシック", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Syukko_Detail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView_Syukko_Detail.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView_Syukko_Detail.Location = new System.Drawing.Point(596, 334);
+            this.dataGridView_Syukko_Detail.Location = new System.Drawing.Point(1000, 460);
             this.dataGridView_Syukko_Detail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView_Syukko_Detail.Name = "dataGridView_Syukko_Detail";
             this.dataGridView_Syukko_Detail.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Syukko_Detail.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView_Syukko_Detail.Size = new System.Drawing.Size(430, 363);
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Syukko_Detail.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridView_Syukko_Detail.Size = new System.Drawing.Size(423, 412);
             this.dataGridView_Syukko_Detail.TabIndex = 314;
             this.dataGridView_Syukko_Detail.TabStop = false;
             // 
@@ -456,10 +456,10 @@
             this.btn_commit_FLG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_commit_FLG.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
             this.btn_commit_FLG.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_commit_FLG.Location = new System.Drawing.Point(1023, 8);
+            this.btn_commit_FLG.Location = new System.Drawing.Point(1241, 10);
             this.btn_commit_FLG.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btn_commit_FLG.Name = "btn_commit_FLG";
-            this.btn_commit_FLG.Size = new System.Drawing.Size(103, 41);
+            this.btn_commit_FLG.Size = new System.Drawing.Size(115, 53);
             this.btn_commit_FLG.TabIndex = 316;
             this.btn_commit_FLG.Text = "確定";
             this.btn_commit_FLG.UseVisualStyleBackColor = false;
@@ -638,27 +638,27 @@
             // 
             this.dataGridView_Syukko.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_Syukko.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("BIZ UDPゴシック", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Syukko.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("BIZ UDPゴシック", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Syukko.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView_Syukko.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridView_Syukko.Location = new System.Drawing.Point(10, 460);
             this.dataGridView_Syukko.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView_Syukko.Name = "dataGridView_Syukko";
             this.dataGridView_Syukko.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Syukko.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Syukko.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView_Syukko.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
             this.dataGridView_Syukko.Size = new System.Drawing.Size(950, 412);
             this.dataGridView_Syukko.TabIndex = 330;

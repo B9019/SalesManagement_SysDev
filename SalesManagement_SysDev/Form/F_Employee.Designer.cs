@@ -203,7 +203,7 @@
             this.btn_regist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_regist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_regist.Font = new System.Drawing.Font("BIZ UDPゴシック", 15F);
-            this.btn_regist.Location = new System.Drawing.Point(527, 10);
+            this.btn_regist.Location = new System.Drawing.Point(525, 10);
             this.btn_regist.Margin = new System.Windows.Forms.Padding(2);
             this.btn_regist.Name = "btn_regist";
             this.btn_regist.Size = new System.Drawing.Size(115, 53);
@@ -220,7 +220,7 @@
             this.btn_update.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_update.Font = new System.Drawing.Font("BIZ UDPゴシック", 15F);
-            this.btn_update.Location = new System.Drawing.Point(648, 10);
+            this.btn_update.Location = new System.Drawing.Point(644, 10);
             this.btn_update.Margin = new System.Windows.Forms.Padding(2);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(115, 53);
@@ -354,7 +354,7 @@
             this.btn_all.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_all.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_all.Font = new System.Drawing.Font("BIZ UDPゴシック", 15F);
-            this.btn_all.Location = new System.Drawing.Point(769, 10);
+            this.btn_all.Location = new System.Drawing.Point(763, 10);
             this.btn_all.Margin = new System.Windows.Forms.Padding(2);
             this.btn_all.Name = "btn_all";
             this.btn_all.Size = new System.Drawing.Size(115, 53);
@@ -371,7 +371,7 @@
             this.btn_print.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_print.Font = new System.Drawing.Font("BIZ UDPゴシック", 15F);
-            this.btn_print.Location = new System.Drawing.Point(890, 10);
+            this.btn_print.Location = new System.Drawing.Point(882, 10);
             this.btn_print.Margin = new System.Windows.Forms.Padding(2);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(115, 53);
@@ -387,7 +387,7 @@
             this.btn_delete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.Font = new System.Drawing.Font("BIZ UDPゴシック", 15F);
-            this.btn_delete.Location = new System.Drawing.Point(1011, 10);
+            this.btn_delete.Location = new System.Drawing.Point(1001, 10);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(2);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(115, 53);
@@ -404,7 +404,7 @@
             this.btn_clear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clear.Font = new System.Drawing.Font("BIZ UDPゴシック", 15F);
-            this.btn_clear.Location = new System.Drawing.Point(1132, 10);
+            this.btn_clear.Location = new System.Drawing.Point(1120, 10);
             this.btn_clear.Margin = new System.Windows.Forms.Padding(2);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(115, 53);
@@ -516,7 +516,7 @@
             this.btn_commit_FLG.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_commit_FLG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_commit_FLG.Font = new System.Drawing.Font("BIZ UDPゴシック", 15F);
-            this.btn_commit_FLG.Location = new System.Drawing.Point(1253, 10);
+            this.btn_commit_FLG.Location = new System.Drawing.Point(1239, 10);
             this.btn_commit_FLG.Margin = new System.Windows.Forms.Padding(2);
             this.btn_commit_FLG.Name = "btn_commit_FLG";
             this.btn_commit_FLG.Size = new System.Drawing.Size(115, 53);

@@ -365,7 +365,7 @@
             this.groupBox1.Size = new System.Drawing.Size(423, 382);
             this.groupBox1.TabIndex = 318;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "出庫詳細項目";
+            this.groupBox1.Text = "入荷詳細項目";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // chk_chumondetail
