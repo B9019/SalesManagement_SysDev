@@ -13,7 +13,7 @@ namespace SalesManagement_SysDev
         [Key]
         public int ArID { get; set; }               //入荷ID	
         public int SoID { get; set; }               //営業所ID	
-        public int EmID { get; set; }               //社員ID	
+        public int? EmID { get; set; }               //社員ID	
         public int ClID { get; set; }               //顧客ID	
         public int OrID { get; set; }               //受注ID	
         [DataType(DataType.Date)]

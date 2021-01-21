@@ -12,7 +12,7 @@ namespace SalesManagement_SysDev
         [Key]
         public int ShID { get; set; }               //出荷ID		
         public int ClID { get; set; }               //顧客ID		
-        public int EmID { get; set; }               //社員ID		
+        public int? EmID { get; set; }               //社員ID		
         public int SoID { get; set; }               //営業所ID		
         public int OrID { get; set; }               //受注ID		
         public int? ShStateFlag { get; set; }	//出荷状態フラグ

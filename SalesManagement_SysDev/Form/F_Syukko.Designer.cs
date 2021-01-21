@@ -38,6 +38,7 @@
             this.chk_hide_FLG = new System.Windows.Forms.CheckBox();
             this.lbl_memo = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+
             this.lbl_SyID = new System.Windows.Forms.Label();
             this.txt_SyID = new System.Windows.Forms.TextBox();
             this.lbl_EnID = new System.Windows.Forms.Label();
@@ -65,6 +66,7 @@
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
             this.btn_search = new System.Windows.Forms.Button();
+
             this.txt_loginEmID = new System.Windows.Forms.TextBox();
             this.chk_chumon = new System.Windows.Forms.CheckBox();
             this.lbl_ArQuantity = new System.Windows.Forms.Label();
@@ -80,12 +82,15 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Syukko_Detail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Syukko)).BeginInit();
+
             this.SuspendLayout();
             // 
             // txt_SyHidden
             // 
             this.txt_SyHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.txt_SyHidden.Location = new System.Drawing.Point(170, 317);
+
             this.txt_SyHidden.Multiline = true;
             this.txt_SyHidden.Name = "txt_SyHidden";
             this.txt_SyHidden.Size = new System.Drawing.Size(772, 58);
@@ -94,7 +99,9 @@
             // 
             // txt_memo
             // 
+
             this.txt_memo.Location = new System.Drawing.Point(170, 277);
+
             this.txt_memo.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txt_memo.Name = "txt_memo";
             this.txt_memo.Size = new System.Drawing.Size(772, 26);
@@ -104,7 +111,9 @@
             // 
             this.lbl_ArHidden.AutoSize = true;
             this.lbl_ArHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.lbl_ArHidden.Location = new System.Drawing.Point(7, 320);
+
             this.lbl_ArHidden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ArHidden.Name = "lbl_ArHidden";
             this.lbl_ArHidden.Size = new System.Drawing.Size(118, 19);
@@ -115,17 +124,21 @@
             // 
             this.chk_hide_FLG.AutoSize = true;
             this.chk_hide_FLG.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.chk_hide_FLG.Location = new System.Drawing.Point(136, 323);
+
             this.chk_hide_FLG.Name = "chk_hide_FLG";
             this.chk_hide_FLG.Size = new System.Drawing.Size(15, 14);
             this.chk_hide_FLG.TabIndex = 240;
             this.chk_hide_FLG.UseVisualStyleBackColor = true;
             this.chk_hide_FLG.CheckedChanged += new System.EventHandler(this.Checked_Syukko_HideFlag);
             // 
+
             // lbl_memo
             // 
             this.lbl_memo.AutoSize = true;
             this.lbl_memo.Location = new System.Drawing.Point(7, 280);
+
             this.lbl_memo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_memo.Name = "lbl_memo";
             this.lbl_memo.Size = new System.Drawing.Size(47, 19);
@@ -135,9 +148,13 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
+
             this.groupBox3.Controls.Add(this.chk_chumon);
+
             this.groupBox3.Controls.Add(this.txt_SyHidden);
+            this.groupBox3.Controls.Add(this.txt_SyDate);
             this.groupBox3.Controls.Add(this.txt_memo);
+            this.groupBox3.Controls.Add(this.lbl_SyDate);
             this.groupBox3.Controls.Add(this.lbl_ArHidden);
             this.groupBox3.Controls.Add(this.lbl_memo);
             this.groupBox3.Controls.Add(this.chk_hide_FLG);
@@ -151,16 +168,20 @@
             this.groupBox3.Controls.Add(this.txt_SoID);
             this.groupBox3.Controls.Add(this.lbl_OrID);
             this.groupBox3.Controls.Add(this.txt_OrID);
+
             this.groupBox3.Controls.Add(this.lbl_SyDate);
             this.groupBox3.Controls.Add(this.txt_SyDate);
             this.groupBox3.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F);
+
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
             this.groupBox3.Location = new System.Drawing.Point(10, 70);
             this.groupBox3.Name = "groupBox3";
+
             this.groupBox3.Size = new System.Drawing.Size(950, 382);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "出庫項目";
+
             // 
             // lbl_SyID
             // 
@@ -264,7 +285,9 @@
             // 
             this.lbl_SyDate.AutoSize = true;
             this.lbl_SyDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.lbl_SyDate.Location = new System.Drawing.Point(7, 240);
+
             this.lbl_SyDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_SyDate.Name = "lbl_SyDate";
             this.lbl_SyDate.Size = new System.Drawing.Size(104, 19);
@@ -275,7 +298,9 @@
             // 
             this.txt_SyDate.BackColor = System.Drawing.SystemColors.Window;
             this.txt_SyDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.txt_SyDate.Location = new System.Drawing.Point(170, 237);
+
             this.txt_SyDate.Name = "txt_SyDate";
             this.txt_SyDate.Size = new System.Drawing.Size(771, 26);
             this.txt_SyDate.TabIndex = 5;
@@ -663,18 +688,86 @@
             this.dataGridView_Syukko.TabIndex = 330;
             this.dataGridView_Syukko.TabStop = false;
             // 
+            // dataGridView_Syukko_Detail
+            // 
+            this.dataGridView_Syukko_Detail.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_Syukko_Detail.GridColor = System.Drawing.SystemColors.Control;
+            this.dataGridView_Syukko_Detail.Location = new System.Drawing.Point(596, 334);
+            this.dataGridView_Syukko_Detail.Name = "dataGridView_Syukko_Detail";
+            this.dataGridView_Syukko_Detail.Size = new System.Drawing.Size(430, 363);
+            this.dataGridView_Syukko_Detail.TabIndex = 314;
+            this.dataGridView_Syukko_Detail.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txt_SyID2);
+            this.groupBox1.Controls.Add(this.lbl_SyDetailID);
+            this.groupBox1.Controls.Add(this.lbl_ArQuantity);
+            this.groupBox1.Controls.Add(this.txt_SyQuantity);
+            this.groupBox1.Controls.Add(this.txt_SyDetailID);
+            this.groupBox1.Controls.Add(this.lbl_PrID);
+            this.groupBox1.Controls.Add(this.txt_PrID);
+            this.groupBox1.Location = new System.Drawing.Point(624, 73);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(511, 177);
+            this.groupBox1.TabIndex = 315;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "出庫詳細項目";
+            // 
+            // btn_commit_FLG
+            // 
+            this.btn_commit_FLG.BackColor = System.Drawing.Color.PowderBlue;
+            this.btn_commit_FLG.FlatAppearance.BorderSize = 0;
+            this.btn_commit_FLG.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.btn_commit_FLG.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_commit_FLG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_commit_FLG.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
+            this.btn_commit_FLG.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_commit_FLG.Location = new System.Drawing.Point(1023, 8);
+            this.btn_commit_FLG.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btn_commit_FLG.Name = "btn_commit_FLG";
+            this.btn_commit_FLG.Size = new System.Drawing.Size(103, 41);
+            this.btn_commit_FLG.TabIndex = 316;
+            this.btn_commit_FLG.Text = "確定";
+            this.btn_commit_FLG.UseVisualStyleBackColor = false;
+            this.btn_commit_FLG.Click += new System.EventHandler(this.btn_commit_FLG_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(10, 42);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 12);
+            this.label3.TabIndex = 313;
+            this.label3.Text = "出庫ID";
+            // 
+            // txt_SyID2
+            // 
+            this.txt_SyID2.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_SyID2.Location = new System.Drawing.Point(108, 41);
+            this.txt_SyID2.Name = "txt_SyID2";
+            this.txt_SyID2.Size = new System.Drawing.Size(336, 19);
+            this.txt_SyID2.TabIndex = 312;
+            // 
             // F_Syukko
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.ClientSize = new System.Drawing.Size(1440, 888);
             this.Controls.Add(this.dataGridView_Syukko);
             this.Controls.Add(this.btn_commit_FLG);
             this.Controls.Add(this.txt_loginSoID);
+
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_regist);
             this.Controls.Add(this.btn_update);
+
+
             this.Controls.Add(this.btn_all);
             this.Controls.Add(this.btn_print);
             this.Controls.Add(this.btn_delete);
@@ -691,10 +784,12 @@
             this.Load += new System.EventHandler(this.F_Syukko_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Syukko_Detail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Syukko)).EndInit();
+
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -720,6 +815,7 @@
         private System.Windows.Forms.TextBox txt_OrID;
         private System.Windows.Forms.Label lbl_SyDate;
         private System.Windows.Forms.TextBox txt_SyDate;
+
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox chk_chumondetail;
         private System.Windows.Forms.DataGridView dataGridView_Syukko_Detail;
@@ -745,5 +841,6 @@
         private System.Windows.Forms.TextBox txt_ArQuantity;
         private System.Windows.Forms.Label lbl_ArQuantity;
         private System.Windows.Forms.DataGridView dataGridView_Syukko;
+
     }
 }

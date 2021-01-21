@@ -12,7 +12,7 @@ namespace SalesManagement_SysDev.Model.Entity.Disp
         [DisplayName("営業所ID")]
         public int SoID { get; set; }               //営業所ID	
         [DisplayName("社員ＩＤ")]
-        public int EmID { get; set; }               //社員ID	
+        public int? EmID { get; set; }               //社員ID	
         [DisplayName("顧客ID")]
         public int ClID { get; set; }               //顧客ID	
         [DisplayName("受注ＩＤ")]
