@@ -754,6 +754,11 @@ namespace SalesManagement_SysDev
             return;
 
         }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
     }
     
