@@ -90,6 +90,9 @@ namespace SalesManagement_SysDev
             transfer_int = f_login.transfer_int;
             f_order.transfer_int = transfer_int;
             f_chumon.transfer_int = transfer_int;
+            f_syukko.transfer_int = transfer_int;
+            f_arrival.transfer_int = transfer_int;
+            f_shipment.transfer_int = transfer_int;
             f_product.transfer_int = transfer_int;
             f_employee.transfer_int = transfer_int;
             loginauthor();

@@ -81,7 +81,6 @@ namespace SalesManagement_SysDev
         private void F_Stock_Load(object sender, EventArgs e)
         {
             HIDEFlag = 0;
-            btn_stock.Enabled = false;
 
             F_login f_login = new F_login();
             transfer_int = f_login.transfer_int;
@@ -752,6 +751,11 @@ namespace SalesManagement_SysDev
                 HIDEFlag = 0;   //検索する際の非表示フラグの非表示状態を保存(0：表示　1：非表示)
             }
             return;
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
 
         }
     }

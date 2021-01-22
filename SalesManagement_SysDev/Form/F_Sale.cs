@@ -77,7 +77,6 @@ namespace SalesManagement_SysDev
         private void F_Sale_Load(object sender, EventArgs e)
         {
             HIDEFlag = 0;
-            btn_sale.Enabled = false;
             dataGridView_Sale.ColumnCount = 8;
 
             dataGridView_Sale.Columns[0].HeaderText = "売上ID ";
@@ -1009,6 +1008,9 @@ namespace SalesManagement_SysDev
 
         }
 
-       
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

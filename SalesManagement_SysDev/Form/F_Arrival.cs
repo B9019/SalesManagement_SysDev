@@ -77,7 +77,6 @@ namespace SalesManagement_SysDev
 
         private void F_Arrival_Load(object sender, EventArgs e)
         {
-            btn_arrival.Enabled = false;
             dataGridView_Arrival.ColumnCount = 9;
 
             dataGridView_Arrival.Columns[0].HeaderText = "入荷ID ";
@@ -85,13 +84,22 @@ namespace SalesManagement_SysDev
             dataGridView_Arrival.Columns[2].HeaderText = "社員ID ";
             dataGridView_Arrival.Columns[3].HeaderText = "顧客ID";
             dataGridView_Arrival.Columns[4].HeaderText = "受注ID";
-            dataGridView_Arrival.Columns[5].HeaderText = " 入荷年月日";
+            dataGridView_Arrival.Columns[5].HeaderText = "入荷年月日";
             dataGridView_Arrival.Columns[6].HeaderText = "非表示理由";
             dataGridView_Arrival.Columns[7].HeaderText = "備考";
             dataGridView_Arrival.Columns[8].HeaderText = "入荷失敗フラグ";
 
+            dataGridView_Arrival_Detail.ColumnCount = 4;
+
+            dataGridView_Arrival_Detail.Columns[0].HeaderText = "入荷詳細ID ";
+            dataGridView_Arrival_Detail.Columns[1].HeaderText = "入荷ID ";
+            dataGridView_Arrival_Detail.Columns[2].HeaderText = "商品ID ";
+            dataGridView_Arrival_Detail.Columns[3].HeaderText = "数量ID";
+
+            dataGridView_Arrival.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataGridView_Arrival_Detail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+
             F_login f_login = new F_login();
-            transfer_int = f_login.transfer_int;
 
             btn_delete.Enabled = false;
 
@@ -102,11 +110,27 @@ namespace SalesManagement_SysDev
             }
 
             HIDEFlag = 0;
+            loginauthor();
         }
-        // 登録ボタン
-        //11.1入荷情報登録
+        private bool loginauthor()
+        {
+            using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())
+            {
+                var loresult = dbContext.M_Employees
+                    .Where(e => e.EmID == transfer_int)
+                    .ToArray();
+                foreach (var item in loresult)
+                {
+                    txt_loginSoID.Text = (item.SoID).ToString();
+                    txt_loginEmID.Text = (item.EmID).ToString();
+                }
+                return true;
+            }
+        }
+            // 登録ボタン
+            //11.1入荷情報登録
 
-        private void btn_regist_Click(object sender, EventArgs e)
+            private void btn_regist_Click(object sender, EventArgs e)
         {
             // 11.1.1妥当な入荷情報取得
             if (!Get_Arrival_Data_AtRegistration())
@@ -637,10 +661,10 @@ namespace SalesManagement_SysDev
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand command = new SqlCommand();
-            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=65B7FDBF103579B7D7CE0C17EE5CC7E8_)\システム開発演習I\プロジェクト\SALESMANAGEMENT_SYSDEV\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
             //command.Parameters["@PrFlag"].Value = "0";
-            command.CommandText = "SELECT * FROM T_Arrival WHERE ArFlag = 0 AND ";
+            command.CommandText = "SELECT * FROM T_Arrival WHERE ArFlag = 0;";
             command.Connection = conn;
             conn.Open();
             SqlDataReader rd = command.ExecuteReader();
@@ -651,13 +675,28 @@ namespace SalesManagement_SysDev
                     rd["OrID"], rd["ArDate"], rd["ArStateFlag"], rd["ArFlag"],
                     rd["ArHidden"], rd["Armemo"]);
             }
+            dataGridView_Arrival.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            SqlConnection conn2 = new SqlConnection();
+            SqlCommand command2 = new SqlCommand();
+            conn2.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            command2.CommandText = "SELECT * FROM T_ArrivalDetail;";
+            command2.Connection = conn2;
+            conn2.Open();
+            SqlDataReader rd2 = command2.ExecuteReader();
+            dataGridView_Arrival_Detail.Rows.Clear();
+            while (rd2.Read())
+            {
+                dataGridView_Arrival_Detail.Rows.Add(rd2["ArDetailID"], rd2["ArID"], rd2["PrID"], rd2["ArQuantity"]);
+            }
+            dataGridView_Arrival_Detail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
         }
         private void btn_search_Click(object sender, EventArgs e)
         {
             //接続先DBの情報をセット
             SqlConnection conn = new SqlConnection();
             SqlCommand command = new SqlCommand();
-            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=65B7FDBF103579B7D7CE0C17EE5CC7E8_)\システム開発演習I\プロジェクト\SALESMANAGEMENT_SYSDEV\SALESMANAGEMENT_SYSDEV.SALESMANAGEMENT_DEVCONTEXT.MDF;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
             //実行するSQL文の指定
             command.CommandText = @"SELECT * FROM T_Arrival WHERE ";
@@ -912,6 +951,18 @@ namespace SalesManagement_SysDev
             txt_Armemo.Text = Convert.ToString(id7);
             txt_ArHidden.Text = Convert.ToString(id8);
         }
+        private void dataGridView_Arrival_Detail_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = (int)dataGridView_Arrival.CurrentRow.Cells[0].Value;
+            int id2 = (int)dataGridView_Arrival.CurrentRow.Cells[1].Value;
+            int id3 = (int)dataGridView_Arrival.CurrentRow.Cells[2].Value;
+            int id4 = (int)dataGridView_Arrival.CurrentRow.Cells[3].Value;
+
+            txt_ArDetailID.Text = Convert.ToString(id);
+            txt_ArID2.Text = Convert.ToString(id2);
+            txt_PrID.Text = Convert.ToString(id3);
+            txt_ArQuantity.Text = Convert.ToString(id4);
+        }
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
@@ -965,6 +1016,7 @@ namespace SalesManagement_SysDev
 
 
         }
+
 
         private void btn_commit_FLG_Click(object sender, EventArgs e)
         {
@@ -1046,5 +1098,12 @@ namespace SalesManagement_SysDev
             }
 
         }
+
+
+        private void btn_all_Click_1(object sender, EventArgs e)
+        {
+            fncAllSelect();
+        }
+
     }
 }

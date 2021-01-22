@@ -76,7 +76,6 @@ namespace SalesManagement_SysDev
         private void F_Warehousing_Load(object sender, EventArgs e)
         {
             HIDEFlag = 0;
-            btn_warehousing.Enabled = false;
 
             F_login f_login = new F_login();
             transfer_int = f_login.transfer_int;

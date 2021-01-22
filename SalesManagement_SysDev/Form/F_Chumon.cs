@@ -80,7 +80,6 @@ namespace SalesManagement_SysDev
 
         private void F_Chumon_Load(object sender, EventArgs e)
         {
-            btn_chumon.Enabled = false;
             dataGridView_Chumon.ColumnCount = 8;
 
             //btn_regist.Enabled = false; //受注処理の時点で注文テーブルに共通項目は登録されているので、この画面では更新処理でデータを追加するべき。
@@ -102,6 +101,9 @@ namespace SalesManagement_SysDev
             dataGridView_Chumon_Detail.Columns[1].HeaderText = "注文ID";
             dataGridView_Chumon_Detail.Columns[2].HeaderText = "商品ID";
             dataGridView_Chumon_Detail.Columns[3].HeaderText = "数量";
+
+            dataGridView_Chumon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataGridView_Chumon_Detail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
 
             HIDEFlag = 0;
             F_login f_login = new F_login();
@@ -152,8 +154,6 @@ namespace SalesManagement_SysDev
             //    if (!Generate_Registration_Detail(regChumonDetail))
             //        return;
             //}
-            if (chk_commit_FLG.Checked == true)//確定処理
-            {
                 // 19.1.1妥当な注文情報取得
                 if (!Get_Chumon_Data_AtRegistration())
                     return;
@@ -161,7 +161,6 @@ namespace SalesManagement_SysDev
                 Get_Syukko_Data_AtRegistration();
                 return;
 
-            }
 
         }
         // 
@@ -1107,6 +1106,7 @@ namespace SalesManagement_SysDev
                 dataGridView_Chumon.Rows.Add(rd["ChID"], rd["SoID"], rd["EmID"], rd["ClID"],
                     rd["OrID"], rd["ChDate"], rd["ChHidden"]);
             }
+            dataGridView_Chumon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             SqlConnection conn2 = new SqlConnection();
             SqlCommand command2 = new SqlCommand();
             conn2.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
@@ -1119,6 +1119,7 @@ namespace SalesManagement_SysDev
             {
                 dataGridView_Chumon_Detail.Rows.Add(rd2["ChDetailID"], rd2["ChID"], rd2["PrID"], rd2["ChQuantity"]);
             }
+            dataGridView_Chumon_Detail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
         //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
         private void dataGridView_Chumon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -1340,6 +1341,11 @@ namespace SalesManagement_SysDev
         private void label13_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_all_Click_1(object sender, EventArgs e)
+        {
+            fncAllSelect();
         }
     }
    
