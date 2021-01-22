@@ -37,7 +37,9 @@
             this.txt_ArHidden = new System.Windows.Forms.TextBox();
             this.lbl_ArHidden = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+
             this.chk_chumon = new System.Windows.Forms.CheckBox();
+
             this.txt_Armemo = new System.Windows.Forms.TextBox();
             this.lbl_memo = new System.Windows.Forms.Label();
             this.txt_ArDate = new System.Windows.Forms.TextBox();
@@ -66,6 +68,7 @@
             this.btn_commit_FLG = new System.Windows.Forms.Button();
             this.txt_loginSoID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+
             this.label1 = new System.Windows.Forms.Label();
             this.btn_regist = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
@@ -76,10 +79,13 @@
             this.btn_search = new System.Windows.Forms.Button();
             this.txt_loginEmID = new System.Windows.Forms.TextBox();
             this.dataGridView_Arrival = new System.Windows.Forms.DataGridView();
+
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Arrival_Detail)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Arrival)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_detail)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_title
@@ -88,21 +94,27 @@
             this.lbl_title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F);
             this.lbl_title.ForeColor = System.Drawing.SystemColors.GrayText;
+
             this.lbl_title.Location = new System.Drawing.Point(15, 18);
+
             this.lbl_title.Name = "lbl_title";
             this.lbl_title.Size = new System.Drawing.Size(183, 32);
             this.lbl_title.TabIndex = 240;
             this.lbl_title.Text = "入荷管理画面";
             // 
+
+
             // lbl_SoID
             // 
             this.lbl_SoID.AutoSize = true;
             this.lbl_SoID.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F);
             this.lbl_SoID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.lbl_SoID.Location = new System.Drawing.Point(7, 80);
             this.lbl_SoID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_SoID.Name = "lbl_SoID";
             this.lbl_SoID.Size = new System.Drawing.Size(90, 19);
+
             this.lbl_SoID.TabIndex = 79;
             this.lbl_SoID.Text = "営業所ID";
             // 
@@ -110,10 +122,12 @@
             // 
             this.txt_ArHidden.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F);
             this.txt_ArHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.txt_ArHidden.Location = new System.Drawing.Point(170, 320);
             this.txt_ArHidden.Multiline = true;
             this.txt_ArHidden.Name = "txt_ArHidden";
             this.txt_ArHidden.Size = new System.Drawing.Size(772, 58);
+
             this.txt_ArHidden.TabIndex = 10;
             this.txt_ArHidden.Text = "非表示理由を入力(50文字)";
             // 
@@ -122,17 +136,21 @@
             this.lbl_ArHidden.AutoSize = true;
             this.lbl_ArHidden.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F);
             this.lbl_ArHidden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.lbl_ArHidden.Location = new System.Drawing.Point(7, 320);
             this.lbl_ArHidden.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ArHidden.Name = "lbl_ArHidden";
             this.lbl_ArHidden.Size = new System.Drawing.Size(118, 19);
+
             this.lbl_ArHidden.TabIndex = 241;
             this.lbl_ArHidden.Text = "非表示モード";
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
+
             this.groupBox3.Controls.Add(this.chk_chumon);
+
             this.groupBox3.Controls.Add(this.txt_Armemo);
             this.groupBox3.Controls.Add(this.lbl_ArHidden);
             this.groupBox3.Controls.Add(this.lbl_memo);
@@ -150,6 +168,7 @@
             this.groupBox3.Controls.Add(this.txt_OrID);
             this.groupBox3.Controls.Add(this.lbl_ClID);
             this.groupBox3.Controls.Add(this.txt_ClID);
+
             this.groupBox3.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.5F);
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
             this.groupBox3.Location = new System.Drawing.Point(10, 70);
@@ -159,9 +178,11 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "入荷項目";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+
             // 
             // chk_chumon
             // 
+
             this.chk_chumon.AutoSize = true;
             this.chk_chumon.Location = new System.Drawing.Point(98, 0);
             this.chk_chumon.Name = "chk_chumon";
@@ -176,15 +197,18 @@
             this.txt_Armemo.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txt_Armemo.Name = "txt_Armemo";
             this.txt_Armemo.Size = new System.Drawing.Size(773, 26);
+
             this.txt_Armemo.TabIndex = 9;
             // 
             // lbl_memo
             // 
             this.lbl_memo.AutoSize = true;
+
             this.lbl_memo.Location = new System.Drawing.Point(7, 280);
             this.lbl_memo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_memo.Name = "lbl_memo";
             this.lbl_memo.Size = new System.Drawing.Size(49, 20);
+
             this.lbl_memo.TabIndex = 194;
             this.lbl_memo.Text = "備考";
             // 
@@ -215,22 +239,28 @@
             this.chk_hide_FLG.AutoSize = true;
             this.chk_hide_FLG.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F);
             this.chk_hide_FLG.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.chk_hide_FLG.Location = new System.Drawing.Point(136, 325);
+
             this.chk_hide_FLG.Name = "chk_hide_FLG";
             this.chk_hide_FLG.Size = new System.Drawing.Size(15, 14);
             this.chk_hide_FLG.TabIndex = 240;
             this.chk_hide_FLG.UseVisualStyleBackColor = true;
             this.chk_hide_FLG.CheckedChanged += new System.EventHandler(this.Checked_Arrival_HideFlag);
             // 
+
+
             // lbl_ArID
             // 
             this.lbl_ArID.AutoSize = true;
             this.lbl_ArID.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F);
             this.lbl_ArID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.lbl_ArID.Location = new System.Drawing.Point(7, 40);
             this.lbl_ArID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ArID.Name = "lbl_ArID";
             this.lbl_ArID.Size = new System.Drawing.Size(71, 19);
+
             this.lbl_ArID.TabIndex = 80;
             this.lbl_ArID.Text = "入荷ID";
             // 
@@ -238,9 +268,11 @@
             // 
             this.txt_ArID.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F);
             this.txt_ArID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.txt_ArID.Location = new System.Drawing.Point(170, 37);
             this.txt_ArID.Name = "txt_ArID";
             this.txt_ArID.Size = new System.Drawing.Size(773, 26);
+
             this.txt_ArID.TabIndex = 0;
             // 
             // txt_SoID
@@ -248,9 +280,11 @@
             this.txt_SoID.BackColor = System.Drawing.SystemColors.Window;
             this.txt_SoID.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F);
             this.txt_SoID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.txt_SoID.Location = new System.Drawing.Point(170, 77);
             this.txt_SoID.Name = "txt_SoID";
             this.txt_SoID.Size = new System.Drawing.Size(773, 26);
+
             this.txt_SoID.TabIndex = 1;
             // 
             // lbl_EmID
@@ -258,10 +292,12 @@
             this.lbl_EmID.AutoSize = true;
             this.lbl_EmID.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F);
             this.lbl_EmID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.lbl_EmID.Location = new System.Drawing.Point(7, 120);
             this.lbl_EmID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_EmID.Name = "lbl_EmID";
             this.lbl_EmID.Size = new System.Drawing.Size(71, 19);
+
             this.lbl_EmID.TabIndex = 87;
             this.lbl_EmID.Text = "社員ID";
             // 
@@ -270,16 +306,19 @@
             this.txt_EmID.BackColor = System.Drawing.SystemColors.Window;
             this.txt_EmID.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F);
             this.txt_EmID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.txt_EmID.Location = new System.Drawing.Point(170, 117);
             this.txt_EmID.Name = "txt_EmID";
             this.txt_EmID.Size = new System.Drawing.Size(773, 26);
             this.txt_EmID.TabIndex = 2;
             // 
+
             // lbl_OrID
             // 
             this.lbl_OrID.AutoSize = true;
             this.lbl_OrID.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F);
             this.lbl_OrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.lbl_OrID.Location = new System.Drawing.Point(7, 200);
             this.lbl_OrID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_OrID.Name = "lbl_OrID";
@@ -291,20 +330,23 @@
             // 
             this.txt_OrID.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F);
             this.txt_OrID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.txt_OrID.Location = new System.Drawing.Point(170, 197);
             this.txt_OrID.Name = "txt_OrID";
             this.txt_OrID.Size = new System.Drawing.Size(773, 26);
-            this.txt_OrID.TabIndex = 4;
+           　this.txt_OrID.TabIndex = 4;
             // 
             // lbl_ClID
             // 
             this.lbl_ClID.AutoSize = true;
             this.lbl_ClID.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F);
             this.lbl_ClID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.lbl_ClID.Location = new System.Drawing.Point(7, 160);
             this.lbl_ClID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ClID.Name = "lbl_ClID";
             this.lbl_ClID.Size = new System.Drawing.Size(71, 19);
+
             this.lbl_ClID.TabIndex = 88;
             this.lbl_ClID.Text = "顧客ID";
             // 
@@ -312,9 +354,11 @@
             // 
             this.txt_ClID.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.25F);
             this.txt_ClID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+
             this.txt_ClID.Location = new System.Drawing.Point(170, 157);
             this.txt_ClID.Name = "txt_ClID";
             this.txt_ClID.Size = new System.Drawing.Size(773, 26);
+
             this.txt_ClID.TabIndex = 3;
             // 
             // dataGridView_Arrival_Detail
@@ -379,7 +423,9 @@
             this.chk_chumondetail.UseVisualStyleBackColor = true;
             this.chk_chumondetail.CheckedChanged += new System.EventHandler(this.chk_chumondetail_CheckedChanged);
             // 
+
             // txt_ArQuantity
+
             // 
             this.txt_ArQuantity.BackColor = System.Drawing.SystemColors.Window;
             this.txt_ArQuantity.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.5F);
@@ -389,6 +435,7 @@
             this.txt_ArQuantity.Size = new System.Drawing.Size(288, 27);
             this.txt_ArQuantity.TabIndex = 8;
             // 
+
             // lbl_ArID2
             // 
             this.lbl_ArID2.AutoSize = true;
@@ -400,18 +447,22 @@
             this.lbl_ArID2.Size = new System.Drawing.Size(74, 20);
             this.lbl_ArID2.TabIndex = 284;
             this.lbl_ArID2.Text = "入荷ID";
+
             // 
             // txt_ArID2
             // 
+
             this.txt_ArID2.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.5F);
             this.txt_ArID2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txt_ArID2.Location = new System.Drawing.Point(131, 72);
             this.txt_ArID2.Name = "txt_ArID2";
             this.txt_ArID2.Size = new System.Drawing.Size(288, 27);
             this.txt_ArID2.TabIndex = 283;
+
             // 
             // txt_ArDetailID
             // 
+
             this.txt_ArDetailID.BackColor = System.Drawing.SystemColors.Window;
             this.txt_ArDetailID.Font = new System.Drawing.Font("BIZ UDPゴシック", 14.5F);
             this.txt_ArDetailID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -520,6 +571,7 @@
             this.label1.Size = new System.Drawing.Size(90, 19);
             this.label1.TabIndex = 339;
             this.label1.Text = "営業所ID";
+
             // 
             // btn_regist
             // 
@@ -528,6 +580,7 @@
             this.btn_regist.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.btn_regist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btn_regist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+
             this.btn_regist.Font = new System.Drawing.Font("BIZ UDPゴシック", 15F);
             this.btn_regist.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_regist.Location = new System.Drawing.Point(527, 10);
@@ -537,9 +590,11 @@
             this.btn_regist.TabIndex = 331;
             this.btn_regist.Text = "登録";
             this.btn_regist.UseVisualStyleBackColor = false;
+
             // 
             // btn_update
             // 
+
             this.btn_update.BackColor = System.Drawing.Color.PowderBlue;
             this.btn_update.FlatAppearance.BorderSize = 0;
             this.btn_update.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
@@ -556,6 +611,7 @@
             this.btn_update.UseVisualStyleBackColor = false;
             // 
             // btn_all
+
             // 
             this.btn_all.BackColor = System.Drawing.Color.PowderBlue;
             this.btn_all.FlatAppearance.BorderSize = 0;
@@ -573,6 +629,7 @@
             this.btn_all.UseVisualStyleBackColor = false;
             this.btn_all.Click += new System.EventHandler(this.btn_all_Click_1);
             // 
+
             // btn_print
             // 
             this.btn_print.BackColor = System.Drawing.Color.PowderBlue;
@@ -685,15 +742,81 @@
             this.dataGridView_Arrival.TabIndex = 342;
             this.dataGridView_Arrival.TabStop = false;
             this.dataGridView_Arrival.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Arrival_CellDoubleClick);
+
+            // 
+            // dataGridView_detail
+            // 
+            this.dataGridView_detail.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_detail.GridColor = System.Drawing.SystemColors.Control;
+            this.dataGridView_detail.Location = new System.Drawing.Point(198, 303);
+            this.dataGridView_detail.Name = "dataGridView_detail";
+            this.dataGridView_detail.Size = new System.Drawing.Size(408, 314);
+            this.dataGridView_detail.TabIndex = 283;
+            this.dataGridView_detail.TabStop = false;
+            // 
+            // lbl_ArID2
+            // 
+            this.lbl_ArID2.AutoSize = true;
+            this.lbl_ArID2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_ArID2.Location = new System.Drawing.Point(24, 35);
+            this.lbl_ArID2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ArID2.Name = "lbl_ArID2";
+            this.lbl_ArID2.Size = new System.Drawing.Size(40, 12);
+            this.lbl_ArID2.TabIndex = 284;
+            this.lbl_ArID2.Text = "入荷ID";
+            // 
+            // txt_ArID2
+            // 
+            this.txt_ArID2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_ArID2.Location = new System.Drawing.Point(117, 32);
+            this.txt_ArID2.Name = "txt_ArID2";
+            this.txt_ArID2.Size = new System.Drawing.Size(168, 19);
+            this.txt_ArID2.TabIndex = 285;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txt_ArID2);
+            this.groupBox1.Controls.Add(this.txt_ArDetailID);
+            this.groupBox1.Controls.Add(this.lbl_ArDetailID);
+            this.groupBox1.Controls.Add(this.lbl_ArID2);
+            this.groupBox1.Controls.Add(this.txt_PrID);
+            this.groupBox1.Controls.Add(this.lbl_PrID);
+            this.groupBox1.Controls.Add(this.txt_ArQuantity);
+            this.groupBox1.Controls.Add(this.lbl_ArQuantity);
+            this.groupBox1.Location = new System.Drawing.Point(612, 79);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(340, 218);
+            this.groupBox1.TabIndex = 286;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // btn_commit_FLG
+            // 
+            this.btn_commit_FLG.BackColor = System.Drawing.Color.PowderBlue;
+            this.btn_commit_FLG.FlatAppearance.BorderSize = 0;
+            this.btn_commit_FLG.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.btn_commit_FLG.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_commit_FLG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_commit_FLG.Font = new System.Drawing.Font("BIZ UDPゴシック", 13F);
+            this.btn_commit_FLG.Location = new System.Drawing.Point(962, 110);
+            this.btn_commit_FLG.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_commit_FLG.Name = "btn_commit_FLG";
+            this.btn_commit_FLG.Size = new System.Drawing.Size(115, 53);
+            this.btn_commit_FLG.TabIndex = 288;
+            this.btn_commit_FLG.Text = "確定";
+            this.btn_commit_FLG.UseVisualStyleBackColor = false;
+            this.btn_commit_FLG.Click += new System.EventHandler(this.btn_commit_FLG_Click);
             // 
             // F_Arrival
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.ClientSize = new System.Drawing.Size(1440, 888);
             this.Controls.Add(this.dataGridView_Arrival);
             this.Controls.Add(this.btn_commit_FLG);
             this.Controls.Add(this.txt_loginSoID);
+
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_regist);
@@ -708,7 +831,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.groupBox3);
+
             this.Location = new System.Drawing.Point(10, 70);
+
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "F_Arrival";
             this.Padding = new System.Windows.Forms.Padding(12, 60, 12, 13);
@@ -719,6 +844,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Arrival)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_detail)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -769,7 +897,9 @@
         private System.Windows.Forms.TextBox txt_PrID;
         private System.Windows.Forms.Label lbl_PrID;
         private System.Windows.Forms.Label lbl_ArQuantity;
+
         private System.Windows.Forms.DataGridView dataGridView_Arrival;
+
     }
 
 
