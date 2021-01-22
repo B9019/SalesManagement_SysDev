@@ -102,6 +102,9 @@ namespace SalesManagement_SysDev
             dataGridView_Chumon_Detail.Columns[2].HeaderText = "商品ID";
             dataGridView_Chumon_Detail.Columns[3].HeaderText = "数量";
 
+            dataGridView_Chumon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataGridView_Chumon_Detail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+
             HIDEFlag = 0;
             F_login f_login = new F_login();
 
@@ -1103,6 +1106,7 @@ namespace SalesManagement_SysDev
                 dataGridView_Chumon.Rows.Add(rd["ChID"], rd["SoID"], rd["EmID"], rd["ClID"],
                     rd["OrID"], rd["ChDate"], rd["ChHidden"]);
             }
+            dataGridView_Chumon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             SqlConnection conn2 = new SqlConnection();
             SqlCommand command2 = new SqlCommand();
             conn2.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
@@ -1115,6 +1119,7 @@ namespace SalesManagement_SysDev
             {
                 dataGridView_Chumon_Detail.Rows.Add(rd2["ChDetailID"], rd2["ChID"], rd2["PrID"], rd2["ChQuantity"]);
             }
+            dataGridView_Chumon_Detail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
         //データグリッドビューデータグリッドビューのデータをテキストボックスに表示
         private void dataGridView_Chumon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

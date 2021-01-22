@@ -92,8 +92,10 @@ namespace SalesManagement_SysDev
             dataGridView_Shipment.Columns[10].HeaderText = "商品ID";
             dataGridView_Shipment.Columns[11].HeaderText = "数量";
 
+            dataGridView_Shipment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataGridView_Shipment_Detail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+
             F_login f_login = new F_login();
-            transfer_int = f_login.transfer_int;
 
             btn_delete.Enabled = false;
 
@@ -101,6 +103,22 @@ namespace SalesManagement_SysDev
                transfer_int == 5)
             {
                 btn_delete.Enabled = true;
+            }
+            loginauthor();
+        }
+        private bool loginauthor()
+        {
+            using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())
+            {
+                var loresult = dbContext.M_Employees
+                    .Where(e => e.EmID == transfer_int)
+                    .ToArray();
+                foreach (var item in loresult)
+                {
+                    txt_loginSoID.Text = (item.SoID).ToString();
+                    txt_loginEmID.Text = (item.EmID).ToString();
+                }
+                return true;
             }
         }
 
@@ -258,7 +276,7 @@ namespace SalesManagement_SysDev
                 txt_ShHidden.Text = "";
             }
 
-            
+
             return new T_Shipment
             {
                 ShID = int.Parse(txt_ShID.Text),
@@ -701,7 +719,7 @@ namespace SalesManagement_SysDev
         {
             SqlConnection conn = new SqlConnection();
             SqlCommand command = new SqlCommand();
-            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True";
+            conn.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
             //command.Parameters["@PrFlag"].Value = "0";
             command.CommandText = "SELECT * FROM T_Shipment WHERE ShFlag = 0.";
@@ -714,6 +732,24 @@ namespace SalesManagement_SysDev
                 dataGridView_Shipment.Rows.Add(rd["ShID"], rd["SoID"], rd["EmID"], rd["ClID"],
                                 rd["OrID"], rd["ShFinishDate"], rd["ShHidden"], rd["memo"]);
             }
+            dataGridView_Shipment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            SqlConnection conn2 = new SqlConnection();
+            SqlCommand command2 = new SqlCommand();
+            conn2.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            //command.Parameters.Add("@PrFlag", SqlDbType.VarChar);
+            //command.Parameters["@PrFlag"].Value = "0";
+            command2.CommandText = "SELECT * FROM T_ShipmentDetail;";
+            command2.Connection = conn2;
+            conn2.Open();
+            SqlDataReader rd2 = command2.ExecuteReader();
+            dataGridView_Shipment_Detail.Rows.Clear();
+            while (rd2.Read())
+            {
+                dataGridView_Shipment_Detail.Rows.Add(rd2["ShDetailID"], rd2["ShID"], rd2["PrID"], rd2["ShDquantity"]);
+            }
+            dataGridView_Shipment_Detail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
         }
         // 表示データ更新
         private void RefreshDataGridView()
@@ -1054,5 +1090,45 @@ namespace SalesManagement_SysDev
 
         }
 
+        private void btn_commit_FLG_Click(object sender, EventArgs e)
+        {
+            //出荷情報を更新する
+            int id = int.Parse(txt_ShID.Text);
+            using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())
+            {
+                var result = dbContext.T_Shipments
+                    .Where(s => s.ShID == id).ToArray();
+                foreach (var item in result)
+                {
+                    var regShipment = new T_Shipment()
+                    {
+                        EmID = transfer_int,
+                        ClID = item.ClID,
+                        SoID = item.SoID,
+                        OrID = item.OrID,
+                        ShFinishDate = DateTime.Now,
+                        ShStateFlag = 1,
+                        ShFlag = item.ShFlag,
+                        ShHidden = item.ShHidden
+                    };
+                    // 注文情報の登録
+                    var errorMessage = _Sh.PutShipment(regShipment);
+
+                    if (errorMessage != string.Empty)
+                    {
+                        MessageBox.Show(errorMessage);
+                        return;
+                    }
+                    return;
+                }
+
+            }
+
+        }
+
+        private void btn_all_Click_1(object sender, EventArgs e)
+        {
+            fncAllSelect();
+        }
     }
 }

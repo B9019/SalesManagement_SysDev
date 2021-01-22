@@ -581,6 +581,7 @@
             this.dataGridView_Chumon_Detail.Size = new System.Drawing.Size(423, 412);
             this.dataGridView_Chumon_Detail.TabIndex = 306;
             this.dataGridView_Chumon_Detail.TabStop = false;
+            this.dataGridView_Chumon_Detail.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Chumon_Detail_CellDoubleClick);
             // 
             // dataGridView_Chumon
             // 
@@ -611,6 +612,7 @@
             this.dataGridView_Chumon.Size = new System.Drawing.Size(950, 412);
             this.dataGridView_Chumon.TabIndex = 307;
             this.dataGridView_Chumon.TabStop = false;
+            this.dataGridView_Chumon.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Chumon_CellDoubleClick);
             // 
             // F_Chumon
             // 

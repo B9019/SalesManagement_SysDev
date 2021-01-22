@@ -78,7 +78,7 @@ namespace SalesManagement_SysDev
         {
             HIDEFlag = 0;
             btn_regist.Enabled = false;
-            dataGridView_Syukko.ColumnCount = 7;
+            dataGridView_Syukko.ColumnCount = 8;
 
             dataGridView_Syukko.Columns[0].HeaderText = "出庫ID";
             dataGridView_Syukko.Columns[1].HeaderText = "社員ID";
@@ -87,6 +87,7 @@ namespace SalesManagement_SysDev
             dataGridView_Syukko.Columns[4].HeaderText = "受注ID";
             dataGridView_Syukko.Columns[5].HeaderText = "出庫年月日";
             dataGridView_Syukko.Columns[6].HeaderText = "非表示理由";
+            dataGridView_Syukko.Columns[7].HeaderText = "備考";
 
             dataGridView_Syukko_Detail.ColumnCount = 4;
 
@@ -95,9 +96,10 @@ namespace SalesManagement_SysDev
             dataGridView_Syukko_Detail.Columns[2].HeaderText = "商品ID";
             dataGridView_Syukko_Detail.Columns[3].HeaderText = "数量";
 
+            dataGridView_Syukko.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataGridView_Syukko_Detail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
 
             F_login f_login = new F_login();
-            transfer_int = f_login.transfer_int;
 
             btn_delete.Enabled = false;
 
@@ -106,11 +108,26 @@ namespace SalesManagement_SysDev
             {
                 btn_delete.Enabled = true;
             }
+            loginauthor();
         }
-
-        // 登録ボタン
-        // 10.1出庫情報登録
-        private void btn_regist_Click(object sender, EventArgs e)
+        private bool loginauthor()
+        {
+            using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())
+            {
+                var loresult = dbContext.M_Employees
+                    .Where(e => e.EmID == transfer_int)
+                    .ToArray();
+                foreach (var item in loresult)
+                {
+                    txt_loginSoID.Text = (item.SoID).ToString();
+                    txt_loginEmID.Text = (item.EmID).ToString();
+                }
+                return true;
+            }
+        }
+            // 登録ボタン
+            // 10.1出庫情報登録
+            private void btn_regist_Click(object sender, EventArgs e)
         {
             // 10.1.1妥当な商品情報取得
             if (!Get_Syukko_Data_AtRegistration())
@@ -805,6 +822,7 @@ namespace SalesManagement_SysDev
                 dataGridView_Syukko.Rows.Add(rd["SyID"], rd["EmID"], rd["ClID"], rd["SoID"],
                     rd["OrID"], rd["SyDate"], rd["SyHidden"]);
             }
+            dataGridView_Syukko.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             SqlConnection conn2 = new SqlConnection();
             SqlCommand command2 = new SqlCommand();
             conn2.ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SalesManagement_SysDev.SalesManagement_DevContext;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
@@ -817,6 +835,7 @@ namespace SalesManagement_SysDev
             {
                 dataGridView_Syukko_Detail.Rows.Add(rd2["SyDetailID"], rd2["SyID"], rd2["PrID"], rd2["SyQuantity"]);
             }
+            dataGridView_Syukko_Detail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
 
@@ -824,22 +843,35 @@ namespace SalesManagement_SysDev
         private void dataGridView_Syukko_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int id = (int)dataGridView_Syukko.CurrentRow.Cells[0].Value;
-            int id2 = (int)dataGridView_Syukko.CurrentRow.Cells[1].Value;
+            //int id2 = (int)dataGridView_Syukko.CurrentRow.Cells[1].Value;
             int id3 = (int)dataGridView_Syukko.CurrentRow.Cells[2].Value;
             int id4 = (int)dataGridView_Syukko.CurrentRow.Cells[3].Value;
             int id5 = (int)dataGridView_Syukko.CurrentRow.Cells[4].Value;
-            DateTime id6 = (DateTime)dataGridView_Syukko.CurrentRow.Cells[5].Value;
+            //DateTime id6 = (DateTime)dataGridView_Syukko.CurrentRow.Cells[5].Value;
             string id7 = (string)dataGridView_Syukko.CurrentRow.Cells[6].Value;
             string id8 = (string)dataGridView_Syukko.CurrentRow.Cells[7].Value;
 
             txt_SyID.Text = Convert.ToString(id);
-            txt_SoID.Text = Convert.ToString(id2);
-            txt_EmID.Text = Convert.ToString(id3);
+            txt_SoID.Text = Convert.ToString(id3);
+            //txt_EmID.Text = Convert.ToString(id2);
             txt_ClID.Text = Convert.ToString(id4);
             txt_OrID.Text = Convert.ToString(id5);
-            txt_SyDate.Text = Convert.ToString(id6);
+            //txt_SyDate.Text = Convert.ToString(id6);
             txt_SyHidden.Text = Convert.ToString(id7);
             txt_memo.Text = Convert.ToString(id8);
+
+        }
+        private void dataGridView_Syukko__Detail_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = (int)dataGridView_Syukko_Detail.CurrentRow.Cells[0].Value;
+            int id2 = (int)dataGridView_Syukko_Detail.CurrentRow.Cells[1].Value;
+            int id3 = (int)dataGridView_Syukko_Detail.CurrentRow.Cells[2].Value;
+            int id4 = (int)dataGridView_Syukko_Detail.CurrentRow.Cells[3].Value;
+
+            txt_SyDetailID.Text = Convert.ToString(id);
+            txt_PrID.Text = Convert.ToString(id2);
+            txt_SyID2.Text = Convert.ToString(id3);
+            txt_SyQuantity.Text = Convert.ToString(id4);
 
         }
 
@@ -1113,6 +1145,11 @@ namespace SalesManagement_SysDev
         private void btn_all_Click_1(object sender, EventArgs e)
         {
             fncAllSelect();
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
