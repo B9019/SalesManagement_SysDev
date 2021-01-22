@@ -886,19 +886,19 @@ namespace SalesManagement_SysDev
         {
             int id = (int)dataGridView_Shipment.CurrentRow.Cells[0].Value;
             int id2 = (int)dataGridView_Shipment.CurrentRow.Cells[1].Value;
-            int id3 = (int)dataGridView_Shipment.CurrentRow.Cells[2].Value;
+            //int id3 = (int)dataGridView_Shipment.CurrentRow.Cells[2].Value;
             int id4 = (int)dataGridView_Shipment.CurrentRow.Cells[3].Value;
             int id5 = (int)dataGridView_Shipment.CurrentRow.Cells[4].Value;
-            DateTime id6 = (DateTime)dataGridView_Shipment.CurrentRow.Cells[5].Value;
+            //DateTime id6 = (DateTime)dataGridView_Shipment.CurrentRow.Cells[5].Value;
             string id7 = (string)dataGridView_Shipment.CurrentRow.Cells[6].Value;
             string id8 = (string)dataGridView_Shipment.CurrentRow.Cells[7].Value;
 
             txt_ShID.Text = Convert.ToString(id);
             txt_SoID.Text = Convert.ToString(id2);
-            txt_EmID.Text = Convert.ToString(id3);
+            //txt_EmID.Text = Convert.ToString(id3);
             txt_ClID.Text = Convert.ToString(id4);
             txt_OrID.Text = Convert.ToString(id5);
-            txt_ShFinishDate.Text = Convert.ToString(id6);
+            //txt_ShFinishDate.Text = Convert.ToString(id6);
             txt_ShHidden.Text = Convert.ToString(id7);
             txt_memo.Text = Convert.ToString(id8);
 
