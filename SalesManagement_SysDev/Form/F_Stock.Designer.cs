@@ -394,6 +394,8 @@
             // 
             // F_Stock
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2400, 1332);
             this.Controls.Add(this.btn_commit_FLG);
             this.Controls.Add(this.txt_loginSoID);
@@ -411,6 +413,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dataGridView_Stock);
             this.Name = "F_Stock";
+            this.Padding = new System.Windows.Forms.Padding(20, 90, 20, 21);
             this.Load += new System.EventHandler(this.F_Stock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Stock)).EndInit();
             this.groupBox3.ResumeLayout(false);
