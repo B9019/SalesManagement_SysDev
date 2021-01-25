@@ -27,7 +27,5 @@ namespace SalesManagement_SysDev.Model.Entity.Disp
         public int ChFlag { get; set; }      //注文管理フラグ
         [DisplayName("非表示理由")]
         public String ChHidden { get; set; }         //非表示理由		
-        [DisplayName("備考")]
-        public String ChMemo { get; set; }　//備考
     }
 }

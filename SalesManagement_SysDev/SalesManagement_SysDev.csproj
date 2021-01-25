@@ -391,6 +391,10 @@
     <Compile Include="Migrations\202101190739565_syukko1.designer.cs">
       <DependentUpon>202101190739565_syukko1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101250306294_chumonmemo.cs" />
+    <Compile Include="Migrations\202101250306294_chumonmemo.designer.cs">
+      <DependentUpon>202101250306294_chumonmemo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\CommonFunction.cs" />
     <Compile Include="Model\Constants.cs" />
@@ -594,6 +598,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101190739565_syukko1.resx">
       <DependentUpon>202101190739565_syukko1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101250306294_chumonmemo.resx">
+      <DependentUpon>202101250306294_chumonmemo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
