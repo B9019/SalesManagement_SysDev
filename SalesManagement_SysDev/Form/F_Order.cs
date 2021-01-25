@@ -1265,13 +1265,19 @@ namespace SalesManagement_SysDev
                 dataGridView_Order.ClearSelection();
 
                 // テキストボックス＆コンボボックスクリア
-                txt_OrID2.Clear();
+                txt_OrID.Clear();
                 txt_SoID.Clear();
                 txt_EmID.Clear();
                 txt_ClID.Clear();
                 txt_ClCharge.Clear();
                 txt_OrDate.Clear();
                 txt_OrHidden.Clear();
+           
+            txt_OrDetailID.Clear();
+            txt_OrID2.Clear();
+            txt_PrID.Clear();
+            txt_OrQuantity.Clear();
+            txt_OrTotalPrice.Clear();
 
 
                 //// ボタンリセット
@@ -1551,6 +1557,10 @@ namespace SalesManagement_SysDev
 
         }
 
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            ClearInput();
+        }
     }
     }
 
