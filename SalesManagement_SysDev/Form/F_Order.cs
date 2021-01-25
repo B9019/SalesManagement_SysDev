@@ -535,9 +535,14 @@ namespace SalesManagement_SysDev
 
             }
             private bool Get_Chumon_Data_AtRegistration()
-            {               
+            {
+            // 確定可否
+            if (DialogResult.OK != MessageBox.Show(this, "確定してよろしいですか", "確定可否", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+            {
+                return false;
+            }
             //受注情報を注文テーブルに送る
-                int id = int.Parse(txt_OrID.Text);
+            int id = int.Parse(txt_OrID.Text);
                 using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())
                 {
                     var result = dbContext.T_Orders
