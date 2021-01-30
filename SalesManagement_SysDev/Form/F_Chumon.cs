@@ -373,6 +373,11 @@ namespace SalesManagement_SysDev
         }
         private bool Get_Syukko_Data_AtRegistration()
         {
+            // 確定可否
+            if (DialogResult.OK != MessageBox.Show(this, "確定してよろしいですか", "確定可否", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+            {
+                return false;
+            }
             //注文情報を出庫テーブルに送る
             int id = int.Parse(txt_ChID.Text);
             using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())
@@ -426,6 +431,7 @@ namespace SalesManagement_SysDev
                 {
                     var regChumon = new T_Chumon()
                     {
+                        ChID = item.ChID,
                         SoID = item.SoID,
                         EmID = transfer_int,
                         ClID = item.ClID,
@@ -436,7 +442,7 @@ namespace SalesManagement_SysDev
                         ChHidden = item.ChHidden
                     };
                     // 注文情報の登録
-                    var errorMessage = _Ch.PostT_Chumon(regChumon);
+                    var errorMessage = _Ch.PutChumon(regChumon);
                     if (errorMessage != string.Empty)
                     {
                         MessageBox.Show(errorMessage);
@@ -1346,6 +1352,11 @@ namespace SalesManagement_SysDev
         private void btn_all_Click_1(object sender, EventArgs e)
         {
             fncAllSelect();
+        }
+
+        private void btn_commit_FLG_Click(object sender, EventArgs e)
+        {
+            Get_Syukko_Data_AtRegistration();
         }
     }
    

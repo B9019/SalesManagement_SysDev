@@ -1061,6 +1061,11 @@ namespace SalesManagement_SysDev
 
         private void btn_commit_FLG_Click(object sender, EventArgs e)
         {
+            // 確定可否
+            if (DialogResult.OK != MessageBox.Show(this, "確定してよろしいですか", "確定可否", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+            {
+                return false;
+            }
 
             //出庫情報を入荷テーブルに送る
             using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())

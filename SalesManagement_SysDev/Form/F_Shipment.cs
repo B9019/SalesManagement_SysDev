@@ -1092,6 +1092,11 @@ namespace SalesManagement_SysDev
 
         private void btn_commit_FLG_Click(object sender, EventArgs e)
         {
+            // 確定可否
+            if (DialogResult.OK != MessageBox.Show(this, "確定してよろしいですか", "確定可否", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+            {
+                return false;
+            }
             //出荷情報を更新する
             int id = int.Parse(txt_ShID.Text);
             using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())
@@ -1102,6 +1107,7 @@ namespace SalesManagement_SysDev
                 {
                     var regShipment = new T_Shipment()
                     {
+                        ShID = item.ShID,
                         EmID = transfer_int,
                         ClID = item.ClID,
                         SoID = item.SoID,

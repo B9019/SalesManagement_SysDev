@@ -96,6 +96,7 @@
             btn_commit_FLG.TabIndex = 304;
             btn_commit_FLG.Text = "確定";
             btn_commit_FLG.UseVisualStyleBackColor = false;
+            btn_commit_FLG.Click += new System.EventHandler(this.btn_commit_FLG_Click);
             // 
             // lbl_ChDate
             // 

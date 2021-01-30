@@ -1020,6 +1020,11 @@ namespace SalesManagement_SysDev
 
         private void btn_commit_FLG_Click(object sender, EventArgs e)
         {
+            // 確定可否
+            if (DialogResult.OK != MessageBox.Show(this, "確定してよろしいですか", "確定可否", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+            {
+                return false;
+            }
             //入荷情報を出荷テーブルに送る
             int id = int.Parse(txt_ArID.Text);
             using (SalesManagement_DevContext dbContext = new SalesManagement_DevContext())

@@ -800,6 +800,11 @@ namespace SalesManagement_SysDev
             return;
 
         }
+
+        private void btn_commit_FLG_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 
