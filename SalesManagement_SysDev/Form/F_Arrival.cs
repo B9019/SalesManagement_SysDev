@@ -1023,7 +1023,7 @@ namespace SalesManagement_SysDev
             // 確定可否
             if (DialogResult.OK != MessageBox.Show(this, "確定してよろしいですか", "確定可否", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
             {
-                return false;
+                return ;
             }
             //入荷情報を出荷テーブルに送る
             int id = int.Parse(txt_ArID.Text);

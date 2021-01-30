@@ -1064,7 +1064,7 @@ namespace SalesManagement_SysDev
             // 確定可否
             if (DialogResult.OK != MessageBox.Show(this, "確定してよろしいですか", "確定可否", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
             {
-                return false;
+                return ;
             }
 
             //出庫情報を入荷テーブルに送る
